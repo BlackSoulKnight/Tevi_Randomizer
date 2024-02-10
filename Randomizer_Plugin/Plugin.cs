@@ -6,6 +6,7 @@ using HarmonyLib;
 using EventMode;
 using Game;
 using Map;
+using UnityEngine.Analytics;
 
 
 
@@ -72,18 +73,36 @@ public class Randomizer : BaseUnityPlugin
             string[] blocks = json.Split(';');
             foreach (string block in blocks)
             {
+                ItemData data1, data2;
+                if (block.Length < 5) continue;
+                try
+                {
+                    string[] completeItem = block.Split(':');
 
-                string[] completeItem = block.Split(':');
+                    string[] itemDetails1 = completeItem[0].Split(',');
+                    string[] itemDetails2 = completeItem[1].Split(',');
+                    data1 = new ItemData(int.Parse(itemDetails1[0]), int.Parse(itemDetails1[1]));
+                    data2 = new ItemData(int.Parse(itemDetails2[0]), int.Parse(itemDetails2[1]));
+                }
+                catch
+                {
+                    Logger.LogError($"Failed to parse {block}");
+                    continue;
+                }
+                try
+                {
+                    __itemData.Add(data1, data2);
+                }
+                catch
+                {
+                    Logger.LogWarning($"Already changed {data1}");
 
-                string[] itemDetails1 = completeItem[0].Split(',');
-                string[] itemDetails2 = completeItem[1].Split(',');
-                ItemData data1 = new ItemData(int.Parse(itemDetails1[0]), int.Parse(itemDetails1[1]));
-                ItemData data2 = new ItemData(int.Parse(itemDetails2[0]), int.Parse(itemDetails2[1]));
-                __itemData.Add(data1, data2);
+                }
             }
         }
-        catch
+        catch (Exception e)
         {
+            Logger.LogError(e);
             fileRead = false;
         }
 
@@ -147,7 +166,7 @@ public class Randomizer : BaseUnityPlugin
     {
         Traverse tree = Traverse.Create(__instance);
 
-            if (__instance.itemid.ToString().Contains("STACKABLE"))
+        if (__instance.itemid.ToString().Contains("STACKABLE"))
         {
             for (int i = 1; i <= 16; i++)
             {
@@ -169,6 +188,11 @@ public class Randomizer : BaseUnityPlugin
             }
 
         }
+        else
+        {
+            ___slotid = 1;
+        }
+
         ItemData data = loadRandomizedItem(__instance.itemid, ___slotid);
 
         var spr = CommonResource.Instance.GetItem(data.itemID);
@@ -189,10 +213,10 @@ public class Randomizer : BaseUnityPlugin
 
             ____secondsprite.sprite = spr;
             ____secondsprite.enabled = true;
-            
+
             ____sprite.sprite = CommonResource.Instance.Sprite_BadgeBackground;
             ____childsprite.sprite = ____sprite.sprite;
-            
+
         }
         else
         {
@@ -263,9 +287,9 @@ public class Randomizer : BaseUnityPlugin
         return false;
     }
 
-    public static void addOrbStatus(int amount= 0)
+    public static void addOrbStatus(int amount = 0)
     {
-        SaveManager.Instance.SetOrb((byte)(SaveManager.Instance.GetOrb() + 1));
+        SaveManager.Instance.SetOrb((byte)(SaveManager.Instance.GetOrb() + amount));
         if (SaveManager.Instance.GetOrb() >= 3)
         {
             SaveManager.Instance.FirstTimeEnableOrbColors();
