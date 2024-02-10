@@ -1,0 +1,6 @@
+Randomizer_Plugin/obj/*
+Randomizer_Plugin/bin/*
+Randomizer_Plugin/.vs/*
+Randomizer_Plugin/Assembly-CSharp.dll
+Randomizer_Plugin/mscorlib.dll
+global.json
