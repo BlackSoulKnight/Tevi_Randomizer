@@ -6,7 +6,6 @@ using HarmonyLib;
 using EventMode;
 using Game;
 using Map;
-using UnityEngine.Analytics;
 
 
 
@@ -40,6 +39,13 @@ public class ItemData
             return x.itemID ^ x.slotID;
         }
     }
+    public ItemList.Type getItemTyp()
+    {
+        return (ItemList.Type)itemID;
+    } 
+    public byte getSlotId() {
+        return (byte)slotID;
+    }
 }
 
 
@@ -50,7 +56,7 @@ public class ItemData
 
 
 
-[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.0.0.1")]
+[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.1.0.0")]
 public class Randomizer : BaseUnityPlugin
 {
 
@@ -129,7 +135,10 @@ public class Randomizer : BaseUnityPlugin
         ItemData data;
         try
         {
+            //Debug.Log($"[Randomizer] Load item {itemid}:{slotid}");
+
             data = __itemData[new ItemData((int)itemid, (int)slotid)];
+            //Debug.Log($"[Randomizer] Found item {(ItemList.Type)data.itemID}:{data.slotID}");
         }
         catch
         {
@@ -154,10 +163,6 @@ public class Randomizer : BaseUnityPlugin
         value = (byte)data.slotID;
     }
 
-
-
-
-
     // Change Sprite
 
     [HarmonyPatch(typeof(ItemTile), nameof(ItemTile.LoadItem))]
@@ -181,11 +186,7 @@ public class Randomizer : BaseUnityPlugin
                 Debug.LogWarning("[ItemTile] This item " + __instance.itemid.ToString() + " is a mutli item but no Slot ID is set! ID Invalid : " + ___slotid, __instance.gameObject);
                 return false;
             }
-            if (EventManager.Instance.GetElm(__instance.transform, 0f, MainVar.instance.TILESIZE) == ElementType.NotFreeRoamOnly)
-            {
-                __instance.DisableMe();
-                return false;
-            }
+
 
         }
         else
@@ -193,6 +194,11 @@ public class Randomizer : BaseUnityPlugin
             ___slotid = 1;
         }
 
+        if (EventManager.Instance.GetElm(__instance.transform, 0f, MainVar.instance.TILESIZE) == ElementType.NotFreeRoamOnly)
+        {
+            __instance.DisableMe();
+            return false;
+        }
         ItemData data = loadRandomizedItem(__instance.itemid, ___slotid);
 
         var spr = CommonResource.Instance.GetItem(data.itemID);
@@ -358,8 +364,11 @@ public class Randomizer : BaseUnityPlugin
 
         if (___ShopType == 0)
         {
-
-            ItemData data = loadRandomizedItem(item, (byte)(___ShopID + 30));
+            ItemData data;
+            if(item.ToString().Contains("STACKABLE"))
+                 data = loadRandomizedItem(item, (byte)(___ShopID + 30));
+            else
+                data = loadRandomizedItem(item, 1);
 
 
             if ((ItemList.Type)data.itemID == ItemList.Type.STACKABLE_BAG)
@@ -417,103 +426,79 @@ public class Randomizer : BaseUnityPlugin
         }
     }
 
-    //Boss Defeated
-    [HarmonyPatch(typeof(END_BOOKMARK), "EVENT")]
+
+    [HarmonyPatch(typeof(Chap1FreeRoamVena7x7), "REQUIREMENT")]
     [HarmonyPrefix]
-    static void BossDefeatEvent(ref AreaType ___justArea)
+    static bool Vena7x7Fix(ref bool __result)
     {
-        EventManager em = EventManager.Instance;
+        ItemData data = loadRandomizedItem(ItemList.Type.STACKABLE_COG,23);
 
-        switch (em.EventStage)
+        if (!SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam))
         {
-            case 100:
-                if (!(em.EventTime > 2.5f))
+            __result = false;
+            return false;
+        }
+        if (((ItemList.Type)data.itemID).ToString().Contains("STACKABLE"))
+        {
+            bool help = !SaveManager.Instance.GetStackableItem((ItemList.Type)data.itemID, (byte)data.slotID);
+            __result = help;
+        }
+        else
+        {
+            __result = SaveManager.Instance.GetItem((ItemList.Type)data.itemID) == 0;
+        }
+        return false;
+    }
+
+    [HarmonyPatch(typeof(EventDetect),"OnTriggerEnter2D")]
+    [HarmonyPrefix]
+    static bool VenaEXTRA(ref Collider2D col)
+    {
+        EventTile component = col.GetComponent<EventTile>();
+        if ((bool)component)
+        {
+            if (EventManager.Instance.GetCurrentEvent() == Mode.OFF && !EventManager.Instance.isBossMode() && component.mode != Mode.LibraryPoint && component.mode != Mode.SnowCaveMazeDisabled && component.mode != Mode.MazeCompleted && !GemaBossRushMode.Instance.isBossRush())
+            {
+                if (EventManager.Instance.NoEventStartFromDetect)
                 {
-                    break;
+                    Debug.Log("[EventDetect] No Event Start From Detect is ON. This event cannot be triggered : " + component.mode);
                 }
-                em.StopEvent();
-                ItemData data;
-                WorldManager.Instance.ToggleFlagGate(t: true);
-                MusicManager.Instance.PlayRoomMusic();
-                CameraScript.Instance.DisableEnemySpawn = true;
-                SaveManager.Instance.SetMiniFlag(Mini.BookmarkUsed, 0);
-                if (SaveManager.Instance.GetMiniFlag(Mini.GameCleared) > 0)
+                else if (EventManager.Instance.CheckEventStartable(component.mode))
                 {
-                    SaveManager.Instance.SetMiniFlag(Mini.NoBookmarkUntilMapChange, 1);
-                }
-                if (SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam))
-                {
-                    byte value = (byte)(WorldManager.Instance.Area + 20);
-                    if (WorldManager.Instance.CurrentRoomBG == RoomBG.SEAL)
+                    if (SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam))
                     {
-                        value = 63;
-                    }
-                    if (WorldManager.Instance.CurrentRoomBG == RoomBG.A_UNDERPALACE)
-                    {
-                        value = 62;
-                    }
-                    if (WorldManager.Instance.CurrentRoomBG == RoomBG.SNOWCAVE)
-                    {
-                        value = (byte)((___justArea != AreaType.QUEENSGARDEN && ___justArea != AreaType.MACHINECAVE) ? 61 : 60);
-                    }
-
-
-
-                    data = loadRandomizedItem(ItemList.Type.STACKABLE_COG, value);
-                    HUDObtainedItem.Instance.GiveItem((ItemList.Type)data.itemID, (byte)data.slotID);
-
-
-                    if (SaveManager.Instance.GetMiniFlag(Mini.GameCleared) <= 0)
-                    {
-
-                        if (WorldManager.Instance.CurrentRoomBG == RoomBG.SEAL || WorldManager.Instance.CurrentRoomBG == RoomBG.ZENITH)
-                        {
-                            HUDResourceGotPopup.Instance.AddPopup(ItemList.Resource.UPGRADE, SaveManager.Instance.GetResource(ItemList.Resource.UPGRADE), 2);
-                            SaveManager.Instance.AddResource(ItemList.Resource.UPGRADE, 2);
-                            HUDResourceGotPopup.Instance.AddPopup(ItemList.Resource.CORE, SaveManager.Instance.GetResource(ItemList.Resource.CORE), 2);
-                            SaveManager.Instance.AddResource(ItemList.Resource.CORE, 2);
+                        ItemData data = loadRandomizedItem(ItemList.Type.STACKABLE_COG, 23);
+                        bool flag = false;
+                        if (data.getItemTyp().ToString().Contains("STACKABLE")) { 
+                            flag = !SaveManager.Instance.GetStackableItem((ItemList.Type)data.itemID, (byte)data.slotID); 
                         }
-                        HUDResourceGotPopup.Instance.AddPopup(ItemList.Resource.COIN, SaveManager.Instance.GetResource(ItemList.Resource.COIN), 1000);
-                        SaveManager.Instance.AddResource(ItemList.Resource.COIN, 1000);
-                    }
-                }
-                if (WorldManager.Instance.CurrentRoomArea == AreaType.FORESTMAZE)
-                {
-                    FogManager.Instance.ToggleMe(toggle: false);
-                    FogManager.Instance.ToggleMe(toggle: true);
-                    if (SaveManager.Instance.GetEventFlag(Mode.MazeCompleted) > 0)
-                    {
-                        WorldManager.Instance.UseRoomWarp = false;
-                        GemaMazeHUD.Instance.DontShowMaze();
-                    }
-                    else
-                    {
-                        WorldManager.Instance.UseRoomWarp = true;
-                        GemaMazeHUD.Instance.ShowMaze();
-                    }
-                    WorldManager.Instance.ToggleFlagGate(t: true);
-                }
-                if (WorldManager.Instance.CurrentRoomArea == AreaType.OASISSTAGE)
-                {
-                    ItemTile itemTile = null;
-                    for (int i = 0; i < WorldManager.Instance.areadata.itemlist.Count; i++)
-                    {
-                        itemTile = WorldManager.Instance.areadata.itemlist[i];
-                        if ((bool)itemTile && itemTile.itemid == ItemList.Type.ITEM_PKBADGE)     //could be problematic need to tested
+                        else
                         {
-                            itemTile.OnBecameVisible();
-                            break;
+                            flag = !((int)(SaveManager.Instance.GetItem((ItemList.Type)data.itemID))> 0);
+                        }
+                        if (component.mode == Mode.Chap1FreeRoamVena7x7)
+                        {
+                            if (component.mode == Mode.Chap1FreeRoamVena7x7 && ((SaveManager.Instance.GetMiniFlag(Mini.GameCleared) > 0 && SaveManager.Instance.GetMiniFlag(Mini.BookmarkUsed) == 1) || flag))
+                            {
+                                if (WorldManager.Instance.CheckIsWall(component.transform.position, any: false) == 1)
+                                {
+                                    Debug.Log("[EventDetect] Event is inside wall, cannot trigger : " + component.mode);
+                                    flag = false;
+                                }
+                                if (flag && EventManager.Instance.TryStartEvent(component.mode, force: false))
+                                {
+                                    EventManager.Instance.LastHitTrigger = component;
+                                }
+                            }
+                            return false;
                         }
                     }
+
                 }
-                if (SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam) && SaveManager.Instance.GetMiniFlag(Mini.GameCleared) <= 0)
-                {
-                    SaveManager.Instance.AutoSave(forced: true);
-                }
-                em.NextStage();
-                break;
+            }
         }
 
+        return true;
     }
 
     [HarmonyPatch(typeof(Chap0Start), "CheckSR")]
