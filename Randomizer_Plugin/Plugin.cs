@@ -5,11 +5,10 @@ using BepInEx;
 using HarmonyLib;
 using EventMode;
 using Game;
-using Map;
 
 
 
-
+//Crafting Orb type bug
 
 
 
@@ -42,8 +41,9 @@ public class ItemData
     public ItemList.Type getItemTyp()
     {
         return (ItemList.Type)itemID;
-    } 
-    public byte getSlotId() {
+    }
+    public byte getSlotId()
+    {
         return (byte)slotID;
     }
 }
@@ -56,7 +56,8 @@ public class ItemData
 
 
 
-[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.1.0.0")]
+[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.2.5.0")]
+[BepInProcess("TEVI.exe")]
 public class Randomizer : BaseUnityPlugin
 {
 
@@ -158,6 +159,25 @@ public class Randomizer : BaseUnityPlugin
     [HarmonyPrefix]
     static void ObtainItem(ref ItemList.Type type, ref byte value)
     {
+        if (type.ToString().Contains("_OrbType"))
+        {
+            switch (SaveManager.Instance.GetOrbTypeObtained())
+            {
+                case 0:
+                    type = ItemList.Type.ITEM_OrbTypeC2;
+                    break;
+                case 1:
+                    type = ItemList.Type.ITEM_OrbTypeS2;
+                    break;
+                case 2:
+                    type = ItemList.Type.ITEM_OrbTypeC3;
+                    break;
+                case 3:
+                    type = ItemList.Type.ITEM_OrbTypeS3;
+                    break;
+            }
+        }
+
         ItemData data = loadRandomizedItem(type, value);
         type = (ItemList.Type)data.itemID;
         value = (byte)data.slotID;
@@ -200,28 +220,22 @@ public class Randomizer : BaseUnityPlugin
             return false;
         }
         ItemData data = loadRandomizedItem(__instance.itemid, ___slotid);
-
         var spr = CommonResource.Instance.GetItem(data.itemID);
 
         if (data.itemID >= (int)ItemList.Type.BADGE_START && data.itemID <= (int)ItemList.Type.BADGE_MAX)
         {
-            if (____secondsprite == null)
+            if (____secondsprite != null)
             {
-                GameObject newobj = new GameObject("SecondTile");
-                newobj.transform.SetParent(__instance.gameObject.transform);
-                newobj.AddComponent<SpriteRenderer>();
-                ____secondsprite = newobj.GetComponent<SpriteRenderer>();
-                ____secondsprite.SetMaterial(CommonResource.Instance.mat_SpriteLighting);
-                ____secondsprite.drawMode = SpriteDrawMode.Simple;
-                ____secondsprite.sortingOrder = 43;
-                ____secondsprite.sortingLayerName = "ItemAndEvent";
+
+                ____secondsprite.sprite = spr;
+                ____secondsprite.enabled = true;
+
             }
 
-            ____secondsprite.sprite = spr;
-            ____secondsprite.enabled = true;
+
 
             ____sprite.sprite = CommonResource.Instance.Sprite_BadgeBackground;
-            ____childsprite.sprite = ____sprite.sprite;
+            ____childsprite.sprite = spr;
 
         }
         else
@@ -304,6 +318,230 @@ public class Randomizer : BaseUnityPlugin
 
 
 
+    //Crafting UI TextDescription change
+
+    [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGridSlot), "GetItemType")]
+    [HarmonyPrefix]
+    static bool IHopeIdontBreakStuff(ItemList.Type ___itemType, ref ItemList.Type __result)
+    {
+        if (__itemData.ToString().Contains("OrbType")) return false;
+        __result = loadRandomizedItem(___itemType, 1).getItemTyp();
+        return false;
+    }
+
+    //Fix item selection caused by randomiying
+    [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid), "UpdateSelectedText")]
+    [HarmonyPostfix]
+    static void reverseItemType(ref GemaUIPauseMenu_CraftGridSlot[] ___craftList, int ___selected, ref ItemList.Type ___currentItemType)
+    {
+        ___currentItemType = Traverse.Create(___craftList[___selected]).Field("itemType").GetValue<ItemList.Type>();
+
+    }
+
+
+    //Crafting menu
+    //NO POTIONS!!!!!!!!!!!
+    [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid), "AddItem")]
+    [HarmonyPrefix]
+    static bool disableCraftedItems(ref GemaUIPauseMenu_CraftGrid __instance, ref ItemList.Type iType, ref bool isUpgrade, ref byte isImportant, ref GemaUIPauseMenu_CraftGridSlot[] ___craftList, ref int ___CurrentMaxCraft, ref GameObject[] ___specialcrafts)
+    {
+
+        Traverse o = Traverse.Create(__instance);
+        ItemData data = loadRandomizedItem(iType,1);
+        Debug.LogWarning(SaveManager.Instance.GetOrbTypeObtained());
+        Debug.LogWarning(data.getItemTyp().ToString());
+
+        if (o.Field("CurrentMaxCraft").GetValue<int>() >= ___craftList.Length)
+        {
+            return false;
+        }
+
+        if (iType.ToString().Contains("BADGE"))
+        {
+            if (data.getItemTyp().ToString().Contains("STACKABLE"))
+            {
+                if (SaveManager.Instance.GetStackableItem(data.getItemTyp(), data.getSlotId()))
+                {
+                    return false;
+                }
+            }
+            else if (data.getItemTyp() >= ItemList.Type.BADGE_START && data.getItemTyp() <= ItemList.Type.BADGE_MAX && SaveManager.Instance.GetItem(data.getItemTyp()) > 0)
+            {
+                return false;
+            }
+        }
+
+        if (iType.ToString().Contains("OrbType"))
+        {
+            //progression not possible for now maybe later
+            if (SaveManager.Instance.GetOrbTypeObtained() >= 4)
+            {
+                
+                return false;
+            }
+        }
+        else if (iType.ToString().Contains("OrbBoost"))
+        {
+            //this ONE can be randomized
+            if (SaveManager.Instance.GetOrbBoostObtained() >= 2)
+            {
+                return false;
+            }
+        }
+        else if (iType.ToString().Contains("ITEM") && ((SaveManager.Instance.GetItem(iType) > 0 && !isUpgrade) || (SaveManager.Instance.GetItem(iType) <= 0 && isUpgrade) || (SaveManager.Instance.GetItem(iType) >= 3 && isUpgrade))) // Find multiple items of the same type on the overworld?
+        {
+            return false;
+        }
+        if (iType != 0)
+        {
+            GameObject gameObject = new GameObject();
+            if (isImportant > 0 && isImportant - 1 < ___specialcrafts.Length)
+            {
+                gameObject = ___specialcrafts[isImportant - 1];
+                gameObject.gameObject.SetActive(value: true);
+            }
+            ___craftList[___CurrentMaxCraft].SetItem(iType, isUpgrade, gameObject);
+            ___CurrentMaxCraft++;
+        }
+        return false;
+    }
+
+    //replicate SetItem
+    [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGridSlot), "SetItem")]
+    [HarmonyPrefix]
+
+    static void removeUpdateMadness(ref ItemList.Type itype, ref ItemList.Type __state, GameObject important, ref ItemList.Type ___itemType)
+    {
+        if (important == null)
+        {
+            itype = ___itemType;
+        }
+        __state = 0;
+        if (itype >= ItemList.Type.BADGE_START && itype <= ItemList.Type.BADGE_MAX)
+        {
+            __state = itype;
+            itype = loadRandomizedItem(itype, 1).getItemTyp();
+        }
+
+    }
+    [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGridSlot), "SetItem")]
+    [HarmonyPostfix]
+    static void Part2(ref ItemList.Type __state, ref ItemList.Type ___itemType)
+    {
+        if (__state > 0)
+        {
+            ___itemType = __state;
+        }
+    }
+
+
+
+    
+    //Craftig Orb Fix
+    //No set SlotId, maybe reserver slots for Potions?
+    [HarmonyPatch(typeof(SaveManager),"GetOrbTypeObtained")]
+    [HarmonyPostfix]
+    static void orbTypeFix(ref int __result,ref SaveManager __instance)
+    {
+        int num = 0;
+        ItemData data1 = loadRandomizedItem(ItemList.Type.ITEM_OrbTypeC2, 1);
+        ItemData data2 = loadRandomizedItem(ItemList.Type.ITEM_OrbTypeC3, 1);
+        ItemData data3 = loadRandomizedItem(ItemList.Type.ITEM_OrbTypeS2, 1);
+        ItemData data4 = loadRandomizedItem(ItemList.Type.ITEM_OrbTypeS3, 1);
+
+        if (!data1.getItemTyp().ToString().Contains("STACKABLE"))
+        {
+            if (__instance.GetItem(data1.getItemTyp()) > 0)
+            {
+                num++;
+            }
+        }
+        else
+        {
+            if (__instance.GetStackableItem(data1.getItemTyp(), data1.getSlotId()))
+            {
+                num++;
+            }
+        }
+
+        if (!data2.getItemTyp().ToString().Contains("STACKABLE"))
+        {
+            if (__instance.GetItem(data2.getItemTyp()) > 0)
+            {
+                num++;
+            }
+        }
+        else
+        {
+            if (__instance.GetStackableItem(data2.getItemTyp(), data2.getSlotId()))
+            {
+                num++;
+            }
+        }
+
+        if (!data3.getItemTyp().ToString().Contains("STACKABLE"))
+        {
+            if (__instance.GetItem(data3.getItemTyp()) > 0)
+            {
+                num++;
+            }
+        }
+        else
+        {
+            if (__instance.GetStackableItem(data3.getItemTyp(), data3.getSlotId()))
+            {
+                num++;
+            }
+        }
+
+        if (!data4.getItemTyp().ToString().Contains("STACKABLE"))
+        {
+            if (__instance.GetItem(data4.getItemTyp()) > 0)
+            {
+                num++;
+            }
+        }
+        else
+        {
+            if (__instance.GetStackableItem(data4.getItemTyp(), data4.getSlotId()))
+            {
+                num++;
+            }
+        }
+        __result = num;
+    }
+
+    [HarmonyPatch(typeof(SaveManager), "GetOrbBoostObtained")]
+    [HarmonyPostfix]
+    static void OrbBoostCount(ref int __result,SaveManager __instance)
+    {
+        int num = 0;
+        ItemData data1 = loadRandomizedItem(ItemList.Type.ITEM_OrbBoostD,1);
+        ItemData data2 = loadRandomizedItem(ItemList.Type.ITEM_OrbBoostU,1);
+        if (data1.getItemTyp().ToString().Contains("STACKABLE"))
+        {
+            if (__instance.GetStackableItem(data1.getItemTyp(), data1.getSlotId()))
+                num++;
+        }
+        else
+        {
+            if (__instance.GetItem(data1.getItemTyp()) > 0)
+                num++; 
+        }
+        if (data2.getItemTyp().ToString().Contains("STACKABLE"))
+        {
+            if (__instance.GetStackableItem(data2.getItemTyp(), data2.getSlotId()))
+                num++;
+        }
+        else
+        {
+            if (__instance.GetItem(data2.getItemTyp()) > 0)
+                num++; 
+        }
+        __result = num;
+    }
+
+
 
     // Called everytime when an Item is obtained through any means
     [HarmonyPatch(typeof(SaveManager), "SetItem")]
@@ -365,8 +603,8 @@ public class Randomizer : BaseUnityPlugin
         if (___ShopType == 0)
         {
             ItemData data;
-            if(item.ToString().Contains("STACKABLE"))
-                 data = loadRandomizedItem(item, (byte)(___ShopID + 30));
+            if (item.ToString().Contains("STACKABLE"))
+                data = loadRandomizedItem(item, (byte)(___ShopID + 30));
             else
                 data = loadRandomizedItem(item, 1);
 
@@ -396,11 +634,11 @@ public class Randomizer : BaseUnityPlugin
                     return true;
 
             }
-
+            return false;
         }
 
 
-        return false;
+        return true;
     }
 
 
@@ -431,7 +669,7 @@ public class Randomizer : BaseUnityPlugin
     [HarmonyPrefix]
     static bool Vena7x7Fix(ref bool __result)
     {
-        ItemData data = loadRandomizedItem(ItemList.Type.STACKABLE_COG,23);
+        ItemData data = loadRandomizedItem(ItemList.Type.STACKABLE_COG, 23);
 
         if (!SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam))
         {
@@ -450,7 +688,7 @@ public class Randomizer : BaseUnityPlugin
         return false;
     }
 
-    [HarmonyPatch(typeof(EventDetect),"OnTriggerEnter2D")]
+    [HarmonyPatch(typeof(EventDetect), "OnTriggerEnter2D")]
     [HarmonyPrefix]
     static bool VenaEXTRA(ref Collider2D col)
     {
@@ -469,12 +707,13 @@ public class Randomizer : BaseUnityPlugin
                     {
                         ItemData data = loadRandomizedItem(ItemList.Type.STACKABLE_COG, 23);
                         bool flag = false;
-                        if (data.getItemTyp().ToString().Contains("STACKABLE")) { 
-                            flag = !SaveManager.Instance.GetStackableItem((ItemList.Type)data.itemID, (byte)data.slotID); 
+                        if (data.getItemTyp().ToString().Contains("STACKABLE"))
+                        {
+                            flag = !SaveManager.Instance.GetStackableItem((ItemList.Type)data.itemID, (byte)data.slotID);
                         }
                         else
                         {
-                            flag = !((int)(SaveManager.Instance.GetItem((ItemList.Type)data.itemID))> 0);
+                            flag = !((int)(SaveManager.Instance.GetItem((ItemList.Type)data.itemID)) > 0);
                         }
                         if (component.mode == Mode.Chap1FreeRoamVena7x7)
                         {
