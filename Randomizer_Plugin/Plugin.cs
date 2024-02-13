@@ -6,12 +6,12 @@ using HarmonyLib;
 using EventMode;
 using Game;
 using TMPro;
-using static SaveManager;
-using static UnityEngine.UIElements.StylePropertyAnimationSystem;
+
 
 
 
 //Crafting Orb type bug
+
 
 
 
@@ -65,14 +65,37 @@ public class ItemData
 
 
 
-[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.2.5.0")]
+[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.7.0.0")]
 [BepInProcess("TEVI.exe")]
 public class Randomizer : BaseUnityPlugin
 {
 
     static Dictionary<ItemData, ItemData> __itemData = new Dictionary<ItemData, ItemData>(new ItemData.EqualityComparer());
 
-
+    public enum Upgradable
+    {
+        ITEM_KNIFE = 10,
+        ITEM_ORB = 11,
+        ITEM_RapidShots = 12,
+        ITEM_AttackRange = 13,
+        ITEM_EasyStyle = 14,
+        ITEM_LINEBOMB = 15,
+        ITEM_AREABOMB = 16,
+        ITEM_SPEEDUP = 17,
+        ITEM_AirDash = 18,
+        ITEM_WALLJUMP = 19,
+        ITEM_JETPACK = 20,
+        ITEM_BoostSystem = 21,
+        ITEM_BombLengthExtend = 22,
+        ITEM_MASK = 23,
+        ITEM_TempRing = 24,
+        ITEM_DodgeShot = 25,
+        ITEM_Rotater = 26,
+        ITEM_GoldenGlove = 27,
+        ITEM_OrbAmulet = 28,
+        ITEM_BOMBFUEL = 29,
+        ITEM_Explorer = 30,
+    }
 
 
 
@@ -150,14 +173,14 @@ public class Randomizer : BaseUnityPlugin
         }
         catch
         {
-            Debug.LogError("[Randomizer] Could not load the randomized Item " + itemid.ToString() + "! It has the ID: " + (int)itemid + " and the SlotID: " + slotid);
+            //Debug.LogError("[Randomizer] Could not load the randomized Item " + itemid.ToString() + "! It has the ID: " + (int)itemid + " and the SlotID: " + slotid);
             data = new ItemData((int)itemid, (int)slotid);
         }
         return data;
     }
-    static  (ItemList.Type, ItemList.Type)[] _upgradeAble = new (ItemList.Type, ItemList.Type)[21];
-
-     private void itemPairSetup()
+    static (ItemList.Type, ItemList.Type)[] _upgradeAble = new (ItemList.Type, ItemList.Type)[21];
+    static ItemList.Type[] _upgradeAbleList = new ItemList.Type[21];
+    private void itemPairSetup()
     {
         _upgradeAble[0] = (ItemList.Type.ITEM_KNIFE, ItemList.Type.ITEM_46);
         _upgradeAble[1] = (ItemList.Type.ITEM_ORB, ItemList.Type.ITEM_47);
@@ -182,10 +205,10 @@ public class Randomizer : BaseUnityPlugin
         _upgradeAble[20] = (ItemList.Type.ITEM_Explorer, ItemList.Type.ITEM_66);
     }
 
-    static public ItemList.Type getItemPair(ItemList.Type type,bool reversed)
+    static public ItemList.Type getItemPair(ItemList.Type type, bool reversed)
     {
-        (ItemList.Type, ItemList.Type) result = (type,type);
-        foreach ((ItemList.Type,ItemList.Type) item in _upgradeAble)
+        (ItemList.Type, ItemList.Type) result = (type, type);
+        foreach ((ItemList.Type, ItemList.Type) item in _upgradeAble)
         {
             if (item.Item1 == type || item.Item2 == type) result = item;
         }
@@ -197,7 +220,7 @@ public class Randomizer : BaseUnityPlugin
         {
             return result.Item1;
         }
-        
+
     }
 
 
@@ -229,18 +252,11 @@ public class Randomizer : BaseUnityPlugin
         }
         ItemData data = getRandomizedItem(type, value);
 
-        if (data.getItemTyp().ToString().Contains("ITEM"))
-        {
-             value = (byte)(SaveManager.Instance.GetItem(type) + 1);
-            
-        }
-        else
-        {
-            value = (byte)data.slotID;
-            type = (ItemList.Type)data.itemID;
-        }
+        value = (byte)data.slotID;
+        type = (ItemList.Type)data.itemID;
 
-        
+
+
     }
     //craftingMenuRefresh
     [HarmonyPatch(typeof(HUDObtainedItem), "GiveItem")]
@@ -342,6 +358,19 @@ public class Randomizer : BaseUnityPlugin
                 Debug.Log("[ItemTile] Item " + ((ItemList.Type)data.itemID).ToString() + " visible in camera. Removed from map because player already obtained it. GotItem = " + SaveManager.Instance.GetItem((ItemList.Type)data.itemID).ToString());
                 __instance.DisableMe();
                 return false;
+            }
+            else if (data.getItemTyp().ToString().Contains("ITEM"))
+            {
+                Upgradable type;
+                if (Enum.TryParse(data.getItemTyp().ToString(), out type))
+                {
+                    if (SaveManager.Instance.GetStackableItem((ItemList.Type)type, data.getSlotId()))
+                    {
+                        Debug.Log("[ItemTile] Item " + ((ItemList.Type)data.itemID).ToString() + " visible in camera. Removed from map because player already obtained it. GotItem = " + SaveManager.Instance.GetItem((ItemList.Type)data.itemID).ToString());
+                        __instance.DisableMe();
+                        return false;
+                    }
+                }
             }
             if (SaveManager.Instance.GetItem(global::ItemList.Type.ITEM_GoldenHands) > 0 && ((ItemList.Type)data.itemID == global::ItemList.Type.QUEST_GHandL || (ItemList.Type)data.itemID == global::ItemList.Type.QUEST_GHandR))
             {
@@ -513,7 +542,7 @@ public class Randomizer : BaseUnityPlugin
 
         switch (item)
         {
-                
+
             case ItemList.Type.ITEM_ORB:
 
                 addOrbStatus(3);
@@ -529,39 +558,59 @@ public class Randomizer : BaseUnityPlugin
 
     [HarmonyPatch(typeof(SaveManager), "SetItem")]
     [HarmonyPrefix]
-    static void ItemChanges(ref ItemList.Type item, ref byte value, ref SaveManager __instance)
+    static bool ItemChanges(ref ItemList.Type item, ref byte value, ref SaveManager __instance)
     {
         ItemData data = getRandomizedItem(item, value);
         if (item.ToString().Contains("ITEM"))
         {
-            if (value == 0)
+            Upgradable itemRef;
+            if (Enum.TryParse<Upgradable>(item.ToString(), out itemRef))
             {
-                return;
-            }
-            if (item >= ItemList.Type.ITEM_46 && item <= ItemList.Type.ITEM_66)
-            {
-                __instance.savedata.itemflag[(int)item] = value;
-
-                item = data.getItemTyp();
-                value = data.getSlotId();
-
-            }
-            else
-            {
-                //OrbBoostD+U check? Cyril.Always()
-                ItemList.Type tryGetItem = getItemPair(item, false);
-                if (tryGetItem != item && __instance.GetItem(tryGetItem) == 0)
+                if (value == 0)
                 {
-                    __instance.savedata.itemflag[(int)tryGetItem] = 1;
+                    __instance.SetStackableItem((ItemList.Type)itemRef, 1, false);
+                    __instance.SetStackableItem((ItemList.Type)itemRef, 2, false);
+                    __instance.SetStackableItem((ItemList.Type)itemRef, 3, false);
+                    __instance.SetStackableItem((ItemList.Type)itemRef, 4, false);
+                    __instance.SetStackableItem((ItemList.Type)itemRef, 5, false);
+                    __instance.SetStackableItem((ItemList.Type)itemRef, 6, false);
+                    return true;
                 }
-                value = (byte)(__instance.GetItem(item) + 1);
 
+                if (!__instance.GetStackableItem((ItemList.Type)itemRef, value))
+                {
+                    __instance.SetStackableItem((ItemList.Type)itemRef, value, true);
+
+                    if (value > 3)
+                    {
+                        value = (byte)(__instance.GetItem(item) + 1);
+                        if (!__instance.GetStackableItem((ItemList.Type)itemRef, 1)){
+                            __instance.SetStackableItem((ItemList.Type)itemRef, 1, true);
+                        }
+                    }
+                    else if(value > 1 && value<=3)
+                    {
+                        item = data.getItemTyp();
+                        value = data.getSlotId();
+                        if (item.ToString().Contains("STACKABLE"))
+                        {
+                            __instance.SetStackableItem(item, value, true);
+                        }
+                        if (Enum.TryParse<Upgradable>(data.getItemTyp().ToString(), out itemRef))
+                        {
+                            value = (byte)(__instance.GetItem(data.getItemTyp()) + 1);
+                        }
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning($"[RANDOMIZER] Item {item}, Slot {value} was already claimed");
+                    return false;
+                }
             }
         }
-
+        return true;
     }
-
-    //Shop Items for now max 1 Stackable foreach type
 
     [HarmonyPatch(typeof(HUDShopMenu), "AddItem")]
     [HarmonyPrefix]
@@ -598,11 +647,23 @@ public class Randomizer : BaseUnityPlugin
                 data = getRandomizedItem(item, 1);
 
 
-            if ((ItemList.Type)data.itemID == ItemList.Type.STACKABLE_BAG)
+            Upgradable upItem;
+            bool flag = Enum.TryParse<Upgradable>(data.getItemTyp().ToString(), out upItem);
+
+            if (item == ItemList.Type.STACKABLE_BAG)
             {
                 MainVar.instance.BagID = (byte)(___ShopID + 1);
             }
-            if ((((ItemList.Type)data.itemID).ToString().Contains("STACKABLE") && SaveManager.Instance.GetStackableItem((ItemList.Type)data.itemID, (byte)(30 + ___ShopID))) || SaveManager.Instance.GetItem((ItemList.Type)data.itemID) > 0)
+            if (data.getItemTyp().ToString().Contains("STACKABLE") && SaveManager.Instance.GetStackableItem(data.getItemTyp(), data.getSlotId()))
+            {
+                return false;
+            }
+            else if (flag && SaveManager.Instance.GetStackableItem((ItemList.Type)upItem, data.getSlotId()))
+            {
+                return false;
+            }
+            else if
+            (SaveManager.Instance.GetItem((ItemList.Type)data.itemID) > 0 && !flag) //implement a way to get only upgradeable items
             {
                 return false;
             }
@@ -611,12 +672,12 @@ public class Randomizer : BaseUnityPlugin
             switch (___typeN)
             {
                 case Character.Type.Ian:
-                    ___itemslots[___CurrentMaxItem].SetItem((ItemList.Type)data.itemID, num, false);
+                    ___itemslots[___CurrentMaxItem].SetItem(item, num, false);
                     ___CurrentMaxItem++;
                     break;
                 case Character.Type.CC:
 
-                    ___itemslots[___CurrentMaxItem].SetItem((ItemList.Type)data.itemID, num, false);
+                    ___itemslots[___CurrentMaxItem].SetItem(item, num, false);
                     ___CurrentMaxItem++;
                     break;
                 default:
@@ -631,6 +692,225 @@ public class Randomizer : BaseUnityPlugin
     }
 
 
+    [HarmonyPatch(typeof(HUDShopMenu), "Update")]
+    [HarmonyPrefix]
+    static bool ChangeBuySystem(ref HUDShopMenu __instance, ref GemaShopItemSlot[] ___itemslots, ref int ___Selected, ref Character.Type ___typeN, ref SpriteRenderer ___buyo, ref bool ___bought, ref byte ___ShopID)
+    {
+        Traverse trav = Traverse.Create(__instance);
+        if (InputButtonManager.Instance.GetButtonDown(13) && __instance.ShopType == 0)
+        {
+            ItemData data;
+            if (___itemslots[___Selected].CanPurchase())
+            {
+                int price = ___itemslots[___Selected].GetPrice();
+                bool flag2 = true;
+                if (___itemslots[___Selected].GetItem().ToString().Contains("Useable") && SaveManager.Instance.isBagFull())
+                {
+                    trav.Method("PlayShopVoice", new object[] { ___typeN, ShopVoiceType.NoSpace }).GetValue();
+                    string line = "SHOP." + ___typeN.ToString() + "_NoSpace";
+                    trav.Method("StartNewLine", new object[] { line, true }).GetValue();
+
+                    flag2 = false;
+                }
+                if (SaveManager.Instance.GetResource(ItemList.Resource.COIN) >= price && flag2)
+                {
+                    SaveManager.Instance.SubResource(ItemList.Resource.COIN, price);
+                    if (___typeN == Character.Type.Ian)
+                    {
+                        SaveManager.Instance.savedata.coinUsedIan += price;
+                    }
+                    else if (___typeN == Character.Type.CC)
+                    {
+                        SaveManager.Instance.savedata.coinUsedCC += price;
+                    }
+                    if (___itemslots[___Selected].GetItem().ToString().Contains("Useable"))
+                    {
+                        data = getRandomizedItem(___itemslots[___Selected].GetItem(), 1);
+                        SaveManager.Instance.AddItemToBag(___itemslots[___Selected].GetItem());
+                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleAHoneycloud)
+                        {
+                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleA, 1);
+                        }
+                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleBMeringue)
+                        {
+                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleB, 1);
+                        }
+                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleCMorning)
+                        {
+                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleC, 1);
+                        }
+                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleDJellydrop)
+                        {
+                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleD, 1);
+                        }
+                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleElueberry)
+                        {
+                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleE, 1);
+                        }
+                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombSmall)
+                        {
+                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaSmall, 1);
+                        }
+                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombBig)
+                        {
+                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaBig, 1);
+                        }
+                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombBunBun)
+                        {
+                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaBB, 1);
+                        }
+                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombHealBlock)
+                        {
+                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaHB, 1);
+                        }
+                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombDispel)
+                        {
+                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaD, 1);
+                        }
+                    }
+
+
+                    else if (___itemslots[___Selected].GetItem().ToString().Contains("STACKABLE"))
+                    {
+                        data = getRandomizedItem(___itemslots[___Selected].GetItem(), (byte)(30 + ___ShopID));
+
+                    }
+                    else
+                    {
+                        data = getRandomizedItem(___itemslots[___Selected].GetItem(), 1);
+                    }
+
+
+                    if (data.getItemTyp().ToString().Contains("STACKABLE"))
+                    {
+                        SaveManager.Instance.SetStackableItem(data.getItemTyp(), data.getSlotId(), value: true);
+                        if (data.getItemTyp() == ItemList.Type.STACKABLE_BAG)
+                        {
+                            SettingManager.Instance.SetAchievement(Achievements.ACHI_SHOP_BUYBAG);
+                        }
+                    }
+                    else
+                    {
+                        SaveManager.Instance.SetItem(data.getItemTyp(), data.getSlotId());
+                    }
+
+
+                    if (___itemslots[___Selected].GetItem().ToString().Contains("BADGE_"))
+                    {
+                        SaveManager.Instance.SetMiniFlag(Mini.BadgeBought, (byte)(SaveManager.Instance.GetMiniFlag(Mini.BadgeBought) + 1));
+                    }
+                    ___bought = true;
+                    CameraScript.Instance.PlaySound(AllSound.SEList.Purchase);
+                    ___buyo.transform.position = ___itemslots[___Selected].transform.position + new Vector3(122.5f, 0f, 0f);
+                    ___buyo.transform.position = ___itemslots[___Selected].transform.position + new Vector3(122.5f, 0f, 0f);
+                    ___buyo.transform.localScale = new Vector3(1f, 1f, 1f);
+                    ___buyo.color = Color.white;
+                    ___buyo.color = Color.white;
+                    ___itemslots[___Selected].Purchased();
+                    trav.Method("PlayShopVoice", new object[] { ___typeN, ShopVoiceType.Purchased }).GetValue();
+                    string line2 = "SHOP." + ___typeN.ToString() + "_Purchased";
+                    trav.Method("StartNewLine", new object[] { line2, true }).GetValue();
+                }
+            }
+            return false;
+        }
+
+        return true;
+    }
+
+    [HarmonyPatch(typeof(GemaShopItemSlot), "SetItem")]
+    [HarmonyPrefix]
+    static bool ChangeShopItemVisual(ref GemaShopItemSlot __instance, ref ItemList.Type t, ref int _price, ref SpriteRenderer ___itemicon, ref ItemList.Type ___itype)
+    {
+        if (HUDShopMenu.Instance.ShopType == 2 || HUDShopMenu.Instance.ShopType == 1)
+        {
+            return true;
+
+        }
+        Traverse trav = Traverse.Create(__instance);
+        __instance.gameObject.SetActive(value: true);
+        byte shopID = Traverse.Create(HUDShopMenu.Instance).Field("ShopID").GetValue<byte>();
+        if (Traverse.Create(HUDShopMenu.Instance).Field("typeN").GetValue<Character.Type>() == Character.Type.CC)
+        {
+            ___itype = getRandomizedItem(t, (byte)(shopID + 30)).getItemTyp();
+        }
+        else
+        {
+            ___itype = getRandomizedItem(t, 1).getItemTyp();
+        }
+
+        trav.Field("price").SetValue(_price);
+
+        ___itemicon.sprite = CommonResource.Instance.GetItem((int)___itype);
+        ___itemicon.color = Color.white;
+        SpriteRenderer bgicon = trav.Field("bgicon").GetValue<SpriteRenderer>();
+        bgicon.color = Color.white;
+        trav.Field("coinicon").GetValue<SpriteRenderer>().enabled = true;
+        TextMeshPro[] texts = trav.Field("texts").GetValue<TextMeshPro[]>();
+
+
+        ___itemicon.enabled = true;
+        texts[0].text = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + GemaItemManager.Instance.GetItemString(___itype), contains: false);
+        texts[0].rectTransform.anchoredPosition = new Vector2(158.3f, 9.9f);
+        texts[0].color = new Color(1f, 1f, 1f, 1f);
+        texts[1].enabled = true;
+        texts[2].enabled = true;
+        bgicon.enabled = false;
+        if (___itype >= ItemList.Type.BADGE_START && ___itype <= ItemList.Type.BADGE_MAX)
+        {
+            texts[1].text = Localize.GetLocalizeTextWithKeyword("ITEMTYPE.Badge", contains: false);
+            texts[1].color = new Color32(byte.MaxValue, 186, 95, byte.MaxValue);
+            bgicon.enabled = true;
+        }
+        else
+        {
+            texts[1].color = new Color32(152, 222, byte.MaxValue, byte.MaxValue);
+            texts[1].text = Localize.GetLocalizeTextWithKeyword("ITEMTYPE.Item", contains: false);
+        }
+        texts[2].text = _price.ToString();
+        ___itype = t;
+        return false;
+    }
+
+
+
+
+
+    [HarmonyPatch(typeof(HUDShopMenu), "UpdateShopItemDetail")]
+    [HarmonyPostfix]
+    static void ItemShopDescriptionFix(ref HUDShopMenu __instance, ref TextMeshPro ___item_desc, ref byte ___ShopID, ref GemaShopItemSlot[] ___itemslots, ref int ___Selected)
+    {
+
+        if (__instance.ShopType == 0)
+        {
+            ItemList.Type item = ___itemslots[___Selected].GetItem();
+            ItemData data;
+            if (item.ToString().Contains("STACKABLE"))
+            {
+                data = getRandomizedItem(item, (byte)(___ShopID + 30));
+                ___item_desc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(data.getItemTyp());
+            }
+            else
+            {
+                data = getRandomizedItem(item, 1);
+                ___item_desc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(data.getItemTyp());
+            }
+            if (___item_desc.text.Contains("[c2]"))
+            {
+                ___item_desc.text = Localize.FilterLevelDescFromItem(data.getItemTyp(), ___item_desc.text);
+            }
+            if (data.getItemTyp().ToString().Contains("Useable_"))
+            {
+                ___item_desc.text += Localize.GetLocalizeTextWithKeyword("ITEMDESC.WAFFLEBUY", contains: false);
+            }
+            if (data.getItemTyp() >= ItemList.Type.BADGE_START && data.getItemTyp() <= ItemList.Type.BADGE_MAX)
+            {
+                TextMeshPro textMeshPro = ___item_desc;
+                textMeshPro.text = textMeshPro.text + "<br><br>" + Localize.GetLocalizeTextWithKeyword("ITEMDESC.EQUIPBADGETIPS", contains: false);
+            }
+            ___item_desc.text = InputButtonManager.Instance.AddButtonsToPromote(___item_desc.text);
+        }
+    }
 
 
 
@@ -645,9 +925,9 @@ public class Randomizer : BaseUnityPlugin
         {
 
             SaveManager.Instance.SetOrb((byte)0);
-            ItemData data = getRandomizedItem(ItemList.Type.ITEM_ORB, 1);
+            ItemData data = getRandomizedItem(ItemList.Type.ITEM_ORB, 4);
             SaveManager.Instance.SetItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
-            data = getRandomizedItem(ItemList.Type.ITEM_KNIFE, 1);
+            data = getRandomizedItem(ItemList.Type.ITEM_KNIFE, 4);
             SaveManager.Instance.SetItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
             em.SetStage(30);
         }
@@ -764,14 +1044,14 @@ public class Randomizer : BaseUnityPlugin
 
 class CraftingPatch
 {
-    [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid),"UpdateSelectedText")]
+    [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid), "UpdateSelectedText")]
     [HarmonyPrefix]
-    static bool itemDescChange(ref GemaUIPauseMenu_CraftGrid __instance,ref UI.Image ___iconbg,ref Transform ___costBox,ref GemaUIPauseMenu_CraftGridSlot[] ___craftList,ref int ___selected,ref TextMeshProUGUI ___selectedName,ref TextMeshProUGUI ___selectedDesc,
-        ref int ___CurrentMaxCraft,ref TextMeshProUGUI ___costTitle,ref TextMeshProUGUI ___costValue,ref UI.Image ___selectedIcon,ref TextMeshProUGUI ___mownedText, ref TextMeshProUGUI ___useableText,ref bool ___setFontOutline,ref TextMeshProUGUI[] ___materialrequiredList,
-        ref TextMeshProUGUI ___mrequiredText,ref byte[] ___currentMaterialNeeded,ref ItemList.Type ___currentItemType)
+    static bool itemDescChange(ref GemaUIPauseMenu_CraftGrid __instance, ref UI.Image ___iconbg, ref Transform ___costBox, ref GemaUIPauseMenu_CraftGridSlot[] ___craftList, ref int ___selected, ref TextMeshProUGUI ___selectedName, ref TextMeshProUGUI ___selectedDesc,
+        ref int ___CurrentMaxCraft, ref TextMeshProUGUI ___costTitle, ref TextMeshProUGUI ___costValue, ref UI.Image ___selectedIcon, ref TextMeshProUGUI ___mownedText, ref TextMeshProUGUI ___useableText, ref bool ___setFontOutline, ref TextMeshProUGUI[] ___materialrequiredList,
+        ref TextMeshProUGUI ___mrequiredText, ref byte[] ___currentMaterialNeeded, ref ItemList.Type ___currentItemType)
     {
         Traverse t = Traverse.Create(__instance);
-        
+
 
 
         ___iconbg.enabled = false;
@@ -783,8 +1063,11 @@ class CraftingPatch
         ItemList.Type itemType = ___craftList[___selected].GetItemType();
         if (itemType.ToString().Contains("ITEM"))
         {
-            data = Randomizer.getRandomizedItem(itemType, (byte)(SaveManager.Instance.GetItem(itemType)+1));
- 
+            data = Randomizer.getRandomizedItem(itemType, (byte)(SaveManager.Instance.GetItem(itemType) + 1));
+            if (___craftList[___selected].isUpgrade)
+            {
+                data = Randomizer.getRandomizedItem(itemType, (byte)(getItemUpgradeCount(itemType)+1));
+            }
         }
 
         if (__instance.isSortMode)
@@ -794,7 +1077,7 @@ class CraftingPatch
         if (itemType == ItemList.Type.OFF)
         {
             ___selectedIcon.enabled = false;
-            ___costBox.gameObject.SetActive(value:false);
+            ___costBox.gameObject.SetActive(value: false);
 
             ___selectedName.text = string.Empty;
             ___selectedDesc.text = string.Empty;
@@ -840,10 +1123,6 @@ class CraftingPatch
             }
             else
             {
-                if(itemType.ToString().Contains("ITEM")){
-                    ___selectedDesc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(Randomizer.getItemPair(itemType,true));
-                }
-                else
                 ___selectedDesc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(data.getItemTyp());
 
                 if (___selectedDesc.text.Contains("[c2]"))
@@ -1003,6 +1282,18 @@ class CraftingPatch
             {
                 return false;
             }
+            else if (data.getItemTyp().ToString().Contains("ITEM"))
+            {
+                Randomizer.Upgradable upitem;
+                if(Enum.TryParse(data.getItemTyp().ToString(),out upitem)&&SaveManager.Instance.GetStackableItem((ItemList.Type)upitem,data.getSlotId()))
+                {
+                    return false;
+                }
+                else if (SaveManager.Instance.GetItem(data.getItemTyp()) > 0)
+                {
+                    return false;
+                }
+            }
         }
 
         if (iType.ToString().Contains("OrbType"))
@@ -1021,10 +1312,9 @@ class CraftingPatch
         }
         else if (iType.ToString().Contains("ITEM")) // Find multiple items of the same type on the overworld?
         {
-            iType = Randomizer.getItemPair(iType, false);
-            if ((SaveManager.Instance.GetItem(iType) > 0 && !isUpgrade)
-            || (SaveManager.Instance.GetItem(iType) <= 0 && isUpgrade)
-            || (SaveManager.Instance.GetItem(iType) >= 3 && isUpgrade))
+            if ((getItemUpgradeCount(iType) > 0 && !isUpgrade)
+            || (getItemUpgradeCount(iType) <= 0 && isUpgrade)
+            || (getItemUpgradeCount(iType) >= 3 && isUpgrade))
             { return false; }
         }
 
@@ -1047,7 +1337,7 @@ class CraftingPatch
 
     static bool removeUpdateMadness(ref ItemList.Type itype, GameObject important, ref ItemList.Type ___itemType, ref GemaUIPauseMenu_CraftGridSlot __instance, ref bool _isUpgrade, ref UI.Image ___iconbg, ref TextMeshPro ___nameText, ref TextMeshPro ___carryText, ref UI.Image ___canCrarftLightBG)
     {
-        
+
 
         ItemData data = Randomizer.getRandomizedItem(itype, 1);
         __instance.isUpgrade = _isUpgrade;
@@ -1057,7 +1347,9 @@ class CraftingPatch
         ___iconbg.enabled = false;
         __instance.UpdateIcon(itype);
 
- 
+        
+
+
         byte b = 0;
         if (itype == ItemList.Type.Function_MaterialExchangeA || itype == ItemList.Type.Function_MaterialExchangeB)
         {
@@ -1076,8 +1368,6 @@ class CraftingPatch
         else if (itype.ToString().Contains("ITEM"))
         {
             b = (byte)(__instance.isUpgrade ? 4 : 2);
-            __instance.UpdateIcon(Randomizer.getItemPair(itype, true));
-
 
         }
         ___nameText.color = GemaUIPauseMenu_CraftGrid.Instance.itemTypeColor[b];
@@ -1135,7 +1425,7 @@ class CraftingPatch
                 }
                 break;
             case 4:
-                num = SaveManager.Instance.GetItem(itype);
+                num = getItemUpgradeCount(itype);
                 num2 = 3;
                 break;
             case 3:
@@ -1169,6 +1459,213 @@ class CraftingPatch
         __instance.UpdateSlotNew();
         return false;
     }
+
+    //Update need to be fixed for progessive items
+
+    static int getItemUpgradeCount(ItemList.Type _item)
+    {
+        int num = 0;
+        Randomizer.Upgradable item;
+        if (Enum.TryParse(_item.ToString(), out item))
+        {
+            if (SaveManager.Instance.GetStackableItem((ItemList.Type)item, 1))
+            {
+                num++;
+            }
+            if (SaveManager.Instance.GetStackableItem((ItemList.Type)item, 2))
+            {
+                num++;
+            }
+            if (SaveManager.Instance.GetStackableItem((ItemList.Type)item, 3))
+            {
+                num++;
+            }
+        }
+        return num;
+    }
+
+
+    [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid), "Update")]
+    [HarmonyPrefix]
+    static bool progressiveItemCrafting(ref GemaUIPauseMenu_CraftGrid __instance, ref GemaUIPauseMenu_CraftGridSlot[] ___craftList, ref int ___selected, ref ItemList.Type ___currentItemType, ref GemaUIPauseMenu_CraftMaterialSlot[] ___materialownedList,
+        ref byte[] ___currentMaterialNeeded, ref float ___isJustCraftedBadge, ref float ___errorflashing, ref float ___flashing, UI.Image ___synthesisBox, UI.Image ___synthesisBoxOutline, ref GameObject[] ___specialcrafts, ref UI.Image ___craftedFlash,
+        ref GemaUIPauseMenu_ItemGridSub[] ___bagItems)
+    {
+        Traverse trav = Traverse.Create(__instance);
+        if (InputButtonManager.Instance.GetButtonDown(13) && !HUDObtainedItem.Instance.isDisplaying())
+        {
+            if (___currentItemType.ToString().Contains("ITEM") && ___craftList[___selected].isUpgrade)
+            {
+
+                int num5 = 1;
+                ItemList.Resource resource = ItemList.Resource.COIN;
+
+
+                if (getItemUpgradeCount(___currentItemType) >= 3) // helperfunction 
+                {
+                    num5 = -3;
+                }
+
+                if (num5 >= 1)
+                {
+                    for (int m = 0; m < GemaItemManager.Instance.maxMaterial; m++)
+                    {
+                        if (__instance.GetMat(___currentItemType, m) > SaveManager.Instance.GetResource((ItemList.Resource)m))
+                        {
+                            int num6 = m - 1;
+                            if (num6 < 0)
+                            {
+                                num6 = GemaItemManager.Instance.maxMaterial - 1;
+                            }
+                            else
+                            {
+                                ___materialownedList[num6].SetFlash(byte.MaxValue, 0, 0, byte.MaxValue);
+                            }
+                            ___currentMaterialNeeded[num6] = 2;
+                            num5 = 0;
+                        }
+                    }
+                }
+                if (EventManager.Instance.isBossMode())
+                {
+                    num5 = -5;
+                }
+                if (num5 <= 0)
+                {
+                    CameraScript.Instance.PlaySound(AllSound.SEList.MENUFAIL);
+                    if (num5 == 0)
+                    {
+                        GemaUIPauseMenu_BottomBarPrompt.Instance.ShowErrorText("BottomBarError.NotEnoughMaterials");
+                        ___errorflashing = 0.8f;
+                    }
+                    if (num5 == -1)
+                    {
+                        GemaUIPauseMenu_BottomBarPrompt.Instance.ShowErrorText("BottomBarError.BagFull");
+                    }
+                    if (num5 == -2)
+                    {
+                        GemaUIPauseMenu_BottomBarPrompt.Instance.ShowErrorText("BottomBarError.ItemLimitReached");
+                    }
+                    if (num5 == -3)
+                    {
+                        GemaUIPauseMenu_BottomBarPrompt.Instance.ShowErrorText("BottomBarError.LevelLimitReached");
+                    }
+                    if (num5 == -4)
+                    {
+                        GemaUIPauseMenu_BottomBarPrompt.Instance.ShowErrorText("BottomBarError.AlreadyOwned");
+                    }
+                    if (num5 == -5)
+                    {
+                        GemaUIPauseMenu_BottomBarPrompt.Instance.ShowErrorText("BottomBarError.NoCraftingInBattle");
+                    }
+                    if (num5 == -6)
+                    {
+                        GemaUIPauseMenu_BottomBarPrompt.Instance.ShowErrorText("BottomBarError.ExchangeFailA");
+                    }
+                    if (num5 == -7)
+                    {
+                        GemaUIPauseMenu_BottomBarPrompt.Instance.ShowErrorText("BottomBarError.ExchangeAllUsed");
+                    }
+                    if (num5 == -8)
+                    {
+                        GemaUIPauseMenu_BottomBarPrompt.Instance.ShowErrorText("BottomBarError.ExchangeFailB");
+                    }
+                    return false;
+                }
+                else
+                {
+                    for (int n = 0; n < GemaItemManager.Instance.maxMaterial; n++)
+                    {
+                        if (n > 0)
+                        {
+                            ___materialownedList[(n - 1) % GemaItemManager.Instance.maxMaterial].NoAdd();
+                        }
+                    }
+                    ItemList.Type type = ItemList.Type.OFF;
+                    for (int num7 = 0; num7 < GemaItemManager.Instance.maxMaterial; num7++)
+                    {
+                        if (__instance.GetMat(___currentItemType, num7) <= 0)
+                        {
+                            continue;
+                        }
+                        SaveManager.Instance.SubResource((ItemList.Resource)num7, __instance.GetMat(___currentItemType, num7));
+                        if (num7 > 0)
+                        {
+                            ___materialownedList[(num7 - 1) % GemaItemManager.Instance.maxMaterial].SetFlash(0, byte.MaxValue, byte.MaxValue, byte.MaxValue);
+                            if (___currentItemType == ItemList.Type.Function_MaterialExchangeA || ___currentItemType == ItemList.Type.Function_MaterialExchangeB)
+                            {
+                                ___materialownedList[(num7 - 1) % GemaItemManager.Instance.maxMaterial].SetAdd(byte.MaxValue, 0, 0, -9);
+                                resource = (ItemList.Resource)num7;
+                                break;
+                            }
+                            ___materialownedList[(num7 - 1) % GemaItemManager.Instance.maxMaterial].SetAdd(byte.MaxValue, 0, 0, -__instance.GetMat(___currentItemType, num7));
+                        }
+                    }
+                    int num8 = -1;
+
+                    if (___craftList[___selected].isUpgrade)
+                    {
+                        //HUDObtainedItem.Instance.GiveItem(___currentItemType, (byte)(getItemUpgradeCount(___currentItemType) + 1)); // helper function to get current craft number
+                        SaveManager.Instance.SetItem(___currentItemType, (byte) (getItemUpgradeCount(___currentItemType) + 1), true);
+                        ___isJustCraftedBadge = 1.75f;
+                    }
+
+                        Debug.Log("[Craft] Crafting " + ___currentItemType);
+                    ___flashing = 0.333f;
+
+
+                    CameraScript.Instance.PlaySound(AllSound.SEList.LEVELUP);
+                    ___synthesisBox.color = new Color(0f, 1f, 1f, 1f);
+                    ___synthesisBoxOutline.color = new Color(0f, 1f, 1f, 1f);
+                    ___synthesisBoxOutline.transform.localScale = new Vector3(1f, 1f, 1f);
+                    trav.Method("UpdateSelectedText").GetValue();
+                    trav.Method("UpdateTotalText").GetValue();
+                    trav.Method("UpdateBag").GetValue();
+                    for (int num14 = 0; num14 < ___specialcrafts.Length; num14++)
+                    {
+                        ___specialcrafts[num14].SetActive(value: false);
+                    }
+                    ___craftList[___selected].SetItem(___craftList[___selected].GetItemType(), ___craftList[___selected].isUpgrade, null);
+                    if (num8 >= 0)
+                    {
+                        ___craftedFlash.transform.position = ___bagItems[num8].transform.position;
+                        ___craftedFlash.sprite = ___bagItems[num8].GetSprite();
+                        ___craftedFlash.color = new Color(0f, 1f, 1f, 1f);
+                        ___craftedFlash.transform.localScale = new Vector3(1f, 1f, 1f);
+                    }
+                    if (type != 0)
+                    {
+                        trav.Method("UpdateCraftList").GetValue();
+                        for (int num15 = 0; num15 < ___craftList.Length; num15++)
+                        {
+                            if (___craftList[num15].GetItemType() == type)
+                            {
+                                ___selected = num15;
+                                trav.Method("MoveCursor", new object[] { true });
+                                trav.Method("UpdateSelectedText").GetValue();
+                                break;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        for (int num16 = 0; num16 < ___craftList.Length; num16++)
+                        {
+                            ___craftList[num16].UpdateCanCraft();
+                        }
+                        trav.Method("UpdateSelectedText").GetValue();
+
+                        return false;
+                    }
+                }
+
+            }
+        }
+
+        return true;
+    }
+
+
 }
 
 
