@@ -4,3 +4,5 @@ Randomizer_Plugin/.vs/*
 Randomizer_Plugin/Assembly-CSharp.dll
 Randomizer_Plugin/mscorlib.dll
 global.json
+/Randomizer_Plugin/Unity.TextMeshPro.dll
+/Randomizer_Plugin/UnityEngine.UI.dll
