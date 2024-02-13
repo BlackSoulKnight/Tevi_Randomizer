@@ -21,9 +21,20 @@
     <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
     <PackageReference Include="UnityEngine.Modules" Version="2021.3.25" IncludeAssets="compile" />
 	
+	
 	<Reference Include="Assembly-CSharp">
     <HintPath>Assembly-CSharp.dll</HintPath>
   </Reference>
+  
+  <Reference Include="Unity.TextMeshPro">
+    <HintPath>Unity.TextMeshPro.dll</HintPath>
+  </Reference>
+  
+    <Reference Include="UnityEngine.UI">
+    <HintPath>UnityEngine.UI.dll</HintPath>
+  </Reference>
+  
+  
   </ItemGroup>
   
   <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
