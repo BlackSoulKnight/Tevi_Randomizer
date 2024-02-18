@@ -6,6 +6,8 @@ using HarmonyLib;
 using EventMode;
 using Game;
 using TMPro;
+using Character;
+using UnityEngine.XR;
 
 
 
@@ -149,15 +151,11 @@ public class Randomizer : BaseUnityPlugin
             Logger.LogWarning("[Randomizer] Plugin is disabled");
             return;
         }
-        itemPairSetup();
-
 
         var instance = new Harmony("Randomizer");
         instance.PatchAll(typeof(Randomizer));
         instance.PatchAll(typeof(CraftingPatch));
         Logger.LogInfo($"Plugin Randomizer is loaded!");
-
-
 
     }
 
@@ -180,30 +178,6 @@ public class Randomizer : BaseUnityPlugin
     }
     static (ItemList.Type, ItemList.Type)[] _upgradeAble = new (ItemList.Type, ItemList.Type)[21];
     static ItemList.Type[] _upgradeAbleList = new ItemList.Type[21];
-    private void itemPairSetup()
-    {
-        _upgradeAble[0] = (ItemList.Type.ITEM_KNIFE, ItemList.Type.ITEM_46);
-        _upgradeAble[1] = (ItemList.Type.ITEM_ORB, ItemList.Type.ITEM_47);
-        _upgradeAble[2] = (ItemList.Type.ITEM_RapidShots, ItemList.Type.ITEM_48);
-        _upgradeAble[3] = (ItemList.Type.ITEM_AttackRange, ItemList.Type.ITEM_49);
-        _upgradeAble[4] = (ItemList.Type.ITEM_EasyStyle, ItemList.Type.ITEM_50);
-        _upgradeAble[5] = (ItemList.Type.ITEM_LINEBOMB, ItemList.Type.ITEM_51);
-        _upgradeAble[6] = (ItemList.Type.ITEM_AREABOMB, ItemList.Type.ITEM_52);
-        _upgradeAble[7] = (ItemList.Type.ITEM_SPEEDUP, ItemList.Type.ITEM_53);
-        _upgradeAble[8] = (ItemList.Type.ITEM_AirDash, ItemList.Type.ITEM_54);
-        _upgradeAble[9] = (ItemList.Type.ITEM_WALLJUMP, ItemList.Type.ITEM_55);
-        _upgradeAble[10] = (ItemList.Type.ITEM_JETPACK, ItemList.Type.ITEM_56);
-        _upgradeAble[11] = (ItemList.Type.ITEM_BoostSystem, ItemList.Type.ITEM_57);
-        _upgradeAble[12] = (ItemList.Type.ITEM_BombLengthExtend, ItemList.Type.ITEM_58);
-        _upgradeAble[13] = (ItemList.Type.ITEM_MASK, ItemList.Type.ITEM_59);
-        _upgradeAble[14] = (ItemList.Type.ITEM_TempRing, ItemList.Type.ITEM_60);
-        _upgradeAble[15] = (ItemList.Type.ITEM_DodgeShot, ItemList.Type.ITEM_61);
-        _upgradeAble[16] = (ItemList.Type.ITEM_Rotater, ItemList.Type.ITEM_62);
-        _upgradeAble[17] = (ItemList.Type.ITEM_GoldenGlove, ItemList.Type.ITEM_63);
-        _upgradeAble[18] = (ItemList.Type.ITEM_OrbAmulet, ItemList.Type.ITEM_64);
-        _upgradeAble[19] = (ItemList.Type.ITEM_BOMBFUEL, ItemList.Type.ITEM_65);
-        _upgradeAble[20] = (ItemList.Type.ITEM_Explorer, ItemList.Type.ITEM_66);
-    }
 
     static public ItemList.Type getItemPair(ItemList.Type type, bool reversed)
     {
@@ -222,9 +196,6 @@ public class Randomizer : BaseUnityPlugin
         }
 
     }
-
-
-
 
 
     //Hotswap item recieved
@@ -250,6 +221,9 @@ public class Randomizer : BaseUnityPlugin
                     break;
             }
         }
+        //if (Enum.IsDefined(typeof(Upgradable),type.ToString()))
+            //return;
+
         ItemData data = getRandomizedItem(type, value);
 
         value = (byte)data.slotID;
@@ -432,10 +406,17 @@ public class Randomizer : BaseUnityPlugin
         ItemData data2 = getRandomizedItem(ItemList.Type.ITEM_OrbTypeC3, 1);
         ItemData data3 = getRandomizedItem(ItemList.Type.ITEM_OrbTypeS2, 1);
         ItemData data4 = getRandomizedItem(ItemList.Type.ITEM_OrbTypeS3, 1);
+        Upgradable item;
 
         if (!data1.getItemTyp().ToString().Contains("STACKABLE"))
         {
-            if (__instance.GetItem(data1.getItemTyp()) > 0)
+
+            if(Enum.TryParse(data1.getItemTyp().ToString(),out item))
+            {
+                if(SaveManager.Instance.GetStackableItem((ItemList.Type)item, data1.getSlotId()))
+                    num++;
+            }
+            else if (__instance.GetItem(data1.getItemTyp()) > 0)
             {
                 num++;
             }
@@ -450,7 +431,12 @@ public class Randomizer : BaseUnityPlugin
 
         if (!data2.getItemTyp().ToString().Contains("STACKABLE"))
         {
-            if (__instance.GetItem(data2.getItemTyp()) > 0)
+            if (Enum.TryParse(data2.getItemTyp().ToString(), out item))
+            {
+                if(SaveManager.Instance.GetStackableItem((ItemList.Type)item, data2.getSlotId()))
+                    num++;
+            }
+            else if (__instance.GetItem(data2.getItemTyp()) > 0)
             {
                 num++;
             }
@@ -465,7 +451,12 @@ public class Randomizer : BaseUnityPlugin
 
         if (!data3.getItemTyp().ToString().Contains("STACKABLE"))
         {
-            if (__instance.GetItem(data3.getItemTyp()) > 0)
+            if (Enum.TryParse(data3.getItemTyp().ToString(), out item))
+            {
+                if(SaveManager.Instance.GetStackableItem((ItemList.Type)item, data3.getSlotId()))
+                    num++;
+            }
+            else if (__instance.GetItem(data3.getItemTyp()) > 0)
             {
                 num++;
             }
@@ -480,7 +471,12 @@ public class Randomizer : BaseUnityPlugin
 
         if (!data4.getItemTyp().ToString().Contains("STACKABLE"))
         {
-            if (__instance.GetItem(data4.getItemTyp()) > 0)
+            if (Enum.TryParse(data4.getItemTyp().ToString(), out item))
+            {
+                if (SaveManager.Instance.GetStackableItem((ItemList.Type)item, data4.getSlotId()))
+                    num++;
+            }
+            else if (__instance.GetItem(data4.getItemTyp()) > 0)
             {
                 num++;
             }
@@ -532,14 +528,6 @@ public class Randomizer : BaseUnityPlugin
     [HarmonyPrefix]
     static bool setItemAdditionals(ref ItemList.Type item, byte value)
     {
-
-        if (item > ItemList.Type.STACKABLE_COG && item < ItemList.Type.STACKABLE_BAG && value > 35)
-        {
-            //RandomizedData data = getRandomizedItem((int)item, (int)value);
-            //dunno
-
-        }
-
         switch (item)
         {
 
@@ -568,6 +556,7 @@ public class Randomizer : BaseUnityPlugin
             {
                 if (value == 0)
                 {
+                    __instance.SetStackableItem((ItemList.Type)itemRef, 0, false);
                     __instance.SetStackableItem((ItemList.Type)itemRef, 1, false);
                     __instance.SetStackableItem((ItemList.Type)itemRef, 2, false);
                     __instance.SetStackableItem((ItemList.Type)itemRef, 3, false);
@@ -584,8 +573,8 @@ public class Randomizer : BaseUnityPlugin
                     if (value > 3)
                     {
                         value = (byte)(__instance.GetItem(item) + 1);
-                        if (!__instance.GetStackableItem((ItemList.Type)itemRef, 1)){
-                            __instance.SetStackableItem((ItemList.Type)itemRef, 1, true);
+                        if (!__instance.GetStackableItem((ItemList.Type)itemRef, 0)){
+                            __instance.SetStackableItem((ItemList.Type)itemRef, 0, true);
                         }
                     }
                     else if(value > 1 && value<=3)
@@ -1468,7 +1457,7 @@ class CraftingPatch
         Randomizer.Upgradable item;
         if (Enum.TryParse(_item.ToString(), out item))
         {
-            if (SaveManager.Instance.GetStackableItem((ItemList.Type)item, 1))
+            if (SaveManager.Instance.GetStackableItem((ItemList.Type)item, 0))
             {
                 num++;
             }
@@ -1489,12 +1478,16 @@ class CraftingPatch
     [HarmonyPrefix]
     static bool progressiveItemCrafting(ref GemaUIPauseMenu_CraftGrid __instance, ref GemaUIPauseMenu_CraftGridSlot[] ___craftList, ref int ___selected, ref ItemList.Type ___currentItemType, ref GemaUIPauseMenu_CraftMaterialSlot[] ___materialownedList,
         ref byte[] ___currentMaterialNeeded, ref float ___isJustCraftedBadge, ref float ___errorflashing, ref float ___flashing, UI.Image ___synthesisBox, UI.Image ___synthesisBoxOutline, ref GameObject[] ___specialcrafts, ref UI.Image ___craftedFlash,
-        ref GemaUIPauseMenu_ItemGridSub[] ___bagItems)
+        ref GemaUIPauseMenu_ItemGridSub[] ___bagItems,ref (Character.OrbType, OrbShootType[],bool) __state)
     {
         Traverse trav = Traverse.Create(__instance);
+        __state.Item3 = false;
         if (InputButtonManager.Instance.GetButtonDown(13) && !HUDObtainedItem.Instance.isDisplaying())
         {
-            if (___currentItemType.ToString().Contains("ITEM") && ___craftList[___selected].isUpgrade)
+            __state.Item1 = EventManager.Instance.mainCharacter.cphy_perfer.orbUsing;
+            __state.Item2 = EventManager.Instance.mainCharacter.cphy_perfer.orbShootType;
+            __state.Item3 = true;
+            if (___currentItemType.ToString().Contains("ITEM") && ___craftList[___selected].isUpgrade || ___currentItemType.ToString().Contains("BADGE"))
             {
 
                 int num5 = 1;
@@ -1505,7 +1498,12 @@ class CraftingPatch
                 {
                     num5 = -3;
                 }
-
+                ItemData rnd = Randomizer.getRandomizedItem(___currentItemType, 1);
+                if (!Enum.IsDefined(typeof(Randomizer.Upgradable), rnd.getItemTyp().ToString())&&SaveManager.Instance.GetItem(rnd.getItemTyp())>0)
+                {
+                    
+                    num5 = -3;
+                }
                 if (num5 >= 1)
                 {
                     for (int m = 0; m < GemaItemManager.Instance.maxMaterial; m++)
@@ -1609,6 +1607,8 @@ class CraftingPatch
                         SaveManager.Instance.SetItem(___currentItemType, (byte) (getItemUpgradeCount(___currentItemType) + 1), true);
                         ___isJustCraftedBadge = 1.75f;
                     }
+                    else
+                        HUDObtainedItem.Instance.GiveItem(___currentItemType, 1);
 
                         Debug.Log("[Craft] Crafting " + ___currentItemType);
                     ___flashing = 0.333f;
@@ -1665,14 +1665,17 @@ class CraftingPatch
         return true;
     }
 
+    [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid), "Update")]
+    [HarmonyPostfix]
+    static void fixOrbShootType(ref (Character.OrbType, OrbShootType[],bool) __state)
+    {
+        if (__state.Item3)
+        {
+            EventManager.Instance.mainCharacter.cphy_perfer.PrepareSwitchOrb(false, true, __state.Item1);
+            EventManager.Instance.mainCharacter.cphy_perfer.orbShootType = __state.Item2;
+            
+        }
+    }
 
 }
 
-
-
-
-/*
- * Crafting Item -> give random item depending on numcrafted 
- * map Upgrade items to Item_XX
- * this will likely break with the next DLC
- */
