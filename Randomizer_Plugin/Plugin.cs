@@ -7,7 +7,8 @@ using EventMode;
 using Game;
 using TMPro;
 using Character;
-using UnityEngine.XR;
+
+using UnityEngine.UI;
 
 
 
@@ -58,8 +59,6 @@ public class ItemData
 
 
 }
-
-
 
 
 
@@ -155,9 +154,13 @@ public class Randomizer : BaseUnityPlugin
         var instance = new Harmony("Randomizer");
         instance.PatchAll(typeof(Randomizer));
         instance.PatchAll(typeof(CraftingPatch));
+
         Logger.LogInfo($"Plugin Randomizer is loaded!");
 
     }
+
+
+
 
     static public ItemData getRandomizedItem(ItemList.Type itemid, byte slotid)
     {
@@ -1499,7 +1502,7 @@ class CraftingPatch
                     num5 = -3;
                 }
                 ItemData rnd = Randomizer.getRandomizedItem(___currentItemType, 1);
-                if (!Enum.IsDefined(typeof(Randomizer.Upgradable), rnd.getItemTyp().ToString())&&SaveManager.Instance.GetItem(rnd.getItemTyp())>0)
+                if (!Enum.IsDefined(typeof(Randomizer.Upgradable), ___currentItemType.ToString())&&SaveManager.Instance.GetItem(rnd.getItemTyp())>0)
                 {
                     
                     num5 = -3;
@@ -1547,6 +1550,7 @@ class CraftingPatch
                     if (num5 == -3)
                     {
                         GemaUIPauseMenu_BottomBarPrompt.Instance.ShowErrorText("BottomBarError.LevelLimitReached");
+                        Debug.LogWarning($"[Randomizer] Already has {rnd.getItemTyp().ToString()}");
                     }
                     if (num5 == -4)
                     {
