@@ -9,11 +9,7 @@ using TMPro;
 using Character;
 
 using UnityEngine.UI;
-
-
-
-
-//Crafting Orb type bug
+using UnityEngine;
 
 
 
@@ -21,7 +17,8 @@ using UnityEngine.UI;
 
 
 
-namespace UnityEngine;
+
+
 
 
 
@@ -98,7 +95,10 @@ public class Randomizer : BaseUnityPlugin
         ITEM_Explorer = 30,
     }
 
-
+    public enum EventID
+    {
+        IllusionPalace = 9999
+    }
 
     private void Awake()
     {
@@ -154,10 +154,14 @@ public class Randomizer : BaseUnityPlugin
         var instance = new Harmony("Randomizer");
         instance.PatchAll(typeof(Randomizer));
         instance.PatchAll(typeof(CraftingPatch));
+        instance.PatchAll(typeof(ShopPatch));
+        instance.PatchAll(typeof(EventPatch));
 
         Logger.LogInfo($"Plugin Randomizer is loaded!");
 
     }
+
+
 
 
 
@@ -179,26 +183,57 @@ public class Randomizer : BaseUnityPlugin
         }
         return data;
     }
-    static (ItemList.Type, ItemList.Type)[] _upgradeAble = new (ItemList.Type, ItemList.Type)[21];
-    static ItemList.Type[] _upgradeAbleList = new ItemList.Type[21];
 
-    static public ItemList.Type getItemPair(ItemList.Type type, bool reversed)
+    static public ItemData getRandomizedItem(int itemid, int slotid)
     {
-        (ItemList.Type, ItemList.Type) result = (type, type);
-        foreach ((ItemList.Type, ItemList.Type) item in _upgradeAble)
+        ItemData data;
+        try
         {
-            if (item.Item1 == type || item.Item2 == type) result = item;
-        }
-        if (!reversed)
-        {
-            return result.Item2;
-        }
-        else
-        {
-            return result.Item1;
-        }
+            //Debug.Log($"[Randomizer] Load item {itemid}:{slotid}");
 
+            data = __itemData[new ItemData(itemid, slotid)];
+            //Debug.Log($"[Randomizer] Found item {(ItemList.Type)data.itemID}:{data.slotID}");
+        }
+        catch
+        {
+            //Debug.LogError("[Randomizer] Could not load the randomized Item " + itemid.ToString() + "! It has the ID: " + (int)itemid + " and the SlotID: " + slotid);
+            data = new ItemData(itemid, slotid);
+        }
+        return data;
     }
+
+
+    // change how the item Bell Works
+    [HarmonyPatch(typeof(CharacterBase),"UseItem")]
+    [HarmonyPrefix]
+    static bool WarpBell(ref ItemList.Type item,ref bool playvoice,ref ObjectPhy ___phy_perfer, ref playerController ___playerc_perfer)
+    {
+        if(item == ItemList.Type.Useable_Bell)
+        {
+            int num5 = (int)___phy_perfer.GetCounter(4);
+            EventManager.Instance.StartWarp(1, 1, 1, 1);
+            SaveManager.Instance.RemoveItemFromBagSlot(num5);
+            HUDResourceGotPopup.Instance.AddPopup(item, useTop: true, forcepop: true);
+            if (SaveManager.Instance.GetBadgeEquipped(ItemList.Type.BADGE_ConsumeableCharge))
+            {
+                SaveManager.Instance.SetItem(ItemList.Type.BADGE_ConsumeableCharge, (byte)(SaveManager.Instance.GetItem(ItemList.Type.BADGE_ConsumeableCharge) + 1), output: false);
+            }
+            if (playvoice)
+            {
+                if (item == ItemList.Type.Useable_BSnack)
+                {
+                    ___playerc_perfer.PlayItemVoice(isbad: true);
+                }
+                else
+                {
+                    ___playerc_perfer.PlayItemVoice(isbad: false);
+                }
+            }
+
+            return false;
+        }
+        return true;
+    } 
 
 
     //Hotswap item recieved
@@ -240,8 +275,12 @@ public class Randomizer : BaseUnityPlugin
     [HarmonyPostfix]
     static void CraftingRefresh()
     {
-        Traverse.Create(GemaUIPauseMenu_CraftGrid.Instance).Method("UpdateCraftList").GetValue();
-
+        if(GemaUIPauseMenu_CraftGrid.Instance != null) 
+            Traverse.Create(GemaUIPauseMenu_CraftGrid.Instance).Method("UpdateCraftList").GetValue();
+        else
+        {
+            Debug.LogWarning("This was triggerd to Early");
+        }
     }
 
 
@@ -391,10 +430,6 @@ public class Randomizer : BaseUnityPlugin
             SaveManager.Instance.FirstTimeEnableOrbColors();
         }
     }
-
-
-
-
 
 
 
@@ -604,308 +639,15 @@ public class Randomizer : BaseUnityPlugin
         return true;
     }
 
-    [HarmonyPatch(typeof(HUDShopMenu), "AddItem")]
-    [HarmonyPrefix]
-    static bool shopItems(HUDShopMenu __instance, ref ItemList.Type item, ref Character.Type ___typeN, ref GemaShopItemSlot[] ___itemslots, ref int ___CurrentMaxItem, ref byte ___ShopID, ref byte ___ShopType)
-    {
-
-        byte area = WorldManager.Instance.Area;
-
-
-        int num = GemaItemManager.Instance.GetItemCoin(item);
-        if (num <= 1000)
-        {
-            num = 250 * GemaItemManager.Instance.GetItemCost(item);
-            if (num < 1250)
-            {
-                num += 250;
-                if (num > 1250)
-                {
-                    num = 1250;
-                }
-            }
-            if (num < 1000)
-            {
-                num = 1000;
-            }
-        }
-
-        if (___ShopType == 0)
-        {
-            ItemData data;
-            if (item.ToString().Contains("STACKABLE"))
-                data = getRandomizedItem(item, (byte)(___ShopID + 30));
-            else
-                data = getRandomizedItem(item, 1);
-
-
-            Upgradable upItem;
-            bool flag = Enum.TryParse<Upgradable>(data.getItemTyp().ToString(), out upItem);
-
-            if (item == ItemList.Type.STACKABLE_BAG)
-            {
-                MainVar.instance.BagID = (byte)(___ShopID + 1);
-            }
-            if (data.getItemTyp().ToString().Contains("STACKABLE") && SaveManager.Instance.GetStackableItem(data.getItemTyp(), data.getSlotId()))
-            {
-                return false;
-            }
-            else if (flag && SaveManager.Instance.GetStackableItem((ItemList.Type)upItem, data.getSlotId()))
-            {
-                return false;
-            }
-            else if
-            (SaveManager.Instance.GetItem((ItemList.Type)data.itemID) > 0 && !flag) //implement a way to get only upgradeable items
-            {
-                return false;
-            }
-
-
-            switch (___typeN)
-            {
-                case Character.Type.Ian:
-                    ___itemslots[___CurrentMaxItem].SetItem(item, num, false);
-                    ___CurrentMaxItem++;
-                    break;
-                case Character.Type.CC:
-
-                    ___itemslots[___CurrentMaxItem].SetItem(item, num, false);
-                    ___CurrentMaxItem++;
-                    break;
-                default:
-                    return true;
-
-            }
-            return false;
-        }
-
-
-        return true;
-    }
-
-
-    [HarmonyPatch(typeof(HUDShopMenu), "Update")]
-    [HarmonyPrefix]
-    static bool ChangeBuySystem(ref HUDShopMenu __instance, ref GemaShopItemSlot[] ___itemslots, ref int ___Selected, ref Character.Type ___typeN, ref SpriteRenderer ___buyo, ref bool ___bought, ref byte ___ShopID)
-    {
-        Traverse trav = Traverse.Create(__instance);
-        if (InputButtonManager.Instance.GetButtonDown(13) && __instance.ShopType == 0)
-        {
-            ItemData data;
-            if (___itemslots[___Selected].CanPurchase())
-            {
-                int price = ___itemslots[___Selected].GetPrice();
-                bool flag2 = true;
-                if (___itemslots[___Selected].GetItem().ToString().Contains("Useable") && SaveManager.Instance.isBagFull())
-                {
-                    trav.Method("PlayShopVoice", new object[] { ___typeN, ShopVoiceType.NoSpace }).GetValue();
-                    string line = "SHOP." + ___typeN.ToString() + "_NoSpace";
-                    trav.Method("StartNewLine", new object[] { line, true }).GetValue();
-
-                    flag2 = false;
-                }
-                if (SaveManager.Instance.GetResource(ItemList.Resource.COIN) >= price && flag2)
-                {
-                    SaveManager.Instance.SubResource(ItemList.Resource.COIN, price);
-                    if (___typeN == Character.Type.Ian)
-                    {
-                        SaveManager.Instance.savedata.coinUsedIan += price;
-                    }
-                    else if (___typeN == Character.Type.CC)
-                    {
-                        SaveManager.Instance.savedata.coinUsedCC += price;
-                    }
-                    if (___itemslots[___Selected].GetItem().ToString().Contains("Useable"))
-                    {
-                        data = getRandomizedItem(___itemslots[___Selected].GetItem(), 1);
-                        SaveManager.Instance.AddItemToBag(___itemslots[___Selected].GetItem());
-                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleAHoneycloud)
-                        {
-                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleA, 1);
-                        }
-                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleBMeringue)
-                        {
-                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleB, 1);
-                        }
-                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleCMorning)
-                        {
-                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleC, 1);
-                        }
-                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleDJellydrop)
-                        {
-                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleD, 1);
-                        }
-                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleElueberry)
-                        {
-                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleE, 1);
-                        }
-                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombSmall)
-                        {
-                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaSmall, 1);
-                        }
-                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombBig)
-                        {
-                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaBig, 1);
-                        }
-                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombBunBun)
-                        {
-                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaBB, 1);
-                        }
-                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombHealBlock)
-                        {
-                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaHB, 1);
-                        }
-                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombDispel)
-                        {
-                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaD, 1);
-                        }
-                    }
-
-
-                    else if (___itemslots[___Selected].GetItem().ToString().Contains("STACKABLE"))
-                    {
-                        data = getRandomizedItem(___itemslots[___Selected].GetItem(), (byte)(30 + ___ShopID));
-
-                    }
-                    else
-                    {
-                        data = getRandomizedItem(___itemslots[___Selected].GetItem(), 1);
-                    }
-
-
-                    if (data.getItemTyp().ToString().Contains("STACKABLE"))
-                    {
-                        SaveManager.Instance.SetStackableItem(data.getItemTyp(), data.getSlotId(), value: true);
-                        if (data.getItemTyp() == ItemList.Type.STACKABLE_BAG)
-                        {
-                            SettingManager.Instance.SetAchievement(Achievements.ACHI_SHOP_BUYBAG);
-                        }
-                    }
-                    else
-                    {
-                        SaveManager.Instance.SetItem(data.getItemTyp(), data.getSlotId());
-                    }
-
-
-                    if (___itemslots[___Selected].GetItem().ToString().Contains("BADGE_"))
-                    {
-                        SaveManager.Instance.SetMiniFlag(Mini.BadgeBought, (byte)(SaveManager.Instance.GetMiniFlag(Mini.BadgeBought) + 1));
-                    }
-                    ___bought = true;
-                    CameraScript.Instance.PlaySound(AllSound.SEList.Purchase);
-                    ___buyo.transform.position = ___itemslots[___Selected].transform.position + new Vector3(122.5f, 0f, 0f);
-                    ___buyo.transform.position = ___itemslots[___Selected].transform.position + new Vector3(122.5f, 0f, 0f);
-                    ___buyo.transform.localScale = new Vector3(1f, 1f, 1f);
-                    ___buyo.color = Color.white;
-                    ___buyo.color = Color.white;
-                    ___itemslots[___Selected].Purchased();
-                    trav.Method("PlayShopVoice", new object[] { ___typeN, ShopVoiceType.Purchased }).GetValue();
-                    string line2 = "SHOP." + ___typeN.ToString() + "_Purchased";
-                    trav.Method("StartNewLine", new object[] { line2, true }).GetValue();
-                }
-            }
-            return false;
-        }
-
-        return true;
-    }
-
-    [HarmonyPatch(typeof(GemaShopItemSlot), "SetItem")]
-    [HarmonyPrefix]
-    static bool ChangeShopItemVisual(ref GemaShopItemSlot __instance, ref ItemList.Type t, ref int _price, ref SpriteRenderer ___itemicon, ref ItemList.Type ___itype)
-    {
-        if (HUDShopMenu.Instance.ShopType == 2 || HUDShopMenu.Instance.ShopType == 1)
-        {
-            return true;
-
-        }
-        Traverse trav = Traverse.Create(__instance);
-        __instance.gameObject.SetActive(value: true);
-        byte shopID = Traverse.Create(HUDShopMenu.Instance).Field("ShopID").GetValue<byte>();
-        if (Traverse.Create(HUDShopMenu.Instance).Field("typeN").GetValue<Character.Type>() == Character.Type.CC)
-        {
-            ___itype = getRandomizedItem(t, (byte)(shopID + 30)).getItemTyp();
-        }
-        else
-        {
-            ___itype = getRandomizedItem(t, 1).getItemTyp();
-        }
-
-        trav.Field("price").SetValue(_price);
-
-        ___itemicon.sprite = CommonResource.Instance.GetItem((int)___itype);
-        ___itemicon.color = Color.white;
-        SpriteRenderer bgicon = trav.Field("bgicon").GetValue<SpriteRenderer>();
-        bgicon.color = Color.white;
-        trav.Field("coinicon").GetValue<SpriteRenderer>().enabled = true;
-        TextMeshPro[] texts = trav.Field("texts").GetValue<TextMeshPro[]>();
-
-
-        ___itemicon.enabled = true;
-        texts[0].text = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + GemaItemManager.Instance.GetItemString(___itype), contains: false);
-        texts[0].rectTransform.anchoredPosition = new Vector2(158.3f, 9.9f);
-        texts[0].color = new Color(1f, 1f, 1f, 1f);
-        texts[1].enabled = true;
-        texts[2].enabled = true;
-        bgicon.enabled = false;
-        if (___itype >= ItemList.Type.BADGE_START && ___itype <= ItemList.Type.BADGE_MAX)
-        {
-            texts[1].text = Localize.GetLocalizeTextWithKeyword("ITEMTYPE.Badge", contains: false);
-            texts[1].color = new Color32(byte.MaxValue, 186, 95, byte.MaxValue);
-            bgicon.enabled = true;
-        }
-        else
-        {
-            texts[1].color = new Color32(152, 222, byte.MaxValue, byte.MaxValue);
-            texts[1].text = Localize.GetLocalizeTextWithKeyword("ITEMTYPE.Item", contains: false);
-        }
-        texts[2].text = _price.ToString();
-        ___itype = t;
-        return false;
-    }
 
 
 
 
-
-    [HarmonyPatch(typeof(HUDShopMenu), "UpdateShopItemDetail")]
-    [HarmonyPostfix]
-    static void ItemShopDescriptionFix(ref HUDShopMenu __instance, ref TextMeshPro ___item_desc, ref byte ___ShopID, ref GemaShopItemSlot[] ___itemslots, ref int ___Selected)
-    {
-
-        if (__instance.ShopType == 0)
-        {
-            ItemList.Type item = ___itemslots[___Selected].GetItem();
-            ItemData data;
-            if (item.ToString().Contains("STACKABLE"))
-            {
-                data = getRandomizedItem(item, (byte)(___ShopID + 30));
-                ___item_desc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(data.getItemTyp());
-            }
-            else
-            {
-                data = getRandomizedItem(item, 1);
-                ___item_desc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(data.getItemTyp());
-            }
-            if (___item_desc.text.Contains("[c2]"))
-            {
-                ___item_desc.text = Localize.FilterLevelDescFromItem(data.getItemTyp(), ___item_desc.text);
-            }
-            if (data.getItemTyp().ToString().Contains("Useable_"))
-            {
-                ___item_desc.text += Localize.GetLocalizeTextWithKeyword("ITEMDESC.WAFFLEBUY", contains: false);
-            }
-            if (data.getItemTyp() >= ItemList.Type.BADGE_START && data.getItemTyp() <= ItemList.Type.BADGE_MAX)
-            {
-                TextMeshPro textMeshPro = ___item_desc;
-                textMeshPro.text = textMeshPro.text + "<br><br>" + Localize.GetLocalizeTextWithKeyword("ITEMDESC.EQUIPBADGETIPS", contains: false);
-            }
-            ___item_desc.text = InputButtonManager.Instance.AddButtonsToPromote(___item_desc.text);
-        }
-    }
+}
 
 
-
+class EventPatch
+{
     // Free Start Items
     [HarmonyPatch(typeof(Chap0GetKnife), "EVENT")]
     [HarmonyPrefix]
@@ -915,11 +657,10 @@ public class Randomizer : BaseUnityPlugin
 
         if (em.EventStage == 10)
         {
-
             SaveManager.Instance.SetOrb((byte)0);
-            ItemData data = getRandomizedItem(ItemList.Type.ITEM_ORB, 4);
+            ItemData data = Randomizer.getRandomizedItem(ItemList.Type.ITEM_ORB, 4);
             SaveManager.Instance.SetItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
-            data = getRandomizedItem(ItemList.Type.ITEM_KNIFE, 4);
+            data = Randomizer.getRandomizedItem(ItemList.Type.ITEM_KNIFE, 4);
             SaveManager.Instance.SetItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
             em.SetStage(30);
         }
@@ -930,7 +671,7 @@ public class Randomizer : BaseUnityPlugin
     [HarmonyPrefix]
     static bool Vena7x7Fix(ref bool __result)
     {
-        ItemData data = getRandomizedItem(ItemList.Type.STACKABLE_COG, 23);
+        ItemData data = Randomizer.getRandomizedItem(ItemList.Type.STACKABLE_COG, 23);
 
         if (!SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam))
         {
@@ -966,7 +707,7 @@ public class Randomizer : BaseUnityPlugin
                 {
                     if (SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam))
                     {
-                        ItemData data = getRandomizedItem(ItemList.Type.STACKABLE_COG, 23);
+                        ItemData data = Randomizer.getRandomizedItem(ItemList.Type.STACKABLE_COG, 23);
                         bool flag = false;
                         if (data.getItemTyp().ToString().Contains("STACKABLE"))
                         {
@@ -989,6 +730,19 @@ public class Randomizer : BaseUnityPlugin
                                 {
                                     EventManager.Instance.LastHitTrigger = component;
                                 }
+                            }
+                            return false;
+                        }
+                        if(component.mode == Mode.BOSS_TAHLIA || component.mode == Mode.BOSS_REVENANCE)
+                        {
+                            if (WorldManager.Instance.CheckIsWall(component.transform.position, any: false) == 1)
+                            {
+                                Debug.Log("[EventDetect] Event is inside wall, cannot trigger : " + component.mode);
+                                flag = false;
+                            }
+                            if (EventManager.Instance.TryStartEvent(component.mode, force: false))
+                            {
+                                EventManager.Instance.LastHitTrigger = component;
                             }
                             return false;
                         }
@@ -1028,8 +782,38 @@ public class Randomizer : BaseUnityPlugin
     }
 
 
+    //End Requierment
+    static bool EventReq(int customEventId)
+    {
+        bool flag = false;
 
 
+        switch (Randomizer.getRandomizedItem(customEventId, 1).slotID)
+        {
+            case 1:
+                flag = SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_COG) < MainVar.instance.FREEROAM_COGNEEDED;
+                break;
+            default:
+                flag = SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_COG) < MainVar.instance.FREEROAM_COGNEEDED;
+                break;
+        }
+        
+
+        return flag;
+    }
+
+
+    [HarmonyPatch(typeof(Chap8FreeRoamNoIllusionPalace7x7), "REQUIREMENT")]
+    [HarmonyPrefix]
+    static bool IllusionReq(ref bool __result)
+    {
+        __result = false;
+        if (EventReq((int)Randomizer.EventID.IllusionPalace)) 
+        {
+            __result = true;
+        }
+        return false;
+    }
 }
 
 
@@ -1038,8 +822,8 @@ class CraftingPatch
 {
     [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid), "UpdateSelectedText")]
     [HarmonyPrefix]
-    static bool itemDescChange(ref GemaUIPauseMenu_CraftGrid __instance, ref UI.Image ___iconbg, ref Transform ___costBox, ref GemaUIPauseMenu_CraftGridSlot[] ___craftList, ref int ___selected, ref TextMeshProUGUI ___selectedName, ref TextMeshProUGUI ___selectedDesc,
-        ref int ___CurrentMaxCraft, ref TextMeshProUGUI ___costTitle, ref TextMeshProUGUI ___costValue, ref UI.Image ___selectedIcon, ref TextMeshProUGUI ___mownedText, ref TextMeshProUGUI ___useableText, ref bool ___setFontOutline, ref TextMeshProUGUI[] ___materialrequiredList,
+    static bool itemDescChange(ref GemaUIPauseMenu_CraftGrid __instance, ref Image ___iconbg, ref Transform ___costBox, ref GemaUIPauseMenu_CraftGridSlot[] ___craftList, ref int ___selected, ref TextMeshProUGUI ___selectedName, ref TextMeshProUGUI ___selectedDesc,
+        ref int ___CurrentMaxCraft, ref TextMeshProUGUI ___costTitle, ref TextMeshProUGUI ___costValue, ref Image ___selectedIcon, ref TextMeshProUGUI ___mownedText, ref TextMeshProUGUI ___useableText, ref bool ___setFontOutline, ref TextMeshProUGUI[] ___materialrequiredList,
         ref TextMeshProUGUI ___mrequiredText, ref byte[] ___currentMaterialNeeded, ref ItemList.Type ___currentItemType)
     {
         Traverse t = Traverse.Create(__instance);
@@ -1327,7 +1111,7 @@ class CraftingPatch
     [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGridSlot), "SetItem")]
     [HarmonyPrefix]
 
-    static bool removeUpdateMadness(ref ItemList.Type itype, GameObject important, ref ItemList.Type ___itemType, ref GemaUIPauseMenu_CraftGridSlot __instance, ref bool _isUpgrade, ref UI.Image ___iconbg, ref TextMeshPro ___nameText, ref TextMeshPro ___carryText, ref UI.Image ___canCrarftLightBG)
+    static bool removeUpdateMadness(ref ItemList.Type itype, GameObject important, ref ItemList.Type ___itemType, ref GemaUIPauseMenu_CraftGridSlot __instance, ref bool _isUpgrade, ref Image ___iconbg, ref TextMeshPro ___nameText, ref TextMeshPro ___carryText, ref Image ___canCrarftLightBG)
     {
 
 
@@ -1480,7 +1264,7 @@ class CraftingPatch
     [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid), "Update")]
     [HarmonyPrefix]
     static bool progressiveItemCrafting(ref GemaUIPauseMenu_CraftGrid __instance, ref GemaUIPauseMenu_CraftGridSlot[] ___craftList, ref int ___selected, ref ItemList.Type ___currentItemType, ref GemaUIPauseMenu_CraftMaterialSlot[] ___materialownedList,
-        ref byte[] ___currentMaterialNeeded, ref float ___isJustCraftedBadge, ref float ___errorflashing, ref float ___flashing, UI.Image ___synthesisBox, UI.Image ___synthesisBoxOutline, ref GameObject[] ___specialcrafts, ref UI.Image ___craftedFlash,
+        ref byte[] ___currentMaterialNeeded, ref float ___isJustCraftedBadge, ref float ___errorflashing, ref float ___flashing, Image ___synthesisBox, Image ___synthesisBoxOutline, ref GameObject[] ___specialcrafts, ref Image ___craftedFlash,
         ref GemaUIPauseMenu_ItemGridSub[] ___bagItems,ref (Character.OrbType, OrbShootType[],bool) __state)
     {
         Traverse trav = Traverse.Create(__instance);
@@ -1681,5 +1465,608 @@ class CraftingPatch
         }
     }
 
+
+
+    [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid), "UpdateCraftList")]
+    [HarmonyPrefix]
+    static bool addsBell(ref GemaUIPauseMenu_CraftGrid __instance, ref GameObject[] ___specialcrafts, ref int ___CurrentMaxCraft, ref GemaUIPauseMenu_CraftGridSlot[] ___craftList, ref int ___selected)
+    {
+        for (int i = 0; i < ___specialcrafts.Length; i++)
+        {
+            ___specialcrafts[i].SetActive(value: false);
+        }
+        byte b = 1;
+        ___CurrentMaxCraft = 0;
+        for (int j = 0; j < ___craftList.Length; j++)
+        {
+            ___craftList[j].SetVisible(isVisible: false);
+        }
+        bool customGame = SaveManager.Instance.GetCustomGame(CustomGame.Explorer);
+
+
+        Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_Bell, false, (byte)0 }).GetValue();
+
+        if (SaveManager.Instance.GetMiniFlag(Mini.GameCleared) > 0)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_Bookmark, false, (byte)0 }).GetValue();
+
+        }
+        Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_CocoBall, false, (byte)0 }).GetValue();
+
+        if (SaveManager.Instance.GetChapter() >= 1 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_Puff, false, (byte)0 }).GetValue();
+        }
+        Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_Lollipop, false, (byte)0 }).GetValue();
+        if (SaveManager.Instance.GetChapter() >= 2 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_EnergyDrink, false, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetChapter() >= 3 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_MintIceCream, false, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetChapter() >= 4 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_Donut, false, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetChapter() >= 5 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_VoodooPie, false, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetChapter() >= 6 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_RumiCake, false, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetChapter() >= 7 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_MilkTea, false, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetChapter() >= 1 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_Mysterious, false, (byte)0 }).GetValue();
+        }
+        if ((SaveManager.Instance.GetChapter() >= 3 && SaveManager.Instance.GetItem(ItemList.Type.ITEM_PKBADGE) > 0) || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_BSnack, false, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleA) > 0)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_WaffleAHoneycloud, false, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleB) > 0)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_WaffleBMeringue, false, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleC) > 0)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_WaffleCMorning, false, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleD) > 0)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_WaffleDJellydrop, false, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleE) > 0)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_WaffleElueberry, false, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaSmall) > 0)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_VenaBombSmall, false, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaBig) > 0)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_VenaBombBig, false, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaD) > 0)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_VenaBombDispel, false, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaHB) > 0)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_VenaBombHealBlock, false, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaBB) > 0)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_VenaBombBunBun, false, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetItem(ItemList.Type.ITEM_WonderNote) > 0)
+        {
+            if (SaveManager.Instance.GetMiniFlag(Mini.WaffleWonderCrafted) < 9)
+            {
+                Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_WaffleWonderTemp, false, (byte)0 }).GetValue();
+            }
+            else
+            {
+                Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_WaffleWonderFull, false, (byte)0 }).GetValue();
+            }
+        }
+        bool customGame2 = SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam);
+        if (SaveManager.Instance.GetOrb() >= 3 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_OrbTypeS2, false, (byte)b++ }).GetValue();
+        }
+        if (SaveManager.Instance.GetChapter() >= 4 || customGame2 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_OrbBoostU, false, (byte)b++ }).GetValue();
+        }
+        if ((SaveManager.Instance.GetOrbTypeObtained() >= 2 || SaveManager.Instance.GetChapter() >= 6 || customGame2 || customGame) && !SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam))
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_OrbAmulet, true, (byte)b++ }).GetValue();
+        }
+        if (SaveManager.Instance.GetChapter() >= 1)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Function_MaterialExchangeA, false, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Function_MaterialExchangeB, false, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetMiniFlag(Mini.GameCleared) > 0 || SaveManager.Instance.GetMiniFlag(Mini.UnlockExplorerUpgrade) > 0 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_Explorer, true, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetChapter() >= 4 || customGame2 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_KNIFE, true, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetChapter() >= 3 || customGame2 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_ORB, true, (byte)0 }).GetValue();
+        }
+        Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_RapidShots, true, (byte)0 }).GetValue();
+        Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_AttackRange, true, (byte)0 }).GetValue();
+        if (SaveManager.Instance.GetChapter() >= 2 || customGame2 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_EasyStyle, true, (byte)0 }).GetValue();
+        }
+        Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_LINEBOMB, true, (byte)0 }).GetValue();
+        Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_AREABOMB, true, (byte)0 }).GetValue();
+        if (SaveManager.Instance.GetChapter() >= 2 || customGame2 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_SPEEDUP, true, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetChapter() >= 5 || customGame2 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_AirDash, true, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetChapter() >= 7 || customGame2 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_WALLJUMP, true, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetEventFlag(Mode.END_CHARON) > 0 || customGame2 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_JETPACK, true, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetChapter() >= 5 || customGame2 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_BoostSystem, true, (byte)0 }).GetValue();
+        }
+        Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_OrbAmulet, true, (byte)0 }).GetValue();
+        if (SaveManager.Instance.GetChapter() >= 2 || customGame2 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_BOMBFUEL, true, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetChapter() >= 7 || customGame2 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_BombLengthExtend, true, (byte)0 }).GetValue();
+        }
+        Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_MASK, true, (byte)0 }).GetValue();
+        if (SaveManager.Instance.GetChapter() >= 6 || customGame2 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_TempRing, true, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_DodgeShot, true, (byte)0 }).GetValue();
+        }
+        Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_Rotater, true, (byte)0 }).GetValue();
+        Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.ITEM_GoldenGlove, true, (byte)0 }).GetValue();
+        if (SaveManager.Instance.GetChapter() >= 1 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_SableALastHitEnhance, false, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetItem(ItemList.Type.ITEM_RailPass) > 0)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_SableALongRangeSnipe, false, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_SableAHitIncrease, false, (byte)0 }).GetValue();
+            if (SaveManager.Instance.GetItem(ItemList.Type.ITEM_OrbTypeS2) > 0)
+            {
+                Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_SableBNormalShotDebuff, false, (byte)0 }).GetValue();
+                Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_SableBReturnStyle, false, (byte)0 }).GetValue();
+            }
+            if (SaveManager.Instance.GetItem(ItemList.Type.ITEM_OrbTypeS3) > 0)
+            {
+                Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_SableCBigExplode, false, (byte)0 }).GetValue();
+                Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_SableCSaver, false, (byte)0 }).GetValue();
+            }
+        }
+        if (SaveManager.Instance.GetChapter() >= 1 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_CeliaALongStun, false, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetItem(ItemList.Type.ITEM_AirshipPass) > 0)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_CeliaASlowShot, false, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_CeliaAShortRangeBurst, false, (byte)0 }).GetValue();
+            if (SaveManager.Instance.GetItem(ItemList.Type.ITEM_OrbTypeC2) > 0)
+            {
+                Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_CeliaTypeBAmount, false, (byte)0 }).GetValue();
+                Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_CELIATYPEBANGLE, false, (byte)0 }).GetValue();
+            }
+            if (SaveManager.Instance.GetItem(ItemList.Type.ITEM_OrbTypeC3) > 0)
+            {
+                Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_CeliaCShotIncrease, false, (byte)0 }).GetValue();
+                Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_CeliaCShotAllDirection, false, (byte)0 }).GetValue();
+            }
+        }
+        if (SaveManager.Instance.GetChapter() >= 2 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_ComboStyleDamageUp, false, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_FrameCancel, false, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_NormalShotReducerB, false, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_StyleComboWeakGroundUpA, false, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetChapter() >= 3 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_NormalShotWhenChargedShot, false, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_120CHARGE, false, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_AllMeleeSpeedUp, false, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_PowerDrop, false, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_DominantEffectDownA, false, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetChapter() >= 4 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_QuickDropExtendA, false, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_Cannon, false, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_NormalSupportShot, false, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_MAXHPBIGUP, false, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_BoostFullOffense, false, (byte)0 }).GetValue();
+            if (SaveManager.Instance.GetDifficultyName() > Difficulty.D2)
+            {
+                Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_AutoCombo, false, (byte)0 }).GetValue();
+            }
+        }
+        if (SaveManager.Instance.GetChapter() >= 5 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_MAXHP2MP, false, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_CraftBadgeCost, false, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_StyleComboBackImageS, false, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_AntiAirPlat, false, (byte)0 }).GetValue();
+            if (SaveManager.Instance.GetUnlockedLogic(PlayerLogicState.TEVI_STRONG_GROUND_FRONT) > 0)
+            {
+                Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_StyleComboHeavyGroundFrontA, false, (byte)0 }).GetValue();
+            }
+        }
+        if (SaveManager.Instance.GetChapter() >= 6 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_AutoBombChain, false, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_BounceTeviStrongAirUp, false, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_SuperFrameCancel, false, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_ArmorCritCrit, false, (byte)0 }).GetValue();
+            if (SaveManager.Instance.GetItem(ItemList.Type.ITEM_OrbAmulet) > 0)
+            {
+                Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_Amulet10, false, (byte)0 }).GetValue();
+            }
+        }
+        if (SaveManager.Instance.GetChapter() >= 7 || customGame)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_MAXMPCost, false, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_100COMBO, false, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_DominantEffectDownB, false, (byte)0 }).GetValue();
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_RangeBreak, false, (byte)0 }).GetValue();
+        }
+        if (SaveManager.Instance.GetItem(ItemList.Type.BADGE_AmuletQuicken) > 0)
+        {
+            Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_AutoPilot, false, (byte)0 }).GetValue();
+        }
+        if (___selected >= ___CurrentMaxCraft)
+        {
+            ___selected = ___CurrentMaxCraft - 1;
+        }
+        if (___selected < 0)
+        {
+            ___selected = 0;
+        }
+        return false;
+    }
+
 }
 
+class ShopPatch
+{
+
+
+    [HarmonyPatch(typeof(HUDShopMenu), "AddItem")]
+    [HarmonyPrefix]
+    static bool shopItems(HUDShopMenu __instance, ref ItemList.Type item, ref Character.Type ___typeN, ref GemaShopItemSlot[] ___itemslots, ref int ___CurrentMaxItem, ref byte ___ShopID, ref byte ___ShopType)
+    {
+
+        byte area = WorldManager.Instance.Area;
+
+
+        int num = GemaItemManager.Instance.GetItemCoin(item);
+        if (num <= 1000)
+        {
+            num = 250 * GemaItemManager.Instance.GetItemCost(item);
+            if (num < 1250)
+            {
+                num += 250;
+                if (num > 1250)
+                {
+                    num = 1250;
+                }
+            }
+            if (num < 1000)
+            {
+                num = 1000;
+            }
+        }
+
+        if (___ShopType == 0)
+        {
+            ItemData data;
+            if (item.ToString().Contains("STACKABLE"))
+                data = Randomizer.getRandomizedItem(item, (byte)(___ShopID + 30));
+            else
+                data = Randomizer.getRandomizedItem(item, 1);
+
+
+            Randomizer.Upgradable upItem;
+            bool flag = Enum.TryParse<Randomizer.Upgradable>(data.getItemTyp().ToString(), out upItem);
+
+            if (item == ItemList.Type.STACKABLE_BAG)
+            {
+                MainVar.instance.BagID = (byte)(___ShopID + 1);
+            }
+            if (data.getItemTyp().ToString().Contains("STACKABLE") && SaveManager.Instance.GetStackableItem(data.getItemTyp(), data.getSlotId()))
+            {
+                return false;
+            }
+            else if (flag && SaveManager.Instance.GetStackableItem((ItemList.Type)upItem, data.getSlotId()))
+            {
+                return false;
+            }
+            else if
+            (SaveManager.Instance.GetItem((ItemList.Type)data.itemID) > 0 && !flag) //implement a way to get only upgradeable items
+            {
+                return false;
+            }
+
+
+            switch (___typeN)
+            {
+                case Character.Type.Ian:
+                    ___itemslots[___CurrentMaxItem].SetItem(item, num, false);
+                    ___CurrentMaxItem++;
+                    break;
+                case Character.Type.CC:
+
+                    ___itemslots[___CurrentMaxItem].SetItem(item, num, false);
+                    ___CurrentMaxItem++;
+                    break;
+                default:
+                    return true;
+
+            }
+            return false;
+        }
+
+
+        return true;
+    }
+
+
+
+    [HarmonyPatch(typeof(HUDShopMenu), "Update")]
+    [HarmonyPrefix]
+    static bool ChangeBuySystem(ref HUDShopMenu __instance, ref GemaShopItemSlot[] ___itemslots, ref int ___Selected, ref Character.Type ___typeN, ref SpriteRenderer ___buyo, ref bool ___bought, ref byte ___ShopID)
+    {
+        Traverse trav = Traverse.Create(__instance);
+        if (InputButtonManager.Instance.GetButtonDown(13) && __instance.ShopType == 0)
+        {
+            ItemData data;
+            if (___itemslots[___Selected].CanPurchase())
+            {
+                int price = ___itemslots[___Selected].GetPrice();
+                bool flag2 = true;
+                if (___itemslots[___Selected].GetItem().ToString().Contains("Useable") && SaveManager.Instance.isBagFull())
+                {
+                    trav.Method("PlayShopVoice", new object[] { ___typeN, ShopVoiceType.NoSpace }).GetValue();
+                    string line = "SHOP." + ___typeN.ToString() + "_NoSpace";
+                    trav.Method("StartNewLine", new object[] { line, true }).GetValue();
+
+                    flag2 = false;
+                }
+                if (SaveManager.Instance.GetResource(ItemList.Resource.COIN) >= price && flag2)
+                {
+                    SaveManager.Instance.SubResource(ItemList.Resource.COIN, price);
+                    if (___typeN == Character.Type.Ian)
+                    {
+                        SaveManager.Instance.savedata.coinUsedIan += price;
+                    }
+                    else if (___typeN == Character.Type.CC)
+                    {
+                        SaveManager.Instance.savedata.coinUsedCC += price;
+                    }
+                    if (___itemslots[___Selected].GetItem().ToString().Contains("Useable"))
+                    {
+                        data = Randomizer.getRandomizedItem(___itemslots[___Selected].GetItem(), 1);
+                        SaveManager.Instance.AddItemToBag(___itemslots[___Selected].GetItem());
+                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleAHoneycloud)
+                        {
+                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleA, 1);
+                        }
+                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleBMeringue)
+                        {
+                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleB, 1);
+                        }
+                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleCMorning)
+                        {
+                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleC, 1);
+                        }
+                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleDJellydrop)
+                        {
+                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleD, 1);
+                        }
+                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleElueberry)
+                        {
+                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleE, 1);
+                        }
+                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombSmall)
+                        {
+                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaSmall, 1);
+                        }
+                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombBig)
+                        {
+                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaBig, 1);
+                        }
+                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombBunBun)
+                        {
+                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaBB, 1);
+                        }
+                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombHealBlock)
+                        {
+                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaHB, 1);
+                        }
+                        if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombDispel)
+                        {
+                            SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaD, 1);
+                        }
+                    }
+
+
+                    else if (___itemslots[___Selected].GetItem().ToString().Contains("STACKABLE"))
+                    {
+                        data = Randomizer.getRandomizedItem(___itemslots[___Selected].GetItem(), (byte)(30 + ___ShopID));
+
+                    }
+                    else
+                    {
+                        data = Randomizer.getRandomizedItem(___itemslots[___Selected].GetItem(), 1);
+                    }
+
+
+                    if (data.getItemTyp().ToString().Contains("STACKABLE"))
+                    {
+                        SaveManager.Instance.SetStackableItem(data.getItemTyp(), data.getSlotId(), value: true);
+                        if (data.getItemTyp() == ItemList.Type.STACKABLE_BAG)
+                        {
+                            SettingManager.Instance.SetAchievement(Achievements.ACHI_SHOP_BUYBAG);
+                        }
+                    }
+                    else
+                    {
+                        SaveManager.Instance.SetItem(data.getItemTyp(), data.getSlotId());
+                    }
+
+
+                    if (___itemslots[___Selected].GetItem().ToString().Contains("BADGE_"))
+                    {
+                        SaveManager.Instance.SetMiniFlag(Mini.BadgeBought, (byte)(SaveManager.Instance.GetMiniFlag(Mini.BadgeBought) + 1));
+                    }
+                    ___bought = true;
+                    CameraScript.Instance.PlaySound(AllSound.SEList.Purchase);
+                    ___buyo.transform.position = ___itemslots[___Selected].transform.position + new Vector3(122.5f, 0f, 0f);
+                    ___buyo.transform.position = ___itemslots[___Selected].transform.position + new Vector3(122.5f, 0f, 0f);
+                    ___buyo.transform.localScale = new Vector3(1f, 1f, 1f);
+                    ___buyo.color = Color.white;
+                    ___buyo.color = Color.white;
+                    ___itemslots[___Selected].Purchased();
+                    trav.Method("PlayShopVoice", new object[] { ___typeN, ShopVoiceType.Purchased }).GetValue();
+                    string line2 = "SHOP." + ___typeN.ToString() + "_Purchased";
+                    trav.Method("StartNewLine", new object[] { line2, true }).GetValue();
+                }
+            }
+            return false;
+        }
+
+        return true;
+    }
+
+    [HarmonyPatch(typeof(GemaShopItemSlot), "SetItem")]
+    [HarmonyPrefix]
+    static bool ChangeShopItemVisual(ref GemaShopItemSlot __instance, ref ItemList.Type t, ref int _price, ref SpriteRenderer ___itemicon, ref ItemList.Type ___itype)
+    {
+        if (HUDShopMenu.Instance.ShopType == 2 || HUDShopMenu.Instance.ShopType == 1)
+        {
+            return true;
+
+        }
+        Traverse trav = Traverse.Create(__instance);
+        __instance.gameObject.SetActive(value: true);
+        byte shopID = Traverse.Create(HUDShopMenu.Instance).Field("ShopID").GetValue<byte>();
+        if (Traverse.Create(HUDShopMenu.Instance).Field("typeN").GetValue<Character.Type>() == Character.Type.CC)
+        {
+            ___itype = Randomizer.getRandomizedItem(t, (byte)(shopID + 30)).getItemTyp();
+        }
+        else
+        {
+            ___itype = Randomizer.getRandomizedItem(t, 1).getItemTyp();
+        }
+
+        trav.Field("price").SetValue(_price);
+
+        ___itemicon.sprite = CommonResource.Instance.GetItem((int)___itype);
+        ___itemicon.color = Color.white;
+        SpriteRenderer bgicon = trav.Field("bgicon").GetValue<SpriteRenderer>();
+        bgicon.color = Color.white;
+        trav.Field("coinicon").GetValue<SpriteRenderer>().enabled = true;
+        TextMeshPro[] texts = trav.Field("texts").GetValue<TextMeshPro[]>();
+
+
+        ___itemicon.enabled = true;
+        texts[0].text = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + GemaItemManager.Instance.GetItemString(___itype), contains: false);
+        texts[0].rectTransform.anchoredPosition = new Vector2(158.3f, 9.9f);
+        texts[0].color = new Color(1f, 1f, 1f, 1f);
+        texts[1].enabled = true;
+        texts[2].enabled = true;
+        bgicon.enabled = false;
+        if (___itype >= ItemList.Type.BADGE_START && ___itype <= ItemList.Type.BADGE_MAX)
+        {
+            texts[1].text = Localize.GetLocalizeTextWithKeyword("ITEMTYPE.Badge", contains: false);
+            texts[1].color = new Color32(byte.MaxValue, 186, 95, byte.MaxValue);
+            bgicon.enabled = true;
+        }
+        else
+        {
+            texts[1].color = new Color32(152, 222, byte.MaxValue, byte.MaxValue);
+            texts[1].text = Localize.GetLocalizeTextWithKeyword("ITEMTYPE.Item", contains: false);
+        }
+        texts[2].text = _price.ToString();
+        ___itype = t;
+        return false;
+    }
+
+
+    [HarmonyPatch(typeof(HUDShopMenu), "UpdateShopItemDetail")]
+    [HarmonyPostfix]
+    static void ItemShopDescriptionFix(ref HUDShopMenu __instance, ref TextMeshPro ___item_desc, ref byte ___ShopID, ref GemaShopItemSlot[] ___itemslots, ref int ___Selected)
+    {
+
+        if (__instance.ShopType == 0)
+        {
+            ItemList.Type item = ___itemslots[___Selected].GetItem();
+            ItemData data;
+            if (item.ToString().Contains("STACKABLE"))
+            {
+                data = Randomizer.getRandomizedItem(item, (byte)(___ShopID + 30));
+                ___item_desc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(data.getItemTyp());
+            }
+            else
+            {
+                data = Randomizer.getRandomizedItem(item, 1);
+                ___item_desc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(data.getItemTyp());
+            }
+            if (___item_desc.text.Contains("[c2]"))
+            {
+                ___item_desc.text = Localize.FilterLevelDescFromItem(data.getItemTyp(), ___item_desc.text);
+            }
+            if (data.getItemTyp().ToString().Contains("Useable_"))
+            {
+                ___item_desc.text += Localize.GetLocalizeTextWithKeyword("ITEMDESC.WAFFLEBUY", contains: false);
+            }
+            if (data.getItemTyp() >= ItemList.Type.BADGE_START && data.getItemTyp() <= ItemList.Type.BADGE_MAX)
+            {
+                TextMeshPro textMeshPro = ___item_desc;
+                textMeshPro.text = textMeshPro.text + "<br><br>" + Localize.GetLocalizeTextWithKeyword("ITEMDESC.EQUIPBADGETIPS", contains: false);
+            }
+            ___item_desc.text = InputButtonManager.Instance.AddButtonsToPromote(___item_desc.text);
+        }
+    }
+
+}
