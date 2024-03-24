@@ -1,0 +1,5319 @@
+[
+    {
+        "Itemname": "BADGE_UpperHigh",
+        "Location": "Oasis",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_Explorer",
+        "Location": "Oasis",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_Yawn",
+        "Location": "Oasis",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_EarlyKnockRecover",
+        "Location": "Oasis",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Oasis",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Oasis",
+        "slotId": 8,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "Oasis",
+        "slotId": 22,
+        "Requirement": [
+            {
+                "Method": "Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_SHARD",
+        "Location": "Oasis",
+        "slotId": 16,
+        "Requirement": [
+            {
+                "Method": "Bomb && Highjump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Bomb && DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Bomb && Jet1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Oasis",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_HIJUMP",
+        "Location": "Oasis",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Badge_WallCharger",
+        "Location": "Oasis",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Badge_AutoCombo",
+        "Location": "Desert Base Main",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Desert Base Main",
+        "slotId": 22,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "Desert Base Main",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BackStab",
+        "Location": "Desert Base Main",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Badge_Normal2AntiHealth",
+        "Location": "Desert Base Main",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Desert Base Main",
+        "slotId": 6,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Desert Base Main",
+        "slotId": 9,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ChangeOrbCharger",
+        "Location": "Desert Base Main",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide && Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ANITENERGYBALL",
+        "Location": "Desert Base Upper Half",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Desert Base Upper Half",
+        "slotId": 0,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Desert Base Upper Half",
+        "slotId": 16,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "Desert Base Upper Half",
+        "slotId": 0,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "QUEST_GHandL",
+        "Location": "Desert Base Upper Half",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ConvertDef2Off",
+        "Location": "Desert Base Upper Half",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_LowerThan20",
+        "Location": "Desert Base Upper Half",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_EasyStyle",
+        "Location": "Start Area",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_MAXHPUP",
+        "Location": "Start Area",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_RangeCombo",
+        "Location": "Start Area",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SuperArmor2",
+        "Location": "Start Area",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_PerfectCharge",
+        "Location": "Start Area",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleComboAddDamageA",
+        "Location": "Start Area",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Start Area",
+        "slotId": 7,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Start Area",
+        "slotId": 0,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_LineBomb",
+        "Location": "Start Area",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Start Area",
+        "slotId": 14,
+        "Requirement": [
+            {
+                "Method": "Slide && Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Morose Transit",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "LineBomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Morose Transit",
+        "slotId": 9,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StrongAirUpDebuff",
+        "Location": "Morose Transit",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "AirSlide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADE_CrystalGen",
+        "Location": "Morose Transit",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "EliteChallangeA",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Ruins Entrance",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Jet2",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Jet1 && DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Jet1 && AirDash && WallJump1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Ruins",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "Ruins",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Ruins",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Ruins",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BreakDamageBoost",
+        "Location": "Ruins",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "WallJump1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_Lucky7DamageReduce",
+        "Location": "Ruins",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Ruins",
+        "slotId": 8,
+        "Requirement": [
+            {
+                "Method": "Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BoostSizeIncrease",
+        "Location": "Ruins",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "EliteChallangeB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Heavens Valley",
+        "slotId": 7,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Heavens Valley",
+        "slotId": 7,
+        "Requirement": [
+            {
+                "Method": "DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "AirDash",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Heavens Valley",
+        "slotId": 13,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DoubleJumpAttack",
+        "Location": "Heavens Valley",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Heavens Valley",
+        "slotId": 25,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Heavens Valley",
+        "slotId": 13,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_Normal3HModStabB",
+        "Location": "Heavens Valley",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Heavens Valley",
+        "slotId": 13,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ComboDamageBoost",
+        "Location": "Heavens Valley",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Heavens Valley",
+        "slotId": 13,
+        "Requirement": [
+            {
+                "Method": "Slide && DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Slide && Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Slide && AirDash",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DoubleNormalComboSpeedup",
+        "Location": "Vallhalla Breath Left Part",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_RapidShotsEnhance",
+        "Location": "Vallhalla Breath Left Part",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "AirSlide && DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "AirSlide && Jet1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_Lucky7C",
+        "Location": "Vallhalla Breath Left Part",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide && DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Slide && Jet1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Vallhalla Breath Left Part",
+        "slotId": 14,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "Moros City",
+        "slotId": 23,
+        "Requirement": [
+            {
+                "Method": "Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Moros City",
+        "slotId": 9,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_TauntPhoto",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "AirDash && Jet3",
+                "Difficulty": 0
+            },
+            {
+                "Method": "AirDash && DoubleJump && Jet1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_SPEEDUP",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BossPassing",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 1000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleComboAirDashS",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2000 && Demonfray",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_MAXHPCost",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2600 && Demonfray",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_EnemyDefeatExp",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2750 && Demonfray",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_1HealthTypeA",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2750 && Demonfray",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_TauntThink",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 1000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_QuickMPRegainA",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 1900",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_MapDiscoverRecover",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 1750",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleComboAirNormal3A",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 1500",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_UpperDoubleHitAfterOutline",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 1350",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_Hurt2Punisher",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 1750",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_BAG",
+        "Location": "Moros City",
+        "slotId": 30,
+        "Requirement": [
+            {
+                "Method": "Coins 250",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Moros City",
+        "slotId": 30,
+        "Requirement": [
+            {
+                "Method": "Coins 3000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Moros City",
+        "slotId": 30,
+        "Requirement": [
+            {
+                "Method": "Coins 3000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Moros City",
+        "slotId": 30,
+        "Requirement": [
+            {
+                "Method": "Coins 3000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Moros City",
+        "slotId": 30,
+        "Requirement": [
+            {
+                "Method": "Coins 3000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Moros City",
+        "slotId": 30,
+        "Requirement": [
+            {
+                "Method": "Coins 3000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_SHARD",
+        "Location": "Moros City",
+        "slotId": 30,
+        "Requirement": [
+            {
+                "Method": "Coins 5000 && Chapter 6",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleComboBackflipBomb",
+        "Location": "Travoll Industrie",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide && WallJump1 && AirDash",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Slide && WallJump1 && Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Slide && WallJump1 && DoubleJump",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Travoll Industrie",
+        "slotId": 14,
+        "Requirement": [
+            {
+                "Method": "AreaBomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Travoll Industrie",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Travoll Industrie",
+        "slotId": 26,
+        "Requirement": [
+            {
+                "Method": "AirSlide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_BOMBFUEL",
+        "Location": "Travoll Industrie",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ConvertOff2Def",
+        "Location": "Travoll Industrie",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide && Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Slide && DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Slide && WallJump1 && AirDash",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Travoll Industrie",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Travoll Mines Part 2",
+        "slotId": 15,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "Travoll Mines Part 2",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AirComboQuicken",
+        "Location": "Travoll Mines Part 2",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Travoll Mines Part 2",
+        "slotId": 0,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Travoll Mines Part 2",
+        "slotId": 15,
+        "Requirement": [
+            {
+                "Method": "Slide && AreaBomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Travoll Mines Part 2",
+        "slotId": 11,
+        "Requirement": [
+            {
+                "Method": "Slide && Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_EasyDodge",
+        "Location": "Travoll Mines Part 2",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "VortexGlove",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Travoll Mines",
+        "slotId": 0,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_EnergyDefend",
+        "Location": "Travoll Mines",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_GroundBombQuickExcute",
+        "Location": "Forest",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Forest",
+        "slotId": 0,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_NormalShotReducerA",
+        "Location": "Forest",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_TauntSit",
+        "Location": "Forest",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_BoostSystem",
+        "Location": "Forest",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_GroundNormal4Mod",
+        "Location": "Forest",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Forest",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "Forest",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BackflipSnipe",
+        "Location": "Forest",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AutoHealing",
+        "Location": "Forest Maze extended",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_HealCharge",
+        "Location": "Forest Maze extended",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Forest Maze extended",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Forest Maze extended",
+        "slotId": 23,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Forest Maze extended",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Forest Maze extended",
+        "slotId": 22,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Gleamwood",
+        "slotId": 5,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Gleamwood",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_QuickBomber",
+        "Location": "Gleamwood",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_MASK",
+        "Location": "Gleamwood",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "",
+        "Location": "Gleamwood",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Gleamwood",
+        "slotId": 5,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Gleamwood",
+        "slotId": 26,
+        "Requirement": [
+            {
+                "Method": "Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ComboTimeExtendC",
+        "Location": "Gleamwood",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Gleamwood",
+        "slotId": 19,
+        "Requirement": [
+            {
+                "Method": "Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_SHARD",
+        "Location": "Gleamwood",
+        "slotId": 15,
+        "Requirement": [
+            {
+                "Method": "DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "AirDash",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_TauntStare",
+        "Location": "Gleamwood",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "AirDash",
+                "Difficulty": 0
+            },
+            {
+                "Method": "DoubleJump",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DodgeMeterBoost",
+        "Location": "Gleamwood Upper",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BattleStartCharge",
+        "Location": "Gleamwood Right",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Gleamwood Right",
+        "slotId": 5,
+        "Requirement": [
+            {
+                "Method": "SableB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AirNormalComboSpeedup",
+        "Location": "Gleamwood Right",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DoubleGroundNormal3N1",
+        "Location": "Gleamwood Right",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Gleamwood Right",
+        "slotId": 5,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_AntiDecay",
+        "Location": "Gleamwood Right",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SideHalt",
+        "Location": "Gleamwood Right",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_GoldLuck",
+        "Location": "Gleamwood Right",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide && BombLengthExtend1 && DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Slide && BombLengthExtend1 && Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Slide && BombLengthExtend1 && HighJump && WallJump1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Slide && LineBomb && AreaBomb && DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Slide && LineBomb && AreaBomb && Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Slide && LineBomb && AreaBomb && HighJump && WallJump1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_WeakAirDownRotate",
+        "Location": "Plague Forest",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleCOmboReduCeDamageS",
+        "Location": "Plague Forest",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Plague Forest",
+        "slotId": 25,
+        "Requirement": [
+            {
+                "Method": "LineBomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Plague Forest",
+        "slotId": 6,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_SLIDE",
+        "Location": "Plague Forest",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Plague Forest",
+        "slotId": 6,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_TauntKnife",
+        "Location": "Plague Forest",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "AirDash",
+                "Difficulty": 0
+            },
+            {
+                "Method": "DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Highjump && WallJump1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DodgeWeakGroundUp",
+        "Location": "Plague Forest",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "Plague Forest",
+        "slotId": 30,
+        "Requirement": [
+            {
+                "Method": "Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BombNormal4Buffer",
+        "Location": "Plague Forest",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide && LineBomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_PrepDef",
+        "Location": "Plague Forest",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "AirSlide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Plague Forest",
+        "slotId": 16,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Plague Forest",
+        "slotId": 5,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_Unlucky7",
+        "Location": "Plague Forest",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_HP2MP",
+        "Location": "Ulvosa",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Ulvosa",
+        "slotId": 19,
+        "Requirement": [
+            {
+                "Method": "DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "AirDash",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "HighJump",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Ulvosa",
+        "slotId": 18,
+        "Requirement": [
+            {
+                "Method": "AreaBomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AmuletDouble",
+        "Location": "Ulvosa",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "EliteChallangeD",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Ulvosa",
+        "slotId": 20,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_WeakAirDownFreqUpB",
+        "Location": "Ulvosa",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BoostDodgeAdd",
+        "Location": "Ulvosa",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BoostMeleeOffense",
+        "Location": "Ulvosa",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Ulvosa",
+        "slotId": 20,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "Ulvosa",
+        "slotId": 31,
+        "Requirement": [
+            {
+                "Method": "Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_OrbAmulet",
+        "Location": "Ulvosa",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_Cursed6",
+        "Location": "Ulvosa",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "SableB",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Soulburst",
+                "Difficulty": 0
+            },
+            {
+                "Method": "LargeManaPillar",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Ulvosa",
+        "slotId": 25,
+        "Requirement": [
+            {
+                "Method": "VortexGlove",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "CopperWood",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "CopperWood",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "CopperWood",
+        "slotId": 7,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BoostCostCut",
+        "Location": "CopperWood",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "EliteChallangeC",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "CopperWood",
+        "slotId": 25,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleCharge",
+        "Location": "CopperWood",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "DoubleJump",
+                "Difficulty": 2
+            },
+            {
+                "Method": "AirDash",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Jet1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_LateCharge",
+        "Location": "Relicts",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Relicts",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_8thDamageHeal",
+        "Location": "Relicts",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "Relicts",
+        "slotId": 44,
+        "Requirement": [
+            {
+                "Method": "Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_WonderNote",
+        "Location": "Relicts",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AmuletMPCharge",
+        "Location": "Relicts",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "QUEST_LibraryKey",
+        "Location": "Ana Thema",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide && LineBomb && WallJump1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Slide && LineBomb && DoubleJump && Jet3",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Slide && LineBomb && DoubleJump && HighJump && Jet1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Ana Thema",
+        "slotId": 7,
+        "Requirement": [
+            {
+                "Method": "Slide && AirDash",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Slide && DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Slide && Jet1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_QuickMeleeLagA",
+        "Location": "Ana Thema",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_GrondNormalComboSpeedup",
+        "Location": "Ana Thema",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleComboNewAttack",
+        "Location": "Ana Thema",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide && Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_AttackRange",
+        "Location": "Ana Thema",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2300",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_GroundNormalCombo4AltTiming",
+        "Location": "Ana Thema",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2000 && Memloch",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BreakTimeExtend",
+        "Location": "Ana Thema",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2650 && Memloch",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StrongFontFly",
+        "Location": "Ana Thema",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 1800 && Memloch",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_1HealthTypeB",
+        "Location": "Ana Thema",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2250 && Memloch",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StepUpCharge",
+        "Location": "Ana Thema",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2500",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_GroundWeakUpAirExcute",
+        "Location": "Ana Thema",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 1850",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SupportShot",
+        "Location": "Ana Thema",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2250",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StraightCost",
+        "Location": "Ana Thema",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 3000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_WeakAirNormal3ModDamageBoost",
+        "Location": "Ana Thema",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 1250",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DodgeHealthCounter",
+        "Location": "Ana Thema",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2750",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AutoAirCombo",
+        "Location": "Ana Thema",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 1250",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SuperArmor33",
+        "Location": "Ana Thema",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 500",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_FreeFoodRefill",
+        "Location": "Ana Thema",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 1000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleComboNormal4HAAA",
+        "Location": "Ana Thema",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2300",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_BAG",
+        "Location": "Ana Thema",
+        "slotId": 31,
+        "Requirement": [
+            {
+                "Method": "Coins 1000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Ana Thema",
+        "slotId": 31,
+        "Requirement": [
+            {
+                "Method": "Coins 3000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Ana Thema",
+        "slotId": 31,
+        "Requirement": [
+            {
+                "Method": "Coins 3000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Ana Thema",
+        "slotId": 31,
+        "Requirement": [
+            {
+                "Method": "Coins 3000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Ana Thema",
+        "slotId": 31,
+        "Requirement": [
+            {
+                "Method": "Coins 3000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Ana Thema",
+        "slotId": 31,
+        "Requirement": [
+            {
+                "Method": "Coins 3000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_SHARD",
+        "Location": "Ana Thema",
+        "slotId": 31,
+        "Requirement": [
+            {
+                "Method": "Coins 5000 && Chapter 6",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "LavaWorld",
+        "slotId": 26,
+        "Requirement": [
+            {
+                "Method": "AirSlide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "LavaWorld",
+        "slotId": 11,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AmuletQuicken",
+        "Location": "LavaWorld",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "EliteChallangeE && Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_JETPACK",
+        "Location": "LavaWorld",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "LavaWorld",
+        "slotId": 11,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "LavaWorld",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_EPCombo",
+        "Location": "LavaWorld Part 2",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "LineBomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ArrowDamageUp",
+        "Location": "LavaWorld Part 2",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "AirSlide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "LavaWorld Part 2",
+        "slotId": 11,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_1HealthTypeC",
+        "Location": "LavaWorld Part 2",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AntiGround",
+        "Location": "LavaWorld Part 2",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "VortexGlove && AirSlide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_HitMP",
+        "Location": "LavaWorld Part 2",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "LavaWorld Part 2",
+        "slotId": 4,
+        "Requirement": [
+            {
+                "Method": "AirSlide",
+                "Difficulty": 0
+            },
+            {
+                "Method": "BombLengthExtend1 && Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "LavaWorld Part 2",
+        "slotId": 21,
+        "Requirement": [
+            {
+                "Method": "BombLengthExtend1 && Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Swamp",
+        "slotId": 12,
+        "Requirement": [
+            {
+                "Method": "Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AirComboExtend",
+        "Location": "Swamp",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Swamp",
+        "slotId": 12,
+        "Requirement": [
+            {
+                "Method": "Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Swamp",
+        "slotId": 9,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Swamp",
+        "slotId": 11,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_Normal3HModStabA",
+        "Location": "Swamp",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BreakRangeChaser",
+        "Location": "Swamp",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "AirDash",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "DoubleJump",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Swamp",
+        "slotId": 12,
+        "Requirement": [
+            {
+                "Method": "Jet2",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Jet1 && DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Jet1 && AirDash",
+                "Difficulty": 0
+            },
+            {
+                "Method": "AirDash && DoubleJump",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_Normal2MultHit",
+        "Location": "Swamp",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide && Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_NonChargeShotRapid",
+        "Location": "Tartarus",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CrystalAbsorberS",
+        "Location": "Tartarus",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Tartarus",
+        "slotId": 12,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_Lucky7Defend",
+        "Location": "Tartarus",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "HighJump && Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "HighJump && DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "HighJump && DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Jet1 && DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "AirDash && DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "AirDash && Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Jet2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Tartarus",
+        "slotId": 13,
+        "Requirement": [
+            {
+                "Method": "AirDash && DoubleJump && Jet1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_WeakGroundUpModOneHit",
+        "Location": "Tartarus",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_RailPass",
+        "Location": "Tartarus",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 3000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADE_StyleComboBackflipA",
+        "Location": "Tartarus",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_RevengeB",
+        "Location": "Tartarus",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ComboCharge",
+        "Location": "Tartarus",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2500",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SimpleBreak",
+        "Location": "Tartarus",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2950",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_PurchaseBadgeCost",
+        "Location": "Tartarus",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2750",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DoubleJumpStrike",
+        "Location": "Tartarus",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2500",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BoostTimeExtend",
+        "Location": "Tartarus",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2500",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CrystalHeal",
+        "Location": "Tartarus",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2750",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_FallDamageReduce",
+        "Location": "Tartarus",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 1100",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DoubleDispelLineBombLow",
+        "Location": "Tartarus",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2200",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_BAG",
+        "Location": "Tartarus",
+        "slotId": 32,
+        "Requirement": [
+            {
+                "Method": "Coins 2000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Tartarus",
+        "slotId": 32,
+        "Requirement": [
+            {
+                "Method": "Coins 4000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Tartarus",
+        "slotId": 32,
+        "Requirement": [
+            {
+                "Method": "Coins 4000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Tartarus",
+        "slotId": 32,
+        "Requirement": [
+            {
+                "Method": "Coins 4000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Tartarus",
+        "slotId": 32,
+        "Requirement": [
+            {
+                "Method": "Coins 4000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Tartarus",
+        "slotId": 32,
+        "Requirement": [
+            {
+                "Method": "Coins 4000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_SHARD",
+        "Location": "Tartarus",
+        "slotId": 32,
+        "Requirement": [
+            {
+                "Method": "Coins 5000 && Chapter 6",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_WeakAirDownFreqUpA",
+        "Location": "Catacombs Entrance",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Catacombs Entrance",
+        "slotId": 21,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Catacombs Entrance",
+        "slotId": 19,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Catacombs Entrance",
+        "slotId": 19,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DoubleDispelLineBombHigh",
+        "Location": "Catacombs Entrance",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Vassago fight",
+        "slotId": 21,
+        "Requirement": [
+            {
+                "Method": "AreaBomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_QuickDropDouble",
+        "Location": "Vassago fight",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CrystalAttack",
+        "Location": "Vassago fight",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AntiAir",
+        "Location": "Vassago fight",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_InstantDodgeMeter",
+        "Location": "Vassago fight",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "Vassago fight",
+        "slotId": 63,
+        "Requirement": [
+            {
+                "Method": "Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Lab",
+        "slotId": 17,
+        "Requirement": [
+            {
+                "Method": "Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DodgeWeakAirDown",
+        "Location": "Lab",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BoostChargin",
+        "Location": "Lab",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Lab",
+        "slotId": 20,
+        "Requirement": [
+            {
+                "Method": "Slide && LineBomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Lab",
+        "slotId": 19,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "Lab",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleComboPassiveA",
+        "Location": "Lab",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_DodgShot",
+        "Location": "Lab",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_WATERMOVEMENT",
+        "Location": "Verdazure Sea",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Verdazure Sea",
+        "slotId": 4,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CommonDropRecover",
+        "Location": "Verdazure Sea",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Verdazure Sea",
+        "slotId": 4,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_InvincibiltiyExtended",
+        "Location": "Verdazure Sea",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Verdazure Sea",
+        "slotId": 26,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ComboTimeExtendA",
+        "Location": "Blushwood",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "LineBomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Blushwood",
+        "slotId": 8,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AutoDoge",
+        "Location": "Blushwood",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "BombLengthExtend3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AirCombo2Hits",
+        "Location": "Blushwood",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "Blushwood",
+        "slotId": 6,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Blushwood",
+        "slotId": 8,
+        "Requirement": [
+            {
+                "Method": "DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "WallJump1 && Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "AirDash && Jet1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BoostShieldAbsorb",
+        "Location": "Blushwood",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide && LineBomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "",
+        "Location": "Blushwood Sliding",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Blushwood Sliding",
+        "slotId": 8,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_SHARD",
+        "Location": "Blushwood Sliding",
+        "slotId": 17,
+        "Requirement": [
+            {
+                "Method": "Slide && Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Vallhalla City",
+        "slotId": 18,
+        "Requirement": [
+            {
+                "Method": "LineBomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Vallhalla City",
+        "slotId": 17,
+        "Requirement": [
+            {
+                "Method": "Slide && Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BuffRush",
+        "Location": "Vallhalla City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "AirDash && WallJump1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Vallhalla City",
+        "slotId": 26,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Vallhalla City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "CryilC",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Jet1 && DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "SableC && HighJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "SableC && DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "SableC && Jet1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ComboSaver",
+        "Location": "Vallhalla City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_AirshipPass",
+        "Location": "Vallhalla City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 3000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleComboAirDashA",
+        "Location": "Vallhalla City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 1300",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StrongFrontRapid",
+        "Location": "Vallhalla City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2200",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BackflipMultiHit",
+        "Location": "Vallhalla City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2250",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ComboDodgeMeter",
+        "Location": "Vallhalla City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2150",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_RythemCharge",
+        "Location": "Vallhalla City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 1400",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_PerfectCost",
+        "Location": "Vallhalla City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 3000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleComboSlidingS",
+        "Location": "Vallhalla City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 1700",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DamageToMaxHP",
+        "Location": "Vallhalla City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 3500",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_Normal3HRedCancel",
+        "Location": "Vallhalla City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2200",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BoostQuickErase",
+        "Location": "Vallhalla City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 1750",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_BAG",
+        "Location": "Vallhalla City",
+        "slotId": 33,
+        "Requirement": [
+            {
+                "Method": "Coins 2000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Vallhalla City",
+        "slotId": 33,
+        "Requirement": [
+            {
+                "Method": "Coins 4000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Vallhalla City",
+        "slotId": 33,
+        "Requirement": [
+            {
+                "Method": "Coins 4000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Vallhalla City",
+        "slotId": 33,
+        "Requirement": [
+            {
+                "Method": "Coins 4000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Vallhalla City",
+        "slotId": 33,
+        "Requirement": [
+            {
+                "Method": "Coins 4000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Vallhalla City",
+        "slotId": 33,
+        "Requirement": [
+            {
+                "Method": "Coins 4000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_SHARD",
+        "Location": "Vallhalla City",
+        "slotId": 33,
+        "Requirement": [
+            {
+                "Method": "Coins 5000 && Chapter 6",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "AirDash",
+        "Location": "EverGarden",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CrystalAbsorberC",
+        "Location": "EverGarden",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleComboNormal3H",
+        "Location": "EverGarden",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "LineBomb && DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "LineBomb && HighJump && Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "LineBomb && Jet2",
+                "Difficulty": 0
+            },
+            {
+                "Method": "LineBomb && WallJump1 && AirDash",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_QuickMeleeLagB",
+        "Location": "EverGarden",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide && DoubleJump && Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Slide && Jet3",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Slide && HighJump && Jet2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "EverGarden",
+        "slotId": 16,
+        "Requirement": [
+            {
+                "Method": "Slide && LineBomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ToArmorReducer",
+        "Location": "EverGarden",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Jet1",
+                "Difficulty": 3
+            },
+            {
+                "Method": "AirDash",
+                "Difficulty": 4
+            },
+            {
+                "Method": "WallJump1 && DoubleJump",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DashFlashInv",
+        "Location": "EverGardenPortals",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ComboAntiFullHealth",
+        "Location": "EverGarden",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "HevPortalHub",
+        "slotId": 49,
+        "Requirement": [
+            {
+                "Method": "Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DebuffCounter",
+        "Location": "HevPortalHub",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CrystalIncrease",
+        "Location": "HevPortalHub",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide",
+                "Difficulty": 0
+            },
+            {
+                "Method": "WallJump1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "HevPortalHub",
+        "slotId": 20,
+        "Requirement": [
+            {
+                "Method": "SableC && DoubleJump && AirDash",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BoostHitCount",
+        "Location": "Cloister",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "EliteChallangeF",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Cloister",
+        "slotId": 16,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleComboNormal1QuickFar",
+        "Location": "Cloister",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Cloister",
+        "slotId": 18,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Cloister",
+        "slotId": 22,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Cloister",
+        "slotId": 18,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BreakHeal",
+        "Location": "Cloister",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_WALLJUMP",
+        "Location": "Cloister",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Cloister",
+        "slotId": 17,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "Cloister",
+        "slotId": 46,
+        "Requirement": [
+            {
+                "Method": "Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_QuickMPRegainB",
+        "Location": "Cloister",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Highjump && WallJump1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "AirDash && WallJump1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Jet1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleComoPassiveMAX",
+        "Location": "Cloister",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "AirDash && WallJump1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Jet1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_LateAttack",
+        "Location": "Cloister",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Gallary of Mirrors",
+        "slotId": 10,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Gallary of Mirrors",
+        "slotId": 10,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ChargeShotDiscount",
+        "Location": "Gallary of Mirrors",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AreBombThrower",
+        "Location": "Gallary of Mirrors",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_Recover3",
+        "Location": "Gallary of Mirrors",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_BombLengthExtend",
+        "Location": "Gallary of Mirrors",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "Gallary of Mirrors",
+        "slotId": 47,
+        "Requirement": [
+            {
+                "Method": "Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Gallary of Mirrors",
+        "slotId": 10,
+        "Requirement": [
+            {
+                "Method": "Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_WeakGroundUpModCombo",
+        "Location": "Gallary of Mirrors",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "HighJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "AirDash",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Gallary of Mirrors",
+        "slotId": 25,
+        "Requirement": [
+            {
+                "Method": "VortexGlove && Jet1 && DoubleJump && AirDash",
+                "Difficulty": 0
+            },
+            {
+                "Method": "VortexGlove && Jet1 && AirDash",
+                "Difficulty": 3
+            },
+            {
+                "Method": "VortexGlove && Jet2 && AirDash",
+                "Difficulty": 0
+            },
+            {
+                "Method": "VortexGlove && DoubleJump && Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "VortexGlove",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "Gallary of Mirrors",
+        "slotId": 5,
+        "Requirement": [
+            {
+                "Method": "AirDash && WallJump1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "DoubleJump",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Gallary of Souls",
+        "slotId": 10,
+        "Requirement": [
+            {
+                "Method": "Slide && Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Gallary of Souls",
+        "slotId": 10,
+        "Requirement": [
+            {
+                "Method": "Slide && LineBomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_Instant1",
+        "Location": "Gallary of Souls",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": -1
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "Gallary of Souls Boss",
+        "slotId": 62,
+        "Requirement": [
+            {
+                "Method": "Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Verdazure Ocean",
+        "slotId": 23,
+        "Requirement": [
+            {
+                "Method": "WallJump1 && DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "WallJump1 && Jet2",
+                "Difficulty": 0
+            },
+            {
+                "Method": "WallJump1 && WaterMovement",
+                "Difficulty": 0
+            },
+            {
+                "Method": "WallJump1 && Jet1 && AirDash",
+                "Difficulty": 0
+            },
+            {
+                "Method": "WaterMovement && AirDash && DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "WaterMovement && DoubleJump && Jet1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DodgeCharger",
+        "Location": "Verdazure Ocean",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "AreaBomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Verdazure Ocean",
+        "slotId": 16,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Verdazure Ocean",
+        "slotId": 25,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Verdazure Ocean",
+        "slotId": 15,
+        "Requirement": [
+            {
+                "Method": "BombLengthExtend1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Verdazure Ocean",
+        "slotId": 24,
+        "Requirement": [
+            {
+                "Method": "SableB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ComboTimeExtendB",
+        "Location": "Swampike",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "DoubleJump",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BOnceHeal",
+        "Location": "Swampike",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Swampike",
+        "slotId": 23,
+        "Requirement": [
+            {
+                "Method": "VortexGlove",
+                "Difficulty": 1
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StrongFrontEnhance",
+        "Location": "Swampike",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_RevengeA",
+        "Location": "Swampike",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_GStrongUpBulletCancelS",
+        "Location": "Swampike",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Swampike",
+        "slotId": 21,
+        "Requirement": [
+            {
+                "Method": "DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "AirDash",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Jet1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_MAXHP2MAXMP",
+        "Location": "Forgotten City Upper Exit",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "LineBomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Forgotten City",
+        "slotId": 4,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Forgotten City",
+        "slotId": 4,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_QuickDropExtendB",
+        "Location": "Forgotten City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Forgotten City",
+        "slotId": 4,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "Forgotten City",
+        "slotId": 34,
+        "Requirement": [
+            {
+                "Method": "Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BaseComboBooster",
+        "Location": "Forgotten City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleComboPassiveS",
+        "Location": "Forgotten City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "LineBomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DodgeChargeDodgeShot",
+        "Location": "Snowveil1",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Snowveil1",
+        "slotId": 14,
+        "Requirement": [
+            {
+                "Method": "AreaBomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_EPMeleeReduce",
+        "Location": "Snowveil1",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "Snowveil1",
+        "slotId": 32,
+        "Requirement": [
+            {
+                "Method": "Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ChargeHeal",
+        "Location": "Snowveil1",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "VortexGlove",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_Rotater",
+        "Location": "Snowveil1",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Snowveil1",
+        "slotId": 22,
+        "Requirement": [
+            {
+                "Method": "Slide && Jet2",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Slide && Jet1 && HighJump && SpinnerBash",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Snowveil2",
+        "slotId": 24,
+        "Requirement": [
+            {
+                "Method": "Bomb && Jet2 && DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Bomb && Jet3",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Bomb && Jet2 && HighJump && SpinnerBash",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_JetpackMP",
+        "Location": "Snowveil2",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide && DoubleJump && AirDash && Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Slide && DoubleJump && Jet3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Snowveil2",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide && Jet3 && AirDash",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Slide && Jet1 && AirDash && DoubleJump",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Snow City",
+        "slotId": 21,
+        "Requirement": [
+            {
+                "Method": "Slide && Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_4Knifes",
+        "Location": "Snow City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_GoldenGlove",
+        "Location": "Snow City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 4500",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DogdeSlide",
+        "Location": "Snow City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2250",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_GroundNormalCombo4AltDmg",
+        "Location": "Snow City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AutoChargeCombo",
+        "Location": "Snow City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2250",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_1HealthTypeD",
+        "Location": "Snow City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 1250",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_KonockConvert",
+        "Location": "Snow City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2800",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BombCharge",
+        "Location": "Snow City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2200",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_MPAllBurst",
+        "Location": "Snow City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2900",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_FasterTeviStrongGroundUp",
+        "Location": "Snow City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 1500",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_BAG",
+        "Location": "Snow City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2500",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Snow City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 5000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Snow City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 5000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Snow City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 5000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Snow City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 5000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Snow City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 5000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_SHARD",
+        "Location": "Snow City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 5000 && Chapter 6",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Snowveil Above HQ",
+        "slotId": 27,
+        "Requirement": [
+            {
+                "Method": "BombLengthExtend3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_GstrongUpWidth",
+        "Location": "Snowveil Above HQ",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Golden Hands HQ",
+        "slotId": 23,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "QUEST_GHandR",
+        "Location": "Golden Hands HQ",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "VortexGlove",
+                "Difficulty": 0
+            },
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ChargeIntoEnemy",
+        "Location": "Golden Hands HQ",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "AreaBomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Golden Hands HQ",
+        "slotId": 21,
+        "Requirement": [
+            {
+                "Method": "VortexGlove",
+                "Difficulty": 0
+            },
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DodgeStrongAirDown",
+        "Location": "Golden Hands HQ",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Slide && Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Golden Hands HQ",
+        "slotId": 12,
+        "Requirement": [
+            {
+                "Method": "Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SlideThenStrongUp",
+        "Location": "DreamKeeper Outside Right",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "HighJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "AirDash && WallJump1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "DreamKeeper Outside Right",
+        "slotId": 28,
+        "Requirement": [
+            {
+                "Method": "BombLengthExtend1 && Slide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "DreamKeeper Outside Left",
+        "slotId": 27,
+        "Requirement": [
+            {
+                "Method": "Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "DoubleJump",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_TempRing",
+        "Location": "DreamKeeper Outside Left",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "DreamKeeper Outside Left",
+        "slotId": 27,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ConsumeableCharge",
+        "Location": "DreamKeeper",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "DreamKeeper",
+        "slotId": 61,
+        "Requirement": [
+            {
+                "Method": "Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_AntiIce",
+        "Location": "DreamKeeper",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_LaserRes",
+        "Location": "DreamKeeper",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "LineBomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "DreamKeeper",
+        "slotId": 28,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "DreamKeeper",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "DreamKeeper",
+        "slotId": 60,
+        "Requirement": [
+            {
+                "Method": "Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "DreamKeeper",
+        "slotId": 28,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "DreamKeeper",
+        "slotId": 28,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_KnockHitEnhance",
+        "Location": "DreamKeeper",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "AreaBomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CrystalBulletCancle",
+        "Location": "Deep Dream",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "BombLengthExtend3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BadgeCDReduce",
+        "Location": "Deep Dream",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "DoubleJump && Jet2 && ItemUse",
+                "Difficulty": 0
+            },
+            {
+                "Method": "DoubleJump && Jet1 && WallJump1 && AirDash",
+                "Difficulty": 0
+            },
+            {
+                "Method": "DoubleJump && Jet1 && WallJump1 && HighJump && ItemUse",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_Royal",
+        "Location": "Deep Dream",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Jet1 && DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "DoubleJump && AirDash",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Jet2 && AirDash",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Jet1 && AirDash && HighJump",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Valley Lower Part",
+        "slotId": 27,
+        "Requirement": [
+            {
+                "Method": "Slide && Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Valley Lower Part",
+        "slotId": 24,
+        "Requirement": [
+            {
+                "Method": "Bomb && Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Bomb && DoubleJump",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SafeItemUse",
+        "Location": "Valley Lower Part",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "VortexGlove && DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "VortexGlove && Jet1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Valley Middle Part",
+        "slotId": 17,
+        "Requirement": [
+            {
+                "Method": "AreaBomb",
+                "Difficulty": 0
+            },
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Valley Middle Part",
+        "slotId": 24,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_GStrongUpBulletCancelC",
+        "Location": "Valley Middle Part",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "SpinnerBash",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Valley Middle Part",
+        "slotId": 24,
+        "Requirement": [
+            {
+                "Method": "VortexGlove",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Valley Middle Part",
+        "slotId": 27,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_RapidShots",
+        "Location": "Sinners Hell",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_HP2Damage6",
+        "Location": "Sinners Hell",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Sinners Hell",
+        "slotId": 29,
+        "Requirement": [
+            {
+                "Method": "AirSlide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "",
+        "Location": "Sinners Hell",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "Sinners Hell",
+        "slotId": 43,
+        "Requirement": [
+            {
+                "Method": "Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Sinners Hell",
+        "slotId": 29,
+        "Requirement": [
+            {
+                "Method": "BombLengthExtend3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Sinners Hell",
+        "slotId": 29,
+        "Requirement": [
+            {
+                "Method": "DoubleJump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "AirDash",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Sinners Hell",
+        "slotId": 29,
+        "Requirement": [
+            {
+                "Method": "Jet1",
+                "Difficulty": 0
+            },
+            {
+                "Method": "DoubleJump",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Sinners Hell",
+        "slotId": 29,
+        "Requirement": [
+            {
+                "Method": "Jet3 && AirDash",
+                "Difficulty": 0
+            },
+            {
+                "Method": "Jet1 && AirDash && DoubleJump",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BoostEnhance",
+        "Location": "Illusion Palace",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_ZCrystal",
+        "Location": "Illusion Palace",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    }
+]
