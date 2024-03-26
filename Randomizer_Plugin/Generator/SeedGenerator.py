@@ -590,17 +590,18 @@ class Validator:
         
         lastLen = -1
         self.bossCount = 0
-        self.checkList.append("SpinnerBash")
         self.checkList.append("ItemUse")
-        self.checkList.append("TornadoSpin")
-        
         while(lastLen != len(self.checkList)):
             lastLen = len(self.checkList)
             self.mapList = [] 
             self.checkItems()
+            if("ITEM_KNIFE" in self.itemList):
+                    self.checkList.append("SpinnerBash")
+                    self.checkList.append("TornadoSpin") 
             if("ITEM_LINEBOMB" in self.checkList or "ITEM_AREABOMB" in self.checkList):
                 if "Bomb" not in self.checkList:
                     self.checkList.append("Bomb")
+
         self.checkItems()
         self.checkItems()
         GearCount = 0
@@ -641,6 +642,8 @@ class Generator:
             elif val == 2:
                 #itemds
                 val = random.randint(22,66)
+                if val == 58 or 55:
+                    continue
                 if Type(val).name in self.validator.UpgradeAble:
                     item = [val,random.randint(4,6)]
                 else:
