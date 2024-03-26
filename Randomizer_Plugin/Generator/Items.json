@@ -3452,15 +3452,15 @@
                 "Difficulty": 0
             },
             {
-                "Method": "SableC && HighJump",
+                "Method": "ITEM_OrbTypeS3 && HighJump",
                 "Difficulty": 0
             },
             {
-                "Method": "SableC && ITEM_DOUBLEJUMP",
+                "Method": "ITEM_OrbTypeS3 && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "SableC && ITEM_JETPACK",
+                "Method": "ITEM_OrbTypeS3 && ITEM_JETPACK",
                 "Difficulty": 0
             }
         ]
@@ -3833,7 +3833,7 @@
         "slotId": 20,
         "Requirement": [
             {
-                "Method": "SableC && ITEM_DOUBLEJUMP && ITEM_AirDash",
+                "Method": "ITEM_OrbTypeS3 && ITEM_DOUBLEJUMP && ITEM_AirDash",
                 "Difficulty": 0
             }
         ]
@@ -5517,7 +5517,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && ITEM_RailPass && SableC",
+                "Method": "Coins 250 && ITEM_RailPass && ITEM_OrbTypeS3",
                 "Difficulty": 0
             }
         ]
@@ -5528,7 +5528,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && ITEM_RailPass && SableC",
+                "Method": "Coins 250 && ITEM_RailPass && ITEM_OrbTypeS3",
                 "Difficulty": 0
             }
         ]

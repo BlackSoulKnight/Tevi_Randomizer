@@ -590,6 +590,10 @@ class Validator:
         
         lastLen = -1
         self.bossCount = 0
+        self.checkList.append("SpinnerBash")
+        self.checkList.append("ItemUse")
+        self.checkList.append("TornadoSpin")
+        
         while(lastLen != len(self.checkList)):
             lastLen = len(self.checkList)
             self.mapList = [] 
