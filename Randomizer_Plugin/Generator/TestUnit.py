@@ -586,45 +586,49 @@ class Generator:
         self.map = Map()
         self.validator = Validator(self.map)
 
-    def randomitem(self):
+    
+    def newRandomItem(self):
         created = False
 
         while(not created):
             item = [0,0]
-            val = random.randint(1,378)
-            if val < 9:
-                if val != 7:
-                    shopfix = random.randint(0,34)
-                    if shopfix>29:
-                        shopfix+=10
-                    item =[val,shopfix]
+            slotid = 0
+            val = random.randint(1,4)
+            if val == 1:
+                val = random.randint(1,8)
+                #Potion
+                if val==7:
+                    item = [val,random.randint(0,4)]
+                elif val==8:
+                    item = [val,random.randint(0,14)]
+                elif val==1:
+                    item = [val,random.randint(0,19)]
                 else:
-                    item =[val,random.randint(0,4)]
-
-            elif val >21 and val < 33 and (not val == 29 and not val==28 and not val== 27 and not val == 31):
-                item = [val,random.randint(4,6)]
-            elif val == 35:
-                item = [val,random.randint(4,6)]
-            elif val == 41 or val == 42:
-                item = [val,random.randint(4,6)]
-            elif val == 47 or val == 48:
-                item = [val,random.randint(4,6)]
-            elif val >= 52 and val <=54:
-                item = [val,random.randint(4,6)]
-            elif val == 57 or val == 60 or val == 63:
-                item = [val,random.randint(4,6)]
-
-            elif (val >21 and val < 67):
-                item = [val,1]
-
-            elif val > 119 and val <378:
+                    item = [val,random.randint(0,34)]
+            elif val == 2:
+                #itemds
+                val = random.randint(22,66)
+                if Type(val).name in self.validator.UpgradeAble:
+                    item = [val,random.randint(4,6)]
+                else:
+                    item = [val,1]
+            elif val == 3:
+                #Badge
+                val = random.randint(120,377)
                 item = [val,1]
             else:
-                continue
+                #extra items
+                val = random.randint(0,2)
+                if val == 0:
+                    item = [106,1]
+                elif val == 1:
+                    item = [107,1]
+                else:
+                    item = [110,1]
+
             if not(item in self.placeditem):
                 self.placeditem.append(item)
                 created = True
-                
         return item 
 
     def randomize(self):
@@ -634,13 +638,15 @@ class Generator:
             count += 1
             self.placeditem = []
             self.map.createMap()
+            random.shuffle(self.map.items)
             for k in self.map.items:
-                item = self.randomitem()
+                item = self.newRandomItem()
                 k["Itemname"] = Type(item[0]).name
                 k["slotId"] = item[1]
             self.map.addItemsToMap()
             flag = self.validator.validate()
             print("Try Number:"+str(count))
+        self.map.items = sorted(self.map.items, key=lambda d: d["Location"])
         self.generateFile()
         
     def generateFile(self):

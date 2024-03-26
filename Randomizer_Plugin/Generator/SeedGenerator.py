@@ -1,3 +1,13 @@
+import json
+import os
+import random
+## Reading main Data files
+
+    
+
+Path = os.path.dirname(os.path.realpath(__file__))
+
+
 from enum import Enum
 
 class  Type(Enum):
@@ -408,3 +418,258 @@ class  Type(Enum):
 		Useable_Biscuit = 404
 		MAX = 405
 	
+
+class Item:
+    def __init__(self,name,slotid,requierment) -> None:
+        self.name = name
+        self.slotID = slotid
+        self.requierment = []
+        self.requierment = requierment
+
+    def isPossible(self,checklist):
+        for k in self.requierment:
+
+            print("\n")
+        return False
+
+
+
+class Area():
+
+
+    def __init__(self,name,money,connection) -> None:
+        self.name = name
+        self.money = money
+        self.items = {}
+        self.connection = connection
+
+
+class Map:
+
+    def __init__(self) -> None:
+        self.startArea = None
+        self.quicklink = None
+        self.items = []
+        self.createMap() 
+
+    def createMap(self):
+        self.quicklink = {}
+        ## Load Areas
+        for val in json.load(open(Path+"\Locations.json")).values():
+            for v in val:
+                if v["Name"] not in self.quicklink:
+                    self.quicklink[v["Name"]] = Area(v["Name"],v["Money"],v["Connections"])
+                if v["Name"] == "Start Area":
+                    self.startArea = self.quicklink[v["Name"]]
+
+        # Connect Areas
+        tmp = {}
+        for i in self.quicklink.values(): 
+            for n in i.connection:
+                if n["Exit"] ==  "":
+                    continue
+                n["Exit"] = self.quicklink[n["Exit"]]
+        
+        #Load Items 
+        self.items = json.load(open(Path+"\Items.json"))
+
+
+    def addItemsToMap(self):
+        for item in self.items:
+            #if requirement / difficulty allowed
+            if item["Location"] == "Crafting":
+                item["Location"] = "Start Area"
+            if item["Location"] == "Memine":
+                item["Location"] = "Start Area"
+            if item["Location"] == "Vena":
+                item["Location"] = "Ana Thema"
+            self.quicklink[item["Location"]].items[item["Itemname"]] = Item(item["Itemname"],item["slotId"],item["Requirement"])
+
+
+class Validator:
+    def __init__(self,_map) -> None:
+        self.checkList=[]
+        self.mapList=[]
+        self.itemList=[]
+
+        self.UpgradeAble= ["ITEM_KNIFE",
+        "ITEM_ORB" ,
+        "ITEM_RapidShots" ,
+        "ITEM_AttackRange" ,
+        "ITEM_EasyStyle" ,
+        "ITEM_LINEBOMB" ,
+        "ITEM_AREABOMB" ,
+        "ITEM_SPEEDUP" ,
+        "ITEM_AirDash",
+        "ITEM_WALLJUMP",
+        "ITEM_JETPACK",
+        "ITEM_BoostSystem" ,
+        "ITEM_BombLengthExtend",
+        "ITEM_MASK" ,
+        "ITEM_TempRing" ,
+        "ITEM_DodgeShot" ,
+        "ITEM_Rotater" ,
+        "ITEM_GoldenGlove" ,
+        "ITEM_OrbAmulet" ,
+        "ITEM_BOMBFUEL",
+        "ITEM_Explorer"]
+
+        self.map = _map
+
+
+    def isPossible(self,requirement):
+        for s in requirement["Method"].split("&&"):
+            cut = s.split()
+            if len(cut) == 0:
+                return True
+            if cut[0] == "Coins" or cut[0] == "Upgrade" or cut[0] == "Core" or "EliteChallange" in cut[0] or cut[0] == "Boss":
+                return True
+            if not cut[0] in self.checkList:
+                return False
+
+        return True
+
+    def checkItems(self,currArea = "Start Area",area = []):
+        if len(self.mapList) == 0:
+            self.mapList.append(currArea)
+        else:
+            if currArea in self.mapList:
+                return
+            else:
+                self.mapList.append(currArea)
+
+        for item in self.map.quicklink[currArea].items.values():
+            for req in item.requierment:                   
+                if self.isPossible(req) and (item.name,item.slotID) not in self.itemList:
+                    self.itemList.append((item.name,item.slotID))
+                    if item.name not in self.checkList:
+                        self.checkList.append(item.name)
+                    elif item.name+"2" not in self.checkList:
+                        self.checkList.append(item.name+"2")
+                    elif item.name+"3" not in self.checkList:
+                        self.checkList.append(item.name+"3")
+
+        for edge in self.map.quicklink[currArea].connection:
+            if(edge["Exit"] == ""):
+                continue
+            if self.isPossible(edge):
+                self.checkItems(edge["Exit"].name)
+
+    def validate(self):
+        self.checkList = []
+        self.itemList = []
+        self.mapList = []
+        
+        lastLen = -1
+        while(lastLen != len(self.checkList)):
+            lastLen = len(self.checkList)
+            self.mapList = [] 
+            self.checkItems()
+            if("ITEM_LINEBOMB" in self.checkList or "ITEM_AREABOMB" in self.checkList):
+                if "Bomb" not in self.checkList:
+                    self.checkList.append("Bomb")
+        self.checkItems()
+        self.checkItems()
+        GearCount = 0
+        for item in self.itemList:
+            if item[0] == "STACKABLE_COG":
+                GearCount += 1
+        if "ITEM_SLIDE" not in self.checkList or "Bomb" not in self.checkList or "ITEM_AirSlide" not in self.checkList or  "ITEM_Rotater" not in self.checkList or GearCount < 16:
+            return False
+        return True
+
+            
+
+class Generator:
+    def __init__(self):
+        self.placeditem = []
+        self.map = Map()
+        self.validator = Validator(self.map)
+
+    
+    def newRandomItem(self):
+        created = False
+
+        while(not created):
+            item = [0,0]
+            slotid = 0
+            val = random.randint(1,4)
+            if val == 1:
+                val = random.randint(1,8)
+                #Potion
+                if val==7:
+                    item = [val,random.randint(0,4)]
+                elif val==8:
+                    item = [val,random.randint(0,14)]
+                elif val==1:
+                    item = [val,random.randint(0,19)]
+                else:
+                    item = [val,random.randint(0,34)]
+            elif val == 2:
+                #itemds
+                val = random.randint(22,66)
+                if Type(val).name in self.validator.UpgradeAble:
+                    item = [val,random.randint(4,6)]
+                else:
+                    item = [val,1]
+            elif val == 3:
+                #Badge
+                val = random.randint(120,377)
+                item = [val,1]
+            else:
+                #extra items
+                val = random.randint(0,2)
+                if val == 0:
+                    item = [106,1]
+                elif val == 1:
+                    item = [107,1]
+                else:
+                    item = [110,1]
+
+            if not(item in self.placeditem):
+                self.placeditem.append(item)
+                created = True
+        return item 
+
+    def randomize(self):
+        flag = False
+        count = 0
+        while(not flag):
+            count += 1
+            self.placeditem = []
+            self.map.createMap()
+            random.shuffle(self.map.items)
+            for k in self.map.items:
+                item = self.newRandomItem()
+                k["Itemname"] = Type(item[0]).name
+                k["slotId"] = item[1]
+            self.map.addItemsToMap()
+            flag = self.validator.validate()
+            print("Try Number:"+str(count))
+        self.map.items = sorted(self.map.items, key=lambda d: d["Location"])
+        self.generateFile()
+        
+    def generateFile(self):
+        output = ""
+        items = json.load(open(Path+"\Items.json"))
+        for k in range(len(items)):
+            output += str(Type[items[k]["Itemname"]].value)+ "," 
+            output += str(items[k]["slotId"]) + ":" 
+            output += str(Type[self.map.items[k]["Itemname"]].value) + ","
+            output += str(self.map.items[k]["slotId"])+";\n"
+        if not os.path.exists("./data"):
+            os.makedirs("./data") 
+        file = open("data/file.dat",'w+')
+        file.write(output)
+        file.close()
+        file = open("data/Spoiler.json",'w+')
+        json.dump(self.map.items,file)
+
+seed = input("Enter a Seed: ")
+
+random.seed(seed)
+t = Generator()
+t.randomize()
+
+print("Generating the Seed has finished")
+input()
