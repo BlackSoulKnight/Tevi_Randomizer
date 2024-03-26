@@ -333,6 +333,20 @@ public class Randomizer : BaseUnityPlugin
                 ____secondsprite.enabled = true;
 
             }
+            else
+            {
+                GameObject secondTile = new GameObject("SecondTile");
+                secondTile.layer = 14;
+                secondTile.AddComponent<SpriteRenderer>();
+                SpriteRenderer sSP = secondTile.GetComponent<SpriteRenderer>();
+                sSP.material = ____sprite.material;
+                sSP.sortingOrder = 45;
+                secondTile.transform.SetParent(__instance.transform);
+                secondTile.transform.localPosition=new Vector3(0,0,0);
+                secondTile.transform.localScale = new Vector3(1,1,1);
+                ____secondsprite = sSP;
+                ____secondsprite.sprite = spr;
+            }
 
 
 
@@ -571,7 +585,7 @@ public class Randomizer : BaseUnityPlugin
 
             case ItemList.Type.ITEM_ORB:
 
-                addOrbStatus(3);
+                addOrbStatus(1);
 
                 break;
 
@@ -658,9 +672,10 @@ class EventPatch
         if (em.EventStage == 10)
         {
             SaveManager.Instance.SetOrb((byte)0);
-            ItemData data = Randomizer.getRandomizedItem(ItemList.Type.ITEM_ORB, 4);
+            Randomizer.addOrbStatus(3);
+            ItemData data = Randomizer.getRandomizedItem(ItemList.Type.ITEM_ORB, 1);
             SaveManager.Instance.SetItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
-            data = Randomizer.getRandomizedItem(ItemList.Type.ITEM_KNIFE, 4);
+            data = Randomizer.getRandomizedItem(ItemList.Type.ITEM_KNIFE, 1);
             SaveManager.Instance.SetItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
             em.SetStage(30);
         }

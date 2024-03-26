@@ -84,6 +84,25 @@
                 {
                     "Exit": "Desert Base Main",
                     "Method": ""
+                },
+                {
+                    "Exit": "Crafting",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Crafting",
+            "Money": [
+                {
+                    "Method": "",
+                    "Amount": 0
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "",
+                    "Method": ""
                 }
             ]
         },

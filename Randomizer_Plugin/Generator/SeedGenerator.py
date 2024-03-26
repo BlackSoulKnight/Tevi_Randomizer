@@ -478,7 +478,7 @@ class Map:
         for item in self.items:
             #if requirement / difficulty allowed
             if item["Location"] == "Crafting":
-                item["Location"] = "Start Area"
+                item["Location"] = "Crafting"
             if item["Location"] == "Memine":
                 item["Location"] = "Start Area"
             if item["Location"] == "Vena":
@@ -652,6 +652,8 @@ class Generator:
     def generateFile(self):
         output = ""
         items = json.load(open(Path+"\Items.json"))
+        #adding knife and orb to start tiem (2 items may be lost)
+
         for k in range(len(items)):
             output += str(Type[items[k]["Itemname"]].value)+ "," 
             output += str(items[k]["slotId"]) + ":" 
