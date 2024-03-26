@@ -1006,7 +1006,7 @@
         "slotId": 30,
         "Requirement": [
             {
-                "Method": "Coins 5000 && Chapter 6",
+                "Method": "Coins 5000 && Chapter  6",
                 "Difficulty": 0
             }
         ]
@@ -1309,6 +1309,17 @@
         "Requirement": [
             {
                 "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_GoldenHands",
+        "Location": "Forest Maze extended",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "QUEST_GHandR && QUEST_GHandL",
                 "Difficulty": 0
             }
         ]
@@ -2390,7 +2401,7 @@
         "slotId": 31,
         "Requirement": [
             {
-                "Method": "Coins 5000 && Chapter 6",
+                "Method": "Coins 5000 && Chapter  6",
                 "Difficulty": 0
             }
         ]
@@ -2966,7 +2977,7 @@
         "slotId": 32,
         "Requirement": [
             {
-                "Method": "Coins 5000 && Chapter 6",
+                "Method": "Coins 5000 && Chapter  6",
                 "Difficulty": 0
             }
         ]
@@ -3658,7 +3669,7 @@
         "slotId": 33,
         "Requirement": [
             {
-                "Method": "Coins 5000 && Chapter 6",
+                "Method": "Coins 5000 && Chapter  6",
                 "Difficulty": 0
             }
         ]
@@ -4777,7 +4788,7 @@
         "slotId": 34,
         "Requirement": [
             {
-                "Method": "Coins 5000 && Chapter 6",
+                "Method": "Coins 5000 && Chapter  6",
                 "Difficulty": 0
             }
         ]
@@ -5451,7 +5462,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter1",
+                "Method": "Coins 250 && Chapter 1",
                 "Difficulty": 0
             }
         ]
@@ -5539,7 +5550,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter1",
+                "Method": "Coins 250 && Chapter 1",
                 "Difficulty": 0
             }
         ]
@@ -5616,7 +5627,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter2",
+                "Method": "Coins 250 && Chapter 2",
                 "Difficulty": 0
             }
         ]
@@ -5627,7 +5638,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter2",
+                "Method": "Coins 250 && Chapter 2",
                 "Difficulty": 0
             }
         ]
@@ -5638,7 +5649,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter2",
+                "Method": "Coins 250 && Chapter 2",
                 "Difficulty": 0
             }
         ]
@@ -5649,7 +5660,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter2",
+                "Method": "Coins 250 && Chapter 2",
                 "Difficulty": 0
             }
         ]
@@ -5660,7 +5671,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter3",
+                "Method": "Coins 250 && Chapter 3",
                 "Difficulty": 0
             }
         ]
@@ -5671,7 +5682,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter3",
+                "Method": "Coins 250 && Chapter 3",
                 "Difficulty": 0
             }
         ]
@@ -5682,7 +5693,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter3",
+                "Method": "Coins 250 && Chapter 3",
                 "Difficulty": 0
             }
         ]
@@ -5693,7 +5704,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter3",
+                "Method": "Coins 250 && Chapter 3",
                 "Difficulty": 0
             }
         ]
@@ -5704,7 +5715,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter3",
+                "Method": "Coins 250 && Chapter 3",
                 "Difficulty": 0
             }
         ]
@@ -5715,7 +5726,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter4",
+                "Method": "Coins 250 && Chapter 4",
                 "Difficulty": 0
             }
         ]
@@ -5726,7 +5737,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter4",
+                "Method": "Coins 250 && Chapter 4",
                 "Difficulty": 0
             }
         ]
@@ -5737,7 +5748,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter4",
+                "Method": "Coins 250 && Chapter 4",
                 "Difficulty": 0
             }
         ]
@@ -5759,7 +5770,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter4",
+                "Method": "Coins 250 && Chapter 4",
                 "Difficulty": 0
             }
         ]
@@ -5770,7 +5781,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter5",
+                "Method": "Coins 250 && Chapter 5",
                 "Difficulty": 0
             }
         ]
@@ -5781,7 +5792,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter5",
+                "Method": "Coins 250 && Chapter 5",
                 "Difficulty": 0
             }
         ]
@@ -5792,7 +5803,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter5",
+                "Method": "Coins 250 && Chapter 5",
                 "Difficulty": 0
             }
         ]
@@ -5803,7 +5814,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter5",
+                "Method": "Coins 250 && Chapter 5",
                 "Difficulty": 0
             }
         ]
@@ -5814,7 +5825,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter5 && StrongGroundFront" ,
+                "Method": "Coins 250 && Chapter 5 && StrongGroundFront" ,
                 "Difficulty": 0
             }
         ]
@@ -5825,7 +5836,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter6",
+                "Method": "Coins 250 && Chapter 6",
                 "Difficulty": 0
             }
         ]
@@ -5836,7 +5847,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter6",
+                "Method": "Coins 250 && Chapter 6",
                 "Difficulty": 0
             }
         ]
@@ -5847,7 +5858,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter6",
+                "Method": "Coins 250 && Chapter 6",
                 "Difficulty": 0
             }
         ]
@@ -5858,7 +5869,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter6",
+                "Method": "Coins 250 && Chapter 6",
                 "Difficulty": 0
             }
         ]
@@ -5869,7 +5880,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter6 && OrbAmulet",
+                "Method": "Coins 250 && Chapter 6 && OrbAmulet",
                 "Difficulty": 0
             }
         ]
@@ -5880,7 +5891,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter7",
+                "Method": "Coins 250 && Chapter 7",
                 "Difficulty": 0
             }
         ]
@@ -5891,7 +5902,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter7",
+                "Method": "Coins 250 && Chapter 7",
                 "Difficulty": 0
             }
         ]
@@ -5902,7 +5913,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter7",
+                "Method": "Coins 250 && Chapter 7",
                 "Difficulty": 0
             }
         ]
@@ -5913,7 +5924,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter7",
+                "Method": "Coins 250 && Chapter 7",
                 "Difficulty": 0
             }
         ]

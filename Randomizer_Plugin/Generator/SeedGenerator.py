@@ -491,7 +491,8 @@ class Validator:
         self.checkList=[]
         self.mapList=[]
         self.itemList=[]
-
+        self.bossCount = 0
+        self.explorerMode = False
         self.UpgradeAble= ["ITEM_KNIFE",
         "ITEM_ORB" ,
         "ITEM_RapidShots" ,
@@ -518,16 +519,43 @@ class Validator:
 
 
     def isPossible(self,requirement):
+        flag = False
         for s in requirement["Method"].split("&&"):
             cut = s.split()
             if len(cut) == 0:
-                return True
-            if cut[0] == "Coins" or cut[0] == "Upgrade" or cut[0] == "Core" or "EliteChallange" in cut[0] or cut[0] == "Boss":
-                return True
-            if not cut[0] in self.checkList:
+                flag = True
+            elif cut[0] == "Coins":
+                flag = True
+            elif cut[0] == "Upgrade" or cut[0] == "Core"  or "EliteChallange" in cut[0]:
                 return False
-
-        return True
+            elif cut[0] == "Boss":
+                self.bossCount += 1
+                flag = True
+            elif cut[0] == "Chapter":
+                if self.explorerMode == True:
+                    flag = True
+                elif cut[1] == 1 and self.bossCount >= 1:
+                    flag = True
+                elif cut[1] == 2 and self.bossCount >= 3:
+                    flag = True
+                elif cut[1] == 3 and self.bossCount >= 5:
+                    flag = True
+                elif cut[1] == 4 and self.bossCount >= 7:
+                    flag = True
+                elif cut[1] == 5 and self.bossCount >= 10:
+                    flag = True
+                elif cut[1] == 6 and self.bossCount >= 13:
+                    flag = True
+                elif cut[1] == 7 and self.bossCount >= 16:
+                    flag = True
+                elif cut[1] == 8 and self.bossCount >= 20:
+                    flag = True
+                else:
+                    return False                   
+            elif cut[0] in self.checkList:
+                flag = True
+                
+        return flag
 
     def checkItems(self,currArea = "Start Area",area = []):
         if len(self.mapList) == 0:
@@ -561,6 +589,7 @@ class Validator:
         self.mapList = []
         
         lastLen = -1
+        self.bossCount = 0
         while(lastLen != len(self.checkList)):
             lastLen = len(self.checkList)
             self.mapList = [] 
@@ -671,6 +700,7 @@ seed = input("Enter a Seed: ")
 
 random.seed(seed)
 t = Generator()
+t.validator.explorerMode = False
 t.randomize()
 
 print("Generating the Seed has finished")
