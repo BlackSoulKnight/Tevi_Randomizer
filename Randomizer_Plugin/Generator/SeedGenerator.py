@@ -521,43 +521,42 @@ class Validator:
 
 
     def isPossible(self,requirement):
-        flag = False
         for s in requirement["Method"].split("&&"):
             cut = s.split()
             if len(cut) == 0:
-                flag = True
+                continue
             elif cut[0] == "Coins":
-                flag = True
+                continue
             elif cut[0] == "Upgrade" or cut[0] == "Core"  or "EliteChallange" in cut[0]:
                 return False
             elif cut[0] == "Boss":
                 self.bossCount += 1
-                flag = True
+                continue
             elif cut[0] == "Chapter":
                 if self.explorerMode == True:
-                    flag = True
+                    continue
                 elif cut[1] == "1" and self.bossCount >= 1:
-                    flag = True
+                    continue
                 elif cut[1] == "2" and self.bossCount >= 3:
-                    flag = True
+                    continue
                 elif cut[1] == "3" and self.bossCount >= 5:
-                    flag = True
+                    continue
                 elif cut[1] == "4" and self.bossCount >= 7:
-                    flag = True
+                    continue
                 elif cut[1] == "5" and self.bossCount >= 10:
-                    flag = True
+                    continue
                 elif cut[1] == "6" and self.bossCount >= 13:
-                    flag = True
+                    continue
                 elif cut[1] == "7" and self.bossCount >= 16:
-                    flag = True
+                    continue
                 elif cut[1] == "8" and self.bossCount >= 20:
-                    flag = True
+                    continue
                 else:
                     return False                   
-            elif cut[0] in self.checkList:
-                flag = True
+            elif cut[0] not in self.checkList:
+                return False
                 
-        return flag
+        return True
 
     def checkItems(self,currArea = "Start Area",area = []):
         if len(self.mapList) == 0:
@@ -597,7 +596,7 @@ class Validator:
             self.mapList = [] 
             self.bossCount = 0
             self.checkItems()
-            if("ITEM_KNIFE" in self.itemList):
+            if("ITEM_KNIFE" in self.checkList and "SpinnerBash" not in self.checkList and  "TornadoSpin" not in self.checkList):
                     self.checkList.append("SpinnerBash")
                     self.checkList.append("TornadoSpin") 
 
@@ -608,7 +607,9 @@ class Validator:
         for item in self.itemList:
             if item[0] == "STACKABLE_COG":
                 GearCount += 1
-        if "ITEM_SLIDE" not in self.checkList or "ITEM_AirSlide" not in self.checkList or  "ITEM_Rotater" not in self.checkList or GearCount < 16:
+        
+		#check if game is completable
+        if "ITEM_SLIDE" not in self.checkList or "ITEM_LINEBOMB" not in self.checkList or "ITEM_AirSlide" not in self.checkList or  "ITEM_Rotater" not in self.checkList or GearCount < 16 or self.bossCount < 16:
             return False
         return True
 
@@ -686,7 +687,7 @@ class Generator:
             self.map.addItemsToMap()
             flag = self.validator.validate()
             print("Try Number:"+str(count))
-        self.map.items = sorted(self.map.items, key=lambda d: d["Location"])
+        self.map.items = sorted(self.map.items, key=lambda d: d["Itemname"])
         self.generateFile()
         
     def generateFile(self):
@@ -698,6 +699,7 @@ class Generator:
             output += "4200,0:4200,1;"
         output += "4201,0:4201,"+str(self.extraRATK)+";"
         for k in self.map.items:
+            del(k["Requirement"])
             output += str(Type[k["OldItem"]].value)+ "," 
             output += str(k["OldSlotID"]) + ":" 
             output += str(Type[k["Itemname"]].value) + ","
