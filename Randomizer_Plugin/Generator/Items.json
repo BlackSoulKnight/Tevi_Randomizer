@@ -22,7 +22,7 @@
         ]
     },
     {
-        "Itemname": "BADGE_Yawn",
+        "Itemname": "BADGE_TauntYawn",
         "Location": "Oasis",
         "slotId": 1,
         "Requirement": [
@@ -86,11 +86,11 @@
                 "Difficulty": 0
             },
             {
-                "Method": "Bomb && DoubleJump",
+                "Method": "Bomb && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "Bomb && Jet1",
+                "Method": "Bomb && ITEM_JETPACK",
                 "Difficulty": 0
             }
         ]
@@ -118,7 +118,7 @@
         ]
     },
     {
-        "Itemname": "Badge_WallCharger",
+        "Itemname": "BADGE_WallCharger",
         "Location": "Oasis",
         "slotId": 1,
         "Requirement": [
@@ -129,7 +129,7 @@
         ]
     },
     {
-        "Itemname": "Badge_AutoCombo",
+        "Itemname": "BADGE_AutoCombo",
         "Location": "Desert Base Main",
         "slotId": 1,
         "Requirement": [
@@ -153,7 +153,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "Desert Base Main",
-        "slotId": 1,
+        "slotId": 20,
         "Requirement": [
             {
                 "Method": "Boss",
@@ -162,7 +162,7 @@
         ]
     },
     {
-        "Itemname": "BADGE_BackStab",
+        "Itemname": "BADGE_BACKSTAB",
         "Location": "Desert Base Main",
         "slotId": 1,
         "Requirement": [
@@ -173,7 +173,7 @@
         ]
     },
     {
-        "Itemname": "Badge_Normal2AntiHealth",
+        "Itemname": "BADGE_Normal2AntiHealth",
         "Location": "Desert Base Main",
         "slotId": 1,
         "Requirement": [
@@ -211,13 +211,13 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide && Bomb",
+                "Method": "ITEM_SLIDE && Bomb",
                 "Difficulty": 0
             }
         ]
     },
     {
-        "Itemname": "BADGE_ANITENERGYBALL",
+        "Itemname": "BADGE_ANTIENERGYBALL",
         "Location": "Desert Base Upper Half",
         "slotId": 1,
         "Requirement": [
@@ -305,6 +305,28 @@
         ]
     },
     {
+        "Itemname": "ITEM_KNIFE",
+        "Location": "Start Area",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_ORB",
+        "Location": "Start Area",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "BADGE_MAXHPUP",
         "Location": "Start Area",
         "slotId": 1,
@@ -382,7 +404,7 @@
         ]
     },
     {
-        "Itemname": "ITEM_LineBomb",
+        "Itemname": "ITEM_LINEBOMB",
         "Location": "Start Area",
         "slotId": 1,
         "Requirement": [
@@ -398,7 +420,7 @@
         "slotId": 14,
         "Requirement": [
             {
-                "Method": "Slide && Bomb",
+                "Method": "ITEM_SLIDE && Bomb",
                 "Difficulty": 0
             }
         ]
@@ -409,7 +431,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "LineBomb",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -431,13 +453,13 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "AirSlide",
+                "Method": "ITEM_AirSlide",
                 "Difficulty": 0
             }
         ]
     },
     {
-        "Itemname": "BADE_CrystalGen",
+        "Itemname": "BADGE_CrystalGen",
         "Location": "Morose Transit",
         "slotId": 1,
         "Requirement": [
@@ -450,18 +472,18 @@
     {
         "Itemname": "STACKABLE_HP",
         "Location": "Ruins Entrance",
-        "slotId": 1,
+        "slotId": 15,
         "Requirement": [
             {
-                "Method": "Jet2",
+                "Method": "ITEM_JETPACK2",
                 "Difficulty": 0
             },
             {
-                "Method": "Jet1 && DoubleJump",
+                "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "Jet1 && AirDash && WallJump1",
+                "Method": "ITEM_JETPACK && ITEM_AirDash && ITEM_WALLJUMP",
                 "Difficulty": 0
             }
         ]
@@ -480,7 +502,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "Ruins",
-        "slotId": 1,
+        "slotId": 42,
         "Requirement": [
             {
                 "Method": "Boss",
@@ -516,7 +538,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "WallJump1",
+                "Method": "ITEM_WALLJUMP",
                 "Difficulty": 0
             }
         ]
@@ -538,7 +560,7 @@
         "slotId": 8,
         "Requirement": [
             {
-                "Method": "Slide",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -571,15 +593,15 @@
         "slotId": 7,
         "Requirement": [
             {
-                "Method": "DoubleJump",
+                "Method": "ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "Jet1",
+                "Method": "ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "AirDash",
+                "Method": "ITEM_AirDash",
                 "Difficulty": 0
             }
         ]
@@ -634,7 +656,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -667,63 +689,63 @@
         "slotId": 13,
         "Requirement": [
             {
-                "Method": "Slide && DoubleJump",
+                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "Slide && Jet1",
+                "Method": "ITEM_SLIDE && ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "Slide && AirDash",
+                "Method": "ITEM_SLIDE && ITEM_AirDash",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "BADGE_DoubleNormalComboSpeedup",
-        "Location": "Vallhalla Breath Left Part",
+        "Location": "Valhalla Breath Left Part",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "BADGE_RapidShotsEnhance",
-        "Location": "Vallhalla Breath Left Part",
+        "Location": "Valhalla Breath Left Part",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "AirSlide && DoubleJump",
+                "Method": "ITEM_AirSlide && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "AirSlide && Jet1",
+                "Method": "ITEM_AirSlide && ITEM_JETPACK",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "BADGE_Lucky7C",
-        "Location": "Vallhalla Breath Left Part",
+        "Location": "Valhalla Breath Left Part",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide && DoubleJump",
+                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "Slide && Jet1",
+                "Method": "ITEM_SLIDE && ITEM_JETPACK",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Vallhalla Breath Left Part",
+        "Location": "Valhalla Breath Left Part",
         "slotId": 14,
         "Requirement": [
             {
@@ -760,7 +782,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -768,14 +790,14 @@
     {
         "Itemname": "STACKABLE_EP",
         "Location": "Moros City",
-        "slotId": 1,
+        "slotId": 9,
         "Requirement": [
             {
-                "Method": "AirDash && Jet3",
+                "Method": "ITEM_AirDash && ITEM_JETPACK3",
                 "Difficulty": 0
             },
             {
-                "Method": "AirDash && DoubleJump && Jet1",
+                "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK",
                 "Difficulty": 0
             }
         ]
@@ -995,15 +1017,15 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide && WallJump1 && AirDash",
+                "Method": "ITEM_SLIDE && ITEM_WALLJUMP && ITEM_AirDash",
                 "Difficulty": 0
             },
             {
-                "Method": "Slide && WallJump1 && Jet1",
+                "Method": "ITEM_SLIDE && ITEM_WALLJUMP && ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "Slide && WallJump1 && DoubleJump",
+                "Method": "ITEM_SLIDE && ITEM_WALLJUMP && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             }
         ]
@@ -1014,7 +1036,7 @@
         "slotId": 14,
         "Requirement": [
             {
-                "Method": "AreaBomb",
+                "Method": "ITEM_AREABOMB",
                 "Difficulty": 0
             }
         ]
@@ -1036,7 +1058,7 @@
         "slotId": 26,
         "Requirement": [
             {
-                "Method": "AirSlide",
+                "Method": "ITEM_AirSlide",
                 "Difficulty": 0
             }
         ]
@@ -1058,15 +1080,15 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide && Jet1",
+                "Method": "ITEM_SLIDE && ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "Slide && DoubleJump",
+                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "Slide && WallJump1 && AirDash",
+                "Method": "ITEM_SLIDE && ITEM_WALLJUMP && ITEM_AirDash",
                 "Difficulty": 0
             }
         ]
@@ -1096,7 +1118,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "Travoll Mines Part 2",
-        "slotId": 1,
+        "slotId": 25,
         "Requirement": [
             {
                 "Method": "Boss",
@@ -1132,7 +1154,7 @@
         "slotId": 15,
         "Requirement": [
             {
-                "Method": "Slide && AreaBomb",
+                "Method": "ITEM_SLIDE && ITEM_AREABOMB",
                 "Difficulty": 0
             }
         ]
@@ -1140,10 +1162,10 @@
     {
         "Itemname": "STACKABLE_HP",
         "Location": "Travoll Mines Part 2",
-        "slotId": 11,
+        "slotId": 14,
         "Requirement": [
             {
-                "Method": "Slide && Bomb",
+                "Method": "ITEM_SLIDE && Bomb",
                 "Difficulty": 0
             }
         ]
@@ -1154,7 +1176,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "VortexGlove",
+                "Method": "ITEM_Rotater",
                 "Difficulty": 0
             }
         ]
@@ -1261,7 +1283,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "Forest",
-        "slotId": 1,
+        "slotId": 24,
         "Requirement": [
             {
                 "Method": "Boss",
@@ -1391,17 +1413,6 @@
         ]
     },
     {
-        "Itemname": "",
-        "Location": "Gleamwood",
-        "slotId": 1,
-        "Requirement": [
-            {
-                "Method": "",
-                "Difficulty": 0
-            }
-        ]
-    },
-    {
         "Itemname": "STACKABLE_HP",
         "Location": "Gleamwood",
         "slotId": 5,
@@ -1418,7 +1429,7 @@
         "slotId": 26,
         "Requirement": [
             {
-                "Method": "Slide",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -1429,7 +1440,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -1440,7 +1451,7 @@
         "slotId": 19,
         "Requirement": [
             {
-                "Method": "Slide",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -1451,15 +1462,15 @@
         "slotId": 15,
         "Requirement": [
             {
-                "Method": "DoubleJump",
+                "Method": "ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "Jet1",
+                "Method": "ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "AirDash",
+                "Method": "ITEM_AirDash",
                 "Difficulty": 0
             }
         ]
@@ -1470,15 +1481,15 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Jet1",
+                "Method": "ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "AirDash",
+                "Method": "ITEM_AirDash",
                 "Difficulty": 0
             },
             {
-                "Method": "DoubleJump",
+                "Method": "ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             }
         ]
@@ -1495,7 +1506,7 @@
         ]
     },
     {
-        "Itemname": "BADGE_BattleStartCharge",
+        "Itemname": "BADGE_BattleStartCharger",
         "Location": "Gleamwood Right",
         "slotId": 1,
         "Requirement": [
@@ -1511,7 +1522,7 @@
         "slotId": 5,
         "Requirement": [
             {
-                "Method": "SableB",
+                "Method": "ITEM_OrbTypeS2",
                 "Difficulty": 0
             }
         ]
@@ -1533,7 +1544,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -1555,49 +1566,49 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
     },
     {
-        "Itemname": "BADGE_SideHalt",
+        "Itemname": "BADGE_SlideHalt",
         "Location": "Gleamwood Right",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
     },
     {
-        "Itemname": "BADGE_GoldLuck",
+        "Itemname": "BADGE_GoldenLuck",
         "Location": "Gleamwood Right",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide && BombLengthExtend1 && DoubleJump",
+                "Method": "ITEM_SLIDE && BombLengthExtend1 && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "Slide && BombLengthExtend1 && Jet1",
+                "Method": "ITEM_SLIDE && BombLengthExtend1 && ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "Slide && BombLengthExtend1 && HighJump && WallJump1",
+                "Method": "ITEM_SLIDE && BombLengthExtend1 && HighJump && ITEM_WALLJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "Slide && LineBomb && AreaBomb && DoubleJump",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AREABOMB && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "Slide && LineBomb && AreaBomb && Jet1",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AREABOMB && ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "Slide && LineBomb && AreaBomb && HighJump && WallJump1",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AREABOMB && HighJump && ITEM_WALLJUMP",
                 "Difficulty": 0
             }
         ]
@@ -1614,7 +1625,7 @@
         ]
     },
     {
-        "Itemname": "BADGE_StyleCOmboReduCeDamageS",
+        "Itemname": "BADGE_StyleComboReduceDamageS",
         "Location": "Plague Forest",
         "slotId": 1,
         "Requirement": [
@@ -1627,10 +1638,10 @@
     {
         "Itemname": "STACKABLE_HP",
         "Location": "Plague Forest",
-        "slotId": 25,
+        "slotId": 6,
         "Requirement": [
             {
-                "Method": "LineBomb",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -1674,19 +1685,19 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "AirDash",
+                "Method": "ITEM_AirDash",
                 "Difficulty": 0
             },
             {
-                "Method": "DoubleJump",
+                "Method": "ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "Jet1",
+                "Method": "ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "Highjump && WallJump1",
+                "Method": "Highjump && ITEM_WALLJUMP",
                 "Difficulty": 0
             }
         ]
@@ -1719,7 +1730,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide && LineBomb",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -1730,7 +1741,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "AirSlide",
+                "Method": "ITEM_AirSlide",
                 "Difficulty": 0
             }
         ]
@@ -1738,7 +1749,7 @@
     {
         "Itemname": "STACKABLE_RATK",
         "Location": "Plague Forest",
-        "slotId": 16,
+        "slotId": 6,
         "Requirement": [
             {
                 "Method": "",
@@ -1785,15 +1796,15 @@
         "slotId": 19,
         "Requirement": [
             {
-                "Method": "DoubleJump",
+                "Method": "ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "AirDash",
+                "Method": "ITEM_AirDash",
                 "Difficulty": 0
             },
             {
-                "Method": "Jet1",
+                "Method": "ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
@@ -1808,7 +1819,7 @@
         "slotId": 18,
         "Requirement": [
             {
-                "Method": "AreaBomb",
+                "Method": "ITEM_AREABOMB",
                 "Difficulty": 0
             }
         ]
@@ -1907,7 +1918,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "SableB",
+                "Method": "ITEM_OrbTypeS2",
                 "Difficulty": 0
             },
             {
@@ -1926,7 +1937,7 @@
         "slotId": 25,
         "Requirement": [
             {
-                "Method": "VortexGlove",
+                "Method": "ITEM_Rotater",
                 "Difficulty": 0
             }
         ]
@@ -1992,15 +2003,15 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "DoubleJump",
+                "Method": "ITEM_DOUBLEJUMP",
                 "Difficulty": 2
             },
             {
-                "Method": "AirDash",
+                "Method": "ITEM_AirDash",
                 "Difficulty": 0
             },
             {
-                "Method": "Jet1",
+                "Method": "ITEM_JETPACK",
                 "Difficulty": 0
             }
         ]
@@ -2066,7 +2077,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -2077,15 +2088,15 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide && LineBomb && WallJump1",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_WALLJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "Slide && LineBomb && DoubleJump && Jet3",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_DOUBLEJUMP && ITEM_JETPACK3",
                 "Difficulty": 0
             },
             {
-                "Method": "Slide && LineBomb && DoubleJump && HighJump && Jet1",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_DOUBLEJUMP && HighJump && ITEM_JETPACK",
                 "Difficulty": 0
             }
         ]
@@ -2096,15 +2107,15 @@
         "slotId": 7,
         "Requirement": [
             {
-                "Method": "Slide && AirDash",
+                "Method": "ITEM_SLIDE && ITEM_AirDash",
                 "Difficulty": 0
             },
             {
-                "Method": "Slide && DoubleJump",
+                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "Slide && Jet1",
+                "Method": "ITEM_SLIDE && ITEM_JETPACK",
                 "Difficulty": 0
             }
         ]
@@ -2121,7 +2132,7 @@
         ]
     },
     {
-        "Itemname": "BADGE_GrondNormalComboSpeedup",
+        "Itemname": "BADGE_GroundNormalComboSpeedup",
         "Location": "Ana Thema",
         "slotId": 1,
         "Requirement": [
@@ -2137,7 +2148,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide && Bomb",
+                "Method": "ITEM_SLIDE && Bomb",
                 "Difficulty": 0
             }
         ]
@@ -2176,7 +2187,7 @@
         ]
     },
     {
-        "Itemname": "BADGE_StrongFontFly",
+        "Itemname": "BADGE_StrongFrontFly",
         "Location": "Ana Thema",
         "slotId": 1,
         "Requirement": [
@@ -2390,7 +2401,7 @@
         "slotId": 26,
         "Requirement": [
             {
-                "Method": "AirSlide",
+                "Method": "ITEM_AirSlide",
                 "Difficulty": 0
             }
         ]
@@ -2412,7 +2423,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "EliteChallangeE && Slide",
+                "Method": "EliteChallangeE && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -2442,7 +2453,7 @@
     {
         "Itemname": "STACKABLE_MP",
         "Location": "LavaWorld",
-        "slotId": 1,
+        "slotId": 11,
         "Requirement": [
             {
                 "Method": "Bomb",
@@ -2456,7 +2467,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "LineBomb",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -2467,7 +2478,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "AirSlide",
+                "Method": "ITEM_AirSlide",
                 "Difficulty": 0
             }
         ]
@@ -2500,7 +2511,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "VortexGlove && AirSlide",
+                "Method": "ITEM_Rotater && ITEM_AirSlide",
                 "Difficulty": 0
             }
         ]
@@ -2511,7 +2522,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -2522,11 +2533,11 @@
         "slotId": 4,
         "Requirement": [
             {
-                "Method": "AirSlide",
+                "Method": "ITEM_AirSlide",
                 "Difficulty": 0
             },
             {
-                "Method": "BombLengthExtend1 && Slide",
+                "Method": "BombLengthExtend1 && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -2537,7 +2548,7 @@
         "slotId": 21,
         "Requirement": [
             {
-                "Method": "BombLengthExtend1 && Slide",
+                "Method": "BombLengthExtend1 && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -2548,7 +2559,7 @@
         "slotId": 12,
         "Requirement": [
             {
-                "Method": "Slide",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -2565,12 +2576,23 @@
         ]
     },
     {
+        "Itemname": "ITEM_AREABOMB",
+        "Location": "Swamp",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Bomb",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "STACKABLE_RATK",
         "Location": "Swamp",
         "slotId": 12,
         "Requirement": [
             {
-                "Method": "Slide",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -2614,15 +2636,15 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "AirDash",
+                "Method": "ITEM_AirDash",
                 "Difficulty": 0
             },
             {
-                "Method": "Jet1",
+                "Method": "ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "DoubleJump",
+                "Method": "ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             }
         ]
@@ -2633,19 +2655,19 @@
         "slotId": 12,
         "Requirement": [
             {
-                "Method": "Jet2",
+                "Method": "ITEM_JETPACK2",
                 "Difficulty": 0
             },
             {
-                "Method": "Jet1 && DoubleJump",
+                "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "Jet1 && AirDash",
+                "Method": "ITEM_JETPACK && ITEM_AirDash",
                 "Difficulty": 0
             },
             {
-                "Method": "AirDash && DoubleJump",
+                "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             }
         ]
@@ -2656,7 +2678,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide && Bomb",
+                "Method": "ITEM_SLIDE && Bomb",
                 "Difficulty": 0
             }
         ]
@@ -2700,31 +2722,31 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "HighJump && Jet1",
+                "Method": "HighJump && ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "HighJump && DoubleJump",
+                "Method": "HighJump && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "HighJump && DoubleJump",
+                "Method": "HighJump && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "Jet1 && DoubleJump",
+                "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "AirDash && DoubleJump",
+                "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "AirDash && Jet1",
+                "Method": "ITEM_AirDash && ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "Jet2",
+                "Method": "ITEM_JETPACK2",
                 "Difficulty": 0
             }
         ]
@@ -2735,7 +2757,7 @@
         "slotId": 13,
         "Requirement": [
             {
-                "Method": "AirDash && DoubleJump && Jet1",
+                "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK",
                 "Difficulty": 0
             }
         ]
@@ -2746,7 +2768,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -2763,7 +2785,7 @@
         ]
     },
     {
-        "Itemname": "BADE_StyleComboBackflipA",
+        "Itemname": "BADGE_StyleComboBackflipA",
         "Location": "Tartarus",
         "slotId": 1,
         "Requirement": [
@@ -2963,7 +2985,7 @@
     {
         "Itemname": "STACKABLE_HP",
         "Location": "Catacombs Entrance",
-        "slotId": 21,
+        "slotId": 16,
         "Requirement": [
             {
                 "Method": "",
@@ -3010,7 +3032,7 @@
         "slotId": 21,
         "Requirement": [
             {
-                "Method": "AreaBomb",
+                "Method": "ITEM_AREABOMB",
                 "Difficulty": 0
             }
         ]
@@ -3071,19 +3093,41 @@
         ]
     },
     {
-        "Itemname": "STACKABLE_RATK",
+        "Itemname": "STACKABLE_MATK",
         "Location": "Lab",
+        "slotId": 18,
+        "Requirement": [
+            {
+                "Method": "ITEM_BombLengthExtend3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DodgeEPBoost",
+        "Location": "Lab",
+        "slotId": 18,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Lab Part 2",
         "slotId": 17,
         "Requirement": [
             {
-                "Method": "Slide",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "BADGE_DodgeWeakAirDown",
-        "Location": "Lab",
+        "Location": "Lab Part 2",
         "slotId": 1,
         "Requirement": [
             {
@@ -3093,8 +3137,8 @@
         ]
     },
     {
-        "Itemname": "BADGE_BoostChargin",
-        "Location": "Lab",
+        "Itemname": "BADGE_BoostCharging",
+        "Location": "Lab Part 2",
         "slotId": 1,
         "Requirement": [
             {
@@ -3105,18 +3149,18 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Lab",
+        "Location": "Lab Part 2",
         "slotId": 20,
         "Requirement": [
             {
-                "Method": "Slide && LineBomb",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Lab",
+        "Location": "Lab Part 2",
         "slotId": 19,
         "Requirement": [
             {
@@ -3127,8 +3171,8 @@
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "Lab",
-        "slotId": 1,
+        "Location": "Lab Part 2",
+        "slotId": 45,
         "Requirement": [
             {
                 "Method": "Boss",
@@ -3138,7 +3182,7 @@
     },
     {
         "Itemname": "BADGE_StyleComboPassiveA",
-        "Location": "Lab",
+        "Location": "Lab Part 2",
         "slotId": 1,
         "Requirement": [
             {
@@ -3148,8 +3192,8 @@
         ]
     },
     {
-        "Itemname": "ITEM_DodgShot",
-        "Location": "Lab",
+        "Itemname": "ITEM_DodgeShot",
+        "Location": "Lab Part 2",
         "slotId": 1,
         "Requirement": [
             {
@@ -3203,7 +3247,7 @@
         ]
     },
     {
-        "Itemname": "BADGE_InvincibiltiyExtended",
+        "Itemname": "BADGE_InvincibilityExtend",
         "Location": "Verdazure Sea",
         "slotId": 1,
         "Requirement": [
@@ -3230,7 +3274,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "LineBomb",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -3247,12 +3291,12 @@
         ]
     },
     {
-        "Itemname": "BADGE_AutoDoge",
+        "Itemname": "BADGE_AutoDodge",
         "Location": "Blushwood",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "BombLengthExtend3",
+                "Method": "ITEM_BombLengthExtend3",
                 "Difficulty": 0
             }
         ]
@@ -3285,15 +3329,15 @@
         "slotId": 8,
         "Requirement": [
             {
-                "Method": "DoubleJump",
+                "Method": "ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "WallJump1 && Jet1",
+                "Method": "ITEM_WALLJUMP && ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "AirDash && Jet1",
+                "Method": "ITEM_AirDash && ITEM_JETPACK",
                 "Difficulty": 0
             }
         ]
@@ -3304,18 +3348,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide && LineBomb",
-                "Difficulty": 0
-            }
-        ]
-    },
-    {
-        "Itemname": "",
-        "Location": "Blushwood Sliding",
-        "slotId": 1,
-        "Requirement": [
-            {
-                "Method": "",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -3337,55 +3370,55 @@
         "slotId": 17,
         "Requirement": [
             {
-                "Method": "Slide && Bomb",
+                "Method": "ITEM_SLIDE && Bomb",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Vallhalla City",
+        "Location": "Valhalla City",
         "slotId": 18,
         "Requirement": [
             {
-                "Method": "LineBomb",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Vallhalla City",
+        "Location": "Valhalla City",
         "slotId": 17,
         "Requirement": [
             {
-                "Method": "Slide && Bomb",
+                "Method": "ITEM_SLIDE && Bomb",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "BADGE_BuffRush",
-        "Location": "Vallhalla City",
+        "Location": "Valhalla City",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Jet1",
+                "Method": "ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "DoubleJump",
+                "Method": "ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "AirDash && WallJump1",
+                "Method": "ITEM_AirDash && ITEM_WALLJUMP",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Vallhalla City",
+        "Location": "Valhalla City",
         "slotId": 26,
         "Requirement": [
             {
@@ -3396,15 +3429,15 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Vallhalla City",
-        "slotId": 1,
+        "Location": "Valhalla City",
+        "slotId": 15,
         "Requirement": [
             {
-                "Method": "CryilC",
+                "Method": "ITEM_OrbTypeC3",
                 "Difficulty": 0
             },
             {
-                "Method": "Jet1 && DoubleJump",
+                "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
@@ -3412,18 +3445,18 @@
                 "Difficulty": 0
             },
             {
-                "Method": "SableC && DoubleJump",
+                "Method": "SableC && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "SableC && Jet1",
+                "Method": "SableC && ITEM_JETPACK",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "BADGE_ComboSaver",
-        "Location": "Vallhalla City",
+        "Location": "Valhalla City",
         "slotId": 1,
         "Requirement": [
             {
@@ -3434,7 +3467,7 @@
     },
     {
         "Itemname": "ITEM_AirshipPass",
-        "Location": "Vallhalla City",
+        "Location": "Valhalla City",
         "slotId": 1,
         "Requirement": [
             {
@@ -3445,7 +3478,7 @@
     },
     {
         "Itemname": "BADGE_StyleComboAirDashA",
-        "Location": "Vallhalla City",
+        "Location": "Valhalla City",
         "slotId": 1,
         "Requirement": [
             {
@@ -3456,7 +3489,7 @@
     },
     {
         "Itemname": "BADGE_StrongFrontRapid",
-        "Location": "Vallhalla City",
+        "Location": "Valhalla City",
         "slotId": 1,
         "Requirement": [
             {
@@ -3467,7 +3500,7 @@
     },
     {
         "Itemname": "BADGE_BackflipMultiHit",
-        "Location": "Vallhalla City",
+        "Location": "Valhalla City",
         "slotId": 1,
         "Requirement": [
             {
@@ -3478,7 +3511,7 @@
     },
     {
         "Itemname": "BADGE_ComboDodgeMeter",
-        "Location": "Vallhalla City",
+        "Location": "Valhalla City",
         "slotId": 1,
         "Requirement": [
             {
@@ -3489,7 +3522,7 @@
     },
     {
         "Itemname": "BADGE_RythemCharge",
-        "Location": "Vallhalla City",
+        "Location": "Valhalla City",
         "slotId": 1,
         "Requirement": [
             {
@@ -3500,7 +3533,7 @@
     },
     {
         "Itemname": "BADGE_PerfectCost",
-        "Location": "Vallhalla City",
+        "Location": "Valhalla City",
         "slotId": 1,
         "Requirement": [
             {
@@ -3511,7 +3544,7 @@
     },
     {
         "Itemname": "BADGE_StyleComboSlidingS",
-        "Location": "Vallhalla City",
+        "Location": "Valhalla City",
         "slotId": 1,
         "Requirement": [
             {
@@ -3522,7 +3555,7 @@
     },
     {
         "Itemname": "BADGE_DamageToMaxHP",
-        "Location": "Vallhalla City",
+        "Location": "Valhalla City",
         "slotId": 1,
         "Requirement": [
             {
@@ -3533,7 +3566,7 @@
     },
     {
         "Itemname": "BADGE_Normal3HRedCancel",
-        "Location": "Vallhalla City",
+        "Location": "Valhalla City",
         "slotId": 1,
         "Requirement": [
             {
@@ -3544,7 +3577,7 @@
     },
     {
         "Itemname": "BADGE_BoostQuickErase",
-        "Location": "Vallhalla City",
+        "Location": "Valhalla City",
         "slotId": 1,
         "Requirement": [
             {
@@ -3555,7 +3588,7 @@
     },
     {
         "Itemname": "STACKABLE_BAG",
-        "Location": "Vallhalla City",
+        "Location": "Valhalla City",
         "slotId": 33,
         "Requirement": [
             {
@@ -3566,7 +3599,7 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Vallhalla City",
+        "Location": "Valhalla City",
         "slotId": 33,
         "Requirement": [
             {
@@ -3577,7 +3610,7 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Vallhalla City",
+        "Location": "Valhalla City",
         "slotId": 33,
         "Requirement": [
             {
@@ -3588,7 +3621,7 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Vallhalla City",
+        "Location": "Valhalla City",
         "slotId": 33,
         "Requirement": [
             {
@@ -3599,7 +3632,7 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Vallhalla City",
+        "Location": "Valhalla City",
         "slotId": 33,
         "Requirement": [
             {
@@ -3610,7 +3643,7 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Vallhalla City",
+        "Location": "Valhalla City",
         "slotId": 33,
         "Requirement": [
             {
@@ -3621,7 +3654,7 @@
     },
     {
         "Itemname": "STACKABLE_SHARD",
-        "Location": "Vallhalla City",
+        "Location": "Valhalla City",
         "slotId": 33,
         "Requirement": [
             {
@@ -3631,7 +3664,7 @@
         ]
     },
     {
-        "Itemname": "AirDash",
+        "Itemname": "ITEM_AirDash",
         "Location": "EverGarden",
         "slotId": 1,
         "Requirement": [
@@ -3658,19 +3691,19 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "LineBomb && DoubleJump",
+                "Method": "ITEM_LINEBOMB && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "LineBomb && HighJump && Jet1",
+                "Method": "ITEM_LINEBOMB && HighJump && ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "LineBomb && Jet2",
+                "Method": "ITEM_LINEBOMB && ITEM_JETPACK2",
                 "Difficulty": 0
             },
             {
-                "Method": "LineBomb && WallJump1 && AirDash",
+                "Method": "ITEM_LINEBOMB && ITEM_WALLJUMP && ITEM_AirDash",
                 "Difficulty": 0
             }
         ]
@@ -3681,15 +3714,15 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide && DoubleJump && Jet1",
+                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "Slide && Jet3",
+                "Method": "ITEM_SLIDE && ITEM_JETPACK3",
                 "Difficulty": 0
             },
             {
-                "Method": "Slide && HighJump && Jet2",
+                "Method": "ITEM_SLIDE && HighJump && ITEM_JETPACK2",
                 "Difficulty": 0
             }
         ]
@@ -3700,7 +3733,7 @@
         "slotId": 16,
         "Requirement": [
             {
-                "Method": "Slide && LineBomb",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -3711,15 +3744,15 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Jet1",
+                "Method": "ITEM_JETPACK",
                 "Difficulty": 3
             },
             {
-                "Method": "AirDash",
+                "Method": "ITEM_AirDash",
                 "Difficulty": 4
             },
             {
-                "Method": "WallJump1 && DoubleJump",
+                "Method": "ITEM_WALLJUMP && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             }
         ]
@@ -3741,7 +3774,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -3774,11 +3807,11 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             },
             {
-                "Method": "WallJump1",
+                "Method": "ITEM_WALLJUMP",
                 "Difficulty": 0
             }
         ]
@@ -3789,7 +3822,7 @@
         "slotId": 20,
         "Requirement": [
             {
-                "Method": "SableC && DoubleJump && AirDash",
+                "Method": "SableC && ITEM_DOUBLEJUMP && ITEM_AirDash",
                 "Difficulty": 0
             }
         ]
@@ -3910,38 +3943,38 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "DoubleJump",
+                "Method": "ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "Highjump && WallJump1",
+                "Method": "Highjump && ITEM_WALLJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "AirDash && WallJump1",
+                "Method": "ITEM_AirDash && ITEM_WALLJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "Jet1",
+                "Method": "ITEM_JETPACK",
                 "Difficulty": 0
             }
         ]
     },
     {
-        "Itemname": "BADGE_StyleComoPassiveMAX",
+        "Itemname": "BADGE_StyleComboPassiveMAX",
         "Location": "Cloister",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "DoubleJump",
+                "Method": "ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "AirDash && WallJump1",
+                "Method": "ITEM_AirDash && ITEM_WALLJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "Jet1",
+                "Method": "ITEM_JETPACK",
                 "Difficulty": 0
             }
         ]
@@ -3991,7 +4024,7 @@
         ]
     },
     {
-        "Itemname": "BADGE_AreBombThrower",
+        "Itemname": "BADGE_AreaBombThrower",
         "Location": "Gallary of Mirrors",
         "slotId": 1,
         "Requirement": [
@@ -4040,7 +4073,7 @@
         "slotId": 10,
         "Requirement": [
             {
-                "Method": "Slide",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -4055,15 +4088,15 @@
                 "Difficulty": 0
             },
             {
-                "Method": "DoubleJump",
+                "Method": "ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "Jet1",
+                "Method": "ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "AirDash",
+                "Method": "ITEM_AirDash",
                 "Difficulty": 0
             }
         ]
@@ -4074,23 +4107,23 @@
         "slotId": 25,
         "Requirement": [
             {
-                "Method": "VortexGlove && Jet1 && DoubleJump && AirDash",
+                "Method": "ITEM_Rotater && ITEM_JETPACK && ITEM_DOUBLEJUMP && ITEM_AirDash",
                 "Difficulty": 0
             },
             {
-                "Method": "VortexGlove && Jet1 && AirDash",
+                "Method": "ITEM_Rotater && ITEM_JETPACK && ITEM_AirDash",
                 "Difficulty": 3
             },
             {
-                "Method": "VortexGlove && Jet2 && AirDash",
+                "Method": "ITEM_Rotater && ITEM_JETPACK2 && ITEM_AirDash",
                 "Difficulty": 0
             },
             {
-                "Method": "VortexGlove && DoubleJump && Jet1",
+                "Method": "ITEM_Rotater && ITEM_DOUBLEJUMP && ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "VortexGlove",
+                "Method": "ITEM_Rotater",
                 "Difficulty": 0
             }
         ]
@@ -4101,15 +4134,15 @@
         "slotId": 5,
         "Requirement": [
             {
-                "Method": "AirDash && WallJump1",
+                "Method": "ITEM_AirDash && ITEM_WALLJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "Jet1",
+                "Method": "ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "DoubleJump",
+                "Method": "ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             }
         ]
@@ -4120,7 +4153,7 @@
         "slotId": 10,
         "Requirement": [
             {
-                "Method": "Slide && Bomb",
+                "Method": "ITEM_SLIDE && Bomb",
                 "Difficulty": 0
             }
         ]
@@ -4131,7 +4164,7 @@
         "slotId": 10,
         "Requirement": [
             {
-                "Method": "Slide && LineBomb",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -4164,27 +4197,27 @@
         "slotId": 23,
         "Requirement": [
             {
-                "Method": "WallJump1 && DoubleJump",
+                "Method": "ITEM_WALLJUMP && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "WallJump1 && Jet2",
+                "Method": "ITEM_WALLJUMP && ITEM_JETPACK2",
                 "Difficulty": 0
             },
             {
-                "Method": "WallJump1 && WaterMovement",
+                "Method": "ITEM_WALLJUMP && WaterMovement",
                 "Difficulty": 0
             },
             {
-                "Method": "WallJump1 && Jet1 && AirDash",
+                "Method": "ITEM_WALLJUMP && ITEM_JETPACK && ITEM_AirDash",
                 "Difficulty": 0
             },
             {
-                "Method": "WaterMovement && AirDash && DoubleJump",
+                "Method": "WaterMovement && ITEM_AirDash && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "WaterMovement && DoubleJump && Jet1",
+                "Method": "WaterMovement && ITEM_DOUBLEJUMP && ITEM_JETPACK",
                 "Difficulty": 0
             }
         ]
@@ -4195,7 +4228,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "AreaBomb",
+                "Method": "ITEM_AREABOMB",
                 "Difficulty": 0
             }
         ]
@@ -4239,7 +4272,7 @@
         "slotId": 24,
         "Requirement": [
             {
-                "Method": "SableB",
+                "Method": "ITEM_OrbTypeS2",
                 "Difficulty": 0
             }
         ]
@@ -4250,11 +4283,11 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Jet1",
+                "Method": "ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "DoubleJump",
+                "Method": "ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             }
         ]
@@ -4276,7 +4309,7 @@
         "slotId": 23,
         "Requirement": [
             {
-                "Method": "VortexGlove",
+                "Method": "ITEM_Rotater",
                 "Difficulty": 1
             }
         ]
@@ -4287,7 +4320,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -4320,15 +4353,15 @@
         "slotId": 21,
         "Requirement": [
             {
-                "Method": "DoubleJump",
+                "Method": "ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "AirDash",
+                "Method": "ITEM_AirDash",
                 "Difficulty": 0
             },
             {
-                "Method": "Jet1",
+                "Method": "ITEM_JETPACK",
                 "Difficulty": 0
             }
         ]
@@ -4339,7 +4372,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "LineBomb",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -4416,18 +4449,18 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "LineBomb",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
     },
     {
-        "Itemname": "BADGE_DodgeChargeDodgeShot",
+        "Itemname": "BADGE_DodgeChargedDodgeShot",
         "Location": "Snowveil1",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -4438,7 +4471,7 @@
         "slotId": 14,
         "Requirement": [
             {
-                "Method": "AreaBomb",
+                "Method": "ITEM_AREABOMB",
                 "Difficulty": 0
             }
         ]
@@ -4471,7 +4504,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "VortexGlove",
+                "Method": "ITEM_Rotater",
                 "Difficulty": 0
             }
         ]
@@ -4493,11 +4526,11 @@
         "slotId": 22,
         "Requirement": [
             {
-                "Method": "Slide && Jet2",
+                "Method": "ITEM_SLIDE && ITEM_JETPACK2",
                 "Difficulty": 0
             },
             {
-                "Method": "Slide && Jet1 && HighJump && SpinnerBash",
+                "Method": "ITEM_SLIDE && ITEM_JETPACK && HighJump && SpinnerBash",
                 "Difficulty": 0
             }
         ]
@@ -4508,15 +4541,15 @@
         "slotId": 24,
         "Requirement": [
             {
-                "Method": "Bomb && Jet2 && DoubleJump",
+                "Method": "Bomb && ITEM_JETPACK2 && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "Bomb && Jet3",
+                "Method": "Bomb && ITEM_JETPACK3",
                 "Difficulty": 0
             },
             {
-                "Method": "Bomb && Jet2 && HighJump && SpinnerBash",
+                "Method": "Bomb && ITEM_JETPACK2 && HighJump && SpinnerBash",
                 "Difficulty": 0
             }
         ]
@@ -4527,11 +4560,11 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide && DoubleJump && AirDash && Jet1",
+                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "Slide && DoubleJump && Jet3",
+                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_JETPACK3",
                 "Difficulty": 0
             }
         ]
@@ -4539,14 +4572,14 @@
     {
         "Itemname": "STACKABLE_HP",
         "Location": "Snowveil2",
-        "slotId": 1,
+        "slotId": 22,
         "Requirement": [
             {
-                "Method": "Slide && Jet3 && AirDash",
+                "Method": "ITEM_SLIDE && ITEM_JETPACK3 && ITEM_AirDash",
                 "Difficulty": 0
             },
             {
-                "Method": "Slide && Jet1 && AirDash && DoubleJump",
+                "Method": "ITEM_SLIDE && ITEM_JETPACK && ITEM_AirDash && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             }
         ]
@@ -4557,7 +4590,7 @@
         "slotId": 21,
         "Requirement": [
             {
-                "Method": "Slide && Bomb",
+                "Method": "ITEM_SLIDE && Bomb",
                 "Difficulty": 0
             }
         ]
@@ -4568,7 +4601,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -4585,7 +4618,7 @@
         ]
     },
     {
-        "Itemname": "BADGE_DogdeSlide",
+        "Itemname": "BADGE_DodgeSlide",
         "Location": "Snow City",
         "slotId": 1,
         "Requirement": [
@@ -4629,7 +4662,7 @@
         ]
     },
     {
-        "Itemname": "BADGE_KonockConvert",
+        "Itemname": "BADGE_KnockConvert",
         "Location": "Snow City",
         "slotId": 1,
         "Requirement": [
@@ -4675,7 +4708,7 @@
     {
         "Itemname": "STACKABLE_BAG",
         "Location": "Snow City",
-        "slotId": 1,
+        "slotId": 34,
         "Requirement": [
             {
                 "Method": "Coins 2500",
@@ -4686,7 +4719,7 @@
     {
         "Itemname": "STACKABLE_EP",
         "Location": "Snow City",
-        "slotId": 1,
+        "slotId": 34,
         "Requirement": [
             {
                 "Method": "Coins 5000",
@@ -4697,7 +4730,7 @@
     {
         "Itemname": "STACKABLE_HP",
         "Location": "Snow City",
-        "slotId": 1,
+        "slotId": 34,
         "Requirement": [
             {
                 "Method": "Coins 5000",
@@ -4708,7 +4741,7 @@
     {
         "Itemname": "STACKABLE_MATK",
         "Location": "Snow City",
-        "slotId": 1,
+        "slotId": 34,
         "Requirement": [
             {
                 "Method": "Coins 5000",
@@ -4719,7 +4752,7 @@
     {
         "Itemname": "STACKABLE_MP",
         "Location": "Snow City",
-        "slotId": 1,
+        "slotId": 34,
         "Requirement": [
             {
                 "Method": "Coins 5000",
@@ -4730,7 +4763,7 @@
     {
         "Itemname": "STACKABLE_RATK",
         "Location": "Snow City",
-        "slotId": 1,
+        "slotId": 34,
         "Requirement": [
             {
                 "Method": "Coins 5000",
@@ -4741,7 +4774,7 @@
     {
         "Itemname": "STACKABLE_SHARD",
         "Location": "Snow City",
-        "slotId": 1,
+        "slotId": 34,
         "Requirement": [
             {
                 "Method": "Coins 5000 && Chapter 6",
@@ -4755,13 +4788,13 @@
         "slotId": 27,
         "Requirement": [
             {
-                "Method": "BombLengthExtend3",
+                "Method": "ITEM_BombLengthExtend3",
                 "Difficulty": 0
             }
         ]
     },
     {
-        "Itemname": "BADGE_GstrongUpWidth",
+        "Itemname": "BADGE_GStrongUpWidth",
         "Location": "Snowveil Above HQ",
         "slotId": 1,
         "Requirement": [
@@ -4788,7 +4821,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "VortexGlove",
+                "Method": "ITEM_Rotater",
                 "Difficulty": 0
             },
             {
@@ -4803,7 +4836,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "AreaBomb",
+                "Method": "ITEM_AREABOMB",
                 "Difficulty": 0
             }
         ]
@@ -4814,7 +4847,7 @@
         "slotId": 21,
         "Requirement": [
             {
-                "Method": "VortexGlove",
+                "Method": "ITEM_Rotater",
                 "Difficulty": 0
             },
             {
@@ -4829,7 +4862,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Slide && Bomb",
+                "Method": "ITEM_SLIDE && Bomb",
                 "Difficulty": 0
             }
         ]
@@ -4840,7 +4873,59 @@
         "slotId": 12,
         "Requirement": [
             {
-                "Method": "Slide",
+                "Method": "ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Golden Hands HQ end",
+        "slotId": 23,
+        "Requirement": [
+            {
+                "Method": "ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SuperKnockBomb",
+        "Location": "Golden Hands HQ end",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_AirSlide",
+        "Location": "Golden Hands HQ end",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_WALLJUMP",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_DOUBLEJUMP",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_JETPACK",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "Golden Hands HQ end",
+        "slotId": 36,
+        "Requirement": [
+            {
+                "Method": "Boss",
                 "Difficulty": 0
             }
         ]
@@ -4855,15 +4940,15 @@
                 "Difficulty": 0
             },
             {
-                "Method": "Jet1",
+                "Method": "ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "DoubleJump",
+                "Method": "ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "AirDash && WallJump1",
+                "Method": "ITEM_AirDash && ITEM_WALLJUMP",
                 "Difficulty": 0
             }
         ]
@@ -4874,7 +4959,7 @@
         "slotId": 28,
         "Requirement": [
             {
-                "Method": "BombLengthExtend1 && Slide",
+                "Method": "BombLengthExtend1 && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -4885,11 +4970,11 @@
         "slotId": 27,
         "Requirement": [
             {
-                "Method": "Jet1",
+                "Method": "ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "DoubleJump",
+                "Method": "ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             }
         ]
@@ -4955,7 +5040,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "LineBomb",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -4964,17 +5049,6 @@
         "Itemname": "STACKABLE_MP",
         "Location": "DreamKeeper",
         "slotId": 28,
-        "Requirement": [
-            {
-                "Method": "Bomb",
-                "Difficulty": 0
-            }
-        ]
-    },
-    {
-        "Itemname": "STACKABLE_EP",
-        "Location": "DreamKeeper",
-        "slotId": 1,
         "Requirement": [
             {
                 "Method": "Bomb",
@@ -5021,18 +5095,18 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "AreaBomb",
+                "Method": "ITEM_AREABOMB",
                 "Difficulty": 0
             }
         ]
     },
     {
-        "Itemname": "BADGE_CrystalBulletCancle",
+        "Itemname": "BADGE_CrystalBulletCancel",
         "Location": "Deep Dream",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "BombLengthExtend3",
+                "Method": "ITEM_BombLengthExtend3",
                 "Difficulty": 0
             }
         ]
@@ -5043,15 +5117,15 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "DoubleJump && Jet2 && ItemUse",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK2 && ItemUse",
                 "Difficulty": 0
             },
             {
-                "Method": "DoubleJump && Jet1 && WallJump1 && AirDash",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash",
                 "Difficulty": 0
             },
             {
-                "Method": "DoubleJump && Jet1 && WallJump1 && HighJump && ItemUse",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_WALLJUMP && HighJump && ItemUse",
                 "Difficulty": 0
             }
         ]
@@ -5062,19 +5136,19 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Jet1 && DoubleJump",
+                "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "DoubleJump && AirDash",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_AirDash",
                 "Difficulty": 0
             },
             {
-                "Method": "Jet2 && AirDash",
+                "Method": "ITEM_JETPACK2 && ITEM_AirDash",
                 "Difficulty": 0
             },
             {
-                "Method": "Jet1 && AirDash && HighJump",
+                "Method": "ITEM_JETPACK && ITEM_AirDash && HighJump",
                 "Difficulty": 0
             }
         ]
@@ -5085,7 +5159,7 @@
         "slotId": 27,
         "Requirement": [
             {
-                "Method": "Slide && Bomb",
+                "Method": "ITEM_SLIDE && Bomb",
                 "Difficulty": 0
             }
         ]
@@ -5096,11 +5170,11 @@
         "slotId": 24,
         "Requirement": [
             {
-                "Method": "Bomb && Jet1",
+                "Method": "Bomb && ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "Bomb && DoubleJump",
+                "Method": "Bomb && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             }
         ]
@@ -5111,11 +5185,11 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "VortexGlove && DoubleJump",
+                "Method": "ITEM_Rotater && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "VortexGlove && Jet1",
+                "Method": "ITEM_Rotater && ITEM_JETPACK",
                 "Difficulty": 0
             }
         ]
@@ -5126,7 +5200,7 @@
         "slotId": 17,
         "Requirement": [
             {
-                "Method": "AreaBomb",
+                "Method": "ITEM_AREABOMB",
                 "Difficulty": 0
             },
             {
@@ -5163,7 +5237,7 @@
         "slotId": 24,
         "Requirement": [
             {
-                "Method": "VortexGlove",
+                "Method": "ITEM_Rotater",
                 "Difficulty": 0
             }
         ]
@@ -5207,18 +5281,7 @@
         "slotId": 29,
         "Requirement": [
             {
-                "Method": "AirSlide",
-                "Difficulty": 0
-            }
-        ]
-    },
-    {
-        "Itemname": "",
-        "Location": "Sinners Hell",
-        "slotId": 1,
-        "Requirement": [
-            {
-                "Method": "",
+                "Method": "ITEM_AirSlide",
                 "Difficulty": 0
             }
         ]
@@ -5240,7 +5303,7 @@
         "slotId": 29,
         "Requirement": [
             {
-                "Method": "BombLengthExtend3",
+                "Method": "ITEM_BombLengthExtend3",
                 "Difficulty": 0
             }
         ]
@@ -5251,15 +5314,15 @@
         "slotId": 29,
         "Requirement": [
             {
-                "Method": "DoubleJump",
+                "Method": "ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "Jet1",
+                "Method": "ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "AirDash",
+                "Method": "ITEM_AirDash",
                 "Difficulty": 0
             }
         ]
@@ -5270,11 +5333,11 @@
         "slotId": 29,
         "Requirement": [
             {
-                "Method": "Jet1",
+                "Method": "ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "DoubleJump",
+                "Method": "ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             }
         ]
@@ -5285,11 +5348,11 @@
         "slotId": 29,
         "Requirement": [
             {
-                "Method": "Jet3 && AirDash",
+                "Method": "ITEM_JETPACK3 && ITEM_AirDash",
                 "Difficulty": 0
             },
             {
-                "Method": "Jet1 && AirDash && DoubleJump",
+                "Method": "ITEM_JETPACK && ITEM_AirDash && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             }
         ]
@@ -5312,6 +5375,1106 @@
         "Requirement": [
             {
                 "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BombRecoverDebuff",
+        "Location": "Vena",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 1900",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AutoFoodCraft",
+        "Location": "Vena",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BombDispelDebuff",
+        "Location": "Vena",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 3100",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_VenaCharm",
+        "Location": "Vena",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 1000",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_RapidShots",
+        "Location": "Vena",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2700",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DoubleAirDash",
+        "Location": "Memine",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "All Memine Chllanges",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SableALastHitEnhance",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SableALongRangeSnipe",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_RailPass",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SableAHitIncrease",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_RailPass",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SableBNormalShotDebuff",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_RailPass && ITEM_OrbTypeS2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SableBReturnStyle",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_RailPass && ITEM_OrbTypeS2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SableCBigExplode",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_RailPass && SableC",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SableCSaver",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_RailPass && SableC",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_RememberBrutalForce",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CeliaALongStun",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CeliaASlowShot",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_AirshipPass",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CeliaAShortRangeBurst",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_AirshipPass",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CeliaTypeBAmount",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_AirshipPass && ITEM_OrbTypeC2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CELIATYPEBANGLE",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_AirshipPass && ITEM_OrbTypeC2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CeliaCShotIncrease",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_AirshipPass && ITEM_OrbTypeC3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CeliaCShotAllDirection",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_AirshipPass && ITEM_OrbTypeC3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ComboStyleDamageUp",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_FrameCancel",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_NormalShotReducerB",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleComboWeakGroundUpA",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_NormalShotWhenChargedShot",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_120CHARGE",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AllMeleeSpeedUp",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_PowerDrop",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DominantEffectDownA",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_QuickDropExtendA",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter4",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_Cannon",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter4",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_NormalSupportShot",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter4",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_MAXHPBIGUP",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BoostFullOffense",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter4",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_MAXHP2MP",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter5",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CraftBadgeCost",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter5",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleComboBackImageS",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter5",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AntiAirPlat",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter5",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleComboHeavyGroundFrontA",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter5 && StrongGroundFront" ,
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AutoBombChain",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter6",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BounceTeviStrongAirUp",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter6",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SuperFrameCancel",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter6",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ArmorCritCrit",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter6",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_Amulet10",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter6 && OrbAmulet",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_MAXMPCost",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter7",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_100COMBO",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter7",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DominantEffectDownB",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter7",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_RangeBreak",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter7",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AutoPilot",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && BADGE_AmuletQuicken",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_Explorer",
+        "Location": "Crafting",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_Explorer && Core 3 && Upgrade 1 && RainbowCheck",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_Explorer",
+        "Location": "Crafting",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_Explorer && Core 6 && Upgrade 1 && RainbowCheck",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_Explorer",
+        "Location": "Crafting",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_Explorer && Core 1 && Upgrade 1 && Explorer",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_Explorer",
+        "Location": "Crafting",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_Explorer && Core 1 && Upgrade 1 && Explorer",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_KNIFE",
+        "Location": "Crafting",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_KNIFE && Upgrade 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_KNIFE",
+        "Location": "Crafting",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_KNIFE && Upgrade 4 && Air 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_ORB",
+        "Location": "Crafting",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_ORB && Upgrade 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_ORB",
+        "Location": "Crafting",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_ORB && Upgrade 3 && Air 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_RapidShots",
+        "Location": "Crafting",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_RapidShots && Upgrade 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_RapidShots",
+        "Location": "Crafting",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_RapidShots && Upgrade 4",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_AttackRange",
+        "Location": "Crafting",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_AttackRange && Upgrade 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_AttackRange",
+        "Location": "Crafting",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_AttackRange && Upgrade 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_EasyStyle",
+        "Location": "Crafting",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_EasyStyle && Upgrade 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_EasyStyle",
+        "Location": "Crafting",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_EasyStyle && Upgrade 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_LINEBOMB",
+        "Location": "Crafting",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB && Upgrade 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_LINEBOMB",
+        "Location": "Crafting",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB && Upgrade 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_AREABOMB",
+        "Location": "Crafting",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_AREABOMB && Upgrade 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_AREABOMB",
+        "Location": "Crafting",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_AREABOMB && Upgrade 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_SPEEDUP",
+        "Location": "Crafting",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_SPEEDUP && Upgrade 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_SPEEDUP",
+        "Location": "Crafting",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_SPEEDUP && Upgrade 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_AirDash",
+        "Location": "Crafting",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_AirDash && Upgrade 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_AirDash",
+        "Location": "Crafting",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_AirDash && Upgrade 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_WALLJUMP",
+        "Location": "Crafting",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_WALLJUMP && Upgrade 2 && Air",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_WALLJUMP",
+        "Location": "Crafting",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_WALLJUMP && Upgrade 2 && Air",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_JETPACK",
+        "Location": "Crafting",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_JETPACK && Upgrade 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_JETPACK",
+        "Location": "Crafting",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_JETPACK && Upgrade 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_BoostSystem",
+        "Location": "Crafting",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_BoostSystem && Upgrade 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_BoostSystem",
+        "Location": "Crafting",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_BoostSystem && Upgrade 5 && Air",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_OrbAmulet",
+        "Location": "Crafting",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_OrbAmulet && Upgrade 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_OrbAmulet",
+        "Location": "Crafting",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_OrbAmulet && Upgrade 5 && Air",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_BOMBFUEL",
+        "Location": "Crafting",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_BOMBFUEL && Upgrade 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_BOMBFUEL",
+        "Location": "Crafting",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_BOMBFUEL && Upgrade 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_BombLengthExtend",
+        "Location": "Crafting",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_BombLengthExtend && Upgrade 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_BombLengthExtend",
+        "Location": "Crafting",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_BombLengthExtend2 && Upgrade 3 && Fire",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_AntiDecay",
+        "Location": "Crafting",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_AntiDecay && Upgrade 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_AntiDecay",
+        "Location": "Crafting",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_AntiDecay && Upgrade 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_TempRing",
+        "Location": "Crafting",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_TempRing && Upgrade 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_TempRing",
+        "Location": "Crafting",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_TempRing && Upgrade 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_DodgeShot",
+        "Location": "Crafting",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_DodgeShot && Upgrade 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_DodgeShot",
+        "Location": "Crafting",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_DodgeShot && Upgrade 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_Rotater",
+        "Location": "Crafting",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_Rotater && Upgrade 2 && Air",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_Rotater",
+        "Location": "Crafting",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_Rotater && Upgrade 2 && Air",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_GoldenGlove",
+        "Location": "Crafting",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_GoldenGlove && Upgrade 1 && Fire && Air && Light",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_GoldenGlove",
+        "Location": "Crafting",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_GoldenGlove && Upgrade 1 && Fire && Air && Light",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_OrbTypeC2",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Core 4",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_OrbTypeS2",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Core 5",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_OrbTypeC3",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Core 7",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_OrbTypeS3",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Core 8",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_OrbBoostU",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Core 4",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_OrbBoostD",
+        "Location": "Crafting",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Core 8",
                 "Difficulty": 0
             }
         ]

@@ -1,6 +1,0 @@
-{
-    "item":"",
-    "location":"",
-    "entry_req":"",
-    "exit_req":"",
-}

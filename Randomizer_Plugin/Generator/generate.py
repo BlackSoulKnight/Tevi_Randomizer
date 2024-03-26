@@ -8,6 +8,7 @@ class t:
         self.output=""
         self.placeditem = []
         self.originalitems = []
+        
 
     output = ""
     placeditem = []

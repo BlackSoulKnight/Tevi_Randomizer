@@ -4,45 +4,45 @@
             "Name": "Desert Base Main",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 2500
                 },
                 {
-                    "Requierment": "Boss",
+                    "Method": "Boss",
                     "Amount": 1000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Start Area",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
-                    "Exit": "Desert Base Uper Half",
-                    "Requirement": "HighJump && DoubleJump && WallJump1"
+                    "Exit": "Desert Base Upper Half",
+                    "Method": "ITEM_HIJUMP && ITEM_DOUBLEJUMP && ITEM_WALLJUMP"
                 },
                 {
-                    "Exit": "Desert Base Uper Half",
-                    "Requirement": "Jet1 && WallJump1"
+                    "Exit": "Desert Base Upper Half",
+                    "Method": "ITEM_JETPACK && ITEM_WALLJUMP"
                 },
                 {
-                    "Exit": "Desert Base Uper Half",
-                    "Requirement": "DoubleJump && WallJump2"
+                    "Exit": "Desert Base Upper Half",
+                    "Method": "ITEM_DOUBLEJUMP && ITEM_WALLJUMP2"
                 }
             ]
         },
         {
-            "Name": "Desert Base Uper Half",
+            "Name": "Desert Base Upper Half",
             "Money": [
                 {
-                    "Requierment": "Slide",
+                    "Method": "ITEM_SLIDE",
                     "Amount": 1000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Desert Base Main",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
@@ -52,34 +52,38 @@
             "Name": "Start Area",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 3500
                 },
                 {
-                    "Requierment": "DoubleJump || Jet1",
+                    "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK",
                     "Amount": 2000
                 },
                 {
-                    "Requierment": "Slide || WallJump3",
+                    "Method": "ITEM_SLIDE || ITEM_WALLJUMP3",
                     "Amount": 1500
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Oasis",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Ruins Entrance",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Heavens Valley",
-                    "Requirement": "Bomb"
+                    "Method": "Bomb"
                 },
                 {
                     "Exit": "Morose Transit",
-                    "Requirement": "Bomb"
+                    "Method": "Bomb"
+                },
+                {
+                    "Exit": "Desert Base Main",
+                    "Method": ""
                 }
             ]
         },
@@ -87,22 +91,22 @@
             "Name": "Morose Transit",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 2500
                 },
                 {
-                    "Requierment": " WallJump1",
+                    "Method": " ITEM_WALLJUMP",
                     "Amount": 2000
                 }
             ],
             "Connections": [
                 {
-                    "Exit": "Morose",
-                    "Requirement": ""
+                    "Exit": "Moros City",
+                    "Method": ""
                 },
                 {
                     "Exit": "Start Area",
-                    "Requirement": "LineBomb"
+                    "Method": "ITEM_LINEBOMB"
                 }
             ]
         }
@@ -112,22 +116,22 @@
             "Name": "Oasis",
             "Money": [
                 {
-                    "Requierment": "LineBomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 4500
                 },
                 {
-                    "Requierment": "SableC || SableB || CyrilC",
+                    "Method": "ITEM_OrbTypeS3 || ITEM_OrbTypeS2 || ITEM_OrbTypeC3",
                     "Amount": 2500
                 },
                 {
-                    "Requierment": "Boss",
+                    "Method": "Boss",
                     "Amount": 1000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Start Area",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
@@ -137,26 +141,26 @@
             "Name": "Moros City",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 2500
                 },
                 {
-                    "Requierment": "Boss",
+                    "Method": "Boss",
                     "Amount": 1000
                 }
             ],
             "Connections": [
                 {
-                    "Exit": "Morose Transi",
-                    "Requirement": ""
+                    "Exit": "Morose Transit",
+                    "Method": ""
                 },
                 {
                     "Exit": "Travoll Industrie",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Travoll Mines",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
@@ -166,46 +170,46 @@
             "Name": "Forest",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 8000
                 },
                 {
-                    "Requierment": "AreaBomb || Slide",
+                    "Method": "ITEM_AREABOMB || ITEM_SLIDE",
                     "Amount": 1000
                 },
                 {
-                    "Requierment": "Boss",
+                    "Method": "Boss",
                     "Amount": 1000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Moros City",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "CopperWood",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Verdazure Sea",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Gleamwood",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Forest Maze extended",
-                    "Requirement": "Jet1"
+                    "Method": "ITEM_JETPACK"
                 },
                 {
                     "Exit": "Forest Maze extended",
-                    "Requirement": "DoubleJump"
+                    "Method": "ITEM_DOUBLEJUMP"
                 },
                 {
                     "Exit": "Forest Maze extended",
-                    "Requirement": "AirDash"
+                    "Method": "ITEM_AirDash"
                 }
             ]
         },
@@ -213,14 +217,14 @@
             "Name": "Forest Maze extended",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 4000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Forest",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
@@ -230,26 +234,26 @@
             "Name": "Travoll Mines",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 2500
                 },
                 {
-                    "Requierment": "BombFuel",
+                    "Method": "ITEM_BOMBFUEL",
                     "Amount": 1000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Moros City",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Start Area",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Travoll Mines Part 2",
-                    "Requirement": "BombFuel"
+                    "Method": "ITEM_BOMBFUEL"
                 }
             ]
         },
@@ -257,30 +261,30 @@
             "Name": "Travoll Mines Part 2",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 7500
                 },
                 {
-                    "Requierment": "Boss",
+                    "Method": "Boss",
                     "Amount": 1000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Travoll Mines",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "LavaWorld",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Swamp",
-                    "Requirement": "Slide"
+                    "Method": "ITEM_SLIDE"
                 },
                 {
                     "Exit": "Forest",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
@@ -290,26 +294,26 @@
             "Name": "Travoll Industrie",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 1000
                 },
                 {
-                    "Requierment": "AirDash || DoubleJump || Jet1",
+                    "Method": "ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK",
                     "Amount": 1000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "CopperWood",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Heavens Valley",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Moros City",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
@@ -319,26 +323,26 @@
             "Name": "CopperWood",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 2500
                 },
                 {
-                    "Requierment": "((Jet3 || (Jet1&& AirDash)) && WallJump1 && DoubleJump)",
+                    "Method": "((ITEM_JETPACK3 || (ITEM_JETPACK&& ITEM_AirDash)) && ITEM_WALLJUMP && ITEM_DOUBLEJUMP)",
                     "Amount": 2500
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Forest",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Travoll Industrie",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Relicts",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
@@ -348,18 +352,18 @@
             "Name": "Ana Thema",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 5000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Gallary of Mirrors",
-                    "Requirement": "Slide && Bomb"
+                    "Method": "ITEM_SLIDE && Bomb"
                 },
                 {
                     "Exit": "Gleamwood",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
@@ -369,46 +373,46 @@
             "Name": "Gleamwood",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 4000
                 },
                 {
-                    "Requierment": "Slide",
+                    "Method": "ITEM_SLIDE",
                     "Amount": 1000
                 },
                 {
-                    "Requierment": "extendedBomb",
+                    "Method": "ITEM_BombLengthExtend",
                     "Amount": 500
                 }
             ],
             "Connections": [
                 {
                     "Exit": "CopperWood",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Gleamwood Upper",
-                    "Requirement": "Slide"
+                    "Method": "ITEM_SLIDE"
                 },
                 {
                     "Exit": "Relicts",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Ana Thema",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Gleamwood Right",
-                    "Requirement": "DoubleJump"
+                    "Method": "ITEM_DOUBLEJUMP"
                 },
                 {
                     "Exit": "Gleamwood Right",
-                    "Requirement": "AirDash"
+                    "Method": "ITEM_AirDash"
                 },
                 {
                     "Exit": "Gleamwood Right",
-                    "Requirement": "Jet1"
+                    "Method": "ITEM_JETPACK"
                 }
             ]
         },
@@ -416,18 +420,18 @@
             "Name": "Gleamwood Upper",
             "Money": [
                 {
-                    "Requierment": "LineBomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 2000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Gleamwood",
-                    "Requirement": "Slide"
+                    "Method": "ITEM_SLIDE"
                 },
                 {
                     "Exit": "Ulvosa",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         },
@@ -435,26 +439,26 @@
             "Name": "Gleamwood Right",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 3000
                 },
                 {
-                    "Requierment": "Slide && (AreaBomb || extended Bomb) && (DoubleJump||Jet1||(HighJump && WallJump1))",
+                    "Method": "ITEM_SLIDE && (ITEM_AREABOMB || extended Bomb) && (ITEM_DOUBLEJUMP||ITEM_JETPACK||(ITEM_HIJUMP && ITEM_WALLJUMP))",
                     "Amount": 1500
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Gleamwood",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Blushwood",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Plague Forest",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
@@ -464,14 +468,14 @@
             "Name": "Plague Forest",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 13000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Gleamwood Right",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
@@ -481,18 +485,18 @@
             "Name": "Ulvosa",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 8000
                 },
                 {
-                    "Requierment": "LineBomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 2000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Gleamwood Upper",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
@@ -502,38 +506,38 @@
             "Name": "Snowveil1",
             "Money": [
                 {
-                    "Requierment": "LineBomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 2000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Snow City",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Snowveil2",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Snowveil2",
-                    "Requirement": "Slide"
+                    "Method": "ITEM_SLIDE"
                 },
                 {
                     "Exit": "Snowveil2",
-                    "Requirement": "Jet1 && DoubleJump"
+                    "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP"
                 },
                 {
                     "Exit": "Snowveil2",
-                    "Requirement": "Jet1 && HighJump && SpinnerBash"
+                    "Method": "ITEM_JETPACK && ITEM_HIJUMP && SpinnerBash"
                 },
                 {
                     "Exit": "Snowveil2",
-                    "Requirement": "DoubleJump && HighJump && ItemUse"
+                    "Method": "ITEM_DOUBLEJUMP && ITEM_HIJUMP && ItemUse"
                 },
                 {
                     "Exit": "Snowveil2",
-                    "Requirement": "BombLengthExtend3"
+                    "Method": "ITEM_BombLengthExtend3"
                 }
             ]
         },
@@ -541,14 +545,14 @@
             "Name": "Snowveil2",
             "Money": [
                 {
-                    "Requierment": "AreaBomb",
+                    "Method": "ITEM_AREABOMB",
                     "Amount": 2200
                 }
             ],
             "Connections": [
                 {
                     "Exit": "DreamKeeper Outside Left",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
@@ -558,34 +562,34 @@
             "Name": "Verdazure Sea",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 5000
                 },
                 {
-                    "Requierment": "WaterMovement && LineBomb",
+                    "Method": "ITEM_WATERMOVEMENT && ITEM_LINEBOMB",
                     "Amount": 1000
                 },
                 {
-                    "Requierment": "Slide && (Walljump || HighJump || Jet1 || DoubleJump)",
+                    "Method": "ITEM_SLIDE && (Walljump || ITEM_HIJUMP || ITEM_JETPACK || ITEM_DOUBLEJUMP)",
                     "Amount": 1500
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Blushwood",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Forgotten City",
-                    "Requirement": "WaterMovement"
+                    "Method": "ITEM_WATERMOVEMENT"
                 },
                 {
                     "Exit": "Verdazure Ocean",
-                    "Requirement": "Slide"
+                    "Method": "ITEM_SLIDE"
                 },
                 {
                     "Exit": "Gallary of Souls",
-                    "Requirement": "VertexGlove && DoubleJump"
+                    "Method": "VertexGlove && ITEM_DOUBLEJUMP"
                 }
             ]
         }
@@ -595,30 +599,30 @@
             "Name": "Verdazure Ocean",
             "Money": [
                 {
-                    "Requierment": "Slide",
+                    "Method": "ITEM_SLIDE",
                     "Amount": 2500
                 },
                 {
-                    "Requierment": "(WallJump2 && (DoubleJump || Jet1)) || WallJump3",
+                    "Method": "(ITEM_WALLJUMP2 && (ITEM_DOUBLEJUMP || ITEM_JETPACK)) || ITEM_WALLJUMP3",
                     "Amount": 3000
                 },
                 {
-                    "Requierment": "BombLengthExtend1",
+                    "Method": "ITEM_BombLengthExtend",
                     "Amount": 2000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Snowveil1",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Swampike",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Forgotten City Upper Exit",
-                    "Requirement": "WaterMovement && SableC"
+                    "Method": "ITEM_WATERMOVEMENT && ITEM_OrbTypeS3"
                 }
             ]
         },
@@ -626,18 +630,18 @@
             "Name": "Swampike",
             "Money": [
                 {
-                    "Requierment": "Jet3 || AirDash &&(Jet1 || DoubleJump) || Jet1 && DoubleJump",
+                    "Method": "ITEM_JETPACK3 || ITEM_AirDash &&(ITEM_JETPACK || ITEM_DOUBLEJUMP) || ITEM_JETPACK && ITEM_DOUBLEJUMP",
                     "Amount": 1500
                 },
                 {
-                    "Requierment": "Jet1 || DoubleJump ",
+                    "Method": "ITEM_JETPACK || ITEM_DOUBLEJUMP ",
                     "Amount": 1000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Lab Extra",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         },
@@ -645,14 +649,14 @@
             "Name": "Forgotten City Upper Exit",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 4000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Verdazure Ocean",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         },
@@ -660,18 +664,18 @@
             "Name": "Forgotten City",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 6000
                 },
                 {
-                    "Requierment": "AirDash || DoubleJump || Jet1 || Walljump",
+                    "Method": "ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK || Walljump",
                     "Amount": 5000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Forgotten City Upper Exit",
-                    "Requirement": "Bomb"
+                    "Method": "Bomb"
                 }
             ]
         }
@@ -681,22 +685,22 @@
             "Name": "Tartarus",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 2000
                 },
                 {
-                    "Requierment": "BombLengthExtend3",
+                    "Method": "ITEM_BombLengthExtend3",
                     "Amount": 1500
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Swamp",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
-                    "Exit": "Catacombs",
-                    "Requirement": ""
+                    "Exit": "Catacombs Entrance",
+                    "Method": ""
                 }
             ]
         }
@@ -706,22 +710,22 @@
             "Name": "Snow City",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 1500
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Snowveil Above HQ",
-                    "Requirement": "LineBomb && Slide"
+                    "Method": "ITEM_LINEBOMB && ITEM_SLIDE"
                 },
                 {
                     "Exit": "Golden Hands HQ",
-                    "Requirement": "Slide"
+                    "Method": "ITEM_SLIDE"
                 },
                 {
                     "Exit": "Golden Hands HQ end",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         },
@@ -729,30 +733,30 @@
             "Name": "Snowveil Above HQ",
             "Money": [
                 {
-                    "Requierment": "LineBomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 3000
                 },
                 {
-                    "Requierment": "AreaBomb",
+                    "Method": "ITEM_AREABOMB",
                     "Amount": 2000
                 },
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 500
                 }
             ],
             "Connections": [
                 {
                     "Exit": "DreamKeeper Outside Right",
-                    "Requirement": "DoubleJump"
+                    "Method": "ITEM_DOUBLEJUMP"
                 },
                 {
                     "Exit": "DreamKeeper Outside Right",
-                    "Requirement": "WallJump1"
+                    "Method": "ITEM_WALLJUMP"
                 },
                 {
                     "Exit": "DreamKeeper Outside Right",
-                    "Requirement": "Jet1"
+                    "Method": "ITEM_JETPACK"
                 }
             ]
         },
@@ -760,30 +764,30 @@
             "Name": "Golden Hands HQ",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 3000
                 },
                 {
-                    "Requierment": "BombLengthExtend1",
+                    "Method": "ITEM_BombLengthExtend",
                     "Amount": 1500
                 },
                 {
-                    "Requierment": "AirSlide || VortexGlove",
+                    "Method": "ITEM_AirSlide || ITEM_Rotater",
                     "Amount": 2000
                 },
                 {
-                    "Requierment": "VortexGlove",
+                    "Method": "ITEM_Rotater",
                     "Amount": 2000
                 },
                 {
-                    "Requierment": "Slide",
+                    "Method": "ITEM_SLIDE",
                     "Amount": 2000
                 }
             ],
             "Connections": [
                 {
-                    "Exit": "Gold Hands HQ end",
-                    "Requirement": ""
+                    "Exit": "Golden Hands HQ end",
+                    "Method": ""
                 }
             ]
         },
@@ -791,14 +795,14 @@
             "Name": "Golden Hands HQ end",
             "Money": [
                 {
-                    "Requierment": "Boss",
+                    "Method": "Boss",
                     "Amount": 1000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Snow City",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
@@ -808,30 +812,30 @@
             "Name": "LavaWorld",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 5500
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Swamp",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
-                    "Exit": "LavaWorld Part 2 ",
-                    "Requirement": "Jet1"
+                    "Exit": "LavaWorld Part 2",
+                    "Method": "ITEM_JETPACK"
                 },
                 {
-                    "Exit": "LavaWorld Part 2 ",
-                    "Requirement": "Slide && AirDash "
+                    "Exit": "LavaWorld Part 2",
+                    "Method": "ITEM_SLIDE && ITEM_AirDash "
                 },
                 {
-                    "Exit": "LavaWorld Part 2 ",
-                    "Requirement": "Slide &&  DoubleJump"
+                    "Exit": "LavaWorld Part 2",
+                    "Method": "ITEM_SLIDE &&  ITEM_DOUBLEJUMP"
                 },
                 {
-                    "Exit": "LavaWorld Part 2 ",
-                    "Requirement": "Slide &&  HighJump"
+                    "Exit": "LavaWorld Part 2",
+                    "Method": "ITEM_SLIDE &&  ITEM_HIJUMP"
                 }
             ]
         },
@@ -839,22 +843,22 @@
             "Name": "LavaWorld Part 2",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 1500
                 },
                 {
-                    "Requierment": "Slide",
+                    "Method": "ITEM_SLIDE",
                     "Amount": 2000
                 },
                 {
-                    "Requierment": "AirSlide",
+                    "Method": "ITEM_AirSlide",
                     "Amount": 2000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Sinners Entrance",
-                    "Requirement": "VortexGlove && AirSlide"
+                    "Method": "ITEM_Rotater && ITEM_AirSlide"
                 }
             ]
         },
@@ -862,26 +866,26 @@
             "Name": "Swamp",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 3000
                 },
                 {
-                    "Requierment": "AreaBomb || Slide",
+                    "Method": "ITEM_AREABOMB || ITEM_SLIDE",
                     "Amount": 1500
                 },
                 {
-                    "Requierment": "Jet1 || (DoubleJump && AirDash)",
+                    "Method": "ITEM_JETPACK || (ITEM_DOUBLEJUMP && ITEM_AirDash)",
                     "Amount": 3000
                 },
                 {
-                    "Requierment": "Slide && (AreaBomb || BombLengthExtend1)",
+                    "Method": "ITEM_SLIDE && (ITEM_AREABOMB || ITEM_BombLengthExtend)",
                     "Amount": 2000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Tartarus",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
@@ -891,30 +895,30 @@
             "Name": "DreamKeeper Outside Right",
             "Money": [
                 {
-                    "Requierment": "LineBomb && slide && (Jet1 || DoubleJump)",
+                    "Method": "ITEM_LINEBOMB && ITEM_SLIDE && (ITEM_JETPACK || ITEM_DOUBLEJUMP)",
                     "Amount": 1000
                 },
                 {
-                    "Requierment": "AreaBomb || BombLengthExtend3",
+                    "Method": "ITEM_AREABOMB || ITEM_BombLengthExtend3",
                     "Amount": 1500
                 },
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 2000
                 },
                 {
-                    "Requierment": "AirSlide",
+                    "Method": "ITEM_AirSlide",
                     "Amount": 1500
                 }
             ],
             "Connections": [
                 {
                     "Exit": "DreamKeeper Outside Left",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "DreamKeeper",
-                    "Requirement": "VortexGlove"
+                    "Method": "ITEM_Rotater"
                 }
             ]
         },
@@ -922,34 +926,34 @@
             "Name": "DreamKeeper Outside Left",
             "Money": [
                 {
-                    "Requierment": "Slide",
+                    "Method": "ITEM_SLIDE",
                     "Amount": 1500
                 },
                 {
-                    "Requierment": "BombLengthExtend3",
+                    "Method": "ITEM_BombLengthExtend3",
                     "Amount": 1500
                 }
             ],
             "Connections": [
                 {
                     "Exit": "DreamKeeper Outside Right",
-                    "Requirement": "Jet1"
+                    "Method": "ITEM_JETPACK"
                 },
                 {
                     "Exit": "DreamKeeper Outside Right",
-                    "Requirement": "DoubleJump"
+                    "Method": "ITEM_DOUBLEJUMP"
                 },
                 {
                     "Exit": "DreamKeeper Outside Right",
-                    "Requirement": "WallJump1"
+                    "Method": "ITEM_WALLJUMP"
                 },
                 {
                     "Exit": "DreamKeeper",
-                    "Requirement": "VortexGlove"
+                    "Method": "ITEM_Rotater"
                 },
                 {
                     "Exit": "Valley Lower Part",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         },
@@ -957,18 +961,18 @@
             "Name": "DreamKeeper",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 2500
                 },
                 {
-                    "Requierment": "BombLengthExtend1",
+                    "Method": "ITEM_BombLengthExtend",
                     "Amount": 1500
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Deep Dream",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         },
@@ -976,34 +980,34 @@
             "Name": "Deep Dream",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 500
                 },
                 {
-                    "Requierment": "AirSlide && LineBomb",
+                    "Method": "ITEM_AirSlide && ITEM_LINEBOMB",
                     "Amount": 2500
                 },
                 {
-                    "Requierment": "TornadoSpin",
+                    "Method": "TornadoSpin",
                     "Amount": 2000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Deep Dream 2" ,
-                    "Requirement": "HighJump"
+                    "Method": "ITEM_HIJUMP"
                 },
                 {
                     "Exit": "Deep Dream 2" ,
-                    "Requirement": "WallJump1"
+                    "Method": "ITEM_WALLJUMP"
                 },
                 {
                     "Exit": "Deep Dream 2" ,
-                    "Requirement": "Jet1"
+                    "Method": "ITEM_JETPACK"
                 },
                 {
                     "Exit": "Deep Dream 2" ,
-                    "Requirement": "DoubleJump"
+                    "Method": "ITEM_DOUBLEJUMP"
                 }
             ]
         },
@@ -1011,14 +1015,14 @@
             "Name": "Deep Dream 2",
             "Money": [
                 {
-                    "Requierment": "",
+                    "Method": "",
                     "Amount": 0
                 }
             ],
             "Connections": [
                 {
                     "Exit": "",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
@@ -1028,14 +1032,14 @@
             "Name": "Valley Lower Part",
             "Money": [
                 {
-                    "Requierment": "(AreaBomb && BombLengthExtend1) || Tornado Spin",
+                    "Method": "(ITEM_AREABOMB && ITEM_BombLengthExtend) || Tornado Spin",
                     "Amount": 1500
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Valley Middle Part",
-                    "Requirement": "VortexGlove"
+                    "Method": "ITEM_Rotater"
                 }
             ]
         },
@@ -1043,22 +1047,22 @@
             "Name": "Valley Middle Part",
             "Money": [
                 {
-                    "Requierment": "HighJump || AirDash || DoubleJump || Jet1",
+                    "Method": "ITEM_HIJUMP || ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK",
                     "Amount": 1500
                 },
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 1500
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Valley Lower Part",
-                    "Requirement": "VortexGlove"
+                    "Method": "ITEM_Rotater"
                 },
                 {
                     "Exit": "Valley Upper Part",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         },
@@ -1066,18 +1070,18 @@
             "Name": "Valley Upper Part",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 3000
                 },
                 {
-                    "Requierment": "BombLengthExtend3",
+                    "Method": "ITEM_BombLengthExtend3",
                     "Amount": 2000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Valley Middle Part",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
@@ -1087,18 +1091,18 @@
             "Name": "Valhalla City",
             "Money": [
                 {
-                    "Requierment": "AreaBomb",
+                    "Method": "ITEM_AREABOMB",
                     "Amount": 1000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Cloister",
-                    "Requirement": "Slide"
+                    "Method": "ITEM_SLIDE"
                 },
                 {
                     "Exit": "EverGarden",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
@@ -1108,49 +1112,53 @@
             "Name": "Heavens Valley",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 11000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Start Area",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Travoll Industrie",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Valhalla City",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
-                    "Exit": "Vallhalla Breath Left Part",
-                    "Requirement": "AirDash"
+                    "Exit": "Valhalla Breath Left Part",
+                    "Method": "ITEM_AirDash"
                 },
                 {
-                    "Exit": "Vallhalla Breath Left Part",
-                    "Requirement": "DoubleJump"
+                    "Exit": "Valhalla Breath Left Part",
+                    "Method": "ITEM_DOUBLEJUMP"
                 },
                 {
-                    "Exit": "Vallhalla Breath Left Part",
-                    "Requirement": "Jet1"
+                    "Exit": "Valhalla Breath Left Part",
+                    "Method": "ITEM_JETPACK"
                 }
             ]
         },
         {
-            "Name": "Desert Base Main",
+            "Name": "Valhalla Breath Left Part",
             "Money": [
                 {
-                    "Requierment": "",
-                    "Amount": 0
+                    "Method": "Bomb",
+                    "Amount": 1500
+                },
+                {
+                    "Method": "",
+                    "Amount": 2000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
@@ -1160,18 +1168,18 @@
             "Name": "Ruins Entrance",
             "Money": [
                 {
-                    "Requierment": "",
+                    "Method": "",
                     "Amount": 0
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Ruins",
-                    "Requirement": "Bomb"
+                    "Method": "Bomb"
                 },
                 {
                     "Exit": "Start Area",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         },
@@ -1179,18 +1187,18 @@
             "Name": "Ruins",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 8000
                 },
                 {
-                    "Requierment": "Boss",
+                    "Method": "Boss",
                     "Amount": 1000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
@@ -1200,22 +1208,22 @@
             "Name": "Sinners Entrance",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 1500
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Sinners Hell",
-                    "Requirement": "Slide && AreaBomb && AirSlide && VortexGlove && WallJump2"
+                    "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP2"
                 },
                 {
                     "Exit": "Sinners Hell",
-                    "Requirement": "Slide && AreaBomb && AirSlide && VortexGlove && WallJump1 && DoubleJump"
+                    "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP && ITEM_DOUBLEJUMP"
                 },
                 {
                     "Exit": "Sinners Hell",
-                    "Requirement": "Slide && AreaBomb && AirSlide && VortexGlove && WallJump1 && Jet1"
+                    "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP && ITEM_JETPACK"
                 }
             ]
         },
@@ -1223,14 +1231,14 @@
             "Name": "Sinners Hell",
             "Money": [
                 {
-                    "Requierment": "",
+                    "Method": "",
                     "Amount": 0
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Illusion Palace",
-                    "Requirement": "WinRequirment"
+                    "Method": "WinRequirment"
                 }
             ]
         },
@@ -1238,14 +1246,14 @@
             "Name": "Illusion Palace",
             "Money": [
                 {
-                    "Requierment": "",
+                    "Method": "",
                     "Amount": 0
                 }
             ],
             "Connections": [
                 {
                     "Exit": "",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
@@ -1256,51 +1264,51 @@
             "Name": "Relicts",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 2000
                 },
                 {
-                    "Requierment": "AreaBomb",
+                    "Method": "ITEM_AREABOMB",
                     "Amount": 1000
                 },
                 {
-                    "Requierment": "Boss",
+                    "Method": "Boss",
                     "Amount": 1000
                 },
                 {
-                    "Requierment": "Slide",
+                    "Method": "ITEM_SLIDE",
                     "Amount": 1000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "CopperWood",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "Gleamwood",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
     ],
     "Map25": [
         {
-            "Name": " Catacombs Entrance",
+            "Name": "Catacombs Entrance",
             "Money": [
                 {
-                    "Requierment": "",
+                    "Method": "",
                     "Amount": 0
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Catacombs Main",
-                    "Requirement": "Slide"
+                    "Method": "ITEM_SLIDE"
                 },
                 {
                     "Exit": "Tartarus",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         },
@@ -1308,46 +1316,122 @@
             "Name": "Catacombs Main",
             "Money": [
                 {
-                    "Requierment": "(Jet1||DoubleJump) || AirDash",
+                    "Method": "(ITEM_JETPACK||ITEM_DOUBLEJUMP) || ITEM_AirDash",
                     "Amount": 1000
                 },
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 1500
                 },
                 {
-                    "Requierment": "BombLengthExtend1 || AreaBomb",
+                    "Method": "ITEM_BombLengthExtend || ITEM_AREABOMB",
                     "Amount": 2000
                 },
                 {
-                    "Requierment": "LineBomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 1000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Catacombs Entrance",
-                    "Requirement": "LineBomb"
+                    "Method": "ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Vassago fight",
-                    "Requirement": "DoubleJump"
+                    "Method": "ITEM_DOUBLEJUMP"
                 },
                 {
                     "Exit": "Vassago fight",
-                    "Requirement": "Jet2"
+                    "Method": "ITEM_JETPACK2"
                 },
                 {
                     "Exit": "Vassago fight",
-                    "Requirement": "Jet1 && HighJump"
+                    "Method": "ITEM_JETPACK && ITEM_HIJUMP"
                 },
                 {
                     "Exit": "Vassago fight",
-                    "Requirement": "Jet1 && WallJump1 && AirDash"
+                    "Method": "ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash"
                 },
                 {
                     "Exit": "Lab",
-                    "Requirement": "Bomb"
+                    "Method": "Bomb"
+                }
+            ]
+        },
+        {
+            "Name": "Vassago fight",
+            "Money": [
+                {
+                    "Method": "Bomb",
+                    "Amount": 1000
+                },
+                {
+                    "Method": "ITEM_BombLengthExtend",
+                    "Amount": 1000
+                },
+                {
+                    "Method": "Boss",
+                    "Amount": 1000
+                },
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 1000
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Lab Part 2",
+                    "Method": "ITEM_LINEBOMB"
+                }
+            ]
+        },
+        {
+            "Name": "Lab",
+            "Money": [
+                {
+                    "Method": "Bomb",
+                    "Amount": 3500
+                },
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 2000
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Lab Part 2",
+                    "Method": "ITEM_LINEBOMB"
+                }
+            ]
+        },
+        {
+            "Name": "Lab Part 2",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 7000
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Catacombs Entrance",
+                    "Method": "ITEM_LINEBOMB"
+                }
+            ]
+        },
+        {
+            "Name": "Lab Extra",
+            "Money": [
+                {
+                    "Method": "(ITEM_JETPACK||ITEM_DOUBLEJUMP) || ITEM_AirDash",
+                    "Amount": 1000
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Lab Part 2",
+                    "Method": "Bomb"
                 }
             ]
         }
@@ -1357,22 +1441,22 @@
             "Name": "Cloister",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 6000
                 },
                 {
-                    "Requierment": "Jet2 || DoubleJump || (Jet1 && Walljump && AirDash)",
+                    "Method": "ITEM_JETPACK2 || ITEM_DOUBLEJUMP || (ITEM_JETPACK && Walljump && ITEM_AirDash)",
                     "Amount": 1000
                 },
                 {
-                    "Requierment": "BombLengthExtend1",
+                    "Method": "ITEM_BombLengthExtend",
                     "Amount": 3000
                 }
             ],
             "Connections": [
                 {
-                    "Exit": "Vallhalla City",
-                    "Requirement": ""
+                    "Exit": "Valhalla City",
+                    "Method": ""
                 }
             ]
         }
@@ -1382,14 +1466,14 @@
             "Name": "Gallary of Mirrors",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 7000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Gallary of Souls",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         },
@@ -1397,22 +1481,22 @@
             "Name": "Gallary of Souls",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 2000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Gallary of Souls Boss",
-                    "Requirement": "Jet2"
+                    "Method": "ITEM_JETPACK2"
                 },
                 {
                     "Exit": "Gallary of Souls Boss",
-                    "Requirement": "WallJump1"
+                    "Method": "ITEM_WALLJUMP"
                 },
                 {
                     "Exit": "Gallary of Souls Boss",
-                    "Requirement": "DoubleJump"
+                    "Method": "ITEM_DOUBLEJUMP"
                 }
             ]
         },
@@ -1420,18 +1504,18 @@
             "Name": "Gallary of Souls Boss",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 8000
                 },
                 {
-                    "Requierment": "Boss",
+                    "Method": "Boss",
                     "Amount": 1000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
@@ -1441,18 +1525,18 @@
             "Name": "Blushwood",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 2000
                 },
                 {
-                    "Requierment": "Slide",
+                    "Method": "ITEM_SLIDE",
                     "Amount": 1500
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Blushwood Sliding",
-                    "Requirement": "Slide"
+                    "Method": "ITEM_SLIDE"
                 }
             ]
         },
@@ -1460,14 +1544,14 @@
             "Name": "Blushwood Sliding",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 1500
                 }
             ],
             "Connections": [
                 {
                     "Exit": "",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
@@ -1477,38 +1561,38 @@
             "Name": "EverGarden",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 4000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "EverGardenPortals",
-                    "Requirement": "DoubleJump"
+                    "Method": "ITEM_DOUBLEJUMP"
                 },
                 {
                     "Exit": "EverGardenPortals",
-                    "Requirement": "Jet1 && AirDash"
+                    "Method": "ITEM_JETPACK && ITEM_AirDash"
                 },
                 {
                     "Exit": "EverGardenPortals",
-                    "Requirement": "Jet3"
+                    "Method": "ITEM_JETPACK3"
                 },
                 {
                     "Exit": "EverGardenPortals",
-                    "Requirement": "Jet2"
+                    "Method": "ITEM_JETPACK2"
                 },
                 {
                     "Exit": "Valley Upper Part",
-                    "Requirement": "Jet1"
+                    "Method": "ITEM_JETPACK"
                 },
                 {
                     "Exit": "Valley Upper Part",
-                    "Requirement": "DoubleJump"
+                    "Method": "ITEM_DOUBLEJUMP"
                 },
                 {
                     "Exit": "Valley Upper Part",
-                    "Requirement": "AirDash"
+                    "Method": "ITEM_AirDash"
                 }
 
             ]
@@ -1517,34 +1601,34 @@
             "Name": "EverGardenPortals",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 1500
                 },
                 {
-                    "Requierment": "Jet3 || DoubleJump && (Jet1 || AirDash)",
+                    "Method": "ITEM_JETPACK3 || ITEM_DOUBLEJUMP && (ITEM_JETPACK || ITEM_AirDash)",
                     "Amount": 1500
                 }
             ],
             "Connections": [
                 {
                     "Exit": "HevPortalHub",
-                    "Requirement": "DoubleJump && AirDash"
+                    "Method": "ITEM_DOUBLEJUMP && ITEM_AirDash"
                 },
                 {
                     "Exit": "HevPortalHub",
-                    "Requirement": "Jet1 && AirDash"
+                    "Method": "ITEM_JETPACK && ITEM_AirDash"
                 },
                 {
                     "Exit": "HevPortalHub",
-                    "Requirement": "Jet3"
+                    "Method": "ITEM_JETPACK3"
                 },
                 {
                     "Exit": "HevPortalHub",
-                    "Requirement": "Jet2"
+                    "Method": "ITEM_JETPACK2"
                 },
                 {
                     "Exit": "EverGarden",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         },
@@ -1552,22 +1636,22 @@
             "Name": "HevPortalHub",
             "Money": [
                 {
-                    "Requierment": "Bomb",
+                    "Method": "Bomb",
                     "Amount": 3000
                 },
                 {
-                    "Requierment": "Boss",
+                    "Method": "Boss",
                     "Amount": 1000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "EverGardenPortals",
-                    "Requirement": ""
+                    "Method": ""
                 },
                 {
                     "Exit": "EverGarden",
-                    "Requirement": ""
+                    "Method": ""
                 }
             ]
         }
