@@ -4,7 +4,7 @@
             "Name": "Desert Base Main",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 2500
                 },
                 {
@@ -52,7 +52,7 @@
             "Name": "Start Area",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 3500
                 },
                 {
@@ -75,11 +75,11 @@
                 },
                 {
                     "Exit": "Heavens Valley",
-                    "Method": "Bomb"
+                    "Method": "ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Morose Transit",
-                    "Method": "Bomb"
+                    "Method": "ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Desert Base Main",
@@ -110,7 +110,7 @@
             "Name": "Morose Transit",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 2500
                 },
                 {
@@ -160,7 +160,7 @@
             "Name": "Moros City",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 2500
                 },
                 {
@@ -189,7 +189,7 @@
             "Name": "Forest",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 8000
                 },
                 {
@@ -236,7 +236,7 @@
             "Name": "Forest Maze extended",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 4000
                 }
             ],
@@ -253,7 +253,7 @@
             "Name": "Travoll Mines",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 2500
                 },
                 {
@@ -280,7 +280,7 @@
             "Name": "Travoll Mines Part 2",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 7500
                 },
                 {
@@ -313,7 +313,7 @@
             "Name": "Travoll Industrie",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 1000
                 },
                 {
@@ -342,7 +342,7 @@
             "Name": "CopperWood",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 2500
                 },
                 {
@@ -371,14 +371,14 @@
             "Name": "Ana Thema",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 5000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Gallary of Mirrors",
-                    "Method": "ITEM_SLIDE && Bomb"
+                    "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Gleamwood",
@@ -392,7 +392,7 @@
             "Name": "Gleamwood",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 4000
                 },
                 {
@@ -458,11 +458,11 @@
             "Name": "Gleamwood Right",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 3000
                 },
                 {
-                    "Method": "ITEM_SLIDE && (ITEM_AREABOMB || extended Bomb) && (ITEM_DOUBLEJUMP||ITEM_JETPACK||(ITEM_HIJUMP && ITEM_WALLJUMP))",
+                    "Method": "ITEM_SLIDE && (ITEM_AREABOMB || extended ITEM_LINEBOMB) && (ITEM_DOUBLEJUMP||ITEM_JETPACK||(ITEM_HIJUMP && ITEM_WALLJUMP))",
                     "Amount": 1500
                 }
             ],
@@ -487,7 +487,7 @@
             "Name": "Plague Forest",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 13000
                 }
             ],
@@ -504,7 +504,7 @@
             "Name": "Ulvosa",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 8000
                 },
                 {
@@ -581,7 +581,7 @@
             "Name": "Verdazure Sea",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 5000
                 },
                 {
@@ -668,7 +668,7 @@
             "Name": "Forgotten City Upper Exit",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 4000
                 }
             ],
@@ -683,7 +683,7 @@
             "Name": "Forgotten City",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 6000
                 },
                 {
@@ -694,7 +694,7 @@
             "Connections": [
                 {
                     "Exit": "Forgotten City Upper Exit",
-                    "Method": "Bomb"
+                    "Method": "ITEM_LINEBOMB"
                 }
             ]
         }
@@ -704,7 +704,7 @@
             "Name": "Tartarus",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 2000
                 },
                 {
@@ -729,7 +729,7 @@
             "Name": "Snow City",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 1500
                 }
             ],
@@ -760,7 +760,7 @@
                     "Amount": 2000
                 },
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 500
                 }
             ],
@@ -783,7 +783,7 @@
             "Name": "Golden Hands HQ",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 3000
                 },
                 {
@@ -831,7 +831,7 @@
             "Name": "LavaWorld",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 5500
                 }
             ],
@@ -862,7 +862,7 @@
             "Name": "LavaWorld Part 2",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 1500
                 },
                 {
@@ -885,7 +885,7 @@
             "Name": "Swamp",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 3000
                 },
                 {
@@ -922,7 +922,7 @@
                     "Amount": 1500
                 },
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 2000
                 },
                 {
@@ -980,7 +980,7 @@
             "Name": "DreamKeeper",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 2500
                 },
                 {
@@ -999,7 +999,7 @@
             "Name": "Deep Dream",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 500
                 },
                 {
@@ -1070,7 +1070,7 @@
                     "Amount": 1500
                 },
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 1500
                 }
             ],
@@ -1089,7 +1089,7 @@
             "Name": "Valley Upper Part",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 3000
                 },
                 {
@@ -1131,7 +1131,7 @@
             "Name": "Heavens Valley",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 11000
                 }
             ],
@@ -1166,7 +1166,7 @@
             "Name": "Valhalla Breath Left Part",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 1500
                 },
                 {
@@ -1194,7 +1194,7 @@
             "Connections": [
                 {
                     "Exit": "Ruins",
-                    "Method": "Bomb"
+                    "Method": "ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Start Area",
@@ -1206,7 +1206,7 @@
             "Name": "Ruins",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 8000
                 },
                 {
@@ -1227,7 +1227,7 @@
             "Name": "Sinners Entrance",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 1500
                 }
             ],
@@ -1283,7 +1283,7 @@
             "Name": "Relicts",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 2000
                 },
                 {
@@ -1339,7 +1339,7 @@
                     "Amount": 1000
                 },
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 1500
                 },
                 {
@@ -1374,7 +1374,7 @@
                 },
                 {
                     "Exit": "Lab",
-                    "Method": "Bomb"
+                    "Method": "ITEM_LINEBOMB"
                 }
             ]
         },
@@ -1382,7 +1382,7 @@
             "Name": "Vassago fight",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 1000
                 },
                 {
@@ -1409,7 +1409,7 @@
             "Name": "Lab",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 3500
                 },
                 {
@@ -1450,7 +1450,7 @@
             "Connections": [
                 {
                     "Exit": "Lab Part 2",
-                    "Method": "Bomb"
+                    "Method": "ITEM_LINEBOMB"
                 }
             ]
         }
@@ -1460,7 +1460,7 @@
             "Name": "Cloister",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 6000
                 },
                 {
@@ -1485,7 +1485,7 @@
             "Name": "Gallary of Mirrors",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 7000
                 }
             ],
@@ -1500,7 +1500,7 @@
             "Name": "Gallary of Souls",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 2000
                 }
             ],
@@ -1523,7 +1523,7 @@
             "Name": "Gallary of Souls Boss",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 8000
                 },
                 {
@@ -1544,7 +1544,7 @@
             "Name": "Blushwood",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 2000
                 },
                 {
@@ -1563,7 +1563,7 @@
             "Name": "Blushwood Sliding",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 1500
                 }
             ],
@@ -1580,7 +1580,7 @@
             "Name": "EverGarden",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 4000
                 }
             ],
@@ -1620,7 +1620,7 @@
             "Name": "EverGardenPortals",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 1500
                 },
                 {
@@ -1655,7 +1655,7 @@
             "Name": "HevPortalHub",
             "Money": [
                 {
-                    "Method": "Bomb",
+                    "Method": "ITEM_LINEBOMB",
                     "Amount": 3000
                 },
                 {

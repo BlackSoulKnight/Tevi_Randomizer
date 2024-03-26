@@ -10,6 +10,7 @@ using Character;
 
 using UnityEngine.UI;
 using UnityEngine;
+using Bullet;
 
 
 
@@ -63,7 +64,7 @@ public class ItemData
 
 
 
-[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.9.0.0")]
+[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.9.3.0")]
 [BepInProcess("TEVI.exe")]
 public class Randomizer : BaseUnityPlugin
 {
@@ -206,30 +207,39 @@ public class Randomizer : BaseUnityPlugin
     // change how the item Bell Works
     [HarmonyPatch(typeof(CharacterBase),"UseItem")]
     [HarmonyPrefix]
-    static bool WarpBell(ref ItemList.Type item,ref bool playvoice,ref ObjectPhy ___phy_perfer, ref playerController ___playerc_perfer)
+    static bool WarpBell(ref ItemList.Type item,ref bool playvoice,ref ObjectPhy ___phy_perfer, ref playerController ___playerc_perfer, ref CharacterBase __instance)
     {
         if(item == ItemList.Type.Useable_Bell)
         {
-            int num5 = (int)___phy_perfer.GetCounter(4);
-            EventManager.Instance.StartWarp(1, 1, 1, 1);
-            SaveManager.Instance.RemoveItemFromBagSlot(num5);
-            HUDResourceGotPopup.Instance.AddPopup(item, useTop: true, forcepop: true);
-            if (SaveManager.Instance.GetBadgeEquipped(ItemList.Type.BADGE_ConsumeableCharge))
+            if (!EventManager.Instance.isBossMode() && EventManager.Instance.getMode() == Mode.OFF && EventManager.Instance.getSubMode() == Mode.OFF)
             {
-                SaveManager.Instance.SetItem(ItemList.Type.BADGE_ConsumeableCharge, (byte)(SaveManager.Instance.GetItem(ItemList.Type.BADGE_ConsumeableCharge) + 1), output: false);
-            }
-            if (playvoice)
-            {
-                if (item == ItemList.Type.Useable_BSnack)
-                {
-                    ___playerc_perfer.PlayItemVoice(isbad: true);
-                }
-                else
-                {
-                    ___playerc_perfer.PlayItemVoice(isbad: false);
-                }
-            }
+                int num5 = (int)___phy_perfer.GetCounter(4);
 
+                EventManager.Instance.StartWarp(1, 1, 1, 1);
+                SaveManager.Instance.RemoveItemFromBagSlot(num5);
+                HUDResourceGotPopup.Instance.AddPopup(item, useTop: true, forcepop: true);
+                if (SaveManager.Instance.GetBadgeEquipped(ItemList.Type.BADGE_ConsumeableCharge))
+                {
+                    SaveManager.Instance.SetItem(ItemList.Type.BADGE_ConsumeableCharge, (byte)(SaveManager.Instance.GetItem(ItemList.Type.BADGE_ConsumeableCharge) + 1), output: false);
+                }
+                if (playvoice)
+                {
+                    if (item == ItemList.Type.Useable_BSnack)
+                    {
+                        ___playerc_perfer.PlayItemVoice(isbad: true);
+                    }
+                    else
+                    {
+                        ___playerc_perfer.PlayItemVoice(isbad: false);
+                    }
+                }
+            }
+            else
+            {
+                __instance.PlaySound(AllSound.SEList.MENUFAIL);
+                __instance.ChangeLogicStatus(PlayerLogicState.NORMAL);
+                EventManager.Instance.EFF_CreateEmotion(__instance, null, __instance.t.position, EffectSprite.EMOTION_QUESTION);
+            }
             return false;
         }
         return true;
@@ -400,6 +410,12 @@ public class Randomizer : BaseUnityPlugin
                         __instance.DisableMe();
                         return false;
                     }
+                }
+                else if (SaveManager.Instance.GetItem(data.getItemTyp())>0)
+                {
+                    Debug.Log("[ItemTile] Item " + data.getItemTyp().ToString() + " visible in camera. Removed from map because player already obtained it. GotItem = " + SaveManager.Instance.GetItem(data.getItemTyp()).ToString());
+                    __instance.DisableMe();
+                    return false;
                 }
             }
             if (SaveManager.Instance.GetItem(global::ItemList.Type.ITEM_GoldenHands) > 0 && ((ItemList.Type)data.itemID == global::ItemList.Type.QUEST_GHandL || (ItemList.Type)data.itemID == global::ItemList.Type.QUEST_GHandR))

@@ -536,21 +536,21 @@ class Validator:
             elif cut[0] == "Chapter":
                 if self.explorerMode == True:
                     flag = True
-                elif cut[1] == 1 and self.bossCount >= 1:
+                elif cut[1] == "1" and self.bossCount >= 1:
                     flag = True
-                elif cut[1] == 2 and self.bossCount >= 3:
+                elif cut[1] == "2" and self.bossCount >= 3:
                     flag = True
-                elif cut[1] == 3 and self.bossCount >= 5:
+                elif cut[1] == "3" and self.bossCount >= 5:
                     flag = True
-                elif cut[1] == 4 and self.bossCount >= 7:
+                elif cut[1] == "4" and self.bossCount >= 7:
                     flag = True
-                elif cut[1] == 5 and self.bossCount >= 10:
+                elif cut[1] == "5" and self.bossCount >= 10:
                     flag = True
-                elif cut[1] == 6 and self.bossCount >= 13:
+                elif cut[1] == "6" and self.bossCount >= 13:
                     flag = True
-                elif cut[1] == 7 and self.bossCount >= 16:
+                elif cut[1] == "7" and self.bossCount >= 16:
                     flag = True
-                elif cut[1] == 8 and self.bossCount >= 20:
+                elif cut[1] == "8" and self.bossCount >= 20:
                     flag = True
                 else:
                     return False                   
@@ -591,18 +591,16 @@ class Validator:
         self.mapList = []
         
         lastLen = -1
-        self.bossCount = 0
         self.checkList.append("ItemUse")
         while(lastLen != len(self.checkList)):
             lastLen = len(self.checkList)
             self.mapList = [] 
+            self.bossCount = 0
             self.checkItems()
             if("ITEM_KNIFE" in self.itemList):
                     self.checkList.append("SpinnerBash")
                     self.checkList.append("TornadoSpin") 
-            if("ITEM_LINEBOMB" in self.checkList or "ITEM_AREABOMB" in self.checkList):
-                if "Bomb" not in self.checkList:
-                    self.checkList.append("Bomb")
+
 
         self.checkItems()
         self.checkItems()
@@ -610,7 +608,7 @@ class Validator:
         for item in self.itemList:
             if item[0] == "STACKABLE_COG":
                 GearCount += 1
-        if "ITEM_SLIDE" not in self.checkList or "Bomb" not in self.checkList or "ITEM_AirSlide" not in self.checkList or  "ITEM_Rotater" not in self.checkList or GearCount < 16:
+        if "ITEM_SLIDE" not in self.checkList or "ITEM_AirSlide" not in self.checkList or  "ITEM_Rotater" not in self.checkList or GearCount < 16:
             return False
         return True
 
@@ -681,6 +679,8 @@ class Generator:
             random.shuffle(self.map.items)
             for k in self.map.items:
                 item = self.newRandomItem()
+                k["OldItem"] = k["Itemname"]
+                k["OldSlotID"] = k["slotId"]
                 k["Itemname"] = Type(item[0]).name
                 k["slotId"] = item[1]
             self.map.addItemsToMap()
@@ -691,18 +691,17 @@ class Generator:
         
     def generateFile(self):
         output = ""
-        items = json.load(open(Path+"\Items.json"))
         #adding knife and orb to start tiem (2 items may be lost)
         if self.knifeStart !=0:
             output += "22,1:22,4;"
         if self.gibCompass != 0:
             output += "4200,0:4200,1;"
         output += "4201,0:4201,"+str(self.extraRATK)+";"
-        for k in range(len(items)):
-            output += str(Type[items[k]["Itemname"]].value)+ "," 
-            output += str(items[k]["slotId"]) + ":" 
-            output += str(Type[self.map.items[k]["Itemname"]].value) + ","
-            output += str(self.map.items[k]["slotId"])+";\n"
+        for k in self.map.items:
+            output += str(Type[k["OldItem"]].value)+ "," 
+            output += str(k["OldSlotID"]) + ":" 
+            output += str(Type[k["Itemname"]].value) + ","
+            output += str(k["slotId"])+";\n"
         if not os.path.exists("./data"):
             os.makedirs("./data") 
         file = open("data/file.dat",'w+')
@@ -710,6 +709,7 @@ class Generator:
         file.close()
         file = open("data/Spoiler.json",'w+')
         json.dump(self.map.items,file)
+        file.close()
 
 #Small Interface
 t = Generator()
