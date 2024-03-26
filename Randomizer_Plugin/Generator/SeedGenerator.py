@@ -1,6 +1,8 @@
 import json
 import os
 import random
+import sys
+
 ## Reading main Data files
 
     
@@ -619,6 +621,9 @@ class Generator:
         self.placeditem = []
         self.map = Map()
         self.validator = Validator(self.map)
+        self.extraRATK = -1
+        self.gibCompass = -1
+        self.knifeStart = -1
 
     
     def newRandomItem(self):
@@ -626,7 +631,6 @@ class Generator:
 
         while(not created):
             item = [0,0]
-            slotid = 0
             val = random.randint(1,4)
             if val == 1:
                 val = random.randint(1,8)
@@ -642,7 +646,7 @@ class Generator:
             elif val == 2:
                 #itemds
                 val = random.randint(22,66)
-                if val == 58 or 55:
+                if val == 58 or val == 55:
                     continue
                 if Type(val).name in self.validator.UpgradeAble:
                     item = [val,random.randint(4,6)]
@@ -689,7 +693,11 @@ class Generator:
         output = ""
         items = json.load(open(Path+"\Items.json"))
         #adding knife and orb to start tiem (2 items may be lost)
-
+        if self.knifeStart !=0:
+            output += "22,1:22,4;"
+        if self.gibCompass != 0:
+            output += "4200,0:4200,1;"
+        output += "4201,0:4201,"+str(self.extraRATK)+";"
         for k in range(len(items)):
             output += str(Type[items[k]["Itemname"]].value)+ "," 
             output += str(items[k]["slotId"]) + ":" 
@@ -703,10 +711,45 @@ class Generator:
         file = open("data/Spoiler.json",'w+')
         json.dump(self.map.items,file)
 
-seed = input("Enter a Seed: ")
+#Small Interface
+t = Generator()
+
+
+print("Tevi Randomizer Seed Generator\n\n")
+print("Extra Range Attack Potion")
+while (t.extraRATK == -1):
+    try:
+        value = int(input("Number from 0 - 29:\n"))
+        if value <30 and value >=0:
+            t.extraRATK = value
+        else:
+            continue
+    except:
+        continue
+
+print("Start with level Compass 3")
+while(t.gibCompass == -1):
+    try:
+        t.gibCompass = int(input("Any Number: Yes, 0: No\n"))
+    except:
+        pass
+    
+print("Start with Knife")
+while(t.knifeStart == -1):
+    try:
+        t.knifeStart = int(input("Any Number: Yes, 0: No\n")) 
+    except:
+        pass
+
+seed = input("Enter a Seed: ")    
+if(len(seed) == 0):
+    random.seed()
+    seed = random.randint(0,2**64)
+    print("No Seed was enterd")
+    print("Using seed: "+str(seed))
 
 random.seed(seed)
-t = Generator()
+
 t.validator.explorerMode = False
 t.randomize()
 

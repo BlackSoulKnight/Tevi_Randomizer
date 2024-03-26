@@ -671,12 +671,32 @@ class EventPatch
 
         if (em.EventStage == 10)
         {
+            if (Randomizer.getRandomizedItem(4200, 0).slotID > 0)
+            {
+                SaveManager.Instance.SetItem(ItemList.Type.ITEM_Explorer, 4);
+                SaveManager.Instance.SetItem(ItemList.Type.ITEM_Explorer, 5);
+                SaveManager.Instance.SetItem(ItemList.Type.ITEM_Explorer, 6);
+            }
+            for (int i = Randomizer.getRandomizedItem(4201,0).slotID ;i > 0; i--)
+            {
+                SaveManager.Instance.SetStackableItem(ItemList.Type.STACKABLE_RATK, (byte)(i + 34),true);
+            }
+
             SaveManager.Instance.SetOrb((byte)0);
             Randomizer.addOrbStatus(3);
+
             ItemData data = Randomizer.getRandomizedItem(ItemList.Type.ITEM_ORB, 1);
-            SaveManager.Instance.SetItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
+            if (data.getItemTyp().ToString().Contains("STACKABLE"))
+                SaveManager.Instance.SetStackableItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
+            else
+                SaveManager.Instance.SetItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
+
             data = Randomizer.getRandomizedItem(ItemList.Type.ITEM_KNIFE, 1);
-            SaveManager.Instance.SetItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
+            if(data.getItemTyp().ToString().Contains("STACKABLE"))
+                SaveManager.Instance.SetStackableItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
+            else
+                SaveManager.Instance.SetItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
+
             em.SetStage(30);
         }
     }

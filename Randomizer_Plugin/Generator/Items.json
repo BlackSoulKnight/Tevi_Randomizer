@@ -5948,25 +5948,7 @@
             {
                 "Method": "ITEM_Explorer && Core 3 && Upgrade 1 && RainbowCheck",
                 "Difficulty": 0
-            }
-        ]
-    },
-    {
-        "Itemname": "ITEM_Explorer",
-        "Location": "Crafting",
-        "slotId": 3,
-        "Requirement": [
-            {
-                "Method": "ITEM_Explorer && Core 6 && Upgrade 1 && RainbowCheck",
-                "Difficulty": 0
-            }
-        ]
-    },
-    {
-        "Itemname": "ITEM_Explorer",
-        "Location": "Crafting",
-        "slotId": 2,
-        "Requirement": [
+            },
             {
                 "Method": "ITEM_Explorer && Core 1 && Upgrade 1 && Explorer",
                 "Difficulty": 0
@@ -5978,6 +5960,10 @@
         "Location": "Crafting",
         "slotId": 3,
         "Requirement": [
+            {
+                "Method": "ITEM_Explorer && Core 6 && Upgrade 1 && RainbowCheck",
+                "Difficulty": 0
+            },
             {
                 "Method": "ITEM_Explorer && Core 1 && Upgrade 1 && Explorer",
                 "Difficulty": 0
