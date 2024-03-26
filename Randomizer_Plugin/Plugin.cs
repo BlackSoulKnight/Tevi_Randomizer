@@ -63,7 +63,7 @@ public class ItemData
 
 
 
-[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.7.0.0")]
+[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.9.0.0")]
 [BepInProcess("TEVI.exe")]
 public class Randomizer : BaseUnityPlugin
 {
@@ -132,7 +132,7 @@ public class Randomizer : BaseUnityPlugin
                 }
                 catch
                 {
-                    Logger.LogWarning($"Already changed {data1}");
+                    Logger.LogWarning($"Already changed {data1.getItemTyp()} slot {data1.getSlotId()}");
 
                 }
             }
