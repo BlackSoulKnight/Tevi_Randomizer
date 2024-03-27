@@ -11,6 +11,7 @@ using Character;
 using UnityEngine.UI;
 using UnityEngine;
 using Bullet;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 
 
 
@@ -1891,7 +1892,34 @@ class ShopPatch
                     ___CurrentMaxItem++;
                     break;
                 case Character.Type.CC:
-
+                    if (item == ItemList.Type.STACKABLE_SHARD)
+                    {
+                        num = 5000;
+                    }
+                    else if (item.ToString().Contains("STACKABLE"))
+                    {
+                        num = 2000 + ___ShopID * 1000;
+                        if (num >= 5000)
+                        {
+                            num -= 1000;
+                        }
+                        if (num < 3000)
+                        {
+                            num = 3000;
+                        }
+                        if (item == ItemList.Type.STACKABLE_BAG)
+                        {
+                            num /= 2;
+                            if (WorldManager.Instance.Area == 3)
+                            {
+                                num = 250;
+                            }
+                            if (WorldManager.Instance.Area == 8)
+                            {
+                                num = 1000;
+                            }
+                        }
+                    }
                     ___itemslots[___CurrentMaxItem].SetItem(item, num, false);
                     ___CurrentMaxItem++;
                     break;
