@@ -656,6 +656,11 @@ public class Randomizer : BaseUnityPlugin
                         if (Enum.TryParse<Upgradable>(data.getItemTyp().ToString(), out itemRef))
                         {
                             value = (byte)(__instance.GetItem(data.getItemTyp()) + 1);
+
+                            if (!__instance.GetStackableItem((ItemList.Type)itemRef, 0))
+                            {
+                                __instance.SetStackableItem((ItemList.Type)itemRef, 0, true);
+                            }
                         }
                     }
                 }
