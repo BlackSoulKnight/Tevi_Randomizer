@@ -12,6 +12,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using Bullet;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using ItemList;
 
 
 
@@ -206,21 +207,24 @@ public class Randomizer : BaseUnityPlugin
 
     static public bool checkItemGot(ItemList.Type item,byte slot)
     {
-
+        Upgradable itemref;
         if (!item.ToString().Contains("STACKABLE"))
         {
 
-            if (Enum.TryParse(item.ToString(), out item))
+            if (Enum.TryParse(item.ToString(), out itemref))
             {
-                if (SaveManager.Instance.GetStackableItem((ItemList.Type)item, slot))
-                    return true;
+                return SaveManager.Instance.GetStackableItem((ItemList.Type)itemref, slot);
             }
-            else if (SaveManager.Instance.GetItem(item) > 0)
+            else
             {
-                return true;
+                return SaveManager.Instance.GetItem(item) > 0;
             }
         }
-        return false;
+        else
+        {
+            return SaveManager.Instance.GetStackableItem(item, slot);
+        }
+
     }    
     static public bool checkRandomizedItemGot(ItemList.Type item,byte slot)
     {
@@ -228,21 +232,23 @@ public class Randomizer : BaseUnityPlugin
         ItemData t = getRandomizedItem(item,slot);
         item = t.getItemTyp();
         slot = t.getSlotId();
-
+        Upgradable itemref;
         if (!item.ToString().Contains("STACKABLE"))
         {
 
-            if (Enum.TryParse(item.ToString(), out item))
+            if (Enum.TryParse(item.ToString(), out itemref))
             {
-                if (SaveManager.Instance.GetStackableItem(item, slot))
-                    return true;
+                    return SaveManager.Instance.GetStackableItem((ItemList.Type)itemref, slot);
             }
-            else if (SaveManager.Instance.GetItem(item) > 0)
+            else
             {
-                return true;
+                return SaveManager.Instance.GetItem(item) > 0;
             }
         }
-        return false;
+        else
+        {
+            return SaveManager.Instance.GetStackableItem(item,slot);
+        }
     }
 
     // change how the item Bell Works
@@ -1425,7 +1431,7 @@ class CraftingPatch
                     num5 = -3;
                 }
                 ItemData rnd = Randomizer.getRandomizedItem(___currentItemType, 1);
-                if (!Enum.IsDefined(typeof(Randomizer.Upgradable), ___currentItemType.ToString()) && Randomizer.checkRandomizedItemGot(rnd.getItemTyp(),rnd.getSlotId()))
+                if (!Enum.IsDefined(typeof(Randomizer.Upgradable), ___currentItemType.ToString()) && Randomizer.checkItemGot(rnd.getItemTyp(),rnd.getSlotId()))
                 {
                     
                     num5 = -3;

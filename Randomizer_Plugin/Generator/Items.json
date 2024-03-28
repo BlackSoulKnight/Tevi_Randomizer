@@ -5468,6 +5468,72 @@
         ]
     },
     {
+        "Itemname": "STACKABLE_SHARD",
+        "Location": "Memine",
+        "slotId": 0,
+        "Requirement": [
+            {
+                "Method": "Complete Challange",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_SHARD",
+        "Location": "Memine",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Complete Challange",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_SHARD",
+        "Location": "Memine",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "Complete Challange",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_SHARD",
+        "Location": "Memine",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "Complete Challange",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_SHARD",
+        "Location": "Memine",
+        "slotId": 4,
+        "Requirement": [
+            {
+                "Method": "Complete Challange",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_SHARD",
+        "Location": "Memine",
+        "slotId": 5,
+        "Requirement": [
+            {
+                "Method": "Complete Challange",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "BADGE_SableALastHitEnhance",
         "Location": "Crafting",
         "slotId": 1,
