@@ -639,7 +639,7 @@ class Generator:
                 elif val==8:
                     item = [val,random.randint(0,14)]
                 elif val==1:
-                    item = [val,random.randint(0,19)]
+                    item = [val,random.randint(0,24)]
                 else:
                     item = [val,random.randint(0,34)]
             elif val == 2:
@@ -718,7 +718,7 @@ t = Generator()
 
 
 print("Tevi Randomizer Seed Generator\n\n")
-print("Extra Range Attack Potion")
+print("Extra Range and Melee Attack Potion")
 while (t.extraRATK == -1):
     try:
         value = int(input("Number from 0 - 29:\n"))

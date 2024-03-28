@@ -204,6 +204,46 @@ public class Randomizer : BaseUnityPlugin
         return data;
     }
 
+    static public bool checkItemGot(ItemList.Type item,byte slot)
+    {
+
+        if (!item.ToString().Contains("STACKABLE"))
+        {
+
+            if (Enum.TryParse(item.ToString(), out item))
+            {
+                if (SaveManager.Instance.GetStackableItem((ItemList.Type)item, slot))
+                    return true;
+            }
+            else if (SaveManager.Instance.GetItem(item) > 0)
+            {
+                return true;
+            }
+        }
+        return false;
+    }    
+    static public bool checkRandomizedItemGot(ItemList.Type item,byte slot)
+    {
+
+        ItemData t = getRandomizedItem(item,slot);
+        item = t.getItemTyp();
+        slot = t.getSlotId();
+
+        if (!item.ToString().Contains("STACKABLE"))
+        {
+
+            if (Enum.TryParse(item.ToString(), out item))
+            {
+                if (SaveManager.Instance.GetStackableItem(item, slot))
+                    return true;
+            }
+            else if (SaveManager.Instance.GetItem(item) > 0)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 
     // change how the item Bell Works
     [HarmonyPatch(typeof(CharacterBase),"UseItem")]
@@ -653,6 +693,7 @@ public class Randomizer : BaseUnityPlugin
                         if (item.ToString().Contains("STACKABLE"))
                         {
                             __instance.SetStackableItem(item, value, true);
+                            return false;
                         }
                         if (Enum.TryParse<Upgradable>(data.getItemTyp().ToString(), out itemRef))
                         {
@@ -702,6 +743,7 @@ class EventPatch
             for (int i = Randomizer.getRandomizedItem(4201,0).slotID ;i > 0; i--)
             {
                 SaveManager.Instance.SetStackableItem(ItemList.Type.STACKABLE_RATK, (byte)(i + 34),true);
+                SaveManager.Instance.SetStackableItem(ItemList.Type.STACKABLE_MATK, (byte)(i + 34),true);
             }
 
             SaveManager.Instance.SetOrb((byte)0);
@@ -721,6 +763,46 @@ class EventPatch
 
             em.SetStage(30);
         }
+    }
+
+    [HarmonyPatch(typeof(AfterMemineChallenge),"EVENT")]
+    [HarmonyPrefix]
+    static void MemineAllChallangesChecl(ref CharacterBase ___m)
+    {
+        EventManager em = EventManager.Instance;
+        if (EventManager.Instance.EventStage == 30)
+        {
+
+            if (!(em.EventTime >= 0.95f))
+            {
+                return;
+            }
+            em.SetStage(40);
+            MusicManager.Instance.PlayRoomMusic();
+            GemaMissionMode.Instance.MissionCleared();
+            em.StopEvent();
+            ___m.DoNotDelete = false;
+            ___m.ID = 32;
+            int num = 0;
+            for (int i = 0; i <= 5; i++)
+            {
+                if (Randomizer.checkRandomizedItemGot(ItemList.Type.STACKABLE_SHARD, (byte)i))
+                {
+                    num++;
+                }
+            }
+            if (num >= 3 && SaveManager.Instance.GetMiniFlag(Mini.UnlockExplorerUpgrade) <= 0)
+            {
+                SaveManager.Instance.SetMiniFlag(Mini.UnlockExplorerUpgrade, 1);
+                HUDPopupMessage.Instance.StartCraftAddedMessage();
+            }
+            if (num == 6) 
+            {
+                EventManager.Instance.TryStartEvent(Mode.AllMemineWon, force: true);
+            }
+            EventManager.Instance.EventStage = 40;
+        }
+        
     }
 
 
@@ -1343,7 +1425,7 @@ class CraftingPatch
                     num5 = -3;
                 }
                 ItemData rnd = Randomizer.getRandomizedItem(___currentItemType, 1);
-                if (!Enum.IsDefined(typeof(Randomizer.Upgradable), ___currentItemType.ToString())&&SaveManager.Instance.GetItem(rnd.getItemTyp())>0)
+                if (!Enum.IsDefined(typeof(Randomizer.Upgradable), ___currentItemType.ToString()) && Randomizer.checkRandomizedItemGot(rnd.getItemTyp(),rnd.getSlotId()))
                 {
                     
                     num5 = -3;
