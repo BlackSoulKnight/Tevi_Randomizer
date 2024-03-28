@@ -5546,7 +5546,7 @@
     },
     {
         "Itemname": "BADGE_RememberBrutalForce",
-        "Location": "Crafting",
+        "Location": "Moros City",
         "slotId": 1,
         "Requirement": [
             {
@@ -6312,23 +6312,23 @@
         ]
     },
     {
-        "Itemname": "ITEM_AntiDecay",
+        "Itemname": "ITEM_MASK",
         "Location": "Crafting",
         "slotId": 2,
         "Requirement": [
             {
-                "Method": "ITEM_AntiDecay && Upgrade 1",
+                "Method": "ITEM_MASK && Upgrade 1",
                 "Difficulty": 0
             }
         ]
     },
     {
-        "Itemname": "ITEM_AntiDecay",
+        "Itemname": "ITEM_MASK",
         "Location": "Crafting",
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "ITEM_AntiDecay && Upgrade 1",
+                "Method": "ITEM_MASK && Upgrade 1",
                 "Difficulty": 0
             }
         ]
