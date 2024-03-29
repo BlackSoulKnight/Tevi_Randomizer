@@ -623,6 +623,7 @@ class Generator:
         self.extraRATK = -1
         self.gibCompass = -1
         self.knifeStart = -1
+        self.options = []
 
     
     def newRandomItem(self):
@@ -684,34 +685,51 @@ class Generator:
                 k["OldSlotID"] = k["slotId"]
                 k["Itemname"] = Type(item[0]).name
                 k["slotId"] = item[1]
-            self.map.addItemsToMap()
+            self.map.addItemsToMap()     
             flag = self.validator.validate()
             print("Try Number:"+str(count))
+        self.map.items = sorted(self.map.items, key=lambda d: d["slotId"])
         self.map.items = sorted(self.map.items, key=lambda d: d["Itemname"])
         self.generateFile()
-        
+
+    def newRandomie(self):
+        finished = False
+        while(not finished):
+            itemPool = []
+            self.map.createMap()
+            for item in self.map.items:
+                itemPool.append((item["Itemname"],item["slotId"]))
+            
+
+
     def generateFile(self):
         output = ""
+        output2= ""
+        if not os.path.exists("./data"):
+            os.makedirs("./data")
+                    
+        file = open("data/file.dat",'w+')
+        spoilerLog = open("data/Spoiler.txt",'w+')
         #adding knife and orb to start tiem (2 items may be lost)
         if self.knifeStart !=0:
             output += "22,1:22,4;"
         if self.gibCompass != 0:
             output += "4200,0:4200,1;"
         output += "4201,0:4201,"+str(self.extraRATK)+";"
+        
         for k in self.map.items:
-            del(k["Requirement"])
-            output += str(Type[k["OldItem"]].value)+ "," 
-            output += str(k["OldSlotID"]) + ":" 
-            output += str(Type[k["Itemname"]].value) + ","
-            output += str(k["slotId"])+";\n"
-        if not os.path.exists("./data"):
-            os.makedirs("./data") 
-        file = open("data/file.dat",'w+')
-        file.write(output)
+            file.write(f"{Type[k['OldItem']].value},{k['OldSlotID']}:{Type[k['Itemname']].value},{k['slotId']};\n")
+            line =f"Randomized Item: {Type[k['Itemname']]} Slot: {k['slotId']}"
+            for x in range(0,70-len(line)):
+                line += " "
+            line += f"Original Item: {Type[k['OldItem']]} Slot: {k['OldSlotID']} "
+            for x in range(0,140-len(line)):
+                line+=" "
+            line += f"Location: {k['Location']}\n"
+            spoilerLog.write(line)
+       
         file.close()
-        file = open("data/Spoiler.json",'w+')
-        json.dump(self.map.items,file)
-        file.close()
+        spoilerLog.close()
 
 #Small Interface
 t = Generator()
