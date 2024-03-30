@@ -29,6 +29,9 @@
   <Reference Include="Unity.TextMeshPro">
     <HintPath>Unity.TextMeshPro.dll</HintPath>
   </Reference>
+  <Reference Include="QFSW.QC">
+    <HintPath>QFSW.QC.dll</HintPath>
+  </Reference>
   
     <Reference Include="UnityEngine.UI">
     <HintPath>UnityEngine.UI.dll</HintPath>

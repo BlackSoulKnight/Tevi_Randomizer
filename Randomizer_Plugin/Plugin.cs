@@ -11,8 +11,9 @@ using Character;
 using UnityEngine.UI;
 using UnityEngine;
 using Bullet;
-using System.Runtime.Remoting.Metadata.W3cXsd2001;
-using ItemList;
+using QFSW.QC;
+
+
 
 
 
@@ -166,6 +167,49 @@ public class Randomizer : BaseUnityPlugin
 
 
 
+    [Command("reloadRandomizer", Platform.AllPlatforms, MonoTargetType.Single)]
+    private void reloadItems()
+    {
+        try
+        {
+            string path = $"{BepInEx.Paths.PluginPath}/tevi_randomizer/data/file.dat";
+            string json = File.ReadAllText(path);
+            string[] blocks = json.Split(';');
+            __itemData.Clear();
+            foreach (string block in blocks)
+            {
+                ItemData data1, data2;
+                if (block.Length < 5) continue;
+                try
+                {
+                    string[] completeItem = block.Split(':');
+
+                    string[] itemDetails1 = completeItem[0].Split(',');
+                    string[] itemDetails2 = completeItem[1].Split(',');
+                    data1 = new ItemData(int.Parse(itemDetails1[0]), int.Parse(itemDetails1[1]));
+                    data2 = new ItemData(int.Parse(itemDetails2[0]), int.Parse(itemDetails2[1]));
+                }
+                catch
+                {
+                    Logger.LogError($"Failed to parse {block}");
+                    continue;
+                }
+                try
+                {
+                    __itemData.Add(data1, data2);
+                }
+                catch
+                {
+                    Logger.LogWarning($"Already changed {data1.getItemTyp()} slot {data1.getSlotId()}");
+
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            Logger.LogError(e);
+        }
+    }
 
 
 
@@ -316,8 +360,9 @@ public class Randomizer : BaseUnityPlugin
                     break;
             }
         }
-        //if (Enum.IsDefined(typeof(Upgradable),type.ToString()))
-            //return;
+        if (Enum.IsDefined(typeof(Upgradable), type.ToString()))
+            SaveManager.Instance.SetItem(type, (byte)(CraftingPatch.getItemUpgradeCount(type)+1));
+
 
         ItemData data = getRandomizedItem(type, value);
 
@@ -517,91 +562,21 @@ public class Randomizer : BaseUnityPlugin
     static void orbTypeFix(ref int __result, ref SaveManager __instance)
     {
         int num = 0;
-        ItemData data1 = getRandomizedItem(ItemList.Type.ITEM_OrbTypeC2, 1);
-        ItemData data2 = getRandomizedItem(ItemList.Type.ITEM_OrbTypeC3, 1);
-        ItemData data3 = getRandomizedItem(ItemList.Type.ITEM_OrbTypeS2, 1);
-        ItemData data4 = getRandomizedItem(ItemList.Type.ITEM_OrbTypeS3, 1);
-        Upgradable item;
-
-        if (!data1.getItemTyp().ToString().Contains("STACKABLE"))
+        if (checkRandomizedItemGot(ItemList.Type.ITEM_OrbTypeC2, 1))
         {
-
-            if(Enum.TryParse(data1.getItemTyp().ToString(),out item))
-            {
-                if(SaveManager.Instance.GetStackableItem((ItemList.Type)item, data1.getSlotId()))
-                    num++;
-            }
-            else if (__instance.GetItem(data1.getItemTyp()) > 0)
-            {
-                num++;
-            }
+            num++;
         }
-        else
+        if (checkRandomizedItemGot(ItemList.Type.ITEM_OrbTypeC3, 1))
         {
-            if (__instance.GetStackableItem(data1.getItemTyp(), data1.getSlotId()))
-            {
-                num++;
-            }
+            num++;
         }
-
-        if (!data2.getItemTyp().ToString().Contains("STACKABLE"))
+        if (checkRandomizedItemGot(ItemList.Type.ITEM_OrbTypeS2, 1))
         {
-            if (Enum.TryParse(data2.getItemTyp().ToString(), out item))
-            {
-                if(SaveManager.Instance.GetStackableItem((ItemList.Type)item, data2.getSlotId()))
-                    num++;
-            }
-            else if (__instance.GetItem(data2.getItemTyp()) > 0)
-            {
-                num++;
-            }
+            num++;
         }
-        else
+        if (checkRandomizedItemGot(ItemList.Type.ITEM_OrbTypeS3, 1))
         {
-            if (__instance.GetStackableItem(data2.getItemTyp(), data2.getSlotId()))
-            {
-                num++;
-            }
-        }
-
-        if (!data3.getItemTyp().ToString().Contains("STACKABLE"))
-        {
-            if (Enum.TryParse(data3.getItemTyp().ToString(), out item))
-            {
-                if(SaveManager.Instance.GetStackableItem((ItemList.Type)item, data3.getSlotId()))
-                    num++;
-            }
-            else if (__instance.GetItem(data3.getItemTyp()) > 0)
-            {
-                num++;
-            }
-        }
-        else
-        {
-            if (__instance.GetStackableItem(data3.getItemTyp(), data3.getSlotId()))
-            {
-                num++;
-            }
-        }
-
-        if (!data4.getItemTyp().ToString().Contains("STACKABLE"))
-        {
-            if (Enum.TryParse(data4.getItemTyp().ToString(), out item))
-            {
-                if (SaveManager.Instance.GetStackableItem((ItemList.Type)item, data4.getSlotId()))
-                    num++;
-            }
-            else if (__instance.GetItem(data4.getItemTyp()) > 0)
-            {
-                num++;
-            }
-        }
-        else
-        {
-            if (__instance.GetStackableItem(data4.getItemTyp(), data4.getSlotId()))
-            {
-                num++;
-            }
+            num++;
         }
         __result = num;
     }
@@ -611,27 +586,11 @@ public class Randomizer : BaseUnityPlugin
     static void OrbBoostCount(ref int __result, SaveManager __instance)
     {
         int num = 0;
-        ItemData data1 = getRandomizedItem(ItemList.Type.ITEM_OrbBoostD, 1);
-        ItemData data2 = getRandomizedItem(ItemList.Type.ITEM_OrbBoostU, 1);
-        if (data1.getItemTyp().ToString().Contains("STACKABLE"))
-        {
-            if (__instance.GetStackableItem(data1.getItemTyp(), data1.getSlotId()))
-                num++;
+        if (checkRandomizedItemGot(ItemList.Type.ITEM_OrbBoostD, 1)){
+            num++;
         }
-        else
-        {
-            if (__instance.GetItem(data1.getItemTyp()) > 0)
-                num++;
-        }
-        if (data2.getItemTyp().ToString().Contains("STACKABLE"))
-        {
-            if (__instance.GetStackableItem(data2.getItemTyp(), data2.getSlotId()))
-                num++;
-        }
-        else
-        {
-            if (__instance.GetItem(data2.getItemTyp()) > 0)
-                num++;
+        if (checkRandomizedItemGot(ItemList.Type.ITEM_OrbBoostU, 1)){
+            num++;
         }
         __result = num;
     }
@@ -692,24 +651,9 @@ public class Randomizer : BaseUnityPlugin
                             __instance.SetStackableItem((ItemList.Type)itemRef, 0, true);
                         }
                     }
-                    else if(value > 1 && value<=3)
+                    else
                     {
-                        item = data.getItemTyp();
-                        value = data.getSlotId();
-                        if (item.ToString().Contains("STACKABLE"))
-                        {
-                            __instance.SetStackableItem(item, value, true);
-                            return false;
-                        }
-                        if (Enum.TryParse<Upgradable>(data.getItemTyp().ToString(), out itemRef))
-                        {
-                            value = (byte)(__instance.GetItem(data.getItemTyp()) + 1);
-
-                            if (!__instance.GetStackableItem((ItemList.Type)itemRef, 0))
-                            {
-                                __instance.SetStackableItem((ItemList.Type)itemRef, 0, true);
-                            }
-                        }
+                        return false;
                     }
                 }
                 else
@@ -725,8 +669,8 @@ public class Randomizer : BaseUnityPlugin
 
 
 
-
 }
+
 
 
 class EventPatch
@@ -1044,13 +988,17 @@ class CraftingPatch
             }
             else
             {
-                ___selectedDesc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(data.getItemTyp());
+                if (___craftList[___selected].isUpgrade)
+                    ___selectedDesc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(itemType);
+                else
+                    ___selectedDesc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(data.getItemTyp());
 
                 if (___selectedDesc.text.Contains("[c2]"))
                 {
                     if (___craftList[___selected].isUpgrade)
                     {
-                        ___selectedDesc.text = Localize.FilterLevelDescFromItem2(data.getItemTyp(), ___selectedDesc.text);
+                        //___selectedDesc.text = Localize.FilterLevelDescFromItem2(data.getItemTyp(), ___selectedDesc.text);
+                        ___selectedDesc.text = Localize.FilterLevelDescFromItem2(itemType, ___selectedDesc.text);
                     }
                     else
                     {
@@ -1383,7 +1331,7 @@ class CraftingPatch
 
     //Update need to be fixed for progessive items
 
-    static int getItemUpgradeCount(ItemList.Type _item)
+    static public int getItemUpgradeCount(ItemList.Type _item)
     {
         int num = 0;
         Randomizer.Upgradable item;
@@ -1419,7 +1367,7 @@ class CraftingPatch
             __state.Item1 = EventManager.Instance.mainCharacter.cphy_perfer.orbUsing;
             __state.Item2 = EventManager.Instance.mainCharacter.cphy_perfer.orbShootType;
             __state.Item3 = true;
-            if (___currentItemType.ToString().Contains("ITEM") && ___craftList[___selected].isUpgrade || ___currentItemType.ToString().Contains("BADGE"))
+            if (___currentItemType.ToString().Contains("ITEM") && ___craftList[___selected].isUpgrade || ___currentItemType.ToString().Contains("BADGE") || ___currentItemType.ToString().Contains("_OrbBoost"))
             {
 
                 int num5 = 1;
@@ -1534,10 +1482,15 @@ class CraftingPatch
                     }
                     int num8 = -1;
 
+                    if (___currentItemType.ToString().Contains("_OrbBoost"))
+                    {
+                        ___currentItemType = Randomizer.checkRandomizedItemGot(ItemList.Type.ITEM_OrbBoostD, 1) ? ItemList.Type.ITEM_OrbBoostU : ItemList.Type.ITEM_OrbBoostD;
+                    }
+
                     if (___craftList[___selected].isUpgrade)
                     {
-                        //HUDObtainedItem.Instance.GiveItem(___currentItemType, (byte)(getItemUpgradeCount(___currentItemType) + 1)); // helper function to get current craft number
-                        SaveManager.Instance.SetItem(___currentItemType, (byte) (getItemUpgradeCount(___currentItemType) + 1), true);
+                        HUDObtainedItem.Instance.GiveItem(___currentItemType, (byte)(getItemUpgradeCount(___currentItemType) + 1));
+                        //SaveManager.Instance.SetItem(___currentItemType, (byte) (getItemUpgradeCount(___currentItemType) + 1), true);
                         ___isJustCraftedBadge = 1.75f;
                     }
                     else
