@@ -16,16 +16,6 @@ using QFSW.QC;
 
 
 
-
-
-
-
-
-
-
-
-
-
 public class ItemData
 {
     public int itemID;
@@ -160,6 +150,7 @@ public class Randomizer : BaseUnityPlugin
         instance.PatchAll(typeof(CraftingPatch));
         instance.PatchAll(typeof(ShopPatch));
         instance.PatchAll(typeof(EventPatch));
+        instance.PatchAll(typeof(ItemObtainPatch));
 
         Logger.LogInfo($"Plugin Randomizer is loaded!");
 
@@ -218,14 +209,11 @@ public class Randomizer : BaseUnityPlugin
         ItemData data;
         try
         {
-            //Debug.Log($"[Randomizer] Load item {itemid}:{slotid}");
 
             data = __itemData[new ItemData((int)itemid, (int)slotid)];
-            //Debug.Log($"[Randomizer] Found item {(ItemList.Type)data.itemID}:{data.slotID}");
         }
         catch
         {
-            //Debug.LogError("[Randomizer] Could not load the randomized Item " + itemid.ToString() + "! It has the ID: " + (int)itemid + " and the SlotID: " + slotid);
             data = new ItemData((int)itemid, (int)slotid);
         }
         return data;
@@ -236,14 +224,11 @@ public class Randomizer : BaseUnityPlugin
         ItemData data;
         try
         {
-            //Debug.Log($"[Randomizer] Load item {itemid}:{slotid}");
 
             data = __itemData[new ItemData(itemid, slotid)];
-            //Debug.Log($"[Randomizer] Found item {(ItemList.Type)data.itemID}:{data.slotID}");
         }
         catch
         {
-            //Debug.LogError("[Randomizer] Could not load the randomized Item " + itemid.ToString() + "! It has the ID: " + (int)itemid + " and the SlotID: " + slotid);
             data = new ItemData(itemid, slotid);
         }
         return data;
@@ -335,57 +320,6 @@ public class Randomizer : BaseUnityPlugin
         }
         return true;
     } 
-
-
-    //Hotswap item recieved
-    [HarmonyPatch(typeof(HUDObtainedItem), "GiveItem")]
-    [HarmonyPrefix]
-    static void ObtainItem(ref ItemList.Type type, ref byte value)
-    {
-        if (type.ToString().Contains("_OrbType"))
-        {
-            switch (SaveManager.Instance.GetOrbTypeObtained())
-            {
-                case 0:
-                    type = ItemList.Type.ITEM_OrbTypeC2;
-                    break;
-                case 1:
-                    type = ItemList.Type.ITEM_OrbTypeS2;
-                    break;
-                case 2:
-                    type = ItemList.Type.ITEM_OrbTypeC3;
-                    break;
-                case 3:
-                    type = ItemList.Type.ITEM_OrbTypeS3;
-                    break;
-            }
-        }
-        if (Enum.IsDefined(typeof(Upgradable), type.ToString()))
-            SaveManager.Instance.SetItem(type, (byte)(CraftingPatch.getItemUpgradeCount(type)+1));
-
-
-        ItemData data = getRandomizedItem(type, value);
-
-        value = (byte)data.slotID;
-        type = (ItemList.Type)data.itemID;
-
-
-
-    }
-    //craftingMenuRefresh
-    [HarmonyPatch(typeof(HUDObtainedItem), "GiveItem")]
-    [HarmonyPostfix]
-    static void CraftingRefresh()
-    {
-        if(GemaUIPauseMenu_CraftGrid.Instance != null) 
-            Traverse.Create(GemaUIPauseMenu_CraftGrid.Instance).Method("UpdateCraftList").GetValue();
-        else
-        {
-            Debug.LogWarning("This was triggerd to Early");
-        }
-    }
-
-
 
 
     // Change Sprite
@@ -533,17 +467,6 @@ public class Randomizer : BaseUnityPlugin
     }
 
 
-
-
-    //Orb!
-    [HarmonyPatch(typeof(SaveManager), "FirstTimeEnableOrbColors")]
-    [HarmonyPrefix]
-    static bool disableOrbOverride(SaveManager __instance)
-    {
-        if (__instance.GetMiniFlag(Mini.OrbStatus) >= 3) return true;
-        return false;
-    }
-
     public static void addOrbStatus(int amount = 0)
     {
         SaveManager.Instance.SetOrb((byte)(SaveManager.Instance.GetOrb() + amount));
@@ -552,7 +475,6 @@ public class Randomizer : BaseUnityPlugin
             SaveManager.Instance.FirstTimeEnableOrbColors();
         }
     }
-
 
 
     //Craftig Orb Fix
@@ -595,7 +517,67 @@ public class Randomizer : BaseUnityPlugin
         __result = num;
     }
 
+    //Orb!
+    [HarmonyPatch(typeof(SaveManager), "FirstTimeEnableOrbColors")]
+    [HarmonyPrefix]
+    static bool disableOrbOverride(SaveManager __instance)
+    {
+        if (__instance.GetMiniFlag(Mini.OrbStatus) >= 3) return true;
+        return false;
+    }
 
+}
+
+class ItemObtainPatch()
+{
+
+    //Hotswap item recieved
+    [HarmonyPatch(typeof(HUDObtainedItem), "GiveItem")]
+    [HarmonyPrefix]
+    static void ObtainItem(ref ItemList.Type type, ref byte value)
+    {
+        if (type.ToString().Contains("_OrbType"))
+        {
+            switch (SaveManager.Instance.GetOrbTypeObtained())
+            {
+                case 0:
+                    type = ItemList.Type.ITEM_OrbTypeC2;
+                    break;
+                case 1:
+                    type = ItemList.Type.ITEM_OrbTypeS2;
+                    break;
+                case 2:
+                    type = ItemList.Type.ITEM_OrbTypeC3;
+                    break;
+                case 3:
+                    type = ItemList.Type.ITEM_OrbTypeS3;
+                    break;
+            }
+        }
+        if (Enum.IsDefined(typeof(Randomizer.Upgradable), type.ToString()))
+            SaveManager.Instance.SetItem(type, (byte)(CraftingPatch.getItemUpgradeCount(type) + 1));
+
+
+        ItemData data = Randomizer.getRandomizedItem(type, value);
+
+        value = (byte)data.slotID;
+        type = (ItemList.Type)data.itemID;
+
+
+
+    }
+    //craftingMenuRefresh
+    [HarmonyPatch(typeof(HUDObtainedItem), "GiveItem")]
+    [HarmonyPostfix]
+    static void CraftingRefresh()
+    {
+        if (GemaUIPauseMenu_CraftGrid.Instance != null)
+            Traverse.Create(GemaUIPauseMenu_CraftGrid.Instance).Method("UpdateCraftList").GetValue();
+        else
+        {
+            Debug.LogWarning("This was triggerd to Early");
+        }
+    }
 
     // Called everytime when an Item is obtained through any means
     [HarmonyPatch(typeof(SaveManager), "SetItem")]
@@ -607,7 +589,7 @@ public class Randomizer : BaseUnityPlugin
 
             case ItemList.Type.ITEM_ORB:
 
-                addOrbStatus(1);
+                Randomizer.addOrbStatus(1);
 
                 break;
 
@@ -622,11 +604,11 @@ public class Randomizer : BaseUnityPlugin
     [HarmonyPrefix]
     static bool ItemChanges(ref ItemList.Type item, ref byte value, ref SaveManager __instance)
     {
-        ItemData data = getRandomizedItem(item, value);
+        ItemData data = Randomizer.getRandomizedItem(item, value);
         if (item.ToString().Contains("ITEM"))
         {
-            Upgradable itemRef;
-            if (Enum.TryParse<Upgradable>(item.ToString(), out itemRef))
+            Randomizer.Upgradable itemRef;
+            if (Enum.TryParse<Randomizer.Upgradable>(item.ToString(), out itemRef))
             {
                 if (value == 0)
                 {
@@ -647,7 +629,8 @@ public class Randomizer : BaseUnityPlugin
                     if (value > 3)
                     {
                         value = (byte)(__instance.GetItem(item) + 1);
-                        if (!__instance.GetStackableItem((ItemList.Type)itemRef, 0)){
+                        if (!__instance.GetStackableItem((ItemList.Type)itemRef, 0))
+                        {
                             __instance.SetStackableItem((ItemList.Type)itemRef, 0, true);
                         }
                     }
@@ -666,11 +649,7 @@ public class Randomizer : BaseUnityPlugin
         return true;
     }
 
-
-
-
 }
-
 
 
 class EventPatch
