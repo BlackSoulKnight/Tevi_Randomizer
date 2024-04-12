@@ -14,7 +14,13 @@ For self building the Project, the following DLLs from the Game are required and
 + UnityEngine.UI.dll
 
 ## Install
-Extract the zip in the BepInEx Plugins Folder
+Download a pre-Build version from https://github.com/BlackSoulKnight/Tevi_Randomizer/releases/tag/v0.9.4<br>
+or self build it with the source files. <br>
+
+Extract the zip in the BepInEx Plugins Folder<br><br>
+
+If the the Project is build from source create a tevi_randomizer folder in the folder BepInEx/plugins.
+Insert the fresh build TeviRandomizer.dll and SeedGenerator.py, Items.json and Locations.json into the tevi_randomizer folder. 
 
 ## Usage
 Run SeedGenerator.py to generate a seed for the Randomizer.<br>
