@@ -12,6 +12,10 @@ using UnityEngine.UI;
 using UnityEngine;
 using Bullet;
 using QFSW.QC;
+using TeviRandomizer;
+using UnityEngine.Android;
+using MiniGame;
+using Map;
 
 
 
@@ -52,110 +56,66 @@ public class ItemData
 }
 
 
-
+public enum Upgradable
+{
+    ITEM_KNIFE = 10,
+    ITEM_ORB = 11,
+    ITEM_RapidShots = 12,
+    ITEM_AttackRange = 13,
+    ITEM_EasyStyle = 14,
+    ITEM_LINEBOMB = 15,
+    ITEM_AREABOMB = 16,
+    ITEM_SPEEDUP = 17,
+    ITEM_AirDash = 18,
+    ITEM_WALLJUMP = 19,
+    ITEM_JETPACK = 20,
+    ITEM_BoostSystem = 21,
+    ITEM_BombLengthExtend = 22,
+    ITEM_MASK = 23,
+    ITEM_TempRing = 24,
+    ITEM_DodgeShot = 25,
+    ITEM_Rotater = 26,
+    ITEM_GoldenGlove = 27,
+    ITEM_OrbAmulet = 28,
+    ITEM_BOMBFUEL = 29,
+    ITEM_Explorer = 30,
+}
 
 
 
 
 [BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.9.3.0")]
 [BepInProcess("TEVI.exe")]
-public class Randomizer : BaseUnityPlugin
+public class RandomizerPlugin : BaseUnityPlugin
 {
 
     static Dictionary<ItemData, ItemData> __itemData = new Dictionary<ItemData, ItemData>(new ItemData.EqualityComparer());
 
-    public enum Upgradable
-    {
-        ITEM_KNIFE = 10,
-        ITEM_ORB = 11,
-        ITEM_RapidShots = 12,
-        ITEM_AttackRange = 13,
-        ITEM_EasyStyle = 14,
-        ITEM_LINEBOMB = 15,
-        ITEM_AREABOMB = 16,
-        ITEM_SPEEDUP = 17,
-        ITEM_AirDash = 18,
-        ITEM_WALLJUMP = 19,
-        ITEM_JETPACK = 20,
-        ITEM_BoostSystem = 21,
-        ITEM_BombLengthExtend = 22,
-        ITEM_MASK = 23,
-        ITEM_TempRing = 24,
-        ITEM_DodgeShot = 25,
-        ITEM_Rotater = 26,
-        ITEM_GoldenGlove = 27,
-        ITEM_OrbAmulet = 28,
-        ITEM_BOMBFUEL = 29,
-        ITEM_Explorer = 30,
-    }
+    static public string pluginPath = BepInEx.Paths.PluginPath + "/tevi_randomizer/";
 
     public enum EventID
     {
         IllusionPalace = 9999
     }
 
+    static public Randomizer randomizer;
+
     private void Awake()
     {
-        bool fileRead = true;
-        try
-        {
-            string path = BepInEx.Paths.PluginPath + "/tevi_randomizer/data/file.dat";
-            string json = File.ReadAllText(path);
-            string[] blocks = json.Split(';');
-            foreach (string block in blocks)
-            {
-                ItemData data1, data2;
-                if (block.Length < 5) continue;
-                try
-                {
-                    string[] completeItem = block.Split(':');
-
-                    string[] itemDetails1 = completeItem[0].Split(',');
-                    string[] itemDetails2 = completeItem[1].Split(',');
-                    data1 = new ItemData(int.Parse(itemDetails1[0]), int.Parse(itemDetails1[1]));
-                    data2 = new ItemData(int.Parse(itemDetails2[0]), int.Parse(itemDetails2[1]));
-                }
-                catch
-                {
-                    Logger.LogError($"Failed to parse {block}");
-                    continue;
-                }
-                try
-                {
-                    __itemData.Add(data1, data2);
-                }
-                catch
-                {
-                    Logger.LogWarning($"Already changed {data1.getItemTyp()} slot {data1.getSlotId()}");
-
-                }
-            }
-        }
-        catch (Exception e)
-        {
-            Logger.LogError(e);
-            fileRead = false;
-        }
-
-
-        if (!fileRead)
-        {
-            Logger.LogWarning("[Randomizer] Could not initialize the Randomizer");
-            Logger.LogWarning("[Randomizer] Plugin is disabled");
-            return;
-        }
+        System.IO.Directory.CreateDirectory(pluginPath+"Data");
+        randomizer = new Randomizer();
 
         var instance = new Harmony("Randomizer");
-        instance.PatchAll(typeof(Randomizer));
+        instance.PatchAll(typeof(RandomizerPlugin));
         instance.PatchAll(typeof(CraftingPatch));
         instance.PatchAll(typeof(ShopPatch));
         instance.PatchAll(typeof(EventPatch));
         instance.PatchAll(typeof(ItemObtainPatch));
-
+        instance.PatchAll(typeof(UI));
+        instance.PatchAll(typeof(SaveGamePatch));
         Logger.LogInfo($"Plugin Randomizer is loaded!");
 
     }
-
 
 
     [Command("reloadRandomizer", Platform.AllPlatforms, MonoTargetType.Single)]
@@ -202,6 +162,12 @@ public class Randomizer : BaseUnityPlugin
         }
     }
 
+    static public void createSeed(System.Random seed)
+    {
+        randomizer.createSeed(seed);
+        __itemData = randomizer.GetData();
+
+    }
 
 
     static public ItemData getRandomizedItem(ItemList.Type itemid, byte slotid)
@@ -214,6 +180,7 @@ public class Randomizer : BaseUnityPlugin
         }
         catch
         {
+            //Debug.LogWarning($"Could not find {itemid.ToString()} {slotid}");
             data = new ItemData((int)itemid, (int)slotid);
         }
         return data;
@@ -226,14 +193,28 @@ public class Randomizer : BaseUnityPlugin
         {
 
             data = __itemData[new ItemData(itemid, slotid)];
+            
         }
         catch
         {
+            Debug.LogWarning($"Could not find {((ItemList.Type)itemid).ToString()} {slotid}");
             data = new ItemData(itemid, slotid);
         }
         return data;
     }
 
+    static public Dictionary<ItemData,ItemData> saveRando()
+    {
+        return __itemData;
+    }
+    static public void loadRando(Dictionary<ItemData, ItemData> data)
+    {
+        __itemData = data;
+    }
+    static public void deloadRando()
+    {
+        __itemData.Clear();
+    }
     static public bool checkItemGot(ItemList.Type item,byte slot)
     {
         Upgradable itemref;
@@ -289,6 +270,15 @@ public class Randomizer : BaseUnityPlugin
         {
             if (!EventManager.Instance.isBossMode() && EventManager.Instance.getMode() == Mode.OFF && EventManager.Instance.getSubMode() == Mode.OFF)
             {
+                if (GemaMissionMode.Instance.isInMission() || WorldManager.Instance.CurrentRoomArea != AreaType.ILLUSIONPALACE || EventManager.Instance.GetCurrentEventBattle() != 0 || EventManager.Instance.isBossMode())
+                {
+                    __instance.PlaySound(AllSound.SEList.MENUFAIL);
+                    __instance.ChangeLogicStatus(PlayerLogicState.NORMAL);
+                    EventManager.Instance.EFF_CreateEmotion(__instance, null, __instance.t.position, EffectSprite.EMOTION_QUESTION);
+                    return false;
+                }
+
+
                 int num5 = (int)___phy_perfer.GetCounter(4);
 
                 EventManager.Instance.StartWarp(1, 1, 1, 1);
@@ -444,12 +434,7 @@ public class Randomizer : BaseUnityPlugin
                     return false;
                 }
             }
-            if (SaveManager.Instance.GetItem(global::ItemList.Type.ITEM_GoldenHands) > 0 && ((ItemList.Type)data.itemID == global::ItemList.Type.QUEST_GHandL || (ItemList.Type)data.itemID == global::ItemList.Type.QUEST_GHandR))
-            {
-                Debug.Log("[ItemTile] Item " + ((ItemList.Type)data.itemID).ToString() + " visible in camera. Removed from map because player already obtained it. GotItem = " + SaveManager.Instance.GetItem((ItemList.Type)data.itemID).ToString());
-                __instance.DisableMe();
-                return false;
-            }
+
         }
 
         if (WorldManager.Instance.CheckIsWall(__instance.transform.position, any: false) > 0)
@@ -554,11 +539,11 @@ class ItemObtainPatch()
                     break;
             }
         }
-        if (Enum.IsDefined(typeof(Randomizer.Upgradable), type.ToString()))
+        if (Enum.IsDefined(typeof(Upgradable), type.ToString()))
             SaveManager.Instance.SetItem(type, (byte)(CraftingPatch.getItemUpgradeCount(type) + 1));
 
 
-        ItemData data = Randomizer.getRandomizedItem(type, value);
+        ItemData data = RandomizerPlugin.getRandomizedItem(type, value);
 
         value = (byte)data.slotID;
         type = (ItemList.Type)data.itemID;
@@ -589,7 +574,7 @@ class ItemObtainPatch()
 
             case ItemList.Type.ITEM_ORB:
 
-                Randomizer.addOrbStatus(1);
+                RandomizerPlugin.addOrbStatus(1);
 
                 break;
 
@@ -604,11 +589,11 @@ class ItemObtainPatch()
     [HarmonyPrefix]
     static bool ItemChanges(ref ItemList.Type item, ref byte value, ref SaveManager __instance)
     {
-        ItemData data = Randomizer.getRandomizedItem(item, value);
+        ItemData data = RandomizerPlugin.getRandomizedItem(item, value);
         if (item.ToString().Contains("ITEM"))
         {
-            Randomizer.Upgradable itemRef;
-            if (Enum.TryParse<Randomizer.Upgradable>(item.ToString(), out itemRef))
+            Upgradable itemRef;
+            if (Enum.TryParse<Upgradable>(item.ToString(), out itemRef))
             {
                 if (value == 0)
                 {
@@ -633,6 +618,7 @@ class ItemObtainPatch()
                         {
                             __instance.SetStackableItem((ItemList.Type)itemRef, 0, true);
                         }
+                        
                     }
                     else
                     {
@@ -663,28 +649,31 @@ class EventPatch
 
         if (em.EventStage == 10)
         {
-            if (Randomizer.getRandomizedItem(4200, 0).slotID > 0)
+            if (RandomizerPlugin.getRandomizedItem(4200, 0).slotID > 0)
             {
                 SaveManager.Instance.SetItem(ItemList.Type.ITEM_Explorer, 4);
                 SaveManager.Instance.SetItem(ItemList.Type.ITEM_Explorer, 5);
                 SaveManager.Instance.SetItem(ItemList.Type.ITEM_Explorer, 6);
             }
-            for (int i = Randomizer.getRandomizedItem(4201,0).slotID ;i > 0; i--)
+            for (int i = RandomizerPlugin.getRandomizedItem(4006,0).slotID ;i > 0; i--)
             {
-                SaveManager.Instance.SetStackableItem(ItemList.Type.STACKABLE_RATK, (byte)(i + 34),true);
-                SaveManager.Instance.SetStackableItem(ItemList.Type.STACKABLE_MATK, (byte)(i + 34),true);
+                SaveManager.Instance.SetStackableItem(ItemList.Type.STACKABLE_RATK, (byte)(64-i),true);
+            }
+            for (int i = RandomizerPlugin.getRandomizedItem(4005,0).slotID ;i > 0; i--)
+            {
+                SaveManager.Instance.SetStackableItem(ItemList.Type.STACKABLE_MATK, (byte)(64-i),true);
             }
 
             SaveManager.Instance.SetOrb((byte)0);
-            Randomizer.addOrbStatus(3);
+            RandomizerPlugin.addOrbStatus(3);
 
-            ItemData data = Randomizer.getRandomizedItem(ItemList.Type.ITEM_ORB, 1);
+            ItemData data = RandomizerPlugin.getRandomizedItem(ItemList.Type.ITEM_ORB, 1);
             if (data.getItemTyp().ToString().Contains("STACKABLE"))
                 SaveManager.Instance.SetStackableItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
             else
                 SaveManager.Instance.SetItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
 
-            data = Randomizer.getRandomizedItem(ItemList.Type.ITEM_KNIFE, 1);
+            data = RandomizerPlugin.getRandomizedItem(ItemList.Type.ITEM_KNIFE, 1);
             if(data.getItemTyp().ToString().Contains("STACKABLE"))
                 SaveManager.Instance.SetStackableItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
             else
@@ -715,7 +704,7 @@ class EventPatch
             int num = 0;
             for (int i = 0; i <= 5; i++)
             {
-                if (Randomizer.checkRandomizedItemGot(ItemList.Type.STACKABLE_SHARD, (byte)i))
+                if (RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.STACKABLE_SHARD, (byte)i))
                 {
                     num++;
                 }
@@ -739,7 +728,7 @@ class EventPatch
     [HarmonyPrefix]
     static bool Vena7x7Fix(ref bool __result)
     {
-        ItemData data = Randomizer.getRandomizedItem(ItemList.Type.STACKABLE_COG, 23);
+        ItemData data = RandomizerPlugin.getRandomizedItem(ItemList.Type.STACKABLE_COG, 23);
 
         if (!SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam))
         {
@@ -775,7 +764,7 @@ class EventPatch
                 {
                     if (SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam))
                     {
-                        ItemData data = Randomizer.getRandomizedItem(ItemList.Type.STACKABLE_COG, 23);
+                        ItemData data = RandomizerPlugin.getRandomizedItem(ItemList.Type.STACKABLE_COG, 23);
                         bool flag = false;
                         if (data.getItemTyp().ToString().Contains("STACKABLE"))
                         {
@@ -849,6 +838,29 @@ class EventPatch
         return true;
     }
 
+    [HarmonyPatch(typeof(EventManager),"CheckAfterMapChange")]
+    [HarmonyPrefix]
+    static void dontTakeHands(ref (byte,byte) __state)
+    {
+        __state = (SaveManager.Instance.GetItem(ItemList.Type.QUEST_GHandL), SaveManager.Instance.GetItem(ItemList.Type.QUEST_GHandR));
+    }
+    [HarmonyPatch(typeof(EventManager),"CheckAfterMapChange")]
+    [HarmonyPostfix]
+    static void returnHands(ref (byte,byte) __state)
+    {
+        if(__state.Item1 > 0)
+        SaveManager.Instance.SetItem(ItemList.Type.QUEST_GHandL, __state.Item1);
+        if(__state.Item2 > 0)
+        SaveManager.Instance.SetItem(ItemList.Type.QUEST_GHandR, __state.Item2);
+    }
+
+    [HarmonyPatch(typeof(enemyController), "handexhange_delaystart2")]
+    [HarmonyPrefix]
+    static bool noHandExchange()
+    {
+        SettingManager.Instance.SetAchievement(Achievements.ACHI_ITEM_GOLDENHANDS);
+        return false;
+    }
 
     //End Requierment
     static bool EventReq(int customEventId)
@@ -856,7 +868,7 @@ class EventPatch
         bool flag = false;
 
 
-        switch (Randomizer.getRandomizedItem(customEventId, 1).slotID)
+        switch (RandomizerPlugin.getRandomizedItem(customEventId, 1).slotID)
         {
             case 1:
                 flag = SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_COG) < MainVar.instance.FREEROAM_COGNEEDED;
@@ -876,7 +888,7 @@ class EventPatch
     static bool IllusionReq(ref bool __result)
     {
         __result = false;
-        if (EventReq((int)Randomizer.EventID.IllusionPalace)) 
+        if (EventReq((int)RandomizerPlugin.EventID.IllusionPalace)) 
         {
             __result = true;
         }
@@ -900,17 +912,17 @@ class CraftingPatch
 
         ___iconbg.enabled = false;
         ___costBox.gameObject.SetActive(value: false);
-        ItemData data = Randomizer.getRandomizedItem(___craftList[___selected].GetItemType(), 1);
+        ItemData data = RandomizerPlugin.getRandomizedItem(___craftList[___selected].GetItemType(), 1);
 
 
 
         ItemList.Type itemType = ___craftList[___selected].GetItemType();
         if (itemType.ToString().Contains("ITEM"))
         {
-            data = Randomizer.getRandomizedItem(itemType, (byte)(SaveManager.Instance.GetItem(itemType) + 1));
+            data = RandomizerPlugin.getRandomizedItem(itemType, (byte)(SaveManager.Instance.GetItem(itemType) + 1));
             if (___craftList[___selected].isUpgrade)
             {
-                data = Randomizer.getRandomizedItem(itemType, (byte)(getItemUpgradeCount(itemType)+1));
+                data = RandomizerPlugin.getRandomizedItem(itemType, (byte)(getItemUpgradeCount(itemType)+1));
             }
         }
 
@@ -1110,7 +1122,7 @@ class CraftingPatch
     {
 
         Traverse o = Traverse.Create(__instance);
-        ItemData data = Randomizer.getRandomizedItem(iType, 1);
+        ItemData data = RandomizerPlugin.getRandomizedItem(iType, 1);
 
         if (o.Field("CurrentMaxCraft").GetValue<int>() >= ___craftList.Length)
         {
@@ -1132,7 +1144,7 @@ class CraftingPatch
             }
             else if (data.getItemTyp().ToString().Contains("ITEM"))
             {
-                Randomizer.Upgradable upitem;
+                Upgradable upitem;
                 if(Enum.TryParse(data.getItemTyp().ToString(),out upitem)&&SaveManager.Instance.GetStackableItem((ItemList.Type)upitem,data.getSlotId()))
                 {
                     return false;
@@ -1187,7 +1199,7 @@ class CraftingPatch
     {
 
 
-        ItemData data = Randomizer.getRandomizedItem(itype, 1);
+        ItemData data = RandomizerPlugin.getRandomizedItem(itype, 1);
         __instance.isUpgrade = _isUpgrade;
         __instance.SetVisible(isVisible: true);
         ___itemType = itype;
@@ -1313,7 +1325,7 @@ class CraftingPatch
     static public int getItemUpgradeCount(ItemList.Type _item)
     {
         int num = 0;
-        Randomizer.Upgradable item;
+        Upgradable item;
         if (Enum.TryParse(_item.ToString(), out item))
         {
             if (SaveManager.Instance.GetStackableItem((ItemList.Type)item, 0))
@@ -1337,15 +1349,16 @@ class CraftingPatch
     [HarmonyPrefix]
     static bool progressiveItemCrafting(ref GemaUIPauseMenu_CraftGrid __instance, ref GemaUIPauseMenu_CraftGridSlot[] ___craftList, ref int ___selected, ref ItemList.Type ___currentItemType, ref GemaUIPauseMenu_CraftMaterialSlot[] ___materialownedList,
         ref byte[] ___currentMaterialNeeded, ref float ___isJustCraftedBadge, ref float ___errorflashing, ref float ___flashing, Image ___synthesisBox, Image ___synthesisBoxOutline, ref GameObject[] ___specialcrafts, ref Image ___craftedFlash,
-        ref GemaUIPauseMenu_ItemGridSub[] ___bagItems,ref (Character.OrbType, OrbShootType[],bool) __state)
+        ref GemaUIPauseMenu_ItemGridSub[] ___bagItems,ref (Character.OrbType, OrbShootType, OrbShootType, bool) __state)
     {
         Traverse trav = Traverse.Create(__instance);
-        __state.Item3 = false;
+        __state.Item4 = false;
         if (InputButtonManager.Instance.GetButtonDown(13) && !HUDObtainedItem.Instance.isDisplaying())
         {
             __state.Item1 = EventManager.Instance.mainCharacter.cphy_perfer.orbUsing;
-            __state.Item2 = EventManager.Instance.mainCharacter.cphy_perfer.orbShootType;
-            __state.Item3 = true;
+            __state.Item2 = EventManager.Instance.mainCharacter.cphy_perfer.orbShootType[0];
+            __state.Item3 = EventManager.Instance.mainCharacter.cphy_perfer.orbShootType[1];
+            __state.Item4 = true;
             if (___currentItemType.ToString().Contains("ITEM") && ___craftList[___selected].isUpgrade || ___currentItemType.ToString().Contains("BADGE") || ___currentItemType.ToString().Contains("_OrbBoost"))
             {
 
@@ -1357,8 +1370,8 @@ class CraftingPatch
                 {
                     num5 = -3;
                 }
-                ItemData rnd = Randomizer.getRandomizedItem(___currentItemType, 1);
-                if (!Enum.IsDefined(typeof(Randomizer.Upgradable), ___currentItemType.ToString()) && Randomizer.checkItemGot(rnd.getItemTyp(),rnd.getSlotId()))
+                ItemData rnd = RandomizerPlugin.getRandomizedItem(___currentItemType, 1);
+                if (!Enum.IsDefined(typeof(Upgradable), ___currentItemType.ToString()) && RandomizerPlugin.checkItemGot(rnd.getItemTyp(),rnd.getSlotId()))
                 {
                     
                     num5 = -3;
@@ -1463,7 +1476,7 @@ class CraftingPatch
 
                     if (___currentItemType.ToString().Contains("_OrbBoost"))
                     {
-                        ___currentItemType = Randomizer.checkRandomizedItemGot(ItemList.Type.ITEM_OrbBoostD, 1) ? ItemList.Type.ITEM_OrbBoostU : ItemList.Type.ITEM_OrbBoostD;
+                        ___currentItemType = RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.ITEM_OrbBoostD, 1) ? ItemList.Type.ITEM_OrbBoostU : ItemList.Type.ITEM_OrbBoostD;
                     }
 
                     if (___craftList[___selected].isUpgrade)
@@ -1532,12 +1545,13 @@ class CraftingPatch
 
     [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid), "Update")]
     [HarmonyPostfix]
-    static void fixOrbShootType(ref (Character.OrbType, OrbShootType[],bool) __state)
+    static void fixOrbShootType(ref (Character.OrbType, OrbShootType,OrbShootType, bool) __state)
     {
-        if (__state.Item3)
+        if (__state.Item4)
         {
             EventManager.Instance.mainCharacter.cphy_perfer.PrepareSwitchOrb(false, true, __state.Item1);
-            EventManager.Instance.mainCharacter.cphy_perfer.orbShootType = __state.Item2;
+            EventManager.Instance.mainCharacter.cphy_perfer.orbShootType[0] = __state.Item2;
+            EventManager.Instance.mainCharacter.cphy_perfer.orbShootType[1] = __state.Item3;
             
         }
     }
@@ -1878,13 +1892,13 @@ class ShopPatch
         {
             ItemData data;
             if (item.ToString().Contains("STACKABLE"))
-                data = Randomizer.getRandomizedItem(item, (byte)(___ShopID + 30));
+                data = RandomizerPlugin.getRandomizedItem(item, (byte)(___ShopID + 30));
             else
-                data = Randomizer.getRandomizedItem(item, 1);
+                data = RandomizerPlugin.getRandomizedItem(item, 1);
 
 
-            Randomizer.Upgradable upItem;
-            bool flag = Enum.TryParse<Randomizer.Upgradable>(data.getItemTyp().ToString(), out upItem);
+            Upgradable upItem;
+            bool flag = Enum.TryParse<Upgradable>(data.getItemTyp().ToString(), out upItem);
 
             if (item == ItemList.Type.STACKABLE_BAG)
             {
@@ -1989,7 +2003,7 @@ class ShopPatch
                     }
                     if (___itemslots[___Selected].GetItem().ToString().Contains("Useable"))
                     {
-                        data = Randomizer.getRandomizedItem(___itemslots[___Selected].GetItem(), 1);
+                        data = RandomizerPlugin.getRandomizedItem(___itemslots[___Selected].GetItem(), 1);
                         SaveManager.Instance.AddItemToBag(___itemslots[___Selected].GetItem());
                         if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleAHoneycloud)
                         {
@@ -2036,12 +2050,12 @@ class ShopPatch
 
                     else if (___itemslots[___Selected].GetItem().ToString().Contains("STACKABLE"))
                     {
-                        data = Randomizer.getRandomizedItem(___itemslots[___Selected].GetItem(), (byte)(30 + ___ShopID));
+                        data = RandomizerPlugin.getRandomizedItem(___itemslots[___Selected].GetItem(), (byte)(30 + ___ShopID));
 
                     }
                     else
                     {
-                        data = Randomizer.getRandomizedItem(___itemslots[___Selected].GetItem(), 1);
+                        data = RandomizerPlugin.getRandomizedItem(___itemslots[___Selected].GetItem(), 1);
                     }
 
 
@@ -2096,11 +2110,11 @@ class ShopPatch
         byte shopID = Traverse.Create(HUDShopMenu.Instance).Field("ShopID").GetValue<byte>();
         if (Traverse.Create(HUDShopMenu.Instance).Field("typeN").GetValue<Character.Type>() == Character.Type.CC)
         {
-            ___itype = Randomizer.getRandomizedItem(t, (byte)(shopID + 30)).getItemTyp();
+            ___itype = RandomizerPlugin.getRandomizedItem(t, (byte)(shopID + 30)).getItemTyp();
         }
         else
         {
-            ___itype = Randomizer.getRandomizedItem(t, 1).getItemTyp();
+            ___itype = RandomizerPlugin.getRandomizedItem(t, 1).getItemTyp();
         }
 
         trav.Field("price").SetValue(_price);
@@ -2148,12 +2162,12 @@ class ShopPatch
             ItemData data;
             if (item.ToString().Contains("STACKABLE"))
             {
-                data = Randomizer.getRandomizedItem(item, (byte)(___ShopID + 30));
+                data = RandomizerPlugin.getRandomizedItem(item, (byte)(___ShopID + 30));
                 ___item_desc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(data.getItemTyp());
             }
             else
             {
-                data = Randomizer.getRandomizedItem(item, 1);
+                data = RandomizerPlugin.getRandomizedItem(item, 1);
                 ___item_desc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(data.getItemTyp());
             }
             if (___item_desc.text.Contains("[c2]"))
@@ -2171,6 +2185,52 @@ class ShopPatch
             }
             ___item_desc.text = InputButtonManager.Instance.AddButtonsToPromote(___item_desc.text);
         }
+    }
+
+}
+
+class SaveGamePatch()
+{
+    //how is saveslot 0 be handled?
+
+
+
+    [HarmonyPatch(typeof(SaveManager),"LoadGame")]
+    [HarmonyPrefix]
+    static void loadRandomData(ref SaveManager __instance)
+    {
+        //
+        Debug.LogWarning("Loading Randomizer File");
+        byte saveslot = MainVar.instance._saveslot;
+        if (MainVar.instance.CHAPTERRESET_Event > 0) saveslot = 100;
+        string saveFileName = $"Data/save{saveslot}.Rando";
+        if (File.Exists(RandomizerPlugin.pluginPath+saveFileName))
+        {
+            Debug.LogWarning("Loading Randomizer File");
+           RandomizerPlugin.loadRando(Randomizer.loadRandomizedItemsFromFile($"save{saveslot}.rando"));
+        }
+    }
+
+    [HarmonyPatch(typeof(SaveManager),"SaveGame")]
+    [HarmonyPostfix]
+    static void saveRandomData(ref bool backup)
+    {
+        byte saveslot = MainVar.instance._saveslot;
+        if (MainVar.instance.CHAPTERRESET_Event > 0) saveslot = 100;
+        else if (backup && (bool)WorldManager.Instance)
+        {
+            saveslot = MainVar.instance._backupsaveslot;
+        }
+        else if (MainVar.instance._isAutoSave) saveslot = 0;
+        Randomizer.saveRandomizedItemsToFile($"save{saveslot}.rando",RandomizerPlugin.saveRando());
+    }
+
+    [HarmonyPatch(typeof(SaveManager),"DeleteSave")]
+    [HarmonyPrefix]
+    static void deleteRandomData(ref byte saveslot)
+    {
+        string path = $"{RandomizerPlugin.pluginPath}Data/save{saveslot}.rando";
+        if (File.Exists(path)) File.Delete(path);
     }
 
 }
