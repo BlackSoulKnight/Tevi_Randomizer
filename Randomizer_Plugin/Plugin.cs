@@ -270,7 +270,7 @@ public class RandomizerPlugin : BaseUnityPlugin
         {
             if (!EventManager.Instance.isBossMode() && EventManager.Instance.getMode() == Mode.OFF && EventManager.Instance.getSubMode() == Mode.OFF)
             {
-                if (GemaMissionMode.Instance.isInMission() || WorldManager.Instance.CurrentRoomArea != AreaType.ILLUSIONPALACE || EventManager.Instance.GetCurrentEventBattle() != 0 || EventManager.Instance.isBossMode())
+                if (GemaMissionMode.Instance.isInMission() || WorldManager.Instance.Area == 30 || EventManager.Instance.GetCurrentEventBattle() != 0 || EventManager.Instance.isBossMode())
                 {
                     __instance.PlaySound(AllSound.SEList.MENUFAIL);
                     __instance.ChangeLogicStatus(PlayerLogicState.NORMAL);
