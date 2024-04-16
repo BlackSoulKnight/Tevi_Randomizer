@@ -103,7 +103,7 @@ public class RandomizerPlugin : BaseUnityPlugin
     private void Awake()
     {
         System.IO.Directory.CreateDirectory(pluginPath+"Data");
-        randomizer = new Randomizer();
+        randomizer = Randomizer.Instance;
 
         var instance = new Harmony("Randomizer");
         instance.PatchAll(typeof(RandomizerPlugin));

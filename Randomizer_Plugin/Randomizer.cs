@@ -96,7 +96,7 @@ namespace TeviRandomizer
                 return flag;
             }
         }
-
+        public static Randomizer Instance = new Randomizer();
         public class Location
         {
 
@@ -177,7 +177,7 @@ namespace TeviRandomizer
         private List<Area> areas;
         public static int bossCount = 0;
         public Randomizer() {
-            string path = BepInEx.Paths.PluginPath+ "/tevi_randomizer/" ;
+            string path = BepInEx.Paths.PluginPath+ "/tevi_randomizer/resource/" ;
             placeditems = new List<(int, int)>();
 
             itemPool = new List<(int,int)>();
@@ -462,15 +462,30 @@ namespace TeviRandomizer
 
 
 
-
         static public void saveRandomizedItemsToFile(string path,Dictionary<ItemData,ItemData> itemData)
         {
             if (!Directory.Exists(RandomizerPlugin.pluginPath + "Data")) Directory.CreateDirectory(RandomizerPlugin.pluginPath + "Data");
             StreamWriter saving = File.CreateText(RandomizerPlugin.pluginPath + "Data/" + path);
+            StreamWriter spoilerLog = File.CreateText(RandomizerPlugin.pluginPath + "Data/" + path+".spoiler.txt");
             foreach (KeyValuePair<ItemData, ItemData> item in itemData)
             {
                 saving.Write($"{item.Key.itemID},{item.Key.slotID}:{item.Value.itemID},{item.Value.slotID};\n");
+                string line = "";
+                line = $"Randomized Item: {item.Key.itemID} Slot: {item.Key.slotID}";
+                for (int x = 0; x < 70 - line.Length; x++) {
+                        line += " ";
+                    }
+                line += $"Original Item: {item.Value.itemID} Slot: {item.Value.slotID}";
+                for(int x = 0;x< 140 - line.Length; x++)
+                {
+                    line += " ";
+                }
+                Location loc = Instance.locations.Find(x => x.Itemname == item.Key.getItemTyp().ToString() && x.slotId == item.Key.slotID);
+                if (loc != null) { line += $"Location: {loc.Loaction}\n"; }
+                else line += "\n" ;
+                spoilerLog.Write(line);
             }
+            spoilerLog .Close();
             saving.Close();
         }
     }
