@@ -457,7 +457,7 @@ class Map:
     def createMap(self):
         self.quicklink = {}
         ## Load Areas
-        for val in json.load(open(Path+"\Locations.json")).values():
+        for val in json.load(open(Path+"\Area.json")).values():
             for v in val:
                 if v["Name"] not in self.quicklink:
                     self.quicklink[v["Name"]] = Area(v["Name"],v["Money"],v["Connections"])
@@ -473,7 +473,7 @@ class Map:
                 n["Exit"] = self.quicklink[n["Exit"]]
         
         #Load Items 
-        self.items = json.load(open(Path+"\Items.json"))
+        self.items = json.load(open(Path+"\Location.json"))
 
 
     def addItemsToMap(self):
@@ -731,47 +731,83 @@ class Generator:
         file.close()
         spoilerLog.close()
 
-#Small Interface
-t = Generator()
 
 
-print("Tevi Randomizer Seed Generator\n\n")
-print("Extra Range and Melee Attack Potion")
-while (t.extraRATK == -1):
-    try:
-        value = int(input("Number from 0 - 29:\n"))
-        if value <30 and value >=0:
-            t.extraRATK = value
-        else:
-            continue
-    except:
-        continue
 
-print("Start with level Compass 3")
-while(t.gibCompass == -1):
-    try:
-        t.gibCompass = int(input("Any Number: Yes, 0: No\n"))
-    except:
-        pass
+def convertAreaJsonToTxt():
+    s = open("Area.json",'r')
+    d = open("Area.txt",'w+')
+    c = open("Connection.txt",'w+')
+    s = json.load(s)
+    for k,v in s.items():
+        for a in v:
+            d.write(f"{a['Name']}\n")
+            for cs in a["Connections"]:
+                c.write(f"{a['Name']}:{cs['Exit']}:{cs['Method']}\n")
+    d.close()
     
-print("Start with Knife")
-while(t.knifeStart == -1):
-    try:
-        t.knifeStart = int(input("Any Number: Yes, 0: No\n")) 
-    except:
-        pass
 
-seed = input("Enter a Seed: ")    
-if(len(seed) == 0):
-    random.seed()
-    seed = random.randint(0,2**64)
-    print("No Seed was enterd")
-    print("Using seed: "+str(seed))
 
-random.seed(seed)
+def convertLocationJsonToTxt():
+    s = open("Location.json",'r')
+    d = open("Location.txt",'w+')
+    s = json.load(s)
+    for k in s:
+        d.write(f"{k['Itemname']}:{k['Location']}:{k['slotId']}:")
+        l = ""
+        for req in k["Requirement"]:
+            l+=f"{req['Method']},{req['Difficulty']};"
+        l = l[:-1]
+        d.write(l+"\n")
+    d.close()
 
-t.validator.explorerMode = False
-t.randomize()
+convertAreaJsonToTxt()
+convertLocationJsonToTxt()
 
-print("Generating the Seed has finished")
-input()
+
+def generateSeed():
+    #Small Interface
+    t = Generator()
+
+
+    print("Tevi Randomizer Seed Generator\n\n")
+    print("Extra Range and Melee Attack Potion")
+    while (t.extraRATK == -1):
+        try:
+            value = int(input("Number from 0 - 29:\n"))
+            if value <30 and value >=0:
+                t.extraRATK = value
+            else:
+                continue
+        except:
+            continue
+
+    print("Start with level Compass 3")
+    while(t.gibCompass == -1):
+        try:
+            t.gibCompass = int(input("Any Number: Yes, 0: No\n"))
+        except:
+            pass
+        
+    print("Start with Knife")
+    while(t.knifeStart == -1):
+        try:
+            t.knifeStart = int(input("Any Number: Yes, 0: No\n")) 
+        except:
+            pass
+
+    seed = input("Enter a Seed: ")    
+    if(len(seed) == 0):
+        random.seed()
+        seed = random.randint(0,2**64)
+        print("No Seed was enterd")
+        print("Using seed: "+str(seed))
+
+    random.seed(seed)
+
+    t.validator.explorerMode = False
+    t.randomize()
+
+    print("Generating the Seed has finished")
+    input()
+
