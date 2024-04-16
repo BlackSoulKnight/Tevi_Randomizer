@@ -60,7 +60,10 @@ namespace TeviRandomizer
                     settings.Add(t.name, t.GetComponentInChildren<TMPro.TMP_InputField>());
                 }
             }
-            gameObject.transform.Find("Return").gameObject.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate { gameObject.SetActive(false); });
+            gameObject.transform.Find("Return").gameObject.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate { 
+                UnityEngine.Cursor.visible = false;
+
+                gameObject.SetActive(false); });
             gameObject.transform.Find("Generate").gameObject.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate {
                 string input = ((TMP_InputField)settings["Seed"]).text;
                 if (input == "")
@@ -141,6 +144,7 @@ namespace TeviRandomizer
             {
                 finishedText.SetActive(false);
                 randoSetting.SetActive(true);
+                UnityEngine.Cursor.visible = true;
             }
         }
 
