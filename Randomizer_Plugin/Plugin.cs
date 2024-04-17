@@ -113,6 +113,7 @@ public class RandomizerPlugin : BaseUnityPlugin
         instance.PatchAll(typeof(ItemObtainPatch));
         instance.PatchAll(typeof(UI));
         instance.PatchAll(typeof(SaveGamePatch));
+        //instance.PatchAll(typeof(BonusFeaturePatch));
         Logger.LogInfo($"Plugin Randomizer is loaded!");
 
     }
@@ -636,8 +637,78 @@ class ItemObtainPatch()
         return true;
     }
 
-}
 
+    //change Map Icon 
+    [HarmonyPatch(typeof(WorldManager),"CollectMapItem")]
+    [HarmonyPrefix]
+    static bool collectIconChange(ref ItemTile data2, ref WorldManager __instance)
+    {
+            _ = __instance.Area;
+            ItemList.Type itemid = data2.itemid;
+            short atRoomX = __instance.CurrentRoomX;
+            short atRoomY = __instance.CurrentRoomY;
+            __instance.GetRoomWithPosition(data2.transform.position.x, data2.transform.position.y, out atRoomX, out atRoomY);
+            Debug.Log("Collecting : X = " + atRoomX + " , Y = " + atRoomY + " , Type : " + itemid);
+        ItemData data;
+        if (data2.itemid.ToString().Contains("STACKABLE"))
+        {
+            HUDObtainedItem.Instance.GiveItem(itemid, data2.GetSlotID());
+            itemid = RandomizerPlugin.getRandomizedItem(data2.itemid, data2.GetSlotID()).getItemTyp();
+
+
+        }
+        else
+        {
+            HUDObtainedItem.Instance.GiveItem(itemid, 1);
+            itemid = RandomizerPlugin.getRandomizedItem(data2.itemid, data2.GetSlotID()).getItemTyp();
+        }
+
+        if (itemid == ItemList.Type.STACKABLE_COG)
+            {
+            }
+            else if (itemid == ItemList.Type.STACKABLE_HP)
+            {
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.HP);
+            }
+            else if (itemid == ItemList.Type.STACKABLE_MP)
+            {
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.MP);
+            }
+            else if (itemid == ItemList.Type.STACKABLE_EP)
+            {
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.BP);
+            }
+            else if (itemid == ItemList.Type.STACKABLE_MATK)
+            {
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.MATK);
+            }
+            else if (itemid == ItemList.Type.STACKABLE_RATK)
+            {
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.RATK);
+            }
+            else if (itemid == ItemList.Type.STACKABLE_SHARD)
+            {
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.SHARD);
+            }
+            else if (itemid >= ItemList.Type.BADGE_START && itemid <= ItemList.Type.BADGE_MAX)
+            {
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.BADGE);
+            }
+            else if (itemid.ToString().Contains("ITEM") || itemid.ToString().Contains("QUEST"))
+            {
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.ITEM);
+            }
+            else
+            {
+                Debug.LogWarning("[EventDetect] Invalid Item obtained!");
+            }
+            data2.DisableMe();
+        
+
+        return false;
+    }
+
+}
 
 class EventPatch
 {
@@ -896,8 +967,6 @@ class EventPatch
         return false;
     }
 }
-
-
 
 class CraftingPatch
 {
@@ -2234,4 +2303,15 @@ class SaveGamePatch()
         if (File.Exists(path)) File.Delete(path);
     }
 
+}
+
+
+class BonusFeaturePatch()
+{
+    [HarmonyPatch(typeof(GemaChargedShotCombo),"AddMeter")]
+    [HarmonyPrefix]
+    static void MOREPOWAR(ref int add)
+    {
+        add *= 99;
+    }
 }
