@@ -17,6 +17,7 @@ using UnityEngine.UIElements;
 using JetBrains.Annotations;
 
 
+
 namespace TeviRandomizer
 {
 
@@ -62,6 +63,7 @@ namespace TeviRandomizer
             }
             gameObject.transform.Find("Return").gameObject.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate { 
                 UnityEngine.Cursor.visible = false;
+                GemaSuperSample.Instance.ChangeRenderScaleAnimation(1);
 
                 gameObject.SetActive(false); });
             gameObject.transform.Find("Generate").gameObject.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate {
@@ -144,6 +146,7 @@ namespace TeviRandomizer
             {
                 finishedText.SetActive(false);
                 randoSetting.SetActive(true);
+                GemaSuperSample.Instance.ChangeRenderScale(Screen.height/720f,false);
                 UnityEngine.Cursor.visible = true;
             }
         }

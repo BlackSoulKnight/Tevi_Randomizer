@@ -253,6 +253,10 @@ namespace TeviRandomizer
             {
                 tmp.Item2 += 3;
             }
+            if (((ItemList.Type)tmp.Item1).ToString().Contains("STACKABLE_SHARD"))
+            {
+                tmp.Item2 += 10;
+            }
             return tmp;
         }
 
