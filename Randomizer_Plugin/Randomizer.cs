@@ -12,8 +12,9 @@ namespace TeviRandomizer
 {
     public class Randomizer
     {
+        public static Randomizer Instance = new Randomizer();
 
-        public class Item
+        private class Item
         {
             public int Id;
             public string Name;
@@ -25,7 +26,7 @@ namespace TeviRandomizer
                 this.Type = _type;
             }
         }
-        public class Requirement
+        private class Requirement
         {
             public string Method;
             public int Difficulty;
@@ -96,21 +97,22 @@ namespace TeviRandomizer
                 return flag;
             }
         }
-        public static Randomizer Instance = new Randomizer();
-        public class Location
+        private class Location
         {
 
 
             public string Itemname;
             public string Loaction;
+            public int itemId;
             public int slotId;
             public int newItem;
             public int newSlotId;
             public List<Requirement> Requirement;
-            public Location(string itemname, string loaction, int slotId,string requirements)
+            public Location(int itemId, string loaction, int slotId,string requirements,string itemname = "")
             {
                 Itemname = itemname;
                 Loaction = loaction;
+                this.itemId = itemId;
                 this.slotId = slotId;
                 this.Requirement = new List<Requirement>();
                 this.newItem = 0;
@@ -128,9 +130,19 @@ namespace TeviRandomizer
                 }
                 return false;
             }
+            public void setNewItem(ItemList.Type item, int slot)
+            {
+                newItem = (int)item;
+                newSlotId = slot;
+            } 
+            public void setNewItem(int item, int slot)
+            {
+                newItem = item;
+                newSlotId = slot;
+            } 
         }
 
-        public class Area
+        private class Area
         {
             public string Name;
             //public List<Money> Money;
@@ -147,13 +159,13 @@ namespace TeviRandomizer
             }
         }
 
-        public class Money
+        private class Money
         {
             public string Method;
             public int Amount;
         }
 
-        public class Entrance
+        private class Entrance
         {
             Area from;
             public Area to;
@@ -172,13 +184,14 @@ namespace TeviRandomizer
         }
 
         private List<(int,int)> itemPool;
-        private List<(int, int)> placeditems;
         private List<Location> locations;
+        private Dictionary<string,Location> locationString;
         private List<Area> areas;
-        public static int bossCount = 0;
+        private static int bossCount = 0;
+
+
         public Randomizer() {
             string path = BepInEx.Paths.PluginPath+ "/tevi_randomizer/resource/" ;
-            placeditems = new List<(int, int)>();
 
             itemPool = new List<(int,int)>();
             /*
@@ -200,10 +213,12 @@ namespace TeviRandomizer
                 areas.Find(x => x.Name == para[0]).addConnection(areas.Find(x=> x.Name == para[1]), para[2]);
             }
             locations = new List<Location>();
+            locationString = new Dictionary<string,Location>();
             foreach (string line in File.ReadLines(path + "Location.txt"))
             {
                 string[] para = line.Split(':');
-                Location newloc = new Location(para[0], para[1], int.Parse(para[2]), para[3]);
+                Location newloc = new Location((int)Enum.Parse<ItemList.Type>(para[0]), para[1], int.Parse(para[2]), para[3], para[0]);
+                locationString.Add($"{para[0]+para[2]}", newloc);
                 locations.Add(newloc);
                 itemPool.Add(((int)Enum.Parse(typeof(ItemList.Type), para[0]), int.Parse(para[2])));
                 Area se = areas.Find(x => x.Name == para[1]);
@@ -216,30 +231,106 @@ namespace TeviRandomizer
                     Debug.LogWarning($"Could not find {para[1]} to place {para[0]}");
                 }
             }
+            ExtraOptionLocations();
+            
             
         }
 
+        private void ExtraOptionLocations()
+        {
+            Location loc;
+            loc = new Location(4006, "", 0, "", "Extra Range Potion");
+            locations.Add(loc);
+            locationString.Add("ExtraRangePotion", loc);
+            loc = new Location(4005, "", 0, "", "Extra Melee Potion");
+            locations.Add(loc);
+            locationString.Add("ExtraMeleePotion", loc);
+            loc = new Location(4200, "", 0, "", "Lv3Compass");
+            locations.Add(loc);
+            locationString.Add("Lv3Compass",loc);
+
+        }
+        private void CustomOptions(List<(int, int)> placeditems, List<Location> locationPool)
+        {
+            foreach (var option in settings)
+            {
+                string[] info = option.Key.Split(' ');
+                switch (info[0])
+                {
+                    case "Toggle":
+                        switch (info[1])
+                        {
+                            case "Knife":
+                                if (((UnityEngine.UI.Toggle)option.Value).isOn)
+                                {
+                                    locationString["ITEM_KNIFE1"].setNewItem(ItemList.Type.ITEM_KNIFE, 4);
+                                    locationPool.Remove(locationPool.Find(x => x.itemId == (int)ItemList.Type.ITEM_KNIFE && x.slotId == 1));
+                                    placeditems.Remove(((int)ItemList.Type.ITEM_KNIFE, 1));
+                                }
+                                break;
+                            case "Lv3Compass":
+                                if (((UnityEngine.UI.Toggle)option.Value).isOn)
+                                {
+                                    locationString["Lv3Compass"].setNewItem(4200, 1);
+                                }
+                                break;
+                            default: break;
+                        }
+                        break;
+                    case "Slider":
+                        switch (info[1])
+                        {
+                            case "RangePot":
+                                locationString["ExtraRangePotion"].setNewItem(4006, (int)((UnityEngine.UI.Slider)option.Value).value);
+                                break;
+                            case "MeleePot":
+                                locationString["ExtraMeleePotion"].setNewItem(4005, (int)((UnityEngine.UI.Slider)option.Value).value);
+                                break;
+
+                            default: break;
+
+                        }
+                        break;
+                }
+            }
+        }
 
 
         public void createSeed(System.Random seed)
         {
             int debugVal = 0;
+            List<(int, int)> placeditems;
+            placeditems = new List<(int, int)>();
+            List<Location> locationPool = new List<Location>();
+
             if (seed == null) seed = new System.Random();
             do
             {
                 debugVal++;
-                bossCount = 0;
+
+                locationPool.Clear();
+                locationPool.CopyFrom(locations);
+                locationPool.RemoveAll(x => x.itemId > 3000);                 // Remove all Extra Options from Pool (they are above 3000)
+
                 Debug.Log($"Seed creating Try: {debugVal}");
                 bossCount = 0;
                 placeditems.Clear();
                 placeditems.CopyFrom(itemPool);
 
-                foreach (Location loc in locations)
+                CustomOptions(placeditems, locationPool);                 //Extra stuff
+
+                while(locationPool.Count > 0)
                 {
-                    (int, int) item = createItem(seed,placeditems);
-                    loc.newSlotId = item.Item2;
-                    loc.newItem = item.Item1;
+                    int pos = seed.Next(locationPool.Count);
+                    Location loc = locationPool[pos];
+                    (int, int) item = createItem(seed, placeditems);
+                    locationString[loc.Itemname + loc.slotId.ToString()].newSlotId = item.Item2;
+                    locationString[loc.Itemname + loc.slotId.ToString()].newItem = item.Item1;
+                    locationPool.Remove(loc);
                 }
+
+
+                bossCount = 0;
                 Debug.Log("Validating");
             } while (!validate());
 
@@ -345,18 +436,13 @@ namespace TeviRandomizer
         }
 
         public Dictionary<ItemData,ItemData> GetData() {
-            Dictionary<ItemData,ItemData> data = new Dictionary<ItemData, ItemData>(new ItemData.EqualityComparer());
+            Dictionary<ItemData,ItemData> data = new Dictionary<ItemData, ItemData>();
             foreach(Location loc in locations)
             {
-                ItemList.Type itemref;
 
-                if(!Enum.TryParse<ItemList.Type>(loc.Itemname, out itemref))
-                {
-                    Debug.LogError($"Could not Parse {loc.Itemname}. Aborting Creation");
-                    return data;
-                }
+
                 
-                ItemData item1 = new ItemData((int)itemref, loc.slotId);
+                ItemData item1 = new ItemData(loc.itemId, loc.slotId);
                 ItemData item2 = new ItemData(loc.newItem, loc.newSlotId);
                 try
                 {
@@ -370,127 +456,43 @@ namespace TeviRandomizer
             }
             
 
-            return CustomOptions(data);
-        }
-
-        private Dictionary<ItemData,ItemData> CustomOptions(Dictionary<ItemData,ItemData> data) // NOT SAFE 
-        {
-            foreach(var option in settings)
-            {
-                string[] info = option.Key.Split(' ');
-                switch(info[0]) {
-                    case "Toggle":
-                        switch (info[1])
-                        {
-                            case "Knife":
-                                if (((UnityEngine.UI.Toggle)option.Value).isOn){
-                                    data[new ItemData(22, 1)] = new ItemData(22, 4);
-                                }
-                                break;
-                            case "Lv3Compass":
-                                if (((UnityEngine.UI.Toggle)option.Value).isOn)
-                                {
-                                    data.Add(new ItemData(4200,0),new ItemData(4200,1));
-                                }
-                                break;
-                            default: break;
-                        }
-                        break;
-                    case "Slider":
-                        switch (info[1])
-                        {
-                            case "RangePot":
-                                data.Add(new ItemData(4006, 0), new ItemData(4006, (int)((UnityEngine.UI.Slider)option.Value).value));
-                                break;
-                            case "MeleePot":
-                                data.Add(new ItemData(4005, 0), new ItemData(4005, (int)((UnityEngine.UI.Slider)option.Value).value));
-                                break;
-
-                            default: break;
-
-                        }
-                        break;
-                }
-            }
             return data;
         }
 
-        static public Dictionary<ItemData,ItemData> loadRandomizedItemsFromFile(string path)
-        {
-            Dictionary<ItemData, ItemData> data = new Dictionary<ItemData, ItemData>(new ItemData.EqualityComparer());
 
-            if (!Directory.Exists(RandomizerPlugin.pluginPath + "Data")) return data;
-            Dictionary<ItemData, ItemData> tmp = new Dictionary<ItemData, ItemData>();
-            try
-            {
-
-                string json = File.ReadAllText(RandomizerPlugin.pluginPath + "Data/" + path);
-                string[] blocks = json.Split(';');
-                foreach (string block in blocks)
-                {
-                    ItemData data1, data2;
-                    if (block.Length < 5) continue;
-                    try
-                    {
-                        string[] completeItem = block.Split(':');
-
-                        string[] itemDetails1 = completeItem[0].Split(',');
-                        string[] itemDetails2 = completeItem[1].Split(',');
-                        data1 = new ItemData(int.Parse(itemDetails1[0]), int.Parse(itemDetails1[1]));
-                        data2 = new ItemData(int.Parse(itemDetails2[0]), int.Parse(itemDetails2[1]));
-                    }
-                    catch
-                    {
-                        Debug.LogError($"Failed to parse {block}");
-                        continue;
-                    }
-                    try
-                    {
-                        data.Add(data1, data2);
-                    }
-                    catch
-                    {
-                        Debug.LogWarning($"Already changed {data1.getItemTyp()} slot {data1.getSlotId()}");
-
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                Debug.LogError(e);
-                return data;
-            }
-            return data;
-        }
         static public Dictionary<string, object> settings = new Dictionary<string, object>();
 
 
 
-        static public void saveRandomizedItemsToFile(string path,Dictionary<ItemData,ItemData> itemData)
+        static public void saveSpoilerLog(string path,Dictionary<ItemData,ItemData> itemData)
         {
             if (!Directory.Exists(RandomizerPlugin.pluginPath + "Data")) Directory.CreateDirectory(RandomizerPlugin.pluginPath + "Data");
-            StreamWriter saving = File.CreateText(RandomizerPlugin.pluginPath + "Data/" + path);
+            
             StreamWriter spoilerLog = File.CreateText(RandomizerPlugin.pluginPath + "Data/" + path+".spoiler.txt");
             foreach (KeyValuePair<ItemData, ItemData> item in itemData)
             {
-                saving.Write($"{item.Key.itemID},{item.Key.slotID}:{item.Value.itemID},{item.Value.slotID};\n");
+                string itemName = "";
                 string line = "";
-                line = $"Randomized Item: {item.Key.itemID} Slot: {item.Key.slotID}";
-                for (int x = 0; x < 70 - line.Length; x++) {
+                if (item.Value.itemID < 3000) itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + GemaItemManager.Instance.GetItemString((ItemList.Type)item.Value.itemID), false);
+                else itemName = ((ItemList.Type)item.Value.itemID).ToString();
+                line = $"Randomized Item: {itemName}"; // Slot: {item.Key.slotID}
+                for (int x = line.Length; x < 70; x++) {
                         line += " ";
                     }
-                line += $"Original Item: {item.Value.itemID} Slot: {item.Value.slotID}";
-                for(int x = 0;x< 140 - line.Length; x++)
+                if (item.Key.itemID < 3000) itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + GemaItemManager.Instance.GetItemString((ItemList.Type)item.Key.itemID), false);
+                else itemName = ((ItemList.Type)item.Key.itemID).ToString();
+                line += $"Original Item: {itemName}"; // Slot: {item.Value.slotID}
+                for (int x = line.Length; x< 140; x++)
                 {
                     line += " ";
                 }
                 Location loc = Instance.locations.Find(x => x.Itemname == item.Key.getItemTyp().ToString() && x.slotId == item.Key.slotID);
                 if (loc != null) { line += $"Location: {loc.Loaction}\n"; }
                 else line += "\n" ;
-                spoilerLog.Write(line);
+                if (item.Key.itemID < 3000)
+                    spoilerLog.Write(line);
             }
             spoilerLog .Close();
-            saving.Close();
         }
     }
 }
@@ -498,11 +500,5 @@ namespace TeviRandomizer
 
 
 /*
- * Reformat Json, this c# without a good conversion looks horrible
- * 
- * Saving Randomized File to specific saveslots
  * Returning to main Menu deloads randmoized data
- * Loading saveslots checks if a saved Randomizer file exists
- * New Game with Randomize option is only temp
- * Need to check what to do with Auto Saves checksum / rando seed?
  */

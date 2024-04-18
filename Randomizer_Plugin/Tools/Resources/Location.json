@@ -3225,6 +3225,28 @@
         ]
     },
     {
+        "Itemname": "ITEM_Alterscope",
+        "Location": "Lab Extra",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_HitCountChargeRate",
+        "Location": "Lab Extra",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "ITEM_WATERMOVEMENT",
         "Location": "Verdazure Sea",
         "slotId": 1,
@@ -5268,17 +5290,6 @@
         "Itemname": "STACKABLE_MP",
         "Location": "Valley Middle Part",
         "slotId": 27,
-        "Requirement": [
-            {
-                "Method": "",
-                "Difficulty": 0
-            }
-        ]
-    },
-    {
-        "Itemname": "ITEM_RapidShots",
-        "Location": "Sinners Hell",
-        "slotId": 1,
         "Requirement": [
             {
                 "Method": "",
