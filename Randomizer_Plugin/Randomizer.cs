@@ -188,6 +188,8 @@ namespace TeviRandomizer
         private Dictionary<string,Location> locationString;
         private List<Area> areas;
         private static int bossCount = 0;
+
+
         public Randomizer() {
             string path = BepInEx.Paths.PluginPath+ "/tevi_randomizer/resource/" ;
 
@@ -434,7 +436,7 @@ namespace TeviRandomizer
         }
 
         public Dictionary<ItemData,ItemData> GetData() {
-            Dictionary<ItemData,ItemData> data = new Dictionary<ItemData, ItemData>(new ItemData.EqualityComparer());
+            Dictionary<ItemData,ItemData> data = new Dictionary<ItemData, ItemData>();
             foreach(Location loc in locations)
             {
 
@@ -458,69 +460,19 @@ namespace TeviRandomizer
         }
 
 
-
-        static public Dictionary<ItemData,ItemData> loadRandomizedItemsFromFile(string path)
-        {
-            Dictionary<ItemData, ItemData> data = new Dictionary<ItemData, ItemData>(new ItemData.EqualityComparer());
-
-            if (!Directory.Exists(RandomizerPlugin.pluginPath + "Data")) return data;
-            Dictionary<ItemData, ItemData> tmp = new Dictionary<ItemData, ItemData>();
-            try
-            {
-
-                string json = File.ReadAllText(RandomizerPlugin.pluginPath + "Data/" + path);
-                string[] blocks = json.Split(';');
-                foreach (string block in blocks)
-                {
-                    ItemData data1, data2;
-                    if (block.Length < 5) continue;
-                    try
-                    {
-                        string[] completeItem = block.Split(':');
-
-                        string[] itemDetails1 = completeItem[0].Split(',');
-                        string[] itemDetails2 = completeItem[1].Split(',');
-                        data1 = new ItemData(int.Parse(itemDetails1[0]), int.Parse(itemDetails1[1]));
-                        data2 = new ItemData(int.Parse(itemDetails2[0]), int.Parse(itemDetails2[1]));
-                    }
-                    catch
-                    {
-                        Debug.LogError($"Failed to parse {block}");
-                        continue;
-                    }
-                    try
-                    {
-                        data.Add(data1, data2);
-                    }
-                    catch
-                    {
-                        Debug.LogWarning($"Already changed {data1.getItemTyp()} slot {data1.getSlotId()}");
-
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                Debug.LogError(e);
-                return data;
-            }
-            return data;
-        }
         static public Dictionary<string, object> settings = new Dictionary<string, object>();
 
 
 
-        static public void saveRandomizedItemsToFile(string path,Dictionary<ItemData,ItemData> itemData)
+        static public void saveSpoilerLog(string path,Dictionary<ItemData,ItemData> itemData)
         {
             if (!Directory.Exists(RandomizerPlugin.pluginPath + "Data")) Directory.CreateDirectory(RandomizerPlugin.pluginPath + "Data");
-            StreamWriter saving = File.CreateText(RandomizerPlugin.pluginPath + "Data/" + path);
+            
             StreamWriter spoilerLog = File.CreateText(RandomizerPlugin.pluginPath + "Data/" + path+".spoiler.txt");
             foreach (KeyValuePair<ItemData, ItemData> item in itemData)
             {
                 string itemName = "";
-                saving.Write($"{item.Key.itemID},{item.Key.slotID}:{item.Value.itemID},{item.Value.slotID};\n");
                 string line = "";
-
                 if (item.Value.itemID < 3000) itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + GemaItemManager.Instance.GetItemString((ItemList.Type)item.Value.itemID), false);
                 else itemName = ((ItemList.Type)item.Value.itemID).ToString();
                 line = $"Randomized Item: {itemName}"; // Slot: {item.Key.slotID}
@@ -541,7 +493,6 @@ namespace TeviRandomizer
                     spoilerLog.Write(line);
             }
             spoilerLog .Close();
-            saving.Close();
         }
     }
 }
@@ -549,11 +500,5 @@ namespace TeviRandomizer
 
 
 /*
- * Reformat Json, this c# without a good conversion looks horrible
- * 
- * Saving Randomized File to specific saveslots
  * Returning to main Menu deloads randmoized data
- * Loading saveslots checks if a saved Randomizer file exists
- * New Game with Randomize option is only temp
- * Need to check what to do with Auto Saves checksum / rando seed?
  */
