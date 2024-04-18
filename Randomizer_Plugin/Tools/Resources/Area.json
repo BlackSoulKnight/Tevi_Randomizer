@@ -1436,6 +1436,10 @@
                 {
                     "Exit": "Catacombs Entrance",
                     "Method": "ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "Lab Extra",
+                    "Method": "ITEM_BombLengthExtend3"
                 }
             ]
         },
