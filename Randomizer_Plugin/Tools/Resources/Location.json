@@ -5276,17 +5276,6 @@
         ]
     },
     {
-        "Itemname": "ITEM_RapidShots",
-        "Location": "Sinners Hell",
-        "slotId": 1,
-        "Requirement": [
-            {
-                "Method": "",
-                "Difficulty": 0
-            }
-        ]
-    },
-    {
         "Itemname": "BADGE_HP2Damage6",
         "Location": "Sinners Hell",
         "slotId": 1,

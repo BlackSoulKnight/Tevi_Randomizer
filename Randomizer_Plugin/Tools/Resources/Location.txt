@@ -438,7 +438,6 @@ STACKABLE_MATK:Valley Middle Part:24:,0
 BADGE_GStrongUpBulletCancelC:Valley Middle Part:1:SpinnerBash,0
 STACKABLE_HP:Valley Middle Part:24:ITEM_Rotater,0
 STACKABLE_MP:Valley Middle Part:27:,0
-ITEM_RapidShots:Sinners Hell:1:,0
 BADGE_HP2Damage6:Sinners Hell:1:,0
 STACKABLE_HP:Sinners Hell:29:ITEM_AirSlide,0
 STACKABLE_COG:Sinners Hell:43:Boss,0
