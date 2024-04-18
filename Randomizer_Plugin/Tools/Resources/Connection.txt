@@ -135,6 +135,7 @@ Catacombs Main:Lab:ITEM_LINEBOMB
 Vassago fight:Lab Part 2:ITEM_LINEBOMB
 Lab:Lab Part 2:ITEM_LINEBOMB
 Lab Part 2:Catacombs Entrance:ITEM_LINEBOMB
+Lab Part 2:Lab Extra:ITEM_BombLengthExtend3
 Lab Extra:Lab Part 2:ITEM_LINEBOMB
 Cloister:Valhalla City:
 Gallary of Mirrors:Gallary of Souls:

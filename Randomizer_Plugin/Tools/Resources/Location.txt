@@ -273,6 +273,8 @@ STACKABLE_EP:Lab Part 2:19:,0
 STACKABLE_COG:Lab Part 2:45:Boss,0
 BADGE_StyleComboPassiveA:Lab Part 2:1:,0
 ITEM_DodgeShot:Lab Part 2:1:,0
+ITEM_Alterscope:Lab Extra:1:,0
+BADGE_HitCountChargeRate:Lab Extra:1:,0
 ITEM_WATERMOVEMENT:Verdazure Sea:1:,0
 STACKABLE_HP:Verdazure Sea:4:ITEM_LINEBOMB,0
 BADGE_CommonDropRecover:Verdazure Sea:1:,0
