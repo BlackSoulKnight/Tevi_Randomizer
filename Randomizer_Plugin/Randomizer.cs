@@ -12,8 +12,9 @@ namespace TeviRandomizer
 {
     public class Randomizer
     {
+        public static Randomizer Instance = new Randomizer();
 
-        public class Item
+        private class Item
         {
             public int Id;
             public string Name;
@@ -25,7 +26,7 @@ namespace TeviRandomizer
                 this.Type = _type;
             }
         }
-        public class Requirement
+        private class Requirement
         {
             public string Method;
             public int Difficulty;
@@ -96,8 +97,7 @@ namespace TeviRandomizer
                 return flag;
             }
         }
-        public static Randomizer Instance = new Randomizer();
-        public class Location
+        private class Location
         {
 
 
@@ -142,7 +142,7 @@ namespace TeviRandomizer
             } 
         }
 
-        public class Area
+        private class Area
         {
             public string Name;
             //public List<Money> Money;
@@ -159,13 +159,13 @@ namespace TeviRandomizer
             }
         }
 
-        public class Money
+        private class Money
         {
             public string Method;
             public int Amount;
         }
 
-        public class Entrance
+        private class Entrance
         {
             Area from;
             public Area to;
@@ -187,7 +187,7 @@ namespace TeviRandomizer
         private List<Location> locations;
         private Dictionary<string,Location> locationString;
         private List<Area> areas;
-        public static int bossCount = 0;
+        private static int bossCount = 0;
         public Randomizer() {
             string path = BepInEx.Paths.PluginPath+ "/tevi_randomizer/resource/" ;
 
@@ -317,12 +317,16 @@ namespace TeviRandomizer
 
                 CustomOptions(placeditems, locationPool);                 //Extra stuff
 
-                foreach (Location loc in locationPool)
+                while(locationPool.Count > 0)
                 {
-                    (int, int) item = createItem(seed,placeditems);
+                    int pos = seed.Next(locationPool.Count);
+                    Location loc = locationPool[pos];
+                    (int, int) item = createItem(seed, placeditems);
                     locationString[loc.Itemname + loc.slotId.ToString()].newSlotId = item.Item2;
                     locationString[loc.Itemname + loc.slotId.ToString()].newItem = item.Item1;
+                    locationPool.Remove(loc);
                 }
+
 
                 bossCount = 0;
                 Debug.Log("Validating");
@@ -513,14 +517,20 @@ namespace TeviRandomizer
             StreamWriter spoilerLog = File.CreateText(RandomizerPlugin.pluginPath + "Data/" + path+".spoiler.txt");
             foreach (KeyValuePair<ItemData, ItemData> item in itemData)
             {
+                string itemName = "";
                 saving.Write($"{item.Key.itemID},{item.Key.slotID}:{item.Value.itemID},{item.Value.slotID};\n");
                 string line = "";
-                line = $"Randomized Item: {item.Key.itemID} Slot: {item.Key.slotID}";
-                for (int x = 0; x < 70 - line.Length; x++) {
+
+                if (item.Value.itemID < 3000) itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + GemaItemManager.Instance.GetItemString((ItemList.Type)item.Value.itemID), false);
+                else itemName = ((ItemList.Type)item.Value.itemID).ToString();
+                line = $"Randomized Item: {itemName}"; // Slot: {item.Key.slotID}
+                for (int x = line.Length; x < 70; x++) {
                         line += " ";
                     }
-                line += $"Original Item: {item.Value.itemID} Slot: {item.Value.slotID}";
-                for(int x = 0;x< 140 - line.Length; x++)
+                if (item.Key.itemID < 3000) itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + GemaItemManager.Instance.GetItemString((ItemList.Type)item.Key.itemID), false);
+                else itemName = ((ItemList.Type)item.Key.itemID).ToString();
+                line += $"Original Item: {itemName}"; // Slot: {item.Value.slotID}
+                for (int x = line.Length; x< 140; x++)
                 {
                     line += " ";
                 }
