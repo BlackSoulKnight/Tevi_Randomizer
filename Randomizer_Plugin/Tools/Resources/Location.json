@@ -4192,6 +4192,17 @@
         ]
     },
     {
+        "Itemname": "ITEM_DOUBLEJUMP",
+        "Location": "Gallary of Souls",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "BADGE_Instant1",
         "Location": "Gallary of Souls",
         "slotId": 1,

@@ -1488,8 +1488,11 @@ class CraftingPatch
                     }
                     else
                         HUDObtainedItem.Instance.GiveItem(___currentItemType, 1);
-
-                        Debug.Log("[Craft] Crafting " + ___currentItemType);
+                    if (___currentItemType.ToString().Contains("BADGE"))
+                    {
+                        SaveManager.Instance.SetMiniFlag(Mini.BadgeCrafted, (byte)(SaveManager.Instance.GetMiniFlag(Mini.BadgeCrafted) + 1));
+                    }
+                    Debug.Log("[Craft] Crafting " + ___currentItemType);
                     ___flashing = 0.333f;
 
 
