@@ -13,9 +13,8 @@ using UnityEngine;
 using Bullet;
 using QFSW.QC;
 using TeviRandomizer;
-using UnityEngine.Android;
-using MiniGame;
 using Map;
+using System.Linq;
 
 
 
@@ -30,17 +29,17 @@ public class ItemData
         slotID = _slotID;
     }
 
-    public class EqualityComparer : IEqualityComparer<ItemData>
+    public override bool Equals(object obj)
     {
-        public bool Equals(ItemData x, ItemData y)
-        {
-            return x.itemID == y.itemID && x.slotID == y.slotID;
-        }
+        if (obj is ItemData other)
+            return itemID == other.itemID && slotID == other.slotID;
+        else 
+            return false;
+    }
+    public override int GetHashCode()
+    {
+        return itemID ^ slotID;
 
-        public int GetHashCode(ItemData x)
-        {
-            return x.itemID ^ x.slotID;
-        }
     }
     public ItemList.Type getItemTyp()
     {
@@ -50,8 +49,6 @@ public class ItemData
     {
         return (byte)slotID;
     }
-
-
 
 }
 
@@ -89,7 +86,7 @@ public enum Upgradable
 public class RandomizerPlugin : BaseUnityPlugin
 {
 
-    static Dictionary<ItemData, ItemData> __itemData = new Dictionary<ItemData, ItemData>(new ItemData.EqualityComparer());
+    static public Dictionary<ItemData, ItemData> __itemData = new Dictionary<ItemData, ItemData>();
 
     static public string pluginPath = BepInEx.Paths.PluginPath + "/tevi_randomizer/";
 
@@ -113,6 +110,7 @@ public class RandomizerPlugin : BaseUnityPlugin
         instance.PatchAll(typeof(ItemObtainPatch));
         instance.PatchAll(typeof(UI));
         instance.PatchAll(typeof(SaveGamePatch));
+        //instance.PatchAll(typeof(BonusFeaturePatch));
         Logger.LogInfo($"Plugin Randomizer is loaded!");
 
     }
@@ -636,8 +634,77 @@ class ItemObtainPatch()
         return true;
     }
 
-}
 
+    //change Map Icon 
+    [HarmonyPatch(typeof(WorldManager),"CollectMapItem")]
+    [HarmonyPrefix]
+    static bool collectIconChange(ref ItemTile data2, ref WorldManager __instance)
+    {
+            _ = __instance.Area;
+            ItemList.Type itemid = data2.itemid;
+            short atRoomX = __instance.CurrentRoomX;
+            short atRoomY = __instance.CurrentRoomY;
+            __instance.GetRoomWithPosition(data2.transform.position.x, data2.transform.position.y, out atRoomX, out atRoomY);
+            Debug.Log("Collecting : X = " + atRoomX + " , Y = " + atRoomY + " , Type : " + itemid);
+        if (data2.itemid.ToString().Contains("STACKABLE"))
+        {
+            HUDObtainedItem.Instance.GiveItem(itemid, data2.GetSlotID());
+            itemid = RandomizerPlugin.getRandomizedItem(data2.itemid, data2.GetSlotID()).getItemTyp();
+
+
+        }
+        else
+        {
+            HUDObtainedItem.Instance.GiveItem(itemid, 1);
+            itemid = RandomizerPlugin.getRandomizedItem(data2.itemid, 1).getItemTyp();
+        }
+
+        if (itemid == ItemList.Type.STACKABLE_COG)
+            {
+            }
+            else if (itemid == ItemList.Type.STACKABLE_HP)
+            {
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.HP);
+            }
+            else if (itemid == ItemList.Type.STACKABLE_MP)
+            {
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.MP);
+            }
+            else if (itemid == ItemList.Type.STACKABLE_EP)
+            {
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.BP);
+            }
+            else if (itemid == ItemList.Type.STACKABLE_MATK)
+            {
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.MATK);
+            }
+            else if (itemid == ItemList.Type.STACKABLE_RATK)
+            {
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.RATK);
+            }
+            else if (itemid == ItemList.Type.STACKABLE_SHARD)
+            {
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.SHARD);
+            }
+            else if (itemid >= ItemList.Type.BADGE_START && itemid <= ItemList.Type.BADGE_MAX)
+            {
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.BADGE);
+            }
+            else if (itemid.ToString().Contains("ITEM") || itemid.ToString().Contains("QUEST"))
+            {
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.ITEM);
+            }
+            else
+            {
+                Debug.LogWarning("[EventDetect] Invalid Item obtained!");
+            }
+            data2.DisableMe();
+        
+
+        return false;
+    }
+
+}
 
 class EventPatch
 {
@@ -896,8 +963,6 @@ class EventPatch
         return false;
     }
 }
-
-
 
 class CraftingPatch
 {
@@ -2200,18 +2265,34 @@ class SaveGamePatch()
 
 
     [HarmonyPatch(typeof(SaveManager),"LoadGame")]
-    [HarmonyPrefix]
+    [HarmonyPostfix]
     static void loadRandomData(ref SaveManager __instance)
     {
-        //
-        Debug.LogWarning("Loading Randomizer File");
+
         byte saveslot = MainVar.instance._saveslot;
-        if (MainVar.instance.CHAPTERRESET_Event > 0) saveslot = 100;
-        string saveFileName = $"Data/save{saveslot}.Rando";
-        if (File.Exists(RandomizerPlugin.pluginPath+saveFileName))
+        Dictionary<ItemData, ItemData> data = new Dictionary<ItemData, ItemData>();
+
+        string result = "";
+        customSaveFileNames(ref result, ref saveslot);
+        if (ES3.FileExists(result))
         {
-            Debug.LogWarning("Loading Randomizer File");
-           RandomizerPlugin.loadRando(Randomizer.loadRandomizedItemsFromFile($"save{saveslot}.rando"));
+            ES3File eS3File = new ES3File(result);
+            try 
+            {
+                int[] keyItem = eS3File.Load<int[]>("RandoKeyItem");
+                int[] keySlot = eS3File.Load<int[]>("RandoKeySlot");
+                int[] valItem = eS3File.Load<int[]>("RandoValItem");
+                int[] valSlot = eS3File.Load<int[]>("RandoValSlot");
+                for(int i =0; i < keyItem.Length; i++)
+                {
+                    data.Add(new ItemData(keyItem[i], keySlot[i]),new ItemData(valItem[i], valSlot[i]));
+                }
+            }
+            catch (Exception e) 
+            {
+                Debug.LogError(e);
+            }
+            RandomizerPlugin.__itemData = data;
         }
     }
 
@@ -2219,22 +2300,52 @@ class SaveGamePatch()
     [HarmonyPostfix]
     static void saveRandomData(ref bool backup)
     {
+
         byte saveslot = MainVar.instance._saveslot;
-        if (MainVar.instance.CHAPTERRESET_Event > 0) saveslot = 100;
-        else if (backup && (bool)WorldManager.Instance)
+
+        string result = "";
+        customSaveFileNames(ref result, ref saveslot);
+        ES3File eS3File = new ES3File(result);
+        Dictionary<ItemData, ItemData> s = RandomizerPlugin.__itemData;
+
+        int[] keyItem = new int[s.Count];
+        int[] keySlot = new int[s.Count];
+        int[] valSlot = new int[s.Count];
+        int[] valItem = new int[s.Count];
+        for (int i = 0; i < s.Count; i++)
         {
-            saveslot = MainVar.instance._backupsaveslot;
+            KeyValuePair<ItemData,ItemData> pair = s.ElementAt(i);
+            keyItem[i] = pair.Key.itemID;
+            keySlot[i] = pair.Key.slotID;
+            valItem[i] = pair.Value.itemID;
+            valSlot[i] = pair.Value.slotID;
         }
-        else if (MainVar.instance._isAutoSave) saveslot = 0;
-        Randomizer.saveRandomizedItemsToFile($"save{saveslot}.rando",RandomizerPlugin.saveRando());
+
+        eS3File.Save("RandoKeyItem",keyItem);
+        eS3File.Save("RandoKeySlot",keySlot);
+        eS3File.Save("RandoValItem", valItem);
+        eS3File.Save("RandoValSlot", valSlot);
+        eS3File.Sync();
+
     }
 
-    [HarmonyPatch(typeof(SaveManager),"DeleteSave")]
+    [HarmonyPatch(typeof(SaveManager),"GetSaveFileName")]
     [HarmonyPrefix]
-    static void deleteRandomData(ref byte saveslot)
-    {
-        string path = $"{RandomizerPlugin.pluginPath}Data/save{saveslot}.rando";
-        if (File.Exists(path)) File.Delete(path);
+    static bool customSaveFileNames(ref string __result,ref byte saveslot) {
+        __result = "randomizer/rando.tevisave" + saveslot+".sav";
+        return false;
+
     }
 
+}
+
+
+class BonusFeaturePatch()
+{
+    [HarmonyPatch(typeof(GemaChargedShotCombo),"AddMeter")]
+    [HarmonyPrefix]
+    static void MOREPOWAR(ref int add)
+    {
+        add *= 99;
+    }
 }

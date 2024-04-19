@@ -273,6 +273,8 @@ STACKABLE_EP:Lab Part 2:19:,0
 STACKABLE_COG:Lab Part 2:45:Boss,0
 BADGE_StyleComboPassiveA:Lab Part 2:1:,0
 ITEM_DodgeShot:Lab Part 2:1:,0
+ITEM_Alterscope:Lab Extra:1:,0
+BADGE_HitCountChargeRate:Lab Extra:1:,0
 ITEM_WATERMOVEMENT:Verdazure Sea:1:,0
 STACKABLE_HP:Verdazure Sea:4:ITEM_LINEBOMB,0
 BADGE_CommonDropRecover:Verdazure Sea:1:,0
@@ -439,7 +441,6 @@ STACKABLE_MATK:Valley Middle Part:24:,0
 BADGE_GStrongUpBulletCancelC:Valley Middle Part:1:SpinnerBash,0
 STACKABLE_HP:Valley Middle Part:24:ITEM_Rotater,0
 STACKABLE_MP:Valley Middle Part:27:,0
-ITEM_RapidShots:Sinners Hell:1:,0
 BADGE_HP2Damage6:Sinners Hell:1:,0
 STACKABLE_HP:Sinners Hell:29:ITEM_AirSlide,0
 STACKABLE_COG:Sinners Hell:43:Boss,0
