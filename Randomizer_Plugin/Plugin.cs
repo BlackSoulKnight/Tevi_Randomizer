@@ -15,6 +15,7 @@ using QFSW.QC;
 using TeviRandomizer;
 using Map;
 using System.Linq;
+using MiniGame;
 
 
 
@@ -81,7 +82,7 @@ public enum Upgradable
 
 
 
-[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.9.5.0")]
+[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.9.5.5")]
 [BepInProcess("TEVI.exe")]
 public class RandomizerPlugin : BaseUnityPlugin
 {
@@ -471,11 +472,11 @@ public class RandomizerPlugin : BaseUnityPlugin
             __result++;
         else
             return;
-        if (checkRandomizedItemGot(ItemList.Type.ITEM_OrbTypeC3, 1))
+        if (checkRandomizedItemGot(ItemList.Type.ITEM_OrbTypeS2, 1))
             __result++;
         else
             return;
-        if (checkRandomizedItemGot(ItemList.Type.ITEM_OrbTypeS2, 1))
+        if (checkRandomizedItemGot(ItemList.Type.ITEM_OrbTypeC3, 1))
             __result++;
         else
             return;
@@ -690,7 +691,7 @@ class ItemObtainPatch()
             {
                 FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.BADGE);
             }
-            else if (itemid.ToString().Contains("ITEM") || itemid.ToString().Contains("QUEST"))
+            else if (itemid.ToString().Contains("ITEM") || itemid.ToString().Contains("QUEST") || itemid == ItemList.Type.STACKABLE_BAG)
             {
                 FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.ITEM);
             }
@@ -2326,7 +2327,7 @@ class SaveGamePatch()
         eS3File.Save("RandoValItem", valItem);
         eS3File.Save("RandoValSlot", valSlot);
         eS3File.Sync();
-
+        Randomizer.saveSpoilerLog($"rando.SpoilerSave{saveslot}.txt",s);
     }
 
     [HarmonyPatch(typeof(SaveManager),"GetSaveFileName")]
@@ -2348,4 +2349,535 @@ class BonusFeaturePatch()
     {
         add *= 99;
     }
+
+    static public short customDiff = 0;
+    [HarmonyPatch(typeof(enemyController),"InitStart")]                 //NOT WORKING
+    [HarmonyPostfix]
+    static void balanceAct(ref enemyController __instance)
+    {
+        if (__instance.isBoss == BossType.NPC || __instance.isBoss == BossType.SUMMON)
+        {
+            return;
+        }
+
+        enemyController.EnemyData enemyDB = __instance.GetEnemyDB(__instance.type.ToString());
+        int atk = enemyDB.atk;
+        int health = __instance.health;
+        __instance.maxToBreak = enemyDB.toBreak;
+        Traverse t = Traverse.Create(__instance);
+
+        if (__instance.isBoss == BossType.BOSS)
+        {
+            if (SaveManager.Instance.GetCustomGame(CustomGame.HighBossScale) || GemaBossRushMode.Instance.isBossRushTypeEqualOrHigher(BossRushType.XTREME))
+            {
+                atk = (int)((float)atk * (1f + 0.014f * (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_HP) + 0.004f * (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD)));
+                atk = (int)((float)atk * (1f + 0.0004f * (float)SaveManager.Instance.GetUsedCost(GetRemain: false)));
+            }
+            else
+            {
+                float num = 0.002f;
+                if (customDiff >= (short)Difficulty.D5)
+                {
+                    num = 0.008f;
+                }
+                atk = (int)((float)atk * (1f + num * (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_HP) + 0.001f * (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD)));
+                if (customDiff >= (short)Difficulty.D4)
+                {
+                    atk = (int)((float)atk * (1f + 0.0002f * (float)SaveManager.Instance.GetUsedCost(GetRemain: false)));
+                }
+            }
+        }
+        else if (!EventManager.Instance.isBossMode())
+        {
+            atk += SaveManager.Instance.GetChapter() / 2 + (int)((float)(SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_HP) + SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD)) * 0.25f);
+        }
+
+        float num2 = 1f;
+        float num3 = customDiff - 5;
+        if (customDiff == (short)Difficulty.D6)
+        {
+            num3 = 2f;
+        }
+        else if (customDiff == (short)Difficulty.D7)
+        {
+            num3 = 3f;
+        }
+        if (num3 < 0f)
+        {
+            float num4 = 1f + num3 * 0.1f;
+            if (customDiff <= (short)Difficulty.D0)
+            {
+                num4 -= 0.1f;
+            }
+            if (num4 < 0.1f)
+            {
+                num4 = 0.1f;
+            }
+            num2 *= num4;
+        }
+        if (num3 > 0f)
+        {
+            num2 = ((!(num3 <= 5f)) ? (num2 + 0.75f) : (num2 + num3 * 0.15f));
+        }
+        if (num3 >= 0f && __instance.isBoss != BossType.BOSS)
+        {
+            num2 += 0.1f;
+        }
+        if (num3 >= 0.99f && __instance.isBoss != BossType.BOSS)
+        {
+            num2 += 0.1f;
+        }
+        atk = (int)((float)atk * num2);
+        if (num3 > 0f)
+        {
+            atk += (int)(num3 * 1.75f);
+        }
+
+        // HP
+        if (__instance.isBoss == BossType.BOSS)
+        {
+            if (!GemaBossRushMode.Instance.isBossRush() || (int)GemaBossRushMode.Instance.BossRushType >= 1)
+            {
+                float num5 = 1f + 0.008f * ((float)SaveManager.Instance.GetMainLevel() + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD) / 2f + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK) + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_RATK));
+                if (SaveManager.Instance.GetCustomGame(CustomGame.HighBossScale) || GemaBossRushMode.Instance.isBossRushTypeEqualOrHigher(BossRushType.XTREME))
+                {
+                    num5 += 0.000225f * (float)SaveManager.Instance.GetUsedCost(GetRemain: false);
+                }
+                else
+                {
+                    float num6 = 0.005f;
+                    if (customDiff >= (short)Difficulty.D6)
+                    {
+                        num6 = 0.006f;
+                    }
+                    if (customDiff >= (short)Difficulty.D7)
+                    {
+                        num6 = 0.007f;
+                    }
+                    if (customDiff >= (short)Difficulty.D9)
+                    {
+                        num6 = 0.008f;
+                    }
+                    num5 = 1f + num6 * ((float)SaveManager.Instance.GetMainLevel() + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD) / 4f + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK) / 3.5f + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_RATK) / 3.5f);
+                    if (customDiff >= (short)Difficulty.D6 && SaveManager.Instance.GetChapter() >= 4)
+                    {
+                        num5 += 0.000125f * (float)SaveManager.Instance.GetUsedCost(GetRemain: false);
+                    }
+                }
+                health = (int)((float)health * num5);
+            }
+            subBossBoost(ref __instance);
+            if(customDiff -5 > 0)
+            {
+                if (customDiff - 5 < 5)
+                    health = (int)((float)health * (1f + Math.Min((float)(customDiff - 5) * 0.067f, 0.3f)));
+                else
+                    health = (int)((float)health * (1f + 0.3f + (float)(customDiff - 10) * 0.005f));
+
+            }
+
+            __instance.SetBreakTime();
+            if (!GemaBossRushMode.Instance.isBossRush())
+            {
+                if (__instance.type == Character.Type.PKOA || __instance.type == Character.Type.Frankie || __instance.type == Character.Type.Jezbelle || __instance.type == Character.Type.Lily || SaveManager.Instance.GetDifficultyName() <= Difficulty.D7)
+                {
+                    int num7 = MainVar.instance.justGameOverTime;
+                    if (num7 > 10)
+                    {
+                        num7 = 10;
+                    }
+                    if (customDiff <= (short)Difficulty.D5 && num7 > 8)
+                    {
+                        num7 = 8;
+                    }
+                    if (customDiff <= (short)Difficulty.D7 && num7 > 2)
+                    {
+                        num7 = 2;
+                    }
+                    if (atk > 1)
+                    {
+                        atk -= num7;
+                        if (atk < 1)
+                        {
+                            atk = 1;
+                        }
+                        if (customDiff >= (short)Difficulty.D7)
+                        {
+                            float num8 = 1f - (float)num7 * 0.025f;
+                            if (customDiff <= (short)Difficulty.D5)
+                            {
+                                num8 = 1f - (float)num7 * 0.01f;
+                                num8 += 0.025f;
+                            }
+                            if (num8 < 0.7f)
+                            {
+                                num8 = 0.7f;
+                            }
+                            if (num8 > 1f)
+                            {
+                                num8 = 1f;
+                            }
+                            if (customDiff <= (short)Difficulty.D7 && num8 < 0.85f)
+                            {
+                                num8 = 0.85f;
+                            }
+                            health = (int)((float)health * num8);
+                        }
+                        Debug.Log("[Boss Started] Base ATK R : " + num7 + " | " + atk + " - " + health);
+                    }
+                }
+                if (SaveManager.Instance.GetCustomGame(CustomGame.HighBossScale))
+                {
+                    __instance.maxToBreak += (int)(__instance.maxToBreak * (0.01f * (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK)));
+                }
+                else
+                {
+                    __instance.maxToBreak += (int)(__instance.maxToBreak * (0.005f * (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK)));
+                }
+            }
+            t.Method("DifficultyBossHealth").GetValue();
+            Debug.Log("[Boss Started] Base Health : " + enemyDB.MaxHP + " Spawn Health : " + health);
+        }
+
+        //More HP and ATK for normal Enemies
+        else if (!EventManager.Instance.isBossMode())
+        {
+            health += (int)((float)(SaveManager.Instance.GetChapter() * 2 + SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD)) + (float)(SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK) + SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_RATK)) / 3f);
+            float num9 = 0f;
+            num3 = (float)(customDiff - 5);
+            num9 = ((!(num3 > 0f)) ? 0f : ((!(num3 <= 5f)) ? (num9 + (0.375f + (num3 - 5f) * 0.0001f)) : (num9 + num3 * 0.075f)));
+            float num10 = (float)(int)SaveManager.Instance.GetChapter() * 0.1f;
+            if (num10 > 1f)
+            {
+                num10 = 1f;
+            }
+            num9 *= num10;
+            health = (int)((float)health * (1f + num9 / 3.5f));
+
+            if ((WorldManager.Instance.Area != 0 || SaveManager.Instance.GetChapter() >= 1) && !EventManager.Instance.isBossMode() && SaveManager.Instance.GetChapter() <= 3 && EventManager.Instance.GetCurrentEventBattle() == Mode.OFF)
+            {
+                if (customDiff <= (short)Difficulty.D6)
+                {
+                    health = (int)((float)health * 0.925f);
+                }
+                if (customDiff <= (short)Difficulty.D5)
+                {
+                    health = (int)((float)health * 0.925f);
+                }
+            }
+            if (customDiff >= (short)Difficulty.D5)
+            {
+                atk = (int)((float)atk * 1.025f);
+            }
+            if (customDiff >= (short)Difficulty.D10)
+            {
+                atk = (int)((float)atk * 1.125f);
+            }
+        }
+
+
+
+
+        if (customDiff <= (short)Difficulty.D0)
+        {
+            atk = (int)((float)atk * 0.4f);
+        }
+        else if (customDiff <= (short)Difficulty.D1)
+        {
+            atk = (int)((float)atk * 0.8f);
+        }
+        if (atk > 0)
+        {
+            atk += (int)((float)customDiff / 2f);
+            if (customDiff >= (short)Difficulty.D10)
+            {
+                atk += SaveManager.Instance.GetChapter() / 2;
+            }
+            else if (customDiff <= (short)Difficulty.D0)
+            {
+                atk -= (int)((float)(int)SaveManager.Instance.GetChapter() * 3f);
+            }
+            else if (customDiff <= (short)Difficulty.D1)
+            {
+                atk -= (int)((float)(int)SaveManager.Instance.GetChapter() * 2f);
+            }
+            else if (customDiff <= (short)Difficulty.D3)
+            {
+                atk -= (int)((float)(int)SaveManager.Instance.GetChapter() * 1.5f);
+            }
+            else if (customDiff <= (short)Difficulty.D5)
+            {
+                atk -= (int)((float)(int)SaveManager.Instance.GetChapter() * 1f);
+            }
+            if (atk < 1)
+            {
+                atk = 1;
+            }
+        }
+        if (GemaBossRushMode.Instance.isBossRush())
+        {
+            //ChapterEnemyBoost();
+            if (GemaBossRushMode.Instance.BossRushType == BossRushType.BEGINNER)
+            {
+                health = (int)((float)health * 0.25f);
+                atk = (int)((float)atk * 0.5f);
+            }
+            if (GemaBossRushMode.Instance.BossRushType == BossRushType.STANDARD)
+            {
+                health = (int)((float)health * 0.35f);
+                atk = (int)((float)atk * 0.6f);
+            }
+            if (GemaBossRushMode.Instance.BossRushType == BossRushType.MASTER)
+            {
+                health = (int)((float)health * 0.55f);
+                atk = (int)((float)atk * 1.4f);
+            }
+            if (GemaBossRushMode.Instance.BossRushType == BossRushType.XTREME)
+            {
+                health = (int)((float)health * 0.85f);
+                atk = (int)((float)atk * 1.4f);
+            }
+            if (GemaBossRushMode.Instance.BossRushType == BossRushType.LIBRARY)
+            {
+                health = (int)((float)health * 1.42f);
+                atk = (int)((float)atk * 1.75f);
+            }
+            else
+            {
+                if (__instance.type == Character.Type.GemaYue_B || __instance.type == Character.Type.Waero_B || __instance.type == Character.Type.EinLee_B)
+                {
+                    health = (int)((float)health * 0.75f);
+                }
+                if (__instance.type == Character.Type.Jezbelle)
+                {
+                    health = (int)((float)health * 0.9f);
+                }
+                if (__instance.type == Character.Type.Jethro)
+                {
+                    health = (int)((float)health * 0.9f);
+                }
+            }
+            if (atk < 20)
+            {
+                atk = 20;
+            }
+        }
+        else
+        {
+            if (SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam) || SaveManager.Instance.GetMiniFlag(Mini.GameCleared) > 0)
+            {
+                float maxBkrea = __instance.maxToBreak;
+                t.Method("ChapterEnemyBoost").GetValue();
+                __instance.maxToBreak = maxBkrea;
+                __instance.toBreak = maxBkrea;
+            }
+            if (SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam))
+            {
+                t.Method("FreeRoamEnemyBoost").GetValue();
+            }
+            if (__instance.type == Character.Type.GemaYue_B || __instance.type == Character.Type.EinLee_B || __instance.type == Character.Type.Waero_B)
+            {
+                health = (int)((float)health * 2.2f);
+                atk = (int)((float)atk * 3.125f);
+            }
+        }
+
+        __instance.maxhealth = health;
+        __instance.health = health;
+        __instance.atk = atk;
+
+    }
+    [HarmonyPatch(typeof(enemyController),"SubBossBoost")]
+    [HarmonyPrefix]
+    static bool subBossBoost(ref enemyController __instance)
+    {
+        if (GemaBossRushMode.Instance.isBossRush() || (__instance.type != Character.Type.Barados && __instance.type != Character.Type.Caprice && __instance.type != Character.Type.Katu && __instance.type != Character.Type.Thetis && __instance.type != Character.Type.Roleo))
+        {
+            return false;
+        }
+        if (__instance.type == Character.Type.Katu)
+        {
+            if (customDiff >= (short)Difficulty.D7)
+            {
+                __instance.health += 125;
+            }
+            if (customDiff >= (short)Difficulty.D10)
+            {
+                __instance.health += 125;
+            }
+        }
+        if (__instance.type != Character.Type.Thetis && __instance.type != Character.Type.Roleo)
+        {
+            if (SaveManager.Instance.GetMiniFlag(Mini.Sidequest1_Mine_Finished) > 0)
+            {
+                __instance.health += 200;
+                __instance.atk++;
+            }
+            if (SaveManager.Instance.GetMiniFlag(Mini.Sidequest1_Ruin_Finished) > 0)
+            {
+                __instance.health += 300;
+                __instance.atk += 2;
+            }
+            if (SaveManager.Instance.GetMiniFlag(Mini.Sidequest1_Wasteland_Finished) > 0)
+            {
+                __instance.health += 200;
+                __instance.atk++;
+            }
+            if (SaveManager.Instance.GetChapter() >= 2)
+            {
+                __instance.health += 200;
+                __instance.atk++;
+            }
+        }
+        if (SaveManager.Instance.GetMiniFlag(Mini.Sidequest2_Beach_Finished) > 0)
+        {
+            __instance.health += 300;
+            __instance.atk += 3;
+        }
+        if (SaveManager.Instance.GetChapter() >= 3)
+        {
+            __instance.health = (int)((float)__instance.health * (1f + 0.2525f * (float)(SaveManager.Instance.GetChapter() - 2)));
+            __instance.atk += 4 * (SaveManager.Instance.GetChapter() - 2);
+            __instance.maxToBreak = (int)(__instance.toBreak * (1f + 0.172f * (float)(SaveManager.Instance.GetChapter() - 2)));
+            __instance.toBreak = __instance.maxToBreak;
+            SaveManager.Instance.DifficultyMinMaxOffset = (int)((float)(SaveManager.Instance.GetChapter() - 2) * 0.75f);
+            if (SaveManager.Instance.DifficultyMinMaxOffset > 4)
+            {
+                SaveManager.Instance.DifficultyMinMaxOffset = 4;
+            }
+        }
+        if (SaveManager.Instance.GetChapter() >= 4)
+        {
+            if (__instance.type == Character.Type.Katu)
+            {
+                __instance.health = (int)((float)__instance.health * 1.015f);
+            }
+            else
+            {
+                __instance.health = (int)((float)__instance.health * 1.05f);
+            }
+            __instance.atk += 2;
+        }
+        if (SaveManager.Instance.GetChapter() >= 5)
+        {
+            if (__instance.type != Character.Type.Katu)
+            {
+                __instance.health = (int)((float)__instance.health * 1.05f);
+            }
+            __instance.atk += 3;
+        }
+        Debug.Log("[BossHealth] Boost Sub Boss : " + __instance.type.ToString() + "'s health set to " + __instance.health + ", ATK set to " + __instance.atk + " , break set to " + __instance.maxToBreak);
+        return false;
+    }
+
+
+    [HarmonyPatch(typeof(enemyController), "DifficultyBossHealth")]
+    [HarmonyPrefix]
+    static bool difficultyBossHealth(ref enemyController __instance)
+    {
+        float num = 0f;
+        Difficulty difficultyName = (Difficulty)customDiff;
+        if (difficultyName >= Difficulty.D6)
+        {
+            float num2 = 0f;
+            if (__instance.type == Character.Type.Vassago || __instance.type == Character.Type.Amaryllis || __instance.type == Character.Type.Tahlia)
+            {
+                num2 += 0.3f;
+            }
+            else if (__instance.type == Character.Type.Charon || __instance.type == Character.Type.Jezbelle || __instance.type == Character.Type.Cyril || __instance.type == Character.Type.Jethro || __instance.type == Character.Type.Eidolon)
+            {
+                num2 += 0.25f;
+            }
+            if (!(num2 > 0f))
+            {
+                return false;
+            }
+            __instance.atk += (int)(40f * num2);
+            if (num2 > 0.1f)
+            {
+                float num3 = (float)(SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK) + SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_RATK)) * 0.0667f;
+                if (num3 > 1f)
+                {
+                    num3 = 1f;
+                }
+                int num4 = (int)((float)__instance.health * (num2 * num3));
+                __instance.health += num4;
+                float num5 = (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK) * 0.022f;
+                if (num5 > 1f)
+                {
+                    num5 = 1f;
+                }
+                int num6 = (int)(__instance.maxToBreak * ((1f + num2) * num5));
+                __instance.maxToBreak += num6;
+                Debug.Log("[enemyController] " + num2 + " | HP : " + num3 + " , " + num4 + " BREAK : " + num5 + " " + num6);
+            }
+            return false;
+        }
+        num = ((difficultyName <= Difficulty.D0) ? 0.4f : (difficultyName switch
+        {
+            Difficulty.D1 => 0.35f,
+            Difficulty.D2 => 0.3f,
+            Difficulty.D3 => 0.25f,
+            Difficulty.D4 => 0.2f,
+            Difficulty.D5 => 0.15f,
+            _ => 0.1f,
+        }));
+        if (SaveManager.Instance.GetChapter() <= 1)
+        {
+            num /= 1.75f;
+        }
+        else if (SaveManager.Instance.GetChapter() <= 2)
+        {
+            num /= 1.5f;
+        }
+        else if (SaveManager.Instance.GetChapter() <= 3)
+        {
+            num /= 1.25f;
+        }
+        float num7 = 0f;
+        if (__instance.type == Character.Type.Vassago || __instance.type == Character.Type.Amaryllis || __instance.type == Character.Type.Cyril || __instance.type == Character.Type.Tahlia)
+        {
+            num7 += 0.2f;
+        }
+        else if (__instance.type == Character.Type.Charon || __instance.type == Character.Type.Jezbelle || __instance.type == Character.Type.Jethro || __instance.type == Character.Type.Memloch || __instance.type == Character.Type.Eidolon)
+        {
+            num7 += 0.1f;
+        }
+        else if (__instance.type == Character.Type.Revenance)
+        {
+            num7 += 0.05f;
+        }
+        if (num7 > 0f)
+        {
+            if (difficultyName >= Difficulty.D7)
+            {
+                num7 /= 2f;
+            }
+            if (num <= 0f)
+            {
+                num += num7;
+            }
+            else if (num <= num7)
+            {
+                num7 *= 1f + num;
+                num = num7;
+            }
+            else
+            {
+                num *= 1f + num7 / 2f;
+            }
+        }
+        if (num > 0.5f)
+        {
+            num = 0.5f;
+        }
+        if (num > 0f)
+        {
+            __instance.health -= (int)((float)__instance.health * num);
+        }
+        return false;
+    }
+
+
 }
+

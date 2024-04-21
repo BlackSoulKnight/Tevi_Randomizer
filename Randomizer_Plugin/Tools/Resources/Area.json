@@ -1257,7 +1257,7 @@
             "Connections": [
                 {
                     "Exit": "Illusion Palace",
-                    "Method": "WinRequirment"
+                    "Method": ""
                 }
             ]
         },
