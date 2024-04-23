@@ -529,32 +529,54 @@ namespace TeviRandomizer
         static public void saveSpoilerLog(string FileName,Dictionary<ItemData,ItemData> itemData)
         {
             if (!Directory.Exists(RandomizerPlugin.pluginPath + "Data")) Directory.CreateDirectory(RandomizerPlugin.pluginPath + "Data");
-            
+
+            bool debugWrite = false;
             StreamWriter spoilerLog = File.CreateText(RandomizerPlugin.pluginPath + "Data/" + FileName);
+            StreamWriter spoilerLogS = null;
+            if (debugWrite)
+                spoilerLogS = File.CreateText(RandomizerPlugin.pluginPath + "Data/a" + FileName);
             foreach (KeyValuePair<ItemData, ItemData> item in itemData)
             {
                 string itemName = "";
                 string line = "";
+                string line2 = "";
                 if (item.Value.itemID < 3000) itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + GemaItemManager.Instance.GetItemString((ItemList.Type)item.Value.itemID), false);
                 else itemName = ((ItemList.Type)item.Value.itemID).ToString();
                 line = $"Randomized Item: {itemName}"; // Slot: {item.Key.slotID}
-                for (int x = line.Length; x < 70; x++) {
-                        line += " ";
-                    }
+                line2 = $"Randomized Item: {item.Value.getItemTyp()} {item.Value.slotID}"; // Slot: 
+                for (int x = line.Length; x < 70; x++) 
+                    line += " ";
+                for (int x = line2.Length; x < 70; x++) 
+                    line2 += " ";
+                    
                 if (item.Key.itemID < 3000) itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + GemaItemManager.Instance.GetItemString((ItemList.Type)item.Key.itemID), false);
                 else itemName = ((ItemList.Type)item.Key.itemID).ToString();
                 line += $"Original Item: {itemName}"; // Slot: {item.Value.slotID}
+                line2 += $"Original Item: {item.Key.getItemTyp()} {item.Key.slotID}"; // Slot: {item.Value.slotID}
                 for (int x = line.Length; x< 140; x++)
-                {
                     line += " ";
-                }
+
+                for (int x = line2.Length; x< 140; x++)
+                    line2 += " ";
                 Location loc = Instance.locations.Find(x => x.Itemname == item.Key.getItemTyp().ToString() && x.slotId == item.Key.slotID);
                 if (loc != null) { line += $"Location: {loc.Loaction}\n"; }
                 else line += "\n" ;
+                if (loc != null) { line2 += $"Location: {loc.Loaction}\n"; }
+                else line2 += "\n" ;
                 if (item.Key.itemID < 3000)
+                {
                     spoilerLog.Write(line);
+                    if (debugWrite)
+                    {
+                        spoilerLogS.Write(line2);
+                    }
+                }
+
             }
-            spoilerLog .Close();
+            spoilerLog.Close();
+            if (debugWrite)
+                spoilerLogS.Close();
+
         }
     }
 }
