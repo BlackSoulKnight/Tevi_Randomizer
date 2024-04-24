@@ -12,3 +12,7 @@ Randomizer_Plugin/Generator/__pycache__/itemDB.cpython-310.pyc
 Randomizer_Plugin/Generator/Notes.txt
 Randomizer_Plugin/QFSW.QC.dll
 Randomizer_Plugin/Assembly-CSharp-firstpass.dll
+Randomizer_Plugin/resource/randomizerui.manifest
+Randomizer_Plugin/resource/resource
+Randomizer_Plugin/resource/resource.manifest
+/Randomizer_Plugin/Assembly-CSharp-firstpass.dll

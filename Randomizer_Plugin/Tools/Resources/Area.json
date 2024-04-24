@@ -1157,8 +1157,27 @@
                     "Method": "ITEM_DOUBLEJUMP"
                 },
                 {
+                    "Exit": "Vena",
+                    "Method": ""
+                },
+                {
                     "Exit": "Valhalla Breath Left Part",
                     "Method": "ITEM_JETPACK"
+                }
+            ]
+        },
+        {
+            "Name": "Vena",
+            "Money": [
+                {
+                    "Method": "",
+                    "Amount": 0
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "",
+                    "Method": ""
                 }
             ]
         },

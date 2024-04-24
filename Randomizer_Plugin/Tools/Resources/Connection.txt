@@ -112,7 +112,9 @@ Heavens Valley:Travoll Industrie:
 Heavens Valley:Valhalla City:
 Heavens Valley:Valhalla Breath Left Part:ITEM_AirDash
 Heavens Valley:Valhalla Breath Left Part:ITEM_DOUBLEJUMP
+Heavens Valley:Vena:
 Heavens Valley:Valhalla Breath Left Part:ITEM_JETPACK
+Vena::
 Valhalla Breath Left Part::
 Ruins Entrance:Ruins:ITEM_LINEBOMB
 Ruins Entrance:Start Area:

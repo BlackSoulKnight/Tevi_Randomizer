@@ -30,7 +30,7 @@ namespace TeviRandomizer
 
         static Dictionary<string,object> settings = new Dictionary<string,object>();
 
-        static public object getSettings(string settingName)
+        static public object getSettings(string settingName ="")
         {
 
             return settings;
@@ -60,6 +60,10 @@ namespace TeviRandomizer
                 {
                     settings.Add(t.name, t.GetComponentInChildren<TMPro.TMP_InputField>());
                 }
+                else if (t.name.Contains("Density"))
+                {
+                    settings.Add(t.name, t.GetComponentInChildren<TMPro.TMP_InputField>());
+                }
             }
             gameObject.transform.Find("Return").gameObject.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate { 
                 UnityEngine.Cursor.visible = false;
@@ -67,6 +71,12 @@ namespace TeviRandomizer
 
                 gameObject.SetActive(false); });
             gameObject.transform.Find("Generate").gameObject.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate {
+            string diff = ((TMP_InputField)settings["Density"]).text;
+                if (diff.Length > 0)
+                {
+                    BonusFeaturePatch.customDiff = int.Parse(diff);
+                }
+                else BonusFeaturePatch.customDiff = -1;
                 string input = ((TMP_InputField)settings["Seed"]).text;
                 if (input == "")
                 {
@@ -111,6 +121,7 @@ namespace TeviRandomizer
 
             randoSetting = MonoBehaviour.Instantiate(RandoUIPrefab, GameObject.Find("Titile Screen Manager").transform);
             addAllOptions(randoSetting);
+            randoSetting.SetActive(false);
 
 
 
