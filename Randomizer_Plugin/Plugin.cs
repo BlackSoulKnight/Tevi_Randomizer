@@ -2366,9 +2366,6 @@ class BonusFeaturePatch()
     {
         add *= 99;
     }
-<<<<<<< Updated upstream
-}
-=======
 
     static public int customDiff = 0;
 
@@ -2955,4 +2952,3 @@ class BonusFeaturePatch()
 
 }
 
->>>>>>> Stashed changes
