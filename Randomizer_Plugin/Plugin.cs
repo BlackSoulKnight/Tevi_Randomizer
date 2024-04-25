@@ -112,6 +112,7 @@ public class RandomizerPlugin : BaseUnityPlugin
         instance.PatchAll(typeof(ItemObtainPatch));
         instance.PatchAll(typeof(UI));
         instance.PatchAll(typeof(SaveGamePatch));
+        instance.PatchAll(typeof(ScalePatch));
         //instance.PatchAll(typeof(BonusFeaturePatch));
         Logger.LogInfo($"Plugin Randomizer is loaded!");
 

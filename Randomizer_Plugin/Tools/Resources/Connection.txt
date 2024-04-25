@@ -2,8 +2,21 @@ Desert Base Main:Start Area:
 Desert Base Main:Desert Base Upper Half:ITEM_HIJUMP && ITEM_DOUBLEJUMP && ITEM_WALLJUMP
 Desert Base Main:Desert Base Upper Half:ITEM_JETPACK && ITEM_WALLJUMP
 Desert Base Main:Desert Base Upper Half:ITEM_DOUBLEJUMP && ITEM_WALLJUMP2
+Desert Base Main:Desert Base Upper Half:ITEM_KNIFE && ITEM_SLIDE
+Desert Base Entrance:Start Area:
+Desert Base Entrance:Desert Base Main:ChargeShot
+Desert Base Entrance:Desert Base Main:ITEM_JETPACK
+Desert Base Entrance:Desert Base Main:ITEM_AirDash
+Desert Base Entrance:Desert Base Main:ITEM_JETPACK
+Desert Base Entrance:Desert Base Main:ITEM_DOUBLEJUMP
+Desert Base Entrance:Desert Base Main:ITEM_HIJUMP
+Desert Base Entrance:Desert Base Main:ITEM_LINEBOMB && ITEM_AREABOMB
 Desert Base Upper Half:Desert Base Main:
-Start Area:Oasis:
+Start Area:Oasis:ChargeShot
+Start Area:Oasis:ITEM_DOUBLEJUMP
+Start Area:Oasis:ITEM_DOUBLEJUMP
+Start Area:Oasis:ITEM_JETPACK
+Start Area:Oasis:ITEM_AirDash
 Start Area:Ruins Entrance:
 Start Area:Heavens Valley:ITEM_LINEBOMB
 Start Area:Morose Transit:ITEM_LINEBOMB
@@ -107,14 +120,18 @@ Valley Middle Part:Valley Upper Part:
 Valley Upper Part:Valley Middle Part:
 Valhalla City:Cloister:ITEM_SLIDE
 Valhalla City:EverGarden:
-Heavens Valley:Start Area:
-Heavens Valley:Travoll Industrie:
-Heavens Valley:Valhalla City:
-Heavens Valley:Valhalla Breath Left Part:ITEM_AirDash
-Heavens Valley:Valhalla Breath Left Part:ITEM_DOUBLEJUMP
-Heavens Valley:Vena:
-Heavens Valley:Valhalla Breath Left Part:ITEM_JETPACK
-Vena::
+Valhalla City:Vena:
+Valhalla Breath Lower Left Part:Travoll Industrie:
+Valhalla Breath Lower Left Part:Valhalla City:
+Valhalla Breath Lower Left Part:Valhalla Breath Left Part:ITEM_AirDash
+Valhalla Breath Lower Left Part:Valhalla Breath Left Part:ITEM_DOUBLEJUMP
+Valhalla Breath Lower Left Part:Valhalla Breath Left Part:ITEM_JETPACK
+Vena:Start Area:
+Heavens Valley:Valhalla Breath Lower Left Part:ITEM_JETPACK
+Heavens Valley:Valhalla Breath Lower Left Part:ITEM_AirDash
+Heavens Valley:Valhalla Breath Lower Left Part:ITEM_SLIDE
+Heavens Valley:Valhalla Breath Lower Left Part:ITEM_DOUBLEJUMP
+Heavens Valley:Valhalla Breath Lower Left Part:ChargeShot
 Valhalla Breath Left Part::
 Ruins Entrance:Ruins:ITEM_LINEBOMB
 Ruins Entrance:Start Area:
@@ -140,6 +157,8 @@ Lab Part 2:Catacombs Entrance:ITEM_LINEBOMB
 Lab Part 2:Lab Extra:ITEM_BombLengthExtend3
 Lab Extra:Lab Part 2:ITEM_LINEBOMB
 Cloister:Valhalla City:
+Cloister:Cloister 2:ChargeShot
+Cloister 2::
 Gallary of Mirrors:Gallary of Souls:
 Gallary of Souls:Gallary of Souls Boss:ITEM_JETPACK2
 Gallary of Souls:Gallary of Souls Boss:ITEM_WALLJUMP

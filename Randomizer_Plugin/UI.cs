@@ -74,9 +74,9 @@ namespace TeviRandomizer
             string diff = ((TMP_InputField)settings["Density"]).text;
                 if (diff.Length > 0)
                 {
-                    BonusFeaturePatch.customDiff = int.Parse(diff);
+                    RandomizerPlugin.customDiff = int.Parse(diff);
                 }
-                else BonusFeaturePatch.customDiff = -1;
+                else RandomizerPlugin.customDiff = -1;
                 string input = ((TMP_InputField)settings["Seed"]).text;
                 if (input == "")
                 {

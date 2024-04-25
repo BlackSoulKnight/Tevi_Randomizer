@@ -1,4 +1,5 @@
 Desert Base Main
+Desert Base Entrance
 Desert Base Upper Half
 Start Area
 Crafting
@@ -41,8 +42,9 @@ Valley Lower Part
 Valley Middle Part
 Valley Upper Part
 Valhalla City
-Heavens Valley
+Valhalla Breath Lower Left Part
 Vena
+Heavens Valley
 Valhalla Breath Left Part
 Ruins Entrance
 Ruins
@@ -57,6 +59,7 @@ Lab
 Lab Part 2
 Lab Extra
 Cloister
+Cloister 2
 Gallary of Mirrors
 Gallary of Souls
 Gallary of Souls Boss
