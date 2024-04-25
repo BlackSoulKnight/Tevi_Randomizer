@@ -93,7 +93,7 @@
         "slotId": 16,
         "Requirement": [
             {
-                "Method": "ITEM_LINEBOMB && Highjump",
+                "Method": "ITEM_LINEBOMB && ITEM_HIGHJUMP",
                 "Difficulty": 0
             },
             {
@@ -141,7 +141,7 @@
     },
     {
         "Itemname": "BADGE_AutoCombo",
-        "Location": "Desert Base Main",
+        "Location": "Desert Base Entrance",
         "slotId": 1,
         "Requirement": [
             {
@@ -152,7 +152,7 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Desert Base Main",
+        "Location": "Desert Base Entrance",
         "slotId": 22,
         "Requirement": [
             {
@@ -163,7 +163,7 @@
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "Desert Base Main",
+        "Location": "Desert Base Entrance",
         "slotId": 20,
         "Requirement": [
             {
@@ -343,7 +343,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -376,7 +376,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -560,7 +560,19 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_KNIFE",
+                "Difficulty": 0
+            },
+            {
+                "Method": "VoidBomb",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ChargeShot",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_LINEBOMB && ITEM_AREABOMB",
                 "Difficulty": 0
             }
         ]
@@ -612,6 +624,10 @@
                 "Difficulty": 0
             },
             {
+                "Method": "ChargeShot",
+                "Difficulty": 0
+            },
+            {
                 "Method": "ITEM_AirDash",
                 "Difficulty": 0
             }
@@ -630,7 +646,7 @@
     },
     {
         "Itemname": "BADGE_DoubleJumpAttack",
-        "Location": "Heavens Valley",
+        "Location": "Valhalla Breath Lower Left Part",
         "slotId": 1,
         "Requirement": [
             {
@@ -645,14 +661,14 @@
         "slotId": 25,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Heavens Valley",
+        "Location": "Valhalla Breath Lower Left Part",
         "slotId": 13,
         "Requirement": [
             {
@@ -663,7 +679,7 @@
     },
     {
         "Itemname": "BADGE_Normal3HModStabB",
-        "Location": "Heavens Valley",
+        "Location": "Valhalla Breath Lower Left Part",
         "slotId": 1,
         "Requirement": [
             {
@@ -674,7 +690,7 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Heavens Valley",
+        "Location": "Valhalla Breath Lower Left Part",
         "slotId": 13,
         "Requirement": [
             {
@@ -696,7 +712,7 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Heavens Valley",
+        "Location": "Valhalla Breath Lower Left Part",
         "slotId": 13,
         "Requirement": [
             {
@@ -760,7 +776,7 @@
         "slotId": 14,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -1242,7 +1258,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -1253,7 +1269,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ChargeShot && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -1286,7 +1302,7 @@
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -1618,7 +1634,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && BombLengthExtend1 && HighJump && ITEM_WALLJUMP",
+                "Method": "ITEM_SLIDE && BombLengthExtend1 && ITEM_HIGHJUMP && ITEM_WALLJUMP",
                 "Difficulty": 0
             },
             {
@@ -1630,7 +1646,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AREABOMB && HighJump && ITEM_WALLJUMP",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AREABOMB && ITEM_HIGHJUMP && ITEM_WALLJUMP",
                 "Difficulty": 0
             }
         ]
@@ -1719,7 +1735,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "Highjump && ITEM_WALLJUMP",
+                "Method": "ITEM_HIGHJUMP && ITEM_WALLJUMP",
                 "Difficulty": 0
             }
         ]
@@ -1830,7 +1846,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "HighJump",
+                "Method": "ITEM_HIGHJUMP",
                 "Difficulty": 0
             }
         ]
@@ -1992,7 +2008,15 @@
         "slotId": 7,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_OrbTypeS2 && ChargeShot",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_OrbTypeS3 && ChargeShot",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_OrbTypeC3 && ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -2066,7 +2090,23 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_LINEBOMB",
+                "Method": "ITEM_HIGHJUMP",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_DOUBLEJUMP",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_JETPACK",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_AirDash",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -2118,7 +2158,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_DOUBLEJUMP && HighJump && ITEM_JETPACK",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_DOUBLEJUMP && ITEM_HIGHJUMP && ITEM_JETPACK",
                 "Difficulty": 0
             }
         ]
@@ -2786,15 +2826,15 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "HighJump && ITEM_JETPACK",
+                "Method": "ITEM_HIGHJUMP && ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "HighJump && ITEM_DOUBLEJUMP",
+                "Method": "ITEM_HIGHJUMP && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "HighJump && ITEM_DOUBLEJUMP",
+                "Method": "ITEM_HIGHJUMP && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
@@ -3527,7 +3567,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeS3 && HighJump",
+                "Method": "ITEM_OrbTypeS3 && ITEM_HIGHJUMP",
                 "Difficulty": 0
             },
             {
@@ -3781,7 +3821,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_LINEBOMB && HighJump && ITEM_JETPACK",
+                "Method": "ITEM_LINEBOMB && ITEM_HIGHJUMP && ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
@@ -3808,7 +3848,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && HighJump && ITEM_JETPACK2",
+                "Method": "ITEM_SLIDE && ITEM_HIGHJUMP && ITEM_JETPACK2",
                 "Difficulty": 0
             }
         ]
@@ -3849,7 +3889,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -3860,7 +3900,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE",
+                "Method": "ITEM_SLIDE && ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -3908,7 +3948,7 @@
         "slotId": 20,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS3 && ITEM_DOUBLEJUMP && ITEM_AirDash",
+                "Method": "ITEM_OrbTypeS3 && ITEM_DOUBLEJUMP && ITEM_AirDash && ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -3930,7 +3970,7 @@
         "slotId": 16,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -3941,7 +3981,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -3959,7 +3999,7 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Cloister",
+        "Location": "Cloister 2",
         "slotId": 22,
         "Requirement": [
             {
@@ -3970,7 +4010,7 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Cloister",
+        "Location": "Cloister 2",
         "slotId": 18,
         "Requirement": [
             {
@@ -3981,7 +4021,7 @@
     },
     {
         "Itemname": "BADGE_BreakHeal",
-        "Location": "Cloister",
+        "Location": "Cloister 2",
         "slotId": 1,
         "Requirement": [
             {
@@ -3992,7 +4032,7 @@
     },
     {
         "Itemname": "ITEM_WALLJUMP",
-        "Location": "Cloister",
+        "Location": "Cloister 2",
         "slotId": 1,
         "Requirement": [
             {
@@ -4003,7 +4043,7 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Cloister",
+        "Location": "Cloister 2",
         "slotId": 17,
         "Requirement": [
             {
@@ -4014,7 +4054,7 @@
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "Cloister",
+        "Location": "Cloister 2",
         "slotId": 46,
         "Requirement": [
             {
@@ -4025,7 +4065,7 @@
     },
     {
         "Itemname": "BADGE_QuickMPRegainB",
-        "Location": "Cloister",
+        "Location": "Cloister 2",
         "slotId": 1,
         "Requirement": [
             {
@@ -4033,7 +4073,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "Highjump && ITEM_WALLJUMP",
+                "Method": "ITEM_HIGHJUMP && ITEM_WALLJUMP",
                 "Difficulty": 0
             },
             {
@@ -4048,7 +4088,7 @@
     },
     {
         "Itemname": "BADGE_StyleComboPassiveMAX",
-        "Location": "Cloister",
+        "Location": "Cloister 2",
         "slotId": 1,
         "Requirement": [
             {
@@ -4170,7 +4210,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "HighJump",
+                "Method": "ITEM_HIGHJUMP",
                 "Difficulty": 0
             },
             {
@@ -4638,7 +4678,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && ITEM_JETPACK && HighJump && SpinnerBash",
+                "Method": "ITEM_SLIDE && ITEM_JETPACK && ITEM_HIGHJUMP && SpinnerBash",
                 "Difficulty": 0
             }
         ]
@@ -4657,7 +4697,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_LINEBOMB && ITEM_JETPACK2 && HighJump && SpinnerBash",
+                "Method": "ITEM_LINEBOMB && ITEM_JETPACK2 && ITEM_HIGHJUMP && SpinnerBash",
                 "Difficulty": 0
             }
         ]
@@ -5044,7 +5084,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "HighJump",
+                "Method": "ITEM_HIGHJUMP",
                 "Difficulty": 0
             },
             {
@@ -5255,7 +5295,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_WALLJUMP && HighJump && ItemUse",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_HIGHJUMP && ItemUse",
                 "Difficulty": 0
             }
         ]
@@ -5278,7 +5318,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_JETPACK && ITEM_AirDash && HighJump",
+                "Method": "ITEM_JETPACK && ITEM_AirDash && ITEM_HIGHJUMP",
                 "Difficulty": 0
             }
         ]

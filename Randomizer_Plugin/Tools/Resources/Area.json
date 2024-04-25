@@ -28,9 +28,62 @@
                 {
                     "Exit": "Desert Base Upper Half",
                     "Method": "ITEM_DOUBLEJUMP && ITEM_WALLJUMP2"
+                },
+                {
+                    "Exit": "Desert Base Upper Half",
+                    "Method": "ITEM_KNIFE && ITEM_SLIDE"
                 }
             ]
         },
+        {
+            "Name": "Desert Base Entrance",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 2500
+                },
+                {
+                    "Method": "Boss",
+                    "Amount": 1000
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Start Area",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Desert Base Main",
+                    "Method": "ChargeShot"
+                },
+                {
+                    "Exit": "Desert Base Main",
+                    "Method": "ITEM_JETPACK"
+                },
+                {
+                    "Exit": "Desert Base Main",
+                    "Method": "ITEM_AirDash"
+                },
+                {
+                    "Exit": "Desert Base Main",
+                    "Method": "ITEM_JETPACK"
+                },
+                {
+                    "Exit": "Desert Base Main",
+                    "Method": "ITEM_DOUBLEJUMP"
+                },
+                {
+                    "Exit": "Desert Base Main",
+                    "Method": "ITEM_HIJUMP"
+                },
+                {
+                    "Exit": "Desert Base Main",
+                    "Method": "ITEM_LINEBOMB && ITEM_AREABOMB" 
+                }
+            ]
+        },
+
+
         {
             "Name": "Desert Base Upper Half",
             "Money": [
@@ -67,7 +120,23 @@
             "Connections": [
                 {
                     "Exit": "Oasis",
-                    "Method": ""
+                    "Method": "ChargeShot"
+                },
+                {
+                    "Exit": "Oasis",
+                    "Method": "ITEM_DOUBLEJUMP"
+                },
+                {
+                    "Exit": "Oasis",
+                    "Method": "ITEM_DOUBLEJUMP"
+                },
+                {
+                    "Exit": "Oasis",
+                    "Method": "ITEM_JETPACK"
+                },
+                {
+                    "Exit": "Oasis",
+                    "Method": "ITEM_AirDash"
                 },
                 {
                     "Exit": "Ruins Entrance",
@@ -1122,13 +1191,17 @@
                 {
                     "Exit": "EverGarden",
                     "Method": ""
+                },
+                {
+                    "Exit": "Vena",
+                    "Method": ""
                 }
             ]
         }
     ],
     "Map21": [
         {
-            "Name": "Heavens Valley",
+            "Name": "Valhalla Breath Lower Left Part",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -1136,10 +1209,7 @@
                 }
             ],
             "Connections": [
-                {
-                    "Exit": "Start Area",
-                    "Method": ""
-                },
+
                 {
                     "Exit": "Travoll Industrie",
                     "Method": ""
@@ -1156,9 +1226,56 @@
                     "Exit": "Valhalla Breath Left Part",
                     "Method": "ITEM_DOUBLEJUMP"
                 },
+
                 {
                     "Exit": "Valhalla Breath Left Part",
                     "Method": "ITEM_JETPACK"
+                }
+            ]
+        },
+        {
+            "Name": "Vena",
+            "Money": [
+                {
+                    "Method": "",
+                    "Amount": 0
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Start Area",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Heavens Valley",
+            "Money": [
+                {
+                    "Method": "",
+                    "Amount": 0
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Valhalla Breath Lower Left Part",
+                    "Method": "ITEM_JETPACK"
+                },
+                {
+                    "Exit": "Valhalla Breath Lower Left Part",
+                    "Method": "ITEM_AirDash"
+                },
+                {
+                    "Exit": "Valhalla Breath Lower Left Part",
+                    "Method": "ITEM_SLIDE"
+                },
+                {
+                    "Exit": "Valhalla Breath Lower Left Part",
+                    "Method": "ITEM_DOUBLEJUMP"
+                },
+                {
+                    "Exit": "Valhalla Breath Lower Left Part",
+                    "Method": "ChargeShot"
                 }
             ]
         },
@@ -1479,6 +1596,25 @@
             "Connections": [
                 {
                     "Exit": "Valhalla City",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Cloister 2",
+                    "Method": "ChargeShot"
+                }
+            ]
+        },
+        {
+            "Name": "Cloister 2",
+            "Money": [
+                {
+                    "Method": "",
+                    "Amount": 0
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "",
                     "Method": ""
                 }
             ]
