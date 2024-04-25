@@ -752,6 +752,15 @@ class EventPatch
             else
                 SaveManager.Instance.SetItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
 
+            int tmp;
+            if(RandomizerPlugin.customDiff >= 0)
+            {
+                tmp = RandomizerPlugin.customDiff;
+                RandomizerPlugin.customDiff = SaveManager.Instance.GetDifficulty();
+                SaveManager.Instance.SetDifficulty(tmp);
+            }
+            else RandomizerPlugin.customDiff = SaveManager.Instance.GetDifficulty();
+
             em.SetStage(30);
         }
     }
@@ -795,6 +804,13 @@ class EventPatch
         } 
 
     }
+    }
+
+    [HarmonyPatch(typeof(EventManager), "MovePlayerToWarpDevice3")]
+    [HarmonyPrefix]
+    static bool noWarp()
+    {
+        return false;
     }
 
     [HarmonyPatch(typeof(Chap1FreeRoamVena7x7), "REQUIREMENT")]
