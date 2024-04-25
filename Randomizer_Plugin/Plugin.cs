@@ -751,7 +751,7 @@ class EventPatch
             em.SetStage(30);
         }
     }
-
+    
     [HarmonyPatch(typeof(AfterMemineChallenge), "EVENT")]
     [HarmonyPrefix]
     static void MemineAllChallangesChecl(ref CharacterBase ___m)
@@ -2599,7 +2599,7 @@ class BonusFeaturePatch()
                     {
                         health = (int)((float)health * 0.925f);
                     }
-                }
+                    }
                 if (customDiff >= (short)Difficulty.D5)
                 {
                     atk = (int)((float)atk * 1.025f);
