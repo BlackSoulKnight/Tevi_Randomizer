@@ -15,7 +15,7 @@ For self building the Project, the following DLLs from the Game are required and
   
 
 ## Install
-Download the latest pre-Build version from here [Tevi Randomizer v0.9.5.6](https://github.com/BlackSoulKnight/Tevi_Randomizer/releases/tag/v0.9.5.6)<br>
+Download the latest pre-Build version from here [Tevi Randomizer releases](https://github.com/BlackSoulKnight/Tevi_Randomizer/releases)<br>
 or self build it with the source files. <br>
 
 Extract the zip in the BepInEx Plugins Folder<br><br>

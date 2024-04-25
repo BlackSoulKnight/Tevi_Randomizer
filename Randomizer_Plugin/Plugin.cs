@@ -82,14 +82,14 @@ public enum Upgradable
 
 
 
-[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.9.5.6")]
+[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.9.8")]
 [BepInProcess("TEVI.exe")]
 public class RandomizerPlugin : BaseUnityPlugin
 {
 
     static public Dictionary<ItemData, ItemData> __itemData = new Dictionary<ItemData, ItemData>();
 
-    static public short customDiff = 0; //fake diff
+    static public int  customDiff = 0; //fake diff
 
 
     static public string pluginPath = BepInEx.Paths.PluginPath + "/tevi_randomizer/";
@@ -2394,7 +2394,7 @@ class ScalePatch()
         return false;
     }
 
-    [HarmonyPatch(typeof(enemyController), "InitStart")]                 //NOT WORKING
+    [HarmonyPatch(typeof(enemyController), "InitStart")]      
     [HarmonyPostfix]
     static void balanceAct(ref enemyController __instance)
     {
