@@ -4,7 +4,7 @@ Add functionality for Teleporting to Start House
 Restrains should have a Difficulty level
 
 Using an Consumeable to maintain vertical speed and reduce horizontal speed to 0
-
+DoubleJUmp missing
 2
 
 Badges > 42000 cost

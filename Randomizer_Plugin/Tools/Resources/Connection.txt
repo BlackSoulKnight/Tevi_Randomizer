@@ -122,7 +122,7 @@ Ruins::
 Sinners Entrance:Sinners Hell:ITEM_SLIDE && ITEM_AREABOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP2
 Sinners Entrance:Sinners Hell:ITEM_SLIDE && ITEM_AREABOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP && ITEM_DOUBLEJUMP
 Sinners Entrance:Sinners Hell:ITEM_SLIDE && ITEM_AREABOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP && ITEM_JETPACK
-Sinners Hell:Illusion Palace:WinRequirment
+Sinners Hell:Illusion Palace:
 Illusion Palace::
 Relicts:CopperWood:
 Relicts:Gleamwood:

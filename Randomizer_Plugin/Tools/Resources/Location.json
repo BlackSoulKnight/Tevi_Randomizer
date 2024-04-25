@@ -2617,6 +2617,48 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
+        "Location": "LavaWorld Part 2",
+        "slotId": 20,
+        "Requirement": [
+            {
+                "Method": "ITEM_JETPACK",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_DOUBLEJUMP",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DoubleGroundNormal3N2",
+        "Location": "LavaWorld Part 2",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_DOUBLEJUMP && ITEM_AirDash",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_JETPACK && ITEM_AirDash",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_SLIDE && ITEM_JETPACK",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
         "Location": "Swamp",
         "slotId": 12,
         "Requirement": [
@@ -4254,6 +4296,17 @@
         ]
     },
     {
+        "Itemname": "ITEM_DOUBLEJUMP",
+        "Location": "Gallary of Souls",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "BADGE_Instant1",
         "Location": "Gallary of Souls",
         "slotId": 1,
@@ -4395,6 +4448,17 @@
             {
                 "Method": "ITEM_Rotater",
                 "Difficulty": 1
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Swampike",
+        "slotId": 17,
+        "Requirement": [
+            {
+                "Method": "ITEM_SLIDE",
+                "Difficulty": 0
             }
         ]
     },
@@ -5141,6 +5205,17 @@
         ]
     },
     {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "DreamKeeper",
+        "slotId": 28,
+        "Requirement": [
+            {
+                "Method": "VortexGlove",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "STACKABLE_COG",
         "Location": "DreamKeeper",
         "slotId": 60,
@@ -5191,6 +5266,17 @@
         "Requirement": [
             {
                 "Method": "ITEM_BombLengthExtend3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_GroundNormalComboAutoSpeedup",
+        "Location": "Deep Dream",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_SLIDE && ITEM_AirSlide",
                 "Difficulty": 0
             }
         ]
@@ -5475,6 +5561,17 @@
         ]
     },
     {
+        "Itemname": "BADGE_AutoFoodUse",
+        "Location": "Vena",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "BADGE_BombDispelDebuff",
         "Location": "Vena",
         "slotId": 1,
@@ -5577,6 +5674,17 @@
         "Itemname": "STACKABLE_SHARD",
         "Location": "Memine",
         "slotId": 5,
+        "Requirement": [
+            {
+                "Method": "Complete Challange",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_SHARD",
+        "Location": "Memine",
+        "slotId": 29,
         "Requirement": [
             {
                 "Method": "Complete Challange",

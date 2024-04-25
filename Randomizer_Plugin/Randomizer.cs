@@ -26,6 +26,8 @@ namespace TeviRandomizer
                 this.Type = _type;
             }
         }
+
+        static public bool craftingManaShardSwitch = false;
         private class Requirement
         {
             public string Method;
@@ -89,7 +91,8 @@ namespace TeviRandomizer
                                     break;
                             }
                         }
-
+                        if (item.Contains("Upgrade") && craftingManaShardSwitch) continue;
+                        if (item.Contains("Air")) continue;
                         flag = false;
                         flagCheck = false;
                         break;
@@ -276,6 +279,23 @@ namespace TeviRandomizer
                                     locationString["Lv3Compass"].setNewItem(4200, 1);
                                 }
                                 break;
+                            case "NormalItemCraft":
+                                if (((UnityEngine.UI.Toggle)option.Value).isOn)
+                                {
+                                    craftingManaShardSwitch = true;
+                                    foreach (var item in Enum.GetValues(typeof(Upgradable)))
+                                    {
+                                        ItemList.Type t = Enum.Parse<ItemList.Type>(item.ToString());
+                                        locationString[t + "2"].setNewItem(t, 5);
+                                        locationString[t + "3"].setNewItem(t, 6);
+                                        locationPool.Remove(locationPool.Find(x => x.itemId == (int)t && x.slotId == 2));
+                                        locationPool.Remove(locationPool.Find(x => x.itemId == (int)t && x.slotId == 3));
+                                        placeditems.Remove(((int)t, 2));
+                                        placeditems.Remove(((int)t, 3));
+                                    }
+                                }
+                                else craftingManaShardSwitch = false;
+                                break;
                             default: break;
                         }
                         break;
@@ -417,22 +437,64 @@ namespace TeviRandomizer
 
             }
             //Check if its beatable
-            return goalCheck(itemList);
+            return goalCheck(itemList,areaList);
         }
-        private bool goalCheck(List<string> itemList)
+        private bool goalCheck(List<string> itemList,List<Area> areaList)
         {
             int gears = itemList.FindAll(x => x == "STACKABLE_COG").Count;
-            if ( gears<= 16)
+            if ( gears< 16)
             {
                 Debug.Log($"Not Enough Gears in the run. Found {gears}");
                 return false;
             }
             if (!itemList.Contains("ITEM_SLIDE")) {
+                Debug.Log($"Slide Not Found");
+
                 return false;
                 }
-            if(!itemList.Contains("ITEM_LINEBOMB")) return false;
-            if(!itemList.Contains("ITEM_AirSlide")) return false;
-            if(!itemList.Contains("ITEM_Rotater")) return false;
+            if(!itemList.Contains("ITEM_LINEBOMB"))
+            {
+                Debug.Log($"LineBomb Not Found");
+
+                return false;
+            }
+            if (!itemList.Contains("ITEM_AirSlide"))
+            {
+                Debug.Log($"Fairy Powder Not Found");
+
+                return false;
+            }
+            if (!itemList.Contains("ITEM_Rotater"))
+            {
+                Debug.Log($"Vortex Glove Not Found");
+
+                return false;
+            }
+            if (!itemList.Contains("ITEM_DOUBLEJUMP"))
+            {
+                Debug.Log($"Double Jump Not Found");
+
+                return false;
+            }
+            if (!itemList.Contains("ITEM_JETPACK"))
+            {
+                Debug.Log($"Jet Not Found");
+
+                return false;
+            }
+            if (!itemList.Contains("ITEM_WALLJUMP"))
+            {
+                Debug.Log($"Walljump Not Found");
+
+                return false;
+            }
+            if (!itemList.Contains("ITEM_AirDash"))
+            {
+                Debug.Log($"Air Dash Not Found");
+
+                return false;
+            }
+
 
             return true;
         }
@@ -466,38 +528,61 @@ namespace TeviRandomizer
 
 
 
-        static public void saveSpoilerLog(string path,Dictionary<ItemData,ItemData> itemData)
+        static public void saveSpoilerLog(string FileName,Dictionary<ItemData,ItemData> itemData)
         {
             if (!Directory.Exists(RandomizerPlugin.pluginPath + "Data")) Directory.CreateDirectory(RandomizerPlugin.pluginPath + "Data");
-            
-            StreamWriter spoilerLog = File.CreateText(RandomizerPlugin.pluginPath + "Data/" + path+".spoiler.txt");
+
+            bool debugWrite = false;
+            StreamWriter spoilerLog = File.CreateText(RandomizerPlugin.pluginPath + "Data/" + FileName);
+            StreamWriter spoilerLogS = null;
+            if (debugWrite)
+                spoilerLogS = File.CreateText(RandomizerPlugin.pluginPath + "Data/a" + FileName);
             foreach (KeyValuePair<ItemData, ItemData> item in itemData)
             {
                 string itemName = "";
                 string line = "";
+                string line2 = "";
                 if (item.Value.itemID < 3000) itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + GemaItemManager.Instance.GetItemString((ItemList.Type)item.Value.itemID), false);
                 else itemName = ((ItemList.Type)item.Value.itemID).ToString();
                 line = $"Randomized Item: {itemName}"; // Slot: {item.Key.slotID}
-                for (int x = line.Length; x < 70; x++) {
-                        line += " ";
-                    }
+                line2 = $"Randomized Item: {item.Value.getItemTyp()} {item.Value.slotID}"; // Slot: 
+                for (int x = line.Length; x < 70; x++) 
+                    line += " ";
+                for (int x = line2.Length; x < 70; x++) 
+                    line2 += " ";
+                    
                 if (item.Key.itemID < 3000) itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + GemaItemManager.Instance.GetItemString((ItemList.Type)item.Key.itemID), false);
                 else itemName = ((ItemList.Type)item.Key.itemID).ToString();
                 line += $"Original Item: {itemName}"; // Slot: {item.Value.slotID}
+                line2 += $"Original Item: {item.Key.getItemTyp()} {item.Key.slotID}"; // Slot: {item.Value.slotID}
                 for (int x = line.Length; x< 140; x++)
-                {
                     line += " ";
-                }
+
+                for (int x = line2.Length; x< 140; x++)
+                    line2 += " ";
                 Location loc = Instance.locations.Find(x => x.Itemname == item.Key.getItemTyp().ToString() && x.slotId == item.Key.slotID);
                 if (loc != null) { line += $"Location: {loc.Loaction}\n"; }
                 else line += "\n" ;
+                if (loc != null) { line2 += $"Location: {loc.Loaction}\n"; }
+                else line2 += "\n" ;
                 if (item.Key.itemID < 3000)
+                {
                     spoilerLog.Write(line);
+                    if (debugWrite)
+                    {
+                        spoilerLogS.Write(line2);
+                    }
+                }
+
             }
-            spoilerLog .Close();
+            spoilerLog.Close();
+            if (debugWrite)
+                spoilerLogS.Close();
+
         }
     }
 }
+
 
 
 
