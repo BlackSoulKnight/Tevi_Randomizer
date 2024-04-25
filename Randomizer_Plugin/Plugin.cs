@@ -2378,45 +2378,7 @@ class BonusFeaturePatch()
 
 class ScalePatch()
 {
-
-    [HarmonyPatch(typeof(enemyController), "InitStart")]                 //NOT WORKING
-    static public short customDiff = 0;
-
-
-    [HarmonyPatch(typeof(enemyController),"SetMaxBossHealth")]
-    [HarmonyPrefix]
-    static bool setMaxBossHealth(ref enemyController __instance)
-    {
-        int num = customDiff - 5;
-        float num2 = 0f;
-        float num3 = 0f;
-        if (num > 0)
-        {
-            if (num <= 5)
-            {
-                float num4 = (float)num * 0.067f;
-                if (num4 > 0.3f)
-                {
-                    num4 = 0.3f;
-                }
-                num2 += num4;
-            }
-            else
-            {
-                num2 += 0.3f + (float)(num - 5) * 0.005f;
-            }
-            __instance.health = (int)((float)__instance.health * (1f + num2));
-            num3 = num2;
-            num3 = ((!(num3 < 0f)) ? (num3 / 3f) : 0f);
-            __instance.maxToBreak = (int)(__instance.toBreak * (1f + num3));
-            __instance.toBreak = __instance.maxToBreak;
-        }
-        Debug.Log("[BossHealth] " + __instance.type.ToString() + "'s health set to " + __instance.health + ", BreakBar set to " + __instance.toBreak + " Mod : " + num2 + " BMod : " + num3);
-        return false;
-    }
-
     [HarmonyPatch(typeof(enemyController),"InitStart")]                 //NOT WORKING
->>>>>>> main
     [HarmonyPostfix]
     static void balanceAct(ref enemyController __instance)
     {
@@ -2434,11 +2396,7 @@ class ScalePatch()
             }
             enemyDB = __instance.GetEnemyDB("DEFAULT");
         }
-<<<<<<< HEAD
         if (enemyDB != null)
-=======
-        if(enemyDB != null)
->>>>>>> main
         {
 
 
@@ -2457,20 +2415,12 @@ class ScalePatch()
                 else
                 {
                     float num = 0.002f;
-<<<<<<< HEAD
                     if (RandomizerPlugin.customDiff >= (short)Difficulty.D5)
-=======
-                    if (customDiff >= (short)Difficulty.D5)
->>>>>>> main
                     {
                         num = 0.008f;
                     }
                     atk = (int)((float)atk * (1f + num * (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_HP) + 0.001f * (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD)));
-<<<<<<< HEAD
                     if (RandomizerPlugin.customDiff >= (short)Difficulty.D4)
-=======
-                    if (customDiff >= (short)Difficulty.D4)
->>>>>>> main
                     {
                         atk = (int)((float)atk * (1f + 0.0002f * (float)SaveManager.Instance.GetUsedCost(GetRemain: false)));
                     }
@@ -2482,32 +2432,19 @@ class ScalePatch()
             }
 
             float num2 = 1f;
-<<<<<<< HEAD
             float num3 = RandomizerPlugin.customDiff - 5;
             if (RandomizerPlugin.customDiff == (short)Difficulty.D6)
             {
                 num3 = 2f;
             }
             else if (RandomizerPlugin.customDiff == (short)Difficulty.D7)
-=======
-            float num3 = customDiff - 5;
-            if (customDiff == (short)Difficulty.D6)
-            {
-                num3 = 2f;
-            }
-            else if (customDiff == (short)Difficulty.D7)
->>>>>>> main
             {
                 num3 = 3f;
             }
             if (num3 < 0f)
             {
                 float num4 = 1f + num3 * 0.1f;
-<<<<<<< HEAD
                 if (RandomizerPlugin.customDiff <= (short)Difficulty.D0)
-=======
-                if (customDiff <= (short)Difficulty.D0)
->>>>>>> main
                 {
                     num4 -= 0.1f;
                 }
@@ -2548,7 +2485,6 @@ class ScalePatch()
                     else
                     {
                         float num6 = 0.005f;
-<<<<<<< HEAD
                         if (RandomizerPlugin.customDiff >= (short)Difficulty.D6)
                         {
                             num6 = 0.006f;
@@ -2558,26 +2494,12 @@ class ScalePatch()
                             num6 = 0.007f;
                         }
                         if (RandomizerPlugin.customDiff >= (short)Difficulty.D9)
-=======
-                        if (customDiff >= (short)Difficulty.D6)
-                        {
-                            num6 = 0.006f;
-                        }
-                        if (customDiff >= (short)Difficulty.D7)
-                        {
-                            num6 = 0.007f;
-                        }
-                        if (customDiff >= (short)Difficulty.D9)
->>>>>>> main
                         {
                             num6 = 0.008f;
                         }
                         num5 = 1f + num6 * ((float)SaveManager.Instance.GetMainLevel() + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD) / 4f + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK) / 3.5f + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_RATK) / 3.5f);
-<<<<<<< HEAD
                         if (RandomizerPlugin.customDiff >= (short)Difficulty.D6 && SaveManager.Instance.GetChapter() >= 4)
-=======
-                        if (customDiff >= (short)Difficulty.D6 && SaveManager.Instance.GetChapter() >= 4)
->>>>>>> main
+
                         {
                             num5 += 0.000125f * (float)SaveManager.Instance.GetUsedCost(GetRemain: false);
                         }
@@ -2588,11 +2510,8 @@ class ScalePatch()
                 setMaxBossHealth(ref __instance);
 
                 __instance.SetBreakTime();
-<<<<<<< HEAD
                 if (!GemaBossRushMode.Instance.isBossRush() && (Difficulty)RandomizerPlugin.customDiff <= Difficulty.D4)
-=======
-                if (!GemaBossRushMode.Instance.isBossRush())
->>>>>>> main
+
                 {
                     if (__instance.type == Character.Type.PKOA || __instance.type == Character.Type.Frankie || __instance.type == Character.Type.Jezbelle || __instance.type == Character.Type.Lily || SaveManager.Instance.GetDifficultyName() <= Difficulty.D7)
                     {
@@ -2601,19 +2520,12 @@ class ScalePatch()
                         {
                             num7 = 10;
                         }
-<<<<<<< HEAD
                         if (RandomizerPlugin.customDiff <= (short)Difficulty.D5 && num7 > 8)
                         {
                             num7 = 8;
                         }
                         if (RandomizerPlugin.customDiff <= (short)Difficulty.D7 && num7 > 2)
-=======
-                        if (customDiff <= (short)Difficulty.D5 && num7 > 8)
-                        {
-                            num7 = 8;
-                        }
-                        if (customDiff <= (short)Difficulty.D7 && num7 > 2)
->>>>>>> main
+
                         {
                             num7 = 2;
                         }
@@ -2624,17 +2536,11 @@ class ScalePatch()
                             {
                                 atk = 1;
                             }
-<<<<<<< HEAD
                             if (RandomizerPlugin.customDiff >= (short)Difficulty.D7)
                             {
                                 float num8 = 1f - (float)num7 * 0.025f;
                                 if (RandomizerPlugin.customDiff <= (short)Difficulty.D5)
-=======
-                            if (customDiff >= (short)Difficulty.D7)
-                            {
-                                float num8 = 1f - (float)num7 * 0.025f;
-                                if (customDiff <= (short)Difficulty.D5)
->>>>>>> main
+
                                 {
                                     num8 = 1f - (float)num7 * 0.01f;
                                     num8 += 0.025f;
@@ -2647,11 +2553,8 @@ class ScalePatch()
                                 {
                                     num8 = 1f;
                                 }
-<<<<<<< HEAD
                                 if (RandomizerPlugin.customDiff <= (short)Difficulty.D7 && num8 < 0.85f)
-=======
-                                if (customDiff <= (short)Difficulty.D7 && num8 < 0.85f)
->>>>>>> main
+
                                 {
                                     num8 = 0.85f;
                                 }
@@ -2678,14 +2581,9 @@ class ScalePatch()
             {
                 health += (int)((float)(SaveManager.Instance.GetChapter() * 2 + SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD)) + (float)(SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK) + SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_RATK)) / 3f);
                 float num9 = 0f;
-<<<<<<< HEAD
                 num3 = (float)(RandomizerPlugin.customDiff - 5);
                 num9 = ((!(num3 > 0f)) ? 0f : ((!(num3 <= 5f)) ? (num9 + (0.375f + (num3 - 5f) * 0.0001f)) : (num9 + num3 * 0.075f)));
 
-=======
-                num3 = (float)(customDiff - 5);
-                num9 = ((!(num3 > 0f)) ? 0f : ((!(num3 <= 5f)) ? (num9 + (0.375f + (num3 - 5f) * 0.0001f)) : (num9 + num3 * 0.075f)));
->>>>>>> main
                 float num10 = (float)(int)SaveManager.Instance.GetChapter() * 0.1f;
                 if (num10 > 1f)
                 {
@@ -2696,36 +2594,22 @@ class ScalePatch()
 
                 if ((WorldManager.Instance.Area != 0 || SaveManager.Instance.GetChapter() >= 1) && !EventManager.Instance.isBossMode() && SaveManager.Instance.GetChapter() <= 3 && EventManager.Instance.GetCurrentEventBattle() == Mode.OFF)
                 {
-<<<<<<< HEAD
                     if (RandomizerPlugin.customDiff <= (short)Difficulty.D6)
                     {
                         health = (int)((float)health * 0.925f);
                     }
                     if (RandomizerPlugin.customDiff <= (short)Difficulty.D5)
-=======
-                    if (customDiff <= (short)Difficulty.D6)
-                    {
-                        health = (int)((float)health * 0.925f);
-                    }
-                    if (customDiff <= (short)Difficulty.D5)
->>>>>>> main
+
                     {
                         health = (int)((float)health * 0.925f);
                     }
                 }
-<<<<<<< HEAD
                 if (RandomizerPlugin.customDiff >= (short)Difficulty.D5)
                 {
                     atk = (int)((float)atk * 1.025f);
                 }
                 if (RandomizerPlugin.customDiff >= (short)Difficulty.D10)
-=======
-                if (customDiff >= (short)Difficulty.D5)
-                {
-                    atk = (int)((float)atk * 1.025f);
-                }
-                if (customDiff >= (short)Difficulty.D10)
->>>>>>> main
+
                 {
                     atk = (int)((float)atk * 1.125f);
                 }
@@ -2734,25 +2618,17 @@ class ScalePatch()
 
 
 
-<<<<<<< HEAD
             if (RandomizerPlugin.customDiff <= (short)Difficulty.D0)
             {
                 atk = (int)((float)atk * 0.4f);
             }
             else if (RandomizerPlugin.customDiff <= (short)Difficulty.D1)
-=======
-            if (customDiff <= (short)Difficulty.D0)
-            {
-                atk = (int)((float)atk * 0.4f);
-            }
-            else if (customDiff <= (short)Difficulty.D1)
->>>>>>> main
+
             {
                 atk = (int)((float)atk * 0.8f);
             }
             if (atk > 0)
             {
-<<<<<<< HEAD
                 atk += (int)((float)RandomizerPlugin.customDiff / 2f);
                 if (RandomizerPlugin.customDiff >= (short)Difficulty.D10)
                 {
@@ -2771,26 +2647,7 @@ class ScalePatch()
                     atk -= (int)((float)(int)SaveManager.Instance.GetChapter() * 1.5f);
                 }
                 else if (RandomizerPlugin.customDiff <= (short)Difficulty.D5)
-=======
-                atk += (int)((float)customDiff / 2f);
-                if (customDiff >= (short)Difficulty.D10)
-                {
-                    atk += SaveManager.Instance.GetChapter() / 2;
-                }
-                else if (customDiff <= (short)Difficulty.D0)
-                {
-                    atk -= (int)((float)(int)SaveManager.Instance.GetChapter() * 3f);
-                }
-                else if (customDiff <= (short)Difficulty.D1)
-                {
-                    atk -= (int)((float)(int)SaveManager.Instance.GetChapter() * 2f);
-                }
-                else if (customDiff <= (short)Difficulty.D3)
-                {
-                    atk -= (int)((float)(int)SaveManager.Instance.GetChapter() * 1.5f);
-                }
-                else if (customDiff <= (short)Difficulty.D5)
->>>>>>> main
+
                 {
                     atk -= (int)((float)(int)SaveManager.Instance.GetChapter() * 1f);
                 }
@@ -2872,7 +2729,6 @@ class ScalePatch()
             __instance.atk = atk;
         }
     }
-<<<<<<< HEAD
 
     [HarmonyPatch(typeof(enemyController), "SetMaxBossHealth")]
     [HarmonyPrefix]
@@ -2913,9 +2769,7 @@ class ScalePatch()
     }
 
     [HarmonyPatch(typeof(enemyController), "SubBossBoost")]
-=======
-    [HarmonyPatch(typeof(enemyController),"SubBossBoost")]
->>>>>>> main
+
     [HarmonyPrefix]
     static bool subBossBoost(ref enemyController __instance)
     {
@@ -2925,19 +2779,12 @@ class ScalePatch()
         }
         if (__instance.type == Character.Type.Katu)
         {
-<<<<<<< HEAD
             if (RandomizerPlugin.customDiff >= (short)Difficulty.D7)
             {
                 __instance.health += 125;
             }
             if (RandomizerPlugin.customDiff >= (short)Difficulty.D10)
-=======
-            if (customDiff >= (short)Difficulty.D7)
-            {
-                __instance.health += 125;
-            }
-            if (customDiff >= (short)Difficulty.D10)
->>>>>>> main
+
             {
                 __instance.health += 125;
             }
@@ -3012,11 +2859,8 @@ class ScalePatch()
     static bool difficultyBossHealth(ref enemyController __instance)
     {
         float num = 0f;
-<<<<<<< HEAD
         Difficulty difficultyName = (Difficulty)RandomizerPlugin.customDiff;
-=======
-        Difficulty difficultyName = (Difficulty)customDiff;
->>>>>>> main
+
         if (difficultyName >= Difficulty.D6)
         {
             float num2 = 0f;
@@ -3117,7 +2961,6 @@ class ScalePatch()
         }
         return false;
     }
-<<<<<<< HEAD
     [HarmonyPatch(typeof(ObjectPhy), "WallHit")]
     [HarmonyPrefix]
     static bool reducWallDmg(ref CharacterBase ___cb_perfer)
@@ -3134,9 +2977,6 @@ class ScalePatch()
         }
         return true;
     }
-=======
 
-
->>>>>>> main
 }
 
