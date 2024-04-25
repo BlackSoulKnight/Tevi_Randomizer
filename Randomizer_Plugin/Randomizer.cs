@@ -57,6 +57,8 @@ namespace TeviRandomizer
                             bossCount++;
                             continue;
                         }
+                        if (item.Contains("ChargeShot")) continue;
+
                         if (item.Contains("Chapter"))
                         {
                             switch(item.Split(' ')[2])

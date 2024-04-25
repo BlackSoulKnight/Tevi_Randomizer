@@ -85,6 +85,7 @@ public enum Upgradable
 [BepInProcess("TEVI.exe")]
 public class RandomizerPlugin : BaseUnityPlugin
 {
+    static public int customDiff = 0; // used for scaling
 
     static public Dictionary<ItemData, ItemData> __itemData = new Dictionary<ItemData, ItemData>();
 
@@ -751,20 +752,27 @@ class EventPatch
                 SaveManager.Instance.SetItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
 
             int tmp;
-            if (BonusFeaturePatch.customDiff >= 0)
+            if (RandomizerPlugin.customDiff >= 0)
             {
-                tmp = BonusFeaturePatch.customDiff;
-                BonusFeaturePatch.customDiff = SaveManager.Instance.GetDifficulty();
+                tmp = RandomizerPlugin.customDiff;
+                RandomizerPlugin.customDiff = SaveManager.Instance.GetDifficulty();
                 SaveManager.Instance.SetDifficulty(tmp);
             }
             else
             {
-                BonusFeaturePatch.customDiff = SaveManager.Instance.GetDifficulty();
+                RandomizerPlugin.customDiff = SaveManager.Instance.GetDifficulty();
             }
 
 
             em.SetStage(30);
         }
+    }
+    
+    [HarmonyPatch(typeof(EventManager), "MovePlayerToWarpDevice3")]                     // Remove Teleport after Boss fight
+    [HarmonyPrefix]
+    static bool removeTeleport()
+    {
+        return false;
     }
 
     [HarmonyPatch(typeof(AfterMemineChallenge),"EVENT")]
@@ -1478,7 +1486,7 @@ class CraftingPatch
                         }
                     }
                 }
-                if (EventManager.Instance.isBossMode())
+                if (EventManager.Instance.isBossMode() || GemaHUDTrainingMode.Instance.isTraining() || GemaMushroomMode.Instance.isMushroom())
                 {
                     num5 = -5;
                 }
@@ -2307,7 +2315,7 @@ class SaveGamePatch()
             }
             if (eS3File.KeyExists("DiffScale"))
             {
-                BonusFeaturePatch.customDiff = eS3File.Load<int>("DiffScale");
+                RandomizerPlugin.customDiff = eS3File.Load<int>("DiffScale");
             }
             RandomizerPlugin.__itemData = data;
         }
@@ -2342,7 +2350,7 @@ class SaveGamePatch()
         eS3File.Save("RandoKeySlot",keySlot);
         eS3File.Save("RandoValItem", valItem);
         eS3File.Save("RandoValSlot", valSlot);
-        eS3File.Save("DiffScale", BonusFeaturePatch.customDiff);        
+        eS3File.Save("DiffScale", RandomizerPlugin.customDiff);        
         eS3File.Sync();
 
     }
@@ -2366,43 +2374,12 @@ class BonusFeaturePatch()
     {
         add *= 99;
     }
+}
 
-    static public int customDiff = 0;
+class ScalePatch()
+{
 
-
-    [HarmonyPatch(typeof(enemyController),"SetMaxBossHealth")]
-    [HarmonyPrefix]
-    static bool setMaxBossHealth(ref enemyController __instance)
-    {
-        int num = customDiff - 5;
-        float num2 = 0f;
-        float num3 = 0f;
-        if (num > 0)
-        {
-            if (num <= 5)
-            {
-                float num4 = (float)num * 0.067f;
-                if (num4 > 0.3f)
-                {
-                    num4 = 0.3f;
-                }
-                num2 += num4;
-            }
-            else
-            {
-                num2 += 0.3f + (float)(num - 5) * 0.005f;
-            }
-            __instance.health = (int)((float)__instance.health * (1f + num2));
-            num3 = num2;
-            num3 = ((!(num3 < 0f)) ? (num3 / 3f) : 0f);
-            __instance.maxToBreak = (int)(__instance.toBreak * (1f + num3));
-            __instance.toBreak = __instance.maxToBreak;
-        }
-        Debug.Log("[BossHealth] " + __instance.type.ToString() + "'s health set to " + __instance.health + ", BreakBar set to " + __instance.toBreak + " Mod : " + num2 + " BMod : " + num3);
-        return false;
-    }
-
-    [HarmonyPatch(typeof(enemyController),"InitStart")]                 //NOT WORKING
+    [HarmonyPatch(typeof(enemyController), "InitStart")]                 //NOT WORKING
     [HarmonyPostfix]
     static void balanceAct(ref enemyController __instance)
     {
@@ -2420,7 +2397,7 @@ class BonusFeaturePatch()
             }
             enemyDB = __instance.GetEnemyDB("DEFAULT");
         }
-        if(enemyDB != null)
+        if (enemyDB != null)
         {
 
 
@@ -2439,12 +2416,12 @@ class BonusFeaturePatch()
                 else
                 {
                     float num = 0.002f;
-                    if (customDiff >= (short)Difficulty.D5)
+                    if (RandomizerPlugin.customDiff >= (short)Difficulty.D5)
                     {
                         num = 0.008f;
                     }
                     atk = (int)((float)atk * (1f + num * (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_HP) + 0.001f * (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD)));
-                    if (customDiff >= (short)Difficulty.D4)
+                    if (RandomizerPlugin.customDiff >= (short)Difficulty.D4)
                     {
                         atk = (int)((float)atk * (1f + 0.0002f * (float)SaveManager.Instance.GetUsedCost(GetRemain: false)));
                     }
@@ -2456,19 +2433,19 @@ class BonusFeaturePatch()
             }
 
             float num2 = 1f;
-            float num3 = customDiff - 5;
-            if (customDiff == (short)Difficulty.D6)
+            float num3 = RandomizerPlugin.customDiff - 5;
+            if (RandomizerPlugin.customDiff == (short)Difficulty.D6)
             {
                 num3 = 2f;
             }
-            else if (customDiff == (short)Difficulty.D7)
+            else if (RandomizerPlugin.customDiff == (short)Difficulty.D7)
             {
                 num3 = 3f;
             }
             if (num3 < 0f)
             {
                 float num4 = 1f + num3 * 0.1f;
-                if (customDiff <= (short)Difficulty.D0)
+                if (RandomizerPlugin.customDiff <= (short)Difficulty.D0)
                 {
                     num4 -= 0.1f;
                 }
@@ -2509,20 +2486,20 @@ class BonusFeaturePatch()
                     else
                     {
                         float num6 = 0.005f;
-                        if (customDiff >= (short)Difficulty.D6)
+                        if (RandomizerPlugin.customDiff >= (short)Difficulty.D6)
                         {
                             num6 = 0.006f;
                         }
-                        if (customDiff >= (short)Difficulty.D7)
+                        if (RandomizerPlugin.customDiff >= (short)Difficulty.D7)
                         {
                             num6 = 0.007f;
                         }
-                        if (customDiff >= (short)Difficulty.D9)
+                        if (RandomizerPlugin.customDiff >= (short)Difficulty.D9)
                         {
                             num6 = 0.008f;
                         }
                         num5 = 1f + num6 * ((float)SaveManager.Instance.GetMainLevel() + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD) / 4f + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK) / 3.5f + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_RATK) / 3.5f);
-                        if (customDiff >= (short)Difficulty.D6 && SaveManager.Instance.GetChapter() >= 4)
+                        if (RandomizerPlugin.customDiff >= (short)Difficulty.D6 && SaveManager.Instance.GetChapter() >= 4)
                         {
                             num5 += 0.000125f * (float)SaveManager.Instance.GetUsedCost(GetRemain: false);
                         }
@@ -2533,7 +2510,7 @@ class BonusFeaturePatch()
                 setMaxBossHealth(ref __instance);
 
                 __instance.SetBreakTime();
-                if (!GemaBossRushMode.Instance.isBossRush())
+                if (!GemaBossRushMode.Instance.isBossRush() && (Difficulty)RandomizerPlugin.customDiff <= Difficulty.D4)
                 {
                     if (__instance.type == Character.Type.PKOA || __instance.type == Character.Type.Frankie || __instance.type == Character.Type.Jezbelle || __instance.type == Character.Type.Lily || SaveManager.Instance.GetDifficultyName() <= Difficulty.D7)
                     {
@@ -2542,11 +2519,11 @@ class BonusFeaturePatch()
                         {
                             num7 = 10;
                         }
-                        if (customDiff <= (short)Difficulty.D5 && num7 > 8)
+                        if (RandomizerPlugin.customDiff <= (short)Difficulty.D5 && num7 > 8)
                         {
                             num7 = 8;
                         }
-                        if (customDiff <= (short)Difficulty.D7 && num7 > 2)
+                        if (RandomizerPlugin.customDiff <= (short)Difficulty.D7 && num7 > 2)
                         {
                             num7 = 2;
                         }
@@ -2557,10 +2534,10 @@ class BonusFeaturePatch()
                             {
                                 atk = 1;
                             }
-                            if (customDiff >= (short)Difficulty.D7)
+                            if (RandomizerPlugin.customDiff >= (short)Difficulty.D7)
                             {
                                 float num8 = 1f - (float)num7 * 0.025f;
-                                if (customDiff <= (short)Difficulty.D5)
+                                if (RandomizerPlugin.customDiff <= (short)Difficulty.D5)
                                 {
                                     num8 = 1f - (float)num7 * 0.01f;
                                     num8 += 0.025f;
@@ -2573,7 +2550,7 @@ class BonusFeaturePatch()
                                 {
                                     num8 = 1f;
                                 }
-                                if (customDiff <= (short)Difficulty.D7 && num8 < 0.85f)
+                                if (RandomizerPlugin.customDiff <= (short)Difficulty.D7 && num8 < 0.85f)
                                 {
                                     num8 = 0.85f;
                                 }
@@ -2600,8 +2577,9 @@ class BonusFeaturePatch()
             {
                 health += (int)((float)(SaveManager.Instance.GetChapter() * 2 + SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD)) + (float)(SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK) + SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_RATK)) / 3f);
                 float num9 = 0f;
-                num3 = (float)(customDiff - 5);
+                num3 = (float)(RandomizerPlugin.customDiff - 5);
                 num9 = ((!(num3 > 0f)) ? 0f : ((!(num3 <= 5f)) ? (num9 + (0.375f + (num3 - 5f) * 0.0001f)) : (num9 + num3 * 0.075f)));
+
                 float num10 = (float)(int)SaveManager.Instance.GetChapter() * 0.1f;
                 if (num10 > 1f)
                 {
@@ -2612,20 +2590,20 @@ class BonusFeaturePatch()
 
                 if ((WorldManager.Instance.Area != 0 || SaveManager.Instance.GetChapter() >= 1) && !EventManager.Instance.isBossMode() && SaveManager.Instance.GetChapter() <= 3 && EventManager.Instance.GetCurrentEventBattle() == Mode.OFF)
                 {
-                    if (customDiff <= (short)Difficulty.D6)
+                    if (RandomizerPlugin.customDiff <= (short)Difficulty.D6)
                     {
                         health = (int)((float)health * 0.925f);
                     }
-                    if (customDiff <= (short)Difficulty.D5)
+                    if (RandomizerPlugin.customDiff <= (short)Difficulty.D5)
                     {
                         health = (int)((float)health * 0.925f);
                     }
                 }
-                if (customDiff >= (short)Difficulty.D5)
+                if (RandomizerPlugin.customDiff >= (short)Difficulty.D5)
                 {
                     atk = (int)((float)atk * 1.025f);
                 }
-                if (customDiff >= (short)Difficulty.D10)
+                if (RandomizerPlugin.customDiff >= (short)Difficulty.D10)
                 {
                     atk = (int)((float)atk * 1.125f);
                 }
@@ -2634,34 +2612,34 @@ class BonusFeaturePatch()
 
 
 
-            if (customDiff <= (short)Difficulty.D0)
+            if (RandomizerPlugin.customDiff <= (short)Difficulty.D0)
             {
                 atk = (int)((float)atk * 0.4f);
             }
-            else if (customDiff <= (short)Difficulty.D1)
+            else if (RandomizerPlugin.customDiff <= (short)Difficulty.D1)
             {
                 atk = (int)((float)atk * 0.8f);
             }
             if (atk > 0)
             {
-                atk += (int)((float)customDiff / 2f);
-                if (customDiff >= (short)Difficulty.D10)
+                atk += (int)((float)RandomizerPlugin.customDiff / 2f);
+                if (RandomizerPlugin.customDiff >= (short)Difficulty.D10)
                 {
                     atk += SaveManager.Instance.GetChapter() / 2;
                 }
-                else if (customDiff <= (short)Difficulty.D0)
+                else if (RandomizerPlugin.customDiff <= (short)Difficulty.D0)
                 {
                     atk -= (int)((float)(int)SaveManager.Instance.GetChapter() * 3f);
                 }
-                else if (customDiff <= (short)Difficulty.D1)
+                else if (RandomizerPlugin.customDiff <= (short)Difficulty.D1)
                 {
                     atk -= (int)((float)(int)SaveManager.Instance.GetChapter() * 2f);
                 }
-                else if (customDiff <= (short)Difficulty.D3)
+                else if (RandomizerPlugin.customDiff <= (short)Difficulty.D3)
                 {
                     atk -= (int)((float)(int)SaveManager.Instance.GetChapter() * 1.5f);
                 }
-                else if (customDiff <= (short)Difficulty.D5)
+                else if (RandomizerPlugin.customDiff <= (short)Difficulty.D5)
                 {
                     atk -= (int)((float)(int)SaveManager.Instance.GetChapter() * 1f);
                 }
@@ -2743,7 +2721,46 @@ class BonusFeaturePatch()
             __instance.atk = atk;
         }
     }
-    [HarmonyPatch(typeof(enemyController),"SubBossBoost")]
+
+    [HarmonyPatch(typeof(enemyController), "SetMaxBossHealth")]
+    [HarmonyPrefix]
+    static bool setMaxBossHealth(ref enemyController __instance)
+    {
+        int num = RandomizerPlugin.customDiff - 5;
+        float num2 = 0f;
+        float num3 = 0f;
+        if (num > 0)
+        {
+            float num4 = 0f;
+            if (num <= 5)
+            {
+                float num5 = (float)num * 0.067f;
+                if (num5 > 0.3f)
+                {
+                    num5 = 0.3f;
+                }
+                num2 += num5;
+            }
+            else
+            {
+                num2 += 0.3f + (float)(num - 5) * 0.001f;
+            }
+            num4 = num2;
+            if (num >= 0)
+            {
+                num4 += (float)(num - 5) * 5E-05f;
+            }
+            __instance.health = (int)((float)__instance.health * (1f + num2));
+            num3 = num4;
+            num3 = ((!(num3 < 0f)) ? (num3 / 3f) : 0f);
+            __instance.maxToBreak = (int)(__instance.toBreak * (1f + num3));
+            __instance.toBreak = __instance.maxToBreak;
+        }
+        Debug.Log("[BossHealth] " + __instance.type.ToString() + "'s health set to " + __instance.health + ", BreakBar set to " + __instance.toBreak + " Mod : " + num2 + " BMod : " + num3);
+        return false;
+    }
+
+    [HarmonyPatch(typeof(enemyController), "SubBossBoost")]
     [HarmonyPrefix]
     static bool subBossBoost(ref enemyController __instance)
     {
@@ -2753,11 +2770,11 @@ class BonusFeaturePatch()
         }
         if (__instance.type == Character.Type.Katu)
         {
-            if (customDiff >= (short)Difficulty.D7)
+            if (RandomizerPlugin.customDiff >= (short)Difficulty.D7)
             {
                 __instance.health += 125;
             }
-            if (customDiff >= (short)Difficulty.D10)
+            if (RandomizerPlugin.customDiff >= (short)Difficulty.D10)
             {
                 __instance.health += 125;
             }
@@ -2832,7 +2849,7 @@ class BonusFeaturePatch()
     static bool difficultyBossHealth(ref enemyController __instance)
     {
         float num = 0f;
-        Difficulty difficultyName = (Difficulty)customDiff;
+        Difficulty difficultyName = (Difficulty)RandomizerPlugin.customDiff;
         if (difficultyName >= Difficulty.D6)
         {
             float num2 = 0f;
@@ -2933,7 +2950,7 @@ class BonusFeaturePatch()
         }
         return false;
     }
-    [HarmonyPatch(typeof(ObjectPhy),"WallHit")]
+    [HarmonyPatch(typeof(ObjectPhy), "WallHit")]
     [HarmonyPrefix]
     static bool reducWallDmg(ref CharacterBase ___cb_perfer)
     {
@@ -2942,13 +2959,12 @@ class BonusFeaturePatch()
         {
             ___cb_perfer.PlaySound(AllSound.SEList.WallHit, 1f, 1f);
             CameraScript.Instance.Shake(4f, 10f, 0.5f);
-            int num = (int)(5f + Math.Clamp(customDiff * 1.25f, -4f, 100f)) + (int)((float)(int)___cb_perfer.GetBuffLv(BuffType.WallDamageAmp) * (5f + Math.Clamp(customDiff * 0.8f, -4f, 20f)));
+            int num = (int)(5f + Math.Clamp(RandomizerPlugin.customDiff * 1.25f, -4f, 100f)) + (int)((float)(int)___cb_perfer.GetBuffLv(BuffType.WallDamageAmp) * (5f + Math.Clamp(RandomizerPlugin.customDiff * 0.8f, -4f, 20f)));
             ___cb_perfer.ReduceHealth(num, lethal: false);
             DamageManager.Instance.CreateDamage(num.ToString(), num, ___cb_perfer.t.position + new Vector3(0f, (float)___cb_perfer.damagePosition * 20f - 10f + ___cb_perfer.OverallOffsetY), ___cb_perfer, DamageTextType.NORMAL, new Color32(225, 177, 177, byte.MaxValue), new Color32(byte.MaxValue, 77, 77, byte.MaxValue), 20f);
             return false;
         }
         return true;
     }
-
 }
 
