@@ -1582,7 +1582,7 @@
         "slotId": 5,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS2 && ChargeShot",
+                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20",
                 "Difficulty": 0
             }
         ]
@@ -1978,7 +1978,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS2 && ChargeShot",
+                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20",
                 "Difficulty": 0
             },
             {
@@ -2030,15 +2030,15 @@
         "slotId": 7,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS2 && ChargeShot",
+                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeS3 && ChargeShot",
+                "Method": "ITEM_OrbTypeS3 && ChargeShot && I20",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeC3 && ChargeShot",
+                "Method": "ITEM_OrbTypeC3 && ChargeShot && I19",
                 "Difficulty": 0
             }
         ]
@@ -3596,7 +3596,7 @@
         "slotId": 15,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeC3 && ChargeShot",
+                "Method": "ITEM_OrbTypeC3 && ChargeShot && I19",
                 "Difficulty": 0
             },
             {
@@ -3604,15 +3604,15 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_HIGHJUMP",
+                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_HIGHJUMP && I20",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_DOUBLEJUMP",
+                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_DOUBLEJUMP && I20",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_JETPACK",
+                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_JETPACK && I20",
                 "Difficulty": 0
             }
         ]
@@ -3985,7 +3985,7 @@
         "slotId": 20,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS3 && ITEM_DOUBLEJUMP && ITEM_AirDash && ChargeShot",
+                "Method": "ITEM_OrbTypeS3 && ITEM_DOUBLEJUMP && ITEM_AirDash && ChargeShot && I20",
                 "Difficulty": 0
             }
         ]
@@ -4446,7 +4446,7 @@
         "slotId": 24,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS2 && ChargeShot",
+                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20",
                 "Difficulty": 0
             }
         ]
