@@ -27,6 +27,7 @@ BADGE_ConvertDef2Off:Desert Base Upper Half:1:,0
 BADGE_LowerThan20:Desert Base Upper Half:1:,0
 ITEM_EasyStyle:Start Area:1:,0
 ITEM_KNIFE:Start Area:1:,0
+I20:Start Area:1:,0
 ITEM_ORB:Start Area:1:,0
 BADGE_MAXHPUP:Start Area:1:ChargeShot,0
 BADGE_RangeCombo:Start Area:1:,0
@@ -57,7 +58,7 @@ BADGE_DoubleJumpAttack:Valhalla Breath Lower Left Part:1:ITEM_LINEBOMB,0
 STACKABLE_MP:Heavens Valley:25:ChargeShot,0
 STACKABLE_EP:Valhalla Breath Lower Left Part:13:,0
 BADGE_Normal3HModStabB:Valhalla Breath Lower Left Part:1:ITEM_SLIDE,0
-STACKABLE_RATK:Valhalla Breath Lower Left Part:13:,0
+STACKABLE_RATK:Valhalla Breath Lower Left Part:13:ChargeShot,0
 BADGE_ComboDamageBoost:Heavens Valley:1:,0
 STACKABLE_MATK:Valhalla Breath Lower Left Part:13:ITEM_SLIDE && ITEM_DOUBLEJUMP,0;ITEM_SLIDE && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_AirDash,0
 BADGE_DoubleNormalComboSpeedup:Valhalla Breath Left Part:1:ITEM_SLIDE,0
@@ -95,7 +96,7 @@ ITEM_BOMBFUEL:Travoll Industrie:1:,0
 BADGE_ConvertOff2Def:Travoll Industrie:1:ITEM_SLIDE && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_DOUBLEJUMP,0;ITEM_SLIDE && ITEM_WALLJUMP && ITEM_AirDash,0
 STACKABLE_MP:Travoll Industrie:1:,0
 STACKABLE_MATK:Travoll Mines Part 2:15:ITEM_LINEBOMB,0
-STACKABLE_COG:Travoll Mines Part 2:25:Boss,0
+STACKABLE_COG:Travoll Mines Part 2:25:ChargeShot && Boss,0
 BADGE_AirComboQuicken:Travoll Mines Part 2:1:ITEM_LINEBOMB,0
 STACKABLE_RATK:Travoll Mines Part 2:0:ITEM_LINEBOMB,0
 STACKABLE_MP:Travoll Mines Part 2:15:ITEM_SLIDE && ITEM_AREABOMB,0
@@ -107,6 +108,7 @@ BADGE_GroundBombQuickExcute:Forest:1:,0
 STACKABLE_MATK:Forest:0:,0
 BADGE_NormalShotReducerA:Forest:1:ChargeShot,0
 BADGE_TauntSit:Forest:1:ChargeShot && ITEM_LINEBOMB,0
+I19:Forest:1:ChargeShot,0
 ITEM_BoostSystem:Forest:1:,0
 BADGE_GroundNormal4Mod:Forest:1:,0
 STACKABLE_HP:Forest:3:ChargeShot,0
@@ -119,31 +121,31 @@ STACKABLE_MP:Forest Maze extended:3:,0
 STACKABLE_MATK:Forest Maze extended:23:,0
 STACKABLE_RATK:Forest Maze extended:1:,0
 STACKABLE_RATK:Forest Maze extended:22:,0
-STACKABLE_EP:Gleamwood:5:,0
-STACKABLE_MATK:Gleamwood:3:,0
+STACKABLE_EP:Gleamwood:5:ITEM_KNIFE,0
+STACKABLE_MATK:Gleamwood:3:ChargeShot,0
 BADGE_QuickBomber:Gleamwood:1:,0
 ITEM_MASK:Gleamwood:1:,0
 STACKABLE_HP:Gleamwood:5:,0
 STACKABLE_MP:Gleamwood:26:ITEM_SLIDE,0
 BADGE_ComboTimeExtendC:Gleamwood:1:ITEM_SLIDE,0
-STACKABLE_RATK:Gleamwood:19:ITEM_SLIDE,0
+STACKABLE_RATK:Gleamwood:19:ITEM_SLIDE && ChargeShot,0
 STACKABLE_SHARD:Gleamwood:15:ITEM_DOUBLEJUMP,0;ITEM_JETPACK,0;ITEM_AirDash,0
 BADGE_TauntStare:Gleamwood:1:ITEM_JETPACK,0;ITEM_AirDash,0;ITEM_DOUBLEJUMP,0
 BADGE_DodgeMeterBoost:Gleamwood Upper:1:,0
-BADGE_BattleStartCharger:Gleamwood Right:1:,0
-STACKABLE_RATK:Gleamwood Right:5:ITEM_OrbTypeS2,0
+BADGE_BattleStartCharger:Gleamwood Right:1:ChargeShot,0
+STACKABLE_RATK:Gleamwood Right:5:ITEM_OrbTypeS2 && ChargeShot,0
 BADGE_AirNormalComboSpeedup:Gleamwood Right:1:,0
 BADGE_DoubleGroundNormal3N1:Gleamwood Right:1:ITEM_SLIDE,0
 STACKABLE_MP:Gleamwood Right:5:,0
 ITEM_AntiDecay:Gleamwood Right:1:ITEM_SLIDE,0
 BADGE_SlideHalt:Gleamwood Right:1:ITEM_SLIDE,0
 BADGE_GoldenLuck:Gleamwood Right:1:ITEM_SLIDE && BombLengthExtend1 && ITEM_DOUBLEJUMP,0;ITEM_SLIDE && BombLengthExtend1 && ITEM_JETPACK,0;ITEM_SLIDE && BombLengthExtend1 && ITEM_HIGHJUMP && ITEM_WALLJUMP,0;ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AREABOMB && ITEM_DOUBLEJUMP,0;ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AREABOMB && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AREABOMB && ITEM_HIGHJUMP && ITEM_WALLJUMP,0
-BADGE_WeakAirDownRotate:Plague Forest:1:,0
+BADGE_WeakAirDownRotate:Plague Forest:1:ChargeShot,0
 BADGE_StyleComboReduceDamageS:Plague Forest:1:ITEM_LINEBOMB,0
 STACKABLE_HP:Plague Forest:6:ITEM_LINEBOMB,0
 STACKABLE_MP:Plague Forest:6:ITEM_LINEBOMB,0
 ITEM_SLIDE:Plague Forest:1:,0
-STACKABLE_EP:Plague Forest:6:,0
+STACKABLE_EP:Plague Forest:6:ChargeShot,0
 BADGE_TauntKnife:Plague Forest:1:ITEM_AirDash,0;ITEM_DOUBLEJUMP,0;ITEM_JETPACK,0;ITEM_HIGHJUMP && ITEM_WALLJUMP,0
 BADGE_DodgeWeakGroundUp:Plague Forest:1:ITEM_LINEBOMB,0
 STACKABLE_COG:Plague Forest:30:Boss,0
@@ -152,7 +154,7 @@ BADGE_PrepDef:Plague Forest:1:ITEM_AirSlide,0
 STACKABLE_RATK:Plague Forest:6:,0
 STACKABLE_MATK:Plague Forest:5:,0
 BADGE_Unlucky7:Plague Forest:1:,0
-BADGE_HP2MP:Ulvosa:1:,0
+BADGE_HP2MP:Ulvosa:1:ChargeShot,0
 STACKABLE_MATK:Ulvosa:19:ITEM_DOUBLEJUMP,0;ITEM_AirDash,0;ITEM_JETPACK,0;ITEM_HIGHJUMP,0
 STACKABLE_RATK:Ulvosa:18:ITEM_AREABOMB,0
 BADGE_AmuletDouble:Ulvosa:1:EliteChallangeD,0
@@ -163,7 +165,7 @@ BADGE_BoostMeleeOffense:Ulvosa:1:ITEM_LINEBOMB,0
 STACKABLE_HP:Ulvosa:20:,0
 STACKABLE_COG:Ulvosa:31:Boss,0
 ITEM_OrbAmulet:Ulvosa:1:,0
-BADGE_Cursed6:Ulvosa:1:ITEM_OrbTypeS2,0;Soulburst,0;LargeManaPillar,0
+BADGE_Cursed6:Ulvosa:1:ITEM_OrbTypeS2 && ChargeShot,0;Soulburst,0;LargeManaPillar,0
 STACKABLE_MATK:Ulvosa:25:ITEM_Rotater,0
 STACKABLE_MP:CopperWood:2:,0
 STACKABLE_EP:CopperWood:2:,0
@@ -208,12 +210,12 @@ STACKABLE_HP:LavaWorld:26:ITEM_AirSlide,0
 STACKABLE_HP:LavaWorld:11:,0
 BADGE_AmuletQuicken:LavaWorld:1:EliteChallangeE && ITEM_SLIDE,0
 ITEM_JETPACK:LavaWorld:1:,0
-STACKABLE_MATK:LavaWorld:11:,0
+STACKABLE_MATK:LavaWorld:11:ChargeShot,0
 STACKABLE_MP:LavaWorld:11:ITEM_LINEBOMB,0
 BADGE_EPCombo:LavaWorld Part 2:1:ITEM_LINEBOMB,0
 BADGE_ArrowDamageUp:LavaWorld Part 2:1:ITEM_AirSlide,0
 STACKABLE_RATK:LavaWorld Part 2:11:,0
-BADGE_1HealthTypeC:LavaWorld Part 2:1:,0
+BADGE_1HealthTypeC:LavaWorld Part 2:1:ChargeShot,0
 BADGE_AntiGround:LavaWorld Part 2:1:ITEM_Rotater && ITEM_AirSlide,0
 BADGE_HitMP:LavaWorld Part 2:1:ITEM_SLIDE,0
 STACKABLE_COG:LavaWorld Part 2:4:ITEM_AirSlide,0;BombLengthExtend1 && ITEM_SLIDE,0
@@ -230,8 +232,9 @@ BADGE_Normal3HModStabA:Swamp:1:,0
 BADGE_BreakRangeChaser:Swamp:1:ITEM_AirDash,0;ITEM_JETPACK,0;ITEM_DOUBLEJUMP,0
 STACKABLE_MP:Swamp:12:ITEM_JETPACK2,0;ITEM_JETPACK && ITEM_DOUBLEJUMP,0;ITEM_JETPACK && ITEM_AirDash,0;ITEM_AirDash && ITEM_DOUBLEJUMP,0
 BADGE_Normal2MultHit:Swamp:1:ITEM_SLIDE && ITEM_LINEBOMB,0
-BADGE_NonChargeShotRapid:Tartarus:1:,0
+BADGE_NonChargeShotRapid:Tartarus:1:ChargeShot,0
 BADGE_CrystalAbsorberS:Tartarus:1:,0
+QUEST_RabiPillow:Tartarus:1:,0
 STACKABLE_EP:Tartarus:12:ITEM_LINEBOMB,0
 BADGE_Lucky7Defend:Tartarus:1:ITEM_HIGHJUMP && ITEM_JETPACK,0;ITEM_HIGHJUMP && ITEM_DOUBLEJUMP,0;ITEM_HIGHJUMP && ITEM_DOUBLEJUMP,0;ITEM_JETPACK && ITEM_DOUBLEJUMP,0;ITEM_AirDash && ITEM_DOUBLEJUMP,0;ITEM_AirDash && ITEM_JETPACK,0;ITEM_JETPACK2,0
 STACKABLE_MP:Tartarus:13:ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK,0
@@ -262,7 +265,7 @@ BADGE_DoubleDispelLineBombHigh:Catacombs Entrance:1:,0
 STACKABLE_MP:Vassago fight:21:ITEM_AREABOMB,0
 BADGE_QuickDropDouble:Vassago fight:1:ITEM_LINEBOMB,0
 BADGE_CrystalAttack:Vassago fight:1:ITEM_LINEBOMB,0
-BADGE_AntiAir:Vassago fight:1:ITEM_LINEBOMB,0
+BADGE_AntiAir:Vassago fight:1:ITEM_LINEBOMB && ITEM_SLIDE,0;ITEM_LINEBOMB && ChargeShot,0
 BADGE_InstantDodgeMeter:Vassago fight:1:ITEM_LINEBOMB,0
 STACKABLE_COG:Vassago fight:63:Boss,0
 STACKABLE_MATK:Lab:18:ITEM_BombLengthExtend3,0
@@ -274,7 +277,7 @@ STACKABLE_EP:Lab Part 2:20:ITEM_SLIDE && ITEM_LINEBOMB,0
 STACKABLE_EP:Lab Part 2:19:,0
 STACKABLE_COG:Lab Part 2:45:Boss,0
 BADGE_StyleComboPassiveA:Lab Part 2:1:,0
-ITEM_DodgeShot:Lab Part 2:1:,0
+ITEM_DodgeShot:Lab Part 2:1:ChargeShot,0
 ITEM_Alterscope:Lab Extra:1:,0
 BADGE_HitCountChargeRate:Lab Extra:1:,0
 ITEM_WATERMOVEMENT:Verdazure Sea:1:,0
@@ -296,7 +299,7 @@ STACKABLE_MP:Valhalla City:18:ITEM_LINEBOMB,0
 STACKABLE_HP:Valhalla City:17:ITEM_SLIDE && ITEM_LINEBOMB,0
 BADGE_BuffRush:Valhalla City:1:ITEM_JETPACK,0;ITEM_DOUBLEJUMP,0;ITEM_AirDash && ITEM_WALLJUMP,0
 STACKABLE_EP:Valhalla City:26:ITEM_LINEBOMB,0
-STACKABLE_RATK:Valhalla City:15:ITEM_OrbTypeC3,0;ITEM_JETPACK && ITEM_DOUBLEJUMP,0;ITEM_OrbTypeS3 && ITEM_HIGHJUMP,0;ITEM_OrbTypeS3 && ITEM_DOUBLEJUMP,0;ITEM_OrbTypeS3 && ITEM_JETPACK,0
+STACKABLE_RATK:Valhalla City:15:ITEM_OrbTypeC3 && ChargeShot,0;ITEM_JETPACK && ITEM_DOUBLEJUMP,0;ITEM_OrbTypeS3 && ChargeShot && ITEM_HIGHJUMP,0;ITEM_OrbTypeS3 && ChargeShot && ITEM_DOUBLEJUMP,0;ITEM_OrbTypeS3 && ChargeShot && ITEM_JETPACK,0
 BADGE_ComboSaver:Valhalla City:1:,0
 ITEM_AirshipPass:Valhalla City:1:Coins 3000,0
 BADGE_StyleComboAirDashA:Valhalla City:1:Coins 1300,0
@@ -344,13 +347,13 @@ BADGE_LateAttack:Cloister:1:ITEM_LINEBOMB,0
 STACKABLE_MATK:Gallary of Mirrors:10:ITEM_LINEBOMB,0
 STACKABLE_EP:Gallary of Mirrors:10:,0
 BADGE_ChargeShotDiscount:Gallary of Mirrors:1:,0
-BADGE_AreaBombThrower:Gallary of Mirrors:1:,0
-BADGE_Recover3:Gallary of Mirrors:1:,0
-ITEM_BombLengthExtend:Gallary of Mirrors:1:,0
-STACKABLE_COG:Gallary of Mirrors:47:Boss,0
-STACKABLE_HP:Gallary of Mirrors:10:ITEM_SLIDE,0
-BADGE_WeakGroundUpModCombo:Gallary of Mirrors:1:ITEM_HIGHJUMP,0;ITEM_DOUBLEJUMP,0;ITEM_JETPACK,0;ITEM_AirDash,0
-STACKABLE_EP:Gallary of Mirrors:25:ITEM_Rotater && ITEM_JETPACK && ITEM_DOUBLEJUMP && ITEM_AirDash,0;ITEM_Rotater && ITEM_JETPACK && ITEM_AirDash,3;ITEM_Rotater && ITEM_JETPACK2 && ITEM_AirDash,0;ITEM_Rotater && ITEM_DOUBLEJUMP && ITEM_JETPACK,0;ITEM_Rotater,0
+BADGE_AreaBombThrower:Gallary of Mirrors 2:1:,0
+BADGE_Recover3:Gallary of Mirrors 2:1:,0
+ITEM_BombLengthExtend:Gallary of Mirrors 2:1:,0
+STACKABLE_COG:Gallary of Mirrors 2:47:Boss,0
+STACKABLE_HP:Gallary of Mirrors 2:10:ITEM_SLIDE,0
+BADGE_WeakGroundUpModCombo:Gallary of Mirrors 2:1:ITEM_HIGHJUMP && ChargeShot,0;ITEM_DOUBLEJUMP && ChargeShot,0;ITEM_JETPACK && ChargeShot,0;ITEM_AirDash && ChargeShot,0
+STACKABLE_EP:Gallary of Mirrors 2:25:ITEM_Rotater && ITEM_JETPACK && ITEM_DOUBLEJUMP && ITEM_AirDash,0;ITEM_Rotater && ITEM_JETPACK && ITEM_AirDash,3;ITEM_Rotater && ITEM_JETPACK2 && ITEM_AirDash,0;ITEM_Rotater && ITEM_DOUBLEJUMP && ITEM_JETPACK,0;ITEM_Rotater,0
 STACKABLE_COG:Gallary of Mirrors:5:ITEM_AirDash && ITEM_WALLJUMP,0;ITEM_JETPACK,0;ITEM_DOUBLEJUMP,0
 STACKABLE_MP:Gallary of Souls:10:ITEM_SLIDE && ITEM_LINEBOMB,0
 STACKABLE_RATK:Gallary of Souls:10:ITEM_SLIDE && ITEM_LINEBOMB,0
@@ -358,11 +361,11 @@ ITEM_DOUBLEJUMP:Gallary of Souls:1:,0
 BADGE_Instant1:Gallary of Souls:1:,-1
 STACKABLE_COG:Gallary of Souls Boss:62:Boss,0
 STACKABLE_HP:Verdazure Ocean:23:ITEM_WALLJUMP && ITEM_DOUBLEJUMP,0;ITEM_WALLJUMP && ITEM_JETPACK2,0;ITEM_WALLJUMP && WaterMovement,0;ITEM_WALLJUMP && ITEM_JETPACK && ITEM_AirDash,0;WaterMovement && ITEM_AirDash && ITEM_DOUBLEJUMP,0;WaterMovement && ITEM_DOUBLEJUMP && ITEM_JETPACK,0
-BADGE_DodgeCharger:Verdazure Ocean:1:ITEM_AREABOMB,0
+BADGE_DodgeCharger:Verdazure Ocean:1:ITEM_AREABOMB && ChargeShot,0
 STACKABLE_MP:Verdazure Ocean:16:ITEM_LINEBOMB,0
 STACKABLE_RATK:Verdazure Ocean:25:ITEM_LINEBOMB,0
 STACKABLE_EP:Verdazure Ocean:15:BombLengthExtend1,0
-STACKABLE_MP:Verdazure Ocean:24:ITEM_OrbTypeS2,0
+STACKABLE_MP:Verdazure Ocean:24:ITEM_OrbTypeS2 && ChargeShot,0
 BADGE_ComboTimeExtendB:Swampike:1:ITEM_JETPACK,0;ITEM_DOUBLEJUMP,0
 BADGE_BOnceHeal:Swampike:1:,0
 STACKABLE_RATK:Swampike:23:ITEM_Rotater,1
@@ -375,9 +378,9 @@ BADGE_MAXHP2MAXMP:Forgotten City Upper Exit:1:ITEM_LINEBOMB,0
 STACKABLE_RATK:Forgotten City:4:ITEM_LINEBOMB,0
 STACKABLE_EP:Forgotten City:4:,0
 BADGE_QuickDropExtendB:Forgotten City:1:,0
-STACKABLE_MATK:Forgotten City:4:,0
-STACKABLE_COG:Forgotten City:34:Boss,0
-BADGE_BaseComboBooster:Forgotten City:1:,0
+STACKABLE_MATK:Forgotten City:4:ChrageShot,0
+STACKABLE_COG:Forgotten City:34:ChrageShot && Boss,0;ITEM_DOUBLEJUMP && ITEM_BombLengthExtend3 && Boss,0;ITEM_WALLJUMP && ITEM_BombLengthExtend3 && Boss,0;ITEM_HIGHJUMP && ITEM_JETPACK3 && ITEM_KNIFE && ITEM_BombLengthExtend3 && Boss,0
+BADGE_BaseComboBooster:Forgotten City:1:ChrageShot,0;ITEM_DOUBLEJUMP && ITEM_BombLengthExtend3,0;ITEM_WALLJUMP && ITEM_BombLengthExtend3,0;ITEM_HIGHJUMP && ITEM_JETPACK3 && ITEM_KNIFE && ITEM_BombLengthExtend3,0
 BADGE_StyleComboPassiveS:Forgotten City:1:ITEM_LINEBOMB,0
 BADGE_DodgeChargedDodgeShot:Snowveil1:1:ITEM_SLIDE,0
 STACKABLE_RATK:Snowveil1:14:ITEM_AREABOMB,0
@@ -413,15 +416,15 @@ STACKABLE_MP:Golden Hands HQ:23:,0
 QUEST_GHandR:Golden Hands HQ:1:ITEM_Rotater,0;,0
 BADGE_ChargeIntoEnemy:Golden Hands HQ:1:ITEM_AREABOMB,0
 STACKABLE_MATK:Golden Hands HQ:21:ITEM_Rotater,0;,0
-BADGE_DodgeStrongAirDown:Golden Hands HQ:1:ITEM_SLIDE && ITEM_LINEBOMB,0
+BADGE_DodgeStrongAirDown:Golden Hands HQ:1:ITEM_SLIDE && ITEM_LINEBOMB && ChargeShot,0
 STACKABLE_HP:Golden Hands HQ:12:ITEM_SLIDE,0
 STACKABLE_EP:Golden Hands HQ end:23:ITEM_SLIDE,0
 BADGE_SuperKnockBomb:Golden Hands HQ end:1:ITEM_LINEBOMB,0
 ITEM_AirSlide:Golden Hands HQ end:1:ITEM_WALLJUMP,0;ITEM_DOUBLEJUMP,0;ITEM_JETPACK,0
 STACKABLE_COG:Golden Hands HQ end:36:Boss,0
 BADGE_SlideThenStrongUp:DreamKeeper Outside Right:1:ITEM_HIGHJUMP,0;ITEM_JETPACK,0;ITEM_DOUBLEJUMP,0;ITEM_AirDash && ITEM_WALLJUMP,0
-STACKABLE_HP:DreamKeeper Outside Right:28:BombLengthExtend1 && ITEM_SLIDE,0
-STACKABLE_RATK:DreamKeeper Outside Left:27:ITEM_JETPACK,0;ITEM_DOUBLEJUMP,0
+STACKABLE_HP:DreamKeeper Outside Right:28:BombLengthExtend1 && ITEM_SLIDE && ChargeShot,0
+STACKABLE_RATK:DreamKeeper Outside Left:27:ITEM_JETPACK && ChargeShot,0;ITEM_DOUBLEJUMP && ChargeShot,0
 ITEM_TempRing:DreamKeeper Outside Left:1:,0
 STACKABLE_HP:DreamKeeper Outside Left:27:,0
 BADGE_ConsumeableCharge:DreamKeeper:1:,0
@@ -435,14 +438,9 @@ STACKABLE_MATK:DreamKeeper:28:ITEM_LINEBOMB,0
 STACKABLE_EP:DreamKeeper:28:ITEM_LINEBOMB,0
 BADGE_KnockHitEnhance:DreamKeeper:1:ITEM_AREABOMB,0
 BADGE_CrystalBulletCancel:Deep Dream:1:ITEM_BombLengthExtend3,0
-BADGE_GroundNormalComboAutoSpeedup:Deep Dream:1:ITEM_SLIDE && ITEM_AirSlide,0
-<<<<<<< HEAD
-BADGE_BadgeCDReduce:Deep Dream:1:ITEM_DOUBLEJUMP && ITEM_JETPACK2 && ItemUse,0;ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash,0;ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_WALLJUMP && HighJump && ItemUse,0
-ITEM_Royal:Deep Dream:1:ITEM_JETPACK && ITEM_DOUBLEJUMP,0;ITEM_DOUBLEJUMP && ITEM_AirDash,0;ITEM_JETPACK2 && ITEM_AirDash,0;ITEM_JETPACK && ITEM_AirDash && HighJump,0
-=======
+BADGE_GroundNormalComboAutoSpeedup:Deep Dream:1:ITEM_SLIDE && ITEM_AirSlide && ITEM_ORB,0;ITEM_SLIDE && ITEM_AirSlide && ITEM_KNIFE,0
 BADGE_BadgeCDReduce:Deep Dream:1:ITEM_DOUBLEJUMP && ITEM_JETPACK2 && ItemUse,0;ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash,0;ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_HIGHJUMP && ItemUse,0
 ITEM_Royal:Deep Dream:1:ITEM_JETPACK && ITEM_DOUBLEJUMP,0;ITEM_DOUBLEJUMP && ITEM_AirDash,0;ITEM_JETPACK2 && ITEM_AirDash,0;ITEM_JETPACK && ITEM_AirDash && ITEM_HIGHJUMP,0
->>>>>>> Edits
 STACKABLE_EP:Valley Lower Part:27:ITEM_SLIDE && ITEM_LINEBOMB,0
 STACKABLE_RATK:Valley Lower Part:24:ITEM_LINEBOMB && ITEM_JETPACK,0;ITEM_LINEBOMB && ITEM_DOUBLEJUMP,0
 BADGE_SafeItemUse:Valley Lower Part:1:ITEM_Rotater && ITEM_DOUBLEJUMP,0;ITEM_Rotater && ITEM_JETPACK,0

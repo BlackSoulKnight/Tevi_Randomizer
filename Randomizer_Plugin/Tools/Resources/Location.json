@@ -327,6 +327,17 @@
         ]
     },
     {
+        "Itemname": "I20",
+        "Location": "Start Area",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "ITEM_ORB",
         "Location": "Start Area",
         "slotId": 1,
@@ -694,7 +705,7 @@
         "slotId": 13,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -1148,7 +1159,7 @@
         "slotId": 25,
         "Requirement": [
             {
-                "Method": "Boss",
+                "Method": "ChargeShot && Boss",
                 "Difficulty": 0
             }
         ]
@@ -1270,6 +1281,17 @@
         "Requirement": [
             {
                 "Method": "ChargeShot && ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I19",
+        "Location": "Forest",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -1412,7 +1434,7 @@
         "slotId": 5,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_KNIFE",
                 "Difficulty": 0
             }
         ]
@@ -1423,7 +1445,7 @@
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -1489,7 +1511,7 @@
         "slotId": 19,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE",
+                "Method": "ITEM_SLIDE && ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -1549,7 +1571,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -1560,7 +1582,7 @@
         "slotId": 5,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS2",
+                "Method": "ITEM_OrbTypeS2 && ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -1657,7 +1679,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -1712,7 +1734,7 @@
         "slotId": 6,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -1823,7 +1845,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -1956,7 +1978,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS2",
+                "Method": "ITEM_OrbTypeS2 && ChargeShot",
                 "Difficulty": 0
             },
             {
@@ -2507,7 +2529,7 @@
         "slotId": 11,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -2562,7 +2584,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -2793,13 +2815,24 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "BADGE_CrystalAbsorberS",
+        "Location": "Tartarus",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "QUEST_RabiPillow",
         "Location": "Tartarus",
         "slotId": 1,
         "Requirement": [
@@ -3169,7 +3202,11 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_LINEBOMB",
+                "Method": "ITEM_LINEBOMB && ITEM_SLIDE",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_LINEBOMB && ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -3301,7 +3338,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -3559,7 +3596,7 @@
         "slotId": 15,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeC3",
+                "Method": "ITEM_OrbTypeC3 && ChargeShot",
                 "Difficulty": 0
             },
             {
@@ -3567,15 +3604,15 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeS3 && ITEM_HIGHJUMP",
+                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_HIGHJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeS3 && ITEM_DOUBLEJUMP",
+                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeS3 && ITEM_JETPACK",
+                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_JETPACK",
                 "Difficulty": 0
             }
         ]
@@ -4151,7 +4188,7 @@
     },
     {
         "Itemname": "BADGE_AreaBombThrower",
-        "Location": "Gallary of Mirrors",
+        "Location": "Gallary of Mirrors 2",
         "slotId": 1,
         "Requirement": [
             {
@@ -4162,7 +4199,7 @@
     },
     {
         "Itemname": "BADGE_Recover3",
-        "Location": "Gallary of Mirrors",
+        "Location": "Gallary of Mirrors 2",
         "slotId": 1,
         "Requirement": [
             {
@@ -4173,7 +4210,7 @@
     },
     {
         "Itemname": "ITEM_BombLengthExtend",
-        "Location": "Gallary of Mirrors",
+        "Location": "Gallary of Mirrors 2",
         "slotId": 1,
         "Requirement": [
             {
@@ -4184,7 +4221,7 @@
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "Gallary of Mirrors",
+        "Location": "Gallary of Mirrors 2",
         "slotId": 47,
         "Requirement": [
             {
@@ -4195,7 +4232,7 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Gallary of Mirrors",
+        "Location": "Gallary of Mirrors 2",
         "slotId": 10,
         "Requirement": [
             {
@@ -4206,30 +4243,30 @@
     },
     {
         "Itemname": "BADGE_WeakGroundUpModCombo",
-        "Location": "Gallary of Mirrors",
+        "Location": "Gallary of Mirrors 2",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_HIGHJUMP",
+                "Method": "ITEM_HIGHJUMP && ChargeShot",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_DOUBLEJUMP",
+                "Method": "ITEM_DOUBLEJUMP && ChargeShot",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_JETPACK",
+                "Method": "ITEM_JETPACK && ChargeShot",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_AirDash",
+                "Method": "ITEM_AirDash && ChargeShot",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Gallary of Mirrors",
+        "Location": "Gallary of Mirrors 2",
         "slotId": 25,
         "Requirement": [
             {
@@ -4365,7 +4402,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_AREABOMB",
+                "Method": "ITEM_AREABOMB && ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -4409,7 +4446,7 @@
         "slotId": 24,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS2",
+                "Method": "ITEM_OrbTypeS2 && ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -4564,7 +4601,7 @@
         "slotId": 4,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ChrageShot",
                 "Difficulty": 0
             }
         ]
@@ -4575,7 +4612,19 @@
         "slotId": 34,
         "Requirement": [
             {
-                "Method": "Boss",
+                "Method": "ChrageShot && Boss",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_DOUBLEJUMP && ITEM_BombLengthExtend3 && Boss",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_WALLJUMP && ITEM_BombLengthExtend3 && Boss",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_HIGHJUMP && ITEM_JETPACK3 && ITEM_KNIFE && ITEM_BombLengthExtend3 && Boss",
                 "Difficulty": 0
             }
         ]
@@ -4586,7 +4635,19 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ChrageShot",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_DOUBLEJUMP && ITEM_BombLengthExtend3",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_WALLJUMP && ITEM_BombLengthExtend3",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_HIGHJUMP && ITEM_JETPACK3 && ITEM_KNIFE && ITEM_BombLengthExtend3",
                 "Difficulty": 0
             }
         ]
@@ -5010,7 +5071,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -5107,7 +5168,7 @@
         "slotId": 28,
         "Requirement": [
             {
-                "Method": "BombLengthExtend1 && ITEM_SLIDE",
+                "Method": "BombLengthExtend1 && ITEM_SLIDE && ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -5118,11 +5179,11 @@
         "slotId": 27,
         "Requirement": [
             {
-                "Method": "ITEM_JETPACK",
+                "Method": "ITEM_JETPACK && ChargeShot",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_DOUBLEJUMP",
+                "Method": "ITEM_DOUBLEJUMP && ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -5276,7 +5337,11 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_AirSlide",
+                "Method": "ITEM_SLIDE && ITEM_AirSlide && ITEM_ORB",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_SLIDE && ITEM_AirSlide && ITEM_KNIFE",
                 "Difficulty": 0
             }
         ]

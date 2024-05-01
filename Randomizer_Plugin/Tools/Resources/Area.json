@@ -519,7 +519,7 @@
                 },
                 {
                     "Exit": "Ulvosa",
-                    "Method": ""
+                    "Method": "ChargeShot"
                 }
             ]
         },
@@ -673,11 +673,7 @@
                 },
                 {
                     "Exit": "Verdazure Ocean",
-                    "Method": "ITEM_SLIDE"
-                },
-                {
-                    "Exit": "Gallary of Souls",
-                    "Method": "VertexGlove && ITEM_DOUBLEJUMP"
+                    "Method": "ITEM_SLIDE && ChargeShot"
                 }
             ]
         }
@@ -744,7 +740,7 @@
             "Connections": [
                 {
                     "Exit": "Verdazure Ocean",
-                    "Method": ""
+                    "Method": "ChargeShot"
                 }
             ]
         },
@@ -809,11 +805,15 @@
                 },
                 {
                     "Exit": "Golden Hands HQ",
+                    "Method": "ITEM_SLIDE && ChargeShot"
+                },
+                {
+                    "Exit": "Golden Hands HQ end",
                     "Method": "ITEM_SLIDE"
                 },
                 {
                     "Exit": "Golden Hands HQ end",
-                    "Method": ""
+                    "Method": "ChargeShot"
                 }
             ]
         },
@@ -875,7 +875,7 @@
             "Connections": [
                 {
                     "Exit": "Golden Hands HQ end",
-                    "Method": ""
+                    "Method": "ITEM_Rotater && ChargeShot"
                 }
             ]
         },
@@ -1002,11 +1002,11 @@
             "Connections": [
                 {
                     "Exit": "DreamKeeper Outside Left",
-                    "Method": ""
+                    "Method": "ChargeShot"
                 },
                 {
                     "Exit": "DreamKeeper",
-                    "Method": "ITEM_Rotater"
+                    "Method": "ITEM_Rotater && ChargeShot"
                 }
             ]
         },
@@ -1037,7 +1037,7 @@
                 },
                 {
                     "Exit": "DreamKeeper",
-                    "Method": "ITEM_Rotater"
+                    "Method": "ITEM_Rotater && ChargeShot"
                 },
                 {
                     "Exit": "Valley Lower Part",
@@ -1351,15 +1351,15 @@
             "Connections": [
                 {
                     "Exit": "Sinners Hell",
-                    "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP2"
+                    "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP2 && ChargeShot"
                 },
                 {
                     "Exit": "Sinners Hell",
-                    "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP && ITEM_DOUBLEJUMP"
+                    "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP && ITEM_DOUBLEJUMP && ChargeShot"
                 },
                 {
                     "Exit": "Sinners Hell",
-                    "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP && ITEM_JETPACK"
+                    "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP && ITEM_JETPACK && ChargeShot"
                 }
             ]
         },
@@ -1631,6 +1631,21 @@
             ],
             "Connections": [
                 {
+                    "Exit": "Gallary of Mirrors 2",
+                    "Method": "ChargeShot"
+                }
+            ]
+        },
+        {
+            "Name": "Gallary of Mirrors 2",
+            "Money": [
+                {
+                    "Method": "Needs to be Recalculated",
+                    "Amount": 0
+                }
+            ],
+            "Connections": [
+                {
                     "Exit": "Gallary of Souls",
                     "Method": ""
                 }
@@ -1647,18 +1662,21 @@
             "Connections": [
                 {
                     "Exit": "Gallary of Souls Boss",
-                    "Method": "ITEM_JETPACK2"
+                    "Method": "ITEM_JETPACK2 && ChargeShot"
                 },
                 {
                     "Exit": "Gallary of Souls Boss",
-                    "Method": "ITEM_WALLJUMP"
+                    "Method": "ITEM_WALLJUMP && ChargeShot"
                 },
                 {
                     "Exit": "Gallary of Souls Boss",
-                    "Method": "ITEM_DOUBLEJUMP"
+                    "Method": "ITEM_DOUBLEJUMP && ChargeShot"
                 }
             ]
         },
+
+
+
         {
             "Name": "Gallary of Souls Boss",
             "Money": [

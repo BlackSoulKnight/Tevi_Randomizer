@@ -36,7 +36,7 @@ namespace TeviRandomizer
             return settings;
 
         }
-        static  GameObject finishedText;
+        static public GameObject finishedText;
 
         static public void addAllOptions(GameObject gameObject)
         {
@@ -88,7 +88,6 @@ namespace TeviRandomizer
                     RandomizerPlugin.createSeed(new System.Random(input.GetHashCode()));
                 }
 
-                finishedText.SetActive(true);
             });
             Randomizer.settings = settings;
 
@@ -103,6 +102,7 @@ namespace TeviRandomizer
         {
             settings.Clear();
             RandomizerPlugin.deloadRando();
+            RandomizerPlugin.customDiff = -1;
             string path = BepInEx.Paths.PluginPath + "/tevi_randomizer/resource/";
 
             //GameObject newSelection = new GameObject("Select Slot", typeof(RectTransform));

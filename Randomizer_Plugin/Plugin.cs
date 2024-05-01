@@ -16,6 +16,10 @@ using TeviRandomizer;
 using Map;
 using System.Linq;
 using MiniGame;
+using UnityEngine.UIElements.Experimental;
+using System.Threading.Tasks;
+
+
 
 
 
@@ -79,7 +83,11 @@ public enum Upgradable
     ITEM_Explorer = 30,
 }
 
+public enum CustomFlags : short
+{
+    OrbStart = 0,
 
+}
 
 
 [BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.9.8")]
@@ -89,8 +97,9 @@ public class RandomizerPlugin : BaseUnityPlugin
 
     static public Dictionary<ItemData, ItemData> __itemData = new Dictionary<ItemData, ItemData>();
 
-    static public int  customDiff = 0; //fake diff
+    static public int  customDiff = -1; //fake diff
 
+    static public bool[] customFlags = new bool[Enum.GetNames(typeof(CustomFlags)).Length];
 
     static public string pluginPath = BepInEx.Paths.PluginPath + "/tevi_randomizer/";
 
@@ -115,6 +124,9 @@ public class RandomizerPlugin : BaseUnityPlugin
         instance.PatchAll(typeof(UI));
         instance.PatchAll(typeof(SaveGamePatch));
         instance.PatchAll(typeof(ScalePatch));
+        instance.PatchAll(typeof(OrbPatch));
+        instance.PatchAll(typeof(RabiSmashPatch));
+
         //instance.PatchAll(typeof(BonusFeaturePatch));
         Logger.LogInfo($"Plugin Randomizer is loaded!");
 
@@ -168,7 +180,6 @@ public class RandomizerPlugin : BaseUnityPlugin
     static public void createSeed(System.Random seed)
     {
         randomizer.createSeed(seed);
-        __itemData = randomizer.GetData();
 
     }
 
@@ -262,6 +273,11 @@ public class RandomizerPlugin : BaseUnityPlugin
         {
             return SaveManager.Instance.GetStackableItem(item,slot);
         }
+    }
+
+    static public Sprite getSprite(int itemID,bool custom = false)
+    {
+        return CommonResource.Instance.GetItem(itemID);
     }
 
     // change how the item Bell Works
@@ -460,10 +476,19 @@ public class RandomizerPlugin : BaseUnityPlugin
         SaveManager.Instance.SetOrb((byte)(SaveManager.Instance.GetOrb() + amount));
         if (SaveManager.Instance.GetOrb() >= 3)
         {
+            if(SaveManager.Instance.GetItem(ItemList.Type.ITEM_BoostSystem) > 0) {
+                SaveManager.Instance.SetOrb(4);
+            }
             SaveManager.Instance.FirstTimeEnableOrbColors();
         }
     }
 
+    [HarmonyPatch(typeof(CommonResource),"GetItem")]
+    [HarmonyPrefix]
+    static bool addCustomIcons()
+    {
+        return true;  //copy and insert custom item icon 
+    }
 
     //Craftig Orb Fix
     //No set SlotId, maybe reserver slots for Potions?
@@ -543,8 +568,7 @@ class ItemObtainPatch()
                     break;
             }
         }
-        if (Enum.IsDefined(typeof(Upgradable), type.ToString()))
-            SaveManager.Instance.SetItem(type, (byte)(CraftingPatch.getItemUpgradeCount(type) + 1));
+
 
 
         ItemData data = RandomizerPlugin.getRandomizedItem(type, value);
@@ -593,7 +617,6 @@ class ItemObtainPatch()
     [HarmonyPrefix]
     static bool ItemChanges(ref ItemList.Type item, ref byte value, ref SaveManager __instance)
     {
-        ItemData data = RandomizerPlugin.getRandomizedItem(item, value);
         if (item.ToString().Contains("ITEM"))
         {
             Upgradable itemRef;
@@ -622,7 +645,18 @@ class ItemObtainPatch()
                         {
                             __instance.SetStackableItem((ItemList.Type)itemRef, 0, true);
                         }
-                        
+                        if(item == ItemList.Type.ITEM_BoostSystem)
+                        {
+                            if(SaveManager.Instance.GetOrb() == 3) {
+                                SaveManager.Instance.SetOrb(4);
+                            }
+                            Debug.Log($"[SaveManager] Set Item {item} from {SaveManager.Instance.savedata.itemflag[(int)item]} to {value} | ITEM ID : {(int)item}");
+                            SaveManager.Instance.savedata.itemflag[(int)item] = value;
+                            SaveManager.Instance.RenewGetTotalItemCompletePercent();
+                            SaveManager.Instance.SetMiniFlag(Mini.CanDropCrystal, 1);
+                            SaveManager.Instance.GiveMaxCrystal();
+                            return false;
+                        }
                     }
                     else
                     {
@@ -635,8 +669,17 @@ class ItemObtainPatch()
                     return false;
                 }
             }
+
         }
+
+
         return true;
+    }
+    [HarmonyPatch(typeof(SaveManager),"SetItem")]
+    [HarmonyPostfix]
+    static void dynamicOrbChange(ref ItemList.Type item)
+    {
+        if (item == ItemList.Type.I19 || item == ItemList.Type.I20) EventManager.Instance.ReloadOrbStatus();
     }
 
 
@@ -738,9 +781,16 @@ class EventPatch
             }
 
             SaveManager.Instance.SetOrb((byte)0);
-            RandomizerPlugin.addOrbStatus(3);
+            //RandomizerPlugin.addOrbStatus(3);
 
             ItemData data = RandomizerPlugin.getRandomizedItem(ItemList.Type.ITEM_ORB, 1);
+            if (data.getItemTyp().ToString().Contains("STACKABLE"))
+                SaveManager.Instance.SetStackableItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
+            else
+                SaveManager.Instance.SetItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
+
+            //adding 1 item to the pool for orbs
+            data = RandomizerPlugin.getRandomizedItem(ItemList.Type.I20, 1);
             if (data.getItemTyp().ToString().Contains("STACKABLE"))
                 SaveManager.Instance.SetStackableItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
             else
@@ -752,6 +802,11 @@ class EventPatch
             else
                 SaveManager.Instance.SetItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
 
+            if (RandomizerPlugin.customFlags[(int)CustomFlags.OrbStart])
+            {
+                SaveManager.Instance.SetItem(ItemList.Type.I19,1);
+                SaveManager.Instance.SetItem(ItemList.Type.I20,1);
+            }
             int tmp;
             if(RandomizerPlugin.customDiff >= 0)
             {
@@ -759,9 +814,11 @@ class EventPatch
                 RandomizerPlugin.customDiff = SaveManager.Instance.GetDifficulty();
                 SaveManager.Instance.SetDifficulty(tmp);
             }
-            else RandomizerPlugin.customDiff = SaveManager.Instance.GetDifficulty();
+
+
 
             em.SetStage(30);
+            
         }
     }
     
@@ -983,6 +1040,195 @@ class EventPatch
         }
         return false;
     }
+}
+
+class RabiSmashPatch
+{
+    [HarmonyPatch(typeof(Chap4RabiSmashFullCleared), "EVENT")]
+    [HarmonyPrefix]
+    static void reduceMaxPointReq()
+    {
+        if (EventManager.Instance.EventStage == 10)
+        {
+            EventManager.Instance.StopEvent();
+            if (RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.QUEST_RabiPillow, 1) && SaveManager.Instance.savedata.minigame_highest_score >= 100)
+            {
+                EventManager.Instance.TryStartEvent(Mode.Chap4RabiSmashPillowObtain, true);
+            }
+            else
+            {
+                SaveManager.Instance.AutoSave();
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(RabiRibiEasterEgg), "EVENT")]
+    [HarmonyPrefix]
+    static void newItemSpot()
+    {
+        EventManager em = EventManager.Instance;
+        if (em.EventStage == 170)
+        {
+            em.StartChat(11, "chapterall_rabieasteregg");
+            em.SetStage(171);
+        }
+        else if (em.EventStage == 171)
+        {
+            if (em.EventTime > 0.145f && em.EventTime < 100f)
+            {
+                HUDObtainedItem.Instance.GiveItem(ItemList.Type.I19, 1);
+                em.EventTime = 100f;
+            }
+            if (em.EventTime >= 100.5f && !HUDObtainedItem.Instance.isDisplaying())
+            {
+                em.SetStage(180);
+            }
+        }
+    }
+}
+
+
+
+class OrbPatch
+{
+    [HarmonyPatch(typeof(HUDPosition), "Update")]
+    [HarmonyPrefix]
+    static bool gibHUD(ref UIType.HUD ___Type, ref RectTransform ___rt,ref float ___startX,ref float ___startY,ref float ___targetX)
+    {
+        if (!___rt) return false;
+
+        if(___Type == UIType.HUD.MAIN)
+        {
+            UnityEngine.Vector3 vector = ___rt.anchoredPosition;
+            float num = ___startX;
+            float b = ___startY;
+
+            if (Utility.isHideHUD())
+            {
+                num = ___targetX;
+            }
+            vector.x = Mathf.Lerp(vector.x, num, Utility.GetSmooth2(15f));
+            vector.y = Mathf.Lerp(vector.y, b, Utility.GetSmooth2(15f));
+            ___rt.anchoredPosition = vector;
+
+            return false;
+        }
+        return true;
+    }
+    [HarmonyPatch(typeof(EventManager),"ReloadOrbStatus")]
+    [HarmonyPrefix]
+    static bool orbRealoadStuff(ref CharacterBase ___mainCharacter, ref EventManager __instance)
+    {
+        (___mainCharacter.phy_perfer as CharacterPhy).canShootFlag = false;
+        (___mainCharacter.phy_perfer as CharacterPhy).canChargeFlag = false;
+        (___mainCharacter.phy_perfer as CharacterPhy).canWhiteFlag = false;
+        (___mainCharacter.phy_perfer as CharacterPhy).canBlackFlag = false;
+        WorldManager.Instance.CanShootWall = false;
+        if (SaveManager.Instance.GetOrb() <= 0)
+        {
+            __instance.ShowAllOrbs(t: false);
+        }
+        else
+        {
+            (___mainCharacter.phy_perfer as CharacterPhy).canShootFlag = true;
+            __instance.ShowAllOrbs(t: true);
+            if (SaveManager.Instance.GetOrb() >= 2)
+            {
+                WorldManager.Instance.CanShootWall = true;
+
+                (___mainCharacter.phy_perfer as CharacterPhy).canChargeFlag = true;
+                ReloadBar.Instance.EnableMe();
+                if (SaveManager.Instance.GetOrb() >= 3)
+                {
+                    (___mainCharacter.phy_perfer as CharacterPhy).canWhiteFlag = SaveManager.Instance.GetItem(ItemList.Type.I19) > 0;
+                    (___mainCharacter.phy_perfer as CharacterPhy).canBlackFlag = SaveManager.Instance.GetItem(ItemList.Type.I20) > 0;
+                }
+                __instance.HidePoweredOrbs(t: false);
+            }
+            else
+            {
+                __instance.HidePoweredOrbs(t: true);
+            }
+        }
+        GemaSpineHUDTopLeft.Instance.UpdateSkin();
+        if (Time.timeSinceLevelLoad > 2.5f)
+        {
+            Debug.Log("[EventManager] Orb Status = " + SaveManager.Instance.GetOrb() + " | CanShoot = " + (___mainCharacter.phy_perfer as CharacterPhy).canShootFlag + " | CanCharge = " + (___mainCharacter.phy_perfer as CharacterPhy).canChargeFlag + " | CanShootWall = " + WorldManager.Instance.CanShootWall + " | canWhite = " + (___mainCharacter.phy_perfer as CharacterPhy).canWhiteFlag + " | canBlack = " + (___mainCharacter.phy_perfer as CharacterPhy).canBlackFlag);
+        }
+
+
+        return false;
+    }
+
+
+
+    [HarmonyPatch(typeof(CharacterPhy), "PrepareSwitchOrb")]
+    [HarmonyPrefix]
+    static bool newPrepareSwitchOrb(ref OrbType ot,ref bool forceType, ref CharacterBase ___cb_perfer, ref CharacterPhy __instance)
+    {
+        if (forceType)
+        {
+            return true;
+        }
+        else if (__instance.orbUsing == OrbType.BLACK && SaveManager.Instance.GetItem(ItemList.Type.I19) == 0)
+        {
+            return false;
+        }
+        else if (__instance.orbUsing == OrbType.WHITE && SaveManager.Instance.GetItem(ItemList.Type.I20) == 0)
+        {
+            return false;
+        }
+        return true;
+    }
+
+    [HarmonyPatch(typeof(CharacterPhy),"UseBoost")]
+    [HarmonyPostfix]
+    static void switchOrbBeforeSummon(ref CharacterPhy __instance, ref bool __result)
+    {
+        if (__result)
+        {
+           // __instance.PrepareSwitchOrb(forceType: true);
+        }
+    }    [HarmonyPatch(typeof(CharacterPhy),"UseBoost")]
+    [HarmonyPrefix]
+    static bool test(ref CharacterPhy __instance, ref bool __result)
+    {
+        if (SaveManager.Instance.GetItem(ItemList.Type.I19) <1 &&SaveManager.Instance.GetItem(ItemList.Type.I20) <1)
+        {
+            __result = true; return false;
+        }
+        if (SaveManager.Instance.GetItem(ItemList.Type.I19) <1 ^ SaveManager.Instance.GetItem(ItemList.Type.I20) <1)
+        {
+            __instance.orbUsing = (OrbType)((int)__instance.orbUsing ^ 1);
+        }
+
+        return true;
+    }
+
+    [HarmonyPatch(typeof(CharacterPhy),"SwitchTypeForced")]
+    [HarmonyPrefix]
+    static bool forcedTypeSwitch(ref CharacterPhy __instance,ref bool __result)                 // SwitchType MODE AABBCC Not Working
+    {
+        if((__instance.orbUsing == OrbType.BLACK && SaveManager.Instance.GetItem(ItemList.Type.I20) == 0) || (__instance.orbUsing == OrbType.WHITE && SaveManager.Instance.GetItem(ItemList.Type.I19) == 0))
+        {
+            __instance.PrepareSwitchOrb();
+            __result = false;
+            return false;
+        }
+        return true;
+    }    
+    [HarmonyPatch(typeof(CharacterPhy),"SwitchType")]
+    [HarmonyPrefix]
+    static bool typeSwitch(ref CharacterPhy __instance,ref bool __result)
+    {
+        if((__instance.orbUsing == OrbType.BLACK && SaveManager.Instance.GetItem(ItemList.Type.I20) == 0) || (__instance.orbUsing == OrbType.WHITE && SaveManager.Instance.GetItem(ItemList.Type.I19) == 0))
+        {
+            __result = false;
+            return false;
+        }
+        return true;
+    }
+
 }
 
 class CraftingPatch
@@ -2310,6 +2556,11 @@ class SaveGamePatch()
                 Debug.LogError(e);
             }
             RandomizerPlugin.__itemData = data;
+            if (eS3File.KeyExists("CustomDifficulty"))
+            {
+                RandomizerPlugin.customDiff = eS3File.Load<int>("CustomDifficulty");
+            }
+            
         }
     }
 
@@ -2342,6 +2593,7 @@ class SaveGamePatch()
         eS3File.Save("RandoKeySlot",keySlot);
         eS3File.Save("RandoValItem", valItem);
         eS3File.Save("RandoValSlot", valSlot);
+        eS3File.Save("CustomDifficulty", RandomizerPlugin.customDiff);
         eS3File.Sync();
         Randomizer.saveSpoilerLog($"rando.SpoilerSave{saveslot}.txt",s);
     }
@@ -2376,6 +2628,8 @@ class ScalePatch()
     [HarmonyPrefix]
     static bool setMaxBossHealth(ref enemyController __instance)
     {
+        if (RandomizerPlugin.customDiff < 0) return true;
+
         int num = RandomizerPlugin.customDiff - 5;
         float num2 = 0f;
         float num3 = 0f;
@@ -2414,6 +2668,8 @@ class ScalePatch()
     [HarmonyPostfix]
     static void balanceAct(ref enemyController __instance)
     {
+        if (RandomizerPlugin.customDiff < 0) return;
+
         if (!TeamManager.Instance.enemyMembers.Contains(__instance))
         {
             return;
@@ -2755,6 +3011,8 @@ class ScalePatch()
     [HarmonyPrefix]
     static bool subBossBoost(ref enemyController __instance)
     {
+        if (RandomizerPlugin.customDiff < 0) return true;
+
         if (GemaBossRushMode.Instance.isBossRush() || (__instance.type != Character.Type.Barados && __instance.type != Character.Type.Caprice && __instance.type != Character.Type.Katu && __instance.type != Character.Type.Thetis && __instance.type != Character.Type.Roleo))
         {
             return false;
@@ -2839,6 +3097,8 @@ class ScalePatch()
     [HarmonyPrefix]
     static bool difficultyBossHealth(ref enemyController __instance)
     {
+        if (RandomizerPlugin.customDiff < 0) return true;
+
         float num = 0f;
         Difficulty difficultyName = (Difficulty)RandomizerPlugin.customDiff;
         if (difficultyName >= Difficulty.D6)
@@ -2941,4 +3201,59 @@ class ScalePatch()
         }
         return false;
     }
+
+    [HarmonyPatch(typeof(GemaUIChangeDifficulty),"Update")]
+    [HarmonyPrefix]
+    static bool changeCustomDiff(ref GemaUIChangeDifficulty __instance, ref bool ___isEnable, ref TextMeshProUGUI ___promotetext,ref int ___difficulty)
+    {
+        if (RandomizerPlugin.customDiff < 0) return true;
+
+        if (___promotetext.enabled && InputButtonManager.Instance.GetButtonDown(13))
+        {
+            ___isEnable = false;
+            CameraScript.Instance.PlaySound(AllSound.SEList.MENUSELECT);
+            FadeManager.Instance.SetAll(0f, 0f, 0f, 0.7f, 0f, 22f);
+            if (!BackgroundManager.Instance.canHeal || EventManager.Instance.getMode() == Mode.Chap1BedSleep)
+            {
+                RandomizerPlugin.customDiff = ___difficulty;
+            }
+            else
+            {
+                EventManager.Instance.TryStartEvent(Mode.Chap1ChangeDifficulty, force: true);
+            }
+            return false;
+        }
+        return true;
+    }
+    [HarmonyPatch(typeof(Chap1ChangeDifficulty),"EVENT")]
+    [HarmonyPrefix]
+    static void changeCustomDiffi()
+    {
+        if (EventManager.Instance.EventStage == 60 && RandomizerPlugin.customDiff >= 0)
+        {
+
+            RandomizerPlugin.customDiff = GemaUIChangeDifficulty.Instance.GetSetDifficulty();
+            MusicManager.Instance.SetTargetVolume(1f, 1f);
+            EventManager.Instance.SetStage(70);
+        }
+    }
+    [HarmonyPatch(typeof(ObjectPhy),"WallHit")]
+    [HarmonyPrefix]
+    static bool reduceWallDmg(ref CharacterBase ___cb_perfer)
+    {
+        if (RandomizerPlugin.customDiff < 0) return true;
+        if (___cb_perfer.isPlayer())
+        {
+            float maxMult = 1f;
+            if (RandomizerPlugin.customDiff >= 21)
+                maxMult = 1.1f + (RandomizerPlugin.customDiff - 20) * 0.0001f;
+            float diff = RandomizerPlugin.customDiff - 5 + SaveManager.Instance.DifficultyMinMaxOffset;
+            int num = (int)(5f + Mathf.Lerp(4f, 100f * maxMult, diff * 1.25f)) + (int)((float)(int)___cb_perfer.GetBuffLv(BuffType.WallDamageAmp) * (5f + Mathf.Lerp(4f, 100f * maxMult, diff * 0.8f)));
+            ___cb_perfer.ReduceHealth(num, lethal: false);
+            DamageManager.Instance.CreateDamage(num.ToString(), num, ___cb_perfer.t.position + new Vector3(0f, (float)___cb_perfer.damagePosition * 20f - 10f + ___cb_perfer.OverallOffsetY), ___cb_perfer, DamageTextType.NORMAL, new Color32(225, 177, 177, byte.MaxValue), new Color32(byte.MaxValue, 77, 77, byte.MaxValue), 20f);
+            return false;
+        }
+        return true;
+    }
+
 }

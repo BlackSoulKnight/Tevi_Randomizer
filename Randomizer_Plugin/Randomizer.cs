@@ -7,6 +7,8 @@ using ItemList;
 using UnityEngine;
 using static TeviRandomizer.Randomizer;
 using UnityEngine.UIElements;
+using System.Threading.Tasks;
+using TMPro;
 
 namespace TeviRandomizer
 {
@@ -59,7 +61,7 @@ namespace TeviRandomizer
                             bossCount++;
                             continue;
                         }
-                        if (item.Contains("ChargeShot")) continue;
+                        if (item.Contains("ChargeShot") && itemList.Contains("ITEM_ORB")) continue;
 
                         if (item.Contains("Chapter"))
                         {
@@ -273,6 +275,16 @@ namespace TeviRandomizer
                                     placeditems.Remove(((int)ItemList.Type.ITEM_KNIFE, 1));
                                 }
                                 break;
+                            case "Orb":
+                                if (((UnityEngine.UI.Toggle)option.Value).isOn)
+                                {
+                                    RandomizerPlugin.customFlags[(int)CustomFlags.OrbStart] = true;
+                                }
+                                else
+                                {
+                                    RandomizerPlugin.customFlags[(int)CustomFlags.OrbStart] = false;
+                                }
+                                break;
                             case "Lv3Compass":
                                 if (((UnityEngine.UI.Toggle)option.Value).isOn)
                                 {
@@ -317,9 +329,13 @@ namespace TeviRandomizer
             }
         }
 
-
-        public void createSeed(System.Random seed)
+        static bool creating = false;
+        public async void createSeed(System.Random seed)
         {
+            if(creating) { return; }
+            creating = true;
+            seedCreationLoading();
+            await Task.Run(() => {
             int debugVal = 0;
             List<(int, int)> placeditems;
             placeditems = new List<(int, int)>();
@@ -334,7 +350,7 @@ namespace TeviRandomizer
                 locationPool.CopyFrom(locations);
                 locationPool.RemoveAll(x => x.itemId > 3000);                 // Remove all Extra Options from Pool (they are above 3000)
 
-                Debug.Log($"Seed creating Try: {debugVal}");
+                //Debug.Log($"Seed creating Try: {debugVal}");
                 bossCount = 0;
                 placeditems.Clear();
                 placeditems.CopyFrom(itemPool);
@@ -353,9 +369,29 @@ namespace TeviRandomizer
 
 
                 bossCount = 0;
-                Debug.Log("Validating");
+                //Debug.Log("Validating");
             } while (!validate());
+            Debug.Log($"[Randomizer] It took {debugVal} tries to create this Seed.");
+                creating = false;
+                RandomizerPlugin.__itemData = GetData();
+            });
+        }
 
+        public async void seedCreationLoading()
+        {
+            TextMeshProUGUI text = UI.finishedText.GetComponent<TextMeshProUGUI>();
+            string t = "Creating ";
+            text.text = "Creating";
+            UI.finishedText.SetActive(true);
+            await Task.Run(() => {
+                int count = 0;
+                while( creating ) { 
+                    count++;
+                    text.text = t + new string('.', count % 4);
+                    Task.Delay(300).Wait();
+                }
+                text.text = "Finished Creating Seed";
+            });
         }
 
         private (int,int) createItem(System.Random seed,List<(int,int)> pool)
@@ -444,7 +480,7 @@ namespace TeviRandomizer
             int gears = itemList.FindAll(x => x == "STACKABLE_COG").Count;
             if ( gears< 16)
             {
-                Debug.Log($"Not Enough Gears in the run. Found {gears}");
+                //Debug.Log($"Not Enough Gears in the run. Found {gears}");
                 return false;
             }
             if (!itemList.Contains("ITEM_SLIDE")) {
