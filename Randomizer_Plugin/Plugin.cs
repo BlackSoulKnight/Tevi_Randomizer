@@ -15,9 +15,7 @@ using QFSW.QC;
 using TeviRandomizer;
 using Map;
 using System.Linq;
-using MiniGame;
-using UnityEngine.UIElements.Experimental;
-using System.Threading.Tasks;
+
 
 
 
@@ -1050,8 +1048,11 @@ class RabiSmashPatch
     {
         if (EventManager.Instance.EventStage == 10)
         {
+            EventManager.Instance.SetStage(11);
+        }
+        if(EventManager.Instance.EventStage == 11) { 
             EventManager.Instance.StopEvent();
-            if (RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.QUEST_RabiPillow, 1) && SaveManager.Instance.savedata.minigame_highest_score >= 100)
+            if (!RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.QUEST_RabiPillow, 1) && SaveManager.Instance.savedata.minigame_highest_score >= 100)
             {
                 EventManager.Instance.TryStartEvent(Mode.Chap4RabiSmashPillowObtain, true);
             }
