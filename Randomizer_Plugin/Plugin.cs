@@ -326,8 +326,14 @@ public class RandomizerPlugin : BaseUnityPlugin
             return false;
         }
         return true;
-    } 
+    }
 
+    [HarmonyPatch(typeof(SettingManager),nameof(SettingManager.SetAchievement))]
+    [HarmonyPrefix]
+    static bool removeAchievements()
+    {
+        return false;
+    }
 
     // Change Sprite
     [HarmonyPatch(typeof(ItemTile), nameof(ItemTile.LoadItem))]
