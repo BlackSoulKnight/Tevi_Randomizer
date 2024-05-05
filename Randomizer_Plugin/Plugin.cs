@@ -88,7 +88,7 @@ public enum CustomFlags : short
 }
 
 
-[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.9.8")]
+[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.9.8.3")]
 [BepInProcess("TEVI.exe")]
 public class RandomizerPlugin : BaseUnityPlugin
 {
@@ -615,6 +615,11 @@ class ItemObtainPatch()
     [HarmonyPrefix]
     static bool ItemChanges(ref ItemList.Type item, ref byte value, ref SaveManager __instance)
     {
+        if (item >= ItemList.Type.BADGE_START && item <= ItemList.Type.BADGE_MAX && SaveManager.Instance.GetMiniFlag(Mini.UnlockedBadge) <= 0)
+        {
+            SaveManager.Instance.SetMiniFlag(Mini.UnlockedBadge, 1);
+        }
+
         if (item.ToString().Contains("ITEM"))
         {
             Upgradable itemRef;

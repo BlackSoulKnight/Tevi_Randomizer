@@ -133,7 +133,7 @@ STACKABLE_SHARD:Gleamwood:15:ITEM_DOUBLEJUMP,0;ITEM_JETPACK,0;ITEM_AirDash,0
 BADGE_TauntStare:Gleamwood:1:ITEM_JETPACK,0;ITEM_AirDash,0;ITEM_DOUBLEJUMP,0
 BADGE_DodgeMeterBoost:Gleamwood Upper:1:,0
 BADGE_BattleStartCharger:Gleamwood Right:1:ChargeShot,0
-STACKABLE_RATK:Gleamwood Right:5:ITEM_OrbTypeS2 && ChargeShot,0
+STACKABLE_RATK:Gleamwood Right:5:ITEM_OrbTypeS2 && ChargeShot && I20,0
 BADGE_AirNormalComboSpeedup:Gleamwood Right:1:,0
 BADGE_DoubleGroundNormal3N1:Gleamwood Right:1:ITEM_SLIDE,0
 STACKABLE_MP:Gleamwood Right:5:,0
@@ -165,11 +165,11 @@ BADGE_BoostMeleeOffense:Ulvosa:1:ITEM_LINEBOMB,0
 STACKABLE_HP:Ulvosa:20:,0
 STACKABLE_COG:Ulvosa:31:Boss,0
 ITEM_OrbAmulet:Ulvosa:1:,0
-BADGE_Cursed6:Ulvosa:1:ITEM_OrbTypeS2 && ChargeShot,0;Soulburst,0;LargeManaPillar,0
+BADGE_Cursed6:Ulvosa:1:ITEM_OrbTypeS2 && ChargeShot && I20,0;Soulburst,0;LargeManaPillar,0
 STACKABLE_MATK:Ulvosa:25:ITEM_Rotater,0
 STACKABLE_MP:CopperWood:2:,0
 STACKABLE_EP:CopperWood:2:,0
-STACKABLE_RATK:CopperWood:7:ITEM_OrbTypeS2 && ChargeShot,0;ITEM_OrbTypeS3 && ChargeShot,0;ITEM_OrbTypeC3 && ChargeShot,0
+STACKABLE_RATK:CopperWood:7:ITEM_OrbTypeS2 && ChargeShot && I20,0;ITEM_OrbTypeS3 && ChargeShot && I20,0;ITEM_OrbTypeC3 && ChargeShot && I19,0
 BADGE_BoostCostCut:CopperWood:1:EliteChallangeC,0
 STACKABLE_HP:CopperWood:25:,0
 BADGE_StyleCharge:CopperWood:1:ITEM_DOUBLEJUMP,2;ITEM_AirDash,0;ITEM_JETPACK,0
@@ -299,7 +299,7 @@ STACKABLE_MP:Valhalla City:18:ITEM_LINEBOMB,0
 STACKABLE_HP:Valhalla City:17:ITEM_SLIDE && ITEM_LINEBOMB,0
 BADGE_BuffRush:Valhalla City:1:ITEM_JETPACK,0;ITEM_DOUBLEJUMP,0;ITEM_AirDash && ITEM_WALLJUMP,0
 STACKABLE_EP:Valhalla City:26:ITEM_LINEBOMB,0
-STACKABLE_RATK:Valhalla City:15:ITEM_OrbTypeC3 && ChargeShot,0;ITEM_JETPACK && ITEM_DOUBLEJUMP,0;ITEM_OrbTypeS3 && ChargeShot && ITEM_HIGHJUMP,0;ITEM_OrbTypeS3 && ChargeShot && ITEM_DOUBLEJUMP,0;ITEM_OrbTypeS3 && ChargeShot && ITEM_JETPACK,0
+STACKABLE_RATK:Valhalla City:15:ITEM_OrbTypeC3 && ChargeShot && I19,0;ITEM_JETPACK && ITEM_DOUBLEJUMP,0;ITEM_OrbTypeS3 && ChargeShot && ITEM_HIGHJUMP && I20,0;ITEM_OrbTypeS3 && ChargeShot && ITEM_DOUBLEJUMP && I20,0;ITEM_OrbTypeS3 && ChargeShot && ITEM_JETPACK && I20,0
 BADGE_ComboSaver:Valhalla City:1:,0
 ITEM_AirshipPass:Valhalla City:1:Coins 3000,0
 BADGE_StyleComboAirDashA:Valhalla City:1:Coins 1300,0
@@ -330,7 +330,7 @@ BADGE_ComboAntiFullHealth:EverGarden:1:ITEM_SLIDE && ChargeShot,0
 STACKABLE_COG:HevPortalHub:49:Boss,0
 BADGE_DebuffCounter:HevPortalHub:1:ITEM_LINEBOMB,0
 BADGE_CrystalIncrease:HevPortalHub:1:ITEM_SLIDE,0;ITEM_WALLJUMP,0
-STACKABLE_RATK:HevPortalHub:20:ITEM_OrbTypeS3 && ITEM_DOUBLEJUMP && ITEM_AirDash && ChargeShot,0
+STACKABLE_RATK:HevPortalHub:20:ITEM_OrbTypeS3 && ITEM_DOUBLEJUMP && ITEM_AirDash && ChargeShot && I20,0
 BADGE_BoostHitCount:Cloister:1:EliteChallangeF,0
 STACKABLE_RATK:Cloister:16:ChargeShot,0
 BADGE_StyleComboNormal1QuickFar:Cloister:1:ChargeShot,0
@@ -365,7 +365,7 @@ BADGE_DodgeCharger:Verdazure Ocean:1:ITEM_AREABOMB && ChargeShot,0
 STACKABLE_MP:Verdazure Ocean:16:ITEM_LINEBOMB,0
 STACKABLE_RATK:Verdazure Ocean:25:ITEM_LINEBOMB,0
 STACKABLE_EP:Verdazure Ocean:15:BombLengthExtend1,0
-STACKABLE_MP:Verdazure Ocean:24:ITEM_OrbTypeS2 && ChargeShot,0
+STACKABLE_MP:Verdazure Ocean:24:ITEM_OrbTypeS2 && ChargeShot && I20,0
 BADGE_ComboTimeExtendB:Swampike:1:ITEM_JETPACK,0;ITEM_DOUBLEJUMP,0
 BADGE_BOnceHeal:Swampike:1:,0
 STACKABLE_RATK:Swampike:23:ITEM_Rotater,1
