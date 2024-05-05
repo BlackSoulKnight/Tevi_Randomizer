@@ -33,6 +33,12 @@ After that copy the resource folder and create + copy the necessary Logic file i
 Savefiles are seperated and not syncronized with the Original Game and Steam Cloud. <br>
 The Randomizer data is saved within the Savefile.
 
+## Custom Difficulty
+When selecting a positive number for Fake Difficulty the enemy speed and bullet behaviour will change.
+The hp and dmg the enemy will deal, is set to the Difficulty selected in the New Game screen selection.
+This value can be change with the Bed in Tevi's Home.<br>
+If a negtive number or nothing is set, the game will handle everything as usual.
+
 ## Disabling Randomizer
 Either remove the TeviRandomizer.dll or rename the file.dat in the data Folder in the Randomizer Plugin
 
