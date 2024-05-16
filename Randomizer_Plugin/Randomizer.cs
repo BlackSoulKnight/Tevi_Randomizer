@@ -224,7 +224,7 @@ namespace TeviRandomizer
             foreach (string line in File.ReadLines(path + "Location.txt"))
             {
                 string[] para = line.Split(':');
-                Location newloc = new Location((int)Enum.Parse<ItemList.Type>(para[0]), para[1], int.Parse(para[2]), para[3], para[0]);
+                Location newloc = new Location((int)Enum.Parse(typeof(ItemList.Type), para[0]), para[1], int.Parse(para[2]), para[3], para[0]);
                 locationString.Add($"{para[0]+para[2]}", newloc);
                 locations.Add(newloc);
                 itemPool.Add(((int)Enum.Parse(typeof(ItemList.Type), para[0]), int.Parse(para[2])));
@@ -297,7 +297,7 @@ namespace TeviRandomizer
                                     craftingManaShardSwitch = true;
                                     foreach (var item in Enum.GetValues(typeof(Upgradable)))
                                     {
-                                        ItemList.Type t = Enum.Parse<ItemList.Type>(item.ToString());
+                                        ItemList.Type t = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), item.ToString());
                                         locationString[t + "2"].setNewItem(t, 5);
                                         locationString[t + "3"].setNewItem(t, 6);
                                         locationPool.Remove(locationPool.Find(x => x.itemId == (int)t && x.slotId == 2));

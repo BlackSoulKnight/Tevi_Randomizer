@@ -16,6 +16,8 @@ using TeviRandomizer;
 using Map;
 using System.Linq;
 
+using Newtonsoft.Json;
+
 
 
 
@@ -110,6 +112,7 @@ public class RandomizerPlugin : BaseUnityPlugin
 
     private void Awake()
     {
+        Localize.GetLocalizeTextWithKeyword("", false);
         System.IO.Directory.CreateDirectory(pluginPath+"Data");
         randomizer = Randomizer.Instance;
 
@@ -125,9 +128,87 @@ public class RandomizerPlugin : BaseUnityPlugin
         instance.PatchAll(typeof(OrbPatch));
         instance.PatchAll(typeof(RabiSmashPatch));
 
+
+        // test Localizazion
+
+
+
+
         //instance.PatchAll(typeof(BonusFeaturePatch));
         Logger.LogInfo($"Plugin Randomizer is loaded!");
 
+    }
+
+
+    static void addLang()
+    {
+        var t = new Traverse(typeof(Localize));
+
+        {
+            Localize.SystemText newText = new Localize.SystemText();
+            newText.keyword = "ITEMNAME.I19";
+            newText.tchinese = "Celia";
+            newText.japanese = "Celia";
+            newText.english = "Celia";
+            t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
+            t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
+        }
+        {
+            Localize.SystemText newText = new Localize.SystemText();
+            newText.keyword = "ITEMDESC.I19";
+            newText.tchinese = "Celia is now available";
+            newText.japanese = "Celia is now available";
+            newText.english = "Celia is now available";
+            t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
+            t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
+        }
+
+        {
+            Localize.SystemText newText = new Localize.SystemText();
+            newText.keyword = "ITEMNAME.I20";
+            newText.tchinese = "Sable";
+            newText.japanese = "Sable";
+            newText.english = "Sable";
+            t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
+            t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
+        }
+        {
+            Localize.SystemText newText = new Localize.SystemText();
+            newText.keyword = "ITEMDESC.I20";
+            newText.tchinese = "Sable is now available";
+            newText.japanese = "Sable is now available";
+            newText.english = "Sable is now available";
+            t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
+            t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
+        }
+
+        }
+
+
+    [HarmonyPatch(typeof(Localize), "GetLocalizeTextWithKeyword")]
+    [HarmonyPrefix]
+    static bool addLan(ref List<Localize.SystemText> ___jsonlistSysTxt,ref Dictionary<string, Localize.SystemText> ___jsonlistSysTxtDictionary)
+    {
+        if (GemaLocalizeManager.Instance == null)
+        {
+            return true;
+        }
+        if (___jsonlistSysTxt == null)
+        {
+            ___jsonlistSysTxt = (List<Localize.SystemText>)JsonConvert.DeserializeObject(GemaLocalizeManager.Instance.SystemText_TextAsset.text, typeof(List<Localize.SystemText>));
+            ___jsonlistSysTxtDictionary = new Dictionary<string, Localize.SystemText>();
+            foreach (Localize.SystemText item in ___jsonlistSysTxt)
+            {
+                if (!___jsonlistSysTxtDictionary.ContainsKey(item.keyword))
+                {
+                    ___jsonlistSysTxtDictionary.Add(item.keyword, item);
+                }
+            }
+
+
+            addLang();
+        }
+        return true;
     }
 
 
@@ -298,7 +379,8 @@ public class RandomizerPlugin : BaseUnityPlugin
 
                 int num5 = (int)___phy_perfer.GetCounter(4);
 
-                EventManager.Instance.StartWarp(1, 1, 1, 1);
+                //EventManager.Instance.StartWarp(1, 1, 1, 1);
+                GemaUIPauseMenu.Instance.OpenPauseMenu(true);
                 SaveManager.Instance.RemoveItemFromBagSlot(num5);
                 HUDResourceGotPopup.Instance.AddPopup(item, useTop: true, forcepop: true);
                 if (SaveManager.Instance.GetBadgeEquipped(ItemList.Type.BADGE_ConsumeableCharge))
@@ -316,6 +398,7 @@ public class RandomizerPlugin : BaseUnityPlugin
                         ___playerc_perfer.PlayItemVoice(isbad: false);
                     }
                 }
+                __instance.ChangeLogicStatus(PlayerLogicState.NORMAL);
             }
             else
             {
@@ -477,7 +560,8 @@ public class RandomizerPlugin : BaseUnityPlugin
 
     public static void addOrbStatus(int amount = 0)
     {
-        SaveManager.Instance.SetOrb((byte)(SaveManager.Instance.GetOrb() + amount));
+        if(SaveManager.Instance.GetOrb() < 3)
+            SaveManager.Instance.SetOrb((byte)(SaveManager.Instance.GetOrb() + amount));
         if (SaveManager.Instance.GetOrb() >= 3)
         {
             if(SaveManager.Instance.GetItem(ItemList.Type.ITEM_BoostSystem) > 0) {
@@ -646,7 +730,7 @@ class ItemObtainPatch()
                 if (!__instance.GetStackableItem((ItemList.Type)itemRef, value))
                 {
                     __instance.SetStackableItem((ItemList.Type)itemRef, value, true);
-
+                    if(value == 1) { value = 4; }
                     if (value > 3)
                     {
                         value = (byte)(__instance.GetItem(item) + 1);
@@ -3268,4 +3352,21 @@ class ScalePatch()
         return true;
     }
 
+}
+
+class LocalizePatch()
+{
+    static Dictionary<string,string> newLocalize = new Dictionary<string,string>();
+
+    [HarmonyPatch(typeof(Localize), "GetLocalizeTextWithKeyword")]
+    [HarmonyPrefix]
+    static bool getNewLocalize(ref string keyword,ref string __result)
+    {
+        if (newLocalize.ContainsKey(keyword))
+        {
+            __result = newLocalize[keyword];
+            return false;
+        }
+        return true;
+    }
 }
