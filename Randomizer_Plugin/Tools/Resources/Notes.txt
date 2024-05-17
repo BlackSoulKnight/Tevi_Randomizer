@@ -1,7 +1,7 @@
 Train / Airship Ticket Fix needed
 Elite Challenge > 3000 Coins, 1 Core , 1 Manaiteshard
-Add functionality for Teleporting to Start House
-Restrains should have a Difficulty level
+
+
 
 Using an Consumeable to maintain vertical speed and reduce horizontal speed to 0
 DoubleJUmp missing

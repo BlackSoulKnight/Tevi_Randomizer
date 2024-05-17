@@ -736,8 +736,8 @@ class Generator:
 
 def convertAreaJsonToTxt():
     s = open("Area.json",'r')
-    d = open("Area.txt",'w+')
-    c = open("Connection.txt",'w+')
+    d = open("../../resource/Area.txt",'w+')
+    c = open("../../resource/Connection.txt",'w+')
     s = json.load(s)
     for k,v in s.items():
         for a in v:
@@ -750,7 +750,7 @@ def convertAreaJsonToTxt():
 
 def convertLocationJsonToTxt():
     s = open("Location.json",'r')
-    d = open("Location.txt",'w+')
+    d = open("../../resource/Location.txt",'w+')
     s = json.load(s)
     for k in s:
         d.write(f"{k['Itemname']}:{k['Location']}:{k['slotId']}:")
