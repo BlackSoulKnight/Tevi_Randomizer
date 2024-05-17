@@ -1283,9 +1283,14 @@ class OrbPatch
     {
         if (__result)
         {
-           // __instance.PrepareSwitchOrb(forceType: true);
+            if (SaveManager.Instance.GetItem(ItemList.Type.I19) < 1 ^ SaveManager.Instance.GetItem(ItemList.Type.I20) < 1)
+            {
+                __instance.PrepareSwitchOrb(false, true, (OrbType)((int)__instance.orbUsing ^ 1));
+                //__instance.orbUsing = (OrbType)((int)__instance.orbUsing ^ 1);
+            }
         }
-    }    [HarmonyPatch(typeof(CharacterPhy),"UseBoost")]
+    }    
+    [HarmonyPatch(typeof(CharacterPhy),"UseBoost")]
     [HarmonyPrefix]
     static bool test(ref CharacterPhy __instance, ref bool __result)
     {
@@ -1293,10 +1298,7 @@ class OrbPatch
         {
             __result = true; return false;
         }
-        if (SaveManager.Instance.GetItem(ItemList.Type.I19) <1 ^ SaveManager.Instance.GetItem(ItemList.Type.I20) <1)
-        {
-            __instance.orbUsing = (OrbType)((int)__instance.orbUsing ^ 1);
-        }
+
 
         return true;
     }
