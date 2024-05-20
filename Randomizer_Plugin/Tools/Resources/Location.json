@@ -4665,7 +4665,7 @@
     },
     {
         "Itemname": "BADGE_DodgeChargedDodgeShot",
-        "Location": "Snowveil1",
+        "Location": "Snowveil Entrance",
         "slotId": 1,
         "Requirement": [
             {

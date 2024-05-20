@@ -148,7 +148,7 @@
                 },
                 {
                     "Exit": "Morose Transit",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": ""
                 },
                 {
                     "Exit": "Desert Base Main",
@@ -248,7 +248,7 @@
                 },
                 {
                     "Exit": "Travoll Mines",
-                    "Method": ""
+                    "Method": "ITEM_LINEBOMB"
                 }
             ]
         }
@@ -281,23 +281,36 @@
                 },
                 {
                     "Exit": "Verdazure Sea",
-                    "Method": ""
+                    "Method": "ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "Verdazure Sea",
+                    "Method": "ITEM_WATERMOVEMENT"
                 },
                 {
                     "Exit": "Gleamwood",
                     "Method": ""
                 },
                 {
-                    "Exit": "Forest Maze extended",
-                    "Method": "ITEM_JETPACK"
-                },
+                    "Exit": "Forest Maze boss",
+                    "Method": "ITEM_LINEBOMB"
+                }
+
+            ]
+        },
+
+        {
+            "Name": "Forest Maze boss",
+            "Money": [
                 {
-                    "Exit": "Forest Maze extended",
-                    "Method": "ITEM_DOUBLEJUMP"
-                },
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 4000
+                }
+            ],
+            "Connections": [
                 {
-                    "Exit": "Forest Maze extended",
-                    "Method": "ITEM_AirDash"
+                    "Exit": "Forest",
+                    "Method": ""
                 }
             ]
         },
@@ -311,8 +324,16 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Forest",
-                    "Method": ""
+                    "Exit": "Forest Maze extended",
+                    "Method": "ITEM_JETPACK"
+                },
+                {
+                    "Exit": "Forest Maze extended",
+                    "Method": "ITEM_DOUBLEJUMP"
+                },
+                {
+                    "Exit": "Forest Maze extended",
+                    "Method": "ITEM_AirDash"
                 }
             ]
         }
@@ -333,15 +354,19 @@
             "Connections": [
                 {
                     "Exit": "Moros City",
-                    "Method": ""
+                    "Method": "ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Start Area",
-                    "Method": ""
+                    "Method": "ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Travoll Mines Part 2",
                     "Method": "ITEM_BOMBFUEL"
+                },
+                {
+                    "Exit": "Travoll Mines Part 2",
+                    "Method": "ITEM_KNIFE && ITEM_LINEBOMB"
                 }
             ]
         },
@@ -393,7 +418,11 @@
             "Connections": [
                 {
                     "Exit": "CopperWood",
-                    "Method": ""
+                    "Method": "ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "CopperWood",
+                    "Method": "ITEM_SLIDE"
                 },
                 {
                     "Exit": "Heavens Valley",
@@ -476,7 +505,7 @@
             "Connections": [
                 {
                     "Exit": "CopperWood",
-                    "Method": ""
+                    "Method": "ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Gleamwood Upper",
@@ -591,6 +620,21 @@
     ],
     "Map12": [
         {
+            "Name": "Snowveil Entrance",
+            "Money": [
+                {
+                    "Method": "",
+                    "Amount": 0
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Snowveil1",
+                    "Method": "ITEM_LINEBOMB"
+                }
+            ]
+        },
+        {
             "Name": "Snowveil1",
             "Money": [
                 {
@@ -641,7 +685,12 @@
                 {
                     "Exit": "DreamKeeper Outside Left",
                     "Method": ""
+                },
+                {
+                    "Exit": "Snowveil1",
+                    "Method": "ITEM_LINEBOMB"
                 }
+
             ]
         }
     ],
@@ -669,7 +718,7 @@
                 },
                 {
                     "Exit": "Forgotten City",
-                    "Method": "ITEM_WATERMOVEMENT"
+                    "Method": "ITEM_WATERMOVEMENT && ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Verdazure Ocean",
@@ -875,7 +924,7 @@
             "Connections": [
                 {
                     "Exit": "Golden Hands HQ end",
-                    "Method": "ITEM_Rotater && ChargeShot"
+                    "Method": "ITEM_LINEBOMB && ChargeShot"
                 }
             ]
         },
@@ -1150,7 +1199,7 @@
                 },
                 {
                     "Exit": "Valley Upper Part",
-                    "Method": ""
+                    "Method": "ITEM_LINEBOMB"
                 }
             ]
         },
@@ -1190,7 +1239,7 @@
                 },
                 {
                     "Exit": "EverGarden",
-                    "Method": ""
+                    "Method": "ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Vena",

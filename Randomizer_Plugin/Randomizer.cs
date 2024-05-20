@@ -55,7 +55,7 @@ namespace TeviRandomizer
                     {
                         if (itemList.Contains(item)||item == "") continue;
                         // some check i choose to ignore
-                        if (item.Contains("Coins")) continue;
+                        if (item.Contains("Coins") && (itemList.Contains("ITEM_KNIFE")||itemList.Contains("ITEM_LINEBOMB") || item.Contains("250"))) continue;
                         if (item.Contains("Boss"))
                         {
                             bossCount++;

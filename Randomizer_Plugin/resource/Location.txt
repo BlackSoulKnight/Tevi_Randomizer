@@ -382,7 +382,7 @@ STACKABLE_MATK:Forgotten City:4:ChrageShot,0
 STACKABLE_COG:Forgotten City:34:ChrageShot && Boss,0;ITEM_DOUBLEJUMP && ITEM_BombLengthExtend3 && Boss,0;ITEM_WALLJUMP && ITEM_BombLengthExtend3 && Boss,0;ITEM_HIGHJUMP && ITEM_JETPACK3 && ITEM_KNIFE && ITEM_BombLengthExtend3 && Boss,0
 BADGE_BaseComboBooster:Forgotten City:1:ChrageShot,0;ITEM_DOUBLEJUMP && ITEM_BombLengthExtend3,0;ITEM_WALLJUMP && ITEM_BombLengthExtend3,0;ITEM_HIGHJUMP && ITEM_JETPACK3 && ITEM_KNIFE && ITEM_BombLengthExtend3,0
 BADGE_StyleComboPassiveS:Forgotten City:1:ITEM_LINEBOMB,0
-BADGE_DodgeChargedDodgeShot:Snowveil1:1:ITEM_SLIDE,0
+BADGE_DodgeChargedDodgeShot:Snowveil Entrance:1:ITEM_SLIDE,0
 STACKABLE_RATK:Snowveil1:14:ITEM_AREABOMB,0
 BADGE_EPMeleeReduce:Snowveil1:1:,0
 STACKABLE_COG:Snowveil1:32:Boss,0

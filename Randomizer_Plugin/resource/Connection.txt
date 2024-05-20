@@ -1,0 +1,189 @@
+Desert Base Main:Start Area:
+Desert Base Main:Desert Base Upper Half:ITEM_HIJUMP && ITEM_DOUBLEJUMP && ITEM_WALLJUMP
+Desert Base Main:Desert Base Upper Half:ITEM_JETPACK && ITEM_WALLJUMP
+Desert Base Main:Desert Base Upper Half:ITEM_DOUBLEJUMP && ITEM_WALLJUMP2
+Desert Base Main:Desert Base Upper Half:ITEM_KNIFE && ITEM_SLIDE
+Desert Base Entrance:Start Area:
+Desert Base Entrance:Desert Base Main:ChargeShot
+Desert Base Entrance:Desert Base Main:ITEM_JETPACK
+Desert Base Entrance:Desert Base Main:ITEM_AirDash
+Desert Base Entrance:Desert Base Main:ITEM_JETPACK
+Desert Base Entrance:Desert Base Main:ITEM_DOUBLEJUMP
+Desert Base Entrance:Desert Base Main:ITEM_HIJUMP
+Desert Base Entrance:Desert Base Main:ITEM_LINEBOMB && ITEM_AREABOMB
+Desert Base Upper Half:Desert Base Main:
+Start Area:Oasis:ChargeShot
+Start Area:Oasis:ITEM_DOUBLEJUMP
+Start Area:Oasis:ITEM_DOUBLEJUMP
+Start Area:Oasis:ITEM_JETPACK
+Start Area:Oasis:ITEM_AirDash
+Start Area:Ruins Entrance:
+Start Area:Heavens Valley:ITEM_LINEBOMB
+Start Area:Morose Transit:
+Start Area:Desert Base Main:
+Start Area:Crafting:
+Crafting::
+Morose Transit:Moros City:
+Morose Transit:Start Area:ITEM_LINEBOMB
+Oasis:Start Area:
+Moros City:Morose Transit:
+Moros City:Travoll Industrie:
+Moros City:Travoll Mines:ITEM_LINEBOMB
+Forest:Moros City:
+Forest:CopperWood:
+Forest:Verdazure Sea:ITEM_LINEBOMB
+Forest:Verdazure Sea:ITEM_WATERMOVEMENT
+Forest:Gleamwood:
+Forest:Forest Maze boss:ITEM_LINEBOMB
+Forest Maze boss:Forest:
+Forest Maze extended:Forest Maze extended:ITEM_JETPACK
+Forest Maze extended:Forest Maze extended:ITEM_DOUBLEJUMP
+Forest Maze extended:Forest Maze extended:ITEM_AirDash
+Travoll Mines:Moros City:ITEM_LINEBOMB
+Travoll Mines:Start Area:ITEM_LINEBOMB
+Travoll Mines:Travoll Mines Part 2:ITEM_BOMBFUEL
+Travoll Mines:Travoll Mines Part 2:ITEM_KNIFE && ITEM_LINEBOMB
+Travoll Mines Part 2:Travoll Mines:
+Travoll Mines Part 2:LavaWorld:
+Travoll Mines Part 2:Swamp:ITEM_SLIDE
+Travoll Mines Part 2:Forest:
+Travoll Industrie:CopperWood:ITEM_LINEBOMB
+Travoll Industrie:CopperWood:ITEM_SLIDE
+Travoll Industrie:Heavens Valley:
+Travoll Industrie:Moros City:
+CopperWood:Forest:
+CopperWood:Travoll Industrie:
+CopperWood:Relicts:
+Ana Thema:Gallary of Mirrors:ITEM_SLIDE && ITEM_LINEBOMB
+Ana Thema:Gleamwood:
+Gleamwood:CopperWood:ITEM_LINEBOMB
+Gleamwood:Gleamwood Upper:ITEM_SLIDE
+Gleamwood:Relicts:
+Gleamwood:Ana Thema:
+Gleamwood:Gleamwood Right:ITEM_DOUBLEJUMP
+Gleamwood:Gleamwood Right:ITEM_AirDash
+Gleamwood:Gleamwood Right:ITEM_JETPACK
+Gleamwood Upper:Gleamwood:ITEM_SLIDE
+Gleamwood Upper:Ulvosa:ChargeShot
+Gleamwood Right:Gleamwood:
+Gleamwood Right:Blushwood:
+Gleamwood Right:Plague Forest:
+Plague Forest:Gleamwood Right:
+Ulvosa:Gleamwood Upper:
+Snowveil Entrance:Snowveil1:ITEM_LINEBOMB
+Snowveil1:Snow City:
+Snowveil1:Snowveil2:
+Snowveil1:Snowveil2:ITEM_SLIDE
+Snowveil1:Snowveil2:ITEM_JETPACK && ITEM_DOUBLEJUMP
+Snowveil1:Snowveil2:ITEM_JETPACK && ITEM_HIJUMP && SpinnerBash
+Snowveil1:Snowveil2:ITEM_DOUBLEJUMP && ITEM_HIJUMP && ItemUse
+Snowveil1:Snowveil2:ITEM_BombLengthExtend3
+Snowveil2:DreamKeeper Outside Left:
+Snowveil2:Snowveil1:ITEM_LINEBOMB
+Verdazure Sea:Blushwood:
+Verdazure Sea:Forgotten City:ITEM_WATERMOVEMENT && ITEM_LINEBOMB
+Verdazure Sea:Verdazure Ocean:ITEM_SLIDE && ChargeShot
+Verdazure Ocean:Snowveil1:
+Verdazure Ocean:Swampike:
+Verdazure Ocean:Forgotten City Upper Exit:ITEM_WATERMOVEMENT && ITEM_OrbTypeS3
+Swampike:Lab Extra:
+Forgotten City Upper Exit:Verdazure Ocean:ChargeShot
+Forgotten City:Forgotten City Upper Exit:ITEM_LINEBOMB
+Tartarus:Swamp:
+Tartarus:Catacombs Entrance:
+Snow City:Snowveil Above HQ:ITEM_LINEBOMB && ITEM_SLIDE
+Snow City:Golden Hands HQ:ITEM_SLIDE && ChargeShot
+Snow City:Golden Hands HQ end:ITEM_SLIDE
+Snow City:Golden Hands HQ end:ChargeShot
+Snowveil Above HQ:DreamKeeper Outside Right:ITEM_DOUBLEJUMP
+Snowveil Above HQ:DreamKeeper Outside Right:ITEM_WALLJUMP
+Snowveil Above HQ:DreamKeeper Outside Right:ITEM_JETPACK
+Golden Hands HQ:Golden Hands HQ end:ITEM_LINEBOMB && ChargeShot
+Golden Hands HQ end:Snow City:
+LavaWorld:Swamp:
+LavaWorld:LavaWorld Part 2:ITEM_JETPACK
+LavaWorld:LavaWorld Part 2:ITEM_SLIDE && ITEM_AirDash 
+LavaWorld:LavaWorld Part 2:ITEM_SLIDE &&  ITEM_DOUBLEJUMP
+LavaWorld:LavaWorld Part 2:ITEM_SLIDE &&  ITEM_HIJUMP
+LavaWorld Part 2:Sinners Entrance:ITEM_Rotater && ITEM_AirSlide
+Swamp:Tartarus:
+DreamKeeper Outside Right:DreamKeeper Outside Left:ChargeShot
+DreamKeeper Outside Right:DreamKeeper:ITEM_Rotater && ChargeShot
+DreamKeeper Outside Left:DreamKeeper Outside Right:ITEM_JETPACK
+DreamKeeper Outside Left:DreamKeeper Outside Right:ITEM_DOUBLEJUMP
+DreamKeeper Outside Left:DreamKeeper Outside Right:ITEM_WALLJUMP
+DreamKeeper Outside Left:DreamKeeper:ITEM_Rotater && ChargeShot
+DreamKeeper Outside Left:Valley Lower Part:
+DreamKeeper:Deep Dream:
+Deep Dream:Deep Dream 2:ITEM_HIJUMP
+Deep Dream:Deep Dream 2:ITEM_WALLJUMP
+Deep Dream:Deep Dream 2:ITEM_JETPACK
+Deep Dream:Deep Dream 2:ITEM_DOUBLEJUMP
+Deep Dream 2::
+Valley Lower Part:Valley Middle Part:ITEM_Rotater
+Valley Middle Part:Valley Lower Part:ITEM_Rotater
+Valley Middle Part:Valley Upper Part:ITEM_LINEBOMB
+Valley Upper Part:Valley Middle Part:
+Valhalla City:Cloister:ITEM_SLIDE
+Valhalla City:EverGarden:ITEM_LINEBOMB
+Valhalla City:Vena:
+Valhalla Breath Lower Left Part:Travoll Industrie:
+Valhalla Breath Lower Left Part:Valhalla City:
+Valhalla Breath Lower Left Part:Valhalla Breath Left Part:ITEM_AirDash
+Valhalla Breath Lower Left Part:Valhalla Breath Left Part:ITEM_DOUBLEJUMP
+Valhalla Breath Lower Left Part:Valhalla Breath Left Part:ITEM_JETPACK
+Vena:Start Area:
+Heavens Valley:Valhalla Breath Lower Left Part:ITEM_JETPACK
+Heavens Valley:Valhalla Breath Lower Left Part:ITEM_AirDash
+Heavens Valley:Valhalla Breath Lower Left Part:ITEM_SLIDE
+Heavens Valley:Valhalla Breath Lower Left Part:ITEM_DOUBLEJUMP
+Heavens Valley:Valhalla Breath Lower Left Part:ChargeShot
+Valhalla Breath Left Part::
+Ruins Entrance:Ruins:ITEM_LINEBOMB
+Ruins Entrance:Start Area:
+Ruins::
+Sinners Entrance:Sinners Hell:ITEM_SLIDE && ITEM_AREABOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP2 && ChargeShot
+Sinners Entrance:Sinners Hell:ITEM_SLIDE && ITEM_AREABOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP && ITEM_DOUBLEJUMP && ChargeShot
+Sinners Entrance:Sinners Hell:ITEM_SLIDE && ITEM_AREABOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP && ITEM_JETPACK && ChargeShot
+Sinners Hell:Illusion Palace:
+Illusion Palace::
+Relicts:CopperWood:
+Relicts:Gleamwood:
+Catacombs Entrance:Catacombs Main:ITEM_SLIDE
+Catacombs Entrance:Tartarus:
+Catacombs Main:Catacombs Entrance:ITEM_LINEBOMB
+Catacombs Main:Vassago fight:ITEM_DOUBLEJUMP
+Catacombs Main:Vassago fight:ITEM_JETPACK2
+Catacombs Main:Vassago fight:ITEM_JETPACK && ITEM_HIJUMP
+Catacombs Main:Vassago fight:ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash
+Catacombs Main:Lab:ITEM_LINEBOMB
+Vassago fight:Lab Part 2:ITEM_LINEBOMB
+Lab:Lab Part 2:ITEM_LINEBOMB
+Lab Part 2:Catacombs Entrance:ITEM_LINEBOMB
+Lab Part 2:Lab Extra:ITEM_BombLengthExtend3
+Lab Extra:Lab Part 2:ITEM_LINEBOMB
+Cloister:Valhalla City:
+Cloister:Cloister 2:ChargeShot
+Cloister 2::
+Gallary of Mirrors:Gallary of Mirrors 2:ChargeShot
+Gallary of Mirrors 2:Gallary of Souls:
+Gallary of Souls:Gallary of Souls Boss:ITEM_JETPACK2 && ChargeShot
+Gallary of Souls:Gallary of Souls Boss:ITEM_WALLJUMP && ChargeShot
+Gallary of Souls:Gallary of Souls Boss:ITEM_DOUBLEJUMP && ChargeShot
+Gallary of Souls Boss::
+Blushwood:Blushwood Sliding:ITEM_SLIDE
+Blushwood Sliding::
+EverGarden:EverGardenPortals:ITEM_DOUBLEJUMP
+EverGarden:EverGardenPortals:ITEM_JETPACK && ITEM_AirDash
+EverGarden:EverGardenPortals:ITEM_JETPACK3
+EverGarden:EverGardenPortals:ITEM_JETPACK2
+EverGarden:Valley Upper Part:ITEM_JETPACK
+EverGarden:Valley Upper Part:ITEM_DOUBLEJUMP
+EverGarden:Valley Upper Part:ITEM_AirDash
+EverGardenPortals:HevPortalHub:ITEM_DOUBLEJUMP && ITEM_AirDash
+EverGardenPortals:HevPortalHub:ITEM_JETPACK && ITEM_AirDash
+EverGardenPortals:HevPortalHub:ITEM_JETPACK3
+EverGardenPortals:HevPortalHub:ITEM_JETPACK2
+EverGardenPortals:EverGarden:
+HevPortalHub:EverGardenPortals:
+HevPortalHub:EverGarden:
