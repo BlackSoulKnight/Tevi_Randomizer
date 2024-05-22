@@ -362,7 +362,7 @@
                 },
                 {
                     "Exit": "Travoll Mines Part 2",
-                    "Method": "ITEM_BOMBFUEL"
+                    "Method": "ITEM_BOMBFUEL && ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Travoll Mines Part 2",
