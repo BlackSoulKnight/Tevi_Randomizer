@@ -62,6 +62,7 @@ namespace TeviRandomizer
                 }
                 else if (t.name.Contains("Density"))
                 {
+                    t.SetActive(false);
                     settings.Add(t.name, t.GetComponentInChildren<TMPro.TMP_InputField>());
                 }
             }

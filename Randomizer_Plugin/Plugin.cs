@@ -86,7 +86,7 @@ public enum Upgradable
 public enum CustomFlags : short
 {
     OrbStart = 0,
-
+    CebleStart = 1,
 }
 
 
@@ -895,7 +895,7 @@ class EventPatch
             else
                 SaveManager.Instance.SetItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
 
-            if (RandomizerPlugin.customFlags[(int)CustomFlags.OrbStart])
+            if (RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart])
             {
                 SaveManager.Instance.SetItem(ItemList.Type.I19,1);
                 SaveManager.Instance.SetItem(ItemList.Type.I20,1);

@@ -24,7 +24,7 @@ Start Area:Desert Base Main:
 Start Area:Crafting:
 Crafting::
 Morose Transit:Moros City:
-Morose Transit:Start Area:ITEM_LINEBOMB
+Morose Transit:Start Area:
 Oasis:Start Area:
 Moros City:Morose Transit:
 Moros City:Travoll Industrie:

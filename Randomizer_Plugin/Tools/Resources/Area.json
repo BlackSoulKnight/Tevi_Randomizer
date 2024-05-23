@@ -194,7 +194,7 @@
                 },
                 {
                     "Exit": "Start Area",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": ""
                 }
             ]
         }
