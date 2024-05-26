@@ -90,7 +90,7 @@ public enum CustomFlags : short
 }
 
 
-[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.9.8.3")]
+[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.9.9")]
 [BepInProcess("TEVI.exe")]
 public class RandomizerPlugin : BaseUnityPlugin
 {
