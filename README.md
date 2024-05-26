@@ -6,23 +6,22 @@
 
 ## Building the Project
 
-For self building the Project, the following DLLs from the Game are required and found in TEVI_data/Managed
+For building the Project, the following DLLs from the Game are required and found in TEVI_data/Managed
 + Assembly-CSharp.dll
 + Assembly-CSharp-firstpass.dll
 + QFSW.QC.dll
 + Unity.TextMeshPro.dll
 + UnityEngine.UI.dll
++ Assembly-CSharp-firstpass.dll
   
 
 ## Install
 Download the latest pre-Build version from here [Tevi Randomizer releases](https://github.com/BlackSoulKnight/Tevi_Randomizer/releases)<br>
-or self build it with the source files. <br>
 
 Extract the zip in the BepInEx Plugins Folder<br><br>
 
-If the the Project is build from source create a tevi_randomizer folder in the folder BepInEx/plugins.
-Insert the fresh build TeviRandomizer.dll into the tevi_randomizer folder. 
-After that copy the resource folder and create + copy the necessary Logic file in Tools/Resources.
+If the the Project is build from source, create a tevi_randomizer folder in the folder BepInEx/plugins.
+Insert the freshly build TeviRandomizer.dll into the tevi_randomizer folder, and copy the resource folder aswell.
 
 ## Usage
 + Start Tevi to play the Randomizer
@@ -33,7 +32,14 @@ After that copy the resource folder and create + copy the necessary Logic file i
 Savefiles are seperated and not syncronized with the Original Game and Steam Cloud. <br>
 The Randomizer data is saved within the Savefile.
 
+## Changes to the base Game
++ Morose is accessable without Cross Bombs
++ Rabi Ribi Minigame is in Logic and requires atleast 100 Points and full Clear
++ Rabi Ribi Easteregg contains a Item location
++ It is possible to play the game with Sable and Celia locked behind extra Items  
+
 ## Custom Difficulty
+### Currently Disabled 
 When selecting a positive number for Fake Difficulty the enemy speed and bullet behaviour will change.
 The hp and dmg the enemy will deal, is set to the Difficulty selected in the New Game screen selection.
 This value can be change with the Bed in Tevi's Home.<br>
