@@ -7,6 +7,7 @@ Morose Transit
 Oasis
 Moros City
 Forest
+Forest Maze
 Forest Maze boss
 Forest Maze extended
 Travoll Mines
@@ -34,6 +35,7 @@ Golden Hands HQ
 Golden Hands HQ end
 LavaWorld
 LavaWorld Part 2
+Swamp Entrance
 Swamp
 DreamKeeper Outside Right
 DreamKeeper Outside Left

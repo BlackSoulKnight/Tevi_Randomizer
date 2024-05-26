@@ -1,15 +1,11 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
-
-
-using ItemList;
 using UnityEngine;
-using static TeviRandomizer.Randomizer;
 using UnityEngine.UIElements;
 using System.Threading.Tasks;
 using TMPro;
-using BepInEx;
+
 
 namespace TeviRandomizer
 {
@@ -54,16 +50,25 @@ namespace TeviRandomizer
                     string[] ands = Method.Split(new string[] { "&&" }, StringSplitOptions.None);
                     foreach (string item in ands)
                     {
-                        if (itemList.Contains(item) || item == "") continue;
-                        // some check i choose to ignore
-                        if (item.Contains("Coins") && (itemList.Contains("ITEM_KNIFE") || itemList.Contains("ITEM_LINEBOMB") || item.Contains("250"))) continue;
+                       
+                        if (itemList.Contains(item.Trim()) || item == "") continue;
+
+                        if (item.Contains("Memine") && flag)
+                        {
+                            if (item.Contains("AllMemine") && memineCount >= 6) { continue; }
+                                continue;
+
+                        }
+                        // custom words checks
+
+                        if (item.Contains("Coins") && ((itemList.Contains("ITEM_KNIFE") || itemList.Contains("ITEM_LINEBOMB") && itemList.Contains("ITEM_AREABOMB")) && itemList.Contains("ITEM_JETPACK") && itemList.Contains("ITEM_DOUBLEJUMP") && itemList.Contains("ITEM_AirDash") && itemList.Contains("ITEM_WALLJUMP") && itemList.Contains("ITEM_BombLengthExtend") && itemList.Contains("ITEM_WATERMOVEMENT") && itemList.Contains("ITEM_SLIDE")|| item.Contains("250"))) continue;
                         if (item.Contains("Boss"))
                         {
                             bossCount++;
                             continue;
                         }
                         if (item.Contains("ChargeShot") && ((itemList.Contains("ITEM_ORB") && craftingManaShardSwitch) || itemList.Contains("ITEM_ORB2"))) continue;
-
+                        if (item.Contains("RainbowCheck") && memineCount >= 3) continue;
                         if (item.Contains("Chapter"))
                         {
                             switch (item.Split(' ')[2])
@@ -94,14 +99,18 @@ namespace TeviRandomizer
                                     break;
                             }
                         }
-                        if (item.Contains("Upgrade") && craftingManaShardSwitch) continue;
-                        if (item.Contains("Air")) continue;
+                        if (item.Contains("Upgrade") && (craftingManaShardSwitch || (itemList.Contains("ITEM_LINEBOMB") && itemList.Contains("ITEM_AREABOMB") && itemList.Contains("ITEM_JETPACK") && itemList.Contains("ITEM_DOUBLEJUMP") && itemList.Contains("ITEM_AirDash") && itemList.Contains("ITEM_WALLJUMP") && itemList.Contains("ITEM_BombLengthExtend") && itemList.Contains("ITEM_WATERMOVEMENT") && itemList.Contains("ITEM_SLIDE")))) continue;
+                        if (item.Contains("Core") && itemList.Contains("ITEM_LINEBOMB") && itemList.Contains("ITEM_AREABOMB") && itemList.Contains("ITEM_JETPACK") && itemList.Contains("ITEM_DOUBLEJUMP") && itemList.Contains("ITEM_AirDash") && itemList.Contains("ITEM_WALLJUMP") && itemList.Contains("ITEM_BombLengthExtend") && itemList.Contains("ITEM_WATERMOVEMENT") && itemList.Contains("ITEM_SLIDE")) continue;
+                        if (item.Contains("SpinnerBash") && itemList.Contains("ITEM_KNIFE")) continue;
+                        if (item.Contains("Air") || item.Contains("Fire") || item.Contains("Light")) continue;
+                        if (item.Contains("EliteChallange") && itemList.Contains("ITEM_LINEBOMB") && itemList.Contains("ITEM_SLIDE")) continue;
                         flag = false;
                         flagCheck = false;
                         break;
                     }
                     flag |= flagCheck;
                 }
+                if (flag && Method.Contains("Memine")) memineCount++;      // abit weird approach for memine challanges
                 return flag;
             }
         }
@@ -130,7 +139,7 @@ namespace TeviRandomizer
                     Requirement.Add(new Requirement(method));
                 }
             }
-            public bool isReachAble(List<string> itemList)
+             public bool isReachAble(List<string> itemList)
             {
                 foreach (Requirement req in Requirement)
                 {
@@ -147,6 +156,21 @@ namespace TeviRandomizer
             {
                 newItem = item;
                 newSlotId = slot;
+            }
+            public void debugIsReachAble(List<string> itemList)
+            {
+                foreach (Requirement req in Requirement)
+                {
+                    if (!req.check(itemList)) Debug.Log($"Item {((ItemList.Type)newItem).ToString()} {newSlotId} could not be reached. {req.Method}");
+                }
+            }
+            public bool checkSelfContain(ItemList.Type item)
+            {
+                foreach(Requirement req in Requirement)
+                {
+                    if (req.Method.Contains(item.ToString())) return true;
+                }
+                return false;
             }
         }
 
@@ -190,6 +214,13 @@ namespace TeviRandomizer
                 if (to == null) return false;
                 return method.check(itemList);
             }
+            public void  debugCheckEntrance(List<string> itemList)
+            {
+                if (to == null) return;
+                if (!method.check(itemList)) Debug.Log($"Could not enter {to.Name}. {method.Method}");
+            }
+
+
         }
 
         private List<(int, int)> itemPool;
@@ -197,6 +228,7 @@ namespace TeviRandomizer
         private Dictionary<string, Location> locationString;
         private List<Area> areas;
         private static int bossCount = 0;
+        private static int memineCount = 0;
 
 
         public Randomizer()
@@ -363,8 +395,8 @@ namespace TeviRandomizer
                     locationPool.CopyFrom(locations);
                     locationPool.RemoveAll(x => x.itemId > 3000);                 // Remove all Extra Options from Pool (they are above 3000)
 
-                    //Debug.Log($"Seed creating Try: {debugVal}");
                     bossCount = 0;
+                    memineCount = 0;
                     placeditems.Clear();
                     placeditems.CopyFrom(itemPool);
 
@@ -382,14 +414,53 @@ namespace TeviRandomizer
 
 
                     bossCount = 0;
-                    //Debug.Log("Validating");
                 } while (!validate());
-                Debug.Log($"[Randomizer] It took {debugVal} tries to create this Seed.");
                 creating = false;
                 RandomizerPlugin.__itemData = GetData();
             });
-            //saveSpoilerLog("DebugSpoilerLog.txt", GetData(),true);
+        }
 
+        public void synccreateSeed(System.Random seed)
+        {
+            int debugVal = 0;
+            List<(int, int)> placeditems;
+            placeditems = new List<(int, int)>();
+            List<Location> locationPool = new List<Location>();
+
+            if (seed == null) seed = new System.Random();
+            do
+            {
+                debugVal++;
+
+                locationPool.Clear();
+                locationPool.CopyFrom(locations);
+                locationPool.RemoveAll(x => x.itemId > 3000);                 // Remove all Extra Options from Pool (they are above 3000)
+
+                Debug.Log($"Seed creating Try: {debugVal}");
+                bossCount = 0;
+                placeditems.Clear();
+                placeditems.CopyFrom(itemPool);
+
+                CustomOptions(placeditems, locationPool);                 //Extra stuff
+
+                while (locationPool.Count > 0)
+                {
+                    int pos = seed.Next(locationPool.Count);
+                    Location loc = locationPool[pos];
+                    (int, int) item = createItem(seed, placeditems);
+                    locationString[loc.Itemname + loc.slotId.ToString()].newSlotId = item.Item2;
+                    locationString[loc.Itemname + loc.slotId.ToString()].newItem = item.Item1;
+                    locationPool.Remove(loc);
+                }
+
+
+                bossCount = 0;
+                //Debug.Log("Validating");
+            } while (!validate());
+            Debug.Log($"[Randomizer] It took {debugVal} tries to create this Seed.");
+            creating = false;
+            RandomizerPlugin.__itemData = GetData();
+            //saveSpoilerLog("DebugSpoilerLog.txt", GetData(), true);
         }
 
         public async void seedCreationLoading()
@@ -430,52 +501,65 @@ namespace TeviRandomizer
         private bool validate()
         {
             List<Area> areaList = [areas.Find(x => x.Name == "Start Area")];
-            areaList.Add(areas[3]);
             itemList = new List<string>();
             List<(int, int)> tmpList = new List<(int, int)>();
+
+            List<Entrance> entrances = new List<Entrance>();
+            List<Location> locations = new List<Location>();
+            entrances.AddRange(areaList[0].Connections);
+            locations.AddRange(areaList[0].Locations);
 
             int lastCount = -1;
             while (itemList.Count != lastCount)
             {
                 lastCount = itemList.Count;
-                Area[] tmp = new Area[areaList.Count];
-                areaList.CopyTo(tmp);
-                foreach (Area area in tmp)
+
+                foreach (Entrance en in entrances.ToArray())
                 {
-                    foreach (Entrance en in area.Connections)
-                    {
-                        if (!areaList.Contains(en.to) && en.checkEntrance(itemList))
-                        {
-                            areaList.Add(en.to);
-                        }
+                    if (areaList.Contains(en.to)) {
+                        entrances.Remove(en); continue;
                     }
-                    foreach (Location loc in area.Locations)
+
+                    if (!areaList.Contains(en.to) && en.checkEntrance(itemList))
                     {
-                        if (tmpList.Contains((loc.newItem, loc.newSlotId)))
-                            continue;
-                        if (loc.isReachAble(itemList))
+                        areaList.Add(en.to);
+                        foreach (Entrance e in en.to.Connections)
                         {
-                            if (!tmpList.Contains((loc.newItem, loc.newSlotId)))
-                                tmpList.Add((loc.newItem, loc.newSlotId));
+                            if (!areaList.Contains(e.to)) entrances.Add(e);
+                        }
+                        locations.AddRange(en.to.Locations);
+                        entrances.Remove(en);
+                    }
+                }
 
-                            string item = ((ItemList.Type)loc.newItem).ToString();
-                            if (Enum.IsDefined(typeof(Upgradable), item))
+                foreach (Location loc in locations.ToArray())
+                {
+                    if (tmpList.Contains((loc.newItem, loc.newSlotId)))
+                    {
+                        locations.Remove(loc);
+                        continue;
+                    }
+
+                    if (loc.isReachAble(itemList))
+                    {
+                        if (loc.Loaction == "Lab Part 2" && !itemList.Contains("Demonfray")) itemList.Add("Demonfray"); // Hard coded boss event
+                        if (loc.Loaction == "Gallary of Mirrors 2" && !itemList.Contains("Memloch")) itemList.Add("Memloch"); // Hard coded boss event
+
+
+                        tmpList.Add((loc.newItem, loc.newSlotId));
+                        string item = ((ItemList.Type)loc.newItem).ToString();
+                        if (Enum.IsDefined(typeof(Upgradable), item))
+                        {
+
+                            if (itemList.Contains(item))
                             {
-
-                                if (itemList.Contains(item))
+                                if (itemList.Contains(item + "2"))
                                 {
-                                    if (itemList.Contains(item + "2"))
-                                    {
-                                        itemList.Add(item + "3");
-                                    }
-                                    else
-                                    {
-                                        itemList.Add(item + "2");
-                                    }
+                                    itemList.Add(item + "3");
                                 }
                                 else
                                 {
-                                    itemList.Add(item);
+                                    itemList.Add(item + "2");
                                 }
                             }
                             else
@@ -483,13 +567,30 @@ namespace TeviRandomizer
                                 itemList.Add(item);
                             }
                         }
+                        else
+                        {
+                            itemList.Add(item);
+                        }
+                        locations.Remove(loc);
                     }
-
                 }
-
-
             }
             //Check if its beatable
+            if (itemList.FindAll(x => x == "STACKABLE_COG").Count > 11)
+            {
+                foreach (Location loc in locations)
+                {
+                    loc.debugIsReachAble(itemList);
+                    if(loc.checkSelfContain((ItemList.Type)loc.newItem) && !itemList.Contains(((ItemList.Type)loc.newItem).ToString())) {
+                        //Debug.Log("Unreachable Item. It requires itself to obtain.");
+                        return false;
+                    }
+                }
+                foreach (Entrance entrance in entrances)
+                {
+                    entrance.debugCheckEntrance(itemList);
+                }
+            }
             return goalCheck(itemList, areaList);
         }
         private bool goalCheck(List<string> itemList, List<Area> areaList)
@@ -509,18 +610,6 @@ namespace TeviRandomizer
             if (!itemList.Contains("ITEM_LINEBOMB"))
             {
                 Debug.Log($"LineBomb Not Found");
-
-                return false;
-            }
-            if (!itemList.Contains("ITEM_AirSlide"))
-            {
-                Debug.Log($"Fairy Powder Not Found");
-
-                return false;
-            }
-            if (!itemList.Contains("ITEM_Rotater"))
-            {
-                Debug.Log($"Vortex Glove Not Found");
 
                 return false;
             }
@@ -548,8 +637,18 @@ namespace TeviRandomizer
 
                 return false;
             }
+            if (!itemList.Contains("ITEM_AirSlide"))
+            {
+                Debug.Log($"Fairy Powder Not Found");
 
+                return false;
+            }
+            if (!itemList.Contains("ITEM_Rotater"))
+            {
+                Debug.Log($"Vortex Glove Not Found");
 
+                return false;
+            }
             return true;
         }
 

@@ -34,18 +34,20 @@ Forest:CopperWood:
 Forest:Verdazure Sea:ITEM_LINEBOMB
 Forest:Verdazure Sea:ITEM_WATERMOVEMENT
 Forest:Gleamwood:
-Forest:Forest Maze boss:ITEM_LINEBOMB
-Forest Maze boss:Forest:
-Forest Maze extended:Forest Maze extended:ITEM_JETPACK
-Forest Maze extended:Forest Maze extended:ITEM_DOUBLEJUMP
-Forest Maze extended:Forest Maze extended:ITEM_AirDash
+Forest:Forest Maze:
+Forest Maze:Forest:
+Forest Maze:Forest Maze boss:ITEM_LINEBOMB
+Forest Maze boss:Forest Maze extended:ITEM_JETPACK
+Forest Maze boss:Forest Maze extended:ITEM_DOUBLEJUMP
+Forest Maze boss:Forest Maze extended:ITEM_AirDash
+Forest Maze extended::
 Travoll Mines:Moros City:ITEM_LINEBOMB
 Travoll Mines:Start Area:ITEM_LINEBOMB
-Travoll Mines:Travoll Mines Part 2:ITEM_BOMBFUEL
+Travoll Mines:Travoll Mines Part 2:ITEM_BOMBFUEL && ITEM_LINEBOMB
 Travoll Mines:Travoll Mines Part 2:ITEM_KNIFE && ITEM_LINEBOMB
 Travoll Mines Part 2:Travoll Mines:
 Travoll Mines Part 2:LavaWorld:
-Travoll Mines Part 2:Swamp:ITEM_SLIDE
+Travoll Mines Part 2:Swamp Entrance:ITEM_SLIDE
 Travoll Mines Part 2:Forest:
 Travoll Industrie:CopperWood:ITEM_LINEBOMB
 Travoll Industrie:CopperWood:ITEM_SLIDE
@@ -83,7 +85,7 @@ Snowveil2:Snowveil1:ITEM_LINEBOMB
 Verdazure Sea:Blushwood:
 Verdazure Sea:Forgotten City:ITEM_WATERMOVEMENT && ITEM_LINEBOMB
 Verdazure Sea:Verdazure Ocean:ITEM_SLIDE && ChargeShot
-Verdazure Ocean:Snowveil1:
+Verdazure Ocean:Snowveil Entrance:
 Verdazure Ocean:Swampike:
 Verdazure Ocean:Forgotten City Upper Exit:ITEM_WATERMOVEMENT && ITEM_OrbTypeS3
 Swampike:Lab Extra:
@@ -106,6 +108,10 @@ LavaWorld:LavaWorld Part 2:ITEM_SLIDE && ITEM_AirDash
 LavaWorld:LavaWorld Part 2:ITEM_SLIDE &&  ITEM_DOUBLEJUMP
 LavaWorld:LavaWorld Part 2:ITEM_SLIDE &&  ITEM_HIJUMP
 LavaWorld Part 2:Sinners Entrance:ITEM_Rotater && ITEM_AirSlide
+Swamp Entrance:Tartarus:
+Swamp Entrance:Swamp:ITEM_KNIFE
+Swamp Entrance:Swamp:ITEM_ORB
+Swamp Entrance:Swamp:ITEM_LINEBOMB && ITEM_AREABOMB
 Swamp:Tartarus:
 DreamKeeper Outside Right:DreamKeeper Outside Left:ChargeShot
 DreamKeeper Outside Right:DreamKeeper:ITEM_Rotater && ChargeShot

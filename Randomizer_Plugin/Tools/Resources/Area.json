@@ -292,15 +292,15 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Forest Maze boss",
-                    "Method": "ITEM_LINEBOMB"
+                    "Exit": "Forest Maze",
+                    "Method": ""
                 }
 
             ]
         },
 
         {
-            "Name": "Forest Maze boss",
+            "Name": "Forest Maze",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -311,11 +311,15 @@
                 {
                     "Exit": "Forest",
                     "Method": ""
+                },
+                {
+                    "Exit": "Forest Maze boss",
+                    "Method": "ITEM_LINEBOMB"
                 }
             ]
         },
         {
-            "Name": "Forest Maze extended",
+            "Name": "Forest Maze boss",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -334,6 +338,21 @@
                 {
                     "Exit": "Forest Maze extended",
                     "Method": "ITEM_AirDash"
+                }
+            ]
+        },
+        {
+            "Name": "Forest Maze extended",
+            "Money": [
+                {
+                    "Method": "",
+                    "Amount": 0
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "",
+                    "Method": ""
                 }
             ]
         }
@@ -392,7 +411,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Swamp",
+                    "Exit": "Swamp Entrance",
                     "Method": "ITEM_SLIDE"
                 },
                 {
@@ -746,7 +765,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Snowveil1",
+                    "Exit": "Snowveil Entrance",
                     "Method": ""
                 },
                 {
@@ -996,6 +1015,33 @@
                 {
                     "Exit": "Sinners Entrance",
                     "Method": "ITEM_Rotater && ITEM_AirSlide"
+                }
+            ]
+        },
+        {
+            "Name": "Swamp Entrance",
+            "Money": [
+                {
+                    "Method": "Unknown see Swamp",
+                    "Amount": 0
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Tartarus",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Swamp",
+                    "Method": "ITEM_KNIFE"
+                },
+                {
+                    "Exit": "Swamp",
+                    "Method": "ITEM_ORB"
+                },
+                {
+                    "Exit": "Swamp",
+                    "Method": "ITEM_LINEBOMB && ITEM_AREABOMB"
                 }
             ]
         },

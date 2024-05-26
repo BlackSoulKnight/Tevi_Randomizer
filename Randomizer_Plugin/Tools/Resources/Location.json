@@ -93,7 +93,7 @@
         "slotId": 16,
         "Requirement": [
             {
-                "Method": "ITEM_LINEBOMB && ITEM_HIGHJUMP",
+                "Method": "ITEM_LINEBOMB && ITEM_HIJUMP",
                 "Difficulty": 0
             },
             {
@@ -1044,7 +1044,7 @@
         "slotId": 30,
         "Requirement": [
             {
-                "Method": "Coins 5000 && Chapter  6",
+                "Method": "Coins 5000 && Chapter 6",
                 "Difficulty": 0
             }
         ]
@@ -1582,7 +1582,7 @@
         "slotId": 5,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20",
+                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB3",
                 "Difficulty": 0
             }
         ]
@@ -1648,15 +1648,15 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && BombLengthExtend1 && ITEM_DOUBLEJUMP",
+                "Method": "ITEM_SLIDE && ITEM_BombLengthExtend && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && BombLengthExtend1 && ITEM_JETPACK",
+                "Method": "ITEM_SLIDE && ITEM_BombLengthExtend && ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && BombLengthExtend1 && ITEM_HIGHJUMP && ITEM_WALLJUMP",
+                "Method": "ITEM_SLIDE && ITEM_BombLengthExtend && ITEM_HIJUMP && ITEM_WALLJUMP",
                 "Difficulty": 0
             },
             {
@@ -1668,7 +1668,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AREABOMB && ITEM_HIGHJUMP && ITEM_WALLJUMP",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AREABOMB && ITEM_HIJUMP && ITEM_WALLJUMP",
                 "Difficulty": 0
             }
         ]
@@ -1757,7 +1757,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_HIGHJUMP && ITEM_WALLJUMP",
+                "Method": "ITEM_HIJUMP && ITEM_WALLJUMP",
                 "Difficulty": 0
             }
         ]
@@ -1868,7 +1868,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_HIGHJUMP",
+                "Method": "ITEM_HIJUMP",
                 "Difficulty": 0
             }
         ]
@@ -1978,7 +1978,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20",
+                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB3",
                 "Difficulty": 0
             },
             {
@@ -2030,15 +2030,15 @@
         "slotId": 7,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20",
+                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB3",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeS3 && ChargeShot && I20",
+                "Method": "ITEM_OrbTypeS3 && ChargeShot && I20 && ITEM_ORB3",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeC3 && ChargeShot && I19",
+                "Method": "ITEM_OrbTypeC3 && ChargeShot && I19 && ITEM_ORB3",
                 "Difficulty": 0
             }
         ]
@@ -2112,7 +2112,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_HIGHJUMP",
+                "Method": "ITEM_HIJUMP",
                 "Difficulty": 0
             },
             {
@@ -2180,7 +2180,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_DOUBLEJUMP && ITEM_HIGHJUMP && ITEM_JETPACK",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_DOUBLEJUMP && ITEM_HIJUMP && ITEM_JETPACK",
                 "Difficulty": 0
             }
         ]
@@ -2474,7 +2474,7 @@
         "slotId": 31,
         "Requirement": [
             {
-                "Method": "Coins 5000 && Chapter  6",
+                "Method": "Coins 5000 && Chapter 6",
                 "Difficulty": 0
             }
         ]
@@ -2621,7 +2621,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "BombLengthExtend1 && ITEM_SLIDE",
+                "Method": "ITEM_BombLengthExtend && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -2632,7 +2632,7 @@
         "slotId": 21,
         "Requirement": [
             {
-                "Method": "BombLengthExtend1 && ITEM_SLIDE",
+                "Method": "ITEM_BombLengthExtend && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -2681,7 +2681,7 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Swamp",
+        "Location": "Swamp Entrance",
         "slotId": 12,
         "Requirement": [
             {
@@ -2714,7 +2714,7 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Swamp",
+        "Location": "Swamp Entrance",
         "slotId": 12,
         "Requirement": [
             {
@@ -2859,15 +2859,15 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_HIGHJUMP && ITEM_JETPACK",
+                "Method": "ITEM_HIJUMP && ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_HIGHJUMP && ITEM_DOUBLEJUMP",
+                "Method": "ITEM_HIJUMP && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_HIGHJUMP && ITEM_DOUBLEJUMP",
+                "Method": "ITEM_HIJUMP && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
@@ -3103,7 +3103,7 @@
         "slotId": 32,
         "Requirement": [
             {
-                "Method": "Coins 5000 && Chapter  6",
+                "Method": "Coins 5000 && Chapter 6",
                 "Difficulty": 0
             }
         ]
@@ -3596,7 +3596,7 @@
         "slotId": 15,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeC3 && ChargeShot && I19",
+                "Method": "ITEM_OrbTypeC3 && ChargeShot && I19 && ITEM_ORB3",
                 "Difficulty": 0
             },
             {
@@ -3604,15 +3604,15 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_HIGHJUMP && I20",
+                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_HIJUMP && I20 && ITEM_ORB3",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_DOUBLEJUMP && I20",
+                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_DOUBLEJUMP && I20 && ITEM_ORB3",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_JETPACK && I20",
+                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_JETPACK && I20 && ITEM_ORB3",
                 "Difficulty": 0
             }
         ]
@@ -3821,7 +3821,7 @@
         "slotId": 33,
         "Requirement": [
             {
-                "Method": "Coins 5000 && Chapter  6",
+                "Method": "Coins 5000 && Chapter 6",
                 "Difficulty": 0
             }
         ]
@@ -3858,7 +3858,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_LINEBOMB && ITEM_HIGHJUMP && ITEM_JETPACK",
+                "Method": "ITEM_LINEBOMB && ITEM_HIJUMP && ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
@@ -3885,7 +3885,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && ITEM_HIGHJUMP && ITEM_JETPACK2",
+                "Method": "ITEM_SLIDE && ITEM_HIJUMP && ITEM_JETPACK2",
                 "Difficulty": 0
             }
         ]
@@ -3985,7 +3985,7 @@
         "slotId": 20,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS3 && ITEM_DOUBLEJUMP && ITEM_AirDash && ChargeShot && I20",
+                "Method": "ITEM_OrbTypeS3 && ITEM_DOUBLEJUMP && ITEM_AirDash && ChargeShot && I20 && ITEM_ORB3",
                 "Difficulty": 0
             }
         ]
@@ -4110,7 +4110,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_HIGHJUMP && ITEM_WALLJUMP",
+                "Method": "ITEM_HIJUMP && ITEM_WALLJUMP",
                 "Difficulty": 0
             },
             {
@@ -4247,7 +4247,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_HIGHJUMP && ChargeShot",
+                "Method": "ITEM_HIJUMP && ChargeShot",
                 "Difficulty": 0
             },
             {
@@ -4435,7 +4435,7 @@
         "slotId": 15,
         "Requirement": [
             {
-                "Method": "BombLengthExtend1",
+                "Method": "ITEM_BombLengthExtend",
                 "Difficulty": 0
             }
         ]
@@ -4446,7 +4446,7 @@
         "slotId": 24,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20",
+                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB3",
                 "Difficulty": 0
             }
         ]
@@ -4601,7 +4601,7 @@
         "slotId": 4,
         "Requirement": [
             {
-                "Method": "ChrageShot",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -4612,7 +4612,7 @@
         "slotId": 34,
         "Requirement": [
             {
-                "Method": "ChrageShot && Boss",
+                "Method": "ChargeShot && Boss",
                 "Difficulty": 0
             },
             {
@@ -4624,7 +4624,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_HIGHJUMP && ITEM_JETPACK3 && ITEM_KNIFE && ITEM_BombLengthExtend3 && Boss",
+                "Method": "ITEM_HIJUMP && ITEM_JETPACK3 && ITEM_KNIFE && ITEM_BombLengthExtend3 && Boss",
                 "Difficulty": 0
             }
         ]
@@ -4635,7 +4635,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ChrageShot",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             },
             {
@@ -4647,7 +4647,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_HIGHJUMP && ITEM_JETPACK3 && ITEM_KNIFE && ITEM_BombLengthExtend3",
+                "Method": "ITEM_HIJUMP && ITEM_JETPACK3 && ITEM_KNIFE && ITEM_BombLengthExtend3",
                 "Difficulty": 0
             }
         ]
@@ -4739,7 +4739,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && ITEM_JETPACK && ITEM_HIGHJUMP && SpinnerBash",
+                "Method": "ITEM_SLIDE && ITEM_JETPACK && ITEM_HIJUMP && SpinnerBash",
                 "Difficulty": 0
             }
         ]
@@ -4758,7 +4758,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_LINEBOMB && ITEM_JETPACK2 && ITEM_HIGHJUMP && SpinnerBash",
+                "Method": "ITEM_LINEBOMB && ITEM_JETPACK2 && ITEM_HIJUMP && SpinnerBash",
                 "Difficulty": 0
             }
         ]
@@ -4986,7 +4986,7 @@
         "slotId": 34,
         "Requirement": [
             {
-                "Method": "Coins 5000 && Chapter  6",
+                "Method": "Coins 5000 && Chapter 6",
                 "Difficulty": 0
             }
         ]
@@ -5145,7 +5145,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_HIGHJUMP",
+                "Method": "ITEM_HIJUMP",
                 "Difficulty": 0
             },
             {
@@ -5168,7 +5168,7 @@
         "slotId": 28,
         "Requirement": [
             {
-                "Method": "BombLengthExtend1 && ITEM_SLIDE && ChargeShot",
+                "Method": "ITEM_BombLengthExtend && ITEM_SLIDE && ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -5271,7 +5271,7 @@
         "slotId": 28,
         "Requirement": [
             {
-                "Method": "VortexGlove",
+                "Method": "ITEM_Rotater",
                 "Difficulty": 0
             }
         ]
@@ -5360,7 +5360,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_HIGHJUMP && ItemUse",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_HIJUMP && ItemUse",
                 "Difficulty": 0
             }
         ]
@@ -5383,7 +5383,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_JETPACK && ITEM_AirDash && ITEM_HIGHJUMP",
+                "Method": "ITEM_JETPACK && ITEM_AirDash && ITEM_HIJUMP",
                 "Difficulty": 0
             }
         ]
@@ -5671,88 +5671,88 @@
     },
     {
         "Itemname": "BADGE_DoubleAirDash",
-        "Location": "Memine",
+        "Location": "Start Area",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "All Memine Chllanges",
+                "Method": "AllMemine",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_SHARD",
-        "Location": "Memine",
+        "Location": "Ana Thema",
         "slotId": 0,
         "Requirement": [
             {
-                "Method": "Complete Challange",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_SHARD",
-        "Location": "Memine",
+        "Location": "Blushwood Sliding",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Complete Challange",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_SHARD",
-        "Location": "Memine",
+        "Location": "Forest",
         "slotId": 2,
         "Requirement": [
             {
-                "Method": "Complete Challange",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_SHARD",
-        "Location": "Memine",
+        "Location": "Tartarus",
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "Complete Challange",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_SHARD",
-        "Location": "Memine",
+        "Location": "Valhalla Breath Left Part",
         "slotId": 4,
         "Requirement": [
             {
-                "Method": "Complete Challange",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_SHARD",
-        "Location": "Memine",
+        "Location": "Ana Thema",
         "slotId": 5,
         "Requirement": [
             {
-                "Method": "Complete Challange",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_SHARD",
-        "Location": "Memine",
+        "Location": "Start Area",
         "slotId": 29,
         "Requirement": [
             {
-                "Method": "Complete Challange",
+                "Method": "AllMemine",
                 "Difficulty": 0
             }
         ]
@@ -6126,7 +6126,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter 5 && StrongGroundFront" ,
+                "Method": "Coins 250 && Chapter 5 && ITEM_KNIFE" ,
                 "Difficulty": 0
             }
         ]
@@ -6181,7 +6181,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter 6 && OrbAmulet",
+                "Method": "Coins 250 && Chapter 6 && ITEM_OrbAmulet",
                 "Difficulty": 0
             }
         ]

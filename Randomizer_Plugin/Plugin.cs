@@ -1240,8 +1240,8 @@ class OrbPatch
                 ReloadBar.Instance.EnableMe();
                 if (SaveManager.Instance.GetOrb() >= 3)
                 {
-                    (___mainCharacter.phy_perfer as CharacterPhy).canWhiteFlag = SaveManager.Instance.GetItem(ItemList.Type.I19) > 0;
-                    (___mainCharacter.phy_perfer as CharacterPhy).canBlackFlag = SaveManager.Instance.GetItem(ItemList.Type.I20) > 0;
+                (___mainCharacter.phy_perfer as CharacterPhy).canWhiteFlag = SaveManager.Instance.GetItem(ItemList.Type.I19) > 0;
+                (___mainCharacter.phy_perfer as CharacterPhy).canBlackFlag = SaveManager.Instance.GetItem(ItemList.Type.I20) > 0;
                 }
                 __instance.HidePoweredOrbs(t: false);
             }
@@ -1832,7 +1832,7 @@ class CraftingPatch
                         }
                     }
                 }
-                if (EventManager.Instance.isBossMode())
+                if (EventManager.Instance.isBossMode() || GemaHUDTrainingMode.Instance.isTraining() || GemaMushroomMode.Instance.isMushroom())
                 {
                     num5 = -5;
                 }
