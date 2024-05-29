@@ -122,10 +122,10 @@ STACKABLE_MATK:Forest Maze extended:23:,0
 STACKABLE_RATK:Forest Maze extended:1:,0
 STACKABLE_RATK:Forest Maze extended:22:,0
 STACKABLE_EP:Gleamwood:5:ITEM_KNIFE,0
-STACKABLE_MATK:Gleamwood:3:ChargeShot,0
+STACKABLE_MATK:Gleamwood Bottom:3:ChargeShot,0
 BADGE_QuickBomber:Gleamwood:1:,0
 ITEM_MASK:Gleamwood:1:,0
-STACKABLE_HP:Gleamwood:5:,0
+STACKABLE_HP:Gleamwood Bottom:5:ITEM_KNIFE,0
 STACKABLE_MP:Gleamwood:26:ITEM_SLIDE,0
 BADGE_ComboTimeExtendC:Gleamwood:1:ITEM_SLIDE,0
 STACKABLE_RATK:Gleamwood:19:ITEM_SLIDE && ChargeShot,0
@@ -165,7 +165,7 @@ BADGE_BoostMeleeOffense:Ulvosa:1:ITEM_LINEBOMB,0
 STACKABLE_HP:Ulvosa:20:,0
 STACKABLE_COG:Ulvosa:31:Boss,0
 ITEM_OrbAmulet:Ulvosa:1:,0
-BADGE_Cursed6:Ulvosa:1:ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB3,0;Soulburst,0;LargeManaPillar,0
+BADGE_Cursed6:Ulvosa:1:ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB3,0;ITEM_OrbAmulet,0;BADGE_GStrongUpWidth,0
 STACKABLE_MATK:Ulvosa:25:ITEM_Rotater,0
 STACKABLE_MP:CopperWood:2:,0
 STACKABLE_EP:CopperWood:2:,0

@@ -33,7 +33,7 @@ Forest:Moros City:
 Forest:CopperWood:
 Forest:Verdazure Sea:ITEM_LINEBOMB
 Forest:Verdazure Sea:ITEM_WATERMOVEMENT
-Forest:Gleamwood:
+Forest:Gleamwood Bottom:
 Forest:Forest Maze:
 Forest Maze:Forest:
 Forest Maze:Forest Maze boss:ITEM_LINEBOMB
@@ -57,9 +57,14 @@ CopperWood:Forest:
 CopperWood:Travoll Industrie:
 CopperWood:Relicts:
 Ana Thema:Gallary of Mirrors:ITEM_SLIDE && ITEM_LINEBOMB
-Ana Thema:Gleamwood:
+Ana Thema:Gleamwood Bottom:
+Gleamwood Bottom:Gleamwood:ITEM_LINEBOMB
+Gleamwood Bottom:Gleamwood:ITEM_DOUBLEJUMP
+Gleamwood Bottom:Gleamwood:ITEM_JETPACK
+Gleamwood Bottom:Gleamwood:ITEM_AirDash
 Gleamwood:CopperWood:ITEM_LINEBOMB
 Gleamwood:Gleamwood Upper:ITEM_SLIDE
+Gleamwood:Gleamwood Bottom:
 Gleamwood:Relicts:
 Gleamwood:Ana Thema:
 Gleamwood:Gleamwood Right:ITEM_DOUBLEJUMP
@@ -130,7 +135,7 @@ Valley Lower Part:Valley Middle Part:ITEM_Rotater
 Valley Middle Part:Valley Lower Part:ITEM_Rotater
 Valley Middle Part:Valley Upper Part:ITEM_LINEBOMB
 Valley Upper Part:Valley Middle Part:
-Valhalla City:Cloister:ITEM_SLIDE
+Valhalla City:Cloister:ITEM_SLIDE && ITEM_LINEBOMB
 Valhalla City:EverGarden:ITEM_LINEBOMB
 Valhalla City:Vena:
 Valhalla Breath Lower Left Part:Travoll Industrie:

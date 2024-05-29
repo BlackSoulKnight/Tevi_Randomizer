@@ -288,7 +288,7 @@
                     "Method": "ITEM_WATERMOVEMENT"
                 },
                 {
-                    "Exit": "Gleamwood",
+                    "Exit": "Gleamwood Bottom",
                     "Method": ""
                 },
                 {
@@ -498,13 +498,48 @@
                     "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "Gleamwood",
+                    "Exit": "Gleamwood Bottom",
                     "Method": ""
                 }
             ]
         }
     ],
     "Map09": [
+        {
+            "Name": "Gleamwood Bottom",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 4000
+                },
+                {
+                    "Method": "ITEM_SLIDE",
+                    "Amount": 1000
+                },
+                {
+                    "Method": "ITEM_BombLengthExtend",
+                    "Amount": 500
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Gleamwood",
+                    "Method": "ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "Gleamwood",
+                    "Method": "ITEM_DOUBLEJUMP"
+                },
+                {
+                    "Exit": "Gleamwood",
+                    "Method": "ITEM_JETPACK"
+                },
+                {
+                    "Exit": "Gleamwood",
+                    "Method": "ITEM_AirDash"
+                }
+            ]
+        },
         {
             "Name": "Gleamwood",
             "Money": [
@@ -529,6 +564,10 @@
                 {
                     "Exit": "Gleamwood Upper",
                     "Method": "ITEM_SLIDE"
+                },
+                {
+                    "Exit": "Gleamwood Bottom",
+                    "Method": ""
                 },
                 {
                     "Exit": "Relicts",

@@ -15,6 +15,7 @@ Travoll Mines Part 2
 Travoll Industrie
 CopperWood
 Ana Thema
+Gleamwood Bottom
 Gleamwood
 Gleamwood Upper
 Gleamwood Right

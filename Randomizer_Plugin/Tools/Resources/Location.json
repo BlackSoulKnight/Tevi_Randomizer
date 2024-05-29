@@ -1441,7 +1441,7 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Gleamwood",
+        "Location": "Gleamwood Bottom",
         "slotId": 3,
         "Requirement": [
             {
@@ -1474,11 +1474,11 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Gleamwood",
+        "Location": "Gleamwood Bottom",
         "slotId": 5,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_KNIFE",
                 "Difficulty": 0
             }
         ]
