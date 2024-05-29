@@ -1982,11 +1982,11 @@
                 "Difficulty": 0
             },
             {
-                "Method": "Soulburst",
+                "Method": "ITEM_OrbAmulet",
                 "Difficulty": 0
             },
             {
-                "Method": "LargeManaPillar",
+                "Method": "BADGE_GStrongUpWidth",
                 "Difficulty": 0
             }
         ]
