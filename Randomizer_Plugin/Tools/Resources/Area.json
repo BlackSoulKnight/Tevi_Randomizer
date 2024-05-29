@@ -1281,7 +1281,7 @@
             "Connections": [
                 {
                     "Exit": "Cloister",
-                    "Method": "ITEM_SLIDE"
+                    "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "EverGarden",

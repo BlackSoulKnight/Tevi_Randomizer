@@ -169,6 +169,8 @@ namespace TeviRandomizer
                 foreach(Requirement req in Requirement)
                 {
                     if (req.Method.Contains(item.ToString())) return true;
+                    if(item == ItemList.Type.I19 && req.Method.Contains("ITEM_OrbTypeC")) return true;
+                    if(item == ItemList.Type.I20 && req.Method.Contains("ITEM_OrbTypeS")) return true;  
                 }
                 return false;
             }
