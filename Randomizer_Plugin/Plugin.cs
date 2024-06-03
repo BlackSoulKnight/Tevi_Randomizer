@@ -912,7 +912,7 @@ class EventPatch
             SaveManager.Instance.AddBreakTile(1, 302, 189);
             SaveManager.Instance.AddBreakTile(1, 303, 189);
             SaveManager.Instance.AddBreakTile(1, 304, 189);
-
+            ShopPatch.alreadyClaimed();
 
             em.SetStage(30);
             
@@ -2298,6 +2298,131 @@ class CraftingPatch
 
 class ShopPatch
 {
+    static void AddItem(ItemList.Type item) {
+        if (RandomizerPlugin.checkRandomizedItemGot(item,1))
+        {
+            int num = GemaItemManager.Instance.GetItemCoin(item);
+            if (num <= 1000)
+            {
+                num = 250 * GemaItemManager.Instance.GetItemCost(item);
+                if (num < 1250)
+                {
+                    num += 250;
+                    if (num > 1250)
+                    {
+                        num = 1250;
+                    }
+                }
+                if (num < 1000)
+                {
+                    num = 1000;
+                }
+            }
+            SaveManager.Instance.savedata.coinUsedIan += num;
+        }
+    }
+    static public void alreadyClaimed()
+    {
+        //all Items in IANs Shop
+        AddItem(ItemList.Type.BADGE_BossPassing);
+        AddItem(ItemList.Type.BADGE_StyleComboAirDashS);
+        AddItem(ItemList.Type.BADGE_MAXHPCost);
+        AddItem(ItemList.Type.BADGE_EnemyDefeatExp);
+        AddItem(ItemList.Type.BADGE_1HealthTypeA);
+        AddItem(ItemList.Type.ITEM_SPEEDUP);
+        AddItem(ItemList.Type.BADGE_TauntThink);
+        AddItem(ItemList.Type.ITEM_RapidShots);
+        AddItem(ItemList.Type.BADGE_QuickMPRegainA);
+        AddItem(ItemList.Type.BADGE_MapDiscoverRecover);
+        AddItem(ItemList.Type.BADGE_StyleComboAirNormal3A);
+        AddItem(ItemList.Type.BADGE_UpperDoubleHitAfterOutline);
+        AddItem(ItemList.Type.BADGE_Hurt2Punisher);
+        AddItem(ItemList.Type.BADGE_GroundNormalCombo4AltTiming);
+        AddItem(ItemList.Type.BADGE_BreakTimeExtend);
+        AddItem(ItemList.Type.BADGE_StrongFrontFly);
+        AddItem(ItemList.Type.BADGE_1HealthTypeB);
+        AddItem(ItemList.Type.ITEM_AttackRange);
+        AddItem(ItemList.Type.BADGE_StepUpCharge);
+        AddItem(ItemList.Type.BADGE_GroundWeakUpAirExcute);
+        AddItem(ItemList.Type.BADGE_StyleComboNormal4HAAA);
+        AddItem(ItemList.Type.BADGE_SupportShot);
+        AddItem(ItemList.Type.BADGE_StraightCost);
+        AddItem(ItemList.Type.BADGE_WeakAirNormal3ModDamageBoost);
+        AddItem(ItemList.Type.BADGE_ComboBreakBoost);
+        AddItem(ItemList.Type.BADGE_DodgeHealthCounter);
+        AddItem(ItemList.Type.BADGE_AutoAirCombo);
+        AddItem(ItemList.Type.BADGE_SuperArmor33);
+        AddItem(ItemList.Type.BADGE_FreeFoodRefill);
+        AddItem(ItemList.Type.ITEM_RailPass);
+        AddItem(ItemList.Type.BADGE_StyleComboBackflipA);
+        AddItem(ItemList.Type.BADGE_RevengeB);
+        AddItem(ItemList.Type.BADGE_ComboCharge);
+        AddItem(ItemList.Type.BADGE_SimpleBreak);
+        AddItem(ItemList.Type.BADGE_PurchaseBadgeCost);
+        AddItem(ItemList.Type.BADGE_DoubleJumpStrike);
+        AddItem(ItemList.Type.BADGE_BoostTimeExtend);
+        AddItem(ItemList.Type.BADGE_CrystalHeal);
+        AddItem(ItemList.Type.BADGE_FallDamageReduce);
+        AddItem(ItemList.Type.BADGE_DoubleDispelLineBombLow);
+        AddItem(ItemList.Type.ITEM_AirshipPass);
+        AddItem(ItemList.Type.BADGE_StyleComboAirDashA);
+        AddItem(ItemList.Type.BADGE_StrongFrontRapid);
+        AddItem(ItemList.Type.BADGE_BackflipMultiHit);
+        AddItem(ItemList.Type.BADGE_ComboDodgeMeter);
+        AddItem(ItemList.Type.BADGE_RythemCharge);
+        AddItem(ItemList.Type.BADGE_PerfectCost);
+        AddItem(ItemList.Type.BADGE_StyleComboSlidingS);
+        AddItem(ItemList.Type.BADGE_DamageToMaxHP);
+        AddItem(ItemList.Type.BADGE_Normal3HRedCancel);
+        AddItem(ItemList.Type.BADGE_BoostQuickErase);
+        AddItem(ItemList.Type.ITEM_GoldenGlove);
+        AddItem(ItemList.Type.BADGE_GroundNormalCombo4AltDmg);
+        AddItem(ItemList.Type.BADGE_AutoChargeCombo);
+        AddItem(ItemList.Type.BADGE_DodgeSlide);
+        AddItem(ItemList.Type.BADGE_1HealthTypeD);
+        AddItem(ItemList.Type.BADGE_KnockConvert);
+        AddItem(ItemList.Type.BADGE_BombCharge);
+        AddItem(ItemList.Type.BADGE_MPAllBurst);
+        AddItem(ItemList.Type.BADGE_FasterTeviStrongGroundUp);
+
+        //All Potions from CC
+        for (int i = 0; i < 5; i++)
+        {
+            int num = 2000 + i * 1000;
+            if (num >= 5000)
+            {
+                num -= 1000;
+            }
+            if (num < 3000)
+            {
+                num = 3000;
+            }
+
+            if (RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.STACKABLE_BAG, (byte)i))
+            {
+                if (i == 0)
+                {
+                    SaveManager.Instance.savedata.coinUsedCC += 250;
+                }
+                else if (i == 1)
+                {
+                    SaveManager.Instance.savedata.coinUsedCC += 1000;
+                }
+                else
+                {
+                    SaveManager.Instance.savedata.coinUsedCC += num /= 2;
+
+                }
+            }
+            if (RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.STACKABLE_EP, (byte)i)) SaveManager.Instance.savedata.coinUsedCC += num;
+            if (RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.STACKABLE_HP, (byte)i)) SaveManager.Instance.savedata.coinUsedCC += num;
+            if (RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.STACKABLE_MATK, (byte)i)) SaveManager.Instance.savedata.coinUsedCC += num;
+            if (RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.STACKABLE_RATK, (byte)i)) SaveManager.Instance.savedata.coinUsedCC += num;
+            if (RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.STACKABLE_MP, (byte)i)) SaveManager.Instance.savedata.coinUsedCC += num;
+            if (RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.STACKABLE_SHARD, (byte)i)) SaveManager.Instance.savedata.coinUsedCC += 5000;
+
+        }
+    }
 
 
     [HarmonyPatch(typeof(HUDShopMenu), "AddItem")]
