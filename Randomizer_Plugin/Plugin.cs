@@ -1499,7 +1499,9 @@ class CraftingPatch
             ___selectedIcon.color = Color.white;
             for (int i = 0; i < ___materialrequiredList.Length; i++)
             {
+
                 int mat = __instance.GetMat(itemType, i + 1);
+                if ((ItemList.Resource)((i + 1) % GemaItemManager.Instance.maxMaterial) == 0) mat = 0;
                 int num3 = i;
                 if (num3 == GemaItemManager.Instance.maxMaterial - 1)
                 {
@@ -1814,7 +1816,7 @@ class CraftingPatch
                 }
                 if (num5 >= 1)
                 {
-                    for (int m = 0; m < GemaItemManager.Instance.maxMaterial; m++)
+                    for (int m = 1; m < GemaItemManager.Instance.maxMaterial; m++)
                     {
                         if (__instance.GetMat(___currentItemType, m) > SaveManager.Instance.GetResource((ItemList.Resource)m))
                         {
@@ -1889,7 +1891,7 @@ class CraftingPatch
                         }
                     }
                     ItemList.Type type = ItemList.Type.OFF;
-                    for (int num7 = 0; num7 < GemaItemManager.Instance.maxMaterial; num7++)
+                    for (int num7 = 1; num7 < GemaItemManager.Instance.maxMaterial; num7++)
                     {
                         if (__instance.GetMat(___currentItemType, num7) <= 0)
                         {
