@@ -479,6 +479,10 @@
                 {
                     "Exit": "Relicts",
                     "Method": ""
+                },
+                {
+                    "Exit":"Gleamwood",
+                    "Method":"ITEM_LINEBOMB"
                 }
             ]
         }

@@ -6,7 +6,7 @@ using HarmonyLib;
 using EventMode;
 using Game;
 using TMPro;
-using Character;
+
 
 using UnityEngine.UI;
 using UnityEngine;
@@ -359,6 +359,14 @@ public class RandomizerPlugin : BaseUnityPlugin
         return CommonResource.Instance.GetItem(itemID);
     }
 
+    [HarmonyPatch(typeof(WorldManager), "FindNearestItem_Room")]
+    [HarmonyPostfix]
+    static void findNearestRandomizedItem(ref ItemTile tile,ref ItemList.Type nearestType)
+    {
+
+        nearestType =getRandomizedItem(tile.itemid, tile.GetSlotID()).getItemTyp();
+    }
+
     // change how the item Bell Works
     [HarmonyPatch(typeof(CharacterBase),"UseItem")]
     [HarmonyPrefix]
@@ -371,7 +379,7 @@ public class RandomizerPlugin : BaseUnityPlugin
                 if (GemaMissionMode.Instance.isInMission() || WorldManager.Instance.Area == 30 || (EventManager.Instance.GetCurrentEventBattle() != Mode.Chap7StartRibauldChase && EventManager.Instance.GetCurrentEventBattle() != 0) || EventManager.Instance.isBossMode())
                 {
                     __instance.PlaySound(AllSound.SEList.MENUFAIL);
-                    __instance.ChangeLogicStatus(PlayerLogicState.NORMAL);
+                    __instance.ChangeLogicStatus(Character.PlayerLogicState.NORMAL);
                     EventManager.Instance.EFF_CreateEmotion(__instance, null, __instance.t.position, EffectSprite.EMOTION_QUESTION);
                     return false;
                 }
@@ -398,12 +406,12 @@ public class RandomizerPlugin : BaseUnityPlugin
                         ___playerc_perfer.PlayItemVoice(isbad: false);
                     }
                 }
-                __instance.ChangeLogicStatus(PlayerLogicState.NORMAL);
+                __instance.ChangeLogicStatus(Character.PlayerLogicState.NORMAL);
             }
             else
             {
                 __instance.PlaySound(AllSound.SEList.MENUFAIL);
-                __instance.ChangeLogicStatus(PlayerLogicState.NORMAL);
+                __instance.ChangeLogicStatus(Character.PlayerLogicState.NORMAL);
                 EventManager.Instance.EFF_CreateEmotion(__instance, null, __instance.t.position, EffectSprite.EMOTION_QUESTION);
             }
             return false;
@@ -1264,17 +1272,17 @@ class OrbPatch
 
     [HarmonyPatch(typeof(CharacterPhy), "PrepareSwitchOrb")]
     [HarmonyPrefix]
-    static bool newPrepareSwitchOrb(ref OrbType ot,ref bool forceType, ref CharacterBase ___cb_perfer, ref CharacterPhy __instance)
+    static bool newPrepareSwitchOrb(ref Character.OrbType ot,ref bool forceType, ref CharacterBase ___cb_perfer, ref CharacterPhy __instance)
     {
         if (forceType)
         {
             return true;
         }
-        else if (__instance.orbUsing == OrbType.BLACK && SaveManager.Instance.GetItem(ItemList.Type.I19) == 0)
+        else if (__instance.orbUsing == Character.OrbType.BLACK && SaveManager.Instance.GetItem(ItemList.Type.I19) == 0)
         {
             return false;
         }
-        else if (__instance.orbUsing == OrbType.WHITE && SaveManager.Instance.GetItem(ItemList.Type.I20) == 0)
+        else if (__instance.orbUsing == Character.OrbType.WHITE && SaveManager.Instance.GetItem(ItemList.Type.I20) == 0)
         {
             return false;
         }
@@ -1289,7 +1297,7 @@ class OrbPatch
         {
             if (SaveManager.Instance.GetItem(ItemList.Type.I19) < 1 ^ SaveManager.Instance.GetItem(ItemList.Type.I20) < 1)
             {
-                __instance.PrepareSwitchOrb(false, true, (OrbType)((int)__instance.orbUsing ^ 1));
+                __instance.PrepareSwitchOrb(false, true, (Character.OrbType)((int)__instance.orbUsing ^ 1));
                 //__instance.orbUsing = (OrbType)((int)__instance.orbUsing ^ 1);
             }
         }
@@ -1311,7 +1319,7 @@ class OrbPatch
     [HarmonyPrefix]
     static bool forcedTypeSwitch(ref CharacterPhy __instance,ref bool __result)                 // SwitchType MODE AABBCC Not Working
     {
-        if((__instance.orbUsing == OrbType.BLACK && SaveManager.Instance.GetItem(ItemList.Type.I20) == 0) || (__instance.orbUsing == OrbType.WHITE && SaveManager.Instance.GetItem(ItemList.Type.I19) == 0))
+        if((__instance.orbUsing == Character.OrbType.BLACK && SaveManager.Instance.GetItem(ItemList.Type.I20) == 0) || (__instance.orbUsing == Character.OrbType.WHITE && SaveManager.Instance.GetItem(ItemList.Type.I19) == 0))
         {
             __instance.PrepareSwitchOrb();
             __result = false;
@@ -1323,7 +1331,7 @@ class OrbPatch
     [HarmonyPrefix]
     static bool typeSwitch(ref CharacterPhy __instance,ref bool __result)
     {
-        if((__instance.orbUsing == OrbType.BLACK && SaveManager.Instance.GetItem(ItemList.Type.I20) == 0) || (__instance.orbUsing == OrbType.WHITE && SaveManager.Instance.GetItem(ItemList.Type.I19) == 0))
+        if((__instance.orbUsing == Character.OrbType.BLACK && SaveManager.Instance.GetItem(ItemList.Type.I20) == 0) || (__instance.orbUsing == Character.OrbType.WHITE && SaveManager.Instance.GetItem(ItemList.Type.I19) == 0))
         {
             __result = false;
             return false;
@@ -1770,24 +1778,304 @@ class CraftingPatch
             {
                 num++;
             }
-            if (SaveManager.Instance.GetStackableItem((ItemList.Type)item, 2))
+            if (RandomizerPlugin.checkRandomizedItemGot(_item, 2))
             {
                 num++;
             }
-            if (SaveManager.Instance.GetStackableItem((ItemList.Type)item, 3))
-            {
+            if (RandomizerPlugin.checkRandomizedItemGot(_item, 3))
+                {
                 num++;
             }
         }
         return num;
     }
 
+    [HarmonyPatch(typeof(GemaItemManager), "GetMat")]
+    [HarmonyPrefix]
+    static bool CustomMats(ref ItemList.Type iType,ref int count,ref int __result,ref GemaItemManager __instance)
+    {
+        int num = 0;
+        switch (iType)
+        {
+            case ItemList.Type.Useable_WaffleWonderTemp:
+                if (SaveManager.Instance.GetMiniFlag(Mini.WaffleWonderCrafted) == 0 && count == 4)
+                {
+                    num = 9;
+                }
+                if (SaveManager.Instance.GetMiniFlag(Mini.WaffleWonderCrafted) == 1 && count == 3)
+                {
+                    num = 9;
+                }
+                if (SaveManager.Instance.GetMiniFlag(Mini.WaffleWonderCrafted) == 2 && count == 7)
+                {
+                    num = 9;
+                }
+                if (SaveManager.Instance.GetMiniFlag(Mini.WaffleWonderCrafted) == 3 && count == 9)
+                {
+                    num = 9;
+                }
+                if (SaveManager.Instance.GetMiniFlag(Mini.WaffleWonderCrafted) == 4 && count == 8)
+                {
+                    num = 9;
+                }
+                if (SaveManager.Instance.GetMiniFlag(Mini.WaffleWonderCrafted) == 5 && count == 12)
+                {
+                    num = 9;
+                }
+                if (SaveManager.Instance.GetMiniFlag(Mini.WaffleWonderCrafted) == 6 && count == 11)
+                {
+                    num = 9;
+                }
+                if (SaveManager.Instance.GetMiniFlag(Mini.WaffleWonderCrafted) == 7 && count == 10)
+                {
+                    num = 9;
+                }
+                if (SaveManager.Instance.GetMiniFlag(Mini.WaffleWonderCrafted) == 8 && count >= 3 && count <= 12 && count != 5 && count != 6)
+                {
+                    num = 7;
+                }
+                break;
+            case ItemList.Type.Function_MaterialExchangeA:
+                {
+                    int num5 = 0;
+                    int num6 = -1;
+                    for (int j = 3; j < 5; j++)
+                    {
+                        if (SaveManager.Instance.GetResource((ItemList.Resource)j) >= 9 && SaveManager.Instance.GetResource((ItemList.Resource)j) > num5)
+                        {
+                            num5 = SaveManager.Instance.GetResource((ItemList.Resource)j);
+                            num6 = j;
+                        }
+                    }
+                    num = ((count == num6) ? 9 : 0);
+                    break;
+                }
+            case ItemList.Type.Function_MaterialExchangeB:
+                {
+                    int num3 = 0;
+                    int num4 = -1;
+                    for (int i = 7; i < 13; i++)
+                    {
+                        if (SaveManager.Instance.GetResource((ItemList.Resource)i) >= 9 && SaveManager.Instance.GetResource((ItemList.Resource)i) > num3)
+                        {
+                            num3 = SaveManager.Instance.GetResource((ItemList.Resource)i);
+                            num4 = i;
+                        }
+                    }
+                    num = ((count == num4) ? 9 : 0);
+                    break;
+                }
+            default:
+                {
+                    if (iType.ToString().Contains("_OrbBoost"))
+                    {
+                        if (count == 1)
+                        {
+                            num = 4;
+                            if (SaveManager.Instance.GetOrbBoostObtained() > 0)
+                            {
+                                num += 4;
+                            }
+                        }
+                        if (count % __instance.maxMaterial == 0)
+                        {
+                            num = 250;
+                        }
+                        break;
+                    }
+                    if (iType.ToString().Contains("_OrbType"))
+                    {
+                        if (count == 1)
+                        {
+                            num = 4;
+                            if (SaveManager.Instance.GetOrbTypeObtained() > 0)
+                            {
+                                num++;
+                            }
+                            if (SaveManager.Instance.GetOrbTypeObtained() > 1)
+                            {
+                                num += 2;
+                            }
+                            if (SaveManager.Instance.GetOrbTypeObtained() > 2)
+                            {
+                                num++;
+                            }
+                        }
+                        if (count % __instance.maxMaterial == 0)
+                        {
+                            num = 250;
+                        }
+                        break;
+                    }
+                    if (iType >= ItemList.Type.BADGE_START && iType <= ItemList.Type.BADGE_MAX)
+                    {
+                        if (count == 1)
+                        {
+                            __result= 0;
+                            return false;
+                        }
+                    }
+                    else if (iType.ToString().Contains("Useable_"))
+                    {
+                        if (count % __instance.maxMaterial == 0)
+                        {
+                            __result = 0;
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        if (iType == ItemList.Type.ITEM_SPEEDUP && getItemUpgradeCount(iType) > 0 && count % __instance.maxMaterial == 0)
+                        {
+                            __result = 0;
+                            return false;
+                        }
+                        if (iType == ItemList.Type.ITEM_AttackRange && getItemUpgradeCount(iType) > 0 && count % __instance.maxMaterial == 0)
+                        {
+                            __result = 0;
+                            return false;
+                        }
+                        if (iType == ItemList.Type.ITEM_RapidShots && getItemUpgradeCount(iType) > 0 && count % __instance.maxMaterial == 0)
+                        {
+                            __result = 0;
+                            return false;
+                        }
+                        if (iType == ItemList.Type.ITEM_GoldenGlove && getItemUpgradeCount(iType) > 0 && count % __instance.maxMaterial == 0)
+                        {
+                            __result = 0;
+                            return false;
+                        }
+                        if (iType == ItemList.Type.ITEM_OrbAmulet && getItemUpgradeCount(iType) <= 0 && count == 2)
+                        {
+                            __result = 0;
+                            return false;
+                        }
+                        if (iType == ItemList.Type.ITEM_OrbAmulet && getItemUpgradeCount(iType) > 0 && count == 1)
+                        {
+                            __result = 0;
+                            return false;
+                        }
+                        if (iType == ItemList.Type.ITEM_ORB && getItemUpgradeCount(iType) >= 2 && count == 10)
+                        {
+                            __result = 0;
+                            return false;
+                        }
+                        if (iType == ItemList.Type.ITEM_KNIFE && getItemUpgradeCount(iType) >= 2 && count == 10)
+                        {
+                            __result = 3;
+                            return false;
+                        }
+                        if (iType == ItemList.Type.ITEM_BoostSystem && getItemUpgradeCount(iType) >= 2 && count == 10)
+                        {
+                            __result = 4;
+                            return false;
+                        }
+                        if (iType == ItemList.Type.ITEM_OrbAmulet && getItemUpgradeCount(iType) >= 2 && count == 10)
+                        {
+                            __result = 5;
+                            return false;
+                        }
+                        if (iType == ItemList.Type.ITEM_BombLengthExtend && getItemUpgradeCount(iType) >= 2 && count == 7)
+                        {
+                            __result = 5;
+                            return false;
+                        }
+                        if (iType == ItemList.Type.ITEM_GoldenGlove && count == 2)
+                        {
+                            __result = 1;
+                            return false;
+                        }
+                        if (iType == ItemList.Type.ITEM_TempRing && count == 2)
+                        {
+                            __result = 1;
+                            return false;
+                        }
+                        if (iType == ItemList.Type.ITEM_AntiDecay && count == 2)
+                        {
+                            __result = 1;
+                            return false;
+                        }
+                        if (iType == ItemList.Type.ITEM_MASK && count == 2)
+                        {
+                            __result = 1;
+                            return false;
+                        }
+                    }
+                    GemaItemManager.ItemData db = __instance.GetItemDB(iType);
+                    num = __instance.GetItemDBMaterialData(db, count % __instance.maxMaterial);
+                    if (iType.ToString().Contains("ITEM") && SaveManager.Instance.GetItem(iType) > 0)
+                    {
+                        if (count % __instance.maxMaterial == 0)
+                        {
+                            __result = 0;
+                        }
+                        if (iType == ItemList.Type.ITEM_Explorer)
+                        {
+                            switch (count)
+                            {
+                                case 2:
+                                    __result = 1;
+                                    return false;
+                                case 1:
+                                    if (SaveManager.Instance.GetCustomGame(CustomGame.Explorer))
+                                    {
+                                        if (getItemUpgradeCount(iType) == 1)
+                                        {
+                                            __result = 1;
+                                            return false;
+                                        }
+                                        if (getItemUpgradeCount(iType) >= 2)
+                                        {
+                                            __result = 1;
+                                            return false;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (getItemUpgradeCount(iType) == 1)
+                                        {
+                                            __result = 3;
+                                            return false;
+                                        }
+                                        if (getItemUpgradeCount(iType) >= 2)
+                                        {
+                                            __result = 6;
+                                            return false;
+                                        }
+                                    }
+                                    break;
+                            }
+                        }
+                        if (count == 2 && num > 10 && num < 100)
+                        {
+                            int num2 = num % 10;
+                            num /= 10;
+                            if (getItemUpgradeCount(iType) >= 2)
+                            {
+                                num += num2;
+                            }
+                        }
+                    }
+                    if (__instance.isBadge(iType) && count == 3 && num <= 0)
+                    {
+                        num = 3 + (int)((float)__instance.GetItemCost(iType) * 1.25f);
+                    }
+                    break;
+                }
+        }
+        if (count % __instance.maxMaterial == 0)
+        {
+            num = ((!iType.ToString().Contains("Useable_") && !iType.ToString().Contains("Function_")) ? 250 : 0);
+        }
+        __result = num;
+        return false;
+    }
 
     [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid), "Update")]
     [HarmonyPrefix]
     static bool progressiveItemCrafting(ref GemaUIPauseMenu_CraftGrid __instance, ref GemaUIPauseMenu_CraftGridSlot[] ___craftList, ref int ___selected, ref ItemList.Type ___currentItemType, ref GemaUIPauseMenu_CraftMaterialSlot[] ___materialownedList,
         ref byte[] ___currentMaterialNeeded, ref float ___isJustCraftedBadge, ref float ___errorflashing, ref float ___flashing, Image ___synthesisBox, Image ___synthesisBoxOutline, ref GameObject[] ___specialcrafts, ref Image ___craftedFlash,
-        ref GemaUIPauseMenu_ItemGridSub[] ___bagItems,ref (Character.OrbType, OrbShootType, OrbShootType, bool) __state)
+        ref GemaUIPauseMenu_ItemGridSub[] ___bagItems,ref (Character.OrbType, Character.OrbShootType, Character.OrbShootType, bool) __state)
     {
         Traverse trav = Traverse.Create(__instance);
         __state.Item4 = false;
@@ -1985,7 +2273,7 @@ class CraftingPatch
 
     [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid), "Update")]
     [HarmonyPostfix]
-    static void fixOrbShootType(ref (Character.OrbType, OrbShootType,OrbShootType, bool) __state)
+    static void fixOrbShootType(ref (Character.OrbType, Character.OrbShootType, Character.OrbShootType, bool) __state)
     {
         if (__state.Item4)
         {
@@ -2258,7 +2546,7 @@ class CraftingPatch
             Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_CraftBadgeCost, false, (byte)0 }).GetValue();
             Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_StyleComboBackImageS, false, (byte)0 }).GetValue();
             Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_AntiAirPlat, false, (byte)0 }).GetValue();
-            if (SaveManager.Instance.GetUnlockedLogic(PlayerLogicState.TEVI_STRONG_GROUND_FRONT) > 0)
+            if (SaveManager.Instance.GetUnlockedLogic(Character.PlayerLogicState.TEVI_STRONG_GROUND_FRONT) > 0)
             {
                 Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.BADGE_StyleComboHeavyGroundFrontA, false, (byte)0 }).GetValue();
             }
@@ -2922,7 +3210,7 @@ class ScalePatch()
             __instance.maxToBreak = enemyDB.toBreak;
             Traverse t = Traverse.Create(__instance);
 
-            if (__instance.isBoss == BossType.BOSS)
+            if (__instance.isBoss == Character.BossType.BOSS)
             {
                 if (SaveManager.Instance.GetCustomGame(CustomGame.HighBossScale) || GemaBossRushMode.Instance.isBossRushTypeEqualOrHigher(BossRushType.XTREME))
                 {
@@ -2975,11 +3263,11 @@ class ScalePatch()
             {
                 num2 = ((!(num3 <= 5f)) ? (num2 + 0.75f) : (num2 + num3 * 0.15f));
             }
-            if (num3 >= 0f && __instance.isBoss != BossType.BOSS)
+            if (num3 >= 0f && __instance.isBoss != Character.BossType.BOSS)
             {
                 num2 += 0.1f;
             }
-            if (num3 >= 0.99f && __instance.isBoss != BossType.BOSS)
+            if (num3 >= 0.99f && __instance.isBoss != Character.BossType.BOSS)
             {
                 num2 += 0.1f;
             }
@@ -2990,7 +3278,7 @@ class ScalePatch()
             }
 
             // HP
-            if (__instance.isBoss == BossType.BOSS)
+            if (__instance.isBoss == Character.BossType.BOSS)
             {
                 if (!GemaBossRushMode.Instance.isBossRush() || (int)GemaBossRushMode.Instance.BossRushType >= 1)
                 {
@@ -3477,9 +3765,9 @@ class ScalePatch()
             if (RandomizerPlugin.customDiff >= 21)
                 maxMult = 1.1f + (RandomizerPlugin.customDiff - 20) * 0.0001f;
             float diff = RandomizerPlugin.customDiff - 5 + SaveManager.Instance.DifficultyMinMaxOffset;
-            int num = (int)(5f + Mathf.Lerp(4f, 100f * maxMult, diff * 1.25f)) + (int)((float)(int)___cb_perfer.GetBuffLv(BuffType.WallDamageAmp) * (5f + Mathf.Lerp(4f, 100f * maxMult, diff * 0.8f)));
+            int num = (int)(5f + Mathf.Lerp(4f, 100f * maxMult, diff * 1.25f)) + (int)((float)(int)___cb_perfer.GetBuffLv(Character.BuffType.WallDamageAmp) * (5f + Mathf.Lerp(4f, 100f * maxMult, diff * 0.8f)));
             ___cb_perfer.ReduceHealth(num, lethal: false);
-            DamageManager.Instance.CreateDamage(num.ToString(), num, ___cb_perfer.t.position + new Vector3(0f, (float)___cb_perfer.damagePosition * 20f - 10f + ___cb_perfer.OverallOffsetY), ___cb_perfer, DamageTextType.NORMAL, new Color32(225, 177, 177, byte.MaxValue), new Color32(byte.MaxValue, 77, 77, byte.MaxValue), 20f);
+            DamageManager.Instance.CreateDamage(num.ToString(), num, ___cb_perfer.t.position + new Vector3(0f, (float)___cb_perfer.damagePosition * 20f - 10f + ___cb_perfer.OverallOffsetY), ___cb_perfer, Character.DamageTextType.NORMAL, new Color32(225, 177, 177, byte.MaxValue), new Color32(byte.MaxValue, 77, 77, byte.MaxValue), 20f);
             return false;
         }
         return true;
