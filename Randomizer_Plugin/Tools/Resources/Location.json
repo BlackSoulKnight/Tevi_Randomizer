@@ -3845,6 +3845,18 @@
             {
                 "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_AirDash",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_JETPACK",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_DOUBLEJUMP",
+                "Difficulty": 0
             }
         ]
     },

@@ -1017,8 +1017,12 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Swamp",
+                    "Exit": "Swamp Entrance",
                     "Method": ""
+                },
+                {
+                    "Exit": "Swamp",
+                    "Method": "ChargeShot && ITME_LINEBOMB"
                 },
                 {
                     "Exit": "LavaWorld Part 2",
@@ -1081,6 +1085,10 @@
                 {
                     "Exit": "Swamp",
                     "Method": "ITEM_ORB"
+                },
+                {
+                    "Exit": "Swamp",
+                    "Method": "ITEM_AirDash"
                 },
                 {
                     "Exit": "Swamp",

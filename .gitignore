@@ -20,3 +20,7 @@ Randomizer_Plugin/resource/resource.manifest
 Randomizer_Plugin/Assembly-CSharp1.10.dll
 Randomizer_Plugin/Newtonsoft.Json.dll
 Randomizer_Plugin/Tools/Resources/Notes.txt
+Randomizer_Plugin/Facepunch.Steamworks.Win64.dll
+Randomizer_Plugin/Rewired_Windows.dll
+Randomizer_Plugin/Rewired_Core.dll
+Randomizer_Plugin/Rewired_Windows_Functions.dll

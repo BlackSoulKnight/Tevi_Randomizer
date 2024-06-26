@@ -33,6 +33,22 @@
 	<Reference Include="Newtonsoft.Json">
     <HintPath>Newtonsoft.Json.dll</HintPath>
   </Reference>
+
+	<Reference Include="Rewired_Core">
+    <HintPath>Rewired_Core.dll</HintPath>
+  </Reference>	
+  
+  <Reference Include="Rewired_Windows_Functions">
+    <HintPath>Rewired_Windows_Functions.dll</HintPath>
+  </Reference>  
+  
+  <Reference Include="Rewired.Windows">
+    <HintPath>Rewired_Windows.dll</HintPath>
+  </Reference>
+
+  <Reference Include="Facepunch.Steamworks.Win64">
+    <HintPath>Facepunch.Steamworks.Win64.dll</HintPath>
+  </Reference>
   
   <Reference Include="Unity.TextMeshPro">
     <HintPath>Unity.TextMeshPro.dll</HintPath>

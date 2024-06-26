@@ -17,6 +17,8 @@ using Map;
 using System.Linq;
 
 using Newtonsoft.Json;
+using Unity.Curl;
+using Character;
 
 
 
@@ -90,7 +92,7 @@ public enum CustomFlags : short
 }
 
 
-[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.9.9")]
+[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.9.9.1")]
 [BepInProcess("TEVI.exe")]
 public class RandomizerPlugin : BaseUnityPlugin
 {
@@ -127,6 +129,7 @@ public class RandomizerPlugin : BaseUnityPlugin
         instance.PatchAll(typeof(ScalePatch));
         instance.PatchAll(typeof(OrbPatch));
         instance.PatchAll(typeof(RabiSmashPatch));
+        instance.PatchAll(typeof(BonusFeaturePatch));
 
 
         // test Localizazion
@@ -150,6 +153,11 @@ public class RandomizerPlugin : BaseUnityPlugin
             newText.tchinese = "Celia";
             newText.japanese = "Celia";
             newText.english = "Celia";
+            newText.spanish = "Celia";
+            newText.russian = "Celia";
+            newText.ukrainian = "Celia";
+            newText.schinese = "Celia";
+            newText.korean = "Celia";
             t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
             t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
         }
@@ -159,6 +167,11 @@ public class RandomizerPlugin : BaseUnityPlugin
             newText.tchinese = "Celia is now available";
             newText.japanese = "Celia is now available";
             newText.english = "Celia is now available";
+            newText.schinese = "Celia is now available";
+            newText.russian = "Celia is now available";
+            newText.ukrainian = "Celia is now available";
+            newText.korean = "Celia is now available";
+            newText.spanish = "Celia is now available";
             t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
             t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
         }
@@ -169,6 +182,11 @@ public class RandomizerPlugin : BaseUnityPlugin
             newText.tchinese = "Sable";
             newText.japanese = "Sable";
             newText.english = "Sable";
+            newText.schinese = "Sable";
+            newText.spanish = "Sable";
+            newText.korean = "Sable";
+            newText.russian = "Sable";
+            newText.ukrainian = "Sable";
             t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
             t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
         }
@@ -178,6 +196,11 @@ public class RandomizerPlugin : BaseUnityPlugin
             newText.tchinese = "Sable is now available";
             newText.japanese = "Sable is now available";
             newText.english = "Sable is now available";
+            newText.schinese = "Sable is now available";
+            newText.korean = "Sable is now available";
+            newText.spanish = "Sable is now available";
+            newText.russian = "Sable is now available";
+            newText.ukrainian = "Sable is now available";
             t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
             t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
         }
@@ -3043,6 +3066,15 @@ class SaveGamePatch()
     //how is saveslot 0 be handled?
 
 
+    static void decreaseBackupSaveSlot()
+    {
+        MainVar.instance._backupsaveslot--;
+        if (MainVar.instance._backupsaveslot < SettingManager.Instance.GetBackupSaveSlotStart())
+        {
+            MainVar.instance._backupsaveslot = 99;
+        }
+        Debug.Log("[SystemManager] Backup save slot is now (Decreased) : " + MainVar.instance._backupsaveslot);
+    }
 
     [HarmonyPatch(typeof(SaveManager),"LoadGame")]
     [HarmonyPostfix]
@@ -3087,6 +3119,21 @@ class SaveGamePatch()
     {
 
         byte saveslot = MainVar.instance._saveslot;
+        if (MainVar.instance.CHAPTERRESET_Event > 0)
+        {
+            saveslot = 100;
+        }
+        else if (MainVar.instance._isAutoSave)
+        {
+            saveslot = 0;
+        }
+        else if (backup && (bool)WorldManager.Instance)
+        {
+            SettingManager.Instance.LoadSystem("backupSaveSlot");
+            decreaseBackupSaveSlot();
+            saveslot = MainVar.instance._backupsaveslot;
+            SettingManager.Instance.IncreaseBackupSaveSlot();
+        }
 
         string result = "";
         customSaveFileNames(ref result, ref saveslot);
@@ -3128,11 +3175,74 @@ class SaveGamePatch()
 
 class BonusFeaturePatch()
 {
+    /*
     [HarmonyPatch(typeof(GemaChargedShotCombo),"AddMeter")]
-    [HarmonyPrefix]
     static void MOREPOWAR(ref int add)
     {
-        add *= 99;
+        add *= 1;
+    }*/
+
+    // new dropkick mechanic
+    static int bonusDropKickDmg;
+    static bulletScript currentDropKick;
+    static bool DropKickDmgUpdated = false;
+    static (CharacterBase, BulletType) lastHit;
+    [HarmonyPatch(typeof(SaveManager),"TryRenewLevel")]
+    [HarmonyPostfix]
+    static void resetBonusDmg()
+    {
+        bonusDropKickDmg = 0;
+    }
+
+
+    [HarmonyPatch(typeof(CharacterBase),"BulletHurtPlayer")]
+    [HarmonyPostfix]
+    static void test(ref CharacterBase owner,float damage,BulletType type,ref CharacterBase __instance)
+    {
+        if(type == BulletType.QUICK_DROP)
+        {
+            bonusDropKickDmg++;
+        }
+        else if(owner.isPlayer() || __instance.isPlayer())
+        {
+
+            bonusDropKickDmg = 0;
+        }
+
+    }
+
+    [HarmonyPatch(typeof(BulletManager), "ShootBullet")]
+    [HarmonyPostfix]
+    static void getNewBullets(ref bulletScript __result, ref BulletType type)
+    {
+
+        if (type == BulletType.QUICK_DROP)
+        {
+            DropKickDmgUpdated = false;
+            currentDropKick = __result;
+        }
+
+    }
+    static float testValue = 0.05f;
+    [HarmonyPatch(typeof(CharacterBase),"_Update")]
+    [HarmonyPostfix]
+    static void updateDropkickDamage(ref PlayerLogicState ___logicStatus,ref ObjectPhy ___phy_perfer, ref CharacterPhy ___cphy_perfer)
+    {
+        if(___logicStatus == PlayerLogicState.QUICKDROP && !DropKickDmgUpdated && currentDropKick != null)
+        {
+            DropKickDmgUpdated = true;
+            float num3 = 0.343525f; 
+            num3 += testValue*bonusDropKickDmg; 
+            if (___cphy_perfer != null)
+            {
+                num3 += (float)(int)___cphy_perfer.quickdrophit * 0.02f;
+            }
+            if (SaveManager.Instance.GetBadgeEquipped(ItemList.Type.BADGE_DoubleJumpStrike) && ___phy_perfer.jumped >= 2)
+            {
+                num3 *= 1.17f;
+            }
+            currentDropKick.SetDamage(num3);
+        }
     }
 
 }

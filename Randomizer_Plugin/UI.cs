@@ -3,18 +3,19 @@ using System.IO;
 using System.Collections.Generic;
 using BepInEx;
 using HarmonyLib;
-using EventMode;
-using Game;
 using TMPro;
-using Character;
+using Game;
+using Rewired;
 
-using UnityEngine.UI;
 using UnityEngine;
 
 using Bullet;
 using QFSW.QC;
 using UnityEngine.UIElements;
 using JetBrains.Annotations;
+using UnityEngine.EventSystems;
+using RewiredConsts;
+using System.Net;
 
 
 
@@ -28,7 +29,7 @@ namespace TeviRandomizer
     {
         static GameObject randoSetting;
 
-        static Dictionary<string,object> settings = new Dictionary<string,object>();
+        public static Dictionary<string,object> settings = new Dictionary<string,object>();
 
         static public object getSettings(string settingName ="")
         {
@@ -38,61 +39,6 @@ namespace TeviRandomizer
         }
         static public GameObject finishedText;
 
-        static public void addAllOptions(GameObject gameObject)
-        {
-            GameObject settingsAt = gameObject.transform.GetChild(4).gameObject;
-            finishedText = gameObject.transform.Find("Finished").gameObject;
-            for (int i = 0; i < settingsAt.transform.childCount; i++)
-            {
-                GameObject t = settingsAt.transform.GetChild(i).gameObject;
-
-                if (t.name.Contains("Toggle"))
-                {
-                    settings.Add(t.name,t.GetComponentInChildren<UnityEngine.UI.Toggle>());
-                }
-                else if (t.name.Contains("Slider"))
-                {
-                    UnityEngine.UI.Slider slider = t.GetComponentInChildren<UnityEngine.UI.Slider>();
-                    slider.onValueChanged.AddListener(delegate { t.transform.Find("Number").gameObject.GetComponent<TextMeshProUGUI>().text = slider.value.ToString(); });
-                    settings.Add(t.name, slider);
-                }
-                else if (t.name.Contains("Seed"))
-                {
-                    settings.Add(t.name, t.GetComponentInChildren<TMPro.TMP_InputField>());
-                }
-                else if (t.name.Contains("Density"))
-                {
-                    t.SetActive(false);
-                    settings.Add(t.name, t.GetComponentInChildren<TMPro.TMP_InputField>());
-                }
-            }
-            gameObject.transform.Find("Return").gameObject.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate { 
-                UnityEngine.Cursor.visible = false;
-                GemaSuperSample.Instance.ChangeRenderScaleAnimation(1);
-
-                gameObject.SetActive(false); });
-            gameObject.transform.Find("Generate").gameObject.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate {
-            string diff = ((TMP_InputField)settings["Density"]).text;
-                if (diff.Length > 0)
-                {
-                    RandomizerPlugin.customDiff = int.Parse(diff);
-                }
-                else RandomizerPlugin.customDiff = -1;
-                string input = ((TMP_InputField)settings["Seed"]).text;
-                if (input == "")
-                {
-                    RandomizerPlugin.createSeed(null);
-
-                }
-                else
-                {
-                    RandomizerPlugin.createSeed(new System.Random(input.GetHashCode()));
-                }
-
-            });
-            Randomizer.settings = settings;
-
-        }
 
         static byte menuSlot;
         static GameObject RandoUIPrefab = AssetBundle.LoadFromFile(BepInEx.Paths.PluginPath + "/tevi_randomizer/resource/randomizerui").LoadAsset<GameObject>("Randomizer Setting");
@@ -121,7 +67,7 @@ namespace TeviRandomizer
 
 
             randoSetting = MonoBehaviour.Instantiate(RandoUIPrefab, GameObject.Find("Titile Screen Manager").transform);
-            addAllOptions(randoSetting);
+            randoSetting.AddComponent<RandomizerUI>();
             randoSetting.SetActive(false);
 
 
@@ -184,6 +130,335 @@ namespace TeviRandomizer
 
 
         }
+    }
 
+    public class RandomizerUI : MonoBehaviour
+    {
+        private GameObject[][][] options;
+        private int tab = 0, side = 0, selected = 0;
+        private bool isEditing = false; 
+        private bool finishEditing = false;
+        private Rewired.Player player;
+        Transform []Gears;  
+
+        void Awake()
+        {
+            
+            player = ReInput.players.GetPlayer(0);
+            addAllOptions(this.gameObject);
+            Gears = new Transform[2];
+            Gears[0]=gameObject.transform.Find("Gear 1");
+            Gears[1]=gameObject.transform.Find("Gear 2");
+        }
+
+        private GameObject[] getOptions(int tab,int side)
+        {
+            GameObject settingsAt = gameObject.transform.GetChild(4).GetChild(tab).GetChild(side).gameObject;
+            GameObject[] option;
+            option = new GameObject[settingsAt.transform.childCount];
+            for (int i = 0; i < settingsAt.transform.childCount; i++)
+            {
+                GameObject t = settingsAt.transform.GetChild(i).gameObject;
+                option[i] = t;
+                if (t.name.Contains("Toggle"))
+                {
+                    UI.settings.Add(t.name, t.GetComponentInChildren<UnityEngine.UI.Toggle>());
+                }
+                else if (t.name.Contains("Slider"))
+                {
+                    UnityEngine.UI.Slider slider = t.GetComponentInChildren<UnityEngine.UI.Slider>();
+                    slider.onValueChanged.AddListener(delegate { t.transform.Find("Number").gameObject.GetComponent<TextMeshProUGUI>().text = slider.value.ToString(); });
+                    UI.settings.Add(t.name, slider);
+                }
+            }
+            return option; 
+        }
+
+        private void addAllOptions(GameObject gameObject)
+        {
+            GameObject settingsAt = gameObject.transform.GetChild(4).gameObject;
+            UI.finishedText = gameObject.transform.Find("Finished").gameObject;
+
+            GameObject s,r,g;
+            s = gameObject.transform.Find("Seed").gameObject;
+            UI.settings.Add("Seed", s.GetComponentInChildren<TMPro.TMP_InputField>());
+
+
+            s.GetComponentInChildren<TMP_InputField>().onSubmit.AddListener(delegate
+            {
+                finishEditing = true;
+                EventSystem.current.SetSelectedGameObject(null);
+            });
+
+
+            r = gameObject.transform.Find("Return").gameObject;
+
+
+            r.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate {
+                UnityEngine.Cursor.visible = false;
+                GemaSuperSample.Instance.ChangeRenderScaleAnimation(1);
+
+                gameObject.SetActive(false);
+            });
+
+            g = gameObject.transform.Find("Generate").gameObject;
+
+            g.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate {
+                RandomizerPlugin.customDiff = -1;
+                string input = ((TMP_InputField)UI.settings["Seed"]).text;
+                if (input == "")
+                {
+                    RandomizerPlugin.createSeed(null);
+
+                }
+                else
+                {
+                    RandomizerPlugin.createSeed(new System.Random(input.GetHashCode()));
+                }
+
+            });
+            Randomizer.settings = UI.settings;
+
+
+            GameObject[]optionsMenu = [s,r,g]; 
+            options = new GameObject[settingsAt.transform.childCount][][];
+            for (int i = 0; i < settingsAt.transform.childCount; i++)
+            {
+                options[i] = new GameObject[3][];
+                options[i][0] = getOptions(i, 0);
+                options[i][1] = getOptions(i, 1);
+                options[i][2] = optionsMenu;
+
+            }
+        }
+
+        private void nextYOption(float i = 0)
+        {
+            options[tab][side][selected].transform.GetChild(0).gameObject.SetActive(false);
+            if (i < 0)
+            {
+                if (side == 2)
+                {
+                    if (selected < 2)
+                    {
+                        side = 0;
+                    }
+                    else
+                    {
+                        side = 1;
+                    }
+                    selected = 0;
+                }
+                else
+                {
+                    if (options[tab][side].Length - 1 == selected)
+                    {
+                        selected = side + 1;
+                        side = 2;
+                    }
+                    else
+                    {
+                        selected++;
+                    }
+                }
+            }
+            else if (i > 0)
+            {
+                if (side == 2)
+                {
+                    if (selected < 2)
+                    {
+                        side = 0;
+                    }
+                    else
+                    {
+                        side = 1;
+                    }
+                    selected = options[tab][side].Length - 1;
+
+                }
+                else
+                {
+                    if (0 == selected)
+                    {
+                        selected = side + 1;
+                        side = 2;
+                    }
+                    else
+                    {
+                        selected--;
+                    }
+                }
+            }
+            options[tab][side][selected].transform.GetChild(0).gameObject.SetActive(true);
+        }
+        private void nextXOption(float i = 0)
+        {
+            options[tab][side][selected].transform.GetChild(0).gameObject.SetActive(false);
+            if (side == options[tab].Length - 1)
+            {
+              selected = (selected + options[tab][2].Length + (int)i) % options[tab][2].Length;
+            }
+            else
+            {
+                side = (side +options[tab].Length-1+(int)i) % (options[tab].Length - 1);
+                if(selected >= options[tab][side].Length)
+                {
+                    selected = options[tab][side].Length - 1;
+                }
+            }
+            options[tab][side][selected].transform.GetChild(0).gameObject.SetActive(true);
+
+        }
+
+        private void setVisibleTab(int tab,bool state)
+        {
+            gameObject.transform.GetChild(4).GetChild(tab).gameObject.SetActive(state);
+        }
+
+        void OnEnable()
+        {
+            GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce("{CONFIRM}Select  {BACK}Return");
+
+            for (int t = 0; t < options.Length; t++)
+            {
+                for (int s = 0; s < options[t].Length; s++)
+                {
+                    for (int se = 0; options[t][s].Length < se; se++)
+                    {
+                        options[tab][side][selected].transform.GetChild(0).gameObject.SetActive(false);
+                    }
+                }
+                setVisibleTab(t, false);
+
+            }
+            setVisibleTab(tab, true);
+            options[tab][side][selected].transform.GetChild(0).gameObject.SetActive(true);
+        }
+
+        private void menuMovement() {
+            float yAxisRepeat = InputAxisManager.Instance.GetYAxisRepeat();
+            float xAxisRepeat = InputAxisManager.Instance.GetXAxisRepeat();
+            if (yAxisRepeat != 0)
+            {
+                nextYOption(yAxisRepeat);
+            }
+
+            if (xAxisRepeat != 0)
+            {
+                nextXOption(xAxisRepeat);
+            }
+        }
+
+        void Update()
+        {
+            for (int i = 0;i< Gears.Length;i++)
+            {
+                if (Gears[i] != null)
+                {
+                    Gears[i].Rotate(0, 0, 0.01f*((float)Math.Pow(-1,i%2)));
+                }
+            }
+            if(isEditing)
+            {
+                if (options[tab][side][selected].name.Contains("Slider"))
+                {
+                    UnityEngine.UI.Slider slide = options[tab][side][selected].GetComponentInChildren<UnityEngine.UI.Slider>();
+                    if (slide != null)
+                    {
+                        slide.value += InputAxisManager.Instance.GetXAxisRepeat();
+                    }
+                    if (InputButtonManager.Instance.GetButton(13))
+                    {
+                        isEditing = false;
+                        options[tab][side][selected].transform.GetChild(2).GetChild(1).GetChild(1).gameObject.SetActive(true);
+                        options[tab][side][selected].transform.GetChild(2).GetChild(1).GetChild(2).gameObject.SetActive(false);
+                        GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce("{CONFIRM}Select  {BACK}Return");
+
+                    }
+                }
+                if(finishEditing)
+                {
+                    isEditing = false;
+                    GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce("{CONFIRM}Select  {BACK}Return");
+                    finishEditing = false;
+                }
+               else if(InputButtonManager.Instance.isUsingJoypad() && InputButtonManager.Instance.GetButton(14))
+                {
+                    isEditing = false;
+                    finishEditing = false;
+                    EventSystem.current.SetSelectedGameObject(null);
+                    GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce("{CONFIRM}Select  {BACK}Return");
+                }
+                return;
+            }
+
+            menuMovement();
+            if(1 == 0)
+            {
+                if (options[tab][side][selected].name.Contains("Slider"))
+                {
+                    UnityEngine.UI.Slider slide = options[tab][side][selected].GetComponentInChildren<UnityEngine.UI.Slider>();
+                    if (slide != null)
+                    {
+                        //slide.value += (float)Math.Round(xAxisRepeat);
+                    }
+                }
+
+
+            }
+            Controller con = player.controllers.GetLastActiveController();
+            if (con != null)
+            {
+                if(con.type == ControllerType.Mouse)
+                {
+                    return;
+                }
+            }
+            if (InputButtonManager.Instance.GetButtonDown(13))
+            {
+                if (options[tab][side][selected].name.Contains("Toggle"))
+                {
+                    UnityEngine.UI.Toggle toggle = options[tab][side][selected].GetComponentInChildren<UnityEngine.UI.Toggle>();
+                    if (toggle != null)
+                    {
+                        toggle.isOn ^= true;
+                    }
+                    return;
+                }
+                if (options[tab][side][selected].name.Contains("Seed"))
+                {
+                    TMPro.TMP_InputField input = options[tab][side][selected].GetComponentInChildren<TMP_InputField>();
+                    if (input != null)
+                    {
+                        input.ActivateInputField();
+                        isEditing = true;
+                        GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce("{CONFIRM}Confirm");
+                    }
+                    return;
+                }
+                if (options[tab][side][selected].name.Contains("Slider"))
+                {
+                    isEditing = true;
+                    options[tab][side][selected].transform.GetChild(2).GetChild(1).GetChild(1).gameObject.SetActive(false);
+                    options[tab][side][selected].transform.GetChild(2).GetChild(1).GetChild(2).gameObject.SetActive(true);
+                    GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce("{LEFT}{RIGHT}Change Value  {CONFIRM}Confirm");
+                    return;
+                }
+                UnityEngine.UI.Button button = options[tab][side][selected].GetComponentInChildren<UnityEngine.UI.Button>();
+                if(button != null)
+                {
+                    button.onClick.Invoke();
+                }
+                
+
+            }
+            if (InputButtonManager.Instance.GetButtonDown(14))
+            {
+                UnityEngine.Cursor.visible = false;
+                GemaSuperSample.Instance.ChangeRenderScaleAnimation(1);
+                this.gameObject.SetActive(false);
+            }
+        }
     }
 }

@@ -108,7 +108,8 @@ Snowveil Above HQ:DreamKeeper Outside Right:ITEM_WALLJUMP
 Snowveil Above HQ:DreamKeeper Outside Right:ITEM_JETPACK
 Golden Hands HQ:Golden Hands HQ end:ITEM_LINEBOMB && ChargeShot
 Golden Hands HQ end:Snow City:
-LavaWorld:Swamp:
+LavaWorld:Swamp Entrance:
+LavaWorld:Swamp:ChargeShot && ITME_LINEBOMB
 LavaWorld:LavaWorld Part 2:ITEM_JETPACK
 LavaWorld:LavaWorld Part 2:ITEM_SLIDE && ITEM_AirDash 
 LavaWorld:LavaWorld Part 2:ITEM_SLIDE &&  ITEM_DOUBLEJUMP
@@ -117,6 +118,7 @@ LavaWorld Part 2:Sinners Entrance:ITEM_Rotater && ITEM_AirSlide
 Swamp Entrance:Tartarus:
 Swamp Entrance:Swamp:ITEM_KNIFE
 Swamp Entrance:Swamp:ITEM_ORB
+Swamp Entrance:Swamp:ITEM_AirDash
 Swamp Entrance:Swamp:ITEM_LINEBOMB && ITEM_AREABOMB
 Swamp:Tartarus:
 DreamKeeper Outside Right:DreamKeeper Outside Left:ChargeShot
