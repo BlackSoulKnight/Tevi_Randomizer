@@ -92,7 +92,7 @@ public enum CustomFlags : short
 }
 
 
-[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.9.9.1")]
+[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.9.9.3")]
 [BepInProcess("TEVI.exe")]
 public class RandomizerPlugin : BaseUnityPlugin
 {
@@ -3186,7 +3186,7 @@ class BonusFeaturePatch()
     static int bonusDropKickDmg;
     static bulletScript currentDropKick;
     static bool DropKickDmgUpdated = false;
-    static (CharacterBase, BulletType) lastHit;
+    static CharacterBase lastHit;
     [HarmonyPatch(typeof(SaveManager),"TryRenewLevel")]
     [HarmonyPostfix]
     static void resetBonusDmg()
@@ -3197,18 +3197,21 @@ class BonusFeaturePatch()
 
     [HarmonyPatch(typeof(CharacterBase),"BulletHurtPlayer")]
     [HarmonyPostfix]
-    static void test(ref CharacterBase owner,float damage,BulletType type,ref CharacterBase __instance)
+    static void test(ref CharacterBase owner,float damage,BulletType type,ref CharacterBase __instance, ref bool __result)
     {
-        if(type == BulletType.QUICK_DROP)
+        if (__result)
         {
-            bonusDropKickDmg++;
-        }
-        else if(owner.isPlayer() || __instance.isPlayer())
-        {
+            if (type == BulletType.QUICK_DROP)
+            {
+                bonusDropKickDmg++;
 
-            bonusDropKickDmg = 0;
+            }
+            else if (owner.isPlayer() || __instance.isPlayer())
+            {
+                Debug.Log("Combo was broken by " + type);
+                bonusDropKickDmg = 0;
+            }
         }
-
     }
 
     [HarmonyPatch(typeof(BulletManager), "ShootBullet")]

@@ -1022,7 +1022,7 @@
                 },
                 {
                     "Exit": "Swamp",
-                    "Method": "ChargeShot && ITME_LINEBOMB"
+                    "Method": "ChargeShot && ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "LavaWorld Part 2",
@@ -1413,7 +1413,7 @@
                 },
                 {
                     "Exit": "Valhalla Breath Lower Left Part",
-                    "Method": "ITEM_SLIDE"
+                    "Method": "ITEM_SLIDE && ITEM_AirSlide"
                 },
                 {
                     "Exit": "Valhalla Breath Lower Left Part",

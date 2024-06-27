@@ -99,7 +99,7 @@ namespace TeviRandomizer
                                     break;
                             }
                         }
-                        if (item.Contains("Upgrade") && (craftingManaShardSwitch || (itemList.Contains("ITEM_LINEBOMB") && itemList.Contains("ITEM_AREABOMB") && itemList.Contains("ITEM_JETPACK") && itemList.Contains("ITEM_DOUBLEJUMP") && itemList.Contains("ITEM_AirDash") && itemList.Contains("ITEM_WALLJUMP") && itemList.Contains("ITEM_BombLengthExtend") && itemList.Contains("ITEM_WATERMOVEMENT") && itemList.Contains("ITEM_SLIDE")))) continue;
+                        if (item.Contains("Upgrade") && ((craftingManaShardSwitch&&itemList.Contains("ITEM_LINEBOMB")) || (itemList.Contains("ITEM_LINEBOMB") && itemList.Contains("ITEM_AREABOMB") && itemList.Contains("ITEM_JETPACK") && itemList.Contains("ITEM_DOUBLEJUMP") && itemList.Contains("ITEM_AirDash") && itemList.Contains("ITEM_WALLJUMP") && itemList.Contains("ITEM_BombLengthExtend") && itemList.Contains("ITEM_WATERMOVEMENT") && itemList.Contains("ITEM_SLIDE")))) continue;
                         if (item.Contains("Core") && itemList.Contains("ITEM_LINEBOMB") && itemList.Contains("ITEM_AREABOMB") && itemList.Contains("ITEM_JETPACK") && itemList.Contains("ITEM_DOUBLEJUMP") && itemList.Contains("ITEM_AirDash") && itemList.Contains("ITEM_WALLJUMP") && itemList.Contains("ITEM_BombLengthExtend") && itemList.Contains("ITEM_WATERMOVEMENT") && itemList.Contains("ITEM_SLIDE")) continue;
                         if (item.Contains("SpinnerBash") && itemList.Contains("ITEM_KNIFE")) continue;
                         if (item.Contains("Fire") || item.Contains("Light")) continue;

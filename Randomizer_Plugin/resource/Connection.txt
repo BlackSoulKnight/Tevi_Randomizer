@@ -109,7 +109,7 @@ Snowveil Above HQ:DreamKeeper Outside Right:ITEM_JETPACK
 Golden Hands HQ:Golden Hands HQ end:ITEM_LINEBOMB && ChargeShot
 Golden Hands HQ end:Snow City:
 LavaWorld:Swamp Entrance:
-LavaWorld:Swamp:ChargeShot && ITME_LINEBOMB
+LavaWorld:Swamp:ChargeShot && ITEM_LINEBOMB
 LavaWorld:LavaWorld Part 2:ITEM_JETPACK
 LavaWorld:LavaWorld Part 2:ITEM_SLIDE && ITEM_AirDash 
 LavaWorld:LavaWorld Part 2:ITEM_SLIDE &&  ITEM_DOUBLEJUMP
@@ -149,7 +149,7 @@ Valhalla Breath Lower Left Part:Valhalla Breath Left Part:ITEM_JETPACK
 Vena:Start Area:
 Heavens Valley:Valhalla Breath Lower Left Part:ITEM_JETPACK
 Heavens Valley:Valhalla Breath Lower Left Part:ITEM_AirDash
-Heavens Valley:Valhalla Breath Lower Left Part:ITEM_SLIDE
+Heavens Valley:Valhalla Breath Lower Left Part:ITEM_SLIDE && ITEM_AirSlide
 Heavens Valley:Valhalla Breath Lower Left Part:ITEM_DOUBLEJUMP
 Heavens Valley:Valhalla Breath Lower Left Part:ChargeShot
 Valhalla Breath Left Part::
