@@ -34,6 +34,7 @@ The Randomizer data is saved within the Savefile.
 
 ## Changes to the base Game
 + Morose is accessable without Cross Bombs
++ Quickdrop damage is increased with each consecutive Quickdrop without receiving Damage or dealing Damage with anything else
 + Rabi Ribi Minigame is in Logic and requires atleast 100 Points and full Clear
 + Rabi Ribi Easteregg contains a Item location
 + It is possible to play the game with Sable and Celia locked behind extra Items  
