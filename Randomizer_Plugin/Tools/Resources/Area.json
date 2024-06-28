@@ -502,6 +502,10 @@
                     "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
                 },
                 {
+                    "Exit": "Vena",
+                    "Method": ""
+                },
+                {
                     "Exit": "Gleamwood Bottom",
                     "Method": ""
                 }
@@ -622,7 +626,7 @@
                     "Amount": 3000
                 },
                 {
-                    "Method": "ITEM_SLIDE && (ITEM_AREABOMB || extended ITEM_LINEBOMB) && (ITEM_DOUBLEJUMP||ITEM_JETPACK||(ITEM_HIJUMP && ITEM_WALLJUMP))",
+                    "Method": "ITEM_SLIDE && (ITEM_AREABOMB ||  ITEM_LINEBOMB) && (ITEM_DOUBLEJUMP||ITEM_JETPACK||(ITEM_HIJUMP && ITEM_WALLJUMP))",
                     "Amount": 1500
                 }
             ],
@@ -769,7 +773,7 @@
                     "Amount": 1000
                 },
                 {
-                    "Method": "ITEM_SLIDE && (Walljump || ITEM_HIJUMP || ITEM_JETPACK || ITEM_DOUBLEJUMP)",
+                    "Method": "ITEM_SLIDE && (ITEM_WALLJUMP || ITEM_HIJUMP || ITEM_JETPACK || ITEM_DOUBLEJUMP)",
                     "Amount": 1500
                 }
             ],
@@ -863,9 +867,10 @@
                     "Amount": 6000
                 },
                 {
-                    "Method": "ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK || Walljump",
+                    "Method": "ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_WALLJUMP",
                     "Amount": 5000
                 }
+                
             ],
             "Connections": [
                 {
@@ -891,6 +896,10 @@
             "Connections": [
                 {
                     "Exit": "Swamp",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Vena",
                     "Method": ""
                 },
                 {
@@ -1273,7 +1282,7 @@
             "Connections": [
                 {
                     "Exit": "Valley Middle Part",
-                    "Method": "ITEM_Rotater"
+                    "Method": "ITEM_SLIDE &&  ITEM_Rotater"
                 }
             ]
         },
@@ -1292,7 +1301,11 @@
             "Connections": [
                 {
                     "Exit": "Valley Lower Part",
-                    "Method": "ITEM_Rotater"
+                    "Method": "ITEM_Rotater && ITEM_SLIDE"
+                },
+                {
+                    "Exit": "Valley Lower Part",
+                    "Method": "ITEM_Rotater && ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Valley Upper Part",
@@ -1315,7 +1328,7 @@
             "Connections": [
                 {
                     "Exit": "Valley Middle Part",
-                    "Method": ""
+                    "Method": "ITEM_SLIDE"
                 }
             ]
         }
@@ -1389,7 +1402,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Start Area",
+                    "Exit": "",
                     "Method": ""
                 }
             ]
@@ -1731,7 +1744,7 @@
                     "Amount": 6000
                 },
                 {
-                    "Method": "ITEM_JETPACK2 || ITEM_DOUBLEJUMP || (ITEM_JETPACK && Walljump && ITEM_AirDash)",
+                    "Method": "ITEM_JETPACK2 || ITEM_DOUBLEJUMP || (ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash)",
                     "Amount": 1000
                 },
                 {

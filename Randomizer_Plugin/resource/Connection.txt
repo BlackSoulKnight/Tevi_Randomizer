@@ -58,6 +58,7 @@ CopperWood:Travoll Industrie:
 CopperWood:Relicts:
 CopperWood:Gleamwood:ITEM_LINEBOMB
 Ana Thema:Gallary of Mirrors:ITEM_SLIDE && ITEM_LINEBOMB
+Ana Thema:Vena:
 Ana Thema:Gleamwood Bottom:
 Gleamwood Bottom:Gleamwood:ITEM_LINEBOMB
 Gleamwood Bottom:Gleamwood:ITEM_DOUBLEJUMP
@@ -98,6 +99,7 @@ Swampike:Lab Extra:
 Forgotten City Upper Exit:Verdazure Ocean:ChargeShot
 Forgotten City:Forgotten City Upper Exit:ITEM_LINEBOMB
 Tartarus:Swamp:
+Tartarus:Vena:
 Tartarus:Catacombs Entrance:
 Snow City:Snowveil Above HQ:ITEM_LINEBOMB && ITEM_SLIDE
 Snow City:Golden Hands HQ:ITEM_SLIDE && ChargeShot
@@ -134,10 +136,11 @@ Deep Dream:Deep Dream 2:ITEM_WALLJUMP
 Deep Dream:Deep Dream 2:ITEM_JETPACK
 Deep Dream:Deep Dream 2:ITEM_DOUBLEJUMP
 Deep Dream 2::
-Valley Lower Part:Valley Middle Part:ITEM_Rotater
-Valley Middle Part:Valley Lower Part:ITEM_Rotater
+Valley Lower Part:Valley Middle Part:ITEM_SLIDE &&  ITEM_Rotater
+Valley Middle Part:Valley Lower Part:ITEM_Rotater && ITEM_SLIDE
+Valley Middle Part:Valley Lower Part:ITEM_Rotater && ITEM_LINEBOMB
 Valley Middle Part:Valley Upper Part:ITEM_LINEBOMB
-Valley Upper Part:Valley Middle Part:
+Valley Upper Part:Valley Middle Part:ITEM_SLIDE
 Valhalla City:Cloister:ITEM_SLIDE && ITEM_LINEBOMB
 Valhalla City:EverGarden:ITEM_LINEBOMB
 Valhalla City:Vena:
@@ -146,7 +149,7 @@ Valhalla Breath Lower Left Part:Valhalla City:
 Valhalla Breath Lower Left Part:Valhalla Breath Left Part:ITEM_AirDash
 Valhalla Breath Lower Left Part:Valhalla Breath Left Part:ITEM_DOUBLEJUMP
 Valhalla Breath Lower Left Part:Valhalla Breath Left Part:ITEM_JETPACK
-Vena:Start Area:
+Vena::
 Heavens Valley:Valhalla Breath Lower Left Part:ITEM_JETPACK
 Heavens Valley:Valhalla Breath Lower Left Part:ITEM_AirDash
 Heavens Valley:Valhalla Breath Lower Left Part:ITEM_SLIDE && ITEM_AirSlide
