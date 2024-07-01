@@ -67,7 +67,7 @@ namespace TeviRandomizer
                             bossCount++;
                             continue;
                         }
-                        if (item.Contains("ChargeShot") && ((itemList.Contains("ITEM_ORB") && craftingManaShardSwitch) || itemList.Contains("ITEM_ORB2"))) continue;
+                        if (item.Contains("ChargeShot") && itemList.Contains("ITEM_ORB2")) continue;
                         if (item.Contains("RainbowCheck") && memineCount >= 3) continue;
                         if (item.Contains("Chapter"))
                         {

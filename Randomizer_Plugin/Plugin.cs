@@ -944,12 +944,24 @@ class EventPatch
             SaveManager.Instance.AddBreakTile(1, 303, 189);
             SaveManager.Instance.AddBreakTile(1, 304, 189);
             ShopPatch.alreadyClaimed();
-
+            VenaItemClaimedCheck();
             em.SetStage(30);
             
         }
     }
     
+    static void VenaItemClaimedCheck()
+    {
+
+
+
+        if (RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.STACKABLE_COG, 23)) {
+            SaveManager.Instance.SetEventFlag(Mode.END_VENA, 1,true);
+            SaveManager.Instance.AddResource(ItemList.Resource.COIN, 1000);
+            SaveManager.Instance.AddBossBeaten();
+        }
+    }
+
     [HarmonyPatch(typeof(AfterMemineChallenge), "EVENT")]
     [HarmonyPrefix]
     static void MemineAllChallangesChecl(ref CharacterBase ___m)
