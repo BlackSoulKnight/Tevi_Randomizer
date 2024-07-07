@@ -394,19 +394,6 @@ namespace TeviRandomizer
             }
 
             menuMovement();
-            if(1 == 0)
-            {
-                if (options[tab][side][selected].name.Contains("Slider"))
-                {
-                    UnityEngine.UI.Slider slide = options[tab][side][selected].GetComponentInChildren<UnityEngine.UI.Slider>();
-                    if (slide != null)
-                    {
-                        //slide.value += (float)Math.Round(xAxisRepeat);
-                    }
-                }
-
-
-            }
             Controller con = player.controllers.GetLastActiveController();
             if (con != null)
             {
@@ -435,6 +422,7 @@ namespace TeviRandomizer
                         isEditing = true;
                         GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce("{CONFIRM}Confirm");
                     }
+                    //(Steamworks.SteamUtils.ShowGamepadTextInput(Steamworks.GamepadTextInputMode.Normal, Steamworks.GamepadTextInputLineMode.SingleLine, "Enter Seed", 16, ""))                    
                     return;
                 }
                 if (options[tab][side][selected].name.Contains("Slider"))

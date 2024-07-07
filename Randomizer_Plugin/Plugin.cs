@@ -131,6 +131,8 @@ public class RandomizerPlugin : BaseUnityPlugin
         instance.PatchAll(typeof(RabiSmashPatch));
         instance.PatchAll(typeof(BonusFeaturePatch));
 
+        instance.PatchAll(typeof(HintSystem));
+
 
         // test Localizazion
 
@@ -3211,6 +3213,7 @@ class BonusFeaturePatch()
     [HarmonyPostfix]
     static void test(ref CharacterBase owner,float damage,BulletType type,ref CharacterBase __instance, ref bool __result)
     {
+        //Debug.Log($"{type} {damage} {owner}");
         if (__result)
         {
             if (type == BulletType.QUICK_DROP)
@@ -3239,11 +3242,11 @@ class BonusFeaturePatch()
 
     }
     static float testValue = 0.05f;
-    [HarmonyPatch(typeof(CharacterBase),"_Update")]
+    [HarmonyPatch(typeof(playerController),"_Update")]
     [HarmonyPostfix]
-    static void updateDropkickDamage(ref PlayerLogicState ___logicStatus,ref ObjectPhy ___phy_perfer, ref CharacterPhy ___cphy_perfer)
+    static void updateDropkickDamage(ref PlayerLogicState ___logicStatus,ref ObjectPhy ___phy_perfer, ref CharacterPhy ___cphy_perfer,ref CharacterBase __instance)
     {
-        if(___logicStatus == PlayerLogicState.QUICKDROP && !DropKickDmgUpdated && currentDropKick != null)
+        if(___logicStatus == PlayerLogicState.QUICKDROP && !DropKickDmgUpdated && currentDropKick != null && __instance.isPlayer())
         {
             DropKickDmgUpdated = true;
             float num3 = 0.343525f; 
