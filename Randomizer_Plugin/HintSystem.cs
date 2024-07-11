@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using HarmonyLib;
-using QFSW.QC.Containers;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -10,33 +8,30 @@ namespace TeviRandomizer
 {
     enum MajorItemFlag :int
     {
-        ITEM_LINEBOMB =         0b1,
-        ITEM_ORB =              0b10,
-        ITEM_AirDash =          0b100,
-        ITEM_WALLJUMP =         0b1000,
-        ITEM_JETPACK =          0b10000,
-        ITEM_Rotater =          0b100000,
-        ITEM_DOUBLEJUMP =       0b1000000,
-        ITEM_SLIDE =            0b10000000,
-        ITEM_BOMBFUEL =         0b100000000,
-        ITEM_WATERMOVEMENT =    0b1000000000,
-        ITEM_KNIFE =            0b10000000000,
+        ITEM_LINEBOMB =         0b000000000001, //3
+        ITEM_ORB =              0b000000000010, //3
+        ITEM_AirDash =          0b000000000100, //1
+        ITEM_WALLJUMP =         0b000000001000, //3
+        ITEM_JETPACK =          0b000000010000, //3
+        ITEM_Rotater =          0b000000100000, //3
+        ITEM_DOUBLEJUMP =       0b000001000000, //1
+        ITEM_SLIDE =            0b000010000000, //1
+        ITEM_BOMBFUEL =         0b000100000000, //1
+        ITEM_WATERMOVEMENT =    0b001000000000, //1
+        ITEM_KNIFE =            0b010000000000, //3
+        ITEM_AirSlide =         0b100000000000, //1
     }
 
     class HintSystem
     {
-        // Find Text
-        // Replace Text Dynamicaly
-        // Remove Found Item from Text
-        // for ease change all zema dialogue 
 
 
         // Custom chat need to replace certain strings parts
-
+        private const int numberOfHints = 24;
 
         static List<ChatSystem.ChatRow> extraList = new List<ChatSystem.ChatRow>();
 
-        static ChatSystem.ChatRow createChatRow(string section,string text,string character = "Info")
+        static ChatSystem.ChatRow createChatRow(string section,string text,string character = "Info",string flag = "hidden",string position = "",string emotion ="",string pose="" )
         {
             ChatSystem.ChatRow chatRow = new ChatSystem.ChatRow();
             chatRow.character = character;
@@ -50,41 +45,55 @@ namespace TeviRandomizer
             chatRow.dialog_russian = chatRow.dialog_english;
             chatRow.dialog_spanish = chatRow.dialog_english;
             chatRow.dialog_ukrainian = chatRow.dialog_english;
-            chatRow.emotion = "";
-            chatRow.flag = "hidden";
-            chatRow.pose = "";
-            chatRow.position = "";
+            chatRow.emotion = emotion;
+            chatRow.flag = flag;
+            chatRow.pose = pose;
+            chatRow.position = position;
             return chatRow;
         }
 
         static void getHints(string section)
         {
+            if (RandomizerPlugin.__itemData.Count == 0) return;
             extraList.Clear();
-            //search from top to bottom for progression items but not more than once
-            int flags = 0;
-            List<(string,string)> hints = new List<(string,string)>();
+            //search from top to bottom for progression items
+            int collected = 0;
+            List<(string,string,bool)> hints = new List<(string,string,bool)>();
             foreach(KeyValuePair<ItemData,ItemData> item in RandomizerPlugin.__itemData)
             {
-                if(Enum.IsDefined(typeof(MajorItemFlag), item.Value.getItemTyp().ToString()))
+                bool f = false;
+                if (RandomizerPlugin.checkRandomizedItemGot(item.Key.getItemTyp(), item.Key.getSlotId()))
                 {
-                    int val = (int)Enum.Parse(typeof(MajorItemFlag),item.Value.getItemTyp().ToString());
-                    if((val&flags) == 0)
-                    {
-                        string loc = RandomizerPlugin.randomizer.findLocationName(item.Key.itemID, item.Key.slotID);
-                        if (loc == "Start Area") continue;
-                        hints.Add((loc ,item.Value.getItemTyp().ToString()));
-                        flags += val;
-                        //works but it need to skip start items
-                    }
-                    
+                    collected++;
+                    f = true;
                 }
-            }
-            foreach ((string,string)item in hints)
-            {
-                Debug.Log($"{item.Item1} {item.Item2}");
-                extraList.Add(createChatRow(section, $"You may find a valuable item in {item.Item1}", "Zema"));
+                if (Enum.IsDefined(typeof(MajorItemFlag), item.Value.getItemTyp().ToString()))
+                {
+
+                    string loc = RandomizerPlugin.randomizer.findLocationName(item.Key.itemID, item.Key.slotID);
+                    hints.Add((loc ,item.Value.getItemTyp().ToString(),f));
+                }
 
             }
+            int a = (int)(RandomizerPlugin.__itemData.Count*0.75f * (float)(1f / numberOfHints));
+            int nextHint = a  - (collected % a);
+            bool flag = false;
+            for (int i = 0; i < Math.Floor((double)collected / a); i++)
+            {
+                if (i >= hints.Count) {
+                    if(extraList.Count == 0) extraList.Add(createChatRow(section, $"No hints left.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
+                    return;
+                };
+                if (hints[i].Item3) continue;
+                flag = true;
+                string localizeItem =Localize.GetLocalizeTextWithKeyword("ITEMNAME." + hints[i].Item2, false);
+                extraList.Add(createChatRow(section, $"You may find {localizeItem} in {hints[i].Item1}.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
+            }
+            if(!flag)
+            {
+                extraList.Add(createChatRow(section,$"The next hint is in {nextHint} Items available.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
+            }
+
         }
 
         [HarmonyPatch(typeof(ChatSystem),"StartChat")]
@@ -93,6 +102,7 @@ namespace TeviRandomizer
         {
             if (section == "chapter6_zemahouse_zema1" || section == "chapter2_zemahouse_zema1" || section == "chapter1_zemahouse_zema1" || section == "chapter1_zemahouse_zema2")
             {
+                if (RandomizerPlugin.__itemData.Count == 0) return;
                 ____isCurrentSectionHasVoice = false;
                 ___PlayFirstLine = 0f;
                 ___chatdb.Clear();
