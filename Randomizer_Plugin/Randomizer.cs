@@ -275,7 +275,7 @@ namespace TeviRandomizer
                     Debug.LogWarning($"Could not find {para[1]} to place {para[0]}");
                 }
             }
-            ExtraOptionLocations();
+            //ExtraOptionLocations();
 
 
         }
@@ -331,7 +331,11 @@ namespace TeviRandomizer
                             case "Lv3Compass":
                                 if (((UnityEngine.UI.Toggle)option.Value).isOn)
                                 {
-                                    locationString["Lv3Compass"].setNewItem(4200, 1);
+                                    RandomizerPlugin.customFlags[(int)CustomFlags.CompassStart] = true;
+                                }
+                                else
+                                {
+                                    RandomizerPlugin.customFlags[(int)CustomFlags.CompassStart] = false;
                                 }
                                 break;
                             case "NormalItemCraft":
@@ -368,10 +372,12 @@ namespace TeviRandomizer
                         switch (info[1])
                         {
                             case "RangePot":
-                                locationString["ExtraRangePotion"].setNewItem(4006, (int)((UnityEngine.UI.Slider)option.Value).value);
+                                RandomizerPlugin.extraPotions[0] = (int)((UnityEngine.UI.Slider)option.Value).value;
+                                //locationString["ExtraRangePotion"].setNewItem(4006, (int)((UnityEngine.UI.Slider)option.Value).value);
                                 break;
                             case "MeleePot":
-                                locationString["ExtraMeleePotion"].setNewItem(4005, (int)((UnityEngine.UI.Slider)option.Value).value);
+                                RandomizerPlugin.extraPotions[1] = (int)((UnityEngine.UI.Slider)option.Value).value;
+                                //locationString["ExtraMeleePotion"].setNewItem(4005, (int)((UnityEngine.UI.Slider)option.Value).value);
                                 break;
 
                             default: break;

@@ -349,9 +349,10 @@ namespace TeviRandomizer
                 nextXOption(xAxisRepeat);
             }
         }
-
+        private float dtime;
         void Update()
         {
+            dtime += Time.deltaTime;
             for (int i = 0;i< Gears.Length;i++)
             {
                 if (Gears[i] != null)
@@ -361,6 +362,10 @@ namespace TeviRandomizer
             }
             if(isEditing)
             {
+                if (dtime < 0.16f)
+                {
+                    return;
+                }
                 if (options[tab][side][selected].name.Contains("Slider"))
                 {
                     UnityEngine.UI.Slider slide = options[tab][side][selected].GetComponentInChildren<UnityEngine.UI.Slider>();
@@ -392,7 +397,7 @@ namespace TeviRandomizer
                 }
                 return;
             }
-
+            dtime = 0;
             menuMovement();
             Controller con = player.controllers.GetLastActiveController();
             if (con != null)

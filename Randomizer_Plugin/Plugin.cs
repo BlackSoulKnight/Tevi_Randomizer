@@ -89,6 +89,8 @@ public enum CustomFlags : short
 {
     OrbStart = 0,
     CebleStart = 1,
+    CompassStart = 2,
+
 }
 
 
@@ -102,7 +104,7 @@ public class RandomizerPlugin : BaseUnityPlugin
     static public int  customDiff = -1; //fake diff
 
     static public bool[] customFlags = new bool[Enum.GetNames(typeof(CustomFlags)).Length];
-
+    static public int[] extraPotions = [0,0]; // Hardcoded omo
     static public string pluginPath = BepInEx.Paths.PluginPath + "/tevi_randomizer/";
 
     public enum EventID
@@ -333,24 +335,32 @@ public class RandomizerPlugin : BaseUnityPlugin
     {
         __itemData.Clear();
     }
-    static public bool checkItemGot(ItemList.Type item,byte slot)
+    static public bool checkItemGot(ItemList.Type item,byte slot) //not working?
     {
-        Upgradable itemref;
-        if (!item.ToString().Contains("STACKABLE"))
+        try
         {
-
-            if (Enum.TryParse(item.ToString(), out itemref))
+            Upgradable itemref;
+            if (!item.ToString().Contains("STACKABLE"))
             {
-                return SaveManager.Instance.GetStackableItem((ItemList.Type)itemref, slot);
+
+                if (Enum.TryParse(item.ToString(), out itemref))
+                {
+                    return SaveManager.Instance.GetStackableItem((ItemList.Type)itemref, slot);
+                }
+                else
+                {
+                    return SaveManager.Instance.GetItem(item) > 0;
+                }
             }
             else
             {
-                return SaveManager.Instance.GetItem(item) > 0;
+                return SaveManager.Instance.GetStackableItem(item, slot);
             }
         }
-        else
+        catch
         {
-            return SaveManager.Instance.GetStackableItem(item, slot);
+            Debug.LogError($"[Randomizer] Could not check Item:{item} Slot:{slot}. Check if this is a valid Item");
+            return false;
         }
 
     }    
@@ -360,23 +370,32 @@ public class RandomizerPlugin : BaseUnityPlugin
         ItemData t = getRandomizedItem(item,slot);
         item = t.getItemTyp();
         slot = t.getSlotId();
-        Upgradable itemref;
-        if (!item.ToString().Contains("STACKABLE"))
+        try
         {
-
-            if (Enum.TryParse(item.ToString(), out itemref))
+            Upgradable itemref;
+            if (!item.ToString().Contains("STACKABLE"))
             {
+
+                if (Enum.TryParse(item.ToString(), out itemref))
+                {
                     return SaveManager.Instance.GetStackableItem((ItemList.Type)itemref, slot);
+                }
+                else
+                {
+                    return SaveManager.Instance.GetItem(item) > 0;
+                }
             }
             else
             {
-                return SaveManager.Instance.GetItem(item) > 0;
+                return SaveManager.Instance.GetStackableItem(item, slot);
             }
         }
-        else
+        catch
         {
-            return SaveManager.Instance.GetStackableItem(item,slot);
+            Debug.LogError($"[Randomizer] Could not check Item:{item} Slot:{slot}. Check if this is a valid Item");
+            return false;
         }
+
     }
 
     static public Sprite getSprite(int itemID,bool custom = false)
@@ -891,17 +910,18 @@ class EventPatch
 
         if (em.EventStage == 10)
         {
-            if (RandomizerPlugin.getRandomizedItem(4200, 0).slotID > 0)
+
+            if (RandomizerPlugin.customFlags[(int)CustomFlags.CompassStart])
             {
                 SaveManager.Instance.SetItem(ItemList.Type.ITEM_Explorer, 4);
                 SaveManager.Instance.SetItem(ItemList.Type.ITEM_Explorer, 5);
                 SaveManager.Instance.SetItem(ItemList.Type.ITEM_Explorer, 6);
             }
-            for (int i = RandomizerPlugin.getRandomizedItem(4006,0).slotID ;i > 0; i--)
+            for (int i = RandomizerPlugin.extraPotions[0] ;i > 0; i--)
             {
                 SaveManager.Instance.SetStackableItem(ItemList.Type.STACKABLE_RATK, (byte)(64-i),true);
             }
-            for (int i = RandomizerPlugin.getRandomizedItem(4005,0).slotID ;i > 0; i--)
+            for (int i = RandomizerPlugin.extraPotions[1] ;i > 0; i--)
             {
                 SaveManager.Instance.SetStackableItem(ItemList.Type.STACKABLE_MATK, (byte)(64-i),true);
             }
@@ -3100,6 +3120,7 @@ class SaveGamePatch()
 
         string result = "";
         customSaveFileNames(ref result, ref saveslot);
+        if (MainVar.instance.BagID == 0) MainVar.instance.BagID = 1;
         if (ES3.FileExists(result))
         {
             ES3File eS3File = new ES3File(result);
