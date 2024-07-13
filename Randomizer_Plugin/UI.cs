@@ -208,14 +208,13 @@ namespace TeviRandomizer
                 string input = ((TMP_InputField)UI.settings["Seed"]).text;
                 if (input == "")
                 {
-                    RandomizerPlugin.createSeed(null);
-
+                    RandomizerPlugin.seed = 0;
                 }
                 else
                 {
-                    RandomizerPlugin.createSeed(new System.Random(input.GetHashCode()));
+                    RandomizerPlugin.seed = input.GetHashCode();
                 }
-
+                RandomizerPlugin.createSeed();
             });
             Randomizer.settings = UI.settings;
 

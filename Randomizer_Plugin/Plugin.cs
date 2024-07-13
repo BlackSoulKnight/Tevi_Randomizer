@@ -106,6 +106,7 @@ public class RandomizerPlugin : BaseUnityPlugin
     static public bool[] customFlags = new bool[Enum.GetNames(typeof(CustomFlags)).Length];
     static public int[] extraPotions = [0,0]; // Hardcoded omo
     static public string pluginPath = BepInEx.Paths.PluginPath + "/tevi_randomizer/";
+    static public int seed;
 
     public enum EventID
     {
@@ -283,10 +284,16 @@ public class RandomizerPlugin : BaseUnityPlugin
         }
     }
 
-    static public void createSeed(System.Random seed)
+    static public void createSeed()
     {
-        randomizer.createSeed(seed);
+        System.Random rando;
+        if (seed == 0)
+        {
+            seed = new System.Random().Next(int.MaxValue);
+        }
+        rando = new System.Random(seed);
 
+        randomizer.createSeed(rando);
     }
 
 
@@ -1649,7 +1656,7 @@ class CraftingPatch
                 Upgradable upitem;
                 if(Enum.TryParse(data.getItemTyp().ToString(),out upitem))
                 {
-                    if(SaveManager.Instance.GetStackableItem((ItemList.Type)upitem, data.getSlotId()))
+                    if (SaveManager.Instance.GetStackableItem((ItemList.Type)upitem, data.getSlotId()))
                         return false;
                 }
                 else if (SaveManager.Instance.GetItem(data.getItemTyp()) > 0)
@@ -1835,14 +1842,17 @@ class CraftingPatch
             {
                 num++;
             }
+            else return num;
             if (RandomizerPlugin.checkRandomizedItemGot(_item, 2))
             {
                 num++;
             }
+            else return num;
             if (RandomizerPlugin.checkRandomizedItemGot(_item, 3))
                 {
                 num++;
             }
+            else return num;
         }
         return num;
     }
@@ -3144,6 +3154,10 @@ class SaveGamePatch()
             {
                 RandomizerPlugin.customDiff = eS3File.Load<int>("CustomDifficulty");
             }
+            if (eS3File.KeyExists("Seed"))
+            {
+                RandomizerPlugin.seed = eS3File.Load<int>("Seed");
+            }
             
         }
     }
@@ -3193,6 +3207,7 @@ class SaveGamePatch()
         eS3File.Save("RandoValItem", valItem);
         eS3File.Save("RandoValSlot", valSlot);
         eS3File.Save("CustomDifficulty", RandomizerPlugin.customDiff);
+        eS3File.Save("Seed", RandomizerPlugin.seed);
         eS3File.Sync();
         Randomizer.saveSpoilerLog($"rando.SpoilerSave{saveslot}.txt",s);
     }

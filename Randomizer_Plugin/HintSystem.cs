@@ -77,22 +77,31 @@ namespace TeviRandomizer
             }
             int a = (int)(RandomizerPlugin.__itemData.Count*0.75f * (float)(1f / numberOfHints));
             int nextHint = a  - (collected % a);
-            bool flag = false;
+            bool[] order = new bool[hints.Count];
+            System.Random rand = new System.Random(RandomizerPlugin.seed);
             for (int i = 0; i < Math.Floor((double)collected / a); i++)
             {
+
                 if (i >= hints.Count) {
-                    if(extraList.Count == 0) extraList.Add(createChatRow(section, $"No hints left.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
+                    if(extraList.Count == 0) extraList.Add(createChatRow(section, $"No more Hints left.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
                     return;
                 };
-                if (hints[i].Item3) continue;
-                flag = true;
-                string localizeItem =Localize.GetLocalizeTextWithKeyword("ITEMNAME." + hints[i].Item2, false);
-                extraList.Add(createChatRow(section, $"You may find {localizeItem} in {hints[i].Item1}.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
+
+                int curr = rand.Next(hints.Count);
+                while (order[curr])
+                {
+                    curr = rand.Next(hints.Count);
+                }
+                order[curr] = true;
+
+                if (hints[curr].Item3) continue;
+                string localizeItem =Localize.GetLocalizeTextWithKeyword("ITEMNAME." + hints[curr].Item2, false);
+                extraList.Add(createChatRow(section, $"You may find {localizeItem} in {hints[curr].Item1}.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
             }
-            if(!flag)
-            {
-                extraList.Add(createChatRow(section,$"The next hint is in {nextHint} Items available.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
-            }
+            extraList.Add(createChatRow(section,$"The next Hint is in {nextHint} Items available.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
+
+
+
 
         }
 
@@ -118,5 +127,19 @@ namespace TeviRandomizer
                 extraList.Clear();
             }
         }
+        [HarmonyPatch(typeof(CharacterVoiceManager), "ReleaseVoiceGroup")]
+        [HarmonyPostfix]
+        static void test1()
+        {
+            Debug.LogWarning("ITS ME");
+        }
+        [HarmonyPatch(typeof(GemaChatLogManager), "AddLog")]
+        [HarmonyPostfix]
+        static void test2()
+        {
+            Debug.LogWarning("NO,ITS ME");
+        }
+
     }
+
 }
