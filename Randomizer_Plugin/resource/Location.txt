@@ -458,12 +458,12 @@ STACKABLE_MP:Sinners Hell:29:ITEM_JETPACK,0;ITEM_DOUBLEJUMP,0
 STACKABLE_EP:Sinners Hell:29:ITEM_JETPACK3 && ITEM_AirDash,0;ITEM_JETPACK && ITEM_AirDash && ITEM_DOUBLEJUMP,0
 BADGE_BoostEnhance:Illusion Palace:1:,0
 ITEM_ZCrystal:Illusion Palace:1:,0
-BADGE_BombRecoverDebuff:Vena:1:Coins 1900,0
-BADGE_AutoFoodCraft:Vena:1:Coins 250,0
-BADGE_AutoFoodUse:Vena:1:Coins 250,0
-BADGE_BombDispelDebuff:Vena:1:Coins 3100,0
-ITEM_VenaCharm:Vena:1:Coins 1000,0
-ITEM_RapidShots:Vena:1:Coins 2700,0
+BADGE_BombRecoverDebuff:Vena Shop:1:Coins 1900,0
+BADGE_AutoFoodCraft:Vena Shop:1:Coins 250,0
+BADGE_AutoFoodUse:Vena Shop:1:Coins 250,0
+BADGE_BombDispelDebuff:Vena Shop:1:Coins 3100,0
+ITEM_Vena ShopCharm:Vena Shop:1:Coins 1000,0
+ITEM_RapidShots:Vena Shop:1:Coins 2700,0
 BADGE_DoubleAirDash:Start Area:1:AllMemine,0
 STACKABLE_SHARD:Ana Thema:0:ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0
 STACKABLE_SHARD:Blushwood Sliding:1:ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0

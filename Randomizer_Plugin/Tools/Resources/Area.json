@@ -502,7 +502,7 @@
                     "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "Vena",
+                    "Exit": "Vena Shop",
                     "Method": ""
                 },
                 {
@@ -899,7 +899,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Vena",
+                    "Exit": "Vena Shop",
                     "Method": ""
                 },
                 {
@@ -1352,7 +1352,7 @@
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "Vena",
+                    "Exit": "Vena Shop",
                     "Method": ""
                 }
             ]
@@ -1393,7 +1393,7 @@
             ]
         },
         {
-            "Name": "Vena",
+            "Name": "Vena Shop",
             "Money": [
                 {
                     "Method": "",

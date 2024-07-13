@@ -5617,7 +5617,7 @@
     },
     {
         "Itemname": "BADGE_BombRecoverDebuff",
-        "Location": "Vena",
+        "Location": "Vena Shop",
         "slotId": 1,
         "Requirement": [
             {
@@ -5628,7 +5628,7 @@
     },
     {
         "Itemname": "BADGE_AutoFoodCraft",
-        "Location": "Vena",
+        "Location": "Vena Shop",
         "slotId": 1,
         "Requirement": [
             {
@@ -5639,7 +5639,7 @@
     },
     {
         "Itemname": "BADGE_AutoFoodUse",
-        "Location": "Vena",
+        "Location": "Vena Shop",
         "slotId": 1,
         "Requirement": [
             {
@@ -5650,7 +5650,7 @@
     },
     {
         "Itemname": "BADGE_BombDispelDebuff",
-        "Location": "Vena",
+        "Location": "Vena Shop",
         "slotId": 1,
         "Requirement": [
             {
@@ -5660,8 +5660,8 @@
         ]
     },
     {
-        "Itemname": "ITEM_VenaCharm",
-        "Location": "Vena",
+        "Itemname": "ITEM_Vena ShopCharm",
+        "Location": "Vena Shop",
         "slotId": 1,
         "Requirement": [
             {
@@ -5672,7 +5672,7 @@
     },
     {
         "Itemname": "ITEM_RapidShots",
-        "Location": "Vena",
+        "Location": "Vena Shop",
         "slotId": 1,
         "Requirement": [
             {
