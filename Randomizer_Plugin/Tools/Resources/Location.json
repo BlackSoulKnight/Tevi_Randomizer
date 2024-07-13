@@ -5660,7 +5660,7 @@
         ]
     },
     {
-        "Itemname": "ITEM_Vena ShopCharm",
+        "Itemname": "ITEM_VenaCharm",
         "Location": "Vena Shop",
         "slotId": 1,
         "Requirement": [
