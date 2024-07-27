@@ -105,7 +105,7 @@ BADGE_EasyDodge:Travoll Mines Part 2:1:ITEM_Rotater,0
 STACKABLE_EP:Travoll Mines:0:,0
 BADGE_EnergyDefend:Travoll Mines:1:,0
 BADGE_GroundBombQuickExcute:Forest:1:,0
-STACKABLE_MATK:Forest:0:,0
+STACKABLE_MATK:Forest:0:ITEM_LINEBOMB,0
 BADGE_NormalShotReducerA:Forest:1:ChargeShot,0
 BADGE_TauntSit:Forest:1:ChargeShot && ITEM_LINEBOMB,0
 I19:Forest:1:ChargeShot,0

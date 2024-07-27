@@ -1258,7 +1258,7 @@
         "slotId": 0,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]

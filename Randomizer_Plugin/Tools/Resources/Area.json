@@ -696,6 +696,14 @@
             "Connections": [
                 {
                     "Exit": "Snowveil1",
+                    "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK2 && ITEM_HIGHJUMP && WindSkip"
+                },
+                {
+                    "Exit": "Snowveil1",
+                    "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK3 && WindSkip"
+                },
+                {
+                    "Exit": "Snowveil1",
                     "Method": "ITEM_LINEBOMB"
                 }
             ]
@@ -711,10 +719,6 @@
             "Connections": [
                 {
                     "Exit": "Snow City",
-                    "Method": ""
-                },
-                {
-                    "Exit": "Snowveil2",
                     "Method": ""
                 },
                 {
@@ -1873,7 +1877,12 @@
                 {
                     "Exit": "Blushwood Sliding",
                     "Method": "ITEM_SLIDE"
+                },
+                {
+                    "Exit": "Verdazure Sea",
+                    "Method":""
                 }
+
             ]
         },
         {

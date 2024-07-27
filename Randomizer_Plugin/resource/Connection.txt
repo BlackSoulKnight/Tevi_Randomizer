@@ -79,9 +79,10 @@ Gleamwood Right:Blushwood:
 Gleamwood Right:Plague Forest:
 Plague Forest:Gleamwood Right:
 Ulvosa:Gleamwood Upper:
+Snowveil Entrance:Snowveil1:ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK2 && ITEM_HIGHJUMP && WindSkip
+Snowveil Entrance:Snowveil1:ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK3 && WindSkip
 Snowveil Entrance:Snowveil1:ITEM_LINEBOMB
 Snowveil1:Snow City:
-Snowveil1:Snowveil2:
 Snowveil1:Snowveil2:ITEM_SLIDE
 Snowveil1:Snowveil2:ITEM_JETPACK && ITEM_DOUBLEJUMP
 Snowveil1:Snowveil2:ITEM_JETPACK && ITEM_HIJUMP && SpinnerBash
@@ -189,6 +190,7 @@ Gallary of Souls:Gallary of Souls Boss:ITEM_WALLJUMP && ChargeShot
 Gallary of Souls:Gallary of Souls Boss:ITEM_DOUBLEJUMP && ChargeShot
 Gallary of Souls Boss::
 Blushwood:Blushwood Sliding:ITEM_SLIDE
+Blushwood:Verdazure Sea:
 Blushwood Sliding::
 EverGarden:EverGardenPortals:ITEM_DOUBLEJUMP
 EverGarden:EverGardenPortals:ITEM_JETPACK && ITEM_AirDash
