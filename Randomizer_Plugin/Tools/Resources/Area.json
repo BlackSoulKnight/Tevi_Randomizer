@@ -1342,7 +1342,7 @@
             "Name": "Valhalla City",
             "Money": [
                 {
-                    "Method": "ITEM_AREABOMB",
+                    "Method": "ITEM_AREABOMB && ITEM_LINEBOMB",
                     "Amount": 1000
                 }
             ],
@@ -1514,15 +1514,15 @@
             "Connections": [
                 {
                     "Exit": "Sinners Hell",
-                    "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP2 && ChargeShot"
+                    "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP2 && ChargeShot"
                 },
                 {
                     "Exit": "Sinners Hell",
-                    "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP && ITEM_DOUBLEJUMP && ChargeShot"
+                    "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP && ITEM_DOUBLEJUMP && ChargeShot"
                 },
                 {
                     "Exit": "Sinners Hell",
-                    "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP && ITEM_JETPACK && ChargeShot"
+                    "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP && ITEM_JETPACK && ChargeShot"
                 }
             ]
         },
@@ -1567,7 +1567,7 @@
                     "Amount": 2000
                 },
                 {
-                    "Method": "ITEM_AREABOMB",
+                    "Method": "ITEM_AREABOMB && ITEM_LINEBOMB",
                     "Amount": 1000
                 },
                 {

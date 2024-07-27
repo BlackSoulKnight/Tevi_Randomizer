@@ -1074,7 +1074,7 @@
         "slotId": 14,
         "Requirement": [
             {
-                "Method": "ITEM_AREABOMB",
+                "Method": "ITEM_AREABOMB && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -1192,7 +1192,7 @@
         "slotId": 15,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_AREABOMB",
+                "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -1879,7 +1879,7 @@
         "slotId": 18,
         "Requirement": [
             {
-                "Method": "ITEM_AREABOMB",
+                "Method": "ITEM_AREABOMB && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -3169,7 +3169,7 @@
         "slotId": 21,
         "Requirement": [
             {
-                "Method": "ITEM_AREABOMB",
+                "Method": "ITEM_AREABOMB && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -4414,7 +4414,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_AREABOMB && ChargeShot",
+                "Method": "ITEM_AREABOMB && ITEM_LINEBOMB && ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -4692,7 +4692,7 @@
         "slotId": 14,
         "Requirement": [
             {
-                "Method": "ITEM_AREABOMB",
+                "Method": "ITEM_AREABOMB && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -5057,7 +5057,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_AREABOMB",
+                "Method": "ITEM_AREABOMB && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -5327,7 +5327,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_AREABOMB",
+                "Method": "ITEM_AREABOMB && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -5447,7 +5447,7 @@
         "slotId": 17,
         "Requirement": [
             {
-                "Method": "ITEM_AREABOMB",
+                "Method": "ITEM_AREABOMB && ITEM_LINEBOMB",
                 "Difficulty": 0
             },
             {
