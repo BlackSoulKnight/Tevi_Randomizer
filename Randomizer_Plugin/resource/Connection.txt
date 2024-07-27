@@ -95,7 +95,7 @@ Verdazure Sea:Forgotten City:ITEM_WATERMOVEMENT && ITEM_LINEBOMB
 Verdazure Sea:Verdazure Ocean:ITEM_SLIDE && ChargeShot
 Verdazure Ocean:Snowveil Entrance:
 Verdazure Ocean:Swampike:
-Verdazure Ocean:Forgotten City Upper Exit:ITEM_WATERMOVEMENT && ITEM_OrbTypeS3
+Verdazure Ocean:Forgotten City Upper Exit:ITEM_WATERMOVEMENT && ITEM_OrbTypeS3 && I20 && ChargeShot
 Swampike:Lab Extra:
 Forgotten City Upper Exit:Verdazure Ocean:ChargeShot
 Forgotten City:Forgotten City Upper Exit:ITEM_LINEBOMB
@@ -117,7 +117,7 @@ LavaWorld:LavaWorld Part 2:ITEM_JETPACK
 LavaWorld:LavaWorld Part 2:ITEM_SLIDE && ITEM_AirDash 
 LavaWorld:LavaWorld Part 2:ITEM_SLIDE &&  ITEM_DOUBLEJUMP
 LavaWorld:LavaWorld Part 2:ITEM_SLIDE &&  ITEM_HIJUMP
-LavaWorld Part 2:Sinners Entrance:ITEM_Rotater && ITEM_AirSlide
+LavaWorld Part 2:Sinners Entrance:ITEM_Rotater && ITEM_AirSlide && ITEM_SLIDE
 Swamp Entrance:Tartarus:
 Swamp Entrance:Swamp:ITEM_KNIFE
 Swamp Entrance:Swamp:ITEM_ORB

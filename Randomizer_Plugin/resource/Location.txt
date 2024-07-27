@@ -40,7 +40,7 @@ ITEM_LINEBOMB:Start Area:1:,0
 STACKABLE_MATK:Start Area:14:ITEM_SLIDE && ITEM_LINEBOMB,0
 STACKABLE_HP:Morose Transit:1:ITEM_LINEBOMB,0
 STACKABLE_MATK:Morose Transit:9:,0
-BADGE_StrongAirUpDebuff:Morose Transit:1:ITEM_AirSlide,0
+BADGE_StrongAirUpDebuff:Morose Transit:1:ITEM_AirSlide && ITEM_SLIDE,0
 BADGE_CrystalGen:Morose Transit:1:EliteChallangeA,0
 STACKABLE_HP:Ruins Entrance:15:ITEM_JETPACK2,0;ITEM_JETPACK && ITEM_DOUBLEJUMP,0;ITEM_JETPACK && ITEM_AirDash && ITEM_WALLJUMP,0
 STACKABLE_MATK:Ruins:2:,0
@@ -62,7 +62,7 @@ STACKABLE_RATK:Valhalla Breath Lower Left Part:13:ChargeShot,0
 BADGE_ComboDamageBoost:Heavens Valley:1:,0
 STACKABLE_MATK:Valhalla Breath Lower Left Part:13:ITEM_SLIDE && ITEM_DOUBLEJUMP,0;ITEM_SLIDE && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_AirDash,0
 BADGE_DoubleNormalComboSpeedup:Valhalla Breath Left Part:1:ITEM_SLIDE,0
-BADGE_RapidShotsEnhance:Valhalla Breath Left Part:1:ITEM_AirSlide && ITEM_DOUBLEJUMP,0;ITEM_AirSlide && ITEM_JETPACK,0
+BADGE_RapidShotsEnhance:Valhalla Breath Left Part:1:ITEM_AirSlide && ITEM_SLIDE && ITEM_DOUBLEJUMP,0;ITEM_AirSlide && ITEM_SLIDE && ITEM_JETPACK,0
 BADGE_Lucky7C:Valhalla Breath Left Part:1:ITEM_SLIDE && ITEM_DOUBLEJUMP,0;ITEM_SLIDE && ITEM_JETPACK,0
 STACKABLE_MP:Valhalla Breath Left Part:14:ChargeShot,0
 STACKABLE_COG:Moros City:23:Boss,0
@@ -91,7 +91,7 @@ STACKABLE_SHARD:Moros City:30:Coins 5000 && Chapter 6,0
 BADGE_StyleComboBackflipBomb:Travoll Industrie:1:ITEM_SLIDE && ITEM_WALLJUMP && ITEM_AirDash,0;ITEM_SLIDE && ITEM_WALLJUMP && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_WALLJUMP && ITEM_DOUBLEJUMP,0
 STACKABLE_EP:Travoll Industrie:14:ITEM_AREABOMB && ITEM_LINEBOMB,0
 STACKABLE_HP:Travoll Industrie:2:,0
-STACKABLE_MATK:Travoll Industrie:26:ITEM_AirSlide,0
+STACKABLE_MATK:Travoll Industrie:26:ITEM_AirSlide && ITEM_SLIDE,0
 ITEM_BOMBFUEL:Travoll Industrie:1:,0
 BADGE_ConvertOff2Def:Travoll Industrie:1:ITEM_SLIDE && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_DOUBLEJUMP,0;ITEM_SLIDE && ITEM_WALLJUMP && ITEM_AirDash,0
 STACKABLE_MP:Travoll Industrie:1:,0
@@ -150,7 +150,7 @@ BADGE_TauntKnife:Plague Forest:1:ITEM_AirDash,0;ITEM_DOUBLEJUMP,0;ITEM_JETPACK,0
 BADGE_DodgeWeakGroundUp:Plague Forest:1:ITEM_LINEBOMB,0
 STACKABLE_COG:Plague Forest:30:Boss,0
 BADGE_BombNormal4Buffer:Plague Forest:1:ITEM_SLIDE && ITEM_LINEBOMB,0
-BADGE_PrepDef:Plague Forest:1:ITEM_AirSlide,0
+BADGE_PrepDef:Plague Forest:1:ITEM_AirSlide && ITEM_SLIDE,0
 STACKABLE_RATK:Plague Forest:6:,0
 STACKABLE_MATK:Plague Forest:5:,0
 BADGE_Unlucky7:Plague Forest:1:,0
@@ -206,19 +206,19 @@ STACKABLE_EP:Ana Thema:31:Coins 3000,0
 STACKABLE_MATK:Ana Thema:31:Coins 3000,0
 STACKABLE_RATK:Ana Thema:31:Coins 3000,0
 STACKABLE_SHARD:Ana Thema:31:Coins 5000 && Chapter 6,0
-STACKABLE_HP:LavaWorld:26:ITEM_AirSlide,0
+STACKABLE_HP:LavaWorld:26:ITEM_AirSlide && ITEM_SLIDE,0
 STACKABLE_HP:LavaWorld:11:,0
 BADGE_AmuletQuicken:LavaWorld:1:EliteChallangeE && ITEM_SLIDE,0
 ITEM_JETPACK:LavaWorld:1:,0
 STACKABLE_MATK:LavaWorld:11:ChargeShot,0
 STACKABLE_MP:LavaWorld:11:ITEM_LINEBOMB,0
 BADGE_EPCombo:LavaWorld Part 2:1:ITEM_LINEBOMB,0
-BADGE_ArrowDamageUp:LavaWorld Part 2:1:ITEM_AirSlide,0
+BADGE_ArrowDamageUp:LavaWorld Part 2:1:ITEM_AirSlide && ITEM_SLIDE,0
 STACKABLE_RATK:LavaWorld Part 2:11:,0
 BADGE_1HealthTypeC:LavaWorld Part 2:1:ChargeShot,0
-BADGE_AntiGround:LavaWorld Part 2:1:ITEM_Rotater && ITEM_AirSlide,0
+BADGE_AntiGround:LavaWorld Part 2:1:ITEM_Rotater && ITEM_AirSlide && ITEM_SLIDE,0
 BADGE_HitMP:LavaWorld Part 2:1:ITEM_SLIDE,0
-STACKABLE_COG:LavaWorld Part 2:4:ITEM_AirSlide,0;ITEM_BombLengthExten && ITEM_LINEBOMB && ITEM_SLIDE,0
+STACKABLE_COG:LavaWorld Part 2:4:ITEM_AirSlide && ITEM_SLIDE,0;ITEM_BombLengthExten && ITEM_LINEBOMB && ITEM_SLIDE,0
 STACKABLE_EP:LavaWorld Part 2:21:ITEM_BombLengthExtend && ITEM_LINEBOMB && ITEM_SLIDE,0
 STACKABLE_MATK:LavaWorld Part 2:20:ITEM_JETPACK,0;ITEM_DOUBLEJUMP,0
 BADGE_DoubleGroundNormal3N2:LavaWorld Part 2:1:ITEM_SLIDE && ITEM_DOUBLEJUMP,0;ITEM_DOUBLEJUMP && ITEM_JETPACK,0;ITEM_DOUBLEJUMP && ITEM_AirDash,0;ITEM_JETPACK && ITEM_AirDash,0;ITEM_SLIDE && ITEM_JETPACK,0
@@ -450,7 +450,7 @@ BADGE_GStrongUpBulletCancelC:Valley Middle Part:1:SpinnerBash,0
 STACKABLE_HP:Valley Middle Part:24:ITEM_Rotater,0
 STACKABLE_MP:Valley Middle Part:27:,0
 BADGE_HP2Damage6:Sinners Hell:1:,0
-STACKABLE_HP:Sinners Hell:29:ITEM_AirSlide,0
+STACKABLE_HP:Sinners Hell:29:ITEM_AirSlide && ITEM_SLIDE,0
 STACKABLE_COG:Sinners Hell:43:Boss,0
 STACKABLE_RATK:Sinners Hell:29:ITEM_BombLengthExtend3 && ITEM_LINEBOMB,0
 STACKABLE_MATK:Sinners Hell:29:ITEM_DOUBLEJUMP,0;ITEM_JETPACK,0;ITEM_AirDash,0

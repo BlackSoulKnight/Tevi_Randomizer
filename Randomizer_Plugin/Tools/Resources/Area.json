@@ -825,7 +825,7 @@
                 },
                 {
                     "Exit": "Forgotten City Upper Exit",
-                    "Method": "ITEM_WATERMOVEMENT && ITEM_OrbTypeS3"
+                    "Method": "ITEM_WATERMOVEMENT && ITEM_OrbTypeS3 && I20 && ChargeShot"
                 }
             ]
         },
@@ -984,7 +984,7 @@
                     "Amount": 1500
                 },
                 {
-                    "Method": "ITEM_AirSlide || ITEM_Rotater",
+                    "Method": "ITEM_AirSlide && ITEM_SLIDE || ITEM_Rotater",
                     "Amount": 2000
                 },
                 {
@@ -1067,14 +1067,14 @@
                     "Amount": 2000
                 },
                 {
-                    "Method": "ITEM_AirSlide",
+                    "Method": "ITEM_AirSlide && ITEM_SLIDE",
                     "Amount": 2000
                 }
             ],
             "Connections": [
                 {
                     "Exit": "Sinners Entrance",
-                    "Method": "ITEM_Rotater && ITEM_AirSlide"
+                    "Method": "ITEM_Rotater && ITEM_AirSlide && ITEM_SLIDE"
                 }
             ]
         },
@@ -1154,7 +1154,7 @@
                     "Amount": 2000
                 },
                 {
-                    "Method": "ITEM_AirSlide",
+                    "Method": "ITEM_AirSlide && ITEM_SLIDE",
                     "Amount": 1500
                 }
             ],
@@ -1231,7 +1231,7 @@
                     "Amount": 500
                 },
                 {
-                    "Method": "ITEM_AirSlide && ITEM_LINEBOMB",
+                    "Method": "ITEM_AirSlide && ITEM_SLIDE && ITEM_LINEBOMB",
                     "Amount": 2500
                 },
                 {
