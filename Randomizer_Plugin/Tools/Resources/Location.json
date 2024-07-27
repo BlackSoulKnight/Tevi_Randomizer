@@ -1648,15 +1648,15 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_BombLengthExtend && ITEM_DOUBLEJUMP",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_BombLengthExtend && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && ITEM_BombLengthExtend && ITEM_JETPACK",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_BombLengthExtend && ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && ITEM_BombLengthExtend && ITEM_HIJUMP && ITEM_WALLJUMP",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_BombLengthExtend && ITEM_HIJUMP && ITEM_WALLJUMP",
                 "Difficulty": 0
             },
             {
@@ -2621,7 +2621,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_BombLengthExtend && ITEM_SLIDE",
+                "Method": "ITEM_BombLengthExten && ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -2632,7 +2632,7 @@
         "slotId": 21,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend && ITEM_SLIDE",
+                "Method": "ITEM_BombLengthExtend && ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -3239,7 +3239,7 @@
         "slotId": 18,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend3",
+                "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -3459,7 +3459,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend3",
+                "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -4447,7 +4447,7 @@
         "slotId": 15,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend",
+                "Method": "ITEM_BombLengthExtend && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -4628,15 +4628,15 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_BombLengthExtend3 && Boss",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_BombLengthExtend3 && ITEM_LINEBOMB && Boss",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_WALLJUMP && ITEM_BombLengthExtend3 && Boss",
+                "Method": "ITEM_WALLJUMP && ITEM_BombLengthExtend3 && ITEM_LINEBOMB && Boss",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_HIJUMP && ITEM_JETPACK3 && ITEM_KNIFE && ITEM_BombLengthExtend3 && Boss",
+                "Method": "ITEM_HIJUMP && ITEM_JETPACK3 && ITEM_KNIFE && ITEM_BombLengthExtend3 && ITEM_LINEBOMB && Boss",
                 "Difficulty": 0
             }
         ]
@@ -4651,15 +4651,15 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_BombLengthExtend3",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_WALLJUMP && ITEM_BombLengthExtend3",
+                "Method": "ITEM_WALLJUMP && ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_HIJUMP && ITEM_JETPACK3 && ITEM_KNIFE && ITEM_BombLengthExtend3",
+                "Method": "ITEM_HIJUMP && ITEM_JETPACK3 && ITEM_KNIFE && ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -5009,7 +5009,7 @@
         "slotId": 27,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend3",
+                "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -5180,7 +5180,7 @@
         "slotId": 28,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend && ITEM_SLIDE && ChargeShot",
+                "Method": "ITEM_BombLengthExtend && ITEM_LINEBOMB && ITEM_SLIDE && ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -5338,7 +5338,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend3",
+                "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -5539,7 +5539,7 @@
         "slotId": 29,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend3",
+                "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]

@@ -87,7 +87,7 @@ Snowveil1:Snowveil2:ITEM_SLIDE
 Snowveil1:Snowveil2:ITEM_JETPACK && ITEM_DOUBLEJUMP
 Snowveil1:Snowveil2:ITEM_JETPACK && ITEM_HIJUMP && SpinnerBash
 Snowveil1:Snowveil2:ITEM_DOUBLEJUMP && ITEM_HIJUMP && ItemUse
-Snowveil1:Snowveil2:ITEM_BombLengthExtend3
+Snowveil1:Snowveil2:ITEM_BombLengthExtend3 && ITEM_LINEBOMB
 Snowveil2:DreamKeeper Outside Left:
 Snowveil2:Snowveil1:ITEM_LINEBOMB
 Verdazure Sea:Blushwood:
@@ -178,7 +178,7 @@ Catacombs Main:Lab:ITEM_LINEBOMB
 Vassago fight:Lab Part 2:ITEM_LINEBOMB
 Lab:Lab Part 2:ITEM_LINEBOMB
 Lab Part 2:Catacombs Entrance:ITEM_LINEBOMB
-Lab Part 2:Lab Extra:ITEM_BombLengthExtend3
+Lab Part 2:Lab Extra:ITEM_BombLengthExtend3 && ITEM_LINEBOMB
 Lab Extra:Lab Part 2:ITEM_LINEBOMB
 Cloister:Valhalla City:
 Cloister:Cloister 2:ChargeShot
