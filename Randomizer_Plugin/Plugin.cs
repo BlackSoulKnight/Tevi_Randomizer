@@ -3172,17 +3172,17 @@ class SaveGamePatch()
         {
             saveslot = 100;
         }
-        else if (MainVar.instance._isAutoSave)
-        {
-            saveslot = 0;
-        }
         else if (backup && (bool)WorldManager.Instance)
         {
-            SettingManager.Instance.LoadSystem("backupSaveSlot");
             decreaseBackupSaveSlot();
             saveslot = MainVar.instance._backupsaveslot;
             SettingManager.Instance.IncreaseBackupSaveSlot();
         }
+        else if (MainVar.instance._isAutoSave)
+        {
+            saveslot = 0;
+        }
+
 
         string result = "";
         customSaveFileNames(ref result, ref saveslot);
