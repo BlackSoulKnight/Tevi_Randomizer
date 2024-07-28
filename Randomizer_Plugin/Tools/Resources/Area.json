@@ -31,7 +31,15 @@
                 },
                 {
                     "Exit": "Desert Base Upper Half",
-                    "Method": "ITEM_KNIFE && ITEM_SLIDE"
+                    "Method": "ITEM_KNIFE && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AirDash"
+                },
+                {
+                    "Exit": "Desert Base Upper Half",
+                    "Method": "ITEM_KNIFE && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_JETPACK"
+                },
+                {
+                    "Exit": "Desert Base Upper Half",
+                    "Method": "ITEM_KNIFE && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_DOUBLEJUMP"
                 }
             ]
         },

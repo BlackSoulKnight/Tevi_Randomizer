@@ -2,7 +2,9 @@ Desert Base Main:Start Area:
 Desert Base Main:Desert Base Upper Half:ITEM_HIJUMP && ITEM_DOUBLEJUMP && ITEM_WALLJUMP
 Desert Base Main:Desert Base Upper Half:ITEM_JETPACK && ITEM_WALLJUMP
 Desert Base Main:Desert Base Upper Half:ITEM_DOUBLEJUMP && ITEM_WALLJUMP2
-Desert Base Main:Desert Base Upper Half:ITEM_KNIFE && ITEM_SLIDE
+Desert Base Main:Desert Base Upper Half:ITEM_KNIFE && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AirDash
+Desert Base Main:Desert Base Upper Half:ITEM_KNIFE && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_JETPACK
+Desert Base Main:Desert Base Upper Half:ITEM_KNIFE && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_DOUBLEJUMP
 Desert Base Entrance:Start Area:
 Desert Base Entrance:Desert Base Main:ChargeShot
 Desert Base Entrance:Desert Base Main:ITEM_JETPACK
