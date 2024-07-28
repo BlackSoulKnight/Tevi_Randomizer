@@ -47,7 +47,7 @@ This value can be change with the Bed in Tevi's Home.<br>
 If a negtive number or nothing is set, the game will handle everything as usual.
 
 ## Disabling Randomizer
-Either remove the TeviRandomizer.dll or rename the file.dat in the data Folder in the Randomizer Plugin
+Remove the TeviRandomizer.dll
 
 ## Uninstalling
 Delete the Randomizer Plugin from the plugins folder
