@@ -135,6 +135,7 @@ public class RandomizerPlugin : BaseUnityPlugin
         instance.PatchAll(typeof(BonusFeaturePatch));
 
         instance.PatchAll(typeof(HintSystem));
+        instance.PatchAll(typeof(CustomMap));
 
 
         // test Localizazion
@@ -942,12 +943,6 @@ class EventPatch
             else
                 SaveManager.Instance.SetItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
 
-            //adding 1 item to the pool for orbs
-            data = RandomizerPlugin.getRandomizedItem(ItemList.Type.I20, 1);
-            if (data.getItemTyp().ToString().Contains("STACKABLE"))
-                SaveManager.Instance.SetStackableItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
-            else
-                SaveManager.Instance.SetItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
 
             data = RandomizerPlugin.getRandomizedItem(ItemList.Type.ITEM_KNIFE, 1);
             if(data.getItemTyp().ToString().Contains("STACKABLE"))
