@@ -515,7 +515,11 @@ namespace TeviRandomizer
         List<string> itemList;
         private bool validate()
         {
-            List<Area> areaList = [areas.Find(x => x.Name == "Start Area")];
+            List<Area> areaList = [areas.Find(x => x.Name == "Thanatara Canyon")];
+            if(areaList.Count == 0)
+            {
+                Debug.LogError("[Randomizer] No Entries in areaList!!!!");
+            }
             itemList = new List<string>();
             List<(int, int)> tmpList = new List<(int, int)>();
 

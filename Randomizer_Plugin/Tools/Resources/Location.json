@@ -306,7 +306,7 @@
     },
     {
         "Itemname": "ITEM_EasyStyle",
-        "Location": "Start Area",
+        "Location": "Thanatara Canyon",
         "slotId": 1,
         "Requirement": [
             {
@@ -317,7 +317,7 @@
     },
     {
         "Itemname": "ITEM_KNIFE",
-        "Location": "Start Area",
+        "Location": "Thanatara Canyon",
         "slotId": 1,
         "Requirement": [
             {
@@ -339,7 +339,7 @@
     },
     {
         "Itemname": "ITEM_ORB",
-        "Location": "Start Area",
+        "Location": "Thanatara Canyon",
         "slotId": 1,
         "Requirement": [
             {
@@ -350,7 +350,7 @@
     },
     {
         "Itemname": "BADGE_MAXHPUP",
-        "Location": "Start Area",
+        "Location": "Thanatara Canyon",
         "slotId": 1,
         "Requirement": [
             {
@@ -361,7 +361,7 @@
     },
     {
         "Itemname": "BADGE_RangeCombo",
-        "Location": "Start Area",
+        "Location": "Thanatara Canyon",
         "slotId": 1,
         "Requirement": [
             {
@@ -372,7 +372,7 @@
     },
     {
         "Itemname": "BADGE_SuperArmor2",
-        "Location": "Start Area",
+        "Location": "Thanatara Canyon",
         "slotId": 1,
         "Requirement": [
             {
@@ -383,7 +383,7 @@
     },
     {
         "Itemname": "BADGE_PerfectCharge",
-        "Location": "Start Area",
+        "Location": "Thanatara Canyon",
         "slotId": 1,
         "Requirement": [
             {
@@ -394,7 +394,7 @@
     },
     {
         "Itemname": "BADGE_StyleComboAddDamageA",
-        "Location": "Start Area",
+        "Location": "Thanatara Canyon",
         "slotId": 1,
         "Requirement": [
             {
@@ -405,7 +405,7 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Start Area",
+        "Location": "Thanatara Canyon",
         "slotId": 7,
         "Requirement": [
             {
@@ -416,7 +416,7 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Start Area",
+        "Location": "Thanatara Canyon",
         "slotId": 0,
         "Requirement": [
             {
@@ -427,7 +427,7 @@
     },
     {
         "Itemname": "ITEM_LINEBOMB",
-        "Location": "Start Area",
+        "Location": "Thanatara Canyon",
         "slotId": 1,
         "Requirement": [
             {
@@ -438,7 +438,7 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Start Area",
+        "Location": "Thanatara Canyon",
         "slotId": 14,
         "Requirement": [
             {
@@ -1430,7 +1430,7 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Gleamwood",
+        "Location": "Gleamwood Middle",
         "slotId": 5,
         "Requirement": [
             {
@@ -1452,7 +1452,7 @@
     },
     {
         "Itemname": "BADGE_QuickBomber",
-        "Location": "Gleamwood",
+        "Location": "Gleamwood Middle",
         "slotId": 1,
         "Requirement": [
             {
@@ -1463,7 +1463,7 @@
     },
     {
         "Itemname": "ITEM_MASK",
-        "Location": "Gleamwood",
+        "Location": "Gleamwood Middle",
         "slotId": 1,
         "Requirement": [
             {
@@ -1485,7 +1485,7 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Gleamwood",
+        "Location": "Gleamwood Middle",
         "slotId": 26,
         "Requirement": [
             {
@@ -1496,7 +1496,7 @@
     },
     {
         "Itemname": "BADGE_ComboTimeExtendC",
-        "Location": "Gleamwood",
+        "Location": "Gleamwood Middle",
         "slotId": 1,
         "Requirement": [
             {
@@ -1507,7 +1507,7 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Gleamwood",
+        "Location": "Gleamwood Middle",
         "slotId": 19,
         "Requirement": [
             {
@@ -1518,7 +1518,7 @@
     },
     {
         "Itemname": "STACKABLE_SHARD",
-        "Location": "Gleamwood",
+        "Location": "Gleamwood Middle",
         "slotId": 15,
         "Requirement": [
             {
@@ -1537,7 +1537,7 @@
     },
     {
         "Itemname": "BADGE_TauntStare",
-        "Location": "Gleamwood",
+        "Location": "Gleamwood Middle",
         "slotId": 1,
         "Requirement": [
             {
@@ -1567,7 +1567,7 @@
     },
     {
         "Itemname": "BADGE_BattleStartCharger",
-        "Location": "Gleamwood Right",
+        "Location": "Ulskan Village Area",
         "slotId": 1,
         "Requirement": [
             {
@@ -1578,7 +1578,7 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Gleamwood Right",
+        "Location": "Ulskan Village Area",
         "slotId": 5,
         "Requirement": [
             {
@@ -1589,7 +1589,7 @@
     },
     {
         "Itemname": "BADGE_AirNormalComboSpeedup",
-        "Location": "Gleamwood Right",
+        "Location": "Ulskan Village Area",
         "slotId": 1,
         "Requirement": [
             {
@@ -1600,7 +1600,7 @@
     },
     {
         "Itemname": "BADGE_DoubleGroundNormal3N1",
-        "Location": "Gleamwood Right",
+        "Location": "Ulskan Village Area",
         "slotId": 1,
         "Requirement": [
             {
@@ -1611,7 +1611,7 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Gleamwood Right",
+        "Location": "Ulskan Village Area",
         "slotId": 5,
         "Requirement": [
             {
@@ -1622,7 +1622,7 @@
     },
     {
         "Itemname": "ITEM_AntiDecay",
-        "Location": "Gleamwood Right",
+        "Location": "Ulskan Village Area",
         "slotId": 1,
         "Requirement": [
             {
@@ -1633,7 +1633,7 @@
     },
     {
         "Itemname": "BADGE_SlideHalt",
-        "Location": "Gleamwood Right",
+        "Location": "Ulskan Village Area",
         "slotId": 1,
         "Requirement": [
             {
@@ -1644,7 +1644,7 @@
     },
     {
         "Itemname": "BADGE_GoldenLuck",
-        "Location": "Gleamwood Right",
+        "Location": "Ulskan Village Area",
         "slotId": 1,
         "Requirement": [
             {
@@ -3345,7 +3345,7 @@
     },
     {
         "Itemname": "ITEM_Alterscope",
-        "Location": "Lab Extra",
+        "Location": "Lab - Verdazure Swamp Connection",
         "slotId": 1,
         "Requirement": [
             {
@@ -3356,7 +3356,7 @@
     },
     {
         "Itemname": "BADGE_HitCountChargeRate",
-        "Location": "Lab Extra",
+        "Location": "Lab - Verdazure Swamp Connection",
         "slotId": 1,
         "Requirement": [
             {
@@ -3956,7 +3956,7 @@
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "HevPortalHub",
+        "Location": "Heaven Portal Hub",
         "slotId": 49,
         "Requirement": [
             {
@@ -3967,7 +3967,7 @@
     },
     {
         "Itemname": "BADGE_DebuffCounter",
-        "Location": "HevPortalHub",
+        "Location": "Heaven Portal Hub",
         "slotId": 1,
         "Requirement": [
             {
@@ -3978,7 +3978,7 @@
     },
     {
         "Itemname": "BADGE_CrystalIncrease",
-        "Location": "HevPortalHub",
+        "Location": "Heaven Portal Hub",
         "slotId": 1,
         "Requirement": [
             {
@@ -3993,7 +3993,7 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "HevPortalHub",
+        "Location": "Heaven Portal Hub",
         "slotId": 20,
         "Requirement": [
             {
@@ -4465,7 +4465,7 @@
     },
     {
         "Itemname": "BADGE_ComboTimeExtendB",
-        "Location": "Swampike",
+        "Location": "Verdazure Swamp",
         "slotId": 1,
         "Requirement": [
             {
@@ -4480,7 +4480,7 @@
     },
     {
         "Itemname": "BADGE_BOnceHeal",
-        "Location": "Swampike",
+        "Location": "Verdazure Swamp",
         "slotId": 1,
         "Requirement": [
             {
@@ -4491,7 +4491,7 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Swampike",
+        "Location": "Verdazure Swamp",
         "slotId": 23,
         "Requirement": [
             {
@@ -4502,7 +4502,7 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Swampike",
+        "Location": "Verdazure Swamp",
         "slotId": 17,
         "Requirement": [
             {
@@ -4513,7 +4513,7 @@
     },
     {
         "Itemname": "BADGE_StrongFrontEnhance",
-        "Location": "Swampike",
+        "Location": "Verdazure Swamp",
         "slotId": 1,
         "Requirement": [
             {
@@ -4524,7 +4524,7 @@
     },
     {
         "Itemname": "BADGE_RevengeA",
-        "Location": "Swampike",
+        "Location": "Verdazure Swamp",
         "slotId": 1,
         "Requirement": [
             {
@@ -4535,7 +4535,7 @@
     },
     {
         "Itemname": "BADGE_GStrongUpBulletCancelS",
-        "Location": "Swampike",
+        "Location": "Verdazure Swamp",
         "slotId": 1,
         "Requirement": [
             {
@@ -4546,7 +4546,7 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Swampike",
+        "Location": "Verdazure Swamp",
         "slotId": 21,
         "Requirement": [
             {
@@ -4688,7 +4688,7 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Snowveil1",
+        "Location": "Snowveil",
         "slotId": 14,
         "Requirement": [
             {
@@ -4699,7 +4699,7 @@
     },
     {
         "Itemname": "BADGE_EPMeleeReduce",
-        "Location": "Snowveil1",
+        "Location": "Snowveil",
         "slotId": 1,
         "Requirement": [
             {
@@ -4710,7 +4710,7 @@
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "Snowveil1",
+        "Location": "Snowveil",
         "slotId": 32,
         "Requirement": [
             {
@@ -4721,7 +4721,7 @@
     },
     {
         "Itemname": "BADGE_ChargeHeal",
-        "Location": "Snowveil1",
+        "Location": "Snowveil",
         "slotId": 1,
         "Requirement": [
             {
@@ -4732,7 +4732,7 @@
     },
     {
         "Itemname": "ITEM_Rotater",
-        "Location": "Snowveil1",
+        "Location": "Snowveil",
         "slotId": 1,
         "Requirement": [
             {
@@ -4743,7 +4743,7 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Snowveil1",
+        "Location": "Snowveil",
         "slotId": 22,
         "Requirement": [
             {
@@ -4758,7 +4758,7 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Snowveil2",
+        "Location": "Snowveil above Verglas Village",
         "slotId": 24,
         "Requirement": [
             {
@@ -4777,7 +4777,7 @@
     },
     {
         "Itemname": "BADGE_JetpackMP",
-        "Location": "Snowveil2",
+        "Location": "Snowveil above Verglas Village",
         "slotId": 1,
         "Requirement": [
             {
@@ -4792,7 +4792,7 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Snowveil2",
+        "Location": "Snowveil above Verglas Village",
         "slotId": 22,
         "Requirement": [
             {
@@ -5101,7 +5101,7 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Golden Hands HQ end",
+        "Location": "Golden Hands HQ Sewer",
         "slotId": 23,
         "Requirement": [
             {
@@ -5112,7 +5112,7 @@
     },
     {
         "Itemname": "BADGE_SuperKnockBomb",
-        "Location": "Golden Hands HQ end",
+        "Location": "Golden Hands HQ Sewer",
         "slotId": 1,
         "Requirement": [
             {
@@ -5123,7 +5123,7 @@
     },
     {
         "Itemname": "ITEM_AirSlide",
-        "Location": "Golden Hands HQ end",
+        "Location": "Golden Hands HQ Sewer",
         "slotId": 1,
         "Requirement": [
             {
@@ -5142,7 +5142,7 @@
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "Golden Hands HQ end",
+        "Location": "Golden Hands HQ Sewer",
         "slotId": 36,
         "Requirement": [
             {
@@ -5334,7 +5334,7 @@
     },
     {
         "Itemname": "BADGE_CrystalBulletCancel",
-        "Location": "Deep Dream",
+        "Location": "Dreamless Depths 2",
         "slotId": 1,
         "Requirement": [
             {
@@ -5345,7 +5345,7 @@
     },
     {
         "Itemname": "BADGE_GroundNormalComboAutoSpeedup",
-        "Location": "Deep Dream",
+        "Location": "Dreamless Depths",
         "slotId": 1,
         "Requirement": [
             {
@@ -5360,7 +5360,7 @@
     },
     {
         "Itemname": "BADGE_BadgeCDReduce",
-        "Location": "Deep Dream",
+        "Location": "Dreamless Depths 2",
         "slotId": 1,
         "Requirement": [
             {
@@ -5379,7 +5379,7 @@
     },
     {
         "Itemname": "ITEM_Royal",
-        "Location": "Deep Dream",
+        "Location": "Dreamless Depths 2",
         "slotId": 1,
         "Requirement": [
             {
@@ -5402,7 +5402,7 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Valley Lower Part",
+        "Location": "Heavens Valley Snow Route Low",
         "slotId": 27,
         "Requirement": [
             {
@@ -5413,7 +5413,7 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Valley Lower Part",
+        "Location": "Heavens Valley Snow Route Low",
         "slotId": 24,
         "Requirement": [
             {
@@ -5428,7 +5428,7 @@
     },
     {
         "Itemname": "BADGE_SafeItemUse",
-        "Location": "Valley Lower Part",
+        "Location": "Heavens Valley Snow Route Low",
         "slotId": 1,
         "Requirement": [
             {
@@ -5443,7 +5443,7 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Valley Middle Part",
+        "Location": "Heavens Valley Snow Route Middle",
         "slotId": 17,
         "Requirement": [
             {
@@ -5458,7 +5458,7 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Valley Middle Part",
+        "Location": "Heavens Valley Snow Route Middle",
         "slotId": 24,
         "Requirement": [
             {
@@ -5469,7 +5469,7 @@
     },
     {
         "Itemname": "BADGE_GStrongUpBulletCancelC",
-        "Location": "Valley Middle Part",
+        "Location": "Heavens Valley Snow Route Middle",
         "slotId": 1,
         "Requirement": [
             {
@@ -5480,7 +5480,7 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Valley Middle Part",
+        "Location": "Heavens Valley Snow Route Middle",
         "slotId": 24,
         "Requirement": [
             {
@@ -5491,7 +5491,7 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Valley Middle Part",
+        "Location": "Heavens Valley Snow Route Middle",
         "slotId": 27,
         "Requirement": [
             {
@@ -5683,7 +5683,7 @@
     },
     {
         "Itemname": "BADGE_DoubleAirDash",
-        "Location": "Start Area",
+        "Location": "Thanatara Canyon",
         "slotId": 1,
         "Requirement": [
             {
@@ -5760,7 +5760,7 @@
     },
     {
         "Itemname": "STACKABLE_SHARD",
-        "Location": "Start Area",
+        "Location": "Thanatara Canyon",
         "slotId": 29,
         "Requirement": [
             {

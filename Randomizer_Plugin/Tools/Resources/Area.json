@@ -14,7 +14,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Start Area",
+                    "Exit": "Thanatara Canyon",
                     "Method": ""
                 },
                 {
@@ -57,7 +57,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Start Area",
+                    "Exit": "Thanatara Canyon",
                     "Method": ""
                 },
                 {
@@ -110,7 +110,7 @@
     ],
     "Map01": [
         {
-            "Name": "Start Area",
+            "Name": "Thanatara Canyon",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -159,7 +159,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Desert Base Main",
+                    "Exit": "Desert Base Entrance",
                     "Method": ""
                 },
                 {
@@ -201,7 +201,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Start Area",
+                    "Exit": "Thanatara Canyon",
                     "Method": ""
                 }
             ]
@@ -226,7 +226,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Start Area",
+                    "Exit": "Thanatara Canyon",
                     "Method": ""
                 }
             ]
@@ -384,7 +384,7 @@
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "Start Area",
+                    "Exit": "Thanatara Canyon",
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
@@ -489,7 +489,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit":"Gleamwood",
+                    "Exit":"Gleamwood Middle",
                     "Method":"ITEM_LINEBOMB"
                 }
             ]
@@ -539,25 +539,25 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Gleamwood",
+                    "Exit": "Gleamwood Middle",
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "Gleamwood",
+                    "Exit": "Gleamwood Middle",
                     "Method": "ITEM_DOUBLEJUMP"
                 },
                 {
-                    "Exit": "Gleamwood",
+                    "Exit": "Gleamwood Middle",
                     "Method": "ITEM_JETPACK"
                 },
                 {
-                    "Exit": "Gleamwood",
+                    "Exit": "Gleamwood Middle",
                     "Method": "ITEM_AirDash"
                 }
             ]
         },
         {
-            "Name": "Gleamwood",
+            "Name": "Gleamwood Middle",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -594,15 +594,15 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Gleamwood Right",
+                    "Exit": "Ulskan Village Area",
                     "Method": "ITEM_DOUBLEJUMP"
                 },
                 {
-                    "Exit": "Gleamwood Right",
+                    "Exit": "Ulskan Village Area",
                     "Method": "ITEM_AirDash"
                 },
                 {
-                    "Exit": "Gleamwood Right",
+                    "Exit": "Ulskan Village Area",
                     "Method": "ITEM_JETPACK"
                 }
             ]
@@ -617,7 +617,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Gleamwood",
+                    "Exit": "Gleamwood Middle",
                     "Method": "ITEM_SLIDE"
                 },
                 {
@@ -627,7 +627,7 @@
             ]
         },
         {
-            "Name": "Gleamwood Right",
+            "Name": "Ulskan Village Area",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -640,7 +640,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Gleamwood",
+                    "Exit": "Gleamwood Middle",
                     "Method": ""
                 },
                 {
@@ -665,7 +665,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Gleamwood Right",
+                    "Exit": "Ulskan Village Area",
                     "Method": ""
                 }
             ]
@@ -703,21 +703,21 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Snowveil1",
+                    "Exit": "Snowveil",
                     "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK2 && ITEM_HIGHJUMP && WindSkip"
                 },
                 {
-                    "Exit": "Snowveil1",
+                    "Exit": "Snowveil",
                     "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK3 && WindSkip"
                 },
                 {
-                    "Exit": "Snowveil1",
+                    "Exit": "Snowveil",
                     "Method": "ITEM_LINEBOMB"
                 }
             ]
         },
         {
-            "Name": "Snowveil1",
+            "Name": "Snowveil",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -730,29 +730,29 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Snowveil2",
+                    "Exit": "Snowveil above Verglas Village",
                     "Method": "ITEM_SLIDE"
                 },
                 {
-                    "Exit": "Snowveil2",
+                    "Exit": "Snowveil above Verglas Village",
                     "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP"
                 },
                 {
-                    "Exit": "Snowveil2",
+                    "Exit": "Snowveil above Verglas Village",
                     "Method": "ITEM_JETPACK && ITEM_HIJUMP && SpinnerBash"
                 },
                 {
-                    "Exit": "Snowveil2",
+                    "Exit": "Snowveil above Verglas Village",
                     "Method": "ITEM_DOUBLEJUMP && ITEM_HIJUMP && ItemUse"
                 },
                 {
-                    "Exit": "Snowveil2",
+                    "Exit": "Snowveil above Verglas Village",
                     "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB"
                 }
             ]
         },
         {
-            "Name": "Snowveil2",
+            "Name": "Snowveil above Verglas Village",
             "Money": [
                 {
                     "Method": "ITEM_AREABOMB",
@@ -765,7 +765,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Snowveil1",
+                    "Exit": "Snowveil",
                     "Method": "ITEM_LINEBOMB"
                 }
 
@@ -828,17 +828,17 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Swampike",
+                    "Exit": "Verdazure Swamp",
                     "Method": ""
                 },
                 {
                     "Exit": "Forgotten City Upper Exit",
-                    "Method": "ITEM_WATERMOVEMENT && ITEM_OrbTypeS3 && I20 && ChargeShot"
+                    "Method": "ITEM_WATERMOVEMENT && ITEM_OrbTypeS3 && I20 && ChargeShot && ITEM_ORB3"
                 }
             ]
         },
         {
-            "Name": "Swampike",
+            "Name": "Verdazure Swamp",
             "Money": [
                 {
                     "Method": "ITEM_JETPACK3 || ITEM_AirDash &&(ITEM_JETPACK || ITEM_DOUBLEJUMP) || ITEM_JETPACK && ITEM_DOUBLEJUMP",
@@ -851,7 +851,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Lab Extra",
+                    "Exit": "Lab - Verdazure Swamp Connection",
                     "Method": ""
                 }
             ]
@@ -940,11 +940,11 @@
                     "Method": "ITEM_SLIDE && ChargeShot"
                 },
                 {
-                    "Exit": "Golden Hands HQ end",
+                    "Exit": "Golden Hands HQ Sewer",
                     "Method": "ITEM_SLIDE"
                 },
                 {
-                    "Exit": "Golden Hands HQ end",
+                    "Exit": "Golden Hands HQ Sewer",
                     "Method": "ChargeShot"
                 }
             ]
@@ -1006,13 +1006,13 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Golden Hands HQ end",
+                    "Exit": "Golden Hands HQ Sewer",
                     "Method": "ITEM_LINEBOMB && ChargeShot"
                 }
             ]
         },
         {
-            "Name": "Golden Hands HQ end",
+            "Name": "Golden Hands HQ Sewer",
             "Money": [
                 {
                     "Method": "Boss",
@@ -1207,7 +1207,7 @@
                     "Method": "ITEM_Rotater && ChargeShot"
                 },
                 {
-                    "Exit": "Valley Lower Part",
+                    "Exit": "Heavens Valley Snow Route Low",
                     "Method": ""
                 }
             ]
@@ -1226,13 +1226,13 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Deep Dream",
-                    "Method": ""
+                    "Exit": "Dreamless Depths",
+                    "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
                 }
             ]
         },
         {
-            "Name": "Deep Dream",
+            "Name": "Dreamless Depths",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -1249,25 +1249,25 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Deep Dream 2" ,
+                    "Exit": "Dreamless Depths 2" ,
                     "Method": "ITEM_HIJUMP"
                 },
                 {
-                    "Exit": "Deep Dream 2" ,
+                    "Exit": "Dreamless Depths 2" ,
                     "Method": "ITEM_WALLJUMP"
                 },
                 {
-                    "Exit": "Deep Dream 2" ,
+                    "Exit": "Dreamless Depths 2" ,
                     "Method": "ITEM_JETPACK"
                 },
                 {
-                    "Exit": "Deep Dream 2" ,
+                    "Exit": "Dreamless Depths 2" ,
                     "Method": "ITEM_DOUBLEJUMP"
                 }
             ]
         },
         {
-            "Name": "Deep Dream 2",
+            "Name": "Dreamless Depths 2",
             "Money": [
                 {
                     "Method": "",
@@ -1284,7 +1284,7 @@
     ],
     "Map19": [
         {
-            "Name": "Valley Lower Part",
+            "Name": "Heavens Valley Snow Route Low",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB && (ITEM_AREABOMB && ITEM_BombLengthExtend) || Tornado Spin",
@@ -1293,13 +1293,13 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Valley Middle Part",
+                    "Exit": "Heavens Valley Snow Route Middle",
                     "Method": "ITEM_SLIDE &&  ITEM_Rotater"
                 }
             ]
         },
         {
-            "Name": "Valley Middle Part",
+            "Name": "Heavens Valley Snow Route Middle",
             "Money": [
                 {
                     "Method": "ITEM_HIJUMP || ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK",
@@ -1312,21 +1312,21 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Valley Lower Part",
+                    "Exit": "Heavens Valley Snow Route Low",
                     "Method": "ITEM_Rotater && ITEM_SLIDE"
                 },
                 {
-                    "Exit": "Valley Lower Part",
+                    "Exit": "Heavens Valley Snow Route Low",
                     "Method": "ITEM_Rotater && ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "Valley Upper Part",
+                    "Exit": "Heavens Valley Snow Route Upper",
                     "Method": "ITEM_LINEBOMB"
                 }
             ]
         },
         {
-            "Name": "Valley Upper Part",
+            "Name": "Heavens Valley Snow Route Upper",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -1339,7 +1339,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Valley Middle Part",
+                    "Exit": "Heavens Valley Snow Route Middle",
                     "Method": "ITEM_SLIDE"
                 }
             ]
@@ -1485,7 +1485,7 @@
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "Start Area",
+                    "Exit": "Thanatara Canyon",
                     "Method": ""
                 }
             ]
@@ -1593,7 +1593,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Gleamwood",
+                    "Exit": "Gleamwood Middle",
                     "Method": ""
                 }
             ]
@@ -1726,13 +1726,13 @@
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "Lab Extra",
+                    "Exit": "Lab - Verdazure Swamp Connection",
                     "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB"
                 }
             ]
         },
         {
-            "Name": "Lab Extra",
+            "Name": "Lab - Verdazure Swamp Connection",
             "Money": [
                 {
                     "Method": "(ITEM_JETPACK||ITEM_DOUBLEJUMP) || ITEM_AirDash",
@@ -1743,6 +1743,10 @@
                 {
                     "Exit": "Lab Part 2",
                     "Method": "ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "Verdazure Swamp",
+                    "Method": "ITEM_LINEBOMB && ITEM_BombLengthExtend3"
                 }
             ]
         }
@@ -1936,15 +1940,15 @@
                     "Method": "ITEM_JETPACK2"
                 },
                 {
-                    "Exit": "Valley Upper Part",
+                    "Exit": "Heavens Valley Snow Route Upper",
                     "Method": "ITEM_JETPACK"
                 },
                 {
-                    "Exit": "Valley Upper Part",
+                    "Exit": "Heavens Valley Snow Route Upper",
                     "Method": "ITEM_DOUBLEJUMP"
                 },
                 {
-                    "Exit": "Valley Upper Part",
+                    "Exit": "Heavens Valley Snow Route Upper",
                     "Method": "ITEM_AirDash"
                 }
 
@@ -1964,19 +1968,19 @@
             ],
             "Connections": [
                 {
-                    "Exit": "HevPortalHub",
+                    "Exit": "Heaven Portal Hub",
                     "Method": "ITEM_DOUBLEJUMP && ITEM_AirDash"
                 },
                 {
-                    "Exit": "HevPortalHub",
+                    "Exit": "Heaven Portal Hub",
                     "Method": "ITEM_JETPACK && ITEM_AirDash"
                 },
                 {
-                    "Exit": "HevPortalHub",
+                    "Exit": "Heaven Portal Hub",
                     "Method": "ITEM_JETPACK3"
                 },
                 {
-                    "Exit": "HevPortalHub",
+                    "Exit": "Heaven Portal Hub",
                     "Method": "ITEM_JETPACK2"
                 },
                 {
@@ -1986,7 +1990,7 @@
             ]
         },
         {
-            "Name": "HevPortalHub",
+            "Name": "Heaven Portal Hub",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",

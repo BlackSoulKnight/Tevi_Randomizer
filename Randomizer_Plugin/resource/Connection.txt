@@ -1,11 +1,11 @@
-Desert Base Main:Start Area:
+Desert Base Main:Thanatara Canyon:
 Desert Base Main:Desert Base Upper Half:ITEM_HIJUMP && ITEM_DOUBLEJUMP && ITEM_WALLJUMP
 Desert Base Main:Desert Base Upper Half:ITEM_JETPACK && ITEM_WALLJUMP
 Desert Base Main:Desert Base Upper Half:ITEM_DOUBLEJUMP && ITEM_WALLJUMP2
 Desert Base Main:Desert Base Upper Half:ITEM_KNIFE && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AirDash
 Desert Base Main:Desert Base Upper Half:ITEM_KNIFE && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_JETPACK
 Desert Base Main:Desert Base Upper Half:ITEM_KNIFE && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_DOUBLEJUMP
-Desert Base Entrance:Start Area:
+Desert Base Entrance:Thanatara Canyon:
 Desert Base Entrance:Desert Base Main:ChargeShot
 Desert Base Entrance:Desert Base Main:ITEM_JETPACK
 Desert Base Entrance:Desert Base Main:ITEM_AirDash
@@ -14,20 +14,20 @@ Desert Base Entrance:Desert Base Main:ITEM_DOUBLEJUMP
 Desert Base Entrance:Desert Base Main:ITEM_HIJUMP
 Desert Base Entrance:Desert Base Main:ITEM_LINEBOMB && ITEM_AREABOMB
 Desert Base Upper Half:Desert Base Main:
-Start Area:Oasis:ChargeShot
-Start Area:Oasis:ITEM_DOUBLEJUMP
-Start Area:Oasis:ITEM_DOUBLEJUMP
-Start Area:Oasis:ITEM_JETPACK
-Start Area:Oasis:ITEM_AirDash
-Start Area:Ruins Entrance:
-Start Area:Heavens Valley:ITEM_LINEBOMB
-Start Area:Morose Transit:
-Start Area:Desert Base Main:
-Start Area:Crafting:
+Thanatara Canyon:Oasis:ChargeShot
+Thanatara Canyon:Oasis:ITEM_DOUBLEJUMP
+Thanatara Canyon:Oasis:ITEM_DOUBLEJUMP
+Thanatara Canyon:Oasis:ITEM_JETPACK
+Thanatara Canyon:Oasis:ITEM_AirDash
+Thanatara Canyon:Ruins Entrance:
+Thanatara Canyon:Heavens Valley:ITEM_LINEBOMB
+Thanatara Canyon:Morose Transit:
+Thanatara Canyon:Desert Base Entrance:
+Thanatara Canyon:Crafting:
 Crafting::
 Morose Transit:Moros City:
-Morose Transit:Start Area:
-Oasis:Start Area:
+Morose Transit:Thanatara Canyon:
+Oasis:Thanatara Canyon:
 Moros City:Morose Transit:
 Moros City:Travoll Industrie:
 Moros City:Travoll Mines:ITEM_LINEBOMB
@@ -44,7 +44,7 @@ Forest Maze boss:Forest Maze extended:ITEM_DOUBLEJUMP
 Forest Maze boss:Forest Maze extended:ITEM_AirDash
 Forest Maze extended::
 Travoll Mines:Moros City:ITEM_LINEBOMB
-Travoll Mines:Start Area:ITEM_LINEBOMB
+Travoll Mines:Thanatara Canyon:ITEM_LINEBOMB
 Travoll Mines:Travoll Mines Part 2:ITEM_BOMBFUEL && ITEM_LINEBOMB
 Travoll Mines:Travoll Mines Part 2:ITEM_KNIFE && ITEM_LINEBOMB
 Travoll Mines Part 2:Travoll Mines:
@@ -58,47 +58,47 @@ Travoll Industrie:Moros City:
 CopperWood:Forest:
 CopperWood:Travoll Industrie:
 CopperWood:Relicts:
-CopperWood:Gleamwood:ITEM_LINEBOMB
+CopperWood:Gleamwood Middle:ITEM_LINEBOMB
 Ana Thema:Gallary of Mirrors:ITEM_SLIDE && ITEM_LINEBOMB
 Ana Thema:Vena Shop:
 Ana Thema:Gleamwood Bottom:
-Gleamwood Bottom:Gleamwood:ITEM_LINEBOMB
-Gleamwood Bottom:Gleamwood:ITEM_DOUBLEJUMP
-Gleamwood Bottom:Gleamwood:ITEM_JETPACK
-Gleamwood Bottom:Gleamwood:ITEM_AirDash
-Gleamwood:CopperWood:ITEM_LINEBOMB
-Gleamwood:Gleamwood Upper:ITEM_SLIDE
-Gleamwood:Gleamwood Bottom:
-Gleamwood:Relicts:
-Gleamwood:Ana Thema:
-Gleamwood:Gleamwood Right:ITEM_DOUBLEJUMP
-Gleamwood:Gleamwood Right:ITEM_AirDash
-Gleamwood:Gleamwood Right:ITEM_JETPACK
-Gleamwood Upper:Gleamwood:ITEM_SLIDE
+Gleamwood Bottom:Gleamwood Middle:ITEM_LINEBOMB
+Gleamwood Bottom:Gleamwood Middle:ITEM_DOUBLEJUMP
+Gleamwood Bottom:Gleamwood Middle:ITEM_JETPACK
+Gleamwood Bottom:Gleamwood Middle:ITEM_AirDash
+Gleamwood Middle:CopperWood:ITEM_LINEBOMB
+Gleamwood Middle:Gleamwood Upper:ITEM_SLIDE
+Gleamwood Middle:Gleamwood Bottom:
+Gleamwood Middle:Relicts:
+Gleamwood Middle:Ana Thema:
+Gleamwood Middle:Ulskan Village Area:ITEM_DOUBLEJUMP
+Gleamwood Middle:Ulskan Village Area:ITEM_AirDash
+Gleamwood Middle:Ulskan Village Area:ITEM_JETPACK
+Gleamwood Upper:Gleamwood Middle:ITEM_SLIDE
 Gleamwood Upper:Ulvosa:ChargeShot
-Gleamwood Right:Gleamwood:
-Gleamwood Right:Blushwood:
-Gleamwood Right:Plague Forest:
-Plague Forest:Gleamwood Right:
+Ulskan Village Area:Gleamwood Middle:
+Ulskan Village Area:Blushwood:
+Ulskan Village Area:Plague Forest:
+Plague Forest:Ulskan Village Area:
 Ulvosa:Gleamwood Upper:
-Snowveil Entrance:Snowveil1:ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK2 && ITEM_HIGHJUMP && WindSkip
-Snowveil Entrance:Snowveil1:ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK3 && WindSkip
-Snowveil Entrance:Snowveil1:ITEM_LINEBOMB
-Snowveil1:Snow City:
-Snowveil1:Snowveil2:ITEM_SLIDE
-Snowveil1:Snowveil2:ITEM_JETPACK && ITEM_DOUBLEJUMP
-Snowveil1:Snowveil2:ITEM_JETPACK && ITEM_HIJUMP && SpinnerBash
-Snowveil1:Snowveil2:ITEM_DOUBLEJUMP && ITEM_HIJUMP && ItemUse
-Snowveil1:Snowveil2:ITEM_BombLengthExtend3 && ITEM_LINEBOMB
-Snowveil2:DreamKeeper Outside Left:
-Snowveil2:Snowveil1:ITEM_LINEBOMB
+Snowveil Entrance:Snowveil:ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK2 && ITEM_HIGHJUMP && WindSkip
+Snowveil Entrance:Snowveil:ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK3 && WindSkip
+Snowveil Entrance:Snowveil:ITEM_LINEBOMB
+Snowveil:Snow City:
+Snowveil:Snowveil above Verglas Village:ITEM_SLIDE
+Snowveil:Snowveil above Verglas Village:ITEM_JETPACK && ITEM_DOUBLEJUMP
+Snowveil:Snowveil above Verglas Village:ITEM_JETPACK && ITEM_HIJUMP && SpinnerBash
+Snowveil:Snowveil above Verglas Village:ITEM_DOUBLEJUMP && ITEM_HIJUMP && ItemUse
+Snowveil:Snowveil above Verglas Village:ITEM_BombLengthExtend3 && ITEM_LINEBOMB
+Snowveil above Verglas Village:DreamKeeper Outside Left:
+Snowveil above Verglas Village:Snowveil:ITEM_LINEBOMB
 Verdazure Sea:Blushwood:
 Verdazure Sea:Forgotten City:ITEM_WATERMOVEMENT && ITEM_LINEBOMB
 Verdazure Sea:Verdazure Ocean:ITEM_SLIDE && ChargeShot
 Verdazure Ocean:Snowveil Entrance:
-Verdazure Ocean:Swampike:
-Verdazure Ocean:Forgotten City Upper Exit:ITEM_WATERMOVEMENT && ITEM_OrbTypeS3 && I20 && ChargeShot
-Swampike:Lab Extra:
+Verdazure Ocean:Verdazure Swamp:
+Verdazure Ocean:Forgotten City Upper Exit:ITEM_WATERMOVEMENT && ITEM_OrbTypeS3 && I20 && ChargeShot && ITEM_ORB3
+Verdazure Swamp:Lab - Verdazure Swamp Connection:
 Forgotten City Upper Exit:Verdazure Ocean:ChargeShot
 Forgotten City:Forgotten City Upper Exit:ITEM_LINEBOMB
 Tartarus:Swamp:
@@ -106,13 +106,13 @@ Tartarus:Vena Shop:
 Tartarus:Catacombs Entrance:
 Snow City:Snowveil Above HQ:ITEM_LINEBOMB && ITEM_SLIDE
 Snow City:Golden Hands HQ:ITEM_SLIDE && ChargeShot
-Snow City:Golden Hands HQ end:ITEM_SLIDE
-Snow City:Golden Hands HQ end:ChargeShot
+Snow City:Golden Hands HQ Sewer:ITEM_SLIDE
+Snow City:Golden Hands HQ Sewer:ChargeShot
 Snowveil Above HQ:DreamKeeper Outside Right:ITEM_DOUBLEJUMP
 Snowveil Above HQ:DreamKeeper Outside Right:ITEM_WALLJUMP
 Snowveil Above HQ:DreamKeeper Outside Right:ITEM_JETPACK
-Golden Hands HQ:Golden Hands HQ end:ITEM_LINEBOMB && ChargeShot
-Golden Hands HQ end:Snow City:
+Golden Hands HQ:Golden Hands HQ Sewer:ITEM_LINEBOMB && ChargeShot
+Golden Hands HQ Sewer:Snow City:
 LavaWorld:Swamp Entrance:
 LavaWorld:Swamp:ChargeShot && ITEM_LINEBOMB
 LavaWorld:LavaWorld Part 2:ITEM_JETPACK
@@ -132,18 +132,18 @@ DreamKeeper Outside Left:DreamKeeper Outside Right:ITEM_JETPACK
 DreamKeeper Outside Left:DreamKeeper Outside Right:ITEM_DOUBLEJUMP
 DreamKeeper Outside Left:DreamKeeper Outside Right:ITEM_WALLJUMP
 DreamKeeper Outside Left:DreamKeeper:ITEM_Rotater && ChargeShot
-DreamKeeper Outside Left:Valley Lower Part:
-DreamKeeper:Deep Dream:
-Deep Dream:Deep Dream 2:ITEM_HIJUMP
-Deep Dream:Deep Dream 2:ITEM_WALLJUMP
-Deep Dream:Deep Dream 2:ITEM_JETPACK
-Deep Dream:Deep Dream 2:ITEM_DOUBLEJUMP
-Deep Dream 2::
-Valley Lower Part:Valley Middle Part:ITEM_SLIDE &&  ITEM_Rotater
-Valley Middle Part:Valley Lower Part:ITEM_Rotater && ITEM_SLIDE
-Valley Middle Part:Valley Lower Part:ITEM_Rotater && ITEM_LINEBOMB
-Valley Middle Part:Valley Upper Part:ITEM_LINEBOMB
-Valley Upper Part:Valley Middle Part:ITEM_SLIDE
+DreamKeeper Outside Left:Heavens Valley Snow Route Low:
+DreamKeeper:Dreamless Depths:ITEM_SLIDE && ITEM_LINEBOMB
+Dreamless Depths:Dreamless Depths 2:ITEM_HIJUMP
+Dreamless Depths:Dreamless Depths 2:ITEM_WALLJUMP
+Dreamless Depths:Dreamless Depths 2:ITEM_JETPACK
+Dreamless Depths:Dreamless Depths 2:ITEM_DOUBLEJUMP
+Dreamless Depths 2::
+Heavens Valley Snow Route Low:Heavens Valley Snow Route Middle:ITEM_SLIDE &&  ITEM_Rotater
+Heavens Valley Snow Route Middle:Heavens Valley Snow Route Low:ITEM_Rotater && ITEM_SLIDE
+Heavens Valley Snow Route Middle:Heavens Valley Snow Route Low:ITEM_Rotater && ITEM_LINEBOMB
+Heavens Valley Snow Route Middle:Heavens Valley Snow Route Upper:ITEM_LINEBOMB
+Heavens Valley Snow Route Upper:Heavens Valley Snow Route Middle:ITEM_SLIDE
 Valhalla City:Cloister:ITEM_SLIDE && ITEM_LINEBOMB
 Valhalla City:EverGarden:ITEM_LINEBOMB
 Valhalla City:Vena Shop:
@@ -160,7 +160,7 @@ Heavens Valley:Valhalla Breath Lower Left Part:ITEM_DOUBLEJUMP
 Heavens Valley:Valhalla Breath Lower Left Part:ChargeShot
 Valhalla Breath Left Part::
 Ruins Entrance:Ruins:ITEM_LINEBOMB
-Ruins Entrance:Start Area:
+Ruins Entrance:Thanatara Canyon:
 Ruins::
 Sinners Entrance:Sinners Hell:ITEM_SLIDE && ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP2 && ChargeShot
 Sinners Entrance:Sinners Hell:ITEM_SLIDE && ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP && ITEM_DOUBLEJUMP && ChargeShot
@@ -168,7 +168,7 @@ Sinners Entrance:Sinners Hell:ITEM_SLIDE && ITEM_AREABOMB && ITEM_LINEBOMB && IT
 Sinners Hell:Illusion Palace:
 Illusion Palace::
 Relicts:CopperWood:
-Relicts:Gleamwood:
+Relicts:Gleamwood Middle:
 Catacombs Entrance:Catacombs Main:ITEM_SLIDE
 Catacombs Entrance:Tartarus:
 Catacombs Main:Catacombs Entrance:ITEM_LINEBOMB
@@ -180,8 +180,9 @@ Catacombs Main:Lab:ITEM_LINEBOMB
 Vassago fight:Lab Part 2:ITEM_LINEBOMB
 Lab:Lab Part 2:ITEM_LINEBOMB
 Lab Part 2:Catacombs Entrance:ITEM_LINEBOMB
-Lab Part 2:Lab Extra:ITEM_BombLengthExtend3 && ITEM_LINEBOMB
-Lab Extra:Lab Part 2:ITEM_LINEBOMB
+Lab Part 2:Lab - Verdazure Swamp Connection:ITEM_BombLengthExtend3 && ITEM_LINEBOMB
+Lab - Verdazure Swamp Connection:Lab Part 2:ITEM_LINEBOMB
+Lab - Verdazure Swamp Connection:Verdazure Swamp:ITEM_LINEBOMB && ITEM_BombLengthExtend3
 Cloister:Valhalla City:
 Cloister:Cloister 2:ChargeShot
 Cloister 2::
@@ -198,13 +199,13 @@ EverGarden:EverGardenPortals:ITEM_DOUBLEJUMP
 EverGarden:EverGardenPortals:ITEM_JETPACK && ITEM_AirDash
 EverGarden:EverGardenPortals:ITEM_JETPACK3
 EverGarden:EverGardenPortals:ITEM_JETPACK2
-EverGarden:Valley Upper Part:ITEM_JETPACK
-EverGarden:Valley Upper Part:ITEM_DOUBLEJUMP
-EverGarden:Valley Upper Part:ITEM_AirDash
-EverGardenPortals:HevPortalHub:ITEM_DOUBLEJUMP && ITEM_AirDash
-EverGardenPortals:HevPortalHub:ITEM_JETPACK && ITEM_AirDash
-EverGardenPortals:HevPortalHub:ITEM_JETPACK3
-EverGardenPortals:HevPortalHub:ITEM_JETPACK2
+EverGarden:Heavens Valley Snow Route Upper:ITEM_JETPACK
+EverGarden:Heavens Valley Snow Route Upper:ITEM_DOUBLEJUMP
+EverGarden:Heavens Valley Snow Route Upper:ITEM_AirDash
+EverGardenPortals:Heaven Portal Hub:ITEM_DOUBLEJUMP && ITEM_AirDash
+EverGardenPortals:Heaven Portal Hub:ITEM_JETPACK && ITEM_AirDash
+EverGardenPortals:Heaven Portal Hub:ITEM_JETPACK3
+EverGardenPortals:Heaven Portal Hub:ITEM_JETPACK2
 EverGardenPortals:EverGarden:
-HevPortalHub:EverGardenPortals:
-HevPortalHub:EverGarden:
+Heaven Portal Hub:EverGardenPortals:
+Heaven Portal Hub:EverGarden:
