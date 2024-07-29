@@ -328,11 +328,11 @@
     },
     {
         "Itemname": "I20",
-        "Location": "Start Area",
+        "Location": "Ana Thema",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "QUEST_LibraryKey",
                 "Difficulty": 0
             }
         ]

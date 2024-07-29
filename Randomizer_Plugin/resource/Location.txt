@@ -27,7 +27,7 @@ BADGE_ConvertDef2Off:Desert Base Upper Half:1:,0
 BADGE_LowerThan20:Desert Base Upper Half:1:,0
 ITEM_EasyStyle:Start Area:1:,0
 ITEM_KNIFE:Start Area:1:,0
-I20:Start Area:1:,0
+I20:Ana Thema:1:QUEST_LibraryKey,0
 ITEM_ORB:Start Area:1:,0
 BADGE_MAXHPUP:Start Area:1:ChargeShot,0
 BADGE_RangeCombo:Start Area:1:,0
