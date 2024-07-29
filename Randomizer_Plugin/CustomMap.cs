@@ -247,11 +247,8 @@ namespace TeviRandomizer
                 createItemTile(334,205,20,false,false);
                 for (int i = 0; i < 3; i++)
                 {
-                    createNormalTile(296, 177-i, 109, false, false);
+                    //createNormalTile(296, 177-i, 109, false, false);
                 }
-
-                Debug.LogWarning("TRIGGERD");
-
             }
         }
 

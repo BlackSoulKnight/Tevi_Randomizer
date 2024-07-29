@@ -94,7 +94,7 @@ public enum CustomFlags : short
 }
 
 
-[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "0.9.9.4")]
+[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "1")]
 [BepInProcess("TEVI.exe")]
 public class RandomizerPlugin : BaseUnityPlugin
 {
@@ -415,7 +415,7 @@ public class RandomizerPlugin : BaseUnityPlugin
     [HarmonyPostfix]
     static void findNearestRandomizedItem(ref ItemTile tile,ref ItemList.Type nearestType)
     {
-
+        if (tile == null) return;
         nearestType =getRandomizedItem(tile.itemid, tile.GetSlotID()).getItemTyp();
     }
 
@@ -949,7 +949,7 @@ class EventPatch
                 SaveManager.Instance.SetStackableItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
             else
                 SaveManager.Instance.SetItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
-
+            
             if (RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart])
             {
                 SaveManager.Instance.SetItem(ItemList.Type.I19,1);

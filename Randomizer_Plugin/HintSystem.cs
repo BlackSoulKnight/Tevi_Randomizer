@@ -131,13 +131,14 @@ namespace TeviRandomizer
         [HarmonyPostfix]
         static void test1()
         {
-            Debug.LogWarning("ITS ME");
+            //Debug.LogWarning("ITS ME");
+
         }
         [HarmonyPatch(typeof(GemaChatLogManager), "AddLog")]
         [HarmonyPostfix]
         static void test2()
         {
-            Debug.LogWarning("NO,ITS ME");
+            //Debug.LogWarning("NO,ITS ME");
         }
 
     }
