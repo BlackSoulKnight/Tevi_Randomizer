@@ -6300,7 +6300,7 @@
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "ITEM_KNIFE && Upgrade 4 && Air 3",
+                "Method": "ITEM_KNIFE && Upgrade 4 && Air",
                 "Difficulty": 0
             }
         ]
@@ -6322,7 +6322,7 @@
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "ITEM_ORB && Upgrade 3 && Air 3",
+                "Method": "ITEM_ORB && Upgrade 3 && Air",
                 "Difficulty": 0
             }
         ]

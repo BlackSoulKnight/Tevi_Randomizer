@@ -519,9 +519,9 @@ BADGE_AutoPilot:Crafting:1:Coins 250 && BADGE_AmuletQuicken,0
 ITEM_Explorer:Crafting:2:ITEM_Explorer && Core 3 && Upgrade 1 && RainbowCheck,0;ITEM_Explorer && Core 1 && Upgrade 1 && Explorer,0
 ITEM_Explorer:Crafting:3:ITEM_Explorer && Core 6 && Upgrade 1 && RainbowCheck,0;ITEM_Explorer && Core 1 && Upgrade 1 && Explorer,0
 ITEM_KNIFE:Crafting:2:ITEM_KNIFE && Upgrade 3,0
-ITEM_KNIFE:Crafting:3:ITEM_KNIFE && Upgrade 4 && Air 3,0
+ITEM_KNIFE:Crafting:3:ITEM_KNIFE && Upgrade 4 && Air,0
 ITEM_ORB:Crafting:2:ITEM_ORB && Upgrade 3,0
-ITEM_ORB:Crafting:3:ITEM_ORB && Upgrade 3 && Air 3,0
+ITEM_ORB:Crafting:3:ITEM_ORB && Upgrade 3 && Air,0
 ITEM_RapidShots:Crafting:2:ITEM_RapidShots && Upgrade 2,0
 ITEM_RapidShots:Crafting:3:ITEM_RapidShots && Upgrade 4,0
 ITEM_AttackRange:Crafting:2:ITEM_AttackRange && Upgrade 1,0
