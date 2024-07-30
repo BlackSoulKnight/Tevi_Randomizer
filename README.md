@@ -37,7 +37,8 @@ The Randomizer data is saved within the Savefile.
 + Quickdrop damage is increased with each consecutive Quickdrop without receiving Damage or dealing Damage with anything else
 + Rabi Ribi Minigame is in Logic and requires atleast 100 Points and full Clear
 + Rabi Ribi Easteregg contains a Item location
-+ It is possible to play the game with Sable and Celia locked behind extra Items  
++ It is possible to play the game with Sable and Celia locked behind extra Items
++ Talking to Professor Zema will provide hints as to general item locations
 
 ## Custom Difficulty
 ### Currently Disabled 
@@ -51,3 +52,22 @@ Remove the TeviRandomizer.dll
 
 ## Uninstalling
 Delete the Randomizer Plugin from the plugins folder
+
+## Tips/Rando exclusive knowledge
++ The rando may require the freeroam exclusive tech (wall jumps and wall kicks) for vertical mobility before finding any vertical mobility items
+  + To do a wall jump without the wall jump item, face away from a wall then jump, turn towards the wall then press away and jump
+  + To do a wall kick, do the wall jump then quick drop into another wall
++ You may need to lure an enemy then quick drop on them to get additional height for some jumps/ledges
++ If you don't start with the knife, you can still use cross bombs/tornado slash/spanner bash
+  + For cross bombs, use the cross bomb shortcut
+  + For tornado slash/spanner bash, the same inputs still work, you just need to unlock the moves first
+    note: the rando doesn't require these moves and doesn't check for them when placing items
++ Charge shots now require level 2 orbitars
++ If you don't start with Sable/Celia, the core expansion is not usable until one of them is found. And you're locked to that one character until the other is found
++ Cluster bomb is not usable without cross bombs
++ The left/right golden hands and the complete golden hands are all separate items which can be found. You can still turn in the left/right hands even if you've found the complete hands for example
++ There will always be atleast one of each progression item on the field or in crafting, so even if you randomize upgrades you don't need to worry about being softlocked by purple crystals
++ Defeating bosses progresses the internal chapter count which in turn unlocks crafting options and options for Vena's shop
+  + Fray and Memloch also unlock more shop options in Morose and Ana Thema respectively
++ Memine races won't have mobility items as rewards
++ If you're unfamiliar with the item locations, starting with level 3 compass might be a good idea. Professor Zema will also provide hints if you talk to him
