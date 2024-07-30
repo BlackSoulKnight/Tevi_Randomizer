@@ -4167,7 +4167,7 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Gallary of Mirrors",
+        "Location": "Gallery of Mirrors",
         "slotId": 10,
         "Requirement": [
             {
@@ -4178,7 +4178,7 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Gallary of Mirrors",
+        "Location": "Gallery of Mirrors",
         "slotId": 10,
         "Requirement": [
             {
@@ -4189,7 +4189,7 @@
     },
     {
         "Itemname": "BADGE_ChargeShotDiscount",
-        "Location": "Gallary of Mirrors",
+        "Location": "Gallery of Mirrors",
         "slotId": 1,
         "Requirement": [
             {
@@ -4200,7 +4200,7 @@
     },
     {
         "Itemname": "BADGE_AreaBombThrower",
-        "Location": "Gallary of Mirrors 2",
+        "Location": "Gallery of Mirrors 2",
         "slotId": 1,
         "Requirement": [
             {
@@ -4211,7 +4211,7 @@
     },
     {
         "Itemname": "BADGE_Recover3",
-        "Location": "Gallary of Mirrors 2",
+        "Location": "Gallery of Mirrors 2",
         "slotId": 1,
         "Requirement": [
             {
@@ -4222,7 +4222,7 @@
     },
     {
         "Itemname": "ITEM_BombLengthExtend",
-        "Location": "Gallary of Mirrors 2",
+        "Location": "Gallery of Mirrors 2",
         "slotId": 1,
         "Requirement": [
             {
@@ -4233,7 +4233,7 @@
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "Gallary of Mirrors 2",
+        "Location": "Gallery of Mirrors 2",
         "slotId": 47,
         "Requirement": [
             {
@@ -4244,7 +4244,7 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Gallary of Mirrors 2",
+        "Location": "Gallery of Mirrors 2",
         "slotId": 10,
         "Requirement": [
             {
@@ -4255,7 +4255,7 @@
     },
     {
         "Itemname": "BADGE_WeakGroundUpModCombo",
-        "Location": "Gallary of Mirrors 2",
+        "Location": "Gallery of Mirrors 2",
         "slotId": 1,
         "Requirement": [
             {
@@ -4278,7 +4278,7 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Gallary of Mirrors 2",
+        "Location": "Gallery of Mirrors 2",
         "slotId": 25,
         "Requirement": [
             {
@@ -4305,7 +4305,7 @@
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "Gallary of Mirrors",
+        "Location": "Gallery of Mirrors",
         "slotId": 5,
         "Requirement": [
             {
@@ -4324,7 +4324,7 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Gallary of Souls",
+        "Location": "Gallery of Souls",
         "slotId": 10,
         "Requirement": [
             {
@@ -4335,7 +4335,7 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Gallary of Souls",
+        "Location": "Gallery of Souls",
         "slotId": 10,
         "Requirement": [
             {
@@ -4346,7 +4346,7 @@
     },
     {
         "Itemname": "ITEM_DOUBLEJUMP",
-        "Location": "Gallary of Souls",
+        "Location": "Gallery of Souls",
         "slotId": 1,
         "Requirement": [
             {
@@ -4357,7 +4357,7 @@
     },
     {
         "Itemname": "BADGE_Instant1",
-        "Location": "Gallary of Souls",
+        "Location": "Gallery of Souls",
         "slotId": 1,
         "Requirement": [
             {
@@ -4368,7 +4368,7 @@
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "Gallary of Souls Boss",
+        "Location": "Gallery of Souls Boss",
         "slotId": 62,
         "Requirement": [
             {
@@ -5683,7 +5683,7 @@
     },
     {
         "Itemname": "BADGE_DoubleAirDash",
-        "Location": "Thanatara Canyon",
+        "Location": "Memine All",
         "slotId": 1,
         "Requirement": [
             {
@@ -5698,7 +5698,7 @@
         "slotId": 0,
         "Requirement": [
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
                 "Difficulty": 0
             }
         ]
@@ -5709,7 +5709,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
                 "Difficulty": 0
             }
         ]
@@ -5720,7 +5720,7 @@
         "slotId": 2,
         "Requirement": [
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
                 "Difficulty": 0
             }
         ]
@@ -5731,7 +5731,7 @@
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
                 "Difficulty": 0
             }
         ]
@@ -5742,7 +5742,7 @@
         "slotId": 4,
         "Requirement": [
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
                 "Difficulty": 0
             }
         ]
@@ -5753,7 +5753,7 @@
         "slotId": 5,
         "Requirement": [
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
                 "Difficulty": 0
             }
         ]

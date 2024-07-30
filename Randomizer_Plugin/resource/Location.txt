@@ -344,22 +344,22 @@ STACKABLE_COG:Cloister 2:46:Boss,0
 BADGE_QuickMPRegainB:Cloister 2:1:ITEM_DOUBLEJUMP,0;ITEM_HIJUMP && ITEM_WALLJUMP,0;ITEM_AirDash && ITEM_WALLJUMP,0;ITEM_JETPACK,0
 BADGE_StyleComboPassiveMAX:Cloister 2:1:ITEM_DOUBLEJUMP,0;ITEM_AirDash && ITEM_WALLJUMP,0;ITEM_JETPACK,0
 BADGE_LateAttack:Cloister:1:ITEM_LINEBOMB,0
-STACKABLE_MATK:Gallary of Mirrors:10:ITEM_LINEBOMB,0
-STACKABLE_EP:Gallary of Mirrors:10:,0
-BADGE_ChargeShotDiscount:Gallary of Mirrors:1:,0
-BADGE_AreaBombThrower:Gallary of Mirrors 2:1:,0
-BADGE_Recover3:Gallary of Mirrors 2:1:,0
-ITEM_BombLengthExtend:Gallary of Mirrors 2:1:,0
-STACKABLE_COG:Gallary of Mirrors 2:47:Boss,0
-STACKABLE_HP:Gallary of Mirrors 2:10:ITEM_SLIDE,0
-BADGE_WeakGroundUpModCombo:Gallary of Mirrors 2:1:ITEM_HIJUMP && ChargeShot,0;ITEM_DOUBLEJUMP && ChargeShot,0;ITEM_JETPACK && ChargeShot,0;ITEM_AirDash && ChargeShot,0
-STACKABLE_EP:Gallary of Mirrors 2:25:ITEM_Rotater && ITEM_JETPACK && ITEM_DOUBLEJUMP && ITEM_AirDash,0;ITEM_Rotater && ITEM_JETPACK && ITEM_AirDash,3;ITEM_Rotater && ITEM_JETPACK2 && ITEM_AirDash,0;ITEM_Rotater && ITEM_DOUBLEJUMP && ITEM_JETPACK,0;ITEM_Rotater,0
-STACKABLE_COG:Gallary of Mirrors:5:ITEM_AirDash && ITEM_WALLJUMP,0;ITEM_JETPACK,0;ITEM_DOUBLEJUMP,0
-STACKABLE_MP:Gallary of Souls:10:ITEM_SLIDE && ITEM_LINEBOMB,0
-STACKABLE_RATK:Gallary of Souls:10:ITEM_SLIDE && ITEM_LINEBOMB,0
-ITEM_DOUBLEJUMP:Gallary of Souls:1:,0
-BADGE_Instant1:Gallary of Souls:1:,-1
-STACKABLE_COG:Gallary of Souls Boss:62:Boss,0
+STACKABLE_MATK:Gallery of Mirrors:10:ITEM_LINEBOMB,0
+STACKABLE_EP:Gallery of Mirrors:10:,0
+BADGE_ChargeShotDiscount:Gallery of Mirrors:1:,0
+BADGE_AreaBombThrower:Gallery of Mirrors 2:1:,0
+BADGE_Recover3:Gallery of Mirrors 2:1:,0
+ITEM_BombLengthExtend:Gallery of Mirrors 2:1:,0
+STACKABLE_COG:Gallery of Mirrors 2:47:Boss,0
+STACKABLE_HP:Gallery of Mirrors 2:10:ITEM_SLIDE,0
+BADGE_WeakGroundUpModCombo:Gallery of Mirrors 2:1:ITEM_HIJUMP && ChargeShot,0;ITEM_DOUBLEJUMP && ChargeShot,0;ITEM_JETPACK && ChargeShot,0;ITEM_AirDash && ChargeShot,0
+STACKABLE_EP:Gallery of Mirrors 2:25:ITEM_Rotater && ITEM_JETPACK && ITEM_DOUBLEJUMP && ITEM_AirDash,0;ITEM_Rotater && ITEM_JETPACK && ITEM_AirDash,3;ITEM_Rotater && ITEM_JETPACK2 && ITEM_AirDash,0;ITEM_Rotater && ITEM_DOUBLEJUMP && ITEM_JETPACK,0;ITEM_Rotater,0
+STACKABLE_COG:Gallery of Mirrors:5:ITEM_AirDash && ITEM_WALLJUMP,0;ITEM_JETPACK,0;ITEM_DOUBLEJUMP,0
+STACKABLE_MP:Gallery of Souls:10:ITEM_SLIDE && ITEM_LINEBOMB,0
+STACKABLE_RATK:Gallery of Souls:10:ITEM_SLIDE && ITEM_LINEBOMB,0
+ITEM_DOUBLEJUMP:Gallery of Souls:1:,0
+BADGE_Instant1:Gallery of Souls:1:,-1
+STACKABLE_COG:Gallery of Souls Boss:62:Boss,0
 STACKABLE_HP:Verdazure Ocean:23:ITEM_WALLJUMP && ITEM_DOUBLEJUMP,0;ITEM_WALLJUMP && ITEM_JETPACK2,0;ITEM_WALLJUMP && WaterMovement,0;ITEM_WALLJUMP && ITEM_JETPACK && ITEM_AirDash,0;WaterMovement && ITEM_AirDash && ITEM_DOUBLEJUMP,0;WaterMovement && ITEM_DOUBLEJUMP && ITEM_JETPACK,0
 BADGE_DodgeCharger:Verdazure Ocean:1:ITEM_AREABOMB && ITEM_LINEBOMB && ChargeShot,0
 STACKABLE_MP:Verdazure Ocean:16:ITEM_LINEBOMB,0
@@ -464,13 +464,13 @@ BADGE_AutoFoodUse:Vena Shop:1:Coins 250,0
 BADGE_BombDispelDebuff:Vena Shop:1:Coins 3100,0
 ITEM_VenaCharm:Vena Shop:1:Coins 1000,0
 ITEM_RapidShots:Vena Shop:1:Coins 2700,0
-BADGE_DoubleAirDash:Thanatara Canyon:1:AllMemine,0
-STACKABLE_SHARD:Ana Thema:0:ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0
-STACKABLE_SHARD:Blushwood Sliding:1:ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0
-STACKABLE_SHARD:Forest:2:ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0
-STACKABLE_SHARD:Tartarus:3:ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0
-STACKABLE_SHARD:Valhalla Breath Left Part:4:ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0
-STACKABLE_SHARD:Ana Thema:5:ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0
+BADGE_DoubleAirDash:Memine All:1:AllMemine,0
+STACKABLE_SHARD:Ana Thema:0:ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0
+STACKABLE_SHARD:Blushwood Sliding:1:ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0
+STACKABLE_SHARD:Forest:2:ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0
+STACKABLE_SHARD:Tartarus:3:ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0
+STACKABLE_SHARD:Valhalla Breath Left Part:4:ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0
+STACKABLE_SHARD:Ana Thema:5:ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0
 STACKABLE_SHARD:Thanatara Canyon:29:AllMemine,0
 BADGE_SableALastHitEnhance:Crafting:1:Coins 250 && Chapter 1,0
 BADGE_SableALongRangeSnipe:Crafting:1:Coins 250 && ITEM_RailPass,0

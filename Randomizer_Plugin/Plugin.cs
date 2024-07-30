@@ -94,10 +94,13 @@ public enum CustomFlags : short
 }
 
 
-[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "1")]
+[BepInPlugin("tevi.plugins.randomizer", "Randomizer", "1.0")]
 [BepInProcess("TEVI.exe")]
 public class RandomizerPlugin : BaseUnityPlugin
 {
+
+
+
 
     static public Dictionary<ItemData, ItemData> __itemData = new Dictionary<ItemData, ItemData>();
 
@@ -212,6 +215,25 @@ public class RandomizerPlugin : BaseUnityPlugin
         }
 
         }
+
+
+    //temp fix for TEVI version 1.23
+    [HarmonyPatch(typeof(EnergyBall), "ALWAYS")]
+    [HarmonyPrefix]
+    static bool fixBallFreeze(ref enemyController ___en, ref EnergyBall __instance)
+    {
+        if (___en.GetCounter(19) >= 100f)
+        {
+            ___en.AddCounter(19, Time.deltaTime);
+            if (___en.GetCounter(19) >= 100.2f && ___en.onGround())
+            {
+                Traverse.Create(__instance).Method("SelfExplode").GetValue();
+                return false;
+            }
+        }
+        return true;
+    }
+
 
 
     [HarmonyPatch(typeof(Localize), "GetLocalizeTextWithKeyword")]

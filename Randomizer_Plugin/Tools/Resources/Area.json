@@ -165,6 +165,23 @@
                 {
                     "Exit": "Crafting",
                     "Method": ""
+                },
+                {
+                    "Exit": "Memine All races",
+                    "Method": "AllMemine" 
+                }
+            ]
+        },
+        {
+            "Name":"Memine All",
+            "Money":[{
+                    "Method":"",
+                    "Amount":0
+            }],
+            "Connections": [
+                {
+                    "Exit": "",
+                    "Method": ""
                 }
             ]
         },
@@ -506,7 +523,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Gallary of Mirrors",
+                    "Exit": "Gallery of Mirrors",
                     "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
                 },
                 {
@@ -1797,7 +1814,7 @@
     ],
     "Map27": [
         {
-            "Name": "Gallary of Mirrors",
+            "Name": "Gallery of Mirrors",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -1806,13 +1823,13 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Gallary of Mirrors 2",
+                    "Exit": "Gallery of Mirrors 2",
                     "Method": "ChargeShot"
                 }
             ]
         },
         {
-            "Name": "Gallary of Mirrors 2",
+            "Name": "Gallery of Mirrors 2",
             "Money": [
                 {
                     "Method": "Needs to be Recalculated",
@@ -1821,13 +1838,13 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Gallary of Souls",
+                    "Exit": "Gallery of Souls",
                     "Method": ""
                 }
             ]
         },
         {
-            "Name": "Gallary of Souls",
+            "Name": "Gallery of Souls",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -1836,15 +1853,15 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Gallary of Souls Boss",
+                    "Exit": "Gallery of Souls Boss",
                     "Method": "ITEM_JETPACK2 && ChargeShot"
                 },
                 {
-                    "Exit": "Gallary of Souls Boss",
+                    "Exit": "Gallery of Souls Boss",
                     "Method": "ITEM_WALLJUMP && ChargeShot"
                 },
                 {
-                    "Exit": "Gallary of Souls Boss",
+                    "Exit": "Gallery of Souls Boss",
                     "Method": "ITEM_DOUBLEJUMP && ChargeShot"
                 }
             ]
@@ -1853,7 +1870,7 @@
 
 
         {
-            "Name": "Gallary of Souls Boss",
+            "Name": "Gallery of Souls Boss",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",

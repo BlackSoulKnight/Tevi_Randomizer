@@ -2,6 +2,7 @@ Desert Base Main
 Desert Base Entrance
 Desert Base Upper Half
 Thanatara Canyon
+Memine All
 Crafting
 Morose Transit
 Oasis
@@ -65,10 +66,10 @@ Lab Part 2
 Lab - Verdazure Swamp Connection
 Cloister
 Cloister 2
-Gallary of Mirrors
-Gallary of Mirrors 2
-Gallary of Souls
-Gallary of Souls Boss
+Gallery of Mirrors
+Gallery of Mirrors 2
+Gallery of Souls
+Gallery of Souls Boss
 Blushwood
 Blushwood Sliding
 EverGarden

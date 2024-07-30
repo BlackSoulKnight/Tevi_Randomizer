@@ -24,6 +24,8 @@ Thanatara Canyon:Heavens Valley:ITEM_LINEBOMB
 Thanatara Canyon:Morose Transit:
 Thanatara Canyon:Desert Base Entrance:
 Thanatara Canyon:Crafting:
+Thanatara Canyon:Memine All races:AllMemine
+Memine All::
 Crafting::
 Morose Transit:Moros City:
 Morose Transit:Thanatara Canyon:
@@ -59,7 +61,7 @@ CopperWood:Forest:
 CopperWood:Travoll Industrie:
 CopperWood:Relicts:
 CopperWood:Gleamwood Middle:ITEM_LINEBOMB
-Ana Thema:Gallary of Mirrors:ITEM_SLIDE && ITEM_LINEBOMB
+Ana Thema:Gallery of Mirrors:ITEM_SLIDE && ITEM_LINEBOMB
 Ana Thema:Vena Shop:
 Ana Thema:Gleamwood Bottom:
 Gleamwood Bottom:Gleamwood Middle:ITEM_LINEBOMB
@@ -186,12 +188,12 @@ Lab - Verdazure Swamp Connection:Verdazure Swamp:ITEM_LINEBOMB && ITEM_BombLengt
 Cloister:Valhalla City:
 Cloister:Cloister 2:ChargeShot
 Cloister 2::
-Gallary of Mirrors:Gallary of Mirrors 2:ChargeShot
-Gallary of Mirrors 2:Gallary of Souls:
-Gallary of Souls:Gallary of Souls Boss:ITEM_JETPACK2 && ChargeShot
-Gallary of Souls:Gallary of Souls Boss:ITEM_WALLJUMP && ChargeShot
-Gallary of Souls:Gallary of Souls Boss:ITEM_DOUBLEJUMP && ChargeShot
-Gallary of Souls Boss::
+Gallery of Mirrors:Gallery of Mirrors 2:ChargeShot
+Gallery of Mirrors 2:Gallery of Souls:
+Gallery of Souls:Gallery of Souls Boss:ITEM_JETPACK2 && ChargeShot
+Gallery of Souls:Gallery of Souls Boss:ITEM_WALLJUMP && ChargeShot
+Gallery of Souls:Gallery of Souls Boss:ITEM_DOUBLEJUMP && ChargeShot
+Gallery of Souls Boss::
 Blushwood:Blushwood Sliding:ITEM_SLIDE
 Blushwood:Verdazure Sea:
 Blushwood Sliding::
