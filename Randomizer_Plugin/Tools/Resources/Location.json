@@ -310,7 +310,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]

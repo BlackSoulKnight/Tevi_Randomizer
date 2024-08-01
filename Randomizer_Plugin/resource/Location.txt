@@ -25,7 +25,7 @@ STACKABLE_COG:Desert Base Upper Half:0:,0
 QUEST_GHandL:Desert Base Upper Half:1:ITEM_LINEBOMB,0
 BADGE_ConvertDef2Off:Desert Base Upper Half:1:,0
 BADGE_LowerThan20:Desert Base Upper Half:1:,0
-ITEM_EasyStyle:Thanatara Canyon:1:,0
+ITEM_EasyStyle:Thanatara Canyon:1:ChargeShot,0
 ITEM_KNIFE:Thanatara Canyon:1:,0
 I20:Ana Thema:1:QUEST_LibraryKey,0
 ITEM_ORB:Thanatara Canyon:1:,0
