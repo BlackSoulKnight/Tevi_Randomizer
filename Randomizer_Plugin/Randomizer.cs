@@ -62,7 +62,7 @@ namespace TeviRandomizer
                         {
                             continue;
                         }
-                        // custom words checks
+                        // ILLUSION PALACE MISSING REQ NEED TO CHECK GEAR COUNT
 
                         if (item.Contains("Coin") && checkMovementItems(itemList) && (itemList.Contains("ITEM_LINEBOMB") || itemList.Contains("ITEM_KNIFE"))) continue;
                         if (item.Contains("Coin") && item.Contains("250")) continue;

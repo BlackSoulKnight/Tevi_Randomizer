@@ -15,7 +15,7 @@ STACKABLE_EP:Desert Base Entrance:22:ITEM_LINEBOMB,0
 STACKABLE_COG:Desert Base Entrance:20:Boss,0
 BADGE_BACKSTAB:Desert Base Main:1:,0
 BADGE_Normal2AntiHealth:Desert Base Main:1:,0
-STACKABLE_MATK:Desert Base Main:6:,0
+STACKABLE_MATK:Desert Base Main:6:ITEM_LINEBOMB,0
 STACKABLE_RATK:Desert Base Main:9:,0
 BADGE_ChangeOrbCharger:Desert Base Main:1:ITEM_SLIDE && ITEM_LINEBOMB,0
 BADGE_ANTIENERGYBALL:Desert Base Upper Half:1:,0
@@ -67,7 +67,7 @@ BADGE_Lucky7C:Valhalla Breath Left Part:1:ITEM_SLIDE && ITEM_DOUBLEJUMP,0;ITEM_S
 STACKABLE_MP:Valhalla Breath Left Part:14:ChargeShot,0
 STACKABLE_COG:Moros City:23:Boss,0
 STACKABLE_MP:Moros City:9:,0
-BADGE_TauntPhoto:Moros City:1:ITEM_SLIDE,0
+BADGE_TauntPhoto:Moros City:1:ITEM_SLIDE && ITEM_LINEBOMB && ChargeShot,0
 STACKABLE_EP:Moros City:9:ITEM_AirDash && ITEM_JETPACK3,0;ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK,0
 ITEM_SPEEDUP:Moros City:1:Coins 2000,0
 BADGE_BossPassing:Moros City:1:Coins 1000,0

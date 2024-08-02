@@ -31,15 +31,15 @@
                 },
                 {
                     "Exit": "Desert Base Upper Half",
-                    "Method": "ITEM_KNIFE && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AirDash"
+                    "Method": "ITEM_KNIFE && ITEM_SLIDE && ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Desert Base Upper Half",
-                    "Method": "ITEM_KNIFE && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_JETPACK"
+                    "Method": "ITEM_KNIFE && ITEM_SLIDE && ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Desert Base Upper Half",
-                    "Method": "ITEM_KNIFE && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_DOUBLEJUMP"
+                    "Method": "ITEM_KNIFE && ITEM_SLIDE && ITEM_LINEBOMB"
                 }
             ]
         },
