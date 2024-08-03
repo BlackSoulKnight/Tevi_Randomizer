@@ -558,9 +558,9 @@ ITEM_Rotater:Crafting:2:ITEM_Rotater && Upgrade 2 && Air,0
 ITEM_Rotater:Crafting:3:ITEM_Rotater && Upgrade 2 && Air,0
 ITEM_GoldenGlove:Crafting:2:ITEM_GoldenGlove && Upgrade 1 && Fire && Air && Light,0
 ITEM_GoldenGlove:Crafting:3:ITEM_GoldenGlove && Upgrade 1 && Fire && Air && Light,0
-ITEM_OrbTypeC2:Crafting:1:Coins 250 && Core 4,0
-ITEM_OrbTypeS2:Crafting:1:Coins 250 && Core 5,0
-ITEM_OrbTypeC3:Crafting:1:Coins 250 && Core 7,0
-ITEM_OrbTypeS3:Crafting:1:Coins 250 && Core 8,0
+ITEM_OrbTypeC2:Crafting:1:Coins 250 && ITEM_ORB3 && Core 4,0
+ITEM_OrbTypeS2:Crafting:1:Coins 250 && ITEM_ORB3 && Core 5,0
+ITEM_OrbTypeC3:Crafting:1:Coins 250 && ITEM_ORB3 && Core 7,0
+ITEM_OrbTypeS3:Crafting:1:Coins 250 && ITEM_ORB3 && Core 8,0
 ITEM_OrbBoostU:Crafting:1:Coins 250 && Core 4,0
 ITEM_OrbBoostD:Crafting:1:Coins 250 && Core 8,0

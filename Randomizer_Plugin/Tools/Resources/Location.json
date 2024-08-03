@@ -6729,7 +6729,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Core 4",
+                "Method": "Coins 250 && ITEM_ORB3 && Core 4",
                 "Difficulty": 0
             }
         ]
@@ -6740,7 +6740,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Core 5",
+                "Method": "Coins 250 && ITEM_ORB3 && Core 5",
                 "Difficulty": 0
             }
         ]
@@ -6751,7 +6751,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Core 7",
+                "Method": "Coins 250 && ITEM_ORB3 && Core 7",
                 "Difficulty": 0
             }
         ]
@@ -6762,7 +6762,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Core 8",
+                "Method": "Coins 250 && ITEM_ORB3 && Core 8",
                 "Difficulty": 0
             }
         ]
