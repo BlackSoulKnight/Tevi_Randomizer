@@ -3264,7 +3264,7 @@ class BonusFeaturePatch()
 
     [HarmonyPatch(typeof(CharacterBase),"BulletHurtPlayer")]
     [HarmonyPostfix]
-    static void test(ref CharacterBase owner,float damage,BulletType type,ref CharacterBase __instance, ref bool __result)
+    static void HurtCheck(ref CharacterBase owner,float damage,BulletType type,ref CharacterBase __instance, ref bool __result)
     {
         //Debug.Log($"{type} {damage} {owner}");
         if (__result)
@@ -3274,7 +3274,7 @@ class BonusFeaturePatch()
                 bonusDropKickDmg++;
 
             }
-            else if (owner.isPlayer() || __instance.isPlayer())
+            else if (damage > 0 && (owner != null && owner.isPlayer()) || __instance.isPlayer())
             {
                 Debug.Log("Combo was broken by " + type);
                 bonusDropKickDmg = 0;
