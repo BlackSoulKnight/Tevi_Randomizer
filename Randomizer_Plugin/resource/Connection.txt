@@ -98,7 +98,7 @@ Verdazure Sea:Blushwood:
 Verdazure Sea:Forgotten City:ITEM_WATERMOVEMENT && ITEM_LINEBOMB
 Verdazure Sea:Verdazure Ocean:ITEM_SLIDE && ChargeShot
 Verdazure Ocean:Snowveil Entrance:
-Verdazure Ocean:Verdazure Swamp:
+Verdazure Ocean:Verdazure Swamp:ITEM_LINEBOMB
 Verdazure Ocean:Forgotten City Upper Exit:ITEM_WATERMOVEMENT && ITEM_OrbTypeS3 && I20 && ChargeShot && ITEM_ORB3
 Verdazure Swamp:Lab - Verdazure Swamp Connection:
 Forgotten City Upper Exit:Verdazure Ocean:ChargeShot

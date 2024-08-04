@@ -846,7 +846,7 @@
                 },
                 {
                     "Exit": "Verdazure Swamp",
-                    "Method": ""
+                    "Method": "ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Forgotten City Upper Exit",
