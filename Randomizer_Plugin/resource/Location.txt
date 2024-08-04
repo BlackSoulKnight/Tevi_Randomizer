@@ -53,7 +53,7 @@ STACKABLE_MP:Ruins:8:ITEM_SLIDE,0
 BADGE_BoostSizeIncrease:Ruins:1:EliteChallangeB,0
 STACKABLE_HP:Heavens Valley:7:,0
 STACKABLE_EP:Heavens Valley:7:ITEM_DOUBLEJUMP,0;ITEM_JETPACK,0;ChargeShot,0;ITEM_AirDash,0
-STACKABLE_HP:Heavens Valley:13:,0
+STACKABLE_HP:Heavens Valley:13:ITEM_LINEBOMB && ITEM_AREABOMB,0
 BADGE_DoubleJumpAttack:Valhalla Breath Lower Left Part:1:ITEM_LINEBOMB,0
 STACKABLE_MP:Heavens Valley:25:ChargeShot,0
 STACKABLE_EP:Valhalla Breath Lower Left Part:13:,0

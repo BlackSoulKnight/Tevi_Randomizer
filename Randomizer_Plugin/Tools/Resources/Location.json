@@ -650,7 +650,7 @@
         "slotId": 13,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB && ITEM_AREABOMB",
                 "Difficulty": 0
             }
         ]
