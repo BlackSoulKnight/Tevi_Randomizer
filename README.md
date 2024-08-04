@@ -24,6 +24,10 @@
 
 [BepInEx V 5.4 64 bit](https://docs.bepinex.dev/articles/user_guide/installation/index.html#tabpanel_bHGHmlrG6S_tabid-win)<br>
 
+### Optional
+[Tevi Map Tracker](https://github.com/vegemii/Tevi-Tracker/releases) made by Vegemii <br>
+[Tevi Item Tracker](https://github.com/cramps-man/tevi-rando-progression-ui) made by Cramps-Man
+
 ## Building the Project
 
 For building the Project, the following DLLs from the Game are required and found in TEVI_data/Managed
