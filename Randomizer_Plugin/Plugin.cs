@@ -1667,7 +1667,7 @@ class CraftingPatch
             {
                 return false;
             }
-            else if (data.getItemTyp().ToString().Contains("ITEM") || data.getItemTyp().ToString().Contains("QUEST"))
+            else if (data.getItemTyp().ToString().Contains("ITEM") || data.getItemTyp().ToString().Contains("QUEST") || data.getItemTyp().ToString().Contains("I19") || data.getItemTyp().ToString().Contains("I20"))
             {
                 Upgradable upitem;
                 if(Enum.TryParse(data.getItemTyp().ToString(),out upitem))
@@ -3275,6 +3275,7 @@ class BonusFeaturePatch()
             }
             else if (damage > 0 && (owner != null && owner.isPlayer()) || __instance.isPlayer())
             {
+                if (type == BulletType.TEVI_WEAK_DASH || type == BulletType.TEVI_WEAK_ATTACK || type == BulletType.ORB_SHOT_NORMAL) return;
                 Debug.Log("Combo was broken by " + type);
                 bonusDropKickDmg = 0;
             }
