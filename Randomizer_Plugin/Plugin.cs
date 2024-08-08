@@ -985,9 +985,9 @@ class EventPatch
             }
 
             // Make a Path to Morose
-            SaveManager.Instance.AddBreakTile(1, 302, 189);
-            SaveManager.Instance.AddBreakTile(1, 303, 189);
-            SaveManager.Instance.AddBreakTile(1, 304, 189);
+            //SaveManager.Instance.AddBreakTile(1, 302, 189);
+            //SaveManager.Instance.AddBreakTile(1, 303, 189);
+            //SaveManager.Instance.AddBreakTile(1, 304, 189);
             ShopPatch.alreadyClaimed();
             VenaItemClaimedCheck();
             em.SetStage(30);

@@ -156,7 +156,7 @@
                 },
                 {
                     "Exit": "Morose Transit",
-                    "Method": ""
+                    "Method": "ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Desert Base Entrance",
@@ -164,6 +164,10 @@
                 },
                 {
                     "Exit": "Crafting",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Item Craft",
                     "Method": ""
                 },
                 {
@@ -187,6 +191,21 @@
         },
         {
             "Name": "Crafting",
+            "Money": [
+                {
+                    "Method": "",
+                    "Amount": 0
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Item Craft",
             "Money": [
                 {
                     "Method": "",
@@ -639,7 +658,7 @@
                 },
                 {
                     "Exit": "Ulvosa",
-                    "Method": "ChargeShot"
+                    "Method": "ChargeShot && ITEM_LINEBOMB"
                 }
             ]
         },
@@ -846,7 +865,7 @@
                 },
                 {
                     "Exit": "Verdazure Swamp",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "ITEM_LINEBOMB && ITEM_SLIDE"
                 },
                 {
                     "Exit": "Forgotten City Upper Exit",
@@ -1611,7 +1630,7 @@
                 },
                 {
                     "Exit": "Gleamwood Middle",
-                    "Method": ""
+                    "Method": "ITEM_LINEBOMB"
                 }
             ]
         }

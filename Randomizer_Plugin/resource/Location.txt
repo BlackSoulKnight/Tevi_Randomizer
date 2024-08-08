@@ -51,7 +51,7 @@ BADGE_BreakDamageBoost:Ruins:1:ITEM_WALLJUMP,0
 BADGE_Lucky7DamageReduce:Ruins:1:ITEM_KNIFE,0;VoidBomb,0;ChargeShot,0;ITEM_LINEBOMB && ITEM_AREABOMB,0
 STACKABLE_MP:Ruins:8:ITEM_SLIDE,0
 BADGE_BoostSizeIncrease:Ruins:1:EliteChallangeB,0
-STACKABLE_HP:Heavens Valley:7:,0
+STACKABLE_HP:Heavens Valley:7:ITEM_SLIDE,0
 STACKABLE_EP:Heavens Valley:7:ITEM_DOUBLEJUMP,0;ITEM_JETPACK,0;ChargeShot,0;ITEM_AirDash,0
 STACKABLE_HP:Heavens Valley:13:ITEM_LINEBOMB && ITEM_AREABOMB,0
 BADGE_DoubleJumpAttack:Valhalla Breath Lower Left Part:1:ITEM_LINEBOMB,0
@@ -123,14 +123,14 @@ STACKABLE_RATK:Forest Maze extended:1:,0
 STACKABLE_RATK:Forest Maze extended:22:,0
 STACKABLE_EP:Gleamwood Middle:5:ITEM_KNIFE,0
 STACKABLE_MATK:Gleamwood Bottom:3:ChargeShot,0
-BADGE_QuickBomber:Gleamwood Middle:1:,0
+BADGE_QuickBomber:Gleamwood Middle:1:ITEM_LINEBOMB,0
 ITEM_MASK:Gleamwood Middle:1:,0
 STACKABLE_HP:Gleamwood Bottom:5:ITEM_KNIFE,0
-STACKABLE_MP:Gleamwood Middle:26:ITEM_SLIDE,0
+STACKABLE_MP:Gleamwood Middle:26:ITEM_SLIDE && ITEM_LINEBOMB,0
 BADGE_ComboTimeExtendC:Gleamwood Middle:1:ITEM_SLIDE,0
-STACKABLE_RATK:Gleamwood Middle:19:ITEM_SLIDE && ChargeShot,0
-STACKABLE_SHARD:Gleamwood Middle:15:ITEM_DOUBLEJUMP,0;ITEM_JETPACK,0;ITEM_AirDash,0
-BADGE_TauntStare:Gleamwood Middle:1:ITEM_JETPACK,0;ITEM_AirDash,0;ITEM_DOUBLEJUMP,0
+STACKABLE_RATK:Gleamwood Middle:19:ITEM_SLIDE && ChargeShot && ITEM_LINEBOMB,0
+STACKABLE_SHARD:Gleamwood Middle:15:ITEM_DOUBLEJUMP && ITEM_LINEBOMB,0;ITEM_JETPACK && ITEM_LINEBOMB,0;ITEM_AirDash && ITEM_LINEBOMB,0
+BADGE_TauntStare:Gleamwood Middle:1:ITEM_JETPACK && ITEM_LINEBOMB,0;ITEM_AirDash && ITEM_LINEBOMB,0;ITEM_DOUBLEJUMP && ITEM_LINEBOMB,0
 BADGE_DodgeMeterBoost:Gleamwood Upper:1:,0
 BADGE_BattleStartCharger:Ulskan Village Area:1:ChargeShot,0
 STACKABLE_RATK:Ulskan Village Area:5:ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB3,0
@@ -138,7 +138,7 @@ BADGE_AirNormalComboSpeedup:Ulskan Village Area:1:,0
 BADGE_DoubleGroundNormal3N1:Ulskan Village Area:1:ITEM_SLIDE,0
 STACKABLE_MP:Ulskan Village Area:5:,0
 ITEM_AntiDecay:Ulskan Village Area:1:ITEM_SLIDE,0
-BADGE_SlideHalt:Ulskan Village Area:1:ITEM_SLIDE,0
+BADGE_SlideHalt:Ulskan Village Area:1:ITEM_SLIDE && ITEM_LINEBOMB,0
 BADGE_GoldenLuck:Ulskan Village Area:1:ITEM_SLIDE && ITEM_LINEBOMB && ITEM_BombLengthExtend && ITEM_DOUBLEJUMP,0;ITEM_SLIDE && ITEM_LINEBOMB && ITEM_BombLengthExtend && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_LINEBOMB && ITEM_BombLengthExtend && ITEM_HIJUMP && ITEM_WALLJUMP,0;ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AREABOMB && ITEM_DOUBLEJUMP,0;ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AREABOMB && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AREABOMB && ITEM_HIJUMP && ITEM_WALLJUMP,0
 BADGE_WeakAirDownRotate:Plague Forest:1:ChargeShot,0
 BADGE_StyleComboReduceDamageS:Plague Forest:1:ITEM_LINEBOMB,0
@@ -167,7 +167,7 @@ STACKABLE_COG:Ulvosa:31:Boss,0
 ITEM_OrbAmulet:Ulvosa:1:,0
 BADGE_Cursed6:Ulvosa:1:ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB3,0;ITEM_OrbAmulet,0;BADGE_GStrongUpWidth,0
 STACKABLE_MATK:Ulvosa:25:ITEM_Rotater,0
-STACKABLE_MP:CopperWood:2:,0
+STACKABLE_MP:CopperWood:2:ITEM_LINEBOMB,0
 STACKABLE_EP:CopperWood:2:,0
 STACKABLE_RATK:CopperWood:7:ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB3,0;ITEM_OrbTypeS3 && ChargeShot && I20 && ITEM_ORB3,0;ITEM_OrbTypeC3 && ChargeShot && I19 && ITEM_ORB3,0
 BADGE_BoostCostCut:CopperWood:1:EliteChallangeC,0
@@ -218,10 +218,10 @@ STACKABLE_RATK:LavaWorld Part 2:11:,0
 BADGE_1HealthTypeC:LavaWorld Part 2:1:ChargeShot,0
 BADGE_AntiGround:LavaWorld Part 2:1:ITEM_Rotater && ITEM_AirSlide && ITEM_SLIDE,0
 BADGE_HitMP:LavaWorld Part 2:1:ITEM_SLIDE,0
-STACKABLE_COG:LavaWorld Part 2:4:ITEM_AirSlide && ITEM_SLIDE,0;ITEM_BombLengthExten && ITEM_LINEBOMB && ITEM_SLIDE,0
+STACKABLE_COG:LavaWorld Part 2:4:ITEM_AirSlide && ITEM_SLIDE,0;ITEM_BombLengthExtend && ITEM_LINEBOMB && ITEM_SLIDE,0
 STACKABLE_EP:LavaWorld Part 2:21:ITEM_BombLengthExtend && ITEM_LINEBOMB && ITEM_SLIDE,0
-STACKABLE_MATK:LavaWorld Part 2:20:ITEM_JETPACK,0;ITEM_DOUBLEJUMP,0
-BADGE_DoubleGroundNormal3N2:LavaWorld Part 2:1:ITEM_SLIDE && ITEM_DOUBLEJUMP,0;ITEM_DOUBLEJUMP && ITEM_JETPACK,0;ITEM_DOUBLEJUMP && ITEM_AirDash,0;ITEM_JETPACK && ITEM_AirDash,0;ITEM_SLIDE && ITEM_JETPACK,0
+STACKABLE_MATK:LavaWorld Part 2:20:ITEM_SLIDE && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_DOUBLEJUMP,0
+BADGE_DoubleGroundNormal3N2:LavaWorld Part 2:1:ITEM_SLIDE && ITEM_DOUBLEJUMP,0;ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_AirDash,0;ITEM_SLIDE && ITEM_JETPACK && ITEM_AirDash,0;ITEM_SLIDE && ITEM_JETPACK,0
 STACKABLE_MATK:Swamp Entrance:12:ITEM_SLIDE,0
 BADGE_AirComboExtend:Swamp:1:ITEM_LINEBOMB,0
 ITEM_AREABOMB:Swamp:1:ITEM_LINEBOMB,0
@@ -350,7 +350,7 @@ BADGE_ChargeShotDiscount:Gallery of Mirrors:1:,0
 BADGE_AreaBombThrower:Gallery of Mirrors 2:1:,0
 BADGE_Recover3:Gallery of Mirrors 2:1:,0
 ITEM_BombLengthExtend:Gallery of Mirrors 2:1:,0
-STACKABLE_COG:Gallery of Mirrors 2:47:Boss,0
+STACKABLE_COG:Gallery of Mirrors 2:47:ITEM_BombLengthExtend && Boss,0
 STACKABLE_HP:Gallery of Mirrors 2:10:ITEM_SLIDE,0
 BADGE_WeakGroundUpModCombo:Gallery of Mirrors 2:1:ITEM_HIJUMP && ChargeShot,0;ITEM_DOUBLEJUMP && ChargeShot,0;ITEM_JETPACK && ChargeShot,0;ITEM_AirDash && ChargeShot,0
 STACKABLE_EP:Gallery of Mirrors 2:25:ITEM_Rotater && ITEM_JETPACK && ITEM_DOUBLEJUMP && ITEM_AirDash,0;ITEM_Rotater && ITEM_JETPACK && ITEM_AirDash,3;ITEM_Rotater && ITEM_JETPACK2 && ITEM_AirDash,0;ITEM_Rotater && ITEM_DOUBLEJUMP && ITEM_JETPACK,0;ITEM_Rotater,0
@@ -516,51 +516,51 @@ BADGE_100COMBO:Crafting:1:Coins 250 && Chapter 7,0
 BADGE_DominantEffectDownB:Crafting:1:Coins 250 && Chapter 7,0
 BADGE_RangeBreak:Crafting:1:Coins 250 && Chapter 7,0
 BADGE_AutoPilot:Crafting:1:Coins 250 && BADGE_AmuletQuicken,0
-ITEM_Explorer:Crafting:2:ITEM_Explorer && Core 3 && Upgrade 1 && RainbowCheck,0;ITEM_Explorer && Core 1 && Upgrade 1 && Explorer,0
-ITEM_Explorer:Crafting:3:ITEM_Explorer && Core 6 && Upgrade 1 && RainbowCheck,0;ITEM_Explorer && Core 1 && Upgrade 1 && Explorer,0
-ITEM_KNIFE:Crafting:2:ITEM_KNIFE && Upgrade 3,0
-ITEM_KNIFE:Crafting:3:ITEM_KNIFE && Upgrade 4 && Air,0
-ITEM_ORB:Crafting:2:ITEM_ORB && Upgrade 3,0
-ITEM_ORB:Crafting:3:ITEM_ORB && Upgrade 3 && Air,0
-ITEM_RapidShots:Crafting:2:ITEM_RapidShots && Upgrade 2,0
-ITEM_RapidShots:Crafting:3:ITEM_RapidShots && Upgrade 4,0
-ITEM_AttackRange:Crafting:2:ITEM_AttackRange && Upgrade 1,0
-ITEM_AttackRange:Crafting:3:ITEM_AttackRange && Upgrade 3,0
-ITEM_EasyStyle:Crafting:2:ITEM_EasyStyle && Upgrade 2,0
-ITEM_EasyStyle:Crafting:3:ITEM_EasyStyle && Upgrade 2,0
-ITEM_LINEBOMB:Crafting:2:ITEM_LINEBOMB && Upgrade 1,0
-ITEM_LINEBOMB:Crafting:3:ITEM_LINEBOMB && Upgrade 2,0
-ITEM_AREABOMB:Crafting:2:ITEM_AREABOMB && Upgrade 1,0
-ITEM_AREABOMB:Crafting:3:ITEM_AREABOMB && Upgrade 2,0
-ITEM_SPEEDUP:Crafting:2:ITEM_SPEEDUP && Upgrade 2,0
-ITEM_SPEEDUP:Crafting:3:ITEM_SPEEDUP && Upgrade 3,0
-ITEM_AirDash:Crafting:2:ITEM_AirDash && Upgrade 1,0
-ITEM_AirDash:Crafting:3:ITEM_AirDash && Upgrade 3,0
-ITEM_WALLJUMP:Crafting:2:ITEM_WALLJUMP && Upgrade 2 && Air,0
-ITEM_WALLJUMP:Crafting:3:ITEM_WALLJUMP && Upgrade 2 && Air,0
-ITEM_JETPACK:Crafting:2:ITEM_JETPACK && Upgrade 1,0
-ITEM_JETPACK:Crafting:3:ITEM_JETPACK && Upgrade 3,0
-ITEM_BoostSystem:Crafting:2:ITEM_BoostSystem && Upgrade 3,0
-ITEM_BoostSystem:Crafting:3:ITEM_BoostSystem && Upgrade 5 && Air,0
-ITEM_OrbAmulet:Crafting:2:ITEM_OrbAmulet && Upgrade 3,0
-ITEM_OrbAmulet:Crafting:3:ITEM_OrbAmulet && Upgrade 5 && Air,0
-ITEM_BOMBFUEL:Crafting:2:ITEM_BOMBFUEL && Upgrade 1,0
-ITEM_BOMBFUEL:Crafting:3:ITEM_BOMBFUEL && Upgrade 2,0
-ITEM_BombLengthExtend:Crafting:2:ITEM_BombLengthExtend && Upgrade 1,0
-ITEM_BombLengthExtend:Crafting:3:ITEM_BombLengthExtend2 && Upgrade 3 && Fire,0
-ITEM_MASK:Crafting:2:ITEM_MASK && Upgrade 1,0
-ITEM_MASK:Crafting:3:ITEM_MASK && Upgrade 1,0
-ITEM_TempRing:Crafting:2:ITEM_TempRing && Upgrade 1,0
-ITEM_TempRing:Crafting:3:ITEM_TempRing && Upgrade 1,0
-ITEM_DodgeShot:Crafting:2:ITEM_DodgeShot && Upgrade 2,0
-ITEM_DodgeShot:Crafting:3:ITEM_DodgeShot && Upgrade 3,0
-ITEM_Rotater:Crafting:2:ITEM_Rotater && Upgrade 2 && Air,0
-ITEM_Rotater:Crafting:3:ITEM_Rotater && Upgrade 2 && Air,0
-ITEM_GoldenGlove:Crafting:2:ITEM_GoldenGlove && Upgrade 1 && Fire && Air && Light,0
-ITEM_GoldenGlove:Crafting:3:ITEM_GoldenGlove && Upgrade 1 && Fire && Air && Light,0
-ITEM_OrbTypeC2:Crafting:1:Coins 250 && ITEM_ORB3 && Core 4,0
-ITEM_OrbTypeS2:Crafting:1:Coins 250 && ITEM_ORB3 && Core 5,0
-ITEM_OrbTypeC3:Crafting:1:Coins 250 && ITEM_ORB3 && Core 7,0
-ITEM_OrbTypeS3:Crafting:1:Coins 250 && ITEM_ORB3 && Core 8,0
-ITEM_OrbBoostU:Crafting:1:Coins 250 && Core 4,0
-ITEM_OrbBoostD:Crafting:1:Coins 250 && Core 8,0
+ITEM_Explorer:Item Craft:2:ITEM_Explorer && Core 3 && Upgrade 1 && RainbowCheck,0;ITEM_Explorer && Core 1 && Upgrade 1 && Explorer,0
+ITEM_Explorer:Item Craft:3:ITEM_Explorer && Core 6 && Upgrade 1 && RainbowCheck,0;ITEM_Explorer && Core 1 && Upgrade 1 && Explorer,0
+ITEM_KNIFE:Item Craft:2:ITEM_KNIFE && Upgrade 3,0
+ITEM_KNIFE:Item Craft:3:ITEM_KNIFE && Upgrade 4 && Air,0
+ITEM_ORB:Item Craft:2:ITEM_ORB && Upgrade 3,0
+ITEM_ORB:Item Craft:3:ITEM_ORB && Upgrade 3 && Air,0
+ITEM_RapidShots:Item Craft:2:ITEM_RapidShots && Upgrade 2,0
+ITEM_RapidShots:Item Craft:3:ITEM_RapidShots && Upgrade 4,0
+ITEM_AttackRange:Item Craft:2:ITEM_AttackRange && Upgrade 1,0
+ITEM_AttackRange:Item Craft:3:ITEM_AttackRange && Upgrade 3,0
+ITEM_EasyStyle:Item Craft:2:ITEM_EasyStyle && Upgrade 2,0
+ITEM_EasyStyle:Item Craft:3:ITEM_EasyStyle && Upgrade 2,0
+ITEM_LINEBOMB:Item Craft:2:ITEM_LINEBOMB && Upgrade 1,0
+ITEM_LINEBOMB:Item Craft:3:ITEM_LINEBOMB && Upgrade 2,0
+ITEM_AREABOMB:Item Craft:2:ITEM_AREABOMB && Upgrade 1,0
+ITEM_AREABOMB:Item Craft:3:ITEM_AREABOMB && Upgrade 2,0
+ITEM_SPEEDUP:Item Craft:2:ITEM_SPEEDUP && Upgrade 2,0
+ITEM_SPEEDUP:Item Craft:3:ITEM_SPEEDUP && Upgrade 3,0
+ITEM_AirDash:Item Craft:2:ITEM_AirDash && Upgrade 1,0
+ITEM_AirDash:Item Craft:3:ITEM_AirDash && Upgrade 3,0
+ITEM_WALLJUMP:Item Craft:2:ITEM_WALLJUMP && Upgrade 2 && Air,0
+ITEM_WALLJUMP:Item Craft:3:ITEM_WALLJUMP && Upgrade 2 && Air,0
+ITEM_JETPACK:Item Craft:2:ITEM_JETPACK && Upgrade 1,0
+ITEM_JETPACK:Item Craft:3:ITEM_JETPACK && Upgrade 3,0
+ITEM_BoostSystem:Item Craft:2:ITEM_BoostSystem && Upgrade 3,0
+ITEM_BoostSystem:Item Craft:3:ITEM_BoostSystem && Upgrade 5 && Air,0
+ITEM_OrbAmulet:Item Craft:2:ITEM_OrbAmulet && Upgrade 3,0
+ITEM_OrbAmulet:Item Craft:3:ITEM_OrbAmulet && Upgrade 5 && Air,0
+ITEM_BOMBFUEL:Item Craft:2:ITEM_BOMBFUEL && Upgrade 1,0
+ITEM_BOMBFUEL:Item Craft:3:ITEM_BOMBFUEL && Upgrade 2,0
+ITEM_BombLengthExtend:Item Craft:2:ITEM_BombLengthExtend && Upgrade 1,0
+ITEM_BombLengthExtend:Item Craft:3:ITEM_BombLengthExtend2 && Upgrade 3 && Fire,0
+ITEM_MASK:Item Craft:2:ITEM_MASK && Upgrade 1,0
+ITEM_MASK:Item Craft:3:ITEM_MASK && Upgrade 1,0
+ITEM_TempRing:Item Craft:2:ITEM_TempRing && Upgrade 1,0
+ITEM_TempRing:Item Craft:3:ITEM_TempRing && Upgrade 1,0
+ITEM_DodgeShot:Item Craft:2:ITEM_DodgeShot && Upgrade 2,0
+ITEM_DodgeShot:Item Craft:3:ITEM_DodgeShot && Upgrade 3,0
+ITEM_Rotater:Item Craft:2:ITEM_Rotater && Upgrade 2 && Air,0
+ITEM_Rotater:Item Craft:3:ITEM_Rotater && Upgrade 2 && Air,0
+ITEM_GoldenGlove:Item Craft:2:ITEM_GoldenGlove && Upgrade 1 && Fire && Air && Light,0
+ITEM_GoldenGlove:Item Craft:3:ITEM_GoldenGlove && Upgrade 1 && Fire && Air && Light,0
+ITEM_OrbTypeC2:Item Craft:1:Coins 250 && ITEM_ORB3 && Core 4,0
+ITEM_OrbTypeS2:Item Craft:1:Coins 250 && ITEM_ORB3 && Core 5,0
+ITEM_OrbTypeC3:Item Craft:1:Coins 250 && ITEM_ORB3 && Core 7,0
+ITEM_OrbTypeS3:Item Craft:1:Coins 250 && ITEM_ORB3 && Core 8,0
+ITEM_OrbBoostU:Item Craft:1:Coins 250 && Core 4,0
+ITEM_OrbBoostD:Item Craft:1:Coins 250 && Core 8,0

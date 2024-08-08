@@ -105,9 +105,9 @@ namespace TeviRandomizer
                             }
                         }
 
-                        if (item.Contains("Upgrade") && itemList.Contains("ITEM_LINEBOMB") && (craftingManaShardSwitch || checkMovementItems(itemList))) continue;
+                        if (item.Contains("Upgrade") && itemList.Contains("ITEM_LINEBOMB")  && (craftingManaShardSwitch || (checkMovementItems(itemList) ) )) continue;
 
-                        if (item.Contains("Core") && itemList.Contains("ITEM_LINEBOMB") && itemList.Contains("ITEM_AREABOMB") && checkMovementItems(itemList) && itemList.Contains("ITEM_BombLengthExtend")) continue;
+                        if (item.Contains("Core") && itemList.Contains("ITEM_LINEBOMB")  && itemList.Contains("ITEM_AREABOMB") && checkMovementItems(itemList) && itemList.Contains("ITEM_BombLengthExtend")) continue;
 
                         if (item.Contains("SpinnerBash") && itemList.Contains("ITEM_KNIFE")) continue;
 
@@ -595,7 +595,7 @@ namespace TeviRandomizer
                     if (loc.isReachAble(itemList))
                     {
                         if (loc.Loaction == "Lab Part 2" && !itemList.Contains("Demonfray")) itemList.Add("Demonfray"); // Hard coded boss event
-                        if (loc.Loaction == "Gallery of Mirrors 2" && !itemList.Contains("Memloch")) itemList.Add("Memloch"); // Hard coded boss event
+                        if (loc.Loaction == "Gallery of Mirrors 2" && itemList.Contains("ITEM_BombLengthExtend") && !itemList.Contains("Memloch")) itemList.Add("Memloch"); // Hard coded boss event
                         if (loc.Loaction == "Snow City" && !itemList.Contains("Air")) itemList.Add("Air");
 
 

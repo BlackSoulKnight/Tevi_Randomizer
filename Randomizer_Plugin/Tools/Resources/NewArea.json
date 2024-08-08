@@ -1,0 +1,16 @@
+[
+    {
+        "Map":0,
+        "RoomX":0,
+        "RoomY":0,
+        "RoomSection":0,
+        "Connection":[
+            {
+                "Map":0,
+                "RoomX":0,
+                "RoomY":0,
+                "Method":[]
+            }
+        ]
+    }
+]
