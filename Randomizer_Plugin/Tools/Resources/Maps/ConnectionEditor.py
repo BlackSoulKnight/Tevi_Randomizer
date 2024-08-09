@@ -1,5 +1,7 @@
 import os
 import json
+import networkx as nx
+import matplotlib.pyplot as plt
 
 class prog:
     currFunc = ()
@@ -21,7 +23,7 @@ class prog:
         print("Enter File Name")
         self.path = input()
         try:
-            file = open(self.path)
+            file = open(self.path+".json")
             self.mapFile = json.load(file)
             file.close()
         except:
@@ -29,12 +31,35 @@ class prog:
         self.currFunc = self.selectRoom
 
     def save(self):
-        file = open(self.path,"w+")
+        file = open(self.path+".json","w+")
         file.write(json.dumps(self.mapFile))
         file.close()
 
+    def createGraph(self):
+        plt.clf()
+
+        graph = nx.DiGraph()
+        if os.path.exists(self.path+".png"):
+            os.remove(self.path+".png")
+
+        for room in self.mapFile:
+            graph.add_node(f"{room['RoomX']},{room['RoomY']},{room['RoomSection']}",pos=(room['RoomX'],room['RoomY']))
+        for room in self.mapFile:
+            for con in room["Connection"]:
+                graph.add_edge(f"{room['RoomX']},{room['RoomY']},{room['RoomSection']}",f"{con['RoomX']},{con['RoomY']},{con['RoomSection']}")
+                pass
+        pos=nx.get_node_attributes(graph,'pos')
+        fig = plt.figure(figsize=(32,18))
+        nx.draw(graph,pos,node_size=300,node_shape='s',edgecolors='white',edge_color='white')
+        fig.gca().invert_yaxis()
+        fig.set_facecolor('black')
+        fig.savefig(self.path+".png")
+        fig.show()
+        
+
     def selectRoom(self):
         print("You can save here all changes with \"save\"")
+        print("Display the Map as a Graph with \"display\"")
         print("Which Room should be edited (x,y,section) <- section can be left empty")
         i = input()
         if i == "back":
@@ -43,6 +68,9 @@ class prog:
             return
         if i == "save":
             self.save()
+            return
+        if i == "display":
+            self.createGraph()
             return
         i = i.split(',')
         if len(i) == 2:
