@@ -156,7 +156,7 @@
                 },
                 {
                     "Exit": "Morose Transit",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "DieMauerMussWeg"
                 },
                 {
                     "Exit": "Desert Base Entrance",

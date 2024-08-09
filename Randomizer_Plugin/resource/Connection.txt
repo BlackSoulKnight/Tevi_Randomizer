@@ -21,7 +21,7 @@ Thanatara Canyon:Oasis:ITEM_JETPACK
 Thanatara Canyon:Oasis:ITEM_AirDash
 Thanatara Canyon:Ruins Entrance:
 Thanatara Canyon:Heavens Valley:ITEM_LINEBOMB
-Thanatara Canyon:Morose Transit:ITEM_LINEBOMB
+Thanatara Canyon:Morose Transit:DieMauerMussWeg
 Thanatara Canyon:Desert Base Entrance:
 Thanatara Canyon:Crafting:
 Thanatara Canyon:Item Craft:

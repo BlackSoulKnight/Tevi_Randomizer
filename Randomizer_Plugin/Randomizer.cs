@@ -114,6 +114,9 @@ namespace TeviRandomizer
                         if (item.Contains("Fire") || item.Contains("Light")) continue;
 
                         if (item.Contains("EliteChallange") && itemList.Contains("ITEM_LINEBOMB") && itemList.Contains("ITEM_SLIDE")) continue;
+
+                        if(item.Contains("DieMauerMussWeg") && RandomizerPlugin.customFlags[(int)CustomFlags.TempOption]) continue;
+
                         flag = false;
                         flagCheck = false;
                         break;
@@ -369,6 +372,16 @@ namespace TeviRandomizer
                                 else
                                 {
                                     RandomizerPlugin.customFlags[(int)CustomFlags.CompassStart] = false;
+                                }
+                                break;
+                            case "tmpOption":
+                                if (((UnityEngine.UI.Toggle)option.Value).isOn)
+                                {
+                                    RandomizerPlugin.customFlags[(int)CustomFlags.TempOption] = true;
+                                }
+                                else
+                                {
+                                    RandomizerPlugin.customFlags[(int)CustomFlags.TempOption] = false;
                                 }
                                 break;
                             case "NormalItemCraft":

@@ -90,6 +90,7 @@ public enum CustomFlags : short
     OrbStart = 0,
     CebleStart = 1,
     CompassStart = 2,
+    TempOption = 3,
 
 }
 
@@ -985,9 +986,18 @@ class EventPatch
             }
 
             // Make a Path to Morose
-            //SaveManager.Instance.AddBreakTile(1, 302, 189);
-            //SaveManager.Instance.AddBreakTile(1, 303, 189);
-            //SaveManager.Instance.AddBreakTile(1, 304, 189);
+            if (RandomizerPlugin.customFlags[(int)CustomFlags.TempOption])
+            {
+                // Blocks to the area between Canyon and morose
+                SaveManager.Instance.AddBreakTile(1, 302, 189);
+                SaveManager.Instance.AddBreakTile(1, 303, 189);
+                SaveManager.Instance.AddBreakTile(1, 304, 189);
+                // Teleporter area
+                SaveManager.Instance.AddBreakTile(3, 456, 189);
+                SaveManager.Instance.AddBreakTile(3, 455, 189);
+                SaveManager.Instance.AddBreakTile(3, 455, 188);
+                SaveManager.Instance.AddBreakTile(3, 456, 188);
+            }
             ShopPatch.alreadyClaimed();
             VenaItemClaimedCheck();
             em.SetStage(30);
