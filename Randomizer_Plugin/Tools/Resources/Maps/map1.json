@@ -11,6 +11,13 @@
                 "RoomY": 7,
                 "RoomSection": 0,
                 "Method": []
+            },
+            {
+                "Map": 2,
+                "RoomX": 19,
+                "RoomY": 12,
+                "RoomSection": 0,
+                "Method": []
             }
         ]
     },
@@ -238,6 +245,13 @@
                 "RoomY": 13,
                 "RoomSection": 0,
                 "Method": []
+            },
+            {
+                "Map": 22,
+                "RoomX": 28,
+                "RoomY": 6,
+                "RoomSection": 0,
+                "Method": []
             }
         ]
     },
@@ -280,6 +294,13 @@
                 "Map": 1,
                 "RoomX": 6,
                 "RoomY": 11,
+                "RoomSection": 0,
+                "Method": []
+            },
+            {
+                "Map": 0,
+                "RoomX": 20,
+                "RoomY": 13,
                 "RoomSection": 0,
                 "Method": []
             }
@@ -1468,6 +1489,13 @@
                 "Map": 1,
                 "RoomX": 12,
                 "RoomY": 13,
+                "RoomSection": 0,
+                "Method": []
+            },
+            {
+                "Map": 5,
+                "RoomX": 4,
+                "RoomY": 9,
                 "RoomSection": 0,
                 "Method": []
             }
@@ -2264,6 +2292,13 @@
                 "Map": 1,
                 "RoomX": 27,
                 "RoomY": 10,
+                "RoomSection": 0,
+                "Method": []
+            },
+            {
+                "Map": 3,
+                "RoomX": 12,
+                "RoomY": 12,
                 "RoomSection": 0,
                 "Method": []
             }

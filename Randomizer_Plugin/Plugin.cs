@@ -26,6 +26,7 @@ using Character;
 
 
 
+
 public class ItemData
 {
     public int itemID;
@@ -644,6 +645,7 @@ public class RandomizerPlugin : BaseUnityPlugin
     {
         if(SaveManager.Instance.GetOrb() < 3)
             SaveManager.Instance.SetOrb((byte)(SaveManager.Instance.GetOrb() + amount));
+
         if (SaveManager.Instance.GetOrb() >= 3)
         {
             if(SaveManager.Instance.GetItem(ItemList.Type.ITEM_BoostSystem) > 0) {
@@ -775,10 +777,16 @@ class ItemObtainPatch()
                 RandomizerPlugin.addOrbStatus(1);
 
                 break;
-
             default:
                 break;
         }
+
+        if (SaveManager.Instance.GetOrb() == 2 && (SaveManager.Instance.GetItem(ItemList.Type.I19) > 0 || SaveManager.Instance.GetItem(ItemList.Type.I20) > 0 || item == ItemList.Type.I20 || item == ItemList.Type.I19))
+        {
+            SaveManager.Instance.SetOrb((byte)(SaveManager.Instance.GetOrb() + 1));
+
+        }
+
         return true;
     }
 

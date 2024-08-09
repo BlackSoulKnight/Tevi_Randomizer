@@ -2003,6 +2003,13 @@
                 "RoomY": 13,
                 "RoomSection": 0,
                 "Method": []
+            },
+            {
+                "Map": 1,
+                "RoomX": 5,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": []
             }
         ]
     }

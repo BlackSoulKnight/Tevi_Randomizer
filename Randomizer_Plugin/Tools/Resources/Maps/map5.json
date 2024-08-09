@@ -252,6 +252,13 @@
                 "RoomY": 9,
                 "RoomSection": 0,
                 "Method": []
+            },
+            {
+                "Map": 1,
+                "RoomX": 12,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": []
             }
         ]
     },

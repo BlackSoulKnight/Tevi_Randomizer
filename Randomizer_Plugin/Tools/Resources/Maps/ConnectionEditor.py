@@ -46,6 +46,8 @@ class prog:
             graph.add_node(f"{room['RoomX']},{room['RoomY']},{room['RoomSection']}",pos=(room['RoomX'],room['RoomY']))
         for room in self.mapFile:
             for con in room["Connection"]:
+                if room['Map'] != con['Map']:
+                    continue
                 graph.add_edge(f"{room['RoomX']},{room['RoomY']},{room['RoomSection']}",f"{con['RoomX']},{con['RoomY']},{con['RoomSection']}")
                 pass
         pos=nx.get_node_attributes(graph,'pos')
@@ -109,6 +111,7 @@ class prog:
                 i = i.split(' ')
                 i = int(i[1]) -1 
                 del self.room["Connection"][i]
+                self.save()
             except:
                 pass
             return
@@ -143,6 +146,7 @@ class prog:
             newCon = {"Map":int(i[0]),"RoomX":int(i[1]),"RoomY":int(i[2]),"RoomSection":int(i[3]),"Method":[]}
             self.room["Connection"].append(newCon)
             self.currFunc = self.roomEdit
+            self.save()
         except:
             pass
 
