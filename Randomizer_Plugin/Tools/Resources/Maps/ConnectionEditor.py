@@ -13,6 +13,10 @@ class prog:
     room = []
     con = None
     path = ""
+    currX = -1
+    currY = -1
+    currSection = -1
+
     def loadFile(self):
         print("Enter File Name")
         self.path = input()
@@ -31,7 +35,7 @@ class prog:
 
     def selectRoom(self):
         print("You can save here all changes with \"save\"")
-        print("Which Room should be edited (x,y,section)")
+        print("Which Room should be edited (x,y,section) <- section can be left empty")
         i = input()
         if i == "back":
             self.currFunc = self.loadFile
@@ -41,9 +45,14 @@ class prog:
             self.save()
             return
         i = i.split(',')
+        if len(i) == 2:
+            i.append(0)
         try:
             for m in self.mapFile:
                 if m["RoomX"] == int(i[0]) and m["RoomY"] == int(i[1]) and m["RoomSection"] == int(i[2]):
+                    self.currX = int(i[0])
+                    self.currY = int(i[1])
+                    self.currSection = int(i[2])
                     self.room = m
                     self.currFunc = self.roomEdit
                     return
@@ -51,19 +60,32 @@ class prog:
             return
 
     def roomEdit(self):
+        print(f"Current Room X:{self.currX} Y:{self.currY} Section:{self.currSection}")
         print("Enter add to create a new Connection")
+        print("Fast Deletion with \"delete x\"")
         for idx,con in enumerate(self.room["Connection"]):
-            print(f"Enter {idx} to Edit Connection: {con}")
+            print(f"Enter {idx+1} to Edit Connection: {con}")
         i = input()
         if i == "back":
             self.currFunc = self.selectRoom
+            self.currX = -1    
+            self.currY = -1
+            self.currSection = -1
             self.room = None
             return
         elif i == "add":
             self.currFunc = self.addConnection
             return
+        elif "delete" in i:
+            try:
+                i = i.split(' ')
+                i = int(i[1]) -1 
+                del self.room["Connection"][i]
+            except:
+                pass
+            return
         try:
-            i = int(i)
+            i = int(i)-1
             if i >= len(self.room["Connection"]):
                 return
             self.con = i
@@ -72,7 +94,7 @@ class prog:
             return
             
     def editConnection(self):
-        print("Do you want to \"add\" or \"delete\" Connection or \"edit\" the Method")
+        print("Do you want to \"delete\" Connection or \"edit\" the Method")
         i = input()
         if i == "delete":
             del self.room["Connection"][self.con]
