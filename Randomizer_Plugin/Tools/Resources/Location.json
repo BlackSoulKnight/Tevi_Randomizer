@@ -712,11 +712,11 @@
     },
     {
         "Itemname": "BADGE_ComboDamageBoost",
-        "Location": "Heavens Valley",
+        "Location": "Valhalla Breath Lower Left Part",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]

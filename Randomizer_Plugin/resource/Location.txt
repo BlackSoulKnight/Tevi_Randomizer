@@ -59,7 +59,7 @@ STACKABLE_MP:Heavens Valley:25:ChargeShot,0
 STACKABLE_EP:Valhalla Breath Lower Left Part:13:,0
 BADGE_Normal3HModStabB:Valhalla Breath Lower Left Part:1:ITEM_SLIDE,0
 STACKABLE_RATK:Valhalla Breath Lower Left Part:13:ChargeShot,0
-BADGE_ComboDamageBoost:Heavens Valley:1:,0
+BADGE_ComboDamageBoost:Valhalla Breath Lower Left Part:1:ITEM_LINEBOMB,0
 STACKABLE_MATK:Valhalla Breath Lower Left Part:13:ITEM_SLIDE && ITEM_DOUBLEJUMP,0;ITEM_SLIDE && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_AirDash,0
 BADGE_DoubleNormalComboSpeedup:Valhalla Breath Left Part:1:ITEM_SLIDE,0
 BADGE_RapidShotsEnhance:Valhalla Breath Left Part:1:ITEM_AirSlide && ITEM_SLIDE && ITEM_DOUBLEJUMP,0;ITEM_AirSlide && ITEM_SLIDE && ITEM_JETPACK,0
