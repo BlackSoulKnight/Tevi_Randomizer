@@ -353,7 +353,7 @@ ITEM_BombLengthExtend:Gallery of Mirrors 2:1:,0
 STACKABLE_COG:Gallery of Mirrors 2:47:ITEM_BombLengthExtend && Boss,0
 STACKABLE_HP:Gallery of Mirrors 2:10:ITEM_SLIDE,0
 BADGE_WeakGroundUpModCombo:Gallery of Mirrors 2:1:ITEM_HIJUMP && ChargeShot,0;ITEM_DOUBLEJUMP && ChargeShot,0;ITEM_JETPACK && ChargeShot,0;ITEM_AirDash && ChargeShot,0
-STACKABLE_EP:Gallery of Mirrors 2:25:ITEM_Rotater && ITEM_JETPACK && ITEM_DOUBLEJUMP && ITEM_AirDash,0;ITEM_Rotater && ITEM_JETPACK && ITEM_AirDash,3;ITEM_Rotater && ITEM_JETPACK2 && ITEM_AirDash,0;ITEM_Rotater && ITEM_DOUBLEJUMP && ITEM_JETPACK,0;ITEM_Rotater,0
+STACKABLE_EP:Gallery of Mirrors 2:25:ITEM_Rotater && ITEM_JETPACK && ITEM_DOUBLEJUMP && ITEM_AirDash,0;ITEM_Rotater && ITEM_JETPACK && ITEM_AirDash,3;ITEM_Rotater && ITEM_JETPACK2 && ITEM_AirDash,0;ITEM_Rotater && ITEM_DOUBLEJUMP && ITEM_JETPACK,0
 STACKABLE_COG:Gallery of Mirrors:5:ITEM_AirDash && ITEM_WALLJUMP,0;ITEM_JETPACK,0;ITEM_DOUBLEJUMP,0
 STACKABLE_MP:Gallery of Souls:10:ITEM_SLIDE && ITEM_LINEBOMB,0
 STACKABLE_RATK:Gallery of Souls:10:ITEM_SLIDE && ITEM_LINEBOMB,0

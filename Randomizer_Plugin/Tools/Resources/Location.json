@@ -4296,10 +4296,6 @@
             {
                 "Method": "ITEM_Rotater && ITEM_DOUBLEJUMP && ITEM_JETPACK",
                 "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_Rotater",
-                "Difficulty": 0
             }
         ]
     },
