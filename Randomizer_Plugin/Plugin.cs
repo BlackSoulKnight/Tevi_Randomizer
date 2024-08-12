@@ -783,7 +783,7 @@ class ItemObtainPatch()
 
         if (SaveManager.Instance.GetOrb() == 2 && (SaveManager.Instance.GetItem(ItemList.Type.I19) > 0 || SaveManager.Instance.GetItem(ItemList.Type.I20) > 0 || item == ItemList.Type.I20 || item == ItemList.Type.I19))
         {
-            SaveManager.Instance.SetOrb((byte)(SaveManager.Instance.GetOrb() + 1));
+            RandomizerPlugin.addOrbStatus(1);
 
         }
 
@@ -1290,7 +1290,19 @@ class RabiSmashPatch
                 em.SetStage(180);
             }
         }
+        else if (em.EventStage == 180) {
+            if (em.EventTime >= 1f)
+            {
+                MusicManager.Instance.PlayMusic(Music.MUTE);
+                em.SetStage(190);
+                em.StopEvent();
+                MusicManager.Instance.RabiEasterEggBGM = true;
+                SettingManager.Instance.SetAchievement(Achievements.ACHI_EASTEREGG_RABIRIBI);
+                SaveManager.Instance.AutoSave(forced: true);
+            }
+        }
     }
+    
 }
 
 
@@ -1411,6 +1423,16 @@ class OrbPatch
 
 
         return true;
+    }
+
+    [HarmonyPatch(typeof(Cyril),"ALWAYS")]
+    [HarmonyPrefix]
+    static void removeFrocedBoost(ref float ___useboost)
+    {
+        if(___useboost > 0f)
+        {
+            ___useboost = 0f;
+        }
     }
 
     [HarmonyPatch(typeof(CharacterPhy),"SwitchTypeForced")]

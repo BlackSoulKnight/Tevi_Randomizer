@@ -30,6 +30,17 @@ class prog:
             return
         self.currFunc = self.selectRoom
 
+    def loadFiles(self,string):
+        print("Enter File Name")
+        self.path = string
+        try:
+            file = open(self.path+".json")
+            self.mapFile = json.load(file)
+            file.close()
+        except:
+            return
+        self.currFunc = self.selectRoom
+
     def save(self):
         file = open(self.path+".json","w+")
         file.write(json.dumps(self.mapFile))
@@ -50,12 +61,13 @@ class prog:
                     continue
                 graph.add_edge(f"{room['RoomX']},{room['RoomY']},{room['RoomSection']}",f"{con['RoomX']},{con['RoomY']},{con['RoomSection']}")
                 pass
-        pos=nx.get_node_attributes(graph,'pos')
+        post=nx.get_node_attributes(graph,'pos')
         fig = plt.figure(figsize=(32,18))
-        nx.draw(graph,pos,node_size=300,node_shape='s',edgecolors='white',edge_color='white')
+        nx.spring_layout(graph,pos=post)    
+        nx.draw(graph,post,node_size=300,node_shape='s',edgecolors='white',edge_color='white')
         fig.gca().invert_yaxis()
         fig.set_facecolor('black')
-        fig.savefig(self.path+".png")
+        #fig.savefig(self.path+".png")
         fig.show()
         
 
@@ -88,6 +100,11 @@ class prog:
                     return
         except:
             return
+    def printAllMaps(self):
+        for i in range(0,30):
+            self.loadFile("map"+str(i))
+            self.createGraph()
+
 
     def roomEdit(self):
         print(f"Current Room X:{self.currX} Y:{self.currY} Section:{self.currSection}")
@@ -157,4 +174,5 @@ class prog:
             self.currFunc()
 
 a = prog()
+#a.printAllMaps()
 a.loop()
