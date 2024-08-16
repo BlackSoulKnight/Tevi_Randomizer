@@ -107,7 +107,7 @@ Forgotten City Upper Exit:Verdazure Ocean:ChargeShot
 Forgotten City:Forgotten City Upper Exit:ITEM_LINEBOMB
 Tartarus:Swamp:
 Tartarus:Vena Shop:
-Tartarus:Catacombs Entrance:
+Tartarus:Catacombs Entrance:ITEM_SLIDE
 Snow City:Snowveil Above HQ:ITEM_LINEBOMB && ITEM_SLIDE
 Snow City:Golden Hands HQ:ITEM_SLIDE && ChargeShot
 Snow City:Golden Hands HQ Sewer:ITEM_SLIDE
