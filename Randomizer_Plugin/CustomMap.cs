@@ -24,13 +24,13 @@ namespace TeviRandomizer
             return tileData;
         }
 
-        static void createItemTile(int x,int y,int spriteID,bool flipH,bool flipV)
+        static void createItemTile(int x, int y, int spriteID, bool flipH, bool flipV)
         {
             Traverse worldmng = Traverse.Create(WorldManager.Instance);
             GameObject gameObject = UnityEngine.Object.Instantiate(worldmng.Field("itemset_prefab").GetValue<GameObject>());                          //Create new Item
             gameObject.transform.SetParent(worldmng.Field("TileHolder").GetValue<GameObject>().transform);
             Layer layer = Layer.ITEM;
-            WorldManager.TileData tileData = setUpTileData(x,y,spriteID,flipH,flipV,layer);
+            WorldManager.TileData tileData = setUpTileData(x, y, spriteID, flipH, flipV, layer);
 
             float num5 = (float)x * MainVar.instance.TILESIZE + MainVar.instance.TILESIZE / 2f;
             Vector3 localPosition = new Vector3(num5, (float)(-y) * MainVar.instance.TILESIZE + MainVar.instance.TILESIZE / 2f, 1f);
@@ -50,9 +50,9 @@ namespace TeviRandomizer
             spriteRenderer.sortingOrder = 44;                                                                                                         //Item Layer
 
             WorldManager.Instance.areadata.tilelist.Add(tileData);
-        } 
-        
-        static void createNormalTile(int x,int y,int spriteID,bool flipH,bool flipV)
+        }
+
+        static void createNormalTile(int x, int y, int spriteID, bool flipH, bool flipV)
         {
             Layer layer = Layer.NORMAL;
             Traverse worldmng = Traverse.Create(WorldManager.Instance);
@@ -62,7 +62,7 @@ namespace TeviRandomizer
 
             gameObject.transform.SetParent(worldmng.Field("TileHolder").GetValue<GameObject>().transform);
 
-            WorldManager.TileData tileData = setUpTileData(x,y,spriteID,flipH,flipV,layer);
+            WorldManager.TileData tileData = setUpTileData(x, y, spriteID, flipH, flipV, layer);
 
             float num5 = (float)x * MainVar.instance.TILESIZE + MainVar.instance.TILESIZE / 2f;
             Vector3 localPosition = new Vector3(num5, (float)(-y) * MainVar.instance.TILESIZE + MainVar.instance.TILESIZE / 2f, 1f);
@@ -244,13 +244,22 @@ namespace TeviRandomizer
             if (WorldManager.Instance.Area == 8)
             {
                 Traverse t = Traverse.Create(__instance);
-                createItemTile(334,205,20,false,false);
+                createItemTile(334, 205, 20, false, false);
                 for (int i = 0; i < 3; i++)
                 {
                     //createNormalTile(296, 177-i, 109, false, false);
                 }
             }
         }
-
+        /*
+         [HarmonyPatch(typeof(GemaFreeRoamOnlyObject),"disableme")]
+        [HarmonyPrefix]
+        static bool destroyFreeRoamOnlyObject(ref GemaFreeRoamOnlyObject __instance)
+        {
+            Debug.LogWarning($"[Removal] Removing GameObject {__instance.gameObject.name}");
+            __instance.gameObject.SetActive(false);
+            return false;
+        }
+        */
     }
 }

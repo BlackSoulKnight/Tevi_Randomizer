@@ -939,14 +939,17 @@ class ItemObtainPatch()
 
 class EventPatch
 {
+
     // Free Start Items
     [HarmonyPatch(typeof(Chap0GetKnife), "EVENT")]
     [HarmonyPrefix]
-    static void StartEvent()
+    static bool StartEvent()
     {
         EventManager em = EventManager.Instance;
 
-        if (em.EventStage == 10)
+        if (HUDObtainedItem.Instance.isDisplaying()) return false;
+
+        if (em.EventStage == 1)
         {
 
             if (RandomizerPlugin.customFlags[(int)CustomFlags.CompassStart])
@@ -964,22 +967,6 @@ class EventPatch
                 SaveManager.Instance.SetStackableItem(ItemList.Type.STACKABLE_MATK, (byte)(64-i),true);
             }
 
-            SaveManager.Instance.SetOrb((byte)0);
-            //RandomizerPlugin.addOrbStatus(3);
-
-            ItemData data = RandomizerPlugin.getRandomizedItem(ItemList.Type.ITEM_ORB, 1);
-            if (data.getItemTyp().ToString().Contains("STACKABLE"))
-                SaveManager.Instance.SetStackableItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
-            else
-                SaveManager.Instance.SetItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
-
-
-            data = RandomizerPlugin.getRandomizedItem(ItemList.Type.ITEM_KNIFE, 1);
-            if(data.getItemTyp().ToString().Contains("STACKABLE"))
-                SaveManager.Instance.SetStackableItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
-            else
-                SaveManager.Instance.SetItem((ItemList.Type)data.itemID, (byte)data.slotID, true);
-            
             if (RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart])
             {
                 SaveManager.Instance.SetItem(ItemList.Type.I19,1);
@@ -1006,11 +993,28 @@ class EventPatch
                 SaveManager.Instance.AddBreakTile(3, 455, 188);
                 SaveManager.Instance.AddBreakTile(3, 456, 188);
             }
+
+        }
+        else if (em.EventStage == 20)
+        {
+            if (em.EventTime > 0.1f && em.EventTime < 100f)
+            {
+                SaveManager.Instance.SetOrb(0);
+                HUDObtainedItem.Instance.GiveItem(ItemList.Type.ITEM_ORB, 1);
+                em.EventTime = 100f;
+            }
+            else if(em.EventTime > 100.5f)
+            {
+                em.NextStage();
+            }
+            return false;
+        }
+        else if(em.EventStage == 40)
+        {
             ShopPatch.alreadyClaimed();
             VenaItemClaimedCheck();
-            em.SetStage(30);
-            
         }
+        return true;
     }
     
     static void VenaItemClaimedCheck()
