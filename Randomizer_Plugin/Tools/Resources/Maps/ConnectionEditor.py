@@ -64,10 +64,10 @@ class prog:
         post=nx.get_node_attributes(graph,'pos')
         fig = plt.figure(figsize=(32,18))
         nx.spring_layout(graph,pos=post)    
-        nx.draw(graph,post,node_size=300,node_shape='s',edgecolors='white',edge_color='white')
+        nx.draw(graph,post,node_size=400,node_shape='s',edgecolors='white',edge_color='white')
         fig.gca().invert_yaxis()
         fig.set_facecolor('black')
-        #fig.savefig(self.path+".png")
+        fig.savefig(self.path+".png")
         fig.show()
         
 

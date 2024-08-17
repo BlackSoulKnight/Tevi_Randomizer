@@ -1019,9 +1019,6 @@ class EventPatch
     
     static void VenaItemClaimedCheck()
     {
-
-
-
         if (RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.STACKABLE_COG, 23)) {
             SaveManager.Instance.SetEventFlag(Mode.END_VENA, 1,true);
             SaveManager.Instance.AddResource(ItemList.Resource.COIN, 1000);
