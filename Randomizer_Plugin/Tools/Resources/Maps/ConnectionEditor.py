@@ -101,8 +101,8 @@ class prog:
         except:
             return
     def printAllMaps(self):
-        for i in range(0,30):
-            self.loadFile("map"+str(i))
+        for i in range(1,30):
+            self.loadFiles("map"+str(i))
             self.createGraph()
 
 

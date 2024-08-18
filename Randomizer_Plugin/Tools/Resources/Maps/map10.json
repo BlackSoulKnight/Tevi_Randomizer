@@ -83,4 +83,5 @@
 {"Map":10,"RoomX":23,"RoomY":14,"RoomSection":0,"Connection":[{"Map":10,"RoomX":23,"RoomY":15,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":23,"RoomY":13,"RoomSection":0,"Method":[]}]},
 {"Map":10,"RoomX":23,"RoomY":15,"RoomSection":0,"Connection":[{"Map":10,"RoomX":23,"RoomY":16,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":23,"RoomY":14,"RoomSection":0,"Method":[]}]},
 {"Map":10,"RoomX":23,"RoomY":16,"RoomSection":0,"Connection":[{"Map":10,"RoomX":23,"RoomY":17,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":23,"RoomY":15,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":23,"RoomY":17,"RoomSection":0,"Connection":[{"Map":10,"RoomX":22,"RoomY":17,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":23,"RoomY":16,"RoomSection":0,"Method":[]}]}]
+{"Map":10,"RoomX":23,"RoomY":17,"RoomSection":0,"Connection":[{"Map":10,"RoomX":22,"RoomY":17,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":23,"RoomY":16,"RoomSection":0,"Method":[]}]}
+]
