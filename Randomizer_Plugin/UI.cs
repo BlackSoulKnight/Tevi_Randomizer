@@ -317,7 +317,7 @@ namespace TeviRandomizer
 
         void OnEnable()
         {
-            GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce("{CONFIRM}Select  {BACK}Return");
+            GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce(text[0]);
 
             for (int t = 0; t < options.Length; t++)
             {
@@ -349,6 +349,9 @@ namespace TeviRandomizer
             }
         }
         private float dtime;
+
+        private string[] text = ["{PAGEL}+{PAGER} Disable Randomizer  {CONFIRM}Select  {BACK}Return", "{LEFT}{RIGHT}Change Value  {CONFIRM}Confirm", "{CONFIRM}Confirm"];
+
         void Update()
         {
             dtime += Time.deltaTime;
@@ -377,14 +380,14 @@ namespace TeviRandomizer
                         isEditing = false;
                         options[tab][side][selected].transform.GetChild(2).GetChild(1).GetChild(1).gameObject.SetActive(true);
                         options[tab][side][selected].transform.GetChild(2).GetChild(1).GetChild(2).gameObject.SetActive(false);
-                        GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce("{CONFIRM}Select  {BACK}Return");
+                        GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce(text[0]);
 
                     }
                 }
                 if(finishEditing)
                 {
                     isEditing = false;
-                    GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce("{CONFIRM}Select  {BACK}Return");
+                    GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce(text[0]);
                     finishEditing = false;
                 }
                else if(InputButtonManager.Instance.isUsingJoypad() && InputButtonManager.Instance.GetButton(14))
@@ -392,7 +395,7 @@ namespace TeviRandomizer
                     isEditing = false;
                     finishEditing = false;
                     EventSystem.current.SetSelectedGameObject(null);
-                    GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce("{CONFIRM}Select  {BACK}Return");
+                    GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce(text[0]);
                 }
                 return;
             }
@@ -424,7 +427,7 @@ namespace TeviRandomizer
                     {
                         input.ActivateInputField();
                         isEditing = true;
-                        GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce("{CONFIRM}Confirm");
+                        GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce(text[2]);
                     }
                     //(Steamworks.SteamUtils.ShowGamepadTextInput(Steamworks.GamepadTextInputMode.Normal, Steamworks.GamepadTextInputLineMode.SingleLine, "Enter Seed", 16, ""))                    
                     return;
@@ -434,7 +437,7 @@ namespace TeviRandomizer
                     isEditing = true;
                     options[tab][side][selected].transform.GetChild(2).GetChild(1).GetChild(1).gameObject.SetActive(false);
                     options[tab][side][selected].transform.GetChild(2).GetChild(1).GetChild(2).gameObject.SetActive(true);
-                    GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce("{LEFT}{RIGHT}Change Value  {CONFIRM}Confirm");
+                    GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce(text[1]);
                     return;
                 }
                 UnityEngine.UI.Button button = options[tab][side][selected].GetComponentInChildren<UnityEngine.UI.Button>();
@@ -450,6 +453,18 @@ namespace TeviRandomizer
                 UnityEngine.Cursor.visible = false;
                 GemaSuperSample.Instance.ChangeRenderScaleAnimation(1);
                 this.gameObject.SetActive(false);
+            }
+            if(InputButtonManager.Instance.GetButton(7) && InputButtonManager.Instance.GetButton(8))
+            {
+                if (RandomizerPlugin.toggleRandomizerPlugin())
+                {
+                    text[0] = text[0].Replace("Enable", "Disable");
+                }
+                else
+                {
+                    text[0] = text[0].Replace("Disable", "Enable");
+                }
+                GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce(text[0]);
             }
         }
     }
