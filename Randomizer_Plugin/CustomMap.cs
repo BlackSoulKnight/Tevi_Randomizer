@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using BepInEx;
 using EditorVar;
+using EventMode;
 using HarmonyLib;
 using UnityEngine;
 using UnityEngine.TextCore;
-using UnityEngine.UIElements;
 using static UnityEngine.UIElements.UIR.Allocator2D;
 
 
@@ -13,7 +16,8 @@ namespace TeviRandomizer
 {
     class CustomMap
     {
-        static WorldManager.TileData setUpTileData(int x, int y, int spriteID, bool flipH, bool flipV, Layer layer) {
+        static WorldManager.TileData setUpTileData(int x, int y, int spriteID, bool flipH, bool flipV, Layer layer)
+        {
             WorldManager.TileData tileData = new WorldManager.TileData();
             tileData.spriteID = spriteID;
             tileData.x = x;
@@ -241,6 +245,7 @@ namespace TeviRandomizer
         [HarmonyPostfix]
         static void AdditionalChanges(ref WorldManager __instance)
         {
+            loadMap();
             if (WorldManager.Instance.Area == 8)
             {
                 Traverse t = Traverse.Create(__instance);
@@ -251,6 +256,102 @@ namespace TeviRandomizer
                 }
             }
         }
+
+        public static void loadMap()
+        {
+            BinaryFormatter binaryFormatter = new BinaryFormatter();
+            byte area = WorldManager.Instance.Area;
+            string text = $"{BepInEx.Paths.PluginPath}/tevi_randomizer/CustomMaps/CustomMap{area}.dat";
+            if (File.Exists(text))
+            {
+                FileStream fileStream = File.Open(text, FileMode.Open);
+                List<WorldManager.TileData> tmpRemovedTile = (List<WorldManager.TileData>)binaryFormatter.Deserialize(fileStream);
+                List<WorldManager.TileData> tmpAddedTile = (List<WorldManager.TileData>)binaryFormatter.Deserialize(fileStream);
+                float TILESIZE = MainVar.instance.TILESIZE;
+                foreach (WorldManager.TileData tileData in tmpRemovedTile)
+                {
+                    GameObject[] array = GameObject.FindGameObjectsWithTag("TileSprite");
+                    foreach (GameObject gameObject in array)
+                    {
+
+                        float num4 = gameObject.transform.position.x / TILESIZE;
+                        if (tileData.layer == Layer.BACKDROP && gameObject.transform.localEulerAngles.y == 180f)
+                        {
+                            num4 += 1f;
+                        }
+                        if ((int)(num4 - 0.5f) == tileData.x && (int)(-1 * (gameObject.transform.position.y / TILESIZE) - 0.5f) == tileData.y - 1 && gameObject.name.Equals("SPR"))
+                        {
+                            bool flag = false;
+                            SpriteRenderer component = gameObject.GetComponent<SpriteRenderer>();
+                            if (component != null)
+                            {
+
+                                if (tileData.layer == Layer.BACK1 && (component.sortingOrder == 30 || component.sortingOrder == 9))
+                                {
+                                    flag = true;
+                                }
+                                else if (tileData.layer == Layer.BACKDROP && (component.sortingOrder == 305 || component.sortingOrder == 46 || component.sortingOrder == 52 || (component.sortingOrder >= 401 && component.sortingOrder <= 411) || component.sortingOrder == 4 || component.sortingOrder == 5 || (component.sortingOrder >= 10 && component.sortingOrder <= 24 && component.sortingOrder != 15)))
+                                {
+                                    flag = true;
+                                }
+                                else if (tileData.layer == Layer.BACK2 && (component.sortingOrder == 35 || component.sortingOrder == 8))
+                                {
+                                    flag = true;
+                                }
+                                else if (tileData.layer == Layer.BACK3 && (component.sortingOrder == 39 || component.sortingOrder == 7))
+                                {
+                                    flag = true;
+                                }
+                                else if (tileData.layer == Layer.BACK4 && (component.sortingOrder == 42 || component.sortingOrder == 6))
+                                {
+                                    flag = true;
+                                }
+                                else if (tileData.layer == Layer.FRONT1 && (component.sortingOrder == 225 || component.sortingOrder == 60))
+                                {
+                                    flag = true;
+                                }
+                                else if (tileData.layer == Layer.NORMAL && component.sortingOrder == 45)
+                                {
+                                    flag = true;
+                                }
+                                else if (tileData.layer == Layer.ITEM && component.sortingOrder == 44)
+                                {
+                                    flag = true;
+                                }
+                                else if (tileData.layer == Layer.ENEMY && component.sortingOrder == 1000)
+                                {
+                                    flag = true;
+                                }
+                                else if (tileData.layer == Layer.EVENT && component.sortingOrder == 1100)
+                                {
+                                    flag = true;
+                                }
+                                else if (tileData.layer == Layer.ELEMENT && component.sortingOrder == 1200)
+                                {
+                                    flag = true;
+                                }
+                                if (flag)
+                                {
+                                    WorldManager.Instance.TryDestoryTile(tileData.x, tileData.y, gameObject.transform.parent.gameObject, true, tileData.layer);
+                                    break;
+                                }
+                            }
+                        }
+                    }
+
+                }
+                Traverse t = new Traverse(WorldManager.Instance);
+
+                foreach (WorldManager.TileData tileData in tmpAddedTile)
+                {
+                    object[] obj = [tileData.x, tileData.y, tileData.spriteID, tileData.flipH, tileData.flipV, tileData.layer];
+                    t.Method("CreateTile", obj).GetValue();
+                }
+                fileStream.Close();
+                WorldManager.Instance.areadata.SetTilePixelLighting();
+            }
+        }
+
         /*
          [HarmonyPatch(typeof(GemaFreeRoamOnlyObject),"disableme")]
         [HarmonyPrefix]
@@ -262,4 +363,6 @@ namespace TeviRandomizer
         }
         */
     }
+
+
 }
