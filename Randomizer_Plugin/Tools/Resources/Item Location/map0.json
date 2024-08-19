@@ -88,6 +88,12 @@
         "SlotID":1,
         "Location":"0,12,18,0",
         "Method":["ITEM_LINEBOMB"]
+    },
+    {
+        "ItemName":"STACKABLE_COG Lv: 20",
+        "SlotID":20,
+        "Location":"0,16,16,0",
+        "Method":[""]
     }
 ]
 
