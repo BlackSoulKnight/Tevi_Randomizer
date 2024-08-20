@@ -334,7 +334,7 @@ namespace TeviRandomizer
             }
             rando = new System.Random(seed);
 
-            randomizer.createSeed(rando);
+            randomizer.synccreateSeed(rando);
         }
 
 

@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using System.Threading.Tasks;
 using TMPro;
+using System.Text.RegularExpressions;
+using System.Data;
 
 
 namespace TeviRandomizer
@@ -41,94 +43,21 @@ namespace TeviRandomizer
             }
             public bool check(List<string> itemList)
             {
-                bool flag = true;
                 if (Method == "") return true;
-                string[] ors = Method.Split(new string[] { "||" }, StringSplitOptions.None);
-                foreach (string or in ors)
-                {
-                    bool flagCheck = true;
-                    string[] ands = Method.Split(new string[] { "&&" }, StringSplitOptions.None);
-                    foreach (string item in ands)
-                    {
-                       
-                        if (itemList.Contains(item.Trim()) || item == "") continue;
+                Debug.Log(Method);
+                Method = Regex.Replace(Method, @"\b(\w|\s)+\b", match => {
+                    Debug.Log(match);
+                    if (itemList.Contains(match.ToString()))
+                    return " true ";
+                    else
+                        return " false ";
+                });
+                Method = Method.Replace("&&", "AND").Replace("||", "OR");
+                Debug.Log(Method);
 
-                        if (item.Contains("AllMemine") && memineCount >= 6)
-                        {
-                            continue;
-
-                        }
-                        else if (item.Contains("Memine") && !item.Contains("AllMemine") && flag)
-                        {
-                            continue;
-                        }
-                        // ILLUSION PALACE MISSING REQ NEED TO CHECK GEAR COUNT
-
-                        if (item.Contains("Coin") && checkMovementItems(itemList) && (itemList.Contains("ITEM_LINEBOMB") || itemList.Contains("ITEM_KNIFE"))) continue;
-                        if (item.Contains("Coin") && item.Contains("250")) continue;
-
-                        if (item.Contains("Boss"))
-                        {
-                            bossCount++;
-                            continue;
-                        }
-                        if (item.Contains("ChargeShot") && itemList.Contains("ITEM_ORB2")) continue;
-                        if (item.Contains("RainbowCheck") && memineCount >= 3) continue;
-                        if (item.Contains("Chapter"))
-                        {
-                            switch (item.Split(' ')[2])
-                            {
-                                case "1":
-                                    if (bossCount >= 1) continue;
-                                    break;
-                                case "2":
-                                    if (bossCount >= 3) continue;
-                                    break;
-                                case "3":
-                                    if (bossCount >= 5) continue;
-                                    break;
-                                case "4":
-                                    if (bossCount >= 7) continue;
-                                    break;
-                                case "5":
-                                    if (bossCount >= 10) continue;
-                                    break;
-                                case "6":
-                                    if (bossCount >= 13) continue;
-                                    break;
-                                case "7":
-                                    if (bossCount >= 16) continue;
-                                    break;
-                                case "8":
-                                    if (bossCount >= 20) continue;
-                                    break;
-                            }
-                        }
-
-                        if (item.Contains("Upgrade") && itemList.Contains("ITEM_LINEBOMB")  && (craftingManaShardSwitch || (checkMovementItems(itemList) ) )) continue;
-
-                        if (item.Contains("Core") && itemList.Contains("ITEM_LINEBOMB")  && itemList.Contains("ITEM_AREABOMB") && checkMovementItems(itemList) && itemList.Contains("ITEM_BombLengthExtend")) continue;
-
-                        if (item.Contains("SpinnerBash") && itemList.Contains("ITEM_KNIFE")) continue;
-
-                        if (item.Contains("Fire") || item.Contains("Light")) continue;
-
-                        if (item.Contains("EliteChallange") && itemList.Contains("ITEM_LINEBOMB") && itemList.Contains("ITEM_SLIDE")) continue;
-
-                        if(item.Contains("DieMauerMussWeg") && RandomizerPlugin.customFlags[(int)CustomFlags.TempOption]) continue;
-
-                        flag = false;
-                        flagCheck = false;
-                        break;
-                    }
-                    flag |= flagCheck;
-                }
-                if (flag && Method.Contains("Memine"))
-                {
-                    memineCount++;      // abit weird approach for memine challanges
-                }
-                return flag;
+                return (bool)new DataTable().Compute(Method,"");
             }
+
 
             public bool checkMovementItems(List<string> itemList)
             {

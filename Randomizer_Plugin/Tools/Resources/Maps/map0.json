@@ -10,7 +10,7 @@
                 "RoomX": 3,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -25,14 +25,14 @@
                 "RoomX": 4,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 2,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -47,14 +47,14 @@
                 "RoomX": 5,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 3,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -69,21 +69,17 @@
                 "RoomX": 6,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": [
+                "Method": 
                     "ITEM_LINEBOMB"
-                ]
+                
             },
             {
                 "Map": 0,
                 "RoomX": 4,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": [
-                    "ITEM_LINEBOMB && ITEM_AirDash && RWJ",
-                    "ITEM_LINEBOMB && ITEM_WALLJUMP",
-                    "ITEM_LINEBOMB && ITEM_DOUBLEJUMP",
-                    "ITEM_LINEBOMB && ITEM_JETPACK"
-                ]
+                "Method": 
+                "ITEM_LINEBOMB&&(ITEM_WALLJUMP||ITEM_DOUBLEJUMP||ITEM_JETPACK||(ITEM_AirDash&&RWJ)"
             }
         ]
     },
@@ -98,14 +94,14 @@
                 "RoomX": 7,
                 "RoomY": 8,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 6,
                 "RoomY": 9,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -120,28 +116,21 @@
                 "RoomX": 7,
                 "RoomY": 9,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 6,
                 "RoomY": 10,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 6,
                 "RoomY": 8,
                 "RoomSection": 0,
-                "Method": [
-                    "ITEM_WALLJUMP",
-                    "RWJ && ITEM_DOUBLEJUMP",
-                    "RWJ && ITEM_JETPACK",
-                    "ITEM_JETPACK2 && ITEM_DOUBLEJUMP",
-                    "ITEM_HIJUMP && ITEM_JETPACK3 && TEVI_STRONG_AIR_UP",
-                    "ITEM_HIJUMP && ITEM_JETPACK && ITEM_DOUBLEJUMP && TEVI_STRONG_AIR_UP"
-                ]
+                "Method": "ITEM_WALLJUMP || (RWJ && (ITEM_DOUBLEJUMP || ITEM_JETPACK)) || ITEM_JETPACK2 && ITEM_DOUBLEJUMP || ITEM_HIJUMP && ((ITEM_JETPACK3 && TEVI_STRONG_AIR_UP) || (ITEM_JETPACK && ITEM_DOUBLEJUMP && TEVI_STRONG_AIR_UP))"
             }
         ]
     },
@@ -156,27 +145,21 @@
                 "RoomX": 7,
                 "RoomY": 10,
                 "RoomSection": 0,
-                "Method": [
-                    "ITEM_HIJUMP",
-                    "RWJ",
-                    "ITEM_DOUBLEJUMP",
-                    "ITEM_WALLJUMP",
-                    "ITEM_JETPACK"
-                ]
+                "Method": "ITEM_HIJUMP || RWJ || ITEM_DOUBLEJUMP || ITEM_WALLJUMP || ITEM_JETPACK"
             },
             {
                 "Map": 0,
                 "RoomX": 6,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 6,
                 "RoomY": 9,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -191,35 +174,31 @@
                 "RoomX": 7,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": [
+                "Method": 
                     "ChargeShot"
-                ]
+                
             },
             {
                 "Map": 0,
                 "RoomX": 6,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 5,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 6,
                 "RoomY": 10,
                 "RoomSection": 0,
-                "Method": [
-                    "RWJ",
-                    "ITEM_WALLJUMP",
-                    "ITEM_DOUBLEJUMP && ITEM_JETPACK",
-                    "ITEM_JETPACK2"
-                ]
+                "Method": 
+                "RWJ||ITEM_DOUBLEJUMP&&ITEM_JETPACK||ITEM_JETPACK2"
             }
         ]
     },
@@ -234,14 +213,14 @@
                 "RoomX": 7,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 6,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -256,21 +235,14 @@
                 "RoomX": 8,
                 "RoomY": 8,
                 "RoomSection": 0,
-                "Method": [
-                    "ITEM_HIJUMP",
-                    "ITEM_DOUBLEJUMP",
-                    "ITEM_JETPACK",
-                    "ITEM_WALLJUMP && RabbitJump",
-                    "RWJ && RabbitJump",
-                    "ITEM_WALLJUMP && ITEM_AirDash"
-                ]
+                "Method":"ITEM_HIJUMP||ITEM_DOUBLEJUMP||ITEM_JETPACK||(RWJ&&RabbitJump)||(ITEM_WALLJUMP&&ITEM_AirDash)"
             },
             {
                 "Map": 0,
                 "RoomX": 6,
                 "RoomY": 8,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -285,14 +257,14 @@
                 "RoomX": 8,
                 "RoomY": 9,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 6,
                 "RoomY": 9,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -307,14 +279,14 @@
                 "RoomX": 8,
                 "RoomY": 10,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 6,
                 "RoomY": 10,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -329,16 +301,16 @@
                 "RoomX": 8,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 6,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": [
+                "Method": 
                     "ChargeShot"
-                ]
+                
             }
         ]
     },
@@ -353,14 +325,14 @@
                 "RoomX": 8,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 6,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -375,14 +347,14 @@
                 "RoomX": 8,
                 "RoomY": 9,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 7,
                 "RoomY": 8,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -397,14 +369,14 @@
                 "RoomX": 7,
                 "RoomY": 9,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 8,
                 "RoomY": 8,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -419,14 +391,14 @@
                 "RoomX": 9,
                 "RoomY": 10,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 7,
                 "RoomY": 10,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -441,14 +413,14 @@
                 "RoomX": 9,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 7,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -463,23 +435,23 @@
                 "RoomX": 9,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": [
+                "Method": 
                     "ITEM_LINEBOMB"
-                ]
+                
             },
             {
                 "Map": 0,
                 "RoomX": 8,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 7,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -494,19 +466,15 @@
                 "RoomX": 9,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 8,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": [
-                    "RWJ && ITEM_DOUBLEJUMP",
-                    "RWJ && ITEM_JETPACK",
-                    "ITEM_WALLJUMP",
-                    "ITEM_DOUBLEJUMP && ITEM_JETPACK2"
-                ]
+                "Method":                
+                "(RWJ&&(ITEMDOUBLEJUMP||ITEM_JETPACK))||ITEM_DOUBLEJUMP&&ITEM_JETPACK2"
             }
         ]
     },
@@ -521,18 +489,18 @@
                 "RoomX": 9,
                 "RoomY": 14,
                 "RoomSection": 0,
-                "Method": [
+                "Method": 
                     "ChargeShot"
-                ]
+                
             },
             {
                 "Map": 0,
                 "RoomX": 8,
                 "RoomY": 15,
                 "RoomSection": 0,
-                "Method": [
+                "Method": 
                     "ITEM_LINEBOMB"
-                ]
+                
             }
         ]
     },
@@ -547,21 +515,15 @@
                 "RoomX": 9,
                 "RoomY": 15,
                 "RoomSection": 0,
-                "Method": [
-                    "ITEM_HIJUMP",
-                    "ITEM_DOUBLEJUMP",
-                    "ITEM_JETPACK",
-                    "ITEM_WALLJUMP && RabbitJump",
-                    "ITEM_WALLJUMP && ITEM_AirDash",
-                    "RWJ && RabbitJump"
-                ]
+                "Method": 
+                "ITEM_HIJUMP||ITEM_DOUBLEJUMP||ITEM_JETPACK||(RWJ&&(RabbitJump||ITEM_AirDash))"
             },
             {
                 "Map": 0,
                 "RoomX": 8,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -576,25 +538,22 @@
                 "RoomX": 9,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 8,
                 "RoomY": 17,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 8,
                 "RoomY": 15,
                 "RoomSection": 0,
-                "Method": [
-                    "RWJ",
-                    "ITEM_DOUBLEJUMP",
-                    "ITEM_JETPACK"
-                ]
+                "Method": 
+                "RWJ||ITEM_DOUBLEJUMP||ITEM_JETPACK"
             }
         ]
     },
@@ -609,14 +568,14 @@
                 "RoomX": 8,
                 "RoomY": 18,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 8,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -631,20 +590,15 @@
                 "RoomX": 9,
                 "RoomY": 18,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 8,
                 "RoomY": 17,
                 "RoomSection": 0,
-                "Method": [
-                    "RWJ && TEVI_WEAK_GROUND_BACKFLIP",
-                    "ITEM_DOUBLEJUMP",
-                    "ITEM_JETPACK",
-                    "RWJ && ITEM_HIJUMP",
-                    "RWJ && ITEM_AirDash"
-                ]
+                "Method": 
+                "(RWJ&&(TEVI_WEAK_GROUND_BACKFLIP||ITEM_HIJUMP||ITEM_AirDash))"
             }
         ]
     },
@@ -659,14 +613,14 @@
                 "RoomX": 9,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 8,
                 "RoomY": 10,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -681,21 +635,21 @@
                 "RoomX": 9,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 8,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 9,
                 "RoomY": 10,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -710,23 +664,23 @@
                 "RoomX": 10,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 8,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": [
+                "Method": 
                     "ITEM_LINEBOMB"
-                ]
+                
             },
             {
                 "Map": 0,
                 "RoomX": 9,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -741,14 +695,14 @@
                 "RoomX": 9,
                 "RoomY": 14,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 8,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -763,28 +717,24 @@
                 "RoomX": 10,
                 "RoomY": 14,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 8,
                 "RoomY": 14,
                 "RoomSection": 0,
-                "Method": [
+                "Method": 
                     "ChargeShot"
-                ]
+                
             },
             {
                 "Map": 0,
                 "RoomX": 9,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": [
-                    "ITEM_DOUBLEJUMP && ITEM_WALLJUMP2",
-                    "ITEM_JETPACK && RWJ && ITEM_WALLJUMP",
-                    "ITEM_JETPACK2 && ITEM_WALLJUMP",
-                    "ITEM_DOUBLEJUMP && RWJ && ITEM_WALLJUMP"
-                ]
+                "Method":
+                "((ITEM_DOUBLEJUMP||ITEM_JETPACK)&&((RWJ&&ITEM_WALLJUMP)||ITEM_WALLJUMP2))||(ITEM_JETPACK2&&ITEM_WALLJUMP)"
             }
         ]
     },
@@ -799,16 +749,15 @@
                 "RoomX": 10,
                 "RoomY": 15,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 8,
                 "RoomY": 15,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
-
         ]
     },
     {
@@ -822,14 +771,14 @@
                 "RoomX": 10,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 8,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -844,14 +793,14 @@
                 "RoomX": 10,
                 "RoomY": 18,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 8,
                 "RoomY": 18,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -866,7 +815,7 @@
                 "RoomX": 10,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -881,21 +830,22 @@
                 "RoomX": 11,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 10,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 10,
                 "RoomY": 10,
                 "RoomSection": 0,
-                "Method": ["ITEM_HIJUMP && ITEM_AirDash && RWJ","RWJ && ITEM_DOUBLEJUMP","ITEM_WALLJUMP","RWJ && ITEM_JETPACK","ITEM_JETPACK2"]
+                "Method":
+                "ITEM_JETPACK2||ITEM_WALLJUMP||(RWJ&&(ITEM_DOUBLEJUMP||ITEM_JETPACK||(ITEM_HIJUMP&&ITEM_AirDash))"
             }
         ]
     },
@@ -910,21 +860,22 @@
                 "RoomX": 11,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 9,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 10,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": ["ITEM_DOUBLEJUMP && ITEM_JETPACK && RWJ","ITEM_DOUBLEJUMP && ITEM_AirDash && RWJ"]
+                "Method": 
+                "ITEM_DOUBLEJUMP&&RWJ&&(ITEM_JETPACK||ITEM_AirDash)"
             }
         ]
     },
@@ -939,14 +890,14 @@
                 "RoomX": 11,
                 "RoomY": 14,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 9,
                 "RoomY": 14,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -961,14 +912,14 @@
                 "RoomX": 11,
                 "RoomY": 15,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 9,
                 "RoomY": 15,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -983,14 +934,14 @@
                 "RoomX": 11,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 9,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1005,14 +956,14 @@
                 "RoomX": 11,
                 "RoomY": 18,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 9,
                 "RoomY": 18,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1027,14 +978,15 @@
                 "RoomX": 12,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": ["RWJ","ITEM_DOUBLEJUMP && ITEM_HIJUMP","ITEM_DOUBLEJUMP && ITEM_JETPACK","ITEM_JETPACK && ITEM_HIJUMP","ITEM_DOUBLEJUMP && ITEM_AirDash"]
+                "Method": 
+                "RWJ||(ITEM_JETPACK&&ITEM_HIJUMP)||(ITEM_DOUBLEJUMP&&(ITEM_HIJUMP||ITEM_JETPACK||ITEM_AirDash))"
             },
             {
                 "Map": 0,
                 "RoomX": 10,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1049,7 +1001,7 @@
                 "RoomX": 10,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1064,14 +1016,14 @@
                 "RoomX": 12,
                 "RoomY": 14,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 10,
                 "RoomY": 14,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1086,14 +1038,15 @@
                 "RoomX": 12,
                 "RoomY": 15,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 10,
                 "RoomY": 15,
                 "RoomSection": 0,
-                "Method": ["ITEM_HIJUMP","RWJ","ITEM_DOUBLEJUMP","ITEM_JETPACK"]
+                "Method": 
+                "ITEM_HIJUMP||RWJ||ITEM_DOUBLEJUMP||ITEM_JETPACK"
             }
         ]
     },
@@ -1108,14 +1061,16 @@
                 "RoomX": 12,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": ["ITEM_LINEBOMB && ITEM_SLIDE"]
+                "Method": 
+                    "ITEM_LINEBOMB && ITEM_SLIDE"
+                
             },
             {
                 "Map": 0,
                 "RoomX": 10,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1130,14 +1085,15 @@
                 "RoomX": 12,
                 "RoomY": 18,
                 "RoomSection": 0,
-                "Method": ["ITEM_WALLJUMP","ITEM_DOUBLEJUMP && RWJ","RWJ && ITEM_JETPACK"]
+                "Method": 
+                "ITEM_WALLJUMP||(RWJ&&(ITEM_DOUBLEJUMP||ITEM_JETPACK))"
             },
             {
                 "Map": 0,
                 "RoomX": 10,
                 "RoomY": 18,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1152,14 +1108,16 @@
                 "RoomX": 13,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": ["ITEM_LINEBOMB && ITEM_SLIDE"]
+                "Method": 
+                    "ITEM_LINEBOMB && ITEM_SLIDE"
+                
             },
             {
                 "Map": 0,
                 "RoomX": 11,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1174,21 +1132,21 @@
                 "RoomX": 13,
                 "RoomY": 14,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 12,
                 "RoomY": 15,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 11,
                 "RoomY": 14,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1203,21 +1161,23 @@
                 "RoomX": 12,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 11,
                 "RoomY": 15,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 12,
                 "RoomY": 14,
                 "RoomSection": 0,
-                "Method": ["EnemyManip"]
+                "Method": 
+                    "EnemyManip"
+                
             }
         ]
     },
@@ -1232,21 +1192,23 @@
                 "RoomX": 13,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 11,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": ["ITEM_LINEBOMB && ITEM_SLIDE"]
+                "Method": 
+                    "ITEM_LINEBOMB && ITEM_SLIDE"
+                
             },
             {
                 "Map": 0,
                 "RoomX": 12,
                 "RoomY": 15,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1261,14 +1223,15 @@
                 "RoomX": 13,
                 "RoomY": 17,
                 "RoomSection": 0,
-                "Method": ["RWJ","ITEM_DOUBLEJUMP && ITEM_JETPACK"]
+                "Method": 
+                "RWJ||(ITEM_DOUBLEJUMP&&ITEM_JETPACK)"
             },
             {
                 "Map": 0,
                 "RoomX": 12,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1283,14 +1246,14 @@
                 "RoomX": 11,
                 "RoomY": 18,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 12,
                 "RoomY": 17,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1305,14 +1268,18 @@
                 "RoomX": 14,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": ["Money"]
+                "Method": 
+                    "Money"
+                
             },
             {
                 "Map": 0,
                 "RoomX": 12,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": ["ITEM_LINEBOMB && ITEM_SLIDE"]
+                "Method": 
+                    "ITEM_LINEBOMB && ITEM_SLIDE"
+                
             }
         ]
     },
@@ -1327,7 +1294,7 @@
                 "RoomX": 12,
                 "RoomY": 14,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1342,14 +1309,14 @@
                 "RoomX": 14,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 12,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1364,14 +1331,14 @@
                 "RoomX": 14,
                 "RoomY": 17,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 12,
                 "RoomY": 17,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1386,21 +1353,23 @@
                 "RoomX": 15,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 14,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 13,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": ["ITEM_KNIFE"]
+                "Method": 
+                    "ITEM_KNIFE"
+                
             }
         ]
     },
@@ -1415,14 +1384,14 @@
                 "RoomX": 15,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 14,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1437,14 +1406,14 @@
                 "RoomX": 15,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 13,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1459,14 +1428,16 @@
                 "RoomX": 15,
                 "RoomY": 17,
                 "RoomSection": 0,
-                "Method": ["ITEM_LINEBOMB"]
+                "Method": 
+                    "ITEM_LINEBOMB"
+                
             },
             {
                 "Map": 0,
                 "RoomX": 13,
                 "RoomY": 17,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1481,7 +1452,7 @@
                 "RoomX": 15,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1496,14 +1467,14 @@
                 "RoomX": 16,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 14,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1518,14 +1489,14 @@
                 "RoomX": 16,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 14,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1540,21 +1511,25 @@
                 "RoomX": 15,
                 "RoomY": 17,
                 "RoomSection": 1,
-                "Method": ["ITEM_LINEBOMB","RWJ && ChargeShot","ITEM_DOUBLEJUMP && ChargeShot","ITEM_JETPACK && ChargeShot"]
+                "Method":
+                "ITEM_LINEBOMB||(ChargeShot&&(RWJ||ITEM_DOUBLEJUMP||ITEM_JETPACK))"
             },
             {
                 "Map": 0,
                 "RoomX": 14,
                 "RoomY": 17,
                 "RoomSection": 0,
-                "Method": ["ITEM_AREABOMB"]
+                "Method": 
+                    "ITEM_AREABOMB"
+                
             },
             {
                 "Map": 0,
                 "RoomX": 15,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": ["RWJ","ITEM_DOUBLEJUMP","ITEM_JETPACK"]
+                "Method": 
+                "RWJ||ITEM_DOUBLEJUMP||ITEM_JETPACK"
             }
         ]
     },
@@ -1569,21 +1544,24 @@
                 "RoomX": 16,
                 "RoomY": 17,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 15,
                 "RoomY": 17,
                 "RoomSection": 0,
-                "Method": ["ChargeShot","ITEM_AREABOMB"]
+                "Method": 
+                "ChargeShot||ITEM_AREABOMB"
             },
             {
                 "Map": 0,
                 "RoomX": 15,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": ["ChargeShot"] 
+                "Method": 
+                    "ChargeShot"
+                
             }
         ]
     },
@@ -1598,14 +1576,15 @@
                 "RoomX": 16,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": ["RWJ","ITEM_DOUBLEJUMP && ITEM_HIJUMP && TEVI_STRONG_AIR_UP","ITEM_JETPACK && ITEM_HIJUMP && TEVI_STRONG_AIR_UP","ITEM_JETPACK && ITEM_DOUBLEJUMP" ]
+                "Method": 
+                "RWJ||(ITEM_JETPACK&&(ITEM_HIJUMP&&TEVI_STRONG_AIR_UP)||ITEM_DOUBLEJUMP))||(ITEM_DOUBLEJUMP&&ITEM_HIJUMP&&TEVI_STRONG_AIR_UP)"
             },
             {
                 "Map": 0,
                 "RoomX": 15,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1620,14 +1599,15 @@
                 "RoomX": 16,
                 "RoomY": 14,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 16,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": ["RWJ","ITEM_DOUBLEJUMP","ITEM_JETPACK"]
+                "Method":
+                "RWJ||ITEM_DOUBLEJUMP||ITEM_JETPACK"
             }
         ]
     },
@@ -1642,14 +1622,15 @@
                 "RoomX": 16,
                 "RoomY": 15,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 16,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": ["RWJ","ITEM_DOUBLEJUMP","ITEM_HIJUMP","ITEM_JETPACK","TEVI_STRONG_AIR_UP"]
+                "Method": 
+                "RWJ||ITEM_DOUBLEJUMP||ITEM_HIJUMP||ITEM_JETPACK||TEVI_STRONG_AIR_UP"
             }
         ]
     },
@@ -1664,22 +1645,23 @@
                 "RoomX": 17,
                 "RoomY": 15,
                 "RoomSection": 0,
-                "Method": ["ITEM_DOUBLEJUMP","ITEM_JETPACK && ITEM_AirDash","extJET","ITEM_JETPACK && ITEM_SPEEDUP3","ITEM_JETPACK2"]
+                "Method":
+                "ITEM_DOUBLEJUMP||extJET||ITEM_JETPACK2||(ITEM_JETPACK&&(ITEM_AirDash||ITEM_SPEEDUP3))"
             },
             {
                 "Map": 0,
                 "RoomX": 16,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 16,
                 "RoomY": 14,
                 "RoomSection": 0,
-                "Method": ["RWJ","ITEM_DOUBLEJUMP","ITEM_HIJUMP","ITEM_JETPACK","TEVI_STRONG_AIR_UP"]
-
+                "Method": 
+                "RWJ||ITEM_DOUBLEJUMP||ITEM_HIJUMP||ITEM_JETPACK||TEVI_STRONG_AIR_UP"
             }
         ]
     },
@@ -1694,28 +1676,33 @@
                 "RoomX": 17,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 16,
                 "RoomY": 17,
                 "RoomSection": 0,
-                "Method": ["ChargeShot"]
+                "Method": 
+                    "ChargeShot"
+                
             },
             {
                 "Map": 0,
                 "RoomX": 15,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": ["RWJ && RabbitJump","ITEM_HIJUMP","ITEM_DOUBLEJUMP","ITEM_JETPACK","RWJ && ITEM_AirDash"]
+                "Method": 
+                "ITEM_HIJUMP||ITEM_DOUBLEJUMP||ITEM_JETPACK||(RWJ&&(RabbitJump||ITEM_AirDash))"
             },
             {
                 "Map": 0,
                 "RoomX": 16,
                 "RoomY": 15,
                 "RoomSection": 0,
-                "Method": ["Its Possible but why do we need it?"]
+                "Method": 
+                    "Its Possible but why do we need it?"
+                
             }
         ]
     },
@@ -1730,14 +1717,16 @@
                 "RoomX": 17,
                 "RoomY": 17,
                 "RoomSection": 0,
-                "Method": ["ITEM_LINEBOMB"]
+                "Method": 
+                    "ITEM_LINEBOMB"
+                
             },
             {
                 "Map": 0,
                 "RoomX": 15,
                 "RoomY": 17,
                 "RoomSection": 1,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1752,7 +1741,9 @@
                 "RoomX": 16,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": ["ITEM_LINEBOMB && ITEM_SLIDE"]
+                "Method": 
+                    "ITEM_LINEBOMB && ITEM_SLIDE"
+                
             }
         ]
     },
@@ -1767,21 +1758,23 @@
                 "RoomX": 18,
                 "RoomY": 14,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 17,
                 "RoomY": 15,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 16,
                 "RoomY": 14,
                 "RoomSection": 0,
-                "Method": ["TEVI_WEAK_GROUND_BACKFLIP && RWJ"]
+                "Method": 
+                    "TEVI_WEAK_GROUND_BACKFLIP && RWJ"
+                
             }
         ]
     },
@@ -1796,21 +1789,22 @@
                 "RoomX": 18,
                 "RoomY": 15,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 16,
                 "RoomY": 15,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 17,
                 "RoomY": 14,
                 "RoomSection": 0,
-                "Method": ["ITEM_DOUBLEJUMP","ITEM_JETPACK","ITEM_AirDash"]
+                "Method": 
+                "ITEM_DOUBLEJUMP||ITEM_JETPACK||ITEM_AirDash"
             }
         ]
     },
@@ -1825,14 +1819,16 @@
                 "RoomX": 18,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": ["ITEM_SLIDE"]
+                "Method": 
+                    "ITEM_SLIDE"
+                
             },
             {
                 "Map": 0,
                 "RoomX": 16,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1847,14 +1843,15 @@
                 "RoomX": 18,
                 "RoomY": 17,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 16,
                 "RoomY": 17,
                 "RoomSection": 0,
-                "Method": ["RWJ","ITEM_DOUBLEJUMP","ITEM_JETPACK"]
+                "Method": 
+                "RWJ||ITEM_DOUBLEJUMP||ITEM_JETPACK"
             }
         ]
     },
@@ -1869,21 +1866,22 @@
                 "RoomX": 19,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 18,
                 "RoomY": 14,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 17,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": ["ITEM_LINEBOMB && ITEM_SLIDE && RWJ && ITEM_DOUBLEJUMP","ITEM_LINEBOMB && ITEM_SLIDE && RWJ && ITEM_JETPACK","ITEM_LINEBOMB && ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_JETPACK"]
+                "Method":
+                "ITEM_LINEBOMB&&ITEM_SLIDE&&((RWJ&&(ITEM_DOUBLEJUMP||ITEM_JETPACK))||(ITEM_DOUBLEJUMP&&ITEM_JETPACK))"
             }
         ]
     },
@@ -1898,14 +1896,14 @@
                 "RoomX": 18,
                 "RoomY": 15,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 18,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1920,14 +1918,14 @@
                 "RoomX": 18,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 17,
                 "RoomY": 15,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1942,21 +1940,23 @@
                 "RoomX": 18,
                 "RoomY": 17,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 17,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 18,
                 "RoomY": 15,
                 "RoomSection": 0,
-                "Method": ["ITEM_SLIDE"]
+                "Method": 
+                    "ITEM_SLIDE"
+                
             }
         ]
     },
@@ -1971,14 +1971,14 @@
                 "RoomX": 17,
                 "RoomY": 17,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 18,
                 "RoomY": 16,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -1993,14 +1993,14 @@
                 "RoomX": 20,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 0,
                 "RoomX": 18,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -2015,14 +2015,14 @@
                 "RoomX": 19,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 1,
                 "RoomX": 5,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     }
