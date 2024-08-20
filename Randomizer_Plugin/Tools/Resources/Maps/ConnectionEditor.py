@@ -50,11 +50,22 @@ class prog:
         plt.clf()
 
         graph = nx.DiGraph()
-        if os.path.exists(self.path+".png"):
-            os.remove(self.path+".png")
+        if os.path.exists("./png/"+self.path+".png"):
+            os.remove("./png/"+self.path+".png")
 
         for room in self.mapFile:
-            graph.add_node(f"{room['RoomX']},{room['RoomY']},{room['RoomSection']}",pos=(room['RoomX'],room['RoomY']))
+            x = 0
+            y = 0
+            if room['RoomSection'] == 0:
+                x = 0.5
+            if room['RoomSection'] == 1:
+                x = -0.5
+            if room['RoomSection'] == 2:
+                y = -0.5
+            if room['RoomSection'] == 3:
+                y = 0.5
+
+            graph.add_node(f"{room['RoomX']},{room['RoomY']},{room['RoomSection']}",pos=((room['RoomX']*2)+x,(room['RoomY']*2)+y))
         for room in self.mapFile:
             for con in room["Connection"]:
                 if room['Map'] != con['Map']:
@@ -67,7 +78,7 @@ class prog:
         nx.draw(graph,post,node_size=400,node_shape='s',edgecolors='white',edge_color='white')
         fig.gca().invert_yaxis()
         fig.set_facecolor('black')
-        fig.savefig(self.path+".png")
+        fig.savefig("./png/"+self.path+".png")
         fig.show()
         
 
@@ -101,7 +112,7 @@ class prog:
         except:
             return
     def printAllMaps(self):
-        for i in range(2,30):
+        for i in range(0,30):
             self.loadFiles("map"+str(i))
             self.createGraph()
 
@@ -174,5 +185,5 @@ class prog:
             self.currFunc()
 
 a = prog()
-#a.printAllMaps()
+a.printAllMaps()
 a.loop()
