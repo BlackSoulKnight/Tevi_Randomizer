@@ -86,7 +86,7 @@
     },
     {
         "ItemName":"STACKABLE_MATK #6",
-        "SlotID":1,
+        "SlotID":6,
         "Location":"0,12,18,0",
         "Method":"ITEM_LINEBOMB"
     }

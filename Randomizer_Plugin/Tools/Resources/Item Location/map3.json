@@ -1,0 +1,134 @@
+[
+    {
+        "ItemName":"STACKABLE_COG #23",
+        "SlotID":23,
+        "Location":"3,12,11,0",
+        "Method":""
+    },
+    {
+        "ItemName":"BADGE_TauntPhoto",
+        "SlotID":1,
+        "Location":"3,21,14,0",
+        "Method":""
+    },
+    {
+        "ItemName":"BADGE_RememberBrutalForce",
+        "SlotID":1,
+        "Location":"3,14,10,0",
+        "Method":""
+    },
+    {
+        "ItemName":"STACKABLE_MP #9",
+        "SlotID":9,
+        "Location":"3,14,13,0",
+        "Method":""
+    },
+    {
+        "ItemName":"BADGE_BossPassing",
+        "SlotID":1,
+        "Location":"3,15,10,0",
+        "Method":"Coins 1000"
+    },
+    {
+        "ItemName":"BADGE_StyleComboAirDashS",
+        "SlotID":1,
+        "Location":"3,15,10,0",
+        "Method":"Coins 2000 && Demonfray"
+    },
+    {
+        "ItemName":"BADGE_MAXHPCost",
+        "SlotID":1,
+        "Location":"3,15,10,0",
+        "Method":"Coins 2600 && Demonfray"
+    },
+    {
+        "ItemName":"BADGE_EnemyDefeatExp",
+        "SlotID":1,
+        "Location":"3,15,10,0",
+        "Method":"Coins 2750 && Demonfray"
+    },
+    {
+        "ItemName":"BADGE_1HealthTypeA",
+        "SlotID":1,
+        "Location":"3,15,10,0",
+        "Method":"Coins 2750 && Demonfray"
+    },
+    {
+        "ItemName":"BADGE_TauntThink",
+        "SlotID":1,
+        "Location":"3,15,10,0",
+        "Method":"Coins 1000"
+    },
+    {
+        "ItemName":"BADGE_QuickMPRegainA",
+        "SlotID":1,
+        "Location":"3,15,10,0",
+        "Method":"Coins 1900"
+    },
+    {
+        "ItemName":"BADGE_MapDiscoverRecover",
+        "SlotID":1,
+        "Location":"3,15,10,0",
+        "Method":"Coins 1750"
+    },
+    {
+        "ItemName":"BADGE_StyleComboAirNormal3A",
+        "SlotID":1,
+        "Location":"3,15,10,0",
+        "Method":"Coins 1500"
+    },
+    {
+        "ItemName":"BADGE_UpperDoubleHitAfterOutline",
+        "SlotID":1,
+        "Location":"3,15,10,0",
+        "Method":"Coins 1350"
+    },
+    {
+        "ItemName":"BADGE_Hurt2Punisher",
+        "SlotID":1,
+        "Location":"3,15,10,0",
+        "Method":"Coins 1750"
+    },
+    {
+        "ItemName":"STACKABLE_BAG",
+        "SlotID":30,
+        "Location":"3,15,10,0",
+        "Method":"Coins 250"
+    },
+    {
+        "ItemName":"STACKABLE_HP",
+        "SlotID":30,
+        "Location":"3,15,10,0",
+        "Method":"Coins 3000"
+    },
+    {
+        "ItemName":"STACKABLE_MP",
+        "SlotID":30,
+        "Location":"3,15,10,0",
+        "Method":"Coins 3000"
+    },
+    {
+        "ItemName":"STACKABLE_EP",
+        "SlotID":30,
+        "Location":"3,15,10,0",
+        "Method":"Coins 3000"
+    },
+    {
+        "ItemName":"STACKABLE_MATK",
+        "SlotID":30,
+        "Location":"3,15,10,0",
+        "Method":"Coins 3000"
+    },
+    {
+        "ItemName":"STACKABLE_RATK",
+        "SlotID":30,
+        "Location":"3,15,10,0",
+        "Method":"Coins 3000"
+    },
+    {
+        "ItemName":"STACKABLE_SHARD",
+        "SlotID":30,
+        "Location":"3,15,10,0",
+        "Method":"Coins 5000 && Chapter 6"
+    }
+]

@@ -45,17 +45,20 @@ namespace TeviRandomizer
             {
                 if (Method == "") return true;
                 Debug.Log(Method);
-                Method = Regex.Replace(Method, @"\b(\w|\s)+\b", match => {
-                    Debug.Log(match);
+                string tmp = Method;
+                tmp = Regex.Replace(Method, @"\b(\w|\s)+\b", match => {
+                    if (match.ToString() == "RWJ") return " true ";
+
                     if (itemList.Contains(match.ToString()))
                     return " true ";
                     else
                         return " false ";
+                    
                 });
-                Method = Method.Replace("&&", "AND").Replace("||", "OR");
-                Debug.Log(Method);
+                tmp = tmp.Replace("&&", "AND").Replace("||", "OR");
+                Debug.Log(tmp);
 
-                return (bool)new DataTable().Compute(Method,"");
+                return (bool)new DataTable().Compute(tmp, "");
             }
 
 
@@ -504,9 +507,9 @@ namespace TeviRandomizer
             locations.AddRange(areaList[0].Locations);
 
             int lastCount = -1;
-            while (itemList.Count != lastCount)
+            while (areaList.Count != lastCount)
             {
-                lastCount = itemList.Count;
+                lastCount = areaList.Count;
 
                 foreach (Entrance en in entrances.ToArray())
                 {

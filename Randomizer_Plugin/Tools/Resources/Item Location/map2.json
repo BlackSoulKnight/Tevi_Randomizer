@@ -20,7 +20,7 @@
     {
         "ItemName":"BADGE_TauntYawn",
         "SlotID":1,
-        "Location":"2,,,0",
+        "Location":"2,10,13,0",
         "Method":"RWJ||ITEM_DOUBLEJUMP||ITEM_JETPACK"
     },
     {

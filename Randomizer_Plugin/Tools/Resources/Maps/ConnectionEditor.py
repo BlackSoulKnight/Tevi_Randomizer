@@ -60,7 +60,7 @@ class prog:
                 if room['Map'] != con['Map']:
                     continue
                 graph.add_edge(f"{room['RoomX']},{room['RoomY']},{room['RoomSection']}",f"{con['RoomX']},{con['RoomY']},{con['RoomSection']}")
-                pass
+
         post=nx.get_node_attributes(graph,'pos')
         fig = plt.figure(figsize=(32,18))
         nx.spring_layout(graph,pos=post)    
@@ -101,7 +101,7 @@ class prog:
         except:
             return
     def printAllMaps(self):
-        for i in range(1,30):
+        for i in range(2,30):
             self.loadFiles("map"+str(i))
             self.createGraph()
 

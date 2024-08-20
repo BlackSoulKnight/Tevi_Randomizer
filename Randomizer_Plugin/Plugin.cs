@@ -281,50 +281,6 @@ namespace TeviRandomizer
         }
 
 
-        [Command("reloadRandomizer", Platform.AllPlatforms, MonoTargetType.Single)]
-        private void reloadItems()
-        {
-            try
-            {
-                string path = $"{BepInEx.Paths.PluginPath}/tevi_randomizer/data/file.dat";
-                string json = File.ReadAllText(path);
-                string[] blocks = json.Split(';');
-                __itemData.Clear();
-                foreach (string block in blocks)
-                {
-                    ItemData data1, data2;
-                    if (block.Length < 5) continue;
-                    try
-                    {
-                        string[] completeItem = block.Split(':');
-
-                        string[] itemDetails1 = completeItem[0].Split(',');
-                        string[] itemDetails2 = completeItem[1].Split(',');
-                        data1 = new ItemData(int.Parse(itemDetails1[0]), int.Parse(itemDetails1[1]));
-                        data2 = new ItemData(int.Parse(itemDetails2[0]), int.Parse(itemDetails2[1]));
-                    }
-                    catch
-                    {
-                        Logger.LogError($"Failed to parse {block}");
-                        continue;
-                    }
-                    try
-                    {
-                        __itemData.Add(data1, data2);
-                    }
-                    catch
-                    {
-                        Logger.LogWarning($"Already changed {data1.getItemTyp()} slot {data1.getSlotId()}");
-
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                Logger.LogError(e);
-            }
-        }
-
         static public void createSeed()
         {
             System.Random rando;

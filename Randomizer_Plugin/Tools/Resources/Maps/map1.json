@@ -1214,13 +1214,6 @@
         "Connection": [
             {
                 "Map": 1,
-                "RoomX": 13,
-                "RoomY": 3,
-                "RoomSection": 0,
-                "Method": ""
-            },
-            {
-                "Map": 1,
                 "RoomX": 12,
                 "RoomY": 4,
                 "RoomSection": 0,
@@ -1536,13 +1529,6 @@
         "RoomY": 2,
         "RoomSection": 0,
         "Connection": [
-            {
-                "Map": 1,
-                "RoomX": 13,
-                "RoomY": 3,
-                "RoomSection": 0,
-                "Method": ""
-            },
             {
                 "Map": 1,
                 "RoomX": 12,

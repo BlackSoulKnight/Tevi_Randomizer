@@ -10,7 +10,7 @@
                 "RoomX": 12,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -25,14 +25,14 @@
                 "RoomX": 13,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 11,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -47,14 +47,14 @@
                 "RoomX": 13,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
-                "Map": 3,
-                "RoomX": 12,
-                "RoomY": 13,
+                "Map": 1,
+                "RoomX": 28,
+                "RoomY": 10,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -69,14 +69,14 @@
                 "RoomX": 13,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
-                "Map": 3,
-                "RoomX": 12,
-                "RoomY": 12,
+                "Map": 5,
+                "RoomX": 14,
+                "RoomY": 7,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -91,7 +91,14 @@
                 "RoomX": 13,
                 "RoomY": 10,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
+            },
+            {
+                "Map": 6,
+                "RoomX": 7,
+                "RoomY": 20,
+                "RoomSection": 0,
+                "Method": ""
             }
         ]
     },
@@ -106,14 +113,14 @@
                 "RoomX": 13,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 13,
                 "RoomY": 9,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -128,28 +135,28 @@
                 "RoomX": 14,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 13,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 12,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 13,
                 "RoomY": 10,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -164,28 +171,28 @@
                 "RoomX": 14,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 13,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 12,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 13,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -200,21 +207,21 @@
                 "RoomX": 14,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 12,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 13,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -223,15 +230,14 @@
         "RoomX": 14,
         "RoomY": 10,
         "RoomSection": 0,
-        "Connection": [
-            {
-                "Map": 3,
-                "RoomX": 15,
-                "RoomY": 10,
-                "RoomSection": 0,
-                "Method": []
-            }
-        ]
+        "Connection": [    
+                    {
+            "Map": 3,
+            "RoomX": 16,
+            "RoomY": 13,
+            "RoomSection": 0,
+            "Method": ""
+        }]
     },
     {
         "Map": 3,
@@ -244,21 +250,14 @@
                 "RoomX": 15,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
-            },
-            {
-                "Map": 3,
-                "RoomX": 14,
-                "RoomY": 12,
-                "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 13,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -273,28 +272,14 @@
                 "RoomX": 15,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
-            },
-            {
-                "Map": 3,
-                "RoomX": 14,
-                "RoomY": 13,
-                "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 13,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
-            },
-            {
-                "Map": 3,
-                "RoomX": 14,
-                "RoomY": 11,
-                "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -309,21 +294,14 @@
                 "RoomX": 15,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 13,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
-            },
-            {
-                "Map": 3,
-                "RoomX": 14,
-                "RoomY": 12,
-                "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -335,24 +313,10 @@
         "Connection": [
             {
                 "Map": 3,
-                "RoomX": 16,
-                "RoomY": 10,
-                "RoomSection": 0,
-                "Method": []
-            },
-            {
-                "Map": 3,
                 "RoomX": 15,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
-            },
-            {
-                "Map": 3,
-                "RoomX": 14,
-                "RoomY": 10,
-                "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -367,21 +331,21 @@
                 "RoomX": 16,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 14,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 15,
                 "RoomY": 10,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -396,14 +360,14 @@
                 "RoomX": 16,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 14,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -418,14 +382,14 @@
                 "RoomX": 16,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 14,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -434,15 +398,13 @@
         "RoomX": 16,
         "RoomY": 10,
         "RoomSection": 0,
-        "Connection": [
-            {
-                "Map": 3,
-                "RoomX": 15,
-                "RoomY": 10,
-                "RoomSection": 0,
-                "Method": []
-            }
-        ]
+        "Connection": [            {
+            "Map": 3,
+            "RoomX": 15,
+            "RoomY": 12,
+            "RoomSection": 0,
+            "Method": ""
+        }]
     },
     {
         "Map": 3,
@@ -450,19 +412,20 @@
         "RoomY": 11,
         "RoomSection": 0,
         "Connection": [
-            {
-                "Map": 3,
-                "RoomX": 17,
-                "RoomY": 11,
-                "RoomSection": 0,
-                "Method": []
-            },
+
             {
                 "Map": 3,
                 "RoomX": 15,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
+            },
+            {
+                "Map": 3,
+                "RoomX": 17,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": ""
             }
         ]
     },
@@ -477,14 +440,21 @@
                 "RoomX": 17,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 15,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
+            },
+            {
+                "Map": 3,
+                "RoomX": 16,
+                "RoomY": 10,
+                "RoomSection": 0,
+                "Method": ""
             }
         ]
     },
@@ -499,14 +469,21 @@
                 "RoomX": 17,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 15,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
+            },
+            {
+                "Map": 3,
+                "RoomX": 14,
+                "RoomY": 10,
+                "RoomSection": 0,
+                "Method": ""
             }
         ]
     },
@@ -521,21 +498,14 @@
                 "RoomX": 18,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
-            },
-            {
-                "Map": 3,
-                "RoomX": 17,
-                "RoomY": 12,
-                "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 16,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -550,28 +520,14 @@
                 "RoomX": 18,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
-            },
-            {
-                "Map": 3,
-                "RoomX": 17,
-                "RoomY": 13,
-                "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 16,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
-            },
-            {
-                "Map": 3,
-                "RoomX": 17,
-                "RoomY": 11,
-                "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -586,21 +542,14 @@
                 "RoomX": 18,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 16,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
-            },
-            {
-                "Map": 3,
-                "RoomX": 17,
-                "RoomY": 12,
-                "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -612,17 +561,10 @@
         "Connection": [
             {
                 "Map": 3,
-                "RoomX": 19,
-                "RoomY": 9,
-                "RoomSection": 0,
-                "Method": []
-            },
-            {
-                "Map": 3,
                 "RoomX": 18,
                 "RoomY": 10,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -637,21 +579,14 @@
                 "RoomX": 19,
                 "RoomY": 10,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 18,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
-            },
-            {
-                "Map": 3,
-                "RoomX": 18,
-                "RoomY": 9,
-                "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -666,21 +601,21 @@
                 "RoomX": 18,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 17,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 18,
                 "RoomY": 10,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -695,28 +630,28 @@
                 "RoomX": 19,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 18,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 17,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 18,
                 "RoomY": 11,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -731,21 +666,21 @@
                 "RoomX": 19,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": "Morose||ITEM_LINEBOMB"
             },
             {
                 "Map": 3,
                 "RoomX": 17,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 18,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": "ITEM_AREABOMB"
             }
         ]
     },
@@ -760,21 +695,23 @@
                 "RoomX": 20,
                 "RoomY": 9,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 19,
                 "RoomY": 10,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 18,
                 "RoomY": 9,
                 "RoomSection": 0,
-                "Method": []
+                "Method":
+                "(ITEM_DOUBLEJUMP&&ITEM_AirDash&&ITEM_SPEEDUP&&RWJ)||(extJET&&ITEM_AirDash&&RWJ)||extJET2||(ITEM_JETPACK2&&ITEM_AirDash)||(ITEM_DOUBLEJUMP&&ITEM_JETPACK3)"
+
             }
         ]
     },
@@ -789,21 +726,14 @@
                 "RoomX": 20,
                 "RoomY": 10,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 18,
                 "RoomY": 10,
                 "RoomSection": 0,
-                "Method": []
-            },
-            {
-                "Map": 3,
-                "RoomX": 19,
-                "RoomY": 9,
-                "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -815,17 +745,17 @@
         "Connection": [
             {
                 "Map": 3,
-                "RoomX": 19,
-                "RoomY": 13,
-                "RoomSection": 0,
-                "Method": []
-            },
-            {
-                "Map": 3,
                 "RoomX": 18,
                 "RoomY": 12,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
+            },
+            {
+                "Map": 4,
+                "RoomX": 6,
+                "RoomY": 12,
+                "RoomSection": 0,
+                "Method": ""
             }
         ]
     },
@@ -840,21 +770,15 @@
                 "RoomX": 20,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": 
+                "ITEM_SLIDE&&ITEM_LINEBOMB&&ChargeShot"
             },
             {
                 "Map": 3,
                 "RoomX": 18,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
-            },
-            {
-                "Map": 3,
-                "RoomX": 19,
-                "RoomY": 12,
-                "RoomSection": 0,
-                "Method": []
+                "Method": "Morose||ITEM_LINEBOMB"
             }
         ]
     },
@@ -869,14 +793,14 @@
                 "RoomX": 20,
                 "RoomY": 10,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 19,
                 "RoomY": 9,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -891,14 +815,14 @@
                 "RoomX": 19,
                 "RoomY": 10,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 20,
                 "RoomY": 9,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -913,14 +837,14 @@
                 "RoomX": 20,
                 "RoomY": 14,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 19,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": "ITEM_SLIDE&&ITEM_LINEBOMB&&ChargeShot"
             }
         ]
     },
@@ -935,14 +859,14 @@
                 "RoomX": 21,
                 "RoomY": 14,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             },
             {
                 "Map": 3,
                 "RoomX": 20,
                 "RoomY": 13,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     },
@@ -957,7 +881,7 @@
                 "RoomX": 20,
                 "RoomY": 14,
                 "RoomSection": 0,
-                "Method": []
+                "Method": ""
             }
         ]
     }

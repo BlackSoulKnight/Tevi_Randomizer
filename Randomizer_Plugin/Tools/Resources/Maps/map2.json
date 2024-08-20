@@ -1107,6 +1107,13 @@
                 "RoomY": 12,
                 "RoomSection": 0,
                 "Method": ""
+            },
+            {
+                "Map": 1,
+                "RoomX": 1,
+                "RoomY": 7,
+                "RoomSection": 0,
+                "Method": ""
             }
         ]
     },

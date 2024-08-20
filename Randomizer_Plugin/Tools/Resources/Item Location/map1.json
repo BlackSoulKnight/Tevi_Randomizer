@@ -42,7 +42,7 @@
         "Method":"ITEM_LINEBOMB"
     },
     {
-        "ItemName":"Item BADGE_SuperArmor2",
+        "ItemName":"BADGE_SuperArmor2",
         "SlotID":1,
         "Location":"1,8,13,0",
         "Method":""
@@ -73,13 +73,13 @@
     },
     {
         "ItemName":"STACKABLE_MATK #9",
-        "SlotID":1,
+        "SlotID":9,
         "Location":"1,20,10,0",
         "Method":
         "RWJ||ITEM_DOUBLEJUMP||ITEM_JETPACK"
     },
     {
-        "ItemName":" BADGE_StrongAirUpDebuff",
+        "ItemName":"BADGE_StrongAirUpDebuff",
         "SlotID":1,
         "Location":"1,27,10,0",
         "Method":
@@ -90,5 +90,17 @@
         "SlotID":1,
         "Location":"1,19,11,0",
         "Method":"Mission3BStart"
+    },
+    {
+        "ItemName":"ITEM_KNIFE",
+        "SlotID":1,
+        "Location":"1,5,8,0",
+        "Method":""
+    },
+    {
+        "ItemName":"ITEM_ORB",
+        "SlotID":1,
+        "Location":"1,5,8,0",
+        "Method":""
     }
 ]
