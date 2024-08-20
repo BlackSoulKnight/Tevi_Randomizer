@@ -56,16 +56,17 @@ class prog:
         for room in self.mapFile:
             x = 0
             y = 0
-            if room['RoomSection'] == 0:
-                x = 0.5
             if room['RoomSection'] == 1:
-                x = -0.5
+                x = -1
+                y = +1
             if room['RoomSection'] == 2:
-                y = -0.5
+                y = +1
+                x = +1
             if room['RoomSection'] == 3:
-                y = 0.5
+                y = -1
+                x = +1
 
-            graph.add_node(f"{room['RoomX']},{room['RoomY']},{room['RoomSection']}",pos=((room['RoomX']*2)+x,(room['RoomY']*2)+y))
+            graph.add_node(f"{room['RoomX']},{room['RoomY']},{room['RoomSection']}",pos=((room['RoomX']*3)+x,(room['RoomY']*3)+y))
         for room in self.mapFile:
             for con in room["Connection"]:
                 if room['Map'] != con['Map']:
@@ -73,7 +74,7 @@ class prog:
                 graph.add_edge(f"{room['RoomX']},{room['RoomY']},{room['RoomSection']}",f"{con['RoomX']},{con['RoomY']},{con['RoomSection']}")
 
         post=nx.get_node_attributes(graph,'pos')
-        fig = plt.figure(figsize=(32,18))
+        fig = plt.figure(figsize=(64,32))
         nx.spring_layout(graph,pos=post)    
         nx.draw(graph,post,node_size=400,node_shape='s',edgecolors='white',edge_color='white')
         fig.gca().invert_yaxis()
