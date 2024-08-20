@@ -1,0 +1,74 @@
+[
+    {
+        "ItemName":"ITEM_Explorer",
+        "SlotID":1,
+        "Location":"2,11,14,0",
+        "Method":""
+    },
+    {
+        "ItemName":"STACKABLE_HP #8",
+        "SlotID":8,
+        "Location":"2,8,12,0",
+        "Method":"ITEM_LINEBOMB"
+    },
+    {
+        "ItemName":"STACKABLE_MATK #1",
+        "SlotID":1,
+        "Location":"2,9,12,0",
+        "Method":""
+    },
+    {
+        "ItemName":"BADGE_TauntYawn",
+        "SlotID":1,
+        "Location":"2,,,0",
+        "Method":"RWJ||ITEM_DOUBLEJUMP||ITEM_JETPACK"
+    },
+    {
+        "ItemName":"STACKABLE_COG #22",
+        "SlotID":22,
+        "Location":"2,12,12,0",
+        "Method":""
+    },
+    {
+        "ItemName":"ITEM_PKBADGE",
+        "SlotID":1,
+        "Location":"2,12,12,0",
+        "Method":""
+    },
+    {
+        "ItemName":"BADGE_EarlyKnockRecover",
+        "SlotID":1,
+        "Location":"2,12,13,0",
+        "Method":""
+    },
+    {
+        "ItemName":"ITEM_HIJUMP",
+        "SlotID":1,
+        "Location":"2,14,12,0",
+        "Method":""
+    },
+    {
+        "ItemName":"STACKABLE_SHARD #16",
+        "SlotID":16,
+        "Location":"2,14,13,0",
+        "Method":""
+    },
+    {
+        "ItemName":"BADGE_UpperHigh",
+        "SlotID":1,
+        "Location":"2,14,14,0",
+        "Method":""
+    },
+    {
+        "ItemName":"STACKABLE_EP #3",
+        "SlotID":3,
+        "Location":"2,15,11,0",
+        "Method":""
+    },
+    {
+        "ItemName":"BADGE_WallCharger",
+        "SlotID":1,
+        "Location":"2,19,11,0",
+        "Method":""
+    }
+]
