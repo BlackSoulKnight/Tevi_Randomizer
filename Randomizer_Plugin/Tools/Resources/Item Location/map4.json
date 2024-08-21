@@ -1,0 +1,118 @@
+[
+{
+    "ItemName":"BADGE_NormalShotReducerA",
+    "SlotID":1,
+    "Location":"4,13,8,0",
+    "Method":"ChargeShot"
+},
+{
+    "ItemName":"STACKABLE_MATK #0",
+    "SlotID":0,
+    "Location":"4,11,9,0",
+    "Method":"ITEM_LINEBOMB"
+},
+{
+    "ItemName":"BADGE_GroundBombQuickExcute",
+    "SlotID":1,
+    "Location":"4,9,12,0",
+    "Method":""
+},
+{
+    "ItemName":"I19",
+    "SlotID":1,
+    "Location":"4,11,11,0",
+    "Method":""
+},
+{
+    "ItemName":"BADGE_TauntSit",
+    "SlotID":1,
+    "Location":"4,12,11,0",
+    "Method":""
+},
+{
+    "ItemName":"STACKABLE_RATK #1",
+    "SlotID":1,
+    "Location":"4,15,16,0",
+    "Method":""
+},
+{
+    "ItemName":"STACKABLE_MATK #23",
+    "SlotID":23,
+    "Location":"4,15,17,0",
+    "Method":
+    "RWJ||(ITEM_HIJUMP&&(ITEM_DOUBLEJUMP||ITEM_JETPACK))||(ITEM_JETPACK&&ITEM_DOUBLEJUMP)"
+},
+{
+    "ItemName":"ITEM_BoostSystem",
+    "SlotID":1,
+    "Location":"4,16,14,0",
+    "Method":""
+},
+{
+    "ItemName":"BADGE_GroundNormal4Mod",
+    "SlotID":1,
+    "Location":"4,12,19,0",
+    "Method":"ITEM_LINEBOMB"
+},
+{
+    "ItemName":"STACKABLE_RATK #22",
+    "SlotID":22,
+    "Location":"4,9,19,0",
+    "Method":
+    "ITEM_DOUBLEJUMP||ITEM_JETPACK"
+},
+{
+    "ItemName":"BADGE_HealCharge",
+    "SlotID":1,
+    "Location":"4,9,21,0",
+    "Method":""
+},
+{
+    "ItemName":"BADGE_NormalShotReducerA",
+    "SlotID":1,
+    "Location":"4,,,0",
+    "Method":""
+},
+{
+    "ItemName":"ITEM_GoldenHands",
+    "SlotID":1,
+    "Location":"4,7,21,0",
+    "Method":"QUEST_GHandL&&QUEST_GHandR"
+},
+{
+    "ItemName":"STACKABLE_MP #3",
+    "SlotID":3,
+    "Location":"4,6,20,0",
+    "Method":"ChargeShot||EndMaze"
+},
+{
+    "ItemName":"STACKABLE_HP #3",
+    "SlotID":3,
+    "Location":"4,11,18,0",
+    "Method":"RWJ||ITEM_DOUBLEJUMP||ITEM_JETPACK||ITEM_AirDash||ITEM_HIJUMP"
+},
+{
+    "ItemName":"BADGE_AutoHealing",
+    "SlotID":1,
+    "Location":"4,5,21,0",
+    "Method":""
+},
+{
+    "ItemName":"STACKABLE_COG #24",
+    "SlotID":24,
+    "Location":"4,15,15,0",
+    "Method":"Boss"
+},
+{
+    "ItemName":"Memine",
+    "SlotID":1,
+    "Location":"4,14,7,0",
+    "Method":"ITEM You Need to finish"
+},
+{
+    "ItemName":"BADGE_BackflipSnipe",
+    "SlotID":1,
+    "Location":"4,20,15,0",
+    "Method":""
+}
+]
