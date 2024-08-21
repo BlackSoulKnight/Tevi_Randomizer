@@ -1,0 +1,56 @@
+[
+    {
+        "ItemName": "STACKABLE_RATK #0",
+        "SlotID": 0,
+        "Location": "5,9,13,0",
+        "Method": "RWJ||ITEM_DOUBLEJUMP||ITEM_JETPACK"
+    },
+    {
+        "ItemName": "BADGE_AirComboQuicken",
+        "SlotID": 1,
+        "Location": "5,6,12,0",
+        "Method": ""
+    },
+    {
+        "ItemName": "STACKABLE_MP #15",
+        "SlotID": 15,
+        "Location": "5,5,13,0",
+        "Method": "ITEM_BOMBFUEL"
+    },
+    {
+        "ItemName": "STACKABLE_COG #25",
+        "SlotID": 25,
+        "Location": "5,2,14,0",
+        "Method": ""
+    },
+    {
+        "ItemName": "STACKABLE_MATK #15",
+        "SlotID": 15,
+        "Location": "5,1,11,0",
+        "Method": ""
+    },
+    {
+        "ItemName": "STACKABLE_EP #0",
+        "SlotID": 0,
+        "Location": "5,8,7,0",
+        "Method": ""
+    },
+    {
+        "ItemName": "BADGE_EasyDodge",
+        "SlotID": 1,
+        "Location": "5,19,12,0",
+        "Method": ""
+    },
+    {
+        "ItemName": "BADGE_EnergyDefend",
+        "SlotID": 1,
+        "Location": "5,17,7,0",
+        "Method": ""
+    },
+    {
+        "ItemName": "STACKABLE_HP #14",
+        "SlotID": 14,
+        "Location": "5,19,9,0",
+        "Method": "ITEM_LINEBOMB&&ITEM_SLIDE"
+    }
+]
