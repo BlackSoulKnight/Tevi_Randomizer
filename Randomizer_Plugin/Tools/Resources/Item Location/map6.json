@@ -2,37 +2,37 @@
     {
         "ItemName": "BADGE_StyleComboBackflipBomb",
         "SlotID": 1,
-        "Location": "5,10,18,1",
+        "Location": "6,10,18,1",
         "Method": ""
     },
     {
         "ItemName": "STACKABLE_HP #2",
         "SlotID": 2,
-        "Location": "5,12,20,0",
+        "Location": "6,12,20,0",
         "Method": ""
     },
     {
         "ItemName": "STACKABLE_EP #14",
         "SlotID": 14,
-        "Location": "5,13,17,0",
+        "Location": "6,13,17,0",
         "Method": "ITEM_AREABOMB"
     },
     {
         "ItemName": "STACKABLE_MP #1",
         "SlotID": 1,
-        "Location": "5,11,15,0",
+        "Location": "6,11,15,0",
         "Method": ""
     },
     {
         "ItemName": "BADGE_ConvertOff2Def",
         "SlotID": 1,
-        "Location": "5,11,13,0",
+        "Location": "6,11,13,0",
         "Method": "ITEM_SLIDE&&(extJET||(ITEM_DOUBLEJUMP&&RJW)||(ITEM_JETPACK&&ITEM_DOUBLEJUMP)||(ITEM_HIJUMP&&ITEM_WALLJUMP&&ITEM_AirDash)||ITEM_JETPACK2||(ITEM_SPEEDUP&&ITEM_JETPACK))"
     },
     {
         "ItemName": "STACKABLE_MATK #26",
         "SlotID": 26,
-        "Location": "5,15,20,0",
+        "Location": "6,15,20,0",
         "Method": "ITEM_AirSlide"
     }
 ]
