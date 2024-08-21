@@ -1,0 +1,32 @@
+[
+    {
+        "ItemName": "STACKABLE_EP #2",
+        "SlotID": 2,
+        "Location": "7,8,19,1",
+        "Method": ""
+    },
+    {
+        "ItemName": "STACKABLE_MP #2",
+        "SlotID": 2,
+        "Location": "7,12,16,0",
+        "Method": "ITEM_LINEBOMB"
+    },
+    {
+        "ItemName": "STACKABLE_RATK #7",
+        "SlotID": 7,
+        "Location": "7,15,19,0",
+        "Method": "ITEM_OrbTypeS2||ITEM_OrbTypeS3||ITEM_OrbTypeC3"
+    },
+    {
+        "ItemName": "Item BADGE_StyleCharge",
+        "SlotID": 1,
+        "Location": "7,4,14,0",
+        "Method": ""
+    },
+    {
+        "ItemName": "STACKABLE_HP #25",
+        "SlotID": 25,
+        "Location": "7,18,19,0",
+        "Method": ""
+    }
+]
