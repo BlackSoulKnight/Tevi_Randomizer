@@ -2827,7 +2827,7 @@ namespace TeviRandomizer
         {
 
             byte area = WorldManager.Instance.Area;
-
+            
 
             int num = GemaItemManager.Instance.GetItemCoin(item);
             if (num <= 1000)
@@ -2924,6 +2924,37 @@ namespace TeviRandomizer
         }
 
 
+
+        [HarmonyPatch(typeof(HUDShopMenu),"EnableMe")]
+        [HarmonyPostfix]
+        static void addValAndTar(ref string ___fname,ref Character.Type ___typeN,ref int ___CurrentMaxItem,ref GemaShopItemSlot[] ___itemslots,ref HUDShopMenu __instance)
+        {
+            byte area = WorldManager.Instance.Area;
+            ChatStand chatStand = AreaResource.Instance.GetChatStand(___fname);
+            if ((bool)chatStand)
+            {
+                switch (___typeN)
+                {
+                    case Character.Type.Reese:
+                        if (area != 15 && SaveManager.Instance.GetItem(ItemList.Type.ITEM_RailPass)>0)
+                        {
+                            object[] obj = [ItemList.Type.BADGE_ChangeOrbCharger,false];
+                            Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                            ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+
+                        }
+                        break;
+                    case Character.Type.Bones:
+                        if (area != 20 && SaveManager.Instance.GetItem(ItemList.Type.ITEM_AirshipPass) > 0)
+                        {
+                            object[] obj = [ItemList.Type.BADGE_AutoAirCombo,false];
+                            Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                            ___itemslots[___CurrentMaxItem-1].gameObject.SetActive(true);
+                        }
+                        break;
+                }
+            }
+        } 
 
         [HarmonyPatch(typeof(HUDShopMenu), "Update")]
         [HarmonyPrefix]
