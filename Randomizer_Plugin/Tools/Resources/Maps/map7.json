@@ -55,7 +55,7 @@
                 "RoomY": 14,
                 "RoomSection": 0,
                 "Method": 
-                "ITEM_JETPACK||(ITEM_AirDash&&(TEVI_STRONG_AIR_UP||RJW||ITEM_DOUBLEJUMP))||(ITEM_DOUBLEJUMP&&RJW)"
+                "ITEM_JETPACK||(ITEM_AirDash&&(TEVI_STRONG_AIR_UP||RWJ||ITEM_DOUBLEJUMP))||(ITEM_DOUBLEJUMP&&RWJ)"
             },
             {
                 "Map": 7,
@@ -92,7 +92,7 @@
                 "RoomY": 14,
                 "RoomSection": 0,
                 "Method": 
-                "ITEM_DOUBLEJUMP||ITEM_JETPACK||(RJW&&ITEM_AirDash)"
+                "ITEM_DOUBLEJUMP||ITEM_JETPACK||(RWJ&&ITEM_AirDash)"
             }
         ]
     },

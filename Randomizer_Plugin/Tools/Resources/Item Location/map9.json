@@ -1,0 +1,131 @@
+[
+    {
+        "ItemName": "BADGE_QuickBomber",
+        "SlotID": 1,
+        "Location": "9,10,17,0",
+        "Method": ""
+    },
+    {
+        "ItemName": "BADGE_BattleStartCharger",
+        "SlotID": 1,
+        "Location": "9,14,17,0",
+        "Method": 
+        "ITEM_OrbTypeS2||VenaBomb||EnemyManip||ITEM_LINEBOMB"
+    },
+    {
+        "ItemName": "BADGE_SlideHalt",
+        "SlotID": 1,
+        "Location": "9,16,17,0",
+        "Method": "ITEM_SLIDE&&ITEM_LINEBOMB"
+    },
+    {
+        "ItemName": "BADGE_AirNormalComboSpeedup",
+        "SlotID": 1,
+        "Location": "9,18,16,0",
+        "Method": "ITEM_KNIFE||ITEM_ORB||VenaBomb||ITEM_AirSlide"
+    },
+    {
+        "ItemName": "BADGE_DoubleGroundNormal3N1",
+        "SlotID": 1,
+        "Location": "9,23,16,0",
+        "Method": "ITEM_SLIDE&&ITEM_LINEBOMB"
+    },
+    {
+        "ItemName": "BADGE_GoldenLuck",
+        "SlotID": 1,
+        "Location": "9,25,16,0",
+        "Method": "ITEM_SLIDE"
+    },
+    {
+        "ItemName": "ITEM_AntiDecay",
+        "SlotID": 1,
+        "Location": "9,28,14,0",
+        "Method": ""
+    },
+    {
+        "ItemName": "STACKABLE_MP #5",
+        "SlotID": 5,
+        "Location": "9,23,14,0",
+        "Method": "ITEM_KNIFE||ITEM_AREABOMB||VenaBomb"
+    },
+    {
+        "ItemName": " STACKABLE_SHARD #15",
+        "SlotID": 15,
+        "Location": "9,10,18,0",
+        "Method": "ITEM_LINEBOMB&&(ITEM_DOUBLEJUMP||ITEM_JETPACK||(ITEM_AirDash&&ITEM_HIJUMP))"
+        
+    },
+    {
+        "ItemName": "STACKABLE_MATK #3",
+        "SlotID": 3,
+        "Location": "9,8,19,0",
+        "Method": "ChargeShot"
+    },
+    {
+        "ItemName": "STACKABLE_HP #5",
+        "SlotID": 5,
+        "Location": "9,8,20,0",
+        "Method": "ITEM_KNIFE||MORESTUFF"
+    },
+    {
+        "ItemName": "BADGE_TauntStare",
+        "SlotID": 1,
+        "Location": "9,4,20,0",
+        "Method": "ITEM_LINEBOMB&&(ITEM_DOUBLEJUMP||ITEM_JETPACK||(RWJ&&ITEM_AirDash))"
+    },
+    {
+        "ItemName": "STACKABLE_EP #5",
+        "SlotID": 5,
+        "Location": "9,4,18,0",
+        "Method": ""
+    },
+    {
+        "ItemName": "ITEM_MASK",
+        "SlotID": 1,
+        "Location": "9,9,11,0",
+        "Method": ""
+    },
+    {
+        "ItemName": "STACKABLE_MP #26",
+        "SlotID": 26,
+        "Location": "9,7,10,0",
+        "Method": "ITEM_LINEBOMB&&ITEM_SLIDE"
+    },
+    {
+        "ItemName": "BADGE_ComboTimeExtendC",
+        "SlotID": 1,
+        "Location": "9,9,9,0",
+        "Method": "VenaBomb||ITEM_OrbTypeS2"
+    },
+    {
+        "ItemName": "STACKABLE_RATK #19",
+        "SlotID": 19,
+        "Location": "9,2,9,0",
+        "Method": "ITEM_LINEBOMB&&ITEM_SLIDE&&ChargeShot"
+    },
+    {
+        "ItemName": "BADGE_DodgeMeterBoost",
+        "SlotID": 1,
+        "Location": "9,4,7,0",
+        "Method": "VenaBomb||ITEM_KNIFE"
+    },
+    {
+        "ItemName": "STACKABLE_RATK #5",
+        "SlotID": 5,
+        "Location": "9,17,18,0",
+        "Method": "VenaBomb||ITEM_OrbTypeS2"
+    },
+    {
+        "ItemName": "MemineChallengeA",
+        "SlotID": 1,
+        "Location": "9,11,20,0",
+        "Method": ""
+    },
+    {
+        "ItemName": "STACKABLE_SHARD #0",
+        "SlotID": 0,
+        "Location": "9,2,8,0",
+        "Method": "MemineChallengeA && All the other stuff needed"
+    }
+
+]

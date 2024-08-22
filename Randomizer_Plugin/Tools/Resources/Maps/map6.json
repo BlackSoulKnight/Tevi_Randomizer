@@ -164,7 +164,7 @@
                 "RoomX": 10,
                 "RoomY": 18,
                 "RoomSection": 1,
-                "Method": "ITEM_SLIDE&&((RJW&&ITEM_JETPACK&&ITEM_DOUBLEJUMP))||(ITEM_WALLJUMP&&(ITEM_AirDash||ITEM_JETPACK||ITEM_DOUBLEJUMP))"
+                "Method": "ITEM_SLIDE&&((RWJ&&ITEM_JETPACK&&ITEM_DOUBLEJUMP))||(ITEM_WALLJUMP&&(ITEM_AirDash||ITEM_JETPACK||ITEM_DOUBLEJUMP))"
             },
             {
                 "Map": 6,

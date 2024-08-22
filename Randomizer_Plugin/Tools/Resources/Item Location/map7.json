@@ -28,5 +28,11 @@
         "SlotID": 25,
         "Location": "7,18,19,0",
         "Method": ""
+    },
+    {
+        "ItemName": "BADGE_BoostCostCut",
+        "SlotID": 1,
+        "Location": "7,18,19,0",
+        "Method": "MissionD"
     }
 ]

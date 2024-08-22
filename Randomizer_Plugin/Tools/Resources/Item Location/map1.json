@@ -54,10 +54,10 @@
         "Method":"ChargeShot"
     },
     {
-        "ItemName":"Mission3BStart",
+        "ItemName":"Mission3B",
         "SlotID":1,
         "Location":"1,11,9,0",
-        "Method":"Elite_Challenge"
+        "Method":""
     },
     {
         "ItemName":"STACKABLE_MATK #14",
@@ -89,7 +89,7 @@
         "ItemName":"BADGE_CrystalGen",
         "SlotID":1,
         "Location":"1,19,11,0",
-        "Method":"Mission3BStart"
+        "Method":"Mission3B"
     },
     {
         "ItemName":"ITEM_KNIFE",
