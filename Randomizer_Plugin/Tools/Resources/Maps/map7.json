@@ -446,13 +446,6 @@
                 "RoomY": 19,
                 "RoomSection": 0,
                 "Method": ""
-            },
-            {
-                "Map": 7,
-                "RoomX": 7,
-                "RoomY": 20,
-                "RoomSection": 0,
-                "Method": "ITEM_LINEBOMB"
             }
         ]
     },
@@ -475,6 +468,13 @@
                 "RoomY": 16,
                 "RoomSection": 0,
                 "Method": ""
+            },
+            {
+                "Map": 7,
+                "RoomX": 8,
+                "RoomY": 17,
+                "RoomSection": 0,
+                "Method": "ITEM_LINEBOMB"
             }
         ]
     },
@@ -566,7 +566,7 @@
             },
             {
                 "Map": 7,
-                "RoomX": 7,
+                "RoomX": 8,
                 "RoomY": 20,
                 "RoomSection": 0,
                 "Method": ""
