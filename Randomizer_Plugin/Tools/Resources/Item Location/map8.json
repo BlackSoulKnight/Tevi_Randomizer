@@ -1,0 +1,182 @@
+[
+    {
+        "ItemName": "QUEST_LibraryKey",
+        "SlotID": 1,
+        "Location": "8,14,9,0",
+        "Method": "ITEM_LINEBOMB&&ITEM_SLIDE"
+    },
+    {
+        "ItemName": "BADGE_GroundNormalComboSpeedup",
+        "SlotID": 1,
+        "Location": "8,22,12,0",
+        "Method": "ITEM_LINEBOMB"
+    },
+    {
+        "ItemName": "BADGE_StyleComboNewAttack",
+        "SlotID": 1,
+        "Location": "8,25,12,0",
+        "Method": "ITEM_LINEBOMB"
+    },
+    {
+        "ItemName": "STACKABLE_MATK #7",
+        "SlotID": 7,
+        "Location": "8,15,13,0",
+        "Method": "ITEM_LINEBOMB&&ITEM_SLIDE"
+    },
+    {
+        "ItemName": "MissionD",
+        "SlotID": 1,
+        "Location": "8,18,14,0",
+        "Method": ""
+    },
+    {
+        "ItemName": "BADGE_QuickMeleeLagA",
+        "SlotID": 1,
+        "Location": "8,23,13,0",
+        "Method": "ITEM_LINEBOMB"
+    },
+    {
+        "ItemName": "BADGE_QuickMeleeLagA",
+        "SlotID": 1,
+        "Location": "8,23,13,0",
+        "Method": "ITEM_LINEBOMB"
+    },
+    {
+        "ItemName": "ITEM_AttackRange",
+        "SlotID": 1,
+        "Location": "8,15,9,0",
+        "Method": "Coins 2300"
+    },
+    {
+        "ItemName": "BADGE_GroundNormalCombo4AltTiming",
+        "SlotID": 1,
+        "Location": "8,15,9,0",
+        "Method": "Coins 2000&&Memloch"
+    },
+    {
+        "ItemName": "BADGE_BreakTimeExtend",
+        "SlotID": 1,
+        "Location": "8,15,9,0",
+        "Method": "Coins 2650&&Memloch"
+    },
+    {
+        "ItemName": "BADGE_StrongFrontFly",
+        "SlotID": 1,
+        "Location": "8,15,9,0",
+        "Method": "Coins 1800&&Memloch"
+    },
+    {
+        "ItemName": "BADGE_1HealthTypeB",
+        "SlotID": 1,
+        "Location": "8,15,9,0",
+        "Method": "Coins 2250&&Memloch"
+    },
+    {
+        "ItemName": "BADGE_StepUpCharge",
+        "SlotID": 1,
+        "Location": "8,15,9,0",
+        "Method": "Coins 2500"
+    },
+    {
+        "ItemName": "BADGE_GroundWeakUpAirExcute",
+        "SlotID": 1,
+        "Location": "8,15,9,0",
+        "Method": "Coins 1850"
+    },
+    {
+        "ItemName": "BADGE_SupportShot",
+        "SlotID": 1,
+        "Location": "8,15,9,0",
+        "Method": "Coins 2250"
+    },
+    {
+        "ItemName": "BADGE_StraightCost",
+        "SlotID": 1,
+        "Location": "8,15,9,0",
+        "Method": "Coins 3000"
+    },
+    {
+        "ItemName": "BADGE_WeakAirNormal3ModDamageBoost",
+        "SlotID": 1,
+        "Location": "8,15,9,0",
+        "Method": "Coins 1250"
+    },
+    {
+        "ItemName": "BADGE_DodgeHealthCounter",
+        "SlotID": 1,
+        "Location": "8,15,9,0",
+        "Method": "Coins 2750"
+    },
+    {
+        "ItemName": "BADGE_AutoAirCombo",
+        "SlotID": 1,
+        "Location": "8,15,9,0",
+        "Method": "Coins 1250"
+    },
+    {
+        "ItemName": "BADGE_SuperArmor33",
+        "SlotID": 1,
+        "Location": "8,15,9,0",
+        "Method": "Coins 500"
+    },
+    {
+        "ItemName": "BADGE_FreeFoodRefill",
+        "SlotID": 1,
+        "Location": "8,15,9,0",
+        "Method": "Coins 1000"
+    },
+    {
+        "ItemName": "BADGE_StyleComboNormal4HAAA",
+        "SlotID": 1,
+        "Location": "8,15,9,0",
+        "Method": "Coins 2300"
+    },
+    {
+        "ItemName": "STACKABLE_BAG",
+        "SlotID": 31,
+        "Location": "8,15,9,0",
+        "Method": "Coins 3000"
+    },
+    {
+        "ItemName": "STACKABLE_HP #31",
+        "SlotID": 31,
+        "Location": "8,15,9,0",
+        "Method": "Coins 3000"
+    },
+    {
+        "ItemName": "STACKABLE_MP #31",
+        "SlotID": 31,
+        "Location": "8,15,9,0",
+        "Method": "Coins 3000"
+    },
+    {
+        "ItemName": "STACKABLE_EP #31",
+        "SlotID": 31,
+        "Location": "8,15,9,0",
+        "Method": "Coins 3000"
+    },
+    {
+        "ItemName": "STACKABLE_MATK #31",
+        "SlotID": 31,
+        "Location": "8,15,9,0",
+        "Method": "Coins 3000"
+    },
+    {
+        "ItemName": "STACKABLE_RATK #31",
+        "SlotID": 31,
+        "Location": "8,15,9,0",
+        "Method": "Coins 3000"
+    },
+    {
+        "ItemName": "STACKABLE_SHARD #31",
+        "SlotID": 31,
+        "Location": "8,15,9,0",
+        "Method": "Coins 5000&&Chapter 6"
+    },
+    {
+        "ItemName": "I20",
+        "SlotID": 1,
+        "Location": "8,13,14,0",
+        "Method": ""
+    }
+]
