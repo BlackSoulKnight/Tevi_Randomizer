@@ -336,7 +336,7 @@ namespace TeviRandomizer
             }
             rando = new System.Random(seed);
 
-            randomizer.synccreateSeed(rando);
+            randomizer.createSeed(rando);
         }
 
 
@@ -464,32 +464,8 @@ namespace TeviRandomizer
             ItemData t = getRandomizedItem(item, slot);
             item = t.getItemTyp();
             slot = t.getSlotId();
-            try
-            {
-                Upgradable itemref;
-                if (!item.ToString().Contains("STACKABLE"))
-                {
-
-                    if (Enum.TryParse(item.ToString(), out itemref))
-                    {
-                        return SaveManager.Instance.GetStackableItem((ItemList.Type)itemref, slot);
-                    }
-                    else
-                    {
-                        return SaveManager.Instance.GetItem(item) > 0;
-                    }
-                }
-                else
-                {
-                    return SaveManager.Instance.GetStackableItem(item, slot);
-                }
-            }
-            catch
-            {
-                Debug.LogError($"[Randomizer] Could not check Item:{item} Slot:{slot}. Check if this is a valid Item");
-                return false;
-            }
-
+            return checkItemGot(item, slot);
+ 
         }
 
         static public Sprite getSprite(int itemID, bool custom = false)
@@ -1851,6 +1827,10 @@ namespace TeviRandomizer
                     {
                         return false;
                     }
+                }
+                else if (data.getItemTyp().ToString().Contains("Consumeable") &&  RandomizerPlugin.checkItemGot(data.getItemTyp(),1))
+                {
+                    return false;
                 }
             }
 
