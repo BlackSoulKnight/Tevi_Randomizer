@@ -116,6 +116,7 @@ namespace TeviRandomizer
 
         static public bool[] customFlags = new bool[Enum.GetNames(typeof(CustomFlags)).Length];
         static public int[] extraPotions = [0, 0]; // Hardcoded omo
+        static public int GoMode = -1;
         static public string pluginPath = BepInEx.Paths.PluginPath + "/tevi_randomizer/";
         static public int seed;
 
@@ -335,7 +336,7 @@ namespace TeviRandomizer
             }
             rando = new System.Random(seed);
 
-            randomizer.createSeed(rando);
+            randomizer.synccreateSeed(rando);
         }
 
 
@@ -1366,7 +1367,7 @@ namespace TeviRandomizer
         static bool IllusionReq(ref bool __result)
         {
             __result = false;
-            if (EventReq((int)RandomizerPlugin.EventID.IllusionPalace))
+            if (SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_COG) < RandomizerPlugin.GoMode)
             {
                 __result = true;
             }
@@ -3353,6 +3354,7 @@ namespace TeviRandomizer
                     int[] keySlot = eS3File.Load<int[]>("RandoKeySlot");
                     int[] valItem = eS3File.Load<int[]>("RandoValItem");
                     int[] valSlot = eS3File.Load<int[]>("RandoValSlot");
+                    
                     for (int i = 0; i < keyItem.Length; i++)
                     {
                         data.Add(new ItemData(keyItem[i], keySlot[i]), new ItemData(valItem[i], valSlot[i]));
@@ -3370,6 +3372,10 @@ namespace TeviRandomizer
                 if (eS3File.KeyExists("Seed"))
                 {
                     RandomizerPlugin.seed = eS3File.Load<int>("Seed");
+                }                
+                if (eS3File.KeyExists("GoMode"))
+                {
+                    RandomizerPlugin.GoMode = eS3File.Load<int>("GoMode");
                 }
 
             }
@@ -3421,6 +3427,7 @@ namespace TeviRandomizer
             eS3File.Save("RandoValSlot", valSlot);
             eS3File.Save("CustomDifficulty", RandomizerPlugin.customDiff);
             eS3File.Save("Seed", RandomizerPlugin.seed);
+            eS3File.Save("GoMode", RandomizerPlugin.GoMode);
             eS3File.Sync();
             Randomizer.saveSpoilerLog($"rando.SpoilerSave{saveslot}.txt", s);
         }

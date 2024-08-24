@@ -222,7 +222,7 @@ BADGE_ArrowDamageUp:LavaWorld Part 2:1:ITEM_AirSlide && ITEM_SLIDE,0
 STACKABLE_RATK:LavaWorld Part 2:11:,0
 BADGE_1HealthTypeC:LavaWorld Part 2:1:ChargeShot,0
 BADGE_AntiGround:LavaWorld Part 2:1:ITEM_Rotater && ITEM_AirSlide && ITEM_SLIDE,0
-BADGE_HitMP:LavaWorld Part 2:1:ITEM_SLIDE,0
+BADGE_HitMP:LavaWorld Part 2:1:ITEM_SLIDE && ITEM_LINEBOMB,0
 STACKABLE_COG:LavaWorld Part 2:4:ITEM_AirSlide && ITEM_SLIDE,0;ITEM_BombLengthExtend && ITEM_LINEBOMB && ITEM_SLIDE,0
 STACKABLE_EP:LavaWorld Part 2:21:ITEM_BombLengthExtend && ITEM_LINEBOMB && ITEM_SLIDE,0
 STACKABLE_MATK:LavaWorld Part 2:20:ITEM_SLIDE && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_DOUBLEJUMP,0
