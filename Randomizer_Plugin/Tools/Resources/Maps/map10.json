@@ -1,87 +1,1911 @@
 [
-{"Map":10,"RoomX":11,"RoomY":12,"RoomSection":0,"Connection":[{"Map":10,"RoomX":11,"RoomY":13,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":11,"RoomY":13,"RoomSection":0,"Connection":[{"Map":10,"RoomX":12,"RoomY":13,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":11,"RoomY":14,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":11,"RoomY":12,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":11,"RoomY":14,"RoomSection":0,"Connection":[{"Map":10,"RoomX":12,"RoomY":14,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":11,"RoomY":15,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":11,"RoomY":13,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":11,"RoomY":15,"RoomSection":0,"Connection":[{"Map":10,"RoomX":12,"RoomY":15,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":11,"RoomY":14,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":12,"RoomY":11,"RoomSection":0,"Connection":[{"Map":10,"RoomX":12,"RoomY":12,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":12,"RoomY":12,"RoomSection":0,"Connection":[{"Map":10,"RoomX":13,"RoomY":12,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":12,"RoomY":13,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":12,"RoomY":11,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":12,"RoomY":13,"RoomSection":0,"Connection":[{"Map":10,"RoomX":11,"RoomY":13,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":12,"RoomY":12,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":12,"RoomY":14,"RoomSection":0,"Connection":[{"Map":10,"RoomX":13,"RoomY":14,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":11,"RoomY":14,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":12,"RoomY":15,"RoomSection":0,"Connection":[{"Map":10,"RoomX":12,"RoomY":16,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":11,"RoomY":15,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":12,"RoomY":16,"RoomSection":0,"Connection":[{"Map":10,"RoomX":13,"RoomY":16,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":12,"RoomY":15,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":13,"RoomY":6,"RoomSection":0,"Connection":[{"Map":10,"RoomX":14,"RoomY":6,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":13,"RoomY":7,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":13,"RoomY":7,"RoomSection":0,"Connection":[{"Map":10,"RoomX":14,"RoomY":7,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":13,"RoomY":8,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":13,"RoomY":6,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":13,"RoomY":8,"RoomSection":0,"Connection":[{"Map":10,"RoomX":14,"RoomY":8,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":13,"RoomY":9,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":13,"RoomY":7,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":13,"RoomY":9,"RoomSection":0,"Connection":[{"Map":10,"RoomX":14,"RoomY":9,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":13,"RoomY":10,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":13,"RoomY":8,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":13,"RoomY":10,"RoomSection":0,"Connection":[{"Map":10,"RoomX":14,"RoomY":10,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":13,"RoomY":9,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":13,"RoomY":11,"RoomSection":0,"Connection":[{"Map":10,"RoomX":14,"RoomY":11,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":13,"RoomY":12,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":13,"RoomY":12,"RoomSection":0,"Connection":[{"Map":10,"RoomX":12,"RoomY":12,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":13,"RoomY":11,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":13,"RoomY":13,"RoomSection":0,"Connection":[{"Map":10,"RoomX":14,"RoomY":13,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":13,"RoomY":14,"RoomSection":0,"Connection":[{"Map":10,"RoomX":14,"RoomY":14,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":12,"RoomY":14,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":13,"RoomY":15,"RoomSection":0,"Connection":[{"Map":10,"RoomX":14,"RoomY":15,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":13,"RoomY":16,"RoomSection":0,"Connection":[{"Map":10,"RoomX":14,"RoomY":16,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":12,"RoomY":16,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":14,"RoomY":6,"RoomSection":0,"Connection":[{"Map":10,"RoomX":14,"RoomY":7,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":13,"RoomY":6,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":14,"RoomY":7,"RoomSection":0,"Connection":[{"Map":10,"RoomX":14,"RoomY":8,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":13,"RoomY":7,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":14,"RoomY":6,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":14,"RoomY":8,"RoomSection":0,"Connection":[{"Map":10,"RoomX":13,"RoomY":8,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":14,"RoomY":7,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":14,"RoomY":9,"RoomSection":0,"Connection":[{"Map":10,"RoomX":13,"RoomY":9,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":14,"RoomY":10,"RoomSection":0,"Connection":[{"Map":10,"RoomX":14,"RoomY":11,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":13,"RoomY":10,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":14,"RoomY":11,"RoomSection":0,"Connection":[{"Map":10,"RoomX":15,"RoomY":11,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":13,"RoomY":11,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":14,"RoomY":10,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":14,"RoomY":13,"RoomSection":0,"Connection":[{"Map":10,"RoomX":15,"RoomY":13,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":14,"RoomY":14,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":13,"RoomY":13,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":14,"RoomY":14,"RoomSection":0,"Connection":[{"Map":10,"RoomX":15,"RoomY":14,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":14,"RoomY":15,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":13,"RoomY":14,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":14,"RoomY":13,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":14,"RoomY":15,"RoomSection":0,"Connection":[{"Map":10,"RoomX":15,"RoomY":15,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":13,"RoomY":15,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":14,"RoomY":14,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":14,"RoomY":16,"RoomSection":0,"Connection":[{"Map":10,"RoomX":15,"RoomY":16,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":13,"RoomY":16,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":15,"RoomY":11,"RoomSection":0,"Connection":[{"Map":10,"RoomX":16,"RoomY":11,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":14,"RoomY":11,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":15,"RoomY":13,"RoomSection":0,"Connection":[{"Map":10,"RoomX":16,"RoomY":13,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":15,"RoomY":14,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":14,"RoomY":13,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":15,"RoomY":14,"RoomSection":0,"Connection":[{"Map":10,"RoomX":16,"RoomY":14,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":15,"RoomY":15,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":14,"RoomY":14,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":15,"RoomY":13,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":15,"RoomY":15,"RoomSection":0,"Connection":[{"Map":10,"RoomX":16,"RoomY":15,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":14,"RoomY":15,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":15,"RoomY":14,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":15,"RoomY":16,"RoomSection":0,"Connection":[{"Map":10,"RoomX":16,"RoomY":16,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":14,"RoomY":16,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":16,"RoomY":11,"RoomSection":0,"Connection":[{"Map":10,"RoomX":17,"RoomY":11,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":16,"RoomY":12,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":15,"RoomY":11,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":16,"RoomY":12,"RoomSection":0,"Connection":[{"Map":10,"RoomX":17,"RoomY":12,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":16,"RoomY":13,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":16,"RoomY":11,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":16,"RoomY":13,"RoomSection":0,"Connection":[{"Map":10,"RoomX":17,"RoomY":13,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":16,"RoomY":14,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":15,"RoomY":13,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":16,"RoomY":12,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":16,"RoomY":14,"RoomSection":0,"Connection":[{"Map":10,"RoomX":17,"RoomY":14,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":16,"RoomY":15,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":15,"RoomY":14,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":16,"RoomY":13,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":16,"RoomY":15,"RoomSection":0,"Connection":[{"Map":10,"RoomX":17,"RoomY":15,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":15,"RoomY":15,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":16,"RoomY":14,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":16,"RoomY":16,"RoomSection":0,"Connection":[{"Map":10,"RoomX":17,"RoomY":16,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":15,"RoomY":16,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":16,"RoomY":17,"RoomSection":0,"Connection":[{"Map":10,"RoomX":17,"RoomY":17,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":16,"RoomY":18,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":16,"RoomY":18,"RoomSection":0,"Connection":[{"Map":10,"RoomX":17,"RoomY":18,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":16,"RoomY":17,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":17,"RoomY":11,"RoomSection":0,"Connection":[{"Map":10,"RoomX":18,"RoomY":11,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":16,"RoomY":11,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":17,"RoomY":12,"RoomSection":0,"Connection":[{"Map":10,"RoomX":17,"RoomY":13,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":16,"RoomY":12,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":17,"RoomY":13,"RoomSection":0,"Connection":[{"Map":10,"RoomX":17,"RoomY":14,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":16,"RoomY":13,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":17,"RoomY":12,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":17,"RoomY":14,"RoomSection":0,"Connection":[{"Map":10,"RoomX":18,"RoomY":14,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":17,"RoomY":15,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":16,"RoomY":14,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":17,"RoomY":13,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":17,"RoomY":15,"RoomSection":0,"Connection":[{"Map":10,"RoomX":16,"RoomY":15,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":17,"RoomY":14,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":17,"RoomY":16,"RoomSection":0,"Connection":[{"Map":10,"RoomX":18,"RoomY":16,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":16,"RoomY":16,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":17,"RoomY":17,"RoomSection":0,"Connection":[{"Map":10,"RoomX":18,"RoomY":17,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":16,"RoomY":17,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":17,"RoomY":18,"RoomSection":0,"Connection":[{"Map":10,"RoomX":16,"RoomY":18,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":18,"RoomY":11,"RoomSection":0,"Connection":[{"Map":10,"RoomX":19,"RoomY":11,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":17,"RoomY":11,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":18,"RoomY":12,"RoomSection":0,"Connection":[{"Map":10,"RoomX":18,"RoomY":13,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":18,"RoomY":13,"RoomSection":0,"Connection":[{"Map":10,"RoomX":19,"RoomY":13,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":18,"RoomY":14,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":18,"RoomY":12,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":18,"RoomY":14,"RoomSection":0,"Connection":[{"Map":10,"RoomX":18,"RoomY":15,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":17,"RoomY":14,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":18,"RoomY":13,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":18,"RoomY":15,"RoomSection":0,"Connection":[{"Map":10,"RoomX":19,"RoomY":15,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":18,"RoomY":14,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":18,"RoomY":16,"RoomSection":0,"Connection":[{"Map":10,"RoomX":19,"RoomY":16,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":18,"RoomY":17,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":17,"RoomY":16,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":18,"RoomY":17,"RoomSection":0,"Connection":[{"Map":10,"RoomX":17,"RoomY":17,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":18,"RoomY":16,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":19,"RoomY":11,"RoomSection":0,"Connection":[{"Map":10,"RoomX":20,"RoomY":11,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":18,"RoomY":11,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":19,"RoomY":12,"RoomSection":0,"Connection":[{"Map":10,"RoomX":20,"RoomY":12,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":19,"RoomY":13,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":19,"RoomY":13,"RoomSection":0,"Connection":[{"Map":10,"RoomX":19,"RoomY":14,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":18,"RoomY":13,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":19,"RoomY":12,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":19,"RoomY":14,"RoomSection":0,"Connection":[{"Map":10,"RoomX":19,"RoomY":13,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":19,"RoomY":15,"RoomSection":0,"Connection":[{"Map":10,"RoomX":20,"RoomY":15,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":19,"RoomY":16,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":18,"RoomY":15,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":19,"RoomY":16,"RoomSection":0,"Connection":[{"Map":10,"RoomX":20,"RoomY":16,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":18,"RoomY":16,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":19,"RoomY":15,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":20,"RoomY":11,"RoomSection":0,"Connection":[{"Map":10,"RoomX":21,"RoomY":11,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":19,"RoomY":11,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":20,"RoomY":12,"RoomSection":0,"Connection":[{"Map":10,"RoomX":21,"RoomY":12,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":19,"RoomY":12,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":20,"RoomY":14,"RoomSection":0,"Connection":[{"Map":10,"RoomX":21,"RoomY":14,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":20,"RoomY":15,"RoomSection":0,"Connection":[{"Map":10,"RoomX":19,"RoomY":15,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":20,"RoomY":16,"RoomSection":0,"Connection":[{"Map":10,"RoomX":21,"RoomY":16,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":19,"RoomY":16,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":21,"RoomY":11,"RoomSection":0,"Connection":[{"Map":10,"RoomX":22,"RoomY":11,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":20,"RoomY":11,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":21,"RoomY":12,"RoomSection":0,"Connection":[{"Map":10,"RoomX":21,"RoomY":13,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":20,"RoomY":12,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":21,"RoomY":13,"RoomSection":0,"Connection":[{"Map":10,"RoomX":21,"RoomY":14,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":21,"RoomY":12,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":21,"RoomY":14,"RoomSection":0,"Connection":[{"Map":10,"RoomX":21,"RoomY":15,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":20,"RoomY":14,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":21,"RoomY":13,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":21,"RoomY":15,"RoomSection":0,"Connection":[{"Map":10,"RoomX":21,"RoomY":16,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":21,"RoomY":14,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":21,"RoomY":16,"RoomSection":0,"Connection":[{"Map":10,"RoomX":20,"RoomY":16,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":21,"RoomY":15,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":22,"RoomY":11,"RoomSection":0,"Connection":[{"Map":10,"RoomX":23,"RoomY":11,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":21,"RoomY":11,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":22,"RoomY":17,"RoomSection":0,"Connection":[{"Map":10,"RoomX":23,"RoomY":17,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":23,"RoomY":11,"RoomSection":0,"Connection":[{"Map":10,"RoomX":23,"RoomY":12,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":22,"RoomY":11,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":23,"RoomY":12,"RoomSection":0,"Connection":[{"Map":10,"RoomX":23,"RoomY":13,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":23,"RoomY":11,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":23,"RoomY":13,"RoomSection":0,"Connection":[{"Map":10,"RoomX":23,"RoomY":14,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":23,"RoomY":12,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":23,"RoomY":14,"RoomSection":0,"Connection":[{"Map":10,"RoomX":23,"RoomY":15,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":23,"RoomY":13,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":23,"RoomY":15,"RoomSection":0,"Connection":[{"Map":10,"RoomX":23,"RoomY":16,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":23,"RoomY":14,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":23,"RoomY":16,"RoomSection":0,"Connection":[{"Map":10,"RoomX":23,"RoomY":17,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":23,"RoomY":15,"RoomSection":0,"Method":[]}]},
-{"Map":10,"RoomX":23,"RoomY":17,"RoomSection":0,"Connection":[{"Map":10,"RoomX":22,"RoomY":17,"RoomSection":0,"Method":[]},{"Map":10,"RoomX":23,"RoomY":16,"RoomSection":0,"Method":[]}]}
+    {
+        "Map": 10,
+        "RoomX": 11,
+        "RoomY": 12,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 11,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 11,
+        "RoomY": 13,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 12,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 11,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 11,
+                "RoomY": 12,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 11,
+        "RoomY": 14,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 12,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": "ITEM_LINEBOMB"
+            },
+            {
+                "Map": 10,
+                "RoomX": 11,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": 
+                "TEVI_STRONG_AIR_UP||ITEM_HIJUMP||ITEM_JETPACK||ITEM_DOUBLEJUMP||RWJ"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 11,
+        "RoomY": 15,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 12,
+                "RoomY": 15,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 11,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": "TEVI_STRONG_AIR_UP||ITEM_HIJUMP||ITEM_JETPACK||ITEM_DOUBLEJUMP||RWJ"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 12,
+        "RoomY": 11,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 12,
+                "RoomY": 12,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 12,
+        "RoomY": 12,
+        "RoomSection": 0,
+        "Connection": [
+
+            {
+                "Map": 10,
+                "RoomX": 12,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 12,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 12,
+        "RoomY": 13,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 11,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 13,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 12,
+                "RoomY": 12,
+                "RoomSection": 0,
+                "Method": "TEVI_STRONG_AIR_UP||ITEM_HIJUMP||ITEM_JETPACK||ITEM_DOUBLEJUMP||RWJ"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 12,
+        "RoomY": 14,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 13,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 11,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": "ITEM_LINEBOMB"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 12,
+        "RoomY": 15,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 12,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 11,
+                "RoomY": 15,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 12,
+        "RoomY": 16,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 13,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 12,
+                "RoomY": 15,
+                "RoomSection": 0,
+                "Method": "TEVI_STRONG_AIR_UP||ITEM_HIJUMP||ITEM_JETPACK||ITEM_DOUBLEJUMP||RWJ"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 13,
+        "RoomY": 6,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 14,
+                "RoomY": 6,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 13,
+                "RoomY": 7,
+                "RoomSection": 0,
+                "Method": "ITEM_LINEBOMB&&ChargeShot"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 13,
+        "RoomY": 7,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 13,
+                "RoomY": 8,
+                "RoomSection": 0,
+                "Method": "ITEM_LINEBOMB"
+            },
+            {
+                "Map": 10,
+                "RoomX": 13,
+                "RoomY": 6,
+                "RoomSection": 0,
+                "Method": "ITEM_BombLengthExtend&&ChargeShot"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 13,
+        "RoomY": 8,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 14,
+                "RoomY": 8,
+                "RoomSection": 0,
+                "Method": "TEVI_STRONG_AIR_UP||ITEM_HIJUMP||ITEM_JETPACK||ITEM_DOUBLEJUMP||RWJ"
+            },
+            {
+                "Map": 10,
+                "RoomX": 13,
+                "RoomY": 9,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 13,
+        "RoomY": 9,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 14,
+                "RoomY": 9,
+                "RoomSection": 0,
+                "Method": "ITEM_LINEBOMB&&(ITEM_HIJUMP||ITEM_JETPACK||ITEM_DOUBLEJUMP||RWJ)"
+            },
+            {
+                "Map": 10,
+                "RoomX": 13,
+                "RoomY": 10,
+                "RoomSection": 0,
+                "Method": "ITEM_LINEBOMB"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 13,
+        "RoomY": 10,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 14,
+                "RoomY": 10,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 13,
+                "RoomY": 9,
+                "RoomSection": 0,
+                "Method": "ITEM_LINEBOMB&&(ITEM_HIJUMP||ITEM_JETPACK||ITEM_DOUBLEJUMP||RWJ)"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 13,
+        "RoomY": 11,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 14,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 13,
+                "RoomY": 12,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 13,
+        "RoomY": 12,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 12,
+                "RoomY": 12,
+                "RoomSection": 0,
+                "Method": "ITEM_LINEBOMB"
+            },
+            {
+                "Map": 10,
+                "RoomX": 13,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": "TEVI_STRONG_AIR_UP||ITEM_HIJUMP||ITEM_JETPACK||ITEM_DOUBLEJUMP||RWJ"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 13,
+        "RoomY": 13,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 12,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 13,
+        "RoomY": 14,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 14,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 12,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 13,
+        "RoomY": 15,
+        "RoomSection": 0,
+        "Connection": [
+
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 13,
+        "RoomY": 16,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 14,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": "ITEM_LINEBOMB&&(ITEM_HIJUMP||ITEM_JETPACK||ITEM_DOUBLEJUMP||RWJ)"
+            },
+            {
+                "Map": 10,
+                "RoomX": 12,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": "ITEM_LINEBOMB"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 14,
+        "RoomY": 6,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 13,
+                "RoomY": 6,
+                "RoomSection": 0,
+                "Method": "TEVI_STRONG_AIR_UP||ITEM_HIJUMP||ITEM_JETPACK||ITEM_DOUBLEJUMP||RWJ"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 14,
+        "RoomY": 7,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 13,
+                "RoomY": 7,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 14,
+                "RoomY": 6,
+                "RoomSection": 0,
+                "Method": "ITEM_HIJUMP||ITEM_JETPACK||ITEM_DOUBLEJUMP||RWJ"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 14,
+        "RoomY": 8,
+        "RoomSection": 0,
+        "Connection": [
+
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 14,
+        "RoomY": 9,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 13,
+                "RoomY": 9,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 13,
+                "RoomY": 8,
+                "RoomSection": 0,
+                "Method": "ITEM_HIJUMP||ITEM_JETPACK||ITEM_DOUBLEJUMP||RWJ"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 14,
+        "RoomY": 10,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 14,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 13,
+                "RoomY": 10,
+                "RoomSection": 0,
+                "Method": "((ITEM_HIJUMP||ITEM_DOUBLEJUMP||ITEM_JETPACK)&&RWJ)||(ITEM_JETPACK&&ITEM_DOUBLEJUMP)||(ITEM_HIJUMP&&(ITEM_DOUBLEJUMP||ITEM_JETPACK))"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 14,
+        "RoomY": 11,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 15,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 13,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 14,
+                "RoomY": 10,
+                "RoomSection": 0,
+                "Method": "ITEM_JETPACK||ITEM_DOUBLEJUMP||RWJ"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 14,
+        "RoomY": 13,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 15,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 13,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 14,
+        "RoomY": 14,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 15,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 14,
+                "RoomY": 15,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 13,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 14,
+        "RoomY": 15,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 13,
+                "RoomY": 15,
+                "RoomSection": 0,
+                "Method": "ITEM_KNIFE"
+            },
+            {
+                "Map": 10,
+                "RoomX": 14,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 14,
+        "RoomY": 16,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 13,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 15,
+        "RoomY": 11,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 16,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 14,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 15,
+        "RoomY": 13,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 16,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 15,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 14,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 15,
+        "RoomY": 14,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 16,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": "((ITEM_DOUBLEJUMP||ITEM_JETPACK)&&(ITEM_SPEEDUP3))||(ITEM_DOUBLEJUMP&&ITEM_JETPACK)"
+            },
+            {
+                "Map": 10,
+                "RoomX": 15,
+                "RoomY": 15,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 14,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 15,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": "ITEM_JETPACK||ITEM_DOUBLEJUMP"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 15,
+        "RoomY": 15,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 16,
+                "RoomY": 15,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 15,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": "TEVI_STRONG_AIR_UP||ITEM_HIJUMP||ITEM_JETPACK||ITEM_DOUBLEJUMP||RWJ"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 15,
+        "RoomY": 16,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 16,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 14,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": "ITEM_JETPACK||ITEM_DOUBLEJUMP||RWJ"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 16,
+        "RoomY": 11,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 17,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 16,
+                "RoomY": 12,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 15,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 16,
+        "RoomY": 12,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 17,
+                "RoomY": 12,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 16,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 16,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": "ITEM_JETPACK||ITEM_DOUBLEJUMP||RWJ"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 16,
+        "RoomY": 13,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 17,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 16,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 15,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 16,
+        "RoomY": 14,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 17,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 15,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 16,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 16,
+        "RoomY": 15,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 17,
+                "RoomY": 15,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 15,
+                "RoomY": 15,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 16,
+        "RoomY": 16,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 17,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 15,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 16,
+        "RoomY": 17,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 17,
+                "RoomY": 17,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 16,
+                "RoomY": 18,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 16,
+        "RoomY": 18,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 17,
+                "RoomY": 18,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 16,
+                "RoomY": 17,
+                "RoomSection": 0,
+                "Method": "ITEM_JETPACK||ITEM_DOUBLEJUMP||RWJ"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 17,
+        "RoomY": 11,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 18,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 16,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": "ITEM_JETPACK||ITEM_DOUBLEJUMP||RWJ"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 17,
+        "RoomY": 12,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 17,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 16,
+                "RoomY": 12,
+                "RoomSection": 0,
+                "Method": "ITEM_JETPACK||ITEM_DOUBLEJUMP||RWJ"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 17,
+        "RoomY": 13,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 16,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 17,
+                "RoomY": 12,
+                "RoomSection": 0,
+                "Method": "ITEM_JETPACK||ITEM_DOUBLEJUMP||RWJ"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 17,
+        "RoomY": 14,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 18,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 16,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 17,
+        "RoomY": 15,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 16,
+                "RoomY": 15,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 17,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": "ITEM_JETPACK||ITEM_DOUBLEJUMP||RWJ"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 17,
+        "RoomY": 16,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 18,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 16,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 17,
+        "RoomY": 17,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 18,
+                "RoomY": 17,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 16,
+                "RoomY": 17,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 17,
+        "RoomY": 18,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 16,
+                "RoomY": 18,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 18,
+        "RoomY": 11,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 19,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 17,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 18,
+        "RoomY": 12,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 18,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": "ITEM_LINEBOMB"
+            },
+            {
+                "Map": 10,
+                "RoomX": 19,
+                "RoomY": 12,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 18,
+        "RoomY": 13,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 19,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 18,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 18,
+                "RoomY": 12,
+                "RoomSection": 0,
+                "Method": "(ITEM_JETPACK||ITEM_DOUBLEJUMP)&&ITEM_LINEBOMB&&ITEM_WALLJUMP"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 18,
+        "RoomY": 14,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 18,
+                "RoomY": 15,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 17,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 18,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": "ITEM_JETPACK||ITEM_DOUBLEJUMP||RWJ"
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 18,
+        "RoomY": 15,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 19,
+                "RoomY": 15,
+                "RoomSection": 0,
+                "Method": "ITEM_LINEBOMB"
+            },
+            {
+                "Map": 10,
+                "RoomX": 18,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": "ITEM_LINEBOMB"
+            },
+            {
+                "Map": 10,
+                "RoomX": 18,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 18,
+        "RoomY": 16,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 19,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 18,
+                "RoomY": 17,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 17,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 18,
+        "RoomY": 17,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 17,
+                "RoomY": 17,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 18,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 19,
+        "RoomY": 11,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 20,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 18,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 19,
+        "RoomY": 12,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 20,
+                "RoomY": 12,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 19,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 19,
+        "RoomY": 13,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 19,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 18,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 19,
+                "RoomY": 12,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 19,
+        "RoomY": 14,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 19,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 19,
+        "RoomY": 15,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 20,
+                "RoomY": 15,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 19,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 18,
+                "RoomY": 15,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 19,
+        "RoomY": 16,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 20,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 18,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 19,
+                "RoomY": 15,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 20,
+        "RoomY": 11,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 21,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 19,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 20,
+        "RoomY": 12,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 21,
+                "RoomY": 12,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 19,
+                "RoomY": 12,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 20,
+        "RoomY": 14,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 21,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 20,
+        "RoomY": 15,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 19,
+                "RoomY": 15,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 20,
+        "RoomY": 16,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 21,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 19,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 21,
+        "RoomY": 11,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 22,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 20,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 21,
+        "RoomY": 12,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 21,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 20,
+                "RoomY": 12,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 21,
+        "RoomY": 13,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 21,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 21,
+                "RoomY": 12,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 21,
+        "RoomY": 14,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 21,
+                "RoomY": 15,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 20,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 21,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 21,
+        "RoomY": 15,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 21,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 21,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 21,
+        "RoomY": 16,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 20,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 21,
+                "RoomY": 15,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 22,
+        "RoomY": 11,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 23,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 21,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 22,
+        "RoomY": 17,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 23,
+                "RoomY": 17,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 23,
+        "RoomY": 11,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 23,
+                "RoomY": 12,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 22,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 23,
+        "RoomY": 12,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 23,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 23,
+                "RoomY": 11,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 23,
+        "RoomY": 13,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 23,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 23,
+                "RoomY": 12,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 23,
+        "RoomY": 14,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 23,
+                "RoomY": 15,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 23,
+                "RoomY": 13,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 23,
+        "RoomY": 15,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 23,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 23,
+                "RoomY": 14,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 23,
+        "RoomY": 16,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 23,
+                "RoomY": 17,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 23,
+                "RoomY": 15,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    },
+    {
+        "Map": 10,
+        "RoomX": 23,
+        "RoomY": 17,
+        "RoomSection": 0,
+        "Connection": [
+            {
+                "Map": 10,
+                "RoomX": 22,
+                "RoomY": 17,
+                "RoomSection": 0,
+                "Method": ""
+            },
+            {
+                "Map": 10,
+                "RoomX": 23,
+                "RoomY": 16,
+                "RoomSection": 0,
+                "Method": ""
+            }
+        ]
+    }
 ]
