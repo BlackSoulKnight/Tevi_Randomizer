@@ -1050,6 +1050,61 @@
         ]
     },
     {
+        "Itemname": "Useable_WaffleAHoneycloud",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 300",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Useable_WaffleBMeringue",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 300 && Chapter 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Useable_WaffleCMorning",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 300 && Chapter 4",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Useable_WaffleDJellydrop",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 300 && Chapter 5",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Useable_WaffleElueberry",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 300 && Chapter 6",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "BADGE_StyleComboBackflipBomb",
         "Location": "Travoll Industrie",
         "slotId": 1,
@@ -5673,6 +5728,61 @@
         "Requirement": [
             {
                 "Method": "Coins 2700",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Useable_VenaBombSmall",
+        "Location": "Vena Shop",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 99999",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Useable_VenaBombBig",
+        "Location": "Vena Shop",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 99999 && Chapter 4",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Useable_VenaBombBunBun",
+        "Location": "Vena Shop",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 99999 && Chapter 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Useable_VenaBombDispel",
+        "Location": "Vena Shop",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 99999 && Chapter 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Useable_VenaBombHealBlock",
+        "Location": "Vena Shop",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 99999 && Chapter 5",
                 "Difficulty": 0
             }
         ]

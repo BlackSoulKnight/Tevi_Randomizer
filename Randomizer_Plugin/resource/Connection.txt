@@ -105,7 +105,6 @@ Verdazure Ocean:Forgotten City Upper Exit:ITEM_WATERMOVEMENT && ITEM_OrbTypeS3 &
 Verdazure Swamp:Lab - Verdazure Swamp Connection:
 Forgotten City Upper Exit:Verdazure Ocean:ChargeShot
 Forgotten City:Forgotten City Upper Exit:ITEM_LINEBOMB
-Tartarus:Swamp:
 Tartarus:Vena Shop:
 Tartarus:Catacombs Entrance:ITEM_SLIDE
 Snow City:Snowveil Above HQ:ITEM_LINEBOMB && ITEM_SLIDE
@@ -119,16 +118,18 @@ Golden Hands HQ:Golden Hands HQ Sewer:ITEM_LINEBOMB && ChargeShot
 Golden Hands HQ Sewer:Snow City:
 LavaWorld:Swamp Entrance:
 LavaWorld:Swamp:ChargeShot && ITEM_LINEBOMB
-LavaWorld:LavaWorld Part 2:ITEM_JETPACK
-LavaWorld:LavaWorld Part 2:ITEM_SLIDE && ITEM_AirDash 
-LavaWorld:LavaWorld Part 2:ITEM_SLIDE &&  ITEM_DOUBLEJUMP
-LavaWorld:LavaWorld Part 2:ITEM_SLIDE &&  ITEM_HIJUMP
+LavaWorld:LavaWorld Part 2:ITEM_JETPACK && ITEM_SLIDE
+LavaWorld:LavaWorld Part 2:ITEM_SLIDE && ITEM_AirDash && ChargeShot
+LavaWorld:LavaWorld Part 2:ITEM_SLIDE &&  ITEM_DOUBLEJUMP && ChargeShot
+LavaWorld:LavaWorld Part 2:ITEM_SLIDE &&  ITEM_HIJUMP && ChargeShot
+LavaWorld:LavaWorld Part 2:ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_JETPACK
 LavaWorld Part 2:Sinners Entrance:ITEM_Rotater && ITEM_AirSlide && ITEM_SLIDE
 Swamp Entrance:Tartarus:
 Swamp Entrance:Swamp:ITEM_KNIFE
 Swamp Entrance:Swamp:ITEM_ORB
 Swamp Entrance:Swamp:ITEM_AirDash
 Swamp Entrance:Swamp:ITEM_LINEBOMB && ITEM_AREABOMB
+Swamp Entrance:LavaWorld Part 2:ITEM_LINEBOMB
 Swamp:Tartarus:
 DreamKeeper Outside Right:DreamKeeper Outside Left:ChargeShot
 DreamKeeper Outside Right:DreamKeeper:ITEM_Rotater && ChargeShot
@@ -173,7 +174,8 @@ Sinners Hell:Illusion Palace:
 Illusion Palace::
 Relicts:CopperWood:
 Relicts:Gleamwood Middle:ITEM_LINEBOMB
-Catacombs Entrance:Catacombs Main:ITEM_SLIDE
+Catacombs Entrance:Catacombs Main:ITEM_DOUBLEJUMP
+Catacombs Entrance:Catacombs Main:ITEM_JETPACK
 Catacombs Entrance:Tartarus:
 Catacombs Main:Catacombs Entrance:ITEM_LINEBOMB
 Catacombs Main:Vassago fight:ITEM_DOUBLEJUMP

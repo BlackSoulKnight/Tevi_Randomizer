@@ -88,6 +88,11 @@ STACKABLE_EP:Moros City:30:Coins 3000,0
 STACKABLE_MATK:Moros City:30:Coins 3000,0
 STACKABLE_RATK:Moros City:30:Coins 3000,0
 STACKABLE_SHARD:Moros City:30:Coins 5000 && Chapter 6,0
+Useable_WaffleAHoneycloud:Moros City:1:Coins 300,0
+Useable_WaffleBMeringue:Moros City:1:Coins 300 && Chapter 3,0
+Useable_WaffleCMorning:Moros City:1:Coins 300 && Chapter 4,0
+Useable_WaffleDJellydrop:Moros City:1:Coins 300 && Chapter 5,0
+Useable_WaffleElueberry:Moros City:1:Coins 300 && Chapter 6,0
 BADGE_StyleComboBackflipBomb:Travoll Industrie:1:ITEM_SLIDE && ITEM_WALLJUMP && ITEM_AirDash,0;ITEM_SLIDE && ITEM_WALLJUMP && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_WALLJUMP && ITEM_DOUBLEJUMP,0
 STACKABLE_EP:Travoll Industrie:14:ITEM_AREABOMB && ITEM_LINEBOMB,0
 STACKABLE_HP:Travoll Industrie:2:ITEM_LINEBOMB,0
@@ -257,11 +262,11 @@ STACKABLE_MATK:Tartarus:32:Coins 4000,0
 STACKABLE_MP:Tartarus:32:Coins 4000,0
 STACKABLE_RATK:Tartarus:32:Coins 4000,0
 STACKABLE_SHARD:Tartarus:32:Coins 5000 && Chapter 6,0
-BADGE_WeakAirDownFreqUpA:Catacombs Entrance:1:,0
-STACKABLE_HP:Catacombs Entrance:16:,0
-STACKABLE_MP:Catacombs Entrance:19:,0
-STACKABLE_HP:Catacombs Entrance:19:ITEM_LINEBOMB,0
-BADGE_DoubleDispelLineBombHigh:Catacombs Entrance:1:,0
+BADGE_WeakAirDownFreqUpA:Catacombs Main:1:,0
+STACKABLE_HP:Catacombs Main:16:,0
+STACKABLE_MP:Catacombs Main:19:,0
+STACKABLE_HP:Catacombs Main:19:ITEM_LINEBOMB,0
+BADGE_DoubleDispelLineBombHigh:Catacombs Main:1:,0
 STACKABLE_MP:Vassago fight:21:ITEM_AREABOMB && ITEM_LINEBOMB,0
 BADGE_QuickDropDouble:Vassago fight:1:ITEM_LINEBOMB,0
 BADGE_CrystalAttack:Vassago fight:1:ITEM_LINEBOMB,0
@@ -464,6 +469,11 @@ BADGE_AutoFoodUse:Vena Shop:1:Coins 250,0
 BADGE_BombDispelDebuff:Vena Shop:1:Coins 3100,0
 ITEM_VenaCharm:Vena Shop:1:Coins 1000,0
 ITEM_RapidShots:Vena Shop:1:Coins 2700,0
+Useable_VenaBombSmall:Vena Shop:1:Coins 99999,0
+Useable_VenaBombBig:Vena Shop:1:Coins 99999 && Chapter 4,0
+Useable_VenaBombBunBun:Vena Shop:1:Coins 99999 && Chapter 2,0
+Useable_VenaBombDispel:Vena Shop:1:Coins 99999 && Chapter 3,0
+Useable_VenaBombHealBlock:Vena Shop:1:Coins 99999 && Chapter 5,0
 BADGE_DoubleAirDash:Memine All:1:AllMemine,0
 STACKABLE_SHARD:Ana Thema:0:ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0
 STACKABLE_SHARD:Blushwood Sliding:1:ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0

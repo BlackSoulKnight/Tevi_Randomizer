@@ -24,6 +24,7 @@ using Character;
 
 
 
+
 namespace TeviRandomizer
 {
 
@@ -389,9 +390,56 @@ namespace TeviRandomizer
             try
             {
                 Upgradable itemref;
-                if (!item.ToString().Contains("STACKABLE"))
+                if (item.ToString().Contains("STACKABLE"))
                 {
+                    return SaveManager.Instance.GetStackableItem(item, slot);
 
+                }
+                else if (item.ToString().Contains("Useable"))
+                {
+                    if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleA) > 0 && item == ItemList.Type.Useable_WaffleAHoneycloud)
+                    {
+                        return true;
+                    }
+                    if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleB) > 0 && item == ItemList.Type.Useable_WaffleBMeringue)
+                    {
+                        return true;
+                    }
+                    if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleC) > 0 && item == ItemList.Type.Useable_WaffleCMorning)
+                    {
+                        return true;
+                    }
+                    if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleD) > 0 && item == ItemList.Type.Useable_WaffleDJellydrop)
+                    {
+                        return true;
+                    }
+                    if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleE) > 0 && item == ItemList.Type.Useable_WaffleElueberry)
+                    {
+                        return true;
+                    }
+                    if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaSmall) > 0 && item == ItemList.Type.Useable_VenaBombSmall)
+                    {
+                        return true;
+                    }
+                    if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaBig) > 0 && item == ItemList.Type.Useable_VenaBombBig)
+                    {
+                        return true;
+                    }
+                    if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaD) > 0 && item == ItemList.Type.Useable_VenaBombDispel)
+                    {
+                        return true;
+                    }
+                    if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaHB) > 0 && item == ItemList.Type.Useable_VenaBombHealBlock)
+                    {
+                        return true;
+                    }
+                    if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaBB) > 0 && item == ItemList.Type.Useable_VenaBombBunBun)
+                    {
+                        return true;
+                    }
+                    return false;
+                }
+                else {
                     if (Enum.TryParse(item.ToString(), out itemref))
                     {
                         return SaveManager.Instance.GetStackableItem((ItemList.Type)itemref, slot);
@@ -400,10 +448,6 @@ namespace TeviRandomizer
                     {
                         return SaveManager.Instance.GetItem(item) > 0;
                     }
-                }
-                else
-                {
-                    return SaveManager.Instance.GetStackableItem(item, slot);
                 }
             }
             catch
@@ -614,6 +658,15 @@ namespace TeviRandomizer
                     return false;
                 }
             }
+            if (data.getItemTyp().ToString().Contains("Useable"))
+            {
+                if (checkItemGot(data.getItemTyp(), 1))
+                {
+                    __instance.DisableMe();
+                    return false;
+                }
+
+            }
             else
             {
                 if (SaveManager.Instance.GetItem((ItemList.Type)data.itemID) > 0 && !data.getItemTyp().ToString().Contains("ITEM"))
@@ -799,7 +852,54 @@ namespace TeviRandomizer
                     break;
                 default:
                     break;
+
             }
+            if (item.ToString().Contains("Useable"))
+            {
+                SaveManager.Instance.AddItemToBag(item);
+                if (item == ItemList.Type.Useable_WaffleAHoneycloud)
+                {
+                    SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleA, 1);
+                }
+                if (item == ItemList.Type.Useable_WaffleBMeringue)
+                {
+                    SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleB, 1);
+                }
+                if (item == ItemList.Type.Useable_WaffleCMorning)
+                {
+                    SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleC, 1);
+                }
+                if (item == ItemList.Type.Useable_WaffleDJellydrop)
+                {
+                    SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleD, 1);
+                }
+                if (item == ItemList.Type.Useable_WaffleElueberry)
+                {
+                    SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleE, 1);
+                }
+                if (item == ItemList.Type.Useable_VenaBombSmall)
+                {
+                    SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaSmall, 1);
+                }
+                if (item == ItemList.Type.Useable_VenaBombBig)
+                {
+                    SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaBig, 1);
+                }
+                if (item == ItemList.Type.Useable_VenaBombBunBun)
+                {
+                    SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaBB, 1);
+                }
+                if (item == ItemList.Type.Useable_VenaBombHealBlock)
+                {
+                    SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaHB, 1);
+                }
+                if (item == ItemList.Type.Useable_VenaBombDispel)
+                {
+                    SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaD, 1);
+                }
+                return false;
+            }
+
 
             if (SaveManager.Instance.GetOrb() == 2 && (SaveManager.Instance.GetItem(ItemList.Type.I19) > 0 || SaveManager.Instance.GetItem(ItemList.Type.I20) > 0 || item == ItemList.Type.I20 || item == ItemList.Type.I19))
             {
@@ -813,6 +913,8 @@ namespace TeviRandomizer
 
         [HarmonyPatch(typeof(SaveManager), "SetItem")]
         [HarmonyPrefix]
+
+
         static bool ItemChanges(ref ItemList.Type item, ref byte value, ref SaveManager __instance)
         {
             if (item >= ItemList.Type.BADGE_START && item <= ItemList.Type.BADGE_MAX && SaveManager.Instance.GetMiniFlag(Mini.UnlockedBadge) <= 0)
@@ -902,8 +1004,6 @@ namespace TeviRandomizer
             {
                 HUDObtainedItem.Instance.GiveItem(itemid, data2.GetSlotID());
                 itemid = RandomizerPlugin.getRandomizedItem(data2.itemid, data2.GetSlotID()).getItemTyp();
-
-
             }
             else
             {
@@ -913,6 +1013,8 @@ namespace TeviRandomizer
 
             if (itemid == ItemList.Type.STACKABLE_COG)
             {
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.ITEM);
+
             }
             else if (itemid == ItemList.Type.STACKABLE_HP)
             {
@@ -944,6 +1046,9 @@ namespace TeviRandomizer
             }
             else if (itemid.ToString().Contains("ITEM") || itemid.ToString().Contains("QUEST") || itemid == ItemList.Type.STACKABLE_BAG)
             {
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.ITEM);
+            }
+            else if (itemid.ToString().Contains("Useable")){
                 FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.ITEM);
             }
             else
@@ -2977,12 +3082,13 @@ namespace TeviRandomizer
             ChatStand chatStand = AreaResource.Instance.GetChatStand(___fname);
             if ((bool)chatStand)
             {
+                object[] obj = null;
                 switch (___typeN)
                 {
                     case Character.Type.Reese:
                         if (area != 15 && SaveManager.Instance.GetItem(ItemList.Type.ITEM_RailPass)>0)
                         {
-                            object[] obj = [ItemList.Type.BADGE_ChangeOrbCharger,false];
+                            obj = [ItemList.Type.BADGE_ChangeOrbCharger,false];
                             Traverse.Create(__instance).Method("AddItem", obj).GetValue();
                             ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
 
@@ -2991,12 +3097,50 @@ namespace TeviRandomizer
                     case Character.Type.Bones:
                         if (area != 20 && SaveManager.Instance.GetItem(ItemList.Type.ITEM_AirshipPass) > 0)
                         {
-                            object[] obj = [ItemList.Type.BADGE_AutoAirCombo,false];
+                            obj = [ItemList.Type.BADGE_AutoAirCombo,false];
                             Traverse.Create(__instance).Method("AddItem", obj).GetValue();
                             ___itemslots[___CurrentMaxItem-1].gameObject.SetActive(true);
                         }
                         break;
+                    case Character.Type.Vena:
+
+                        obj = [ItemList.Type.Useable_VenaBombSmall, false];
+                        Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                        ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+
+                        if (SaveManager.Instance.GetChapter() >= 2)
+                        {
+                           obj = [ItemList.Type.Useable_VenaBombBunBun, false]; 
+                            Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                            ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                        }
+                        if (SaveManager.Instance.GetChapter() >= 3)
+                        {
+                            obj = [ItemList.Type.Useable_VenaBombDispel, false];
+                            Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                            ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                        }
+                        if (SaveManager.Instance.GetChapter() >= 4)
+                        {
+                            obj = [ItemList.Type.Useable_VenaBombBig, false];
+                            Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                            ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                        }
+                        if (SaveManager.Instance.GetChapter() >= 5)
+                        {
+                            obj = [ItemList.Type.Useable_VenaBombHealBlock, false];
+                            Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                            ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                        }
+                        break;
+
+                    case Character.Type.Mia:
+                        obj = [ItemList.Type.Useable_WaffleAHoneycloud, false];
+                        Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                        ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                        break;
                 }
+                
             }
         } 
 
@@ -3031,54 +3175,9 @@ namespace TeviRandomizer
                         {
                             SaveManager.Instance.savedata.coinUsedCC += price;
                         }
-                        if (___itemslots[___Selected].GetItem().ToString().Contains("Useable"))
-                        {
-                            data = RandomizerPlugin.getRandomizedItem(___itemslots[___Selected].GetItem(), 1);
-                            SaveManager.Instance.AddItemToBag(___itemslots[___Selected].GetItem());
-                            if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleAHoneycloud)
-                            {
-                                SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleA, 1);
-                            }
-                            if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleBMeringue)
-                            {
-                                SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleB, 1);
-                            }
-                            if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleCMorning)
-                            {
-                                SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleC, 1);
-                            }
-                            if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleDJellydrop)
-                            {
-                                SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleD, 1);
-                            }
-                            if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleElueberry)
-                            {
-                                SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleE, 1);
-                            }
-                            if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombSmall)
-                            {
-                                SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaSmall, 1);
-                            }
-                            if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombBig)
-                            {
-                                SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaBig, 1);
-                            }
-                            if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombBunBun)
-                            {
-                                SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaBB, 1);
-                            }
-                            if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombHealBlock)
-                            {
-                                SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaHB, 1);
-                            }
-                            if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombDispel)
-                            {
-                                SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaD, 1);
-                            }
-                        }
+                        data = RandomizerPlugin.getRandomizedItem(___itemslots[___Selected].GetItem(), 1);
 
-
-                        else if (___itemslots[___Selected].GetItem().ToString().Contains("STACKABLE"))
+                        if (___itemslots[___Selected].GetItem().ToString().Contains("STACKABLE"))
                         {
                             data = RandomizerPlugin.getRandomizedItem(___itemslots[___Selected].GetItem(), (byte)(30 + ___ShopID));
 
