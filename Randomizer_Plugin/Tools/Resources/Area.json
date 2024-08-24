@@ -943,10 +943,6 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Swamp",
-                    "Method": ""
-                },
-                {
                     "Exit": "Vena Shop",
                     "Method": ""
                 },
@@ -1647,7 +1643,11 @@
             "Connections": [
                 {
                     "Exit": "Catacombs Main",
-                    "Method": "ITEM_SLIDE"
+                    "Method": "ITEM_DOUBLEJUMP"
+                },
+                {
+                    "Exit": "Catacombs Main",
+                    "Method": "ITEM_JETPACK"
                 },
                 {
                     "Exit": "Tartarus",

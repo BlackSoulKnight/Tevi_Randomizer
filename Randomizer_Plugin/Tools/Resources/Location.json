@@ -3110,7 +3110,7 @@
     },
     {
         "Itemname": "BADGE_WeakAirDownFreqUpA",
-        "Location": "Catacombs Entrance",
+        "Location": "Catacombs Main",
         "slotId": 1,
         "Requirement": [
             {
@@ -3121,7 +3121,7 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Catacombs Entrance",
+        "Location": "Catacombs Main",
         "slotId": 16,
         "Requirement": [
             {
@@ -3132,7 +3132,7 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Catacombs Entrance",
+        "Location": "Catacombs Main",
         "slotId": 19,
         "Requirement": [
             {
@@ -3143,7 +3143,7 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Catacombs Entrance",
+        "Location": "Catacombs Main",
         "slotId": 19,
         "Requirement": [
             {
@@ -3154,7 +3154,7 @@
     },
     {
         "Itemname": "BADGE_DoubleDispelLineBombHigh",
-        "Location": "Catacombs Entrance",
+        "Location": "Catacombs Main",
         "slotId": 1,
         "Requirement": [
             {
