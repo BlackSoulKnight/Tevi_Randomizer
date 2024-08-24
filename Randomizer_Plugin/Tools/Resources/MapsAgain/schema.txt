@@ -1,0 +1,18 @@
+// Combined Rooms start at the bottom left
+[
+    {
+        "Room":"",   
+        "Exits":
+            [
+
+            ],
+        "Connection":
+        [
+            {
+                "Entrance":[],
+                "Exits":[],
+                "Method":""
+            }
+        ]
+    }
+]
