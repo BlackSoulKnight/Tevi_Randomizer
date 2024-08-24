@@ -1079,19 +1079,23 @@
                 },
                 {
                     "Exit": "LavaWorld Part 2",
-                    "Method": "ITEM_JETPACK"
+                    "Method": "ITEM_JETPACK && ITEM_SLIDE"
                 },
                 {
                     "Exit": "LavaWorld Part 2",
-                    "Method": "ITEM_SLIDE && ITEM_AirDash "
+                    "Method": "ITEM_SLIDE && ITEM_AirDash && ChargeShot"
                 },
                 {
                     "Exit": "LavaWorld Part 2",
-                    "Method": "ITEM_SLIDE &&  ITEM_DOUBLEJUMP"
+                    "Method": "ITEM_SLIDE &&  ITEM_DOUBLEJUMP && ChargeShot"
                 },
                 {
                     "Exit": "LavaWorld Part 2",
-                    "Method": "ITEM_SLIDE &&  ITEM_HIJUMP"
+                    "Method": "ITEM_SLIDE &&  ITEM_HIJUMP && ChargeShot"
+                },
+                {
+                    "Exit": "LavaWorld Part 2",
+                    "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_JETPACK"
                 }
             ]
         },
@@ -1146,7 +1150,12 @@
                 {
                     "Exit": "Swamp",
                     "Method": "ITEM_LINEBOMB && ITEM_AREABOMB"
+                },
+                {
+                    "Exit": "LavaWorld Part 2",
+                    "Method": "ITEM_LINEBOMB"
                 }
+
             ]
         },
         {
