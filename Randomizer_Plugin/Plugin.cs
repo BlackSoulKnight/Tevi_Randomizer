@@ -281,6 +281,16 @@ namespace TeviRandomizer
             }
             return true;
         }
+        [HarmonyPatch(typeof(Localize), "GetLocalizeTextWithKeyword")]
+        [HarmonyPostfix]
+        static void changeGearCount(ref string __result,ref string keyword)
+        {
+            if(keyword == "Todo.GoalTipFreeRoam")
+            {
+                __result = __result.Replace("16", GoMode.ToString());
+            }
+        }
+
 
 
         [Command("reloadRandomizer", Platform.AllPlatforms, MonoTargetType.Single)]
@@ -621,7 +631,7 @@ namespace TeviRandomizer
 
             if (((ItemList.Type)data.itemID).ToString().Contains("STACKABLE"))
             {
-                if (SaveManager.Instance.GetStackableItem((ItemList.Type)data.itemID, (byte)data.slotID))
+                if(checkItemGot((ItemList.Type)data.itemID, (byte)data.slotID))
                 {
                     Debug.Log(string.Concat(new string[]
                         {
@@ -1348,6 +1358,27 @@ namespace TeviRandomizer
                 __result = true;
             }
             return false;
+        }
+        [HarmonyPatch(typeof(Chap8FreeRoamNoIllusionPalace7x7), "EVENT")]
+        [HarmonyPrefix]
+        static bool IllusionText()
+        {
+            EventManager em = EventManager.Instance;
+            if (em.EventStage == 50)
+            {
+                if (em.EventTime >= 1f)
+                {
+                    em.StopEvent();
+                    if (!HUDPopupMessage.Instance.gameObject.activeInHierarchy)
+                    {
+                        string msg = Localize.GetLocalizeTextWithKeyword("FreeRoamNotEnoughCog", contains: false).Replace("16", RandomizerPlugin.GoMode.ToString());
+                        HUDPopupMessage.Instance.AddMessage(Localize.GetLocalizeTextWithKeyword("POPUP_INFORMATION", contains: false),msg, null, 0);
+                    }
+                    em.AllowSkip = true;
+                }
+                return false;
+            }
+            return true;
         }
     }
 
@@ -3067,9 +3098,9 @@ namespace TeviRandomizer
                 switch (___typeN)
                 {
                     case Character.Type.Reese:
-                        if (area != 15 && SaveManager.Instance.GetItem(ItemList.Type.ITEM_RailPass)>0)
+                        if (area != 15 && SaveManager.Instance.GetItem(ItemList.Type.ITEM_RailPass) > 0)
                         {
-                            obj = [ItemList.Type.BADGE_ChangeOrbCharger,false];
+                            obj = [ItemList.Type.BADGE_ChangeOrbCharger, false];
                             Traverse.Create(__instance).Method("AddItem", obj).GetValue();
                             ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
 
@@ -3078,36 +3109,38 @@ namespace TeviRandomizer
                     case Character.Type.Bones:
                         if (area != 20 && SaveManager.Instance.GetItem(ItemList.Type.ITEM_AirshipPass) > 0)
                         {
-                            obj = [ItemList.Type.BADGE_AutoAirCombo,false];
+                            obj = [ItemList.Type.BADGE_AutoAirCombo, false];
                             Traverse.Create(__instance).Method("AddItem", obj).GetValue();
-                            ___itemslots[___CurrentMaxItem-1].gameObject.SetActive(true);
+                            ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
                         }
                         break;
                     case Character.Type.Vena:
 
-                        obj = [ItemList.Type.Useable_VenaBombSmall, false];
-                        Traverse.Create(__instance).Method("AddItem", obj).GetValue();
-                        ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
-
-                        if (SaveManager.Instance.GetChapter() >= 2)
+                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaSmall) <= 0)
                         {
-                           obj = [ItemList.Type.Useable_VenaBombBunBun, false]; 
+                            obj = [ItemList.Type.Useable_VenaBombSmall, false];
                             Traverse.Create(__instance).Method("AddItem", obj).GetValue();
                             ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
                         }
-                        if (SaveManager.Instance.GetChapter() >= 3)
+                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaBB) != 0 && SaveManager.Instance.GetChapter() >= 2)
+                        {
+                            obj = [ItemList.Type.Useable_VenaBombBunBun, false];
+                            Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                            ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                        }
+                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaD) != 0 && SaveManager.Instance.GetChapter() >= 3)
                         {
                             obj = [ItemList.Type.Useable_VenaBombDispel, false];
                             Traverse.Create(__instance).Method("AddItem", obj).GetValue();
                             ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
                         }
-                        if (SaveManager.Instance.GetChapter() >= 4)
+                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaBig) != 0 && SaveManager.Instance.GetChapter() >= 4)
                         {
                             obj = [ItemList.Type.Useable_VenaBombBig, false];
                             Traverse.Create(__instance).Method("AddItem", obj).GetValue();
                             ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
                         }
-                        if (SaveManager.Instance.GetChapter() >= 5)
+                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaHB) != 0 && SaveManager.Instance.GetChapter() >= 5)
                         {
                             obj = [ItemList.Type.Useable_VenaBombHealBlock, false];
                             Traverse.Create(__instance).Method("AddItem", obj).GetValue();
@@ -3116,9 +3149,12 @@ namespace TeviRandomizer
                         break;
 
                     case Character.Type.Mia:
-                        obj = [ItemList.Type.Useable_WaffleAHoneycloud, false];
+                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleA) != 0)
+                        { 
+                            obj = [ItemList.Type.Useable_WaffleAHoneycloud, false];
                         Traverse.Create(__instance).Method("AddItem", obj).GetValue();
                         ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                        }
                         break;
                 }
                 
@@ -3460,7 +3496,7 @@ namespace TeviRandomizer
                 }
                 else if (damage > 0 && (owner != null && owner.isPlayer()) || __instance.isPlayer())
                 {
-                    if (type == BulletType.TEVI_WEAK_DASH || type == BulletType.TEVI_WEAK_ATTACK || type == BulletType.ORB_SHOT_NORMAL) return;
+                    if (type == BulletType.TEVI_WEAK_DASH || type == BulletType.TEVI_WEAK_ATTACK || type == BulletType.ORB_SHOT_NORMAL || type == BulletType.SUMMONBUNNY_HIT) return;
                     Debug.Log("Combo was broken by " + type);
                     bonusDropKickDmg = 0;
                 }

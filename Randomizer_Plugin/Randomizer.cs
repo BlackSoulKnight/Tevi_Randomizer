@@ -313,7 +313,7 @@ namespace TeviRandomizer
                 }
             }
             extraItemPool = new List<(int, int)>();
-            for (int i = 64; i > 35; i--)
+            for (int i = 63; i > 35; i--)
             {
                 extraItemPool.Add(((int)ItemList.Type.STACKABLE_EP, i));
                 extraItemPool.Add(((int)ItemList.Type.STACKABLE_MP, i));
