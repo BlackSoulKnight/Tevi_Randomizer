@@ -24,11 +24,11 @@ Thanatara Canyon:Heavens Valley:ITEM_LINEBOMB
 Thanatara Canyon:Morose Transit:DieMauerMussWeg
 Thanatara Canyon:Desert Base Entrance:
 Thanatara Canyon:Crafting:
-Thanatara Canyon:Item Craft:
+Thanatara Canyon:Item Upgrade:
 Thanatara Canyon:Memine All races:AllMemine
 Memine All::
 Crafting::
-Item Craft::
+Item Upgrade::
 Morose Transit:Moros City:
 Morose Transit:Thanatara Canyon:
 Oasis:Thanatara Canyon:

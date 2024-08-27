@@ -6361,7 +6361,7 @@
     },
     {
         "Itemname": "ITEM_Explorer",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6376,7 +6376,7 @@
     },
     {
         "Itemname": "ITEM_Explorer",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6391,7 +6391,7 @@
     },
     {
         "Itemname": "ITEM_KNIFE",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6402,7 +6402,7 @@
     },
     {
         "Itemname": "ITEM_KNIFE",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6413,7 +6413,7 @@
     },
     {
         "Itemname": "ITEM_ORB",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6424,7 +6424,7 @@
     },
     {
         "Itemname": "ITEM_ORB",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6435,7 +6435,7 @@
     },
     {
         "Itemname": "ITEM_RapidShots",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6446,7 +6446,7 @@
     },
     {
         "Itemname": "ITEM_RapidShots",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6457,7 +6457,7 @@
     },
     {
         "Itemname": "ITEM_AttackRange",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6468,7 +6468,7 @@
     },
     {
         "Itemname": "ITEM_AttackRange",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6479,7 +6479,7 @@
     },
     {
         "Itemname": "ITEM_EasyStyle",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6490,7 +6490,7 @@
     },
     {
         "Itemname": "ITEM_EasyStyle",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6501,7 +6501,7 @@
     },
     {
         "Itemname": "ITEM_LINEBOMB",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6512,7 +6512,7 @@
     },
     {
         "Itemname": "ITEM_LINEBOMB",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6523,7 +6523,7 @@
     },
     {
         "Itemname": "ITEM_AREABOMB",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6534,7 +6534,7 @@
     },
     {
         "Itemname": "ITEM_AREABOMB",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6545,7 +6545,7 @@
     },
     {
         "Itemname": "ITEM_SPEEDUP",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6556,7 +6556,7 @@
     },
     {
         "Itemname": "ITEM_SPEEDUP",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6567,7 +6567,7 @@
     },
     {
         "Itemname": "ITEM_AirDash",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6578,7 +6578,7 @@
     },
     {
         "Itemname": "ITEM_AirDash",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6589,7 +6589,7 @@
     },
     {
         "Itemname": "ITEM_WALLJUMP",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6600,7 +6600,7 @@
     },
     {
         "Itemname": "ITEM_WALLJUMP",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6611,7 +6611,7 @@
     },
     {
         "Itemname": "ITEM_JETPACK",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6622,7 +6622,7 @@
     },
     {
         "Itemname": "ITEM_JETPACK",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6633,7 +6633,7 @@
     },
     {
         "Itemname": "ITEM_BoostSystem",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6644,7 +6644,7 @@
     },
     {
         "Itemname": "ITEM_BoostSystem",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6655,7 +6655,7 @@
     },
     {
         "Itemname": "ITEM_OrbAmulet",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6666,7 +6666,7 @@
     },
     {
         "Itemname": "ITEM_OrbAmulet",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6677,7 +6677,7 @@
     },
     {
         "Itemname": "ITEM_BOMBFUEL",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6688,7 +6688,7 @@
     },
     {
         "Itemname": "ITEM_BOMBFUEL",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6699,7 +6699,7 @@
     },
     {
         "Itemname": "ITEM_BombLengthExtend",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6710,7 +6710,7 @@
     },
     {
         "Itemname": "ITEM_BombLengthExtend",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6721,7 +6721,7 @@
     },
     {
         "Itemname": "ITEM_MASK",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6732,7 +6732,7 @@
     },
     {
         "Itemname": "ITEM_MASK",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6743,7 +6743,7 @@
     },
     {
         "Itemname": "ITEM_TempRing",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6754,7 +6754,7 @@
     },
     {
         "Itemname": "ITEM_TempRing",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6765,7 +6765,7 @@
     },
     {
         "Itemname": "ITEM_DodgeShot",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6776,7 +6776,7 @@
     },
     {
         "Itemname": "ITEM_DodgeShot",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6787,7 +6787,7 @@
     },
     {
         "Itemname": "ITEM_Rotater",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6798,7 +6798,7 @@
     },
     {
         "Itemname": "ITEM_Rotater",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6809,7 +6809,7 @@
     },
     {
         "Itemname": "ITEM_GoldenGlove",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6820,7 +6820,7 @@
     },
     {
         "Itemname": "ITEM_GoldenGlove",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6831,7 +6831,7 @@
     },
     {
         "Itemname": "ITEM_OrbTypeC2",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 1,
         "Requirement": [
             {
@@ -6842,7 +6842,7 @@
     },
     {
         "Itemname": "ITEM_OrbTypeS2",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 1,
         "Requirement": [
             {
@@ -6853,7 +6853,7 @@
     },
     {
         "Itemname": "ITEM_OrbTypeC3",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 1,
         "Requirement": [
             {
@@ -6864,7 +6864,7 @@
     },
     {
         "Itemname": "ITEM_OrbTypeS3",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 1,
         "Requirement": [
             {
@@ -6875,7 +6875,7 @@
     },
     {
         "Itemname": "ITEM_OrbBoostU",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 1,
         "Requirement": [
             {
@@ -6886,7 +6886,7 @@
     },
     {
         "Itemname": "ITEM_OrbBoostD",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 1,
         "Requirement": [
             {

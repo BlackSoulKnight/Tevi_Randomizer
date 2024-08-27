@@ -4,7 +4,7 @@ Desert Base Upper Half
 Thanatara Canyon
 Memine All
 Crafting
-Item Craft
+Item Upgrade
 Morose Transit
 Oasis
 Moros City
