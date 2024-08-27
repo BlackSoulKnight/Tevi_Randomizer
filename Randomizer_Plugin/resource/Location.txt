@@ -267,12 +267,12 @@ STACKABLE_HP:Catacombs Main:16:,0
 STACKABLE_MP:Catacombs Main:19:,0
 STACKABLE_HP:Catacombs Main:19:ITEM_LINEBOMB,0
 BADGE_DoubleDispelLineBombHigh:Catacombs Main:1:,0
-STACKABLE_MP:Vassago fight:21:ITEM_AREABOMB && ITEM_LINEBOMB,0
-BADGE_QuickDropDouble:Vassago fight:1:ITEM_LINEBOMB,0
-BADGE_CrystalAttack:Vassago fight:1:ITEM_LINEBOMB,0
-BADGE_AntiAir:Vassago fight:1:ITEM_LINEBOMB && ITEM_SLIDE,0;ITEM_LINEBOMB && ChargeShot,0
-BADGE_InstantDodgeMeter:Vassago fight:1:ITEM_LINEBOMB,0
-STACKABLE_COG:Vassago fight:63:Boss,0
+STACKABLE_MP:Catacombs Inner:21:ITEM_AREABOMB && ITEM_LINEBOMB,0
+BADGE_QuickDropDouble:Catacombs Inner:1:ITEM_LINEBOMB,0
+BADGE_CrystalAttack:Catacombs Inner:1:ITEM_LINEBOMB,0
+BADGE_AntiAir:Catacombs Inner:1:ITEM_LINEBOMB && ITEM_SLIDE,0;ITEM_LINEBOMB && ChargeShot,0
+BADGE_InstantDodgeMeter:Catacombs Inner:1:ITEM_LINEBOMB,0
+STACKABLE_COG:Catacombs Inner:63:Boss,0
 STACKABLE_MATK:Lab:18:ITEM_BombLengthExtend3 && ITEM_LINEBOMB,0
 BADGE_DodgeEPBoost:Lab:18:,0
 STACKABLE_RATK:Lab Part 2:17:ITEM_SLIDE,0

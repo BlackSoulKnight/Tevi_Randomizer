@@ -1690,19 +1690,19 @@
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "Vassago fight",
+                    "Exit": "Catacombs Inner",
                     "Method": "ITEM_DOUBLEJUMP"
                 },
                 {
-                    "Exit": "Vassago fight",
+                    "Exit": "Catacombs Inner",
                     "Method": "ITEM_JETPACK2"
                 },
                 {
-                    "Exit": "Vassago fight",
+                    "Exit": "Catacombs Inner",
                     "Method": "ITEM_JETPACK && ITEM_HIJUMP"
                 },
                 {
-                    "Exit": "Vassago fight",
+                    "Exit": "Catacombs Inner",
                     "Method": "ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash"
                 },
                 {
@@ -1712,7 +1712,7 @@
             ]
         },
         {
-            "Name": "Vassago fight",
+            "Name": "Catacombs Inner",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",

@@ -178,12 +178,12 @@ Catacombs Entrance:Catacombs Main:ITEM_DOUBLEJUMP
 Catacombs Entrance:Catacombs Main:ITEM_JETPACK
 Catacombs Entrance:Tartarus:
 Catacombs Main:Catacombs Entrance:ITEM_LINEBOMB
-Catacombs Main:Vassago fight:ITEM_DOUBLEJUMP
-Catacombs Main:Vassago fight:ITEM_JETPACK2
-Catacombs Main:Vassago fight:ITEM_JETPACK && ITEM_HIJUMP
-Catacombs Main:Vassago fight:ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash
+Catacombs Main:Catacombs Inner:ITEM_DOUBLEJUMP
+Catacombs Main:Catacombs Inner:ITEM_JETPACK2
+Catacombs Main:Catacombs Inner:ITEM_JETPACK && ITEM_HIJUMP
+Catacombs Main:Catacombs Inner:ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash
 Catacombs Main:Lab:ITEM_LINEBOMB
-Vassago fight:Lab Part 2:ITEM_LINEBOMB
+Catacombs Inner:Lab Part 2:ITEM_LINEBOMB
 Lab:Lab Part 2:ITEM_LINEBOMB
 Lab Part 2:Catacombs Entrance:ITEM_LINEBOMB
 Lab Part 2:Lab - Verdazure Swamp Connection:ITEM_BombLengthExtend3 && ITEM_LINEBOMB

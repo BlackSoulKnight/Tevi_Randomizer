@@ -3220,7 +3220,7 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Vassago fight",
+        "Location": "Catacombs Inner",
         "slotId": 21,
         "Requirement": [
             {
@@ -3231,7 +3231,7 @@
     },
     {
         "Itemname": "BADGE_QuickDropDouble",
-        "Location": "Vassago fight",
+        "Location": "Catacombs Inner",
         "slotId": 1,
         "Requirement": [
             {
@@ -3242,7 +3242,7 @@
     },
     {
         "Itemname": "BADGE_CrystalAttack",
-        "Location": "Vassago fight",
+        "Location": "Catacombs Inner",
         "slotId": 1,
         "Requirement": [
             {
@@ -3253,7 +3253,7 @@
     },
     {
         "Itemname": "BADGE_AntiAir",
-        "Location": "Vassago fight",
+        "Location": "Catacombs Inner",
         "slotId": 1,
         "Requirement": [
             {
@@ -3268,7 +3268,7 @@
     },
     {
         "Itemname": "BADGE_InstantDodgeMeter",
-        "Location": "Vassago fight",
+        "Location": "Catacombs Inner",
         "slotId": 1,
         "Requirement": [
             {
@@ -3279,7 +3279,7 @@
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "Vassago fight",
+        "Location": "Catacombs Inner",
         "slotId": 63,
         "Requirement": [
             {
