@@ -26,7 +26,7 @@ namespace TeviRandomizer
             }
         }
 
-        static public bool craftingManaShardSwitch = false;
+        static public bool vanillaItemCraft = false;
         private class Requirement
         {
             public string Method;
@@ -105,7 +105,7 @@ namespace TeviRandomizer
                             }
                         }
 
-                        if (item.Contains("Upgrade") && itemList.Contains("ITEM_LINEBOMB")  && (craftingManaShardSwitch || (checkMovementItems(itemList) ) )) continue;
+                        if (item.Contains("Upgrade") && itemList.Contains("ITEM_LINEBOMB")  && (vanillaItemCraft || (checkMovementItems(itemList) ) )) continue;
 
                         if (item.Contains("Core") && itemList.Contains("ITEM_LINEBOMB")  && itemList.Contains("ITEM_AREABOMB") && checkMovementItems(itemList) && itemList.Contains("ITEM_BombLengthExtend")) continue;
 
@@ -381,7 +381,7 @@ namespace TeviRandomizer
                             case "NormalItemCraft":
                                 if (((UnityEngine.UI.Toggle)option.Value).isOn)
                                 {
-                                    craftingManaShardSwitch = true;
+                                    vanillaItemCraft = true;
                                     foreach (var item in Enum.GetValues(typeof(Upgradable)))
                                     {
                                         ItemList.Type t = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), item.ToString());
@@ -393,7 +393,7 @@ namespace TeviRandomizer
                                         tmpItemPool.Remove(((int)t, 3));
                                     }
                                 }
-                                else craftingManaShardSwitch = false;
+                                else vanillaItemCraft = false;
                                 break;
                             case "Ceble":
                                 if (((UnityEngine.UI.Toggle)option.Value).isOn)
@@ -575,6 +575,8 @@ namespace TeviRandomizer
         List<Area> areaList;
         private bool validate()
         {
+            int currHint = 0;
+            int currBackHint = 1;
             areaList = [areas.Find(x => x.Name == "Thanatara Canyon")];
             if(areaList.Count == 0)
             {
@@ -652,6 +654,23 @@ namespace TeviRandomizer
                         {
                             itemList.Add(item);
                         }
+
+                        //Add major Item to Hint List
+                        if(Enum.IsDefined(typeof(MajorItemFlag), item) && currHint < HintSystem.numberOfHints)
+                        {
+                            if (vanillaItemCraft &&  loc.Loaction.Contains("Upgrade"))
+                            {
+
+                                    HintSystem.hintList[HintSystem.hintList.Length - currBackHint] = (loc.Loaction, item, (byte)loc.newSlotId);
+                                    currBackHint++;
+                            }
+                            else
+                            {
+                                HintSystem.hintList[currHint] = (loc.Loaction, item, (byte)loc.newSlotId);
+                                currHint++;
+                            }
+                        }
+
                         locations.Remove(loc);
                     }
                 }

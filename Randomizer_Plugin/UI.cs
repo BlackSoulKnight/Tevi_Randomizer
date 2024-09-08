@@ -206,14 +206,9 @@ namespace TeviRandomizer
             g.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate {
                 RandomizerPlugin.customDiff = -1;
                 string input = ((TMP_InputField)UI.settings["Seed"]).text;
-                if (input == "")
-                {
-                    RandomizerPlugin.seed = 0;
-                }
-                else
-                {
-                    RandomizerPlugin.seed = input.GetHashCode();
-                }
+
+                RandomizerPlugin.seed = input;
+                
                 RandomizerPlugin.createSeed();
             });
             Randomizer.settings = UI.settings;

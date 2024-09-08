@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using HarmonyLib;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UIElements;
 
 namespace TeviRandomizer
@@ -27,7 +28,8 @@ namespace TeviRandomizer
 
 
         // Custom chat need to replace certain strings parts
-        private const int numberOfHints = 24;
+        public const int numberOfHints = 24;
+        public static (string,string,byte)[] hintList = new (string,string,byte)[numberOfHints];
 
         static List<ChatSystem.ChatRow> extraList = new List<ChatSystem.ChatRow>();
 
@@ -78,7 +80,7 @@ namespace TeviRandomizer
             int a = (int)(RandomizerPlugin.__itemData.Count*0.75f * (float)(1f / numberOfHints));
             int nextHint = a  - (collected % a);
             bool[] order = new bool[hints.Count];
-            System.Random rand = new System.Random(RandomizerPlugin.seed);
+            System.Random rand = new System.Random(RandomizerPlugin.seed.GetHashCode());
             for (int i = 0; i < Math.Floor((double)collected / a); i++)
             {
 
@@ -86,18 +88,13 @@ namespace TeviRandomizer
                     if(extraList.Count == 0) extraList.Add(createChatRow(section, $"No more Hints left.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
                     return;
                 };
-
-                int curr = rand.Next(hints.Count);
-                while (order[curr])
+                if (!RandomizerPlugin.checkItemGot((ItemList.Type)Enum.Parse(typeof(ItemList.Type), hintList[i].Item2), hintList[i].Item3))
                 {
-                    curr = rand.Next(hints.Count);
+                    string localizeItem = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + hintList[i].Item2, false);
+                    extraList.Add(createChatRow(section, $"You may find {localizeItem} in {hintList[i].Item1}.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
                 }
-                order[curr] = true;
-
-                if (hints[curr].Item3) continue;
-                string localizeItem =Localize.GetLocalizeTextWithKeyword("ITEMNAME." + hints[curr].Item2, false);
-                extraList.Add(createChatRow(section, $"You may find {localizeItem} in {hints[curr].Item1}.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
             }
+
             extraList.Add(createChatRow(section,$"The next Hint is in {nextHint} Items available.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
 
 

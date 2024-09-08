@@ -118,7 +118,7 @@ namespace TeviRandomizer
         static public int[] extraPotions = [0, 0]; // Hardcoded omo
         static public int GoMode = -1;
         static public string pluginPath = BepInEx.Paths.PluginPath + "/tevi_randomizer/";
-        static public int seed;
+        static public string seed;
 
 
         static public Randomizer randomizer;
@@ -340,11 +340,11 @@ namespace TeviRandomizer
         static public void createSeed()
         {
             System.Random rando;
-            if (seed == 0)
+            if (seed == "")
             {
-                seed = new System.Random().Next(int.MaxValue);
+                seed = new System.Random().Next(int.MaxValue).ToString();
             }
-            rando = new System.Random(seed);
+            rando = new System.Random(seed.GetHashCode());
 
             randomizer.createSeed(rando);
         }
@@ -3387,11 +3387,15 @@ namespace TeviRandomizer
                 }
                 if (eS3File.KeyExists("Seed"))
                 {
-                    RandomizerPlugin.seed = eS3File.Load<int>("Seed");
+                    RandomizerPlugin.seed = eS3File.Load<string>("Seed");
                 }                
                 if (eS3File.KeyExists("GoMode"))
                 {
                     RandomizerPlugin.GoMode = eS3File.Load<int>("GoMode");
+                }
+                if (eS3File.KeyExists("HintList"))
+                {
+                    HintSystem.hintList = eS3File.Load<(string, string,byte)[]>("HintList");
                 }
 
             }
@@ -3443,6 +3447,7 @@ namespace TeviRandomizer
             eS3File.Save("RandoValSlot", valSlot);
             eS3File.Save("CustomDifficulty", RandomizerPlugin.customDiff);
             eS3File.Save("Seed", RandomizerPlugin.seed);
+            eS3File.Save("HintList", HintSystem.hintList);
             eS3File.Save("GoMode", RandomizerPlugin.GoMode);
             eS3File.Sync();
             Randomizer.saveSpoilerLog($"rando.SpoilerSave{saveslot}.txt", s);
