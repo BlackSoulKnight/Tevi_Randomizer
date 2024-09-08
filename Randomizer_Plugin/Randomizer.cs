@@ -194,6 +194,7 @@ namespace TeviRandomizer
         }
 
         private List<(int, int)> itemPool;
+        private List<(int, int)> extraItemPool;
         private List<Location> locations;
         private Dictionary<string, Location> locationString;
         private List<Area> areas;
@@ -243,8 +244,14 @@ namespace TeviRandomizer
                     Debug.LogWarning($"Could not find {para[1]} to place {para[0]}");
                 }
             }
-            //ExtraOptionLocations();
-
+            extraItemPool = new List<(int, int)>();
+            for (int i = 63; i > 35; i--)
+            {
+                extraItemPool.Add(((int)ItemList.Type.STACKABLE_EP, i));
+                extraItemPool.Add(((int)ItemList.Type.STACKABLE_MP, i));
+                extraItemPool.Add(((int)ItemList.Type.STACKABLE_HP, i));
+                extraItemPool.Add(((int)ItemList.Type.STACKABLE_SHARD, i));
+            }
 
         }
 
@@ -255,21 +262,8 @@ namespace TeviRandomizer
             return val;
         }
 
-        private void ExtraOptionLocations()
-        {
-            Location loc;
-            loc = new Location(4006, "", 0, "", "Extra Range Potion");
-            locations.Add(loc);
-            locationString.Add("ExtraRangePotion", loc);
-            loc = new Location(4005, "", 0, "", "Extra Melee Potion");
-            locations.Add(loc);
-            locationString.Add("ExtraMeleePotion", loc);
-            loc = new Location(4200, "", 0, "", "Lv3Compass");
-            locations.Add(loc);
-            locationString.Add("Lv3Compass", loc);
 
-        }
-        private void CustomOptions(List<(int, int)> placeditems, List<Location> locationPool)
+        private void CustomOptions(List<(int, int)> tmpItemPool, List<Location> locationPool,System.Random seed)
         {
             foreach (var option in settings)
             {
@@ -284,7 +278,7 @@ namespace TeviRandomizer
                                 {
                                     locationString["ITEM_KNIFE1"].setNewItem(ItemList.Type.ITEM_KNIFE, 4);
                                     locationPool.Remove(locationPool.Find(x => x.itemId == (int)ItemList.Type.ITEM_KNIFE && x.slotId == 1));
-                                    placeditems.Remove(((int)ItemList.Type.ITEM_KNIFE, 1));
+                                    tmpItemPool.Remove(((int)ItemList.Type.ITEM_KNIFE, 1));
                                 }
                                 break;
                             case "Orb":
@@ -292,7 +286,7 @@ namespace TeviRandomizer
                                 {
                                     locationString["ITEM_ORB1"].setNewItem(ItemList.Type.ITEM_ORB, 4);
                                     locationPool.Remove(locationPool.Find(x => x.itemId == (int)ItemList.Type.ITEM_ORB && x.slotId == 1));
-                                    placeditems.Remove(((int)ItemList.Type.ITEM_ORB, 1));
+                                    tmpItemPool.Remove(((int)ItemList.Type.ITEM_ORB, 1));
                                 }
 
                                 break;
@@ -327,8 +321,8 @@ namespace TeviRandomizer
                                         locationString[t + "3"].setNewItem(t, 6);
                                         locationPool.Remove(locationPool.Find(x => x.itemId == (int)t && x.slotId == 2));
                                         locationPool.Remove(locationPool.Find(x => x.itemId == (int)t && x.slotId == 3));
-                                        placeditems.Remove(((int)t, 2));
-                                        placeditems.Remove(((int)t, 3));
+                                        tmpItemPool.Remove(((int)t, 2));
+                                        tmpItemPool.Remove(((int)t, 3));
                                     }
                                 }
                                 else craftingManaShardSwitch = false;
@@ -351,14 +345,34 @@ namespace TeviRandomizer
                         {
                             case "RangePot":
                                 RandomizerPlugin.extraPotions[0] = (int)((UnityEngine.UI.Slider)option.Value).value;
-                                //locationString["ExtraRangePotion"].setNewItem(4006, (int)((UnityEngine.UI.Slider)option.Value).value);
                                 break;
                             case "MeleePot":
                                 RandomizerPlugin.extraPotions[1] = (int)((UnityEngine.UI.Slider)option.Value).value;
-                                //locationString["ExtraMeleePotion"].setNewItem(4005, (int)((UnityEngine.UI.Slider)option.Value).value);
                                 break;
+                            case "GearReq":
+                                RandomizerPlugin.GoMode = (int)((UnityEngine.UI.Slider) option.Value).value;
+                                break;
+                            case "GearMax":
 
-                            default: break;
+                                int max = Math.Max((int)((UnityEngine.UI.Slider)option.Value).value, RandomizerPlugin.GoMode);
+
+                                int gearPos = 0;
+                                int newItemPos = 0;
+                                List<(int,int)> tmpExtra = new List<(int,int)>();
+                                tmpExtra.CopyFrom(extraItemPool);
+                                for (int i = max; i < 25 ; i++)
+                                {
+                                    while (!tmpItemPool.Contains(((int)ItemList.Type.STACKABLE_COG, gearPos))){
+                                        gearPos++;
+                                    }
+                                    tmpItemPool.Remove(((int)ItemList.Type.STACKABLE_COG, gearPos));
+                                    newItemPos = seed.Next(tmpExtra.Count);
+                                    tmpItemPool.Add(tmpExtra[newItemPos]);
+                                    tmpExtra.RemoveAt(newItemPos);
+                                }
+                                break;
+                            default: 
+                                break;
 
                         }
                         break;
@@ -375,8 +389,8 @@ namespace TeviRandomizer
             await Task.Run(() =>
             {
                 int debugVal = 0;
-                List<(int, int)> placeditems;
-                placeditems = new List<(int, int)>();
+                List<(int, int)> tmpItemPool;
+                tmpItemPool = new List<(int, int)>();
                 List<Location> locationPool = new List<Location>();
 
                 if (seed == null) seed = new System.Random();
@@ -390,16 +404,16 @@ namespace TeviRandomizer
 
                     bossCount = 0;
                     memineCount = 0;
-                    placeditems.Clear();
-                    placeditems.CopyFrom(itemPool);
+                    tmpItemPool.Clear();
+                    tmpItemPool.CopyFrom(itemPool);
 
-                    CustomOptions(placeditems, locationPool);                 //Extra stuff
+                    CustomOptions(tmpItemPool, locationPool,seed);                 //Extra stuff
 
                     while (locationPool.Count > 0)
                     {
                         int pos = seed.Next(locationPool.Count);
                         Location loc = locationPool[pos];
-                        (int, int) item = createItem(seed, placeditems);
+                        (int, int) item = createItem(seed, tmpItemPool);
                         locationString[loc.Itemname + loc.slotId.ToString()].newSlotId = item.Item2;
                         locationString[loc.Itemname + loc.slotId.ToString()].newItem = item.Item1;
                         locationPool.Remove(loc);
@@ -434,7 +448,7 @@ namespace TeviRandomizer
                 placeditems.Clear();
                 placeditems.CopyFrom(itemPool);
 
-                CustomOptions(placeditems, locationPool);                 //Extra stuff
+                CustomOptions(placeditems, locationPool, seed);                 //Extra stuff
 
                 while (locationPool.Count > 0)
                 {
@@ -575,27 +589,27 @@ namespace TeviRandomizer
                 }
             }
             //Check if its beatable
-            Debug.LogWarning("CheckIn");
-            if (itemList.FindAll(x => x == "STACKABLE_COG").Count > 11)
+            if (itemList.FindAll(x => x == "STACKABLE_COG").Count > Math.Floor((float)RandomizerPlugin.GoMode / 2f))
             {
-                if(areaList.Count != areas.Count)
+                Debug.LogWarning("CheckIn");
+                if (areaList.Count != areas.Count)
                 {
-                    foreach(Area ar in areaList)
+                    foreach (Area ar in areaList)
                     {
                         bool f = false;
                         foreach (Area a in areas)
                         {
-                            if(a.Name == ar.Name) { f= true; break; }
+                            if (a.Name == ar.Name) { f = true; break; }
                         }
                         if (!f) { Debug.LogError($"{ar.Name} Not IN LIST"); }
                     }
-                    
+
                 }
                 bool flag = false;
                 foreach (Location loc in locations)
                 {
                     flag |= !loc.debugIsReachAble(itemList);
-                    
+
                 }
                 if (flag)
                     return false;
@@ -604,7 +618,6 @@ namespace TeviRandomizer
                 {
                     entrance.debugCheckEntrance(itemList);
                 }
-
             }
             return goalCheck(itemList, areaList);
 
@@ -612,7 +625,7 @@ namespace TeviRandomizer
         private bool goalCheck(List<string> itemList, List<Area> areaList)
         {
             int gears = itemList.FindAll(x => x == "STACKABLE_COG").Count;
-            if (gears < 16)
+            if (gears < RandomizerPlugin.GoMode)
             {
                 Debug.Log($"Not Enough Gears in the run. Found {gears}");
                 return false;

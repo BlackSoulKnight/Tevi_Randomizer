@@ -1050,6 +1050,61 @@
         ]
     },
     {
+        "Itemname": "Useable_WaffleAHoneycloud",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 300",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Useable_WaffleBMeringue",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 300 && Chapter 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Useable_WaffleCMorning",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 300 && Chapter 4",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Useable_WaffleDJellydrop",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 300 && Chapter 5",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Useable_WaffleElueberry",
+        "Location": "Moros City",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 300 && Chapter 6",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "BADGE_StyleComboBackflipBomb",
         "Location": "Travoll Industrie",
         "slotId": 1,
@@ -2481,7 +2536,7 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "LavaWorld",
+        "Location": "Magma Pits",
         "slotId": 26,
         "Requirement": [
             {
@@ -2492,7 +2547,7 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "LavaWorld",
+        "Location": "Magma Pits",
         "slotId": 11,
         "Requirement": [
             {
@@ -2503,7 +2558,7 @@
     },
     {
         "Itemname": "BADGE_AmuletQuicken",
-        "Location": "LavaWorld",
+        "Location": "Magma Pits",
         "slotId": 1,
         "Requirement": [
             {
@@ -2514,7 +2569,7 @@
     },
     {
         "Itemname": "ITEM_JETPACK",
-        "Location": "LavaWorld",
+        "Location": "Magma Pits",
         "slotId": 1,
         "Requirement": [
             {
@@ -2525,7 +2580,7 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "LavaWorld",
+        "Location": "Magma Pits",
         "slotId": 11,
         "Requirement": [
             {
@@ -2536,7 +2591,7 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "LavaWorld",
+        "Location": "Magma Pits",
         "slotId": 11,
         "Requirement": [
             {
@@ -2547,7 +2602,7 @@
     },
     {
         "Itemname": "BADGE_EPCombo",
-        "Location": "LavaWorld Part 2",
+        "Location": "Magma Depths",
         "slotId": 1,
         "Requirement": [
             {
@@ -2558,7 +2613,7 @@
     },
     {
         "Itemname": "BADGE_ArrowDamageUp",
-        "Location": "LavaWorld Part 2",
+        "Location": "Magma Depths",
         "slotId": 1,
         "Requirement": [
             {
@@ -2569,7 +2624,7 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "LavaWorld Part 2",
+        "Location": "Magma Depths",
         "slotId": 11,
         "Requirement": [
             {
@@ -2580,7 +2635,7 @@
     },
     {
         "Itemname": "BADGE_1HealthTypeC",
-        "Location": "LavaWorld Part 2",
+        "Location": "Magma Depths",
         "slotId": 1,
         "Requirement": [
             {
@@ -2591,7 +2646,7 @@
     },
     {
         "Itemname": "BADGE_AntiGround",
-        "Location": "LavaWorld Part 2",
+        "Location": "Magma Depths",
         "slotId": 1,
         "Requirement": [
             {
@@ -2602,18 +2657,18 @@
     },
     {
         "Itemname": "BADGE_HitMP",
-        "Location": "LavaWorld Part 2",
+        "Location": "Magma Depths",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "LavaWorld Part 2",
+        "Location": "Magma Depths",
         "slotId": 4,
         "Requirement": [
             {
@@ -2628,7 +2683,7 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "LavaWorld Part 2",
+        "Location": "Magma Depths",
         "slotId": 21,
         "Requirement": [
             {
@@ -2639,7 +2694,7 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "LavaWorld Part 2",
+        "Location": "Magma Depths",
         "slotId": 20,
         "Requirement": [
             {
@@ -2654,7 +2709,7 @@
     },
     {
         "Itemname": "BADGE_DoubleGroundNormal3N2",
-        "Location": "LavaWorld Part 2",
+        "Location": "Magma Depths",
         "slotId": 1,
         "Requirement": [
             {
@@ -3110,7 +3165,7 @@
     },
     {
         "Itemname": "BADGE_WeakAirDownFreqUpA",
-        "Location": "Catacombs Entrance",
+        "Location": "Catacombs Main",
         "slotId": 1,
         "Requirement": [
             {
@@ -3121,7 +3176,7 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Catacombs Entrance",
+        "Location": "Catacombs Main",
         "slotId": 16,
         "Requirement": [
             {
@@ -3132,7 +3187,7 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Catacombs Entrance",
+        "Location": "Catacombs Main",
         "slotId": 19,
         "Requirement": [
             {
@@ -3143,7 +3198,7 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Catacombs Entrance",
+        "Location": "Catacombs Main",
         "slotId": 19,
         "Requirement": [
             {
@@ -3154,7 +3209,7 @@
     },
     {
         "Itemname": "BADGE_DoubleDispelLineBombHigh",
-        "Location": "Catacombs Entrance",
+        "Location": "Catacombs Main",
         "slotId": 1,
         "Requirement": [
             {
@@ -3165,7 +3220,7 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Vassago fight",
+        "Location": "Catacombs Inner",
         "slotId": 21,
         "Requirement": [
             {
@@ -3176,7 +3231,7 @@
     },
     {
         "Itemname": "BADGE_QuickDropDouble",
-        "Location": "Vassago fight",
+        "Location": "Catacombs Inner",
         "slotId": 1,
         "Requirement": [
             {
@@ -3187,7 +3242,7 @@
     },
     {
         "Itemname": "BADGE_CrystalAttack",
-        "Location": "Vassago fight",
+        "Location": "Catacombs Inner",
         "slotId": 1,
         "Requirement": [
             {
@@ -3198,7 +3253,7 @@
     },
     {
         "Itemname": "BADGE_AntiAir",
-        "Location": "Vassago fight",
+        "Location": "Catacombs Inner",
         "slotId": 1,
         "Requirement": [
             {
@@ -3213,7 +3268,7 @@
     },
     {
         "Itemname": "BADGE_InstantDodgeMeter",
-        "Location": "Vassago fight",
+        "Location": "Catacombs Inner",
         "slotId": 1,
         "Requirement": [
             {
@@ -3224,7 +3279,7 @@
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "Vassago fight",
+        "Location": "Catacombs Inner",
         "slotId": 63,
         "Requirement": [
             {
@@ -5678,6 +5733,61 @@
         ]
     },
     {
+        "Itemname": "Useable_VenaBombSmall",
+        "Location": "Vena Shop",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 99999",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Useable_VenaBombBig",
+        "Location": "Vena Shop",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 99999 && Chapter 4",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Useable_VenaBombBunBun",
+        "Location": "Vena Shop",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 99999 && Chapter 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Useable_VenaBombDispel",
+        "Location": "Vena Shop",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 99999 && Chapter 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Useable_VenaBombHealBlock",
+        "Location": "Vena Shop",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 99999 && Chapter 5",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "BADGE_DoubleAirDash",
         "Location": "Memine All",
         "slotId": 1,
@@ -6251,7 +6361,7 @@
     },
     {
         "Itemname": "ITEM_Explorer",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6266,7 +6376,7 @@
     },
     {
         "Itemname": "ITEM_Explorer",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6281,7 +6391,7 @@
     },
     {
         "Itemname": "ITEM_KNIFE",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6292,7 +6402,7 @@
     },
     {
         "Itemname": "ITEM_KNIFE",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6303,7 +6413,7 @@
     },
     {
         "Itemname": "ITEM_ORB",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6314,7 +6424,7 @@
     },
     {
         "Itemname": "ITEM_ORB",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6325,7 +6435,7 @@
     },
     {
         "Itemname": "ITEM_RapidShots",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6336,7 +6446,7 @@
     },
     {
         "Itemname": "ITEM_RapidShots",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6347,7 +6457,7 @@
     },
     {
         "Itemname": "ITEM_AttackRange",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6358,7 +6468,7 @@
     },
     {
         "Itemname": "ITEM_AttackRange",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6369,7 +6479,7 @@
     },
     {
         "Itemname": "ITEM_EasyStyle",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6380,7 +6490,7 @@
     },
     {
         "Itemname": "ITEM_EasyStyle",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6391,7 +6501,7 @@
     },
     {
         "Itemname": "ITEM_LINEBOMB",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6402,7 +6512,7 @@
     },
     {
         "Itemname": "ITEM_LINEBOMB",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6413,7 +6523,7 @@
     },
     {
         "Itemname": "ITEM_AREABOMB",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6424,7 +6534,7 @@
     },
     {
         "Itemname": "ITEM_AREABOMB",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6435,7 +6545,7 @@
     },
     {
         "Itemname": "ITEM_SPEEDUP",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6446,7 +6556,7 @@
     },
     {
         "Itemname": "ITEM_SPEEDUP",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6457,7 +6567,7 @@
     },
     {
         "Itemname": "ITEM_AirDash",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6468,7 +6578,7 @@
     },
     {
         "Itemname": "ITEM_AirDash",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6479,7 +6589,7 @@
     },
     {
         "Itemname": "ITEM_WALLJUMP",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6490,7 +6600,7 @@
     },
     {
         "Itemname": "ITEM_WALLJUMP",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6501,7 +6611,7 @@
     },
     {
         "Itemname": "ITEM_JETPACK",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6512,7 +6622,7 @@
     },
     {
         "Itemname": "ITEM_JETPACK",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6523,7 +6633,7 @@
     },
     {
         "Itemname": "ITEM_BoostSystem",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6534,7 +6644,7 @@
     },
     {
         "Itemname": "ITEM_BoostSystem",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6545,7 +6655,7 @@
     },
     {
         "Itemname": "ITEM_OrbAmulet",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6556,7 +6666,7 @@
     },
     {
         "Itemname": "ITEM_OrbAmulet",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6567,7 +6677,7 @@
     },
     {
         "Itemname": "ITEM_BOMBFUEL",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6578,7 +6688,7 @@
     },
     {
         "Itemname": "ITEM_BOMBFUEL",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6589,7 +6699,7 @@
     },
     {
         "Itemname": "ITEM_BombLengthExtend",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6600,7 +6710,7 @@
     },
     {
         "Itemname": "ITEM_BombLengthExtend",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6611,7 +6721,7 @@
     },
     {
         "Itemname": "ITEM_MASK",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6622,7 +6732,7 @@
     },
     {
         "Itemname": "ITEM_MASK",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6633,7 +6743,7 @@
     },
     {
         "Itemname": "ITEM_TempRing",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6644,7 +6754,7 @@
     },
     {
         "Itemname": "ITEM_TempRing",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6655,7 +6765,7 @@
     },
     {
         "Itemname": "ITEM_DodgeShot",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6666,7 +6776,7 @@
     },
     {
         "Itemname": "ITEM_DodgeShot",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6677,7 +6787,7 @@
     },
     {
         "Itemname": "ITEM_Rotater",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6688,7 +6798,7 @@
     },
     {
         "Itemname": "ITEM_Rotater",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6699,7 +6809,7 @@
     },
     {
         "Itemname": "ITEM_GoldenGlove",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 2,
         "Requirement": [
             {
@@ -6710,7 +6820,7 @@
     },
     {
         "Itemname": "ITEM_GoldenGlove",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 3,
         "Requirement": [
             {
@@ -6721,7 +6831,7 @@
     },
     {
         "Itemname": "ITEM_OrbTypeC2",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 1,
         "Requirement": [
             {
@@ -6732,7 +6842,7 @@
     },
     {
         "Itemname": "ITEM_OrbTypeS2",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 1,
         "Requirement": [
             {
@@ -6743,7 +6853,7 @@
     },
     {
         "Itemname": "ITEM_OrbTypeC3",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 1,
         "Requirement": [
             {
@@ -6754,7 +6864,7 @@
     },
     {
         "Itemname": "ITEM_OrbTypeS3",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 1,
         "Requirement": [
             {
@@ -6765,7 +6875,7 @@
     },
     {
         "Itemname": "ITEM_OrbBoostU",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 1,
         "Requirement": [
             {
@@ -6776,7 +6886,7 @@
     },
     {
         "Itemname": "ITEM_OrbBoostD",
-        "Location": "Item Craft",
+        "Location": "Item Upgrade",
         "slotId": 1,
         "Requirement": [
             {

@@ -88,6 +88,11 @@ STACKABLE_EP:Moros City:30:Coins 3000,0
 STACKABLE_MATK:Moros City:30:Coins 3000,0
 STACKABLE_RATK:Moros City:30:Coins 3000,0
 STACKABLE_SHARD:Moros City:30:Coins 5000 && Chapter 6,0
+Useable_WaffleAHoneycloud:Moros City:1:Coins 300,0
+Useable_WaffleBMeringue:Moros City:1:Coins 300 && Chapter 3,0
+Useable_WaffleCMorning:Moros City:1:Coins 300 && Chapter 4,0
+Useable_WaffleDJellydrop:Moros City:1:Coins 300 && Chapter 5,0
+Useable_WaffleElueberry:Moros City:1:Coins 300 && Chapter 6,0
 BADGE_StyleComboBackflipBomb:Travoll Industrie:1:ITEM_SLIDE && ITEM_WALLJUMP && ITEM_AirDash,0;ITEM_SLIDE && ITEM_WALLJUMP && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_WALLJUMP && ITEM_DOUBLEJUMP,0
 STACKABLE_EP:Travoll Industrie:14:ITEM_AREABOMB && ITEM_LINEBOMB,0
 STACKABLE_HP:Travoll Industrie:2:ITEM_LINEBOMB,0
@@ -217,7 +222,7 @@ BADGE_ArrowDamageUp:LavaWorld Part 2:1:ITEM_AirSlide && ITEM_SLIDE,0
 STACKABLE_RATK:LavaWorld Part 2:11:,0
 BADGE_1HealthTypeC:LavaWorld Part 2:1:ChargeShot,0
 BADGE_AntiGround:LavaWorld Part 2:1:ITEM_Rotater && ITEM_AirSlide && ITEM_SLIDE,0
-BADGE_HitMP:LavaWorld Part 2:1:ITEM_SLIDE,0
+BADGE_HitMP:LavaWorld Part 2:1:ITEM_SLIDE && ITEM_LINEBOMB,0
 STACKABLE_COG:LavaWorld Part 2:4:ITEM_AirSlide && ITEM_SLIDE,0;ITEM_BombLengthExtend && ITEM_LINEBOMB && ITEM_SLIDE,0
 STACKABLE_EP:LavaWorld Part 2:21:ITEM_BombLengthExtend && ITEM_LINEBOMB && ITEM_SLIDE,0
 STACKABLE_MATK:LavaWorld Part 2:20:ITEM_SLIDE && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_DOUBLEJUMP,0
@@ -257,17 +262,17 @@ STACKABLE_MATK:Tartarus:32:Coins 4000,0
 STACKABLE_MP:Tartarus:32:Coins 4000,0
 STACKABLE_RATK:Tartarus:32:Coins 4000,0
 STACKABLE_SHARD:Tartarus:32:Coins 5000 && Chapter 6,0
-BADGE_WeakAirDownFreqUpA:Catacombs Entrance:1:,0
-STACKABLE_HP:Catacombs Entrance:16:,0
-STACKABLE_MP:Catacombs Entrance:19:,0
-STACKABLE_HP:Catacombs Entrance:19:ITEM_LINEBOMB,0
-BADGE_DoubleDispelLineBombHigh:Catacombs Entrance:1:,0
-STACKABLE_MP:Vassago fight:21:ITEM_AREABOMB && ITEM_LINEBOMB,0
-BADGE_QuickDropDouble:Vassago fight:1:ITEM_LINEBOMB,0
-BADGE_CrystalAttack:Vassago fight:1:ITEM_LINEBOMB,0
-BADGE_AntiAir:Vassago fight:1:ITEM_LINEBOMB && ITEM_SLIDE,0;ITEM_LINEBOMB && ChargeShot,0
-BADGE_InstantDodgeMeter:Vassago fight:1:ITEM_LINEBOMB,0
-STACKABLE_COG:Vassago fight:63:Boss,0
+BADGE_WeakAirDownFreqUpA:Catacombs Main:1:,0
+STACKABLE_HP:Catacombs Main:16:,0
+STACKABLE_MP:Catacombs Main:19:,0
+STACKABLE_HP:Catacombs Main:19:ITEM_LINEBOMB,0
+BADGE_DoubleDispelLineBombHigh:Catacombs Main:1:,0
+STACKABLE_MP:Catacombs Inner:21:ITEM_AREABOMB && ITEM_LINEBOMB,0
+BADGE_QuickDropDouble:Catacombs Inner:1:ITEM_LINEBOMB,0
+BADGE_CrystalAttack:Catacombs Inner:1:ITEM_LINEBOMB,0
+BADGE_AntiAir:Catacombs Inner:1:ITEM_LINEBOMB && ITEM_SLIDE,0;ITEM_LINEBOMB && ChargeShot,0
+BADGE_InstantDodgeMeter:Catacombs Inner:1:ITEM_LINEBOMB,0
+STACKABLE_COG:Catacombs Inner:63:Boss,0
 STACKABLE_MATK:Lab:18:ITEM_BombLengthExtend3 && ITEM_LINEBOMB,0
 BADGE_DodgeEPBoost:Lab:18:,0
 STACKABLE_RATK:Lab Part 2:17:ITEM_SLIDE,0
@@ -464,6 +469,11 @@ BADGE_AutoFoodUse:Vena Shop:1:Coins 250,0
 BADGE_BombDispelDebuff:Vena Shop:1:Coins 3100,0
 ITEM_VenaCharm:Vena Shop:1:Coins 1000,0
 ITEM_RapidShots:Vena Shop:1:Coins 2700,0
+Useable_VenaBombSmall:Vena Shop:1:Coins 99999,0
+Useable_VenaBombBig:Vena Shop:1:Coins 99999 && Chapter 4,0
+Useable_VenaBombBunBun:Vena Shop:1:Coins 99999 && Chapter 2,0
+Useable_VenaBombDispel:Vena Shop:1:Coins 99999 && Chapter 3,0
+Useable_VenaBombHealBlock:Vena Shop:1:Coins 99999 && Chapter 5,0
 BADGE_DoubleAirDash:Memine All:1:AllMemine,0
 STACKABLE_SHARD:Ana Thema:0:ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0
 STACKABLE_SHARD:Blushwood Sliding:1:ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0
@@ -516,51 +526,51 @@ BADGE_100COMBO:Crafting:1:Coins 250 && Chapter 7,0
 BADGE_DominantEffectDownB:Crafting:1:Coins 250 && Chapter 7,0
 BADGE_RangeBreak:Crafting:1:Coins 250 && Chapter 7,0
 BADGE_AutoPilot:Crafting:1:Coins 250 && BADGE_AmuletQuicken,0
-ITEM_Explorer:Item Craft:2:ITEM_Explorer && Core 3 && Upgrade 1 && RainbowCheck,0;ITEM_Explorer && Core 1 && Upgrade 1 && Explorer,0
-ITEM_Explorer:Item Craft:3:ITEM_Explorer && Core 6 && Upgrade 1 && RainbowCheck,0;ITEM_Explorer && Core 1 && Upgrade 1 && Explorer,0
-ITEM_KNIFE:Item Craft:2:ITEM_KNIFE && Upgrade 3,0
-ITEM_KNIFE:Item Craft:3:ITEM_KNIFE && Upgrade 4 && Air,0
-ITEM_ORB:Item Craft:2:ITEM_ORB && Upgrade 3,0
-ITEM_ORB:Item Craft:3:ITEM_ORB && Upgrade 3 && Air,0
-ITEM_RapidShots:Item Craft:2:ITEM_RapidShots && Upgrade 2,0
-ITEM_RapidShots:Item Craft:3:ITEM_RapidShots && Upgrade 4,0
-ITEM_AttackRange:Item Craft:2:ITEM_AttackRange && Upgrade 1,0
-ITEM_AttackRange:Item Craft:3:ITEM_AttackRange && Upgrade 3,0
-ITEM_EasyStyle:Item Craft:2:ITEM_EasyStyle && Upgrade 2,0
-ITEM_EasyStyle:Item Craft:3:ITEM_EasyStyle && Upgrade 2,0
-ITEM_LINEBOMB:Item Craft:2:ITEM_LINEBOMB && Upgrade 1,0
-ITEM_LINEBOMB:Item Craft:3:ITEM_LINEBOMB && Upgrade 2,0
-ITEM_AREABOMB:Item Craft:2:ITEM_AREABOMB && Upgrade 1,0
-ITEM_AREABOMB:Item Craft:3:ITEM_AREABOMB && Upgrade 2,0
-ITEM_SPEEDUP:Item Craft:2:ITEM_SPEEDUP && Upgrade 2,0
-ITEM_SPEEDUP:Item Craft:3:ITEM_SPEEDUP && Upgrade 3,0
-ITEM_AirDash:Item Craft:2:ITEM_AirDash && Upgrade 1,0
-ITEM_AirDash:Item Craft:3:ITEM_AirDash && Upgrade 3,0
-ITEM_WALLJUMP:Item Craft:2:ITEM_WALLJUMP && Upgrade 2 && Air,0
-ITEM_WALLJUMP:Item Craft:3:ITEM_WALLJUMP && Upgrade 2 && Air,0
-ITEM_JETPACK:Item Craft:2:ITEM_JETPACK && Upgrade 1,0
-ITEM_JETPACK:Item Craft:3:ITEM_JETPACK && Upgrade 3,0
-ITEM_BoostSystem:Item Craft:2:ITEM_BoostSystem && Upgrade 3,0
-ITEM_BoostSystem:Item Craft:3:ITEM_BoostSystem && Upgrade 5 && Air,0
-ITEM_OrbAmulet:Item Craft:2:ITEM_OrbAmulet && Upgrade 3,0
-ITEM_OrbAmulet:Item Craft:3:ITEM_OrbAmulet && Upgrade 5 && Air,0
-ITEM_BOMBFUEL:Item Craft:2:ITEM_BOMBFUEL && Upgrade 1,0
-ITEM_BOMBFUEL:Item Craft:3:ITEM_BOMBFUEL && Upgrade 2,0
-ITEM_BombLengthExtend:Item Craft:2:ITEM_BombLengthExtend && Upgrade 1,0
-ITEM_BombLengthExtend:Item Craft:3:ITEM_BombLengthExtend2 && Upgrade 3 && Fire,0
-ITEM_MASK:Item Craft:2:ITEM_MASK && Upgrade 1,0
-ITEM_MASK:Item Craft:3:ITEM_MASK && Upgrade 1,0
-ITEM_TempRing:Item Craft:2:ITEM_TempRing && Upgrade 1,0
-ITEM_TempRing:Item Craft:3:ITEM_TempRing && Upgrade 1,0
-ITEM_DodgeShot:Item Craft:2:ITEM_DodgeShot && Upgrade 2,0
-ITEM_DodgeShot:Item Craft:3:ITEM_DodgeShot && Upgrade 3,0
-ITEM_Rotater:Item Craft:2:ITEM_Rotater && Upgrade 2 && Air,0
-ITEM_Rotater:Item Craft:3:ITEM_Rotater && Upgrade 2 && Air,0
-ITEM_GoldenGlove:Item Craft:2:ITEM_GoldenGlove && Upgrade 1 && Fire && Air && Light,0
-ITEM_GoldenGlove:Item Craft:3:ITEM_GoldenGlove && Upgrade 1 && Fire && Air && Light,0
-ITEM_OrbTypeC2:Item Craft:1:Coins 250 && ITEM_ORB3 && Core 4,0
-ITEM_OrbTypeS2:Item Craft:1:Coins 250 && ITEM_ORB3 && Core 5,0
-ITEM_OrbTypeC3:Item Craft:1:Coins 250 && ITEM_ORB3 && Core 7,0
-ITEM_OrbTypeS3:Item Craft:1:Coins 250 && ITEM_ORB3 && Core 8,0
-ITEM_OrbBoostU:Item Craft:1:Coins 250 && Core 4,0
-ITEM_OrbBoostD:Item Craft:1:Coins 250 && Core 8,0
+ITEM_Explorer:Item Upgrade:2:ITEM_Explorer && Core 3 && Upgrade 1 && RainbowCheck,0;ITEM_Explorer && Core 1 && Upgrade 1 && Explorer,0
+ITEM_Explorer:Item Upgrade:3:ITEM_Explorer && Core 6 && Upgrade 1 && RainbowCheck,0;ITEM_Explorer && Core 1 && Upgrade 1 && Explorer,0
+ITEM_KNIFE:Item Upgrade:2:ITEM_KNIFE && Upgrade 3,0
+ITEM_KNIFE:Item Upgrade:3:ITEM_KNIFE && Upgrade 4 && Air,0
+ITEM_ORB:Item Upgrade:2:ITEM_ORB && Upgrade 3,0
+ITEM_ORB:Item Upgrade:3:ITEM_ORB && Upgrade 3 && Air,0
+ITEM_RapidShots:Item Upgrade:2:ITEM_RapidShots && Upgrade 2,0
+ITEM_RapidShots:Item Upgrade:3:ITEM_RapidShots && Upgrade 4,0
+ITEM_AttackRange:Item Upgrade:2:ITEM_AttackRange && Upgrade 1,0
+ITEM_AttackRange:Item Upgrade:3:ITEM_AttackRange && Upgrade 3,0
+ITEM_EasyStyle:Item Upgrade:2:ITEM_EasyStyle && Upgrade 2,0
+ITEM_EasyStyle:Item Upgrade:3:ITEM_EasyStyle && Upgrade 2,0
+ITEM_LINEBOMB:Item Upgrade:2:ITEM_LINEBOMB && Upgrade 1,0
+ITEM_LINEBOMB:Item Upgrade:3:ITEM_LINEBOMB && Upgrade 2,0
+ITEM_AREABOMB:Item Upgrade:2:ITEM_AREABOMB && Upgrade 1,0
+ITEM_AREABOMB:Item Upgrade:3:ITEM_AREABOMB && Upgrade 2,0
+ITEM_SPEEDUP:Item Upgrade:2:ITEM_SPEEDUP && Upgrade 2,0
+ITEM_SPEEDUP:Item Upgrade:3:ITEM_SPEEDUP && Upgrade 3,0
+ITEM_AirDash:Item Upgrade:2:ITEM_AirDash && Upgrade 1,0
+ITEM_AirDash:Item Upgrade:3:ITEM_AirDash && Upgrade 3,0
+ITEM_WALLJUMP:Item Upgrade:2:ITEM_WALLJUMP && Upgrade 2 && Air,0
+ITEM_WALLJUMP:Item Upgrade:3:ITEM_WALLJUMP && Upgrade 2 && Air,0
+ITEM_JETPACK:Item Upgrade:2:ITEM_JETPACK && Upgrade 1,0
+ITEM_JETPACK:Item Upgrade:3:ITEM_JETPACK && Upgrade 3,0
+ITEM_BoostSystem:Item Upgrade:2:ITEM_BoostSystem && Upgrade 3,0
+ITEM_BoostSystem:Item Upgrade:3:ITEM_BoostSystem && Upgrade 5 && Air,0
+ITEM_OrbAmulet:Item Upgrade:2:ITEM_OrbAmulet && Upgrade 3,0
+ITEM_OrbAmulet:Item Upgrade:3:ITEM_OrbAmulet && Upgrade 5 && Air,0
+ITEM_BOMBFUEL:Item Upgrade:2:ITEM_BOMBFUEL && Upgrade 1,0
+ITEM_BOMBFUEL:Item Upgrade:3:ITEM_BOMBFUEL && Upgrade 2,0
+ITEM_BombLengthExtend:Item Upgrade:2:ITEM_BombLengthExtend && Upgrade 1,0
+ITEM_BombLengthExtend:Item Upgrade:3:ITEM_BombLengthExtend2 && Upgrade 3 && Fire,0
+ITEM_MASK:Item Upgrade:2:ITEM_MASK && Upgrade 1,0
+ITEM_MASK:Item Upgrade:3:ITEM_MASK && Upgrade 1,0
+ITEM_TempRing:Item Upgrade:2:ITEM_TempRing && Upgrade 1,0
+ITEM_TempRing:Item Upgrade:3:ITEM_TempRing && Upgrade 1,0
+ITEM_DodgeShot:Item Upgrade:2:ITEM_DodgeShot && Upgrade 2,0
+ITEM_DodgeShot:Item Upgrade:3:ITEM_DodgeShot && Upgrade 3,0
+ITEM_Rotater:Item Upgrade:2:ITEM_Rotater && Upgrade 2 && Air,0
+ITEM_Rotater:Item Upgrade:3:ITEM_Rotater && Upgrade 2 && Air,0
+ITEM_GoldenGlove:Item Upgrade:2:ITEM_GoldenGlove && Upgrade 1 && Fire && Air && Light,0
+ITEM_GoldenGlove:Item Upgrade:3:ITEM_GoldenGlove && Upgrade 1 && Fire && Air && Light,0
+ITEM_OrbTypeC2:Item Upgrade:1:Coins 250 && ITEM_ORB3 && Core 4,0
+ITEM_OrbTypeS2:Item Upgrade:1:Coins 250 && ITEM_ORB3 && Core 5,0
+ITEM_OrbTypeC3:Item Upgrade:1:Coins 250 && ITEM_ORB3 && Core 7,0
+ITEM_OrbTypeS3:Item Upgrade:1:Coins 250 && ITEM_ORB3 && Core 8,0
+ITEM_OrbBoostU:Item Upgrade:1:Coins 250 && Core 4,0
+ITEM_OrbBoostD:Item Upgrade:1:Coins 250 && Core 8,0

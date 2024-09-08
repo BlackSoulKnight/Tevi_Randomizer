@@ -24,6 +24,7 @@ using Character;
 
 
 
+
 namespace TeviRandomizer
 {
 
@@ -115,6 +116,7 @@ namespace TeviRandomizer
 
         static public bool[] customFlags = new bool[Enum.GetNames(typeof(CustomFlags)).Length];
         static public int[] extraPotions = [0, 0]; // Hardcoded omo
+        static public int GoMode = -1;
         static public string pluginPath = BepInEx.Paths.PluginPath + "/tevi_randomizer/";
         static public int seed;
 
@@ -279,6 +281,16 @@ namespace TeviRandomizer
             }
             return true;
         }
+        [HarmonyPatch(typeof(Localize), "GetLocalizeTextWithKeyword")]
+        [HarmonyPostfix]
+        static void changeGearCount(ref string __result,ref string keyword)
+        {
+            if(keyword == "Todo.GoalTipFreeRoam")
+            {
+                __result = __result.Replace("16", GoMode.ToString());
+            }
+        }
+
 
 
         static public void createSeed()
@@ -345,9 +357,56 @@ namespace TeviRandomizer
             try
             {
                 Upgradable itemref;
-                if (!item.ToString().Contains("STACKABLE"))
+                if (item.ToString().Contains("STACKABLE"))
                 {
+                    return SaveManager.Instance.GetStackableItem(item, slot);
 
+                }
+                else if (item.ToString().Contains("Useable"))
+                {
+                    if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleA) > 0 && item == ItemList.Type.Useable_WaffleAHoneycloud)
+                    {
+                        return true;
+                    }
+                    if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleB) > 0 && item == ItemList.Type.Useable_WaffleBMeringue)
+                    {
+                        return true;
+                    }
+                    if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleC) > 0 && item == ItemList.Type.Useable_WaffleCMorning)
+                    {
+                        return true;
+                    }
+                    if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleD) > 0 && item == ItemList.Type.Useable_WaffleDJellydrop)
+                    {
+                        return true;
+                    }
+                    if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleE) > 0 && item == ItemList.Type.Useable_WaffleElueberry)
+                    {
+                        return true;
+                    }
+                    if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaSmall) > 0 && item == ItemList.Type.Useable_VenaBombSmall)
+                    {
+                        return true;
+                    }
+                    if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaBig) > 0 && item == ItemList.Type.Useable_VenaBombBig)
+                    {
+                        return true;
+                    }
+                    if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaD) > 0 && item == ItemList.Type.Useable_VenaBombDispel)
+                    {
+                        return true;
+                    }
+                    if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaHB) > 0 && item == ItemList.Type.Useable_VenaBombHealBlock)
+                    {
+                        return true;
+                    }
+                    if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaBB) > 0 && item == ItemList.Type.Useable_VenaBombBunBun)
+                    {
+                        return true;
+                    }
+                    return false;
+                }
+                else {
                     if (Enum.TryParse(item.ToString(), out itemref))
                     {
                         return SaveManager.Instance.GetStackableItem((ItemList.Type)itemref, slot);
@@ -356,10 +415,6 @@ namespace TeviRandomizer
                     {
                         return SaveManager.Instance.GetItem(item) > 0;
                     }
-                }
-                else
-                {
-                    return SaveManager.Instance.GetStackableItem(item, slot);
                 }
             }
             catch
@@ -375,32 +430,8 @@ namespace TeviRandomizer
             ItemData t = getRandomizedItem(item, slot);
             item = t.getItemTyp();
             slot = t.getSlotId();
-            try
-            {
-                Upgradable itemref;
-                if (!item.ToString().Contains("STACKABLE"))
-                {
-
-                    if (Enum.TryParse(item.ToString(), out itemref))
-                    {
-                        return SaveManager.Instance.GetStackableItem((ItemList.Type)itemref, slot);
-                    }
-                    else
-                    {
-                        return SaveManager.Instance.GetItem(item) > 0;
-                    }
-                }
-                else
-                {
-                    return SaveManager.Instance.GetStackableItem(item, slot);
-                }
-            }
-            catch
-            {
-                Debug.LogError($"[Randomizer] Could not check Item:{item} Slot:{slot}. Check if this is a valid Item");
-                return false;
-            }
-
+            return checkItemGot(item, slot);
+ 
         }
 
         static public Sprite getSprite(int itemID, bool custom = false)
@@ -556,7 +587,7 @@ namespace TeviRandomizer
 
             if (((ItemList.Type)data.itemID).ToString().Contains("STACKABLE"))
             {
-                if (SaveManager.Instance.GetStackableItem((ItemList.Type)data.itemID, (byte)data.slotID))
+                if(checkItemGot((ItemList.Type)data.itemID, (byte)data.slotID))
                 {
                     Debug.Log(string.Concat(new string[]
                         {
@@ -569,6 +600,15 @@ namespace TeviRandomizer
                     __instance.DisableMe();
                     return false;
                 }
+            }
+            if (data.getItemTyp().ToString().Contains("Useable"))
+            {
+                if (checkItemGot(data.getItemTyp(), 1))
+                {
+                    __instance.DisableMe();
+                    return false;
+                }
+
             }
             else
             {
@@ -755,7 +795,54 @@ namespace TeviRandomizer
                     break;
                 default:
                     break;
+
             }
+            if (item.ToString().Contains("Useable"))
+            {
+                SaveManager.Instance.AddItemToBag(item);
+                if (item == ItemList.Type.Useable_WaffleAHoneycloud)
+                {
+                    SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleA, 1);
+                }
+                if (item == ItemList.Type.Useable_WaffleBMeringue)
+                {
+                    SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleB, 1);
+                }
+                if (item == ItemList.Type.Useable_WaffleCMorning)
+                {
+                    SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleC, 1);
+                }
+                if (item == ItemList.Type.Useable_WaffleDJellydrop)
+                {
+                    SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleD, 1);
+                }
+                if (item == ItemList.Type.Useable_WaffleElueberry)
+                {
+                    SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleE, 1);
+                }
+                if (item == ItemList.Type.Useable_VenaBombSmall)
+                {
+                    SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaSmall, 1);
+                }
+                if (item == ItemList.Type.Useable_VenaBombBig)
+                {
+                    SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaBig, 1);
+                }
+                if (item == ItemList.Type.Useable_VenaBombBunBun)
+                {
+                    SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaBB, 1);
+                }
+                if (item == ItemList.Type.Useable_VenaBombHealBlock)
+                {
+                    SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaHB, 1);
+                }
+                if (item == ItemList.Type.Useable_VenaBombDispel)
+                {
+                    SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaD, 1);
+                }
+                return false;
+            }
+
 
             if (SaveManager.Instance.GetOrb() == 2 && (SaveManager.Instance.GetItem(ItemList.Type.I19) > 0 || SaveManager.Instance.GetItem(ItemList.Type.I20) > 0 || item == ItemList.Type.I20 || item == ItemList.Type.I19))
             {
@@ -769,6 +856,8 @@ namespace TeviRandomizer
 
         [HarmonyPatch(typeof(SaveManager), "SetItem")]
         [HarmonyPrefix]
+
+
         static bool ItemChanges(ref ItemList.Type item, ref byte value, ref SaveManager __instance)
         {
             if (item >= ItemList.Type.BADGE_START && item <= ItemList.Type.BADGE_MAX && SaveManager.Instance.GetMiniFlag(Mini.UnlockedBadge) <= 0)
@@ -858,8 +947,6 @@ namespace TeviRandomizer
             {
                 HUDObtainedItem.Instance.GiveItem(itemid, data2.GetSlotID());
                 itemid = RandomizerPlugin.getRandomizedItem(data2.itemid, data2.GetSlotID()).getItemTyp();
-
-
             }
             else
             {
@@ -869,6 +956,8 @@ namespace TeviRandomizer
 
             if (itemid == ItemList.Type.STACKABLE_COG)
             {
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.ITEM);
+
             }
             else if (itemid == ItemList.Type.STACKABLE_HP)
             {
@@ -900,6 +989,9 @@ namespace TeviRandomizer
             }
             else if (itemid.ToString().Contains("ITEM") || itemid.ToString().Contains("QUEST") || itemid == ItemList.Type.STACKABLE_BAG)
             {
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.ITEM);
+            }
+            else if (itemid.ToString().Contains("Useable")){
                 FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.ITEM);
             }
             else
@@ -1217,11 +1309,32 @@ namespace TeviRandomizer
         static bool IllusionReq(ref bool __result)
         {
             __result = false;
-            if (EventReq((int)RandomizerPlugin.EventID.IllusionPalace))
+            if (SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_COG) < RandomizerPlugin.GoMode)
             {
                 __result = true;
             }
             return false;
+        }
+        [HarmonyPatch(typeof(Chap8FreeRoamNoIllusionPalace7x7), "EVENT")]
+        [HarmonyPrefix]
+        static bool IllusionText()
+        {
+            EventManager em = EventManager.Instance;
+            if (em.EventStage == 50)
+            {
+                if (em.EventTime >= 1f)
+                {
+                    em.StopEvent();
+                    if (!HUDPopupMessage.Instance.gameObject.activeInHierarchy)
+                    {
+                        string msg = Localize.GetLocalizeTextWithKeyword("FreeRoamNotEnoughCog", contains: false).Replace("16", RandomizerPlugin.GoMode.ToString());
+                        HUDPopupMessage.Instance.AddMessage(Localize.GetLocalizeTextWithKeyword("POPUP_INFORMATION", contains: false),msg, null, 0);
+                    }
+                    em.AllowSkip = true;
+                }
+                return false;
+            }
+            return true;
         }
     }
 
@@ -1701,6 +1814,10 @@ namespace TeviRandomizer
                     {
                         return false;
                     }
+                }
+                else if (data.getItemTyp().ToString().Contains("Consumeable") &&  RandomizerPlugin.checkItemGot(data.getItemTyp(),1))
+                {
+                    return false;
                 }
             }
 
@@ -2933,12 +3050,13 @@ namespace TeviRandomizer
             ChatStand chatStand = AreaResource.Instance.GetChatStand(___fname);
             if ((bool)chatStand)
             {
+                object[] obj = null;
                 switch (___typeN)
                 {
                     case Character.Type.Reese:
-                        if (area != 15 && SaveManager.Instance.GetItem(ItemList.Type.ITEM_RailPass)>0)
+                        if (area != 15 && SaveManager.Instance.GetItem(ItemList.Type.ITEM_RailPass) > 0)
                         {
-                            object[] obj = [ItemList.Type.BADGE_ChangeOrbCharger,false];
+                            obj = [ItemList.Type.BADGE_ChangeOrbCharger, false];
                             Traverse.Create(__instance).Method("AddItem", obj).GetValue();
                             ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
 
@@ -2947,12 +3065,55 @@ namespace TeviRandomizer
                     case Character.Type.Bones:
                         if (area != 20 && SaveManager.Instance.GetItem(ItemList.Type.ITEM_AirshipPass) > 0)
                         {
-                            object[] obj = [ItemList.Type.BADGE_AutoAirCombo,false];
+                            obj = [ItemList.Type.BADGE_AutoAirCombo, false];
                             Traverse.Create(__instance).Method("AddItem", obj).GetValue();
-                            ___itemslots[___CurrentMaxItem-1].gameObject.SetActive(true);
+                            ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                        }
+                        break;
+                    case Character.Type.Vena:
+
+                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaSmall) <= 0)
+                        {
+                            obj = [ItemList.Type.Useable_VenaBombSmall, false];
+                            Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                            ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                        }
+                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaBB) != 0 && SaveManager.Instance.GetChapter() >= 2)
+                        {
+                            obj = [ItemList.Type.Useable_VenaBombBunBun, false];
+                            Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                            ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                        }
+                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaD) != 0 && SaveManager.Instance.GetChapter() >= 3)
+                        {
+                            obj = [ItemList.Type.Useable_VenaBombDispel, false];
+                            Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                            ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                        }
+                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaBig) != 0 && SaveManager.Instance.GetChapter() >= 4)
+                        {
+                            obj = [ItemList.Type.Useable_VenaBombBig, false];
+                            Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                            ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                        }
+                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaHB) != 0 && SaveManager.Instance.GetChapter() >= 5)
+                        {
+                            obj = [ItemList.Type.Useable_VenaBombHealBlock, false];
+                            Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                            ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                        }
+                        break;
+
+                    case Character.Type.Mia:
+                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleA) != 0)
+                        { 
+                            obj = [ItemList.Type.Useable_WaffleAHoneycloud, false];
+                        Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                        ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
                         }
                         break;
                 }
+                
             }
         } 
 
@@ -2987,54 +3148,9 @@ namespace TeviRandomizer
                         {
                             SaveManager.Instance.savedata.coinUsedCC += price;
                         }
-                        if (___itemslots[___Selected].GetItem().ToString().Contains("Useable"))
-                        {
-                            data = RandomizerPlugin.getRandomizedItem(___itemslots[___Selected].GetItem(), 1);
-                            SaveManager.Instance.AddItemToBag(___itemslots[___Selected].GetItem());
-                            if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleAHoneycloud)
-                            {
-                                SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleA, 1);
-                            }
-                            if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleBMeringue)
-                            {
-                                SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleB, 1);
-                            }
-                            if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleCMorning)
-                            {
-                                SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleC, 1);
-                            }
-                            if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleDJellydrop)
-                            {
-                                SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleD, 1);
-                            }
-                            if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_WaffleElueberry)
-                            {
-                                SaveManager.Instance.SetMiniFlag(Mini.UnlockedWaffleE, 1);
-                            }
-                            if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombSmall)
-                            {
-                                SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaSmall, 1);
-                            }
-                            if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombBig)
-                            {
-                                SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaBig, 1);
-                            }
-                            if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombBunBun)
-                            {
-                                SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaBB, 1);
-                            }
-                            if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombHealBlock)
-                            {
-                                SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaHB, 1);
-                            }
-                            if (___itemslots[___Selected].GetItem() == ItemList.Type.Useable_VenaBombDispel)
-                            {
-                                SaveManager.Instance.SetMiniFlag(Mini.UnlockedVenaD, 1);
-                            }
-                        }
+                        data = RandomizerPlugin.getRandomizedItem(___itemslots[___Selected].GetItem(), 1);
 
-
-                        else if (___itemslots[___Selected].GetItem().ToString().Contains("STACKABLE"))
+                        if (___itemslots[___Selected].GetItem().ToString().Contains("STACKABLE"))
                         {
                             data = RandomizerPlugin.getRandomizedItem(___itemslots[___Selected].GetItem(), (byte)(30 + ___ShopID));
 
@@ -3210,6 +3326,7 @@ namespace TeviRandomizer
                     int[] keySlot = eS3File.Load<int[]>("RandoKeySlot");
                     int[] valItem = eS3File.Load<int[]>("RandoValItem");
                     int[] valSlot = eS3File.Load<int[]>("RandoValSlot");
+                    
                     for (int i = 0; i < keyItem.Length; i++)
                     {
                         data.Add(new ItemData(keyItem[i], keySlot[i]), new ItemData(valItem[i], valSlot[i]));
@@ -3227,6 +3344,10 @@ namespace TeviRandomizer
                 if (eS3File.KeyExists("Seed"))
                 {
                     RandomizerPlugin.seed = eS3File.Load<int>("Seed");
+                }                
+                if (eS3File.KeyExists("GoMode"))
+                {
+                    RandomizerPlugin.GoMode = eS3File.Load<int>("GoMode");
                 }
 
             }
@@ -3278,6 +3399,7 @@ namespace TeviRandomizer
             eS3File.Save("RandoValSlot", valSlot);
             eS3File.Save("CustomDifficulty", RandomizerPlugin.customDiff);
             eS3File.Save("Seed", RandomizerPlugin.seed);
+            eS3File.Save("GoMode", RandomizerPlugin.GoMode);
             eS3File.Sync();
             Randomizer.saveSpoilerLog($"rando.SpoilerSave{saveslot}.txt", s);
         }
@@ -3330,7 +3452,7 @@ namespace TeviRandomizer
                 }
                 else if (damage > 0 && (owner != null && owner.isPlayer()) || __instance.isPlayer())
                 {
-                    if (type == BulletType.TEVI_WEAK_DASH || type == BulletType.TEVI_WEAK_ATTACK || type == BulletType.ORB_SHOT_NORMAL) return;
+                    if (type == BulletType.TEVI_WEAK_DASH || type == BulletType.TEVI_WEAK_ATTACK || type == BulletType.ORB_SHOT_NORMAL || type == BulletType.SUMMONBUNNY_HIT) return;
                     Debug.Log("Combo was broken by " + type);
                     bonusDropKickDmg = 0;
                 }

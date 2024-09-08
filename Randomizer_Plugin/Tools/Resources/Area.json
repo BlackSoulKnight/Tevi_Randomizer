@@ -167,7 +167,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Item Craft",
+                    "Exit": "Item Upgrade",
                     "Method": ""
                 },
                 {
@@ -205,7 +205,7 @@
             ]
         },
         {
-            "Name": "Item Craft",
+            "Name": "Item Upgrade",
             "Money": [
                 {
                     "Method": "",
@@ -451,7 +451,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "LavaWorld",
+                    "Exit": "Magma Pits",
                     "Method": ""
                 },
                 {
@@ -943,10 +943,6 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Swamp",
-                    "Method": ""
-                },
-                {
                     "Exit": "Vena Shop",
                     "Method": ""
                 },
@@ -1065,7 +1061,7 @@
     ],
     "Map17": [
         {
-            "Name": "LavaWorld",
+            "Name": "Magma Pits",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -1082,25 +1078,29 @@
                     "Method": "ChargeShot && ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "LavaWorld Part 2",
-                    "Method": "ITEM_JETPACK"
+                    "Exit": "Magma Depths",
+                    "Method": "ITEM_JETPACK && ITEM_SLIDE"
                 },
                 {
-                    "Exit": "LavaWorld Part 2",
-                    "Method": "ITEM_SLIDE && ITEM_AirDash "
+                    "Exit": "Magma Depths",
+                    "Method": "ITEM_SLIDE && ITEM_AirDash && ChargeShot"
                 },
                 {
-                    "Exit": "LavaWorld Part 2",
-                    "Method": "ITEM_SLIDE &&  ITEM_DOUBLEJUMP"
+                    "Exit": "Magma Depths",
+                    "Method": "ITEM_SLIDE &&  ITEM_DOUBLEJUMP && ChargeShot"
                 },
                 {
-                    "Exit": "LavaWorld Part 2",
-                    "Method": "ITEM_SLIDE &&  ITEM_HIJUMP"
+                    "Exit": "Magma Depths",
+                    "Method": "ITEM_SLIDE &&  ITEM_HIJUMP && ChargeShot"
+                },
+                {
+                    "Exit": "Magma Depths",
+                    "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_JETPACK"
                 }
             ]
         },
         {
-            "Name": "LavaWorld Part 2",
+            "Name": "Magma Depths",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -1150,7 +1150,12 @@
                 {
                     "Exit": "Swamp",
                     "Method": "ITEM_LINEBOMB && ITEM_AREABOMB"
+                },
+                {
+                    "Exit": "Magma Depths",
+                    "Method": "ITEM_LINEBOMB"
                 }
+
             ]
         },
         {
@@ -1647,7 +1652,11 @@
             "Connections": [
                 {
                     "Exit": "Catacombs Main",
-                    "Method": "ITEM_SLIDE"
+                    "Method": "ITEM_DOUBLEJUMP"
+                },
+                {
+                    "Exit": "Catacombs Main",
+                    "Method": "ITEM_JETPACK"
                 },
                 {
                     "Exit": "Tartarus",
@@ -1681,19 +1690,19 @@
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "Vassago fight",
+                    "Exit": "Catacombs Inner",
                     "Method": "ITEM_DOUBLEJUMP"
                 },
                 {
-                    "Exit": "Vassago fight",
+                    "Exit": "Catacombs Inner",
                     "Method": "ITEM_JETPACK2"
                 },
                 {
-                    "Exit": "Vassago fight",
+                    "Exit": "Catacombs Inner",
                     "Method": "ITEM_JETPACK && ITEM_HIJUMP"
                 },
                 {
-                    "Exit": "Vassago fight",
+                    "Exit": "Catacombs Inner",
                     "Method": "ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash"
                 },
                 {
@@ -1703,7 +1712,7 @@
             ]
         },
         {
-            "Name": "Vassago fight",
+            "Name": "Catacombs Inner",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
