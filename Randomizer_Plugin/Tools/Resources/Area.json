@@ -451,7 +451,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "LavaWorld",
+                    "Exit": "Magma Pits",
                     "Method": ""
                 },
                 {
@@ -1061,7 +1061,7 @@
     ],
     "Map17": [
         {
-            "Name": "LavaWorld",
+            "Name": "Magma Pits",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -1078,29 +1078,29 @@
                     "Method": "ChargeShot && ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "LavaWorld Part 2",
+                    "Exit": "Magma Depths",
                     "Method": "ITEM_JETPACK && ITEM_SLIDE"
                 },
                 {
-                    "Exit": "LavaWorld Part 2",
+                    "Exit": "Magma Depths",
                     "Method": "ITEM_SLIDE && ITEM_AirDash && ChargeShot"
                 },
                 {
-                    "Exit": "LavaWorld Part 2",
+                    "Exit": "Magma Depths",
                     "Method": "ITEM_SLIDE &&  ITEM_DOUBLEJUMP && ChargeShot"
                 },
                 {
-                    "Exit": "LavaWorld Part 2",
+                    "Exit": "Magma Depths",
                     "Method": "ITEM_SLIDE &&  ITEM_HIJUMP && ChargeShot"
                 },
                 {
-                    "Exit": "LavaWorld Part 2",
+                    "Exit": "Magma Depths",
                     "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_JETPACK"
                 }
             ]
         },
         {
-            "Name": "LavaWorld Part 2",
+            "Name": "Magma Depths",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -1152,7 +1152,7 @@
                     "Method": "ITEM_LINEBOMB && ITEM_AREABOMB"
                 },
                 {
-                    "Exit": "LavaWorld Part 2",
+                    "Exit": "Magma Depths",
                     "Method": "ITEM_LINEBOMB"
                 }
 

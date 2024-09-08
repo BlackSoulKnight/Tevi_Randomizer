@@ -2536,7 +2536,7 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "LavaWorld",
+        "Location": "Magma Pits",
         "slotId": 26,
         "Requirement": [
             {
@@ -2547,7 +2547,7 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "LavaWorld",
+        "Location": "Magma Pits",
         "slotId": 11,
         "Requirement": [
             {
@@ -2558,7 +2558,7 @@
     },
     {
         "Itemname": "BADGE_AmuletQuicken",
-        "Location": "LavaWorld",
+        "Location": "Magma Pits",
         "slotId": 1,
         "Requirement": [
             {
@@ -2569,7 +2569,7 @@
     },
     {
         "Itemname": "ITEM_JETPACK",
-        "Location": "LavaWorld",
+        "Location": "Magma Pits",
         "slotId": 1,
         "Requirement": [
             {
@@ -2580,7 +2580,7 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "LavaWorld",
+        "Location": "Magma Pits",
         "slotId": 11,
         "Requirement": [
             {
@@ -2591,7 +2591,7 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "LavaWorld",
+        "Location": "Magma Pits",
         "slotId": 11,
         "Requirement": [
             {
@@ -2602,7 +2602,7 @@
     },
     {
         "Itemname": "BADGE_EPCombo",
-        "Location": "LavaWorld Part 2",
+        "Location": "Magma Depths",
         "slotId": 1,
         "Requirement": [
             {
@@ -2613,7 +2613,7 @@
     },
     {
         "Itemname": "BADGE_ArrowDamageUp",
-        "Location": "LavaWorld Part 2",
+        "Location": "Magma Depths",
         "slotId": 1,
         "Requirement": [
             {
@@ -2624,7 +2624,7 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "LavaWorld Part 2",
+        "Location": "Magma Depths",
         "slotId": 11,
         "Requirement": [
             {
@@ -2635,7 +2635,7 @@
     },
     {
         "Itemname": "BADGE_1HealthTypeC",
-        "Location": "LavaWorld Part 2",
+        "Location": "Magma Depths",
         "slotId": 1,
         "Requirement": [
             {
@@ -2646,7 +2646,7 @@
     },
     {
         "Itemname": "BADGE_AntiGround",
-        "Location": "LavaWorld Part 2",
+        "Location": "Magma Depths",
         "slotId": 1,
         "Requirement": [
             {
@@ -2657,7 +2657,7 @@
     },
     {
         "Itemname": "BADGE_HitMP",
-        "Location": "LavaWorld Part 2",
+        "Location": "Magma Depths",
         "slotId": 1,
         "Requirement": [
             {
@@ -2668,7 +2668,7 @@
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "LavaWorld Part 2",
+        "Location": "Magma Depths",
         "slotId": 4,
         "Requirement": [
             {
@@ -2683,7 +2683,7 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "LavaWorld Part 2",
+        "Location": "Magma Depths",
         "slotId": 21,
         "Requirement": [
             {
@@ -2694,7 +2694,7 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "LavaWorld Part 2",
+        "Location": "Magma Depths",
         "slotId": 20,
         "Requirement": [
             {
@@ -2709,7 +2709,7 @@
     },
     {
         "Itemname": "BADGE_DoubleGroundNormal3N2",
-        "Location": "LavaWorld Part 2",
+        "Location": "Magma Depths",
         "slotId": 1,
         "Requirement": [
             {
