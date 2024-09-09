@@ -60,7 +60,6 @@ namespace TeviRandomizer
             extraList.Clear();
             //search from top to bottom for progression items
             int collected = 0;
-            List<(string,string,bool)> hints = new List<(string,string,bool)>();
             foreach(KeyValuePair<ItemData,ItemData> item in RandomizerPlugin.__itemData)
             {
                 bool f = false;
@@ -69,22 +68,14 @@ namespace TeviRandomizer
                     collected++;
                     f = true;
                 }
-                if (Enum.IsDefined(typeof(MajorItemFlag), item.Value.getItemTyp().ToString()))
-                {
-
-                    string loc = RandomizerPlugin.randomizer.findLocationName(item.Key.itemID, item.Key.slotID);
-                    hints.Add((loc ,item.Value.getItemTyp().ToString(),f));
-                }
-
             }
             int a = (int)(RandomizerPlugin.__itemData.Count*0.75f * (float)(1f / numberOfHints));
             int nextHint = a  - (collected % a);
-            bool[] order = new bool[hints.Count];
             System.Random rand = new System.Random(RandomizerPlugin.seed.GetHashCode());
             for (int i = 0; i < Math.Floor((double)collected / a); i++)
             {
 
-                if (i >= hints.Count) {
+                if (i >= hintList.Length) {
                     if(extraList.Count == 0) extraList.Add(createChatRow(section, $"No more Hints left.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
                     return;
                 };
@@ -94,8 +85,21 @@ namespace TeviRandomizer
                     extraList.Add(createChatRow(section, $"You may find {localizeItem} in {hintList[i].Item1}.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
                 }
             }
+            int alreadyCollectedItems = 0;
+            for(int i = (int)Math.Floor((double)collected / a); i< numberOfHints;i++)
+            {
+                if (RandomizerPlugin.checkItemGot((ItemList.Type)Enum.Parse(typeof(ItemList.Type), hintList[i].Item2), hintList[i].Item3)) {
+                    alreadyCollectedItems++;
+                    continue; 
+                }
+                else
+                {
+                    break;
+                }
 
-            extraList.Add(createChatRow(section,$"The next Hint is in {nextHint} Items available.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
+
+            }
+            extraList.Add(createChatRow(section, $"The next Hint is in {nextHint + alreadyCollectedItems * a} Items available.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
 
 
 
