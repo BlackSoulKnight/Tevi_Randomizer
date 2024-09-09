@@ -9,6 +9,14 @@ namespace TeviRandomizer
     class ItemObtainPatch()
     {
 
+        // may be used for custom icons
+        [HarmonyPatch(typeof(CommonResource), "GetItem")]
+        [HarmonyPrefix]
+        static bool addCustomIcons()
+        {
+            return true;  //copy and insert custom item icon 
+        }
+
         //Hotswap item recieved
         [HarmonyPatch(typeof(HUDObtainedItem), "GiveItem")]
         [HarmonyPrefix]

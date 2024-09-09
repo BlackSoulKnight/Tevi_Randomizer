@@ -609,59 +609,12 @@ namespace TeviRandomizer
                 ____sprite.sprite = spr;
             }
 
-            if (((ItemList.Type)data.itemID).ToString().Contains("STACKABLE"))
-            {
-                if(checkItemGot((ItemList.Type)data.itemID, (byte)data.slotID))
-                {
-                    Debug.Log(string.Concat(new string[]
-                        {
-                    "[ItemTile] ",
-                    ((ItemList.Type)data.itemID).ToString(),
-                    " #",
-                    data.slotID.ToString(),
-                    " visible in camera. Removed from map because player already obtained it."
-                        }));
-                    __instance.DisableMe();
-                    return false;
-                }
-            }
-            if (data.getItemTyp().ToString().Contains("Useable"))
-            {
-                if (checkItemGot(data.getItemTyp(), 1))
-                {
-                    __instance.DisableMe();
-                    return false;
-                }
 
-            }
-            else
-            {
-                if (SaveManager.Instance.GetItem((ItemList.Type)data.itemID) > 0 && !data.getItemTyp().ToString().Contains("ITEM"))
-                {
-                    Debug.Log("[ItemTile] Item " + ((ItemList.Type)data.itemID).ToString() + " visible in camera. Removed from map because player already obtained it. GotItem = " + SaveManager.Instance.GetItem((ItemList.Type)data.itemID).ToString());
-                    __instance.DisableMe();
-                    return false;
-                }
-                else if (data.getItemTyp().ToString().Contains("ITEM"))
-                {
-                    Upgradable type;
-                    if (Enum.TryParse(data.getItemTyp().ToString(), out type))
-                    {
-                        if (SaveManager.Instance.GetStackableItem((ItemList.Type)type, data.getSlotId()))
-                        {
-                            Debug.Log("[ItemTile] Item " + ((ItemList.Type)data.itemID).ToString() + " visible in camera. Removed from map because player already obtained it. GotItem = " + SaveManager.Instance.GetItem((ItemList.Type)data.itemID).ToString());
-                            __instance.DisableMe();
-                            return false;
-                        }
-                    }
-                    else if (SaveManager.Instance.GetItem(data.getItemTyp()) > 0)
-                    {
-                        Debug.Log("[ItemTile] Item " + data.getItemTyp().ToString() + " visible in camera. Removed from map because player already obtained it. GotItem = " + SaveManager.Instance.GetItem(data.getItemTyp()).ToString());
-                        __instance.DisableMe();
-                        return false;
-                    }
-                }
+            if (checkItemGot((ItemList.Type)data.itemID, (byte)data.slotID)) {
+                Debug.Log($"[ItemTile] {((ItemList.Type)data.itemID).ToString()} # {data.slotID.ToString()} visible in camera. Removed from map because player already obtained it.");
 
+                __instance.DisableMe();
+                return false;
             }
 
             if (WorldManager.Instance.CheckIsWall(__instance.transform.position, any: false) > 0)
@@ -694,56 +647,7 @@ namespace TeviRandomizer
             }
         }
 
-        [HarmonyPatch(typeof(CommonResource), "GetItem")]
-        [HarmonyPrefix]
-        static bool addCustomIcons()
-        {
-            return true;  //copy and insert custom item icon 
-        }
-
-        //Craftig Orb Fix
-        //No set SlotId, maybe reserver slots for Potions?
-        [HarmonyPatch(typeof(SaveManager), "GetOrbTypeObtained")]
-        [HarmonyPostfix]
-        static void orbTypeFix(ref int __result, ref SaveManager __instance)
-        {
-            __result = 0;
-            if (checkRandomizedItemGot(ItemList.Type.ITEM_OrbTypeC2, 1))
-                __result++;
-            else
-                return;
-            if (checkRandomizedItemGot(ItemList.Type.ITEM_OrbTypeS2, 1))
-                __result++;
-            else
-                return;
-            if (checkRandomizedItemGot(ItemList.Type.ITEM_OrbTypeC3, 1))
-                __result++;
-            else
-                return;
-            if (checkRandomizedItemGot(ItemList.Type.ITEM_OrbTypeS3, 1))
-                __result++;
-            else
-                return;
-        }
-
-        [HarmonyPatch(typeof(SaveManager), "GetOrbBoostObtained")]
-        [HarmonyPostfix]
-        static void OrbBoostCount(ref int __result, SaveManager __instance)
-        {
-            __result = 0;
-            if (checkRandomizedItemGot(ItemList.Type.ITEM_OrbBoostD, 1))
-            {
-                __result++;
-            }
-            else return;
-            if (checkRandomizedItemGot(ItemList.Type.ITEM_OrbBoostU, 1))
-            {
-                __result++;
-            }
-            else return;
-        }
-
-        //Orb!
+         //Orb!
         [HarmonyPatch(typeof(SaveManager), "FirstTimeEnableOrbColors")]
         [HarmonyPrefix]
         static bool disableOrbOverride(SaveManager __instance)

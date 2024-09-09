@@ -10,6 +10,49 @@ namespace TeviRandomizer
 {
     class CraftingPatch
     {
+
+        //Craftig Orb Fix
+        //No set SlotId, maybe reserver slots for Potions?
+        [HarmonyPatch(typeof(SaveManager), "GetOrbTypeObtained")]
+        [HarmonyPostfix]
+        static void orbTypeFix(ref int __result, ref SaveManager __instance)
+        {
+            __result = 0;
+            if (RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.ITEM_OrbTypeC2, 1))
+                __result++;
+            else
+                return;
+            if (RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.ITEM_OrbTypeS2, 1))
+                __result++;
+            else
+                return;
+            if (RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.ITEM_OrbTypeC3, 1))
+                __result++;
+            else
+                return;
+            if (RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.ITEM_OrbTypeS3, 1))
+                __result++;
+            else
+                return;
+        }
+
+        [HarmonyPatch(typeof(SaveManager), "GetOrbBoostObtained")]
+        [HarmonyPostfix]
+        static void OrbBoostCount(ref int __result, SaveManager __instance)
+        {
+            __result = 0;
+            if (RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.ITEM_OrbBoostD, 1))
+            {
+                __result++;
+            }
+            else return;
+            if (RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.ITEM_OrbBoostU, 1))
+            {
+                __result++;
+            }
+            else return;
+        }
+
         //craftingMenuRefresh
         [HarmonyPatch(typeof(HUDObtainedItem), "GiveItem")]
         [HarmonyPostfix]
