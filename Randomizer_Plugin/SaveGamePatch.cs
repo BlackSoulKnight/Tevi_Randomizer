@@ -70,6 +70,13 @@ namespace TeviRandomizer
                     HintSystem.hintList = eS3File.Load<(string, string, byte)[]>("HintList");
                 }
 
+                if (LocationTracker.active)
+                {
+                    if (eS3File.KeyExists("LocationList"))
+                    {
+                        LocationTracker.setCollectedLocationList(eS3File.Load<string[]>("LocationList"));
+                    }
+                }
             }
         }
 
@@ -121,6 +128,11 @@ namespace TeviRandomizer
             eS3File.Save("Seed", RandomizerPlugin.seed);
             eS3File.Save("HintList", HintSystem.hintList);
             eS3File.Save("GoMode", RandomizerPlugin.GoMode);
+
+            if(LocationTracker.active) {
+                eS3File.Save("Archipelago_ItemList", LocationTracker.getCollectedLocationList());
+            }
+
             eS3File.Sync();
             Randomizer.saveSpoilerLog($"rando.SpoilerSave{saveslot}.txt", s);
         }

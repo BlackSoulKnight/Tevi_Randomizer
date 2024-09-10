@@ -41,7 +41,11 @@ namespace TeviRandomizer
                 }
             }
 
-
+            //add checked Location to list
+            if(LocationTracker.active)
+            {
+                LocationTracker.addItemToList(type, value);
+            }
 
             ItemData data = RandomizerPlugin.getRandomizedItem(type, value);
 
@@ -128,8 +132,6 @@ namespace TeviRandomizer
 
         [HarmonyPatch(typeof(SaveManager), "SetItem")]
         [HarmonyPrefix]
-
-
         static bool ItemChanges(ref ItemList.Type item, ref byte value, ref SaveManager __instance)
         {
             if (item >= ItemList.Type.BADGE_START && item <= ItemList.Type.BADGE_MAX && SaveManager.Instance.GetMiniFlag(Mini.UnlockedBadge) <= 0)
@@ -196,6 +198,7 @@ namespace TeviRandomizer
 
             return true;
         }
+
         [HarmonyPatch(typeof(SaveManager), "SetItem")]
         [HarmonyPostfix]
         static void dynamicOrbChange(ref ItemList.Type item)

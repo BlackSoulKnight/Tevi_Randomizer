@@ -17,7 +17,7 @@ namespace TeviRandomizer
         static bool StartEvent()
         {
             EventManager em = EventManager.Instance;
-
+            LocationTracker.setCollectedLocationList([]);
             if (HUDObtainedItem.Instance.isDisplaying()) return false;
 
             if (em.EventStage == 1)
@@ -151,22 +151,13 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static bool Vena7x7Fix(ref bool __result)
         {
-            ItemData data = RandomizerPlugin.getRandomizedItem(ItemList.Type.STACKABLE_COG, 23);
-
             if (!SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam))
             {
                 __result = false;
                 return false;
             }
-            if (((ItemList.Type)data.itemID).ToString().Contains("STACKABLE"))
-            {
-                bool help = !SaveManager.Instance.GetStackableItem((ItemList.Type)data.itemID, (byte)data.slotID);
-                __result = help;
-            }
-            else
-            {
-                __result = SaveManager.Instance.GetItem((ItemList.Type)data.itemID) == 0;
-            }
+
+            __result = !RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.STACKABLE_COG, 23);
             return false;
         }
 
@@ -187,16 +178,7 @@ namespace TeviRandomizer
                     {
                         if (SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam))
                         {
-                            ItemData data = RandomizerPlugin.getRandomizedItem(ItemList.Type.STACKABLE_COG, 23);
-                            bool flag = false;
-                            if (data.getItemTyp().ToString().Contains("STACKABLE"))
-                            {
-                                flag = !SaveManager.Instance.GetStackableItem((ItemList.Type)data.itemID, (byte)data.slotID);
-                            }
-                            else
-                            {
-                                flag = !((int)(SaveManager.Instance.GetItem((ItemList.Type)data.itemID)) > 0);
-                            }
+                            bool flag = !RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.STACKABLE_COG, 23);
                             if (component.mode == Mode.Chap1FreeRoamVena7x7)
                             {
                                 if (component.mode == Mode.Chap1FreeRoamVena7x7 && ((SaveManager.Instance.GetMiniFlag(Mini.GameCleared) > 0 && SaveManager.Instance.GetMiniFlag(Mini.BookmarkUsed) == 1) || flag))
@@ -267,6 +249,7 @@ namespace TeviRandomizer
         {
             __state = (SaveManager.Instance.GetItem(ItemList.Type.QUEST_GHandL), SaveManager.Instance.GetItem(ItemList.Type.QUEST_GHandR));
         }
+
         [HarmonyPatch(typeof(EventManager), "CheckAfterMapChange")]
         [HarmonyPostfix]
         static void returnHands(ref (byte, byte) __state)
@@ -285,26 +268,6 @@ namespace TeviRandomizer
             return false;
         }
 
-        //End Requierment
-        static bool EventReq(int customEventId)
-        {
-            bool flag = false;
-
-
-            switch (RandomizerPlugin.getRandomizedItem(customEventId, 1).slotID)
-            {
-                case 1:
-                    flag = SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_COG) < MainVar.instance.FREEROAM_COGNEEDED;
-                    break;
-                default:
-                    flag = SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_COG) < MainVar.instance.FREEROAM_COGNEEDED;
-                    break;
-            }
-
-
-            return flag;
-        }
-
 
         [HarmonyPatch(typeof(Chap8FreeRoamNoIllusionPalace7x7), "REQUIREMENT")]
         [HarmonyPrefix]
@@ -317,6 +280,7 @@ namespace TeviRandomizer
             }
             return false;
         }
+
         [HarmonyPatch(typeof(Chap8FreeRoamNoIllusionPalace7x7), "EVENT")]
         [HarmonyPrefix]
         static bool IllusionText()

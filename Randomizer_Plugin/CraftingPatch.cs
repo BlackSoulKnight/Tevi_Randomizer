@@ -291,7 +291,6 @@ namespace TeviRandomizer
         {
 
             Traverse o = Traverse.Create(__instance);
-            ItemData data = RandomizerPlugin.getRandomizedItem(iType, 1);
 
             if (o.Field("CurrentMaxCraft").GetValue<int>() >= ___craftList.Length)
             {
@@ -300,31 +299,7 @@ namespace TeviRandomizer
 
             if (iType.ToString().Contains("BADGE"))
             {
-                if (data.getItemTyp().ToString().Contains("STACKABLE"))
-                {
-                    if (SaveManager.Instance.GetStackableItem(data.getItemTyp(), data.getSlotId()))
-                    {
-                        return false;
-                    }
-                }
-                else if (data.getItemTyp() >= ItemList.Type.BADGE_START && data.getItemTyp() <= ItemList.Type.BADGE_MAX && SaveManager.Instance.GetItem(data.getItemTyp()) > 0)
-                {
-                    return false;
-                }
-                else if (data.getItemTyp().ToString().Contains("ITEM") || data.getItemTyp().ToString().Contains("QUEST") || data.getItemTyp().ToString().Contains("I19") || data.getItemTyp().ToString().Contains("I20"))
-                {
-                    Upgradable upitem;
-                    if (Enum.TryParse(data.getItemTyp().ToString(), out upitem))
-                    {
-                        if (SaveManager.Instance.GetStackableItem((ItemList.Type)upitem, data.getSlotId()))
-                            return false;
-                    }
-                    else if (SaveManager.Instance.GetItem(data.getItemTyp()) > 0)
-                    {
-                        return false;
-                    }
-                }
-                else if (data.getItemTyp().ToString().Contains("Consumeable") && RandomizerPlugin.checkItemGot(data.getItemTyp(), 1))
+                if (RandomizerPlugin.checkRandomizedItemGot(iType, 1))
                 {
                     return false;
                 }
@@ -430,15 +405,7 @@ namespace TeviRandomizer
                     num2 = GemaItemManager.Instance.GetItemCost(itype);
                     break;
                 case 1:
-                    if (data.getItemTyp().ToString().Contains("STACKABLE"))
-                    {
-                        num = (SaveManager.Instance.GetStackableItem(data.getItemTyp(), data.getSlotId()) ? 1 : 0);
-                    }
-                    else
-                    {
-                        num = ((SaveManager.Instance.GetItem(data.getItemTyp()) > 0) ? 1 : 0);
-
-                    }
+                    num = (RandomizerPlugin.checkRandomizedItemGot(itype, 1) ? 1:0);
                     num2 = 1;
                     break;
                 case 2:
@@ -454,7 +421,7 @@ namespace TeviRandomizer
                     }
                     else
                     {
-                        num = ((SaveManager.Instance.GetItem(itype) > 0) ? 1 : 0);
+                        num = (RandomizerPlugin.checkRandomizedItemGot(itype, 1) ? 1 : 0);
                         num2 = 1;
                     }
                     break;
@@ -828,7 +795,7 @@ namespace TeviRandomizer
                         num5 = -3;
                     }
                     ItemData rnd = RandomizerPlugin.getRandomizedItem(___currentItemType, 1);
-                    if (!Enum.IsDefined(typeof(Upgradable), ___currentItemType.ToString()) && RandomizerPlugin.checkItemGot(rnd.getItemTyp(), rnd.getSlotId()))
+                    if (!Enum.IsDefined(typeof(Upgradable), ___currentItemType.ToString()) && RandomizerPlugin.checkRandomizedItemGot(___currentItemType,1))
                     {
 
                         num5 = -3;
