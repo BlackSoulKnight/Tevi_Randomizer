@@ -12,7 +12,6 @@
  (x) Vena Boss fight
      
     Change this to the standart (unlimited item level possible)
-
 */
 
 using System.Collections.Generic;

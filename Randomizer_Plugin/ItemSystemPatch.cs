@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace TeviRandomizer
 {
-    class ItemObtainPatch()
+    class ItemSystemPatch()
     {
 
         // may be used for custom icons
@@ -138,64 +138,21 @@ namespace TeviRandomizer
             {
                 SaveManager.Instance.SetMiniFlag(Mini.UnlockedBadge, 1);
             }
-
             if (item.ToString().Contains("ITEM"))
             {
-                Upgradable itemRef;
-                if (Enum.TryParse<Upgradable>(item.ToString(), out itemRef))
+                if(value == 0)
                 {
-                    if (value == 0)
-                    {
-                        __instance.SetStackableItem((ItemList.Type)itemRef, 0, false);
-                        __instance.SetStackableItem((ItemList.Type)itemRef, 1, false);
-                        __instance.SetStackableItem((ItemList.Type)itemRef, 2, false);
-                        __instance.SetStackableItem((ItemList.Type)itemRef, 3, false);
-                        __instance.SetStackableItem((ItemList.Type)itemRef, 4, false);
-                        __instance.SetStackableItem((ItemList.Type)itemRef, 5, false);
-                        __instance.SetStackableItem((ItemList.Type)itemRef, 6, false);
-                        return true;
-                    }
-
-                    if (!__instance.GetStackableItem((ItemList.Type)itemRef, value))
-                    {
-                        __instance.SetStackableItem((ItemList.Type)itemRef, value, true);
-                        if (value == 1) { value = 4; }
-                        if (value > 3)
-                        {
-                            value = (byte)(__instance.GetItem(item) + 1);
-                            if (!__instance.GetStackableItem((ItemList.Type)itemRef, 0))
-                            {
-                                __instance.SetStackableItem((ItemList.Type)itemRef, 0, true);
-                            }
-                            if (item == ItemList.Type.ITEM_BoostSystem)
-                            {
-                                if (SaveManager.Instance.GetOrb() == 3)
-                                {
-                                    SaveManager.Instance.SetOrb(4);
-                                }
-                                Debug.Log($"[SaveManager] Set Item {item} from {SaveManager.Instance.savedata.itemflag[(int)item]} to {value} | ITEM ID : {(int)item}");
-                                SaveManager.Instance.savedata.itemflag[(int)item] = value;
-                                SaveManager.Instance.RenewGetTotalItemCompletePercent();
-                                SaveManager.Instance.SetMiniFlag(Mini.CanDropCrystal, 1);
-                                SaveManager.Instance.GiveMaxCrystal();
-                                return false;
-                            }
-                        }
-                        else
-                        {
-                            return false;
-                        }
-                    }
-                    else
-                    {
-                        Debug.LogWarning($"[RANDOMIZER] Item {item}, Slot {value} was already claimed");
-                        return false;
-                    }
+                    return true;
                 }
-
+                value = SaveManager.Instance.GetItem(item);
+                value = (byte)Math.Min(value + 1, byte.MaxValue);
+                
             }
-
-
+            else if (item.ToString().Contains("STACKABLE"))
+            {
+                SaveManager.Instance.SetStackableItem(item, value,true);
+                return false;
+            }
             return true;
         }
 
@@ -204,6 +161,48 @@ namespace TeviRandomizer
         static void dynamicOrbChange(ref ItemList.Type item)
         {
             if (item == ItemList.Type.I19 || item == ItemList.Type.I20) EventManager.Instance.ReloadOrbStatus();
+        }
+
+        [HarmonyPatch(typeof(SaveManager),"SetStackableItem")]
+        [HarmonyPrefix]
+        static bool StackableItemChanges(ref ItemList.Type item,ref byte id,ref SaveManager __instance,ref float ___renewTimer_Item)
+        {
+
+            bool value = true;
+            if (id == 0)
+            {
+                value = false;
+                __instance.savedata.stackableCount[(int)(item - 1)] = 0;
+            }
+            else
+            {
+                __instance.savedata.stackableCount[(int)(item - 1)] = (byte) Math.Min(__instance.savedata.stackableCount[(int)(item - 1)]+1,byte.MaxValue);
+            }
+
+            Debug.Log("[SaveManager] " + item.ToString() + " set to "+ __instance.savedata.stackableCount[(int)(item - 1)]);
+            if (Application.isEditor || value)
+            {
+                ___renewTimer_Item = 0.03f;
+            }
+
+            if (item == ItemList.Type.STACKABLE_BAG)
+            {
+                __instance.RenewBagSize();
+            }
+            if (item == ItemList.Type.STACKABLE_HP && value)
+            {
+                EventManager.Instance.mainCharacter.maxhealth = __instance.GetMaxHP();
+                EventManager.Instance.mainCharacter.AddHealth(MainVar.instance.HP_ITEM, showNumber: true, fullyHeal: true);
+                Debug.Log("[SaveManager] Total HP collected is " + __instance.savedata.stackableCount[(int)(item - 1)] + ". Player MaxHP is now " + __instance.GetMaxHP());
+            }
+            if (item == ItemList.Type.STACKABLE_SHARD && value)
+            {
+                EventManager.Instance.mainCharacter.maxhealth = __instance.GetMaxHP();
+                EventManager.Instance.mainCharacter.AddHealth(MainVar.instance.HP_SHARD_ITEM, showNumber: true, fullyHeal: true);
+                Debug.Log("[SaveManager] Total SHARD collected is " + __instance.savedata.stackableCount[(int)(item - 1)] + ". Player MaxHP is now " + __instance.GetMaxHP());
+            }
+            EventManager.Instance.mainCharacter.maxhealth = __instance.GetMaxHP();
+            return false;
         }
 
 

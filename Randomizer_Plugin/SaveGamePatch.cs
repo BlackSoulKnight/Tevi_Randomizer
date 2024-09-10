@@ -9,9 +9,6 @@ namespace TeviRandomizer
 {
     class SaveGamePatch()
     {
-        //how is saveslot 0 be handled?
-
-
         static void decreaseBackupSaveSlot()
         {
             MainVar.instance._backupsaveslot--;
@@ -128,7 +125,6 @@ namespace TeviRandomizer
             eS3File.Save("Seed", RandomizerPlugin.seed);
             eS3File.Save("HintList", HintSystem.hintList);
             eS3File.Save("GoMode", RandomizerPlugin.GoMode);
-
             if(LocationTracker.active) {
                 eS3File.Save("Archipelago_ItemList", LocationTracker.getCollectedLocationList());
             }

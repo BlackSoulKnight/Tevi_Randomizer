@@ -278,12 +278,6 @@ namespace TeviRandomizer
         }
 
 
-
-
-
-
-
-
         //Crafting menu
         [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid), "AddItem")]
         [HarmonyPrefix]
@@ -466,25 +460,22 @@ namespace TeviRandomizer
         static public int getItemUpgradeCount(ItemList.Type _item)
         {
             int num = 0;
-            Upgradable item;
-            if (Enum.TryParse(_item.ToString(), out item))
+            if (SaveManager.Instance.GetItem(_item)>0)
             {
-                if (SaveManager.Instance.GetStackableItem((ItemList.Type)item, 0))
-                {
-                    num++;
-                }
-                else return num;
-                if (RandomizerPlugin.checkRandomizedItemGot(_item, 2))
-                {
-                    num++;
-                }
-                else return num;
-                if (RandomizerPlugin.checkRandomizedItemGot(_item, 3))
-                {
-                    num++;
-                }
-                else return num;
+                num++;
             }
+            else return num;
+            if (RandomizerPlugin.checkRandomizedItemGot(_item, 2))
+            {
+                num++;
+            }
+            else return num;
+            if (RandomizerPlugin.checkRandomizedItemGot(_item, 3))
+            {
+                num++;
+            }
+            else return num;
+            
             return num;
         }
 

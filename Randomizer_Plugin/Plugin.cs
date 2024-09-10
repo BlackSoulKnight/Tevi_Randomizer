@@ -154,7 +154,7 @@ namespace TeviRandomizer
                 harmonyPatchInstance.PatchAll(typeof(CraftingPatch));
                 harmonyPatchInstance.PatchAll(typeof(ShopPatch));
                 harmonyPatchInstance.PatchAll(typeof(EventPatch));
-                harmonyPatchInstance.PatchAll(typeof(ItemObtainPatch));
+                harmonyPatchInstance.PatchAll(typeof(ItemSystemPatch));
                 harmonyPatchInstance.PatchAll(typeof(SaveGamePatch));
                 //instance.PatchAll(typeof(ScalePatch));
                 harmonyPatchInstance.PatchAll(typeof(OrbPatch));
@@ -378,96 +378,12 @@ namespace TeviRandomizer
 
         static public bool checkItemGot(ItemList.Type item, byte slot) //not working?
         {
-
-            if(LocationTracker.active)
-            {
-                return LocationTracker.hasItem(item,slot); 
-            }
-            else
-            {
-                try
-                {
-                    Upgradable itemref;
-                    if (item.ToString().Contains("STACKABLE"))
-                    {
-                        return SaveManager.Instance.GetStackableItem(item, slot);
-
-                    }
-                    else if (item.ToString().Contains("Useable"))
-                    {
-                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleA) > 0 && item == ItemList.Type.Useable_WaffleAHoneycloud)
-                        {
-                            return true;
-                        }
-                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleB) > 0 && item == ItemList.Type.Useable_WaffleBMeringue)
-                        {
-                            return true;
-                        }
-                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleC) > 0 && item == ItemList.Type.Useable_WaffleCMorning)
-                        {
-                            return true;
-                        }
-                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleD) > 0 && item == ItemList.Type.Useable_WaffleDJellydrop)
-                        {
-                            return true;
-                        }
-                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleE) > 0 && item == ItemList.Type.Useable_WaffleElueberry)
-                        {
-                            return true;
-                        }
-                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaSmall) > 0 && item == ItemList.Type.Useable_VenaBombSmall)
-                        {
-                            return true;
-                        }
-                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaBig) > 0 && item == ItemList.Type.Useable_VenaBombBig)
-                        {
-                            return true;
-                        }
-                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaD) > 0 && item == ItemList.Type.Useable_VenaBombDispel)
-                        {
-                            return true;
-                        }
-                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaHB) > 0 && item == ItemList.Type.Useable_VenaBombHealBlock)
-                        {
-                            return true;
-                        }
-                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaBB) > 0 && item == ItemList.Type.Useable_VenaBombBunBun)
-                        {
-                            return true;
-                        }
-                        return false;
-                    }
-                    else
-                    {
-                        if (Enum.TryParse(item.ToString(), out itemref))
-                        {
-                            return SaveManager.Instance.GetStackableItem((ItemList.Type)itemref, slot);
-                        }
-                        else
-                        {
-                            return SaveManager.Instance.GetItem(item) > 0;
-                        }
-                    }
-                }
-                catch
-                {
-                    Debug.LogError($"[Randomizer] Could not check Item:{item} Slot:{slot}. Check if this is a valid Item");
-                    return false;
-                }
-            }
+            return LocationTracker.hasItem(item,slot); 
         }
+
         static public bool checkRandomizedItemGot(ItemList.Type item, byte slot)
         {
-
-            ItemData t = getRandomizedItem(item, slot);
-
-            if (LocationTracker.active)
-                return checkItemGot(item, slot);
-
-            item = t.getItemTyp();
-            slot = t.getSlotId();
             return checkItemGot(item, slot);
- 
         }
 
         static public Sprite getSprite(int itemID, bool custom = false)
@@ -665,6 +581,22 @@ namespace TeviRandomizer
         static bool disableOrbOverride(SaveManager __instance)
         {
             if (__instance.GetMiniFlag(Mini.OrbStatus) >= 3) return true;
+            return false;
+        }
+
+        //
+        [HarmonyPatch(typeof(SaveManager),"GetMemineCleared")]
+        [HarmonyPrefix]
+        static bool GetMemineCleared(ref int __result)
+        {
+            int num = 0;
+            for (int i = 0; i <= 5; i++)
+            {
+                if (checkRandomizedItemGot(ItemList.Type.STACKABLE_SHARD, (byte)i))
+                {
+                    num++;
+                }
+            }
             return false;
         }
 
