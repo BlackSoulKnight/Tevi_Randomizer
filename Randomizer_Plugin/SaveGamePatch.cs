@@ -25,7 +25,7 @@ namespace TeviRandomizer
         {
 
             byte saveslot = MainVar.instance._saveslot;
-            Dictionary<ItemData, ItemData> data = new Dictionary<ItemData, ItemData>();
+            Dictionary<string, string> data = new Dictionary<string, string>();
 
             string result = "";
             customSaveFileNames(ref result, ref saveslot);
@@ -35,14 +35,12 @@ namespace TeviRandomizer
                 ES3File eS3File = new ES3File(result);
                 try
                 {
-                    int[] keyItem = eS3File.Load<int[]>("RandoKeyItem");
-                    int[] keySlot = eS3File.Load<int[]>("RandoKeySlot");
-                    int[] valItem = eS3File.Load<int[]>("RandoValItem");
-                    int[] valSlot = eS3File.Load<int[]>("RandoValSlot");
+                    string[] keyLocation = eS3File.Load<string[]>("RandoLocation");
+                    string[] valItem = eS3File.Load<string[]>("RandoValItem");
 
-                    for (int i = 0; i < keyItem.Length; i++)
+                    for (int i = 0; i < keyLocation.Length; i++)
                     {
-                        data.Add(new ItemData(keyItem[i], keySlot[i]), new ItemData(valItem[i], valSlot[i]));
+                        data.Add(keyLocation[i], valItem[i]);
                     }
                 }
                 catch (Exception e)
@@ -102,25 +100,19 @@ namespace TeviRandomizer
             string result = "";
             customSaveFileNames(ref result, ref saveslot);
             ES3File eS3File = new ES3File(result);
-            Dictionary<ItemData, ItemData> s = RandomizerPlugin.__itemData;
+            Dictionary<string, string> s = RandomizerPlugin.__itemData;
 
-            int[] keyItem = new int[s.Count];
-            int[] keySlot = new int[s.Count];
-            int[] valSlot = new int[s.Count];
-            int[] valItem = new int[s.Count];
+            string[] keyItem = new string[s.Count];
+            string[] valItem = new string[s.Count];
             for (int i = 0; i < s.Count; i++)
             {
-                KeyValuePair<ItemData, ItemData> pair = s.ElementAt(i);
-                keyItem[i] = pair.Key.itemID;
-                keySlot[i] = pair.Key.slotID;
-                valItem[i] = pair.Value.itemID;
-                valSlot[i] = pair.Value.slotID;
+                KeyValuePair<string, string> pair = s.ElementAt(i);
+                keyItem[i] = pair.Key;
+                valItem[i] = pair.Value;
             }
 
-            eS3File.Save("RandoKeyItem", keyItem);
-            eS3File.Save("RandoKeySlot", keySlot);
+            eS3File.Save("RandoLocation", keyItem);
             eS3File.Save("RandoValItem", valItem);
-            eS3File.Save("RandoValSlot", valSlot);
             eS3File.Save("CustomDifficulty", RandomizerPlugin.customDiff);
             eS3File.Save("Seed", RandomizerPlugin.seed);
             eS3File.Save("HintList", HintSystem.hintList);

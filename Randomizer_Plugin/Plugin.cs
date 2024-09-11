@@ -110,7 +110,7 @@ namespace TeviRandomizer
         }
 
 
-        static public Dictionary<ItemData, ItemData> __itemData = new Dictionary<ItemData, ItemData>();
+        static public Dictionary<string, string> __itemData = new Dictionary<string, string>();
 
         static public int customDiff = -1; //fake diff
 
@@ -133,7 +133,6 @@ namespace TeviRandomizer
             harmonyPatchInstance.PatchAll(typeof(UI));
             toggleRandomizerPlugin();
 
-            // test Localizazion
             Logger.LogInfo($"Plugin Randomizer is loaded!");
 
         }
@@ -284,7 +283,8 @@ namespace TeviRandomizer
                 __itemData.Clear();
                 foreach (string block in blocks)
                 {
-                    ItemData data1, data2;
+                    string data2;
+                    string data1;
                     if (block.Length < 5) continue;
                     try
                     {
@@ -292,8 +292,8 @@ namespace TeviRandomizer
 
                         string[] itemDetails1 = completeItem[0].Split(',');
                         string[] itemDetails2 = completeItem[1].Split(',');
-                        data1 = new ItemData(int.Parse(itemDetails1[0]), int.Parse(itemDetails1[1]));
-                        data2 = new ItemData(int.Parse(itemDetails2[0]), int.Parse(itemDetails2[1]));
+                        data1 = $"{itemDetails1[0]} #{itemDetails1[1]}";
+                        data2 = itemDetails2[0];
                     }
                     catch
                     {
@@ -306,7 +306,7 @@ namespace TeviRandomizer
                     }
                     catch
                     {
-                        Logger.LogWarning($"Already changed {data1.getItemTyp()} slot {data1.getSlotId()}");
+                        Logger.LogWarning($"Already changed {data1}");
 
                     }
                 }
@@ -330,44 +330,44 @@ namespace TeviRandomizer
         }
 
 
-        static public ItemData getRandomizedItem(ItemList.Type itemid, byte slotid)
+        static public ItemList.Type getRandomizedItem(ItemList.Type itemid, byte slotid)
         {
-            ItemData data;
+            ItemList.Type data;
             try
             {
 
-                data = __itemData[new ItemData((int)itemid, (int)slotid)];
+                data = (ItemList.Type) Enum.Parse(typeof(ItemList.Type), __itemData[$"{itemid} #{slotid}"]);
             }
             catch
             {
                 //Debug.LogWarning($"Could not find {itemid.ToString()} {slotid}");
-                data = new ItemData((int)itemid, (int)slotid);
+                data = itemid;
             }
             return data;
         }
 
-        static public ItemData getRandomizedItem(int itemid, int slotid)
+        static public string getRandomizedItem(int itemid, int slotid)
         {
-            ItemData data;
+            string data;
             try
             {
 
-                data = __itemData[new ItemData(itemid, slotid)];
+                data = __itemData[$"{(ItemList.Type)itemid} #{slotid}"];
 
             }
             catch
             {
                 Debug.LogWarning($"Could not find {((ItemList.Type)itemid).ToString()} {slotid}");
-                data = new ItemData(itemid, slotid);
+                data = ((ItemList.Type)itemid).ToString();
             }
             return data;
         }
 
-        static public Dictionary<ItemData, ItemData> saveRando()
+        static public Dictionary<string, string> saveRando()
         {
             return __itemData;
         }
-        static public void loadRando(Dictionary<ItemData, ItemData> data)
+        static public void loadRando(Dictionary<string, string> data)
         {
             __itemData = data;
         }
@@ -396,7 +396,7 @@ namespace TeviRandomizer
         static void findNearestRandomizedItem(ref ItemTile tile, ref ItemList.Type nearestType)
         {
             if (tile == null) return;
-            nearestType = getRandomizedItem(tile.itemid, tile.GetSlotID()).getItemTyp();
+            nearestType = getRandomizedItem(tile.itemid, tile.GetSlotID());
         }
 
         // change how the item Bell Works
@@ -493,10 +493,10 @@ namespace TeviRandomizer
                 __instance.DisableMe();
                 return false;
             }
-            ItemData data = getRandomizedItem(__instance.itemid, ___slotid);
-            var spr = CommonResource.Instance.GetItem(data.itemID);
+            ItemList.Type data = getRandomizedItem(__instance.itemid, ___slotid);
+            var spr = CommonResource.Instance.GetItem((int)data);
 
-            if (data.itemID >= (int)ItemList.Type.BADGE_START && data.itemID <= (int)ItemList.Type.BADGE_MAX)
+            if (data >= ItemList.Type.BADGE_START && data <= ItemList.Type.BADGE_MAX)
             {
                 if (____secondsprite != null)
                 {
@@ -539,7 +539,7 @@ namespace TeviRandomizer
 
 
             if (checkRandomizedItemGot(__instance.itemid, ___slotid)) {
-                Debug.Log($"[ItemTile] {((ItemList.Type)data.itemID).ToString()} # {data.slotID.ToString()} visible in camera. Removed from map because player already obtained it.");
+                Debug.Log($"[ItemTile] {data} # visible in camera. Removed from map because player already obtained it.");
 
                 __instance.DisableMe();
                 return false;

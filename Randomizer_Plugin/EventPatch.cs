@@ -82,8 +82,8 @@ namespace TeviRandomizer
             }
             else if (em.EventStage == 40)
             {
-                ShopPatch.alreadyClaimed();
-                VenaItemClaimedCheck();
+                //ShopPatch.alreadyClaimed();
+                //VenaItemClaimedCheck();
             }
             return true;
         }

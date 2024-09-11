@@ -79,7 +79,7 @@ namespace TeviRandomizer
 
             ___iconbg.enabled = false;
             ___costBox.gameObject.SetActive(value: false);
-            ItemData data = RandomizerPlugin.getRandomizedItem(___craftList[___selected].GetItemType(), 1);
+            ItemList.Type data = RandomizerPlugin.getRandomizedItem(___craftList[___selected].GetItemType(), 1);
 
 
 
@@ -112,7 +112,7 @@ namespace TeviRandomizer
                     ___iconbg.enabled = true;
                     ___costBox.gameObject.SetActive(value: true);
                     ___costTitle.text = Localize.GetLocalizeTextWithKeyword("COST_NAME", contains: false);
-                    ___costValue.text = GemaItemManager.Instance.GetItemCost(data.getItemTyp()).ToString();
+                    ___costValue.text = GemaItemManager.Instance.GetItemCost(data).ToString();
                 }
                 else if (itemType.ToString().Contains("Useable"))
                 {
@@ -149,7 +149,7 @@ namespace TeviRandomizer
                     if (___craftList[___selected].isUpgrade)
                         ___selectedDesc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(itemType);
                     else
-                        ___selectedDesc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(data.getItemTyp());
+                        ___selectedDesc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(data);
 
                     if (___selectedDesc.text.Contains("[c2]"))
                     {
@@ -160,7 +160,7 @@ namespace TeviRandomizer
                         }
                         else
                         {
-                            ___selectedDesc.text = Localize.FilterLevelDescFromItem(data.getItemTyp(), ___selectedDesc.text);
+                            ___selectedDesc.text = Localize.FilterLevelDescFromItem(data, ___selectedDesc.text);
                         }
                     }
                     if (itemType == ItemList.Type.Useable_WaffleWonderTemp)
@@ -342,7 +342,7 @@ namespace TeviRandomizer
         {
 
 
-            ItemData data = RandomizerPlugin.getRandomizedItem(itype, 1);
+            ItemList.Type data = RandomizerPlugin.getRandomizedItem(itype, 1);
             __instance.isUpgrade = _isUpgrade;
             __instance.SetVisible(isVisible: true);
             ___itemType = itype;
@@ -361,7 +361,7 @@ namespace TeviRandomizer
             else if (itype >= ItemList.Type.BADGE_START && itype <= ItemList.Type.BADGE_MAX)
             {
                 b = 1;
-                __instance.UpdateIcon(data.getItemTyp());
+                __instance.UpdateIcon(data);
 
             }
             else if (itype.ToString().Contains("_OrbType") || itype.ToString().Contains("_OrbBoost"))
@@ -785,7 +785,7 @@ namespace TeviRandomizer
                     {
                         num5 = -3;
                     }
-                    ItemData rnd = RandomizerPlugin.getRandomizedItem(___currentItemType, 1);
+                    ItemList.Type rnd = RandomizerPlugin.getRandomizedItem(___currentItemType, 1);
                     if (!Enum.IsDefined(typeof(Upgradable), ___currentItemType.ToString()) && RandomizerPlugin.checkRandomizedItemGot(___currentItemType,1))
                     {
 
@@ -834,7 +834,7 @@ namespace TeviRandomizer
                         if (num5 == -3)
                         {
                             GemaUIPauseMenu_BottomBarPrompt.Instance.ShowErrorText("BottomBarError.LevelLimitReached");
-                            Debug.LogWarning($"[Randomizer] Already has {rnd.getItemTyp().ToString()}");
+                            Debug.LogWarning($"[Randomizer] Already has {rnd.ToString()}");
                         }
                         if (num5 == -4)
                         {

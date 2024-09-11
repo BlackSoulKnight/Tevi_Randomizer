@@ -774,23 +774,23 @@ namespace TeviRandomizer
             return true;
         }
 
-        public Dictionary<ItemData, ItemData> GetData()
+        public Dictionary<string, string> GetData()
         {
-            Dictionary<ItemData, ItemData> data = new Dictionary<ItemData, ItemData>();
+            Dictionary<string, string> data = new Dictionary<string, string>();
             foreach (Location loc in locations)
             {
 
 
 
-                ItemData item1 = new ItemData(loc.itemId, loc.slotId);
-                ItemData item2 = new ItemData(loc.newItem, loc.newSlotId);
+                string item1 = $"{loc.Itemname} #{loc.slotId}";
+                string item2 = ((ItemList.Type)loc.newItem).ToString();
                 try
                 {
                     data.Add(item1, item2);
                 }
                 catch
                 {
-                    Debug.LogWarning($"Already changed {item1.getItemTyp()} slot {item2.getSlotId()}");
+                    Debug.LogWarning($"Already changed {item1}. Dropping {item2}");
 
                 }
             }
@@ -804,45 +804,50 @@ namespace TeviRandomizer
 
 
 
-        static public void saveSpoilerLog(string FileName, Dictionary<ItemData, ItemData> itemData, bool debugWrite = false)
+        static public void saveSpoilerLog(string FileName, Dictionary<string, string> itemData, bool debugWrite = false)
         {
             if (!Directory.Exists(RandomizerPlugin.pluginPath + "Data")) Directory.CreateDirectory(RandomizerPlugin.pluginPath + "Data");
 
             StreamWriter spoilerLog = File.CreateText(RandomizerPlugin.pluginPath + "Data/" + FileName);;
-            foreach (KeyValuePair<ItemData, ItemData> item in itemData)
+            foreach (KeyValuePair<string, string> item in itemData)
             {
                 string itemName = "";
                 string line = "";
                 string line2 = "";
+                string[] keySep = item.Key.Split(new string[] { " #" }, StringSplitOptions.None);
+                //using only ItemList.Type for now
+                ItemList.Type value = (ItemList.Type)Enum.Parse(typeof(ItemList.Type),item.Value);
+                ItemList.Type key = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), keySep[0]);
+
                 if (!debugWrite)
                 {
-                    if (item.Value.itemID < 3000) itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + GemaItemManager.Instance.GetItemString((ItemList.Type)item.Value.itemID), false);
-                    else itemName = ((ItemList.Type)item.Value.itemID).ToString();
+                    if ((int)value < 3000) itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + GemaItemManager.Instance.GetItemString(value), false);
+                    else itemName = value.ToString();
                     line = $"Randomized Item: {itemName}"; // Slot: {item.Key.slotID}
                 }
-                line2 = $"Randomized Item: {item.Value.getItemTyp()} {item.Value.slotID}"; // Slot: 
+                line2 = $"Randomized Item: {value}";
                 for (int x = line.Length; x < 70; x++)
                     line += " ";
                 for (int x = line2.Length; x < 70; x++)
                     line2 += " ";
                 if (!debugWrite)
                 {
-                    if (item.Key.itemID < 3000) itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + GemaItemManager.Instance.GetItemString((ItemList.Type)item.Key.itemID), false);
-                    else itemName = ((ItemList.Type)item.Key.itemID).ToString();
+                    if ((int)key< 3000) itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + GemaItemManager.Instance.GetItemString(key), false);
+                    else itemName = key.ToString();
                     line += $"Original Item: {itemName}"; // Slot: {item.Value.slotID}
                 }
-                line2 += $"Original Item: {item.Key.getItemTyp()} {item.Key.slotID}"; // Slot: {item.Value.slotID}
+                line2 += $"Original Item: {item.Key}"; // Slot: {item.Value.slotID}
                 for (int x = line.Length; x < 140; x++)
                     line += " ";
 
                 for (int x = line2.Length; x < 140; x++)
                     line2 += " ";
-                Location loc = Instance.locations.Find(x => x.Itemname == item.Key.getItemTyp().ToString() && x.slotId == item.Key.slotID);
+                Location loc = Instance.locations.Find(x => x.Itemname == key.ToString() && x.slotId == int.Parse(keySep[1]));
                 if (loc != null) { line += $"Location: {loc.Loaction}\n"; }
                 else line += "\n";
                 if (loc != null) { line2 += $"Location: {loc.Loaction}\n"; }
                 else line2 += "\n";
-                if (item.Key.itemID < 3000)
+                if ((int)key < 3000)
                 {
 
                     if (debugWrite)

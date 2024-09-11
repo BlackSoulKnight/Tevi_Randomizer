@@ -59,16 +59,7 @@ namespace TeviRandomizer
             if (RandomizerPlugin.__itemData.Count == 0) return;
             extraList.Clear();
             //search from top to bottom for progression items
-            int collected = 0;
-            foreach(KeyValuePair<ItemData,ItemData> item in RandomizerPlugin.__itemData)
-            {
-                bool f = false;
-                if (RandomizerPlugin.checkRandomizedItemGot(item.Key.getItemTyp(), item.Key.getSlotId()))
-                {
-                    collected++;
-                    f = true;
-                }
-            }
+            int collected = LocationTracker.getListLenght();
             int a = (int)(RandomizerPlugin.__itemData.Count*0.75f * (float)(1f / numberOfHints));
             int nextHint = a  - (collected % a);
             System.Random rand = new System.Random(RandomizerPlugin.seed.GetHashCode());

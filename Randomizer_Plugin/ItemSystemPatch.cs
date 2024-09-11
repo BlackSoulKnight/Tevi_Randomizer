@@ -42,15 +42,10 @@ namespace TeviRandomizer
             }
 
             //add checked Location to list
-            if(LocationTracker.active)
-            {
-                LocationTracker.addItemToList(type, value);
-            }
-
-            ItemData data = RandomizerPlugin.getRandomizedItem(type, value);
-
-            value = (byte)data.slotID;
-            type = (ItemList.Type)data.itemID;
+            LocationTracker.addItemToList(type, value);
+            ItemList.Type data = RandomizerPlugin.getRandomizedItem(type, value);
+            value = 1;
+            type = data;
 
 
 
@@ -220,12 +215,12 @@ namespace TeviRandomizer
             if (data2.itemid.ToString().Contains("STACKABLE"))
             {
                 HUDObtainedItem.Instance.GiveItem(itemid, data2.GetSlotID());
-                itemid = RandomizerPlugin.getRandomizedItem(data2.itemid, data2.GetSlotID()).getItemTyp();
+                itemid = RandomizerPlugin.getRandomizedItem(data2.itemid, data2.GetSlotID());
             }
             else
             {
                 HUDObtainedItem.Instance.GiveItem(itemid, 1);
-                itemid = RandomizerPlugin.getRandomizedItem(data2.itemid, 1).getItemTyp();
+                itemid = RandomizerPlugin.getRandomizedItem(data2.itemid, 1);
             }
 
             if (itemid == ItemList.Type.STACKABLE_COG)

@@ -11,7 +11,6 @@
  (x) WorldItems
  (x) Vena Boss fight
      
-    Change this to the standart (unlimited item level possible)
 */
 
 using System.Collections.Generic;
@@ -36,6 +35,10 @@ namespace TeviRandomizer
         public static void addItemToList(ItemList.Type item, byte slot)
         {
             collectedLocationList.Add($"{item} #{slot}");
+        }
+        public static int getListLenght()
+        {
+            return collectedLocationList.Count();
         }
 
         

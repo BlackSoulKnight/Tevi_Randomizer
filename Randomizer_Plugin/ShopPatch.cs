@@ -321,7 +321,7 @@ namespace TeviRandomizer
             Traverse trav = Traverse.Create(__instance);
             if (InputButtonManager.Instance.GetButtonDown(13) && __instance.ShopType == 0)
             {
-                ItemData data;
+                ItemList.Type data;
                 if (___itemslots[___Selected].CanPurchase())
                 {
                     int price = ___itemslots[___Selected].GetPrice();
@@ -357,17 +357,17 @@ namespace TeviRandomizer
                         if(LocationTracker.active)
                             LocationTracker.addItemToList(___itemslots[___Selected].GetItem(), slot);
 
-                        if (data.getItemTyp().ToString().Contains("STACKABLE"))
+                        if (data.ToString().Contains("STACKABLE"))
                         {
-                            SaveManager.Instance.SetStackableItem(data.getItemTyp(), data.getSlotId(), value: true);
-                            if (data.getItemTyp() == ItemList.Type.STACKABLE_BAG)
+                            SaveManager.Instance.SetStackableItem(data, 1, value: true);
+                            if (data == ItemList.Type.STACKABLE_BAG)
                             {
                                 SettingManager.Instance.SetAchievement(Achievements.ACHI_SHOP_BUYBAG);
                             }
                         }
                         else
                         {
-                            SaveManager.Instance.SetItem(data.getItemTyp(), data.getSlotId());
+                            SaveManager.Instance.SetItem(data, 1);
                         }
 
 
@@ -408,11 +408,11 @@ namespace TeviRandomizer
             byte shopID = Traverse.Create(HUDShopMenu.Instance).Field("ShopID").GetValue<byte>();
             if (Traverse.Create(HUDShopMenu.Instance).Field("typeN").GetValue<Character.Type>() == Character.Type.CC)
             {
-                ___itype = RandomizerPlugin.getRandomizedItem(t, (byte)(shopID + 30)).getItemTyp();
+                ___itype = RandomizerPlugin.getRandomizedItem(t, (byte)(shopID + 30));
             }
             else
             {
-                ___itype = RandomizerPlugin.getRandomizedItem(t, 1).getItemTyp();
+                ___itype = RandomizerPlugin.getRandomizedItem(t, 1);
             }
 
             trav.Field("price").SetValue(_price);
@@ -457,26 +457,26 @@ namespace TeviRandomizer
             if (__instance.ShopType == 0)
             {
                 ItemList.Type item = ___itemslots[___Selected].GetItem();
-                ItemData data;
+                ItemList.Type data;
                 if (item.ToString().Contains("STACKABLE"))
                 {
                     data = RandomizerPlugin.getRandomizedItem(item, (byte)(___ShopID + 30));
-                    ___item_desc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(data.getItemTyp());
+                    ___item_desc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(data);
                 }
                 else
                 {
                     data = RandomizerPlugin.getRandomizedItem(item, 1);
-                    ___item_desc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(data.getItemTyp());
+                    ___item_desc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(data);
                 }
                 if (___item_desc.text.Contains("[c2]"))
                 {
-                    ___item_desc.text = Localize.FilterLevelDescFromItem(data.getItemTyp(), ___item_desc.text);
+                    ___item_desc.text = Localize.FilterLevelDescFromItem(data, ___item_desc.text);
                 }
-                if (data.getItemTyp().ToString().Contains("Useable_"))
+                if (data.ToString().Contains("Useable_"))
                 {
                     ___item_desc.text += Localize.GetLocalizeTextWithKeyword("ITEMDESC.WAFFLEBUY", contains: false);
                 }
-                if (data.getItemTyp() >= ItemList.Type.BADGE_START && data.getItemTyp() <= ItemList.Type.BADGE_MAX)
+                if (data >= ItemList.Type.BADGE_START && data <= ItemList.Type.BADGE_MAX)
                 {
                     TextMeshPro textMeshPro = ___item_desc;
                     textMeshPro.text = textMeshPro.text + "<br><br>" + Localize.GetLocalizeTextWithKeyword("ITEMDESC.EQUIPBADGETIPS", contains: false);
