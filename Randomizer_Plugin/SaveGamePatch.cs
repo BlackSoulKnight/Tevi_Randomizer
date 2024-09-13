@@ -33,21 +33,30 @@ namespace TeviRandomizer
             if (ES3.FileExists(result))
             {
                 ES3File eS3File = new ES3File(result);
-                try
-                {
-                    string[] keyLocation = eS3File.Load<string[]>("RandoLocation");
-                    string[] valItem = eS3File.Load<string[]>("RandoValItem");
 
-                    for (int i = 0; i < keyLocation.Length; i++)
-                    {
-                        data.Add(keyLocation[i], valItem[i]);
-                    }
-                }
-                catch (Exception e)
+                if (ArchipelagoInterface.Instance.isConnected)
                 {
-                    Debug.LogError(e);
+                    ArchipelagoInterface.Instance.storeData();
                 }
-                RandomizerPlugin.__itemData = data;
+                else
+                {
+                    try
+                    {
+                        string[] keyLocation = eS3File.Load<string[]>("RandoLocation");
+                        string[] valItem = eS3File.Load<string[]>("RandoValItem");
+
+                        for (int i = 0; i < keyLocation.Length; i++)
+                        {
+                            data.Add(keyLocation[i], valItem[i]);
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        Debug.LogError(e);
+                    }
+                    RandomizerPlugin.__itemData = data;
+                }
+
                 if (eS3File.KeyExists("CustomDifficulty"))
                 {
                     RandomizerPlugin.customDiff = eS3File.Load<int>("CustomDifficulty");
@@ -64,14 +73,20 @@ namespace TeviRandomizer
                 {
                     HintSystem.hintList = eS3File.Load<(string, string, byte)[]>("HintList");
                 }
-
-                if (LocationTracker.active)
+                if (eS3File.KeyExists("LocationList"))
                 {
-                    if (eS3File.KeyExists("LocationList"))
-                    {
-                        LocationTracker.setCollectedLocationList(eS3File.Load<string[]>("LocationList"));
-                    }
+                    LocationTracker.setCollectedLocationList(eS3File.Load<string[]>("LocationList"));
                 }
+                else
+                {
+                    LocationTracker.setCollectedLocationList([]);
+                }
+                if ( ArchipelagoInterface.Instance != null && ArchipelagoInterface.Instance.isConnected && eS3File.KeyExists("Archipelago_currItem"))
+                {
+                    ArchipelagoInterface.Instance.currentItemNR = eS3File.Load<int>("Archipelago_currItem");
+                    ArchipelagoInterface.Instance.refreshRecievedItems();
+                }
+
             }
         }
 
@@ -117,12 +132,17 @@ namespace TeviRandomizer
             eS3File.Save("Seed", RandomizerPlugin.seed);
             eS3File.Save("HintList", HintSystem.hintList);
             eS3File.Save("GoMode", RandomizerPlugin.GoMode);
-            if(LocationTracker.active) {
-                eS3File.Save("Archipelago_ItemList", LocationTracker.getCollectedLocationList());
+
+            eS3File.Save("Archipelago_ItemList", LocationTracker.getCollectedLocationList());
+          
+
+            if (ArchipelagoInterface.Instance != null && ArchipelagoInterface.Instance.isConnected)
+            {
+                eS3File.Save("Archipelago_currItem", ArchipelagoInterface.Instance.currentItemNR);
             }
 
             eS3File.Sync();
-            Randomizer.saveSpoilerLog($"rando.SpoilerSave{saveslot}.txt", s);
+            //Randomizer.saveSpoilerLog($"rando.SpoilerSave{saveslot}.txt", s);
         }
 
         [HarmonyPatch(typeof(SaveManager), "GetSaveFileName")]

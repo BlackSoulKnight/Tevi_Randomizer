@@ -28,41 +28,6 @@ using Character;
 namespace TeviRandomizer
 {
 
-
-    public class ItemData
-    {
-        public int itemID;
-        public int slotID;
-        public ItemData(int _itemID, int _slotID)
-        {
-            itemID = _itemID;
-            slotID = _slotID;
-        }
-
-        public override bool Equals(object obj)
-        {
-            if (obj is ItemData other)
-                return itemID == other.itemID && slotID == other.slotID;
-            else
-                return false;
-        }
-        public override int GetHashCode()
-        {
-            return itemID ^ slotID;
-
-        }
-        public ItemList.Type getItemTyp()
-        {
-            return (ItemList.Type)itemID;
-        }
-        public byte getSlotId()
-        {
-            return (byte)slotID;
-        }
-
-    }
-
-
     public enum Upgradable
     {
         ITEM_KNIFE = 10,
@@ -124,8 +89,12 @@ namespace TeviRandomizer
         static public Randomizer randomizer;
         static private bool randomizerEnabled = false;
         static private Harmony harmonyPatchInstance = new Harmony("Randomizer");
+
+
         private void Awake()
         {
+            this.gameObject.AddComponent<ArchipelagoInterface>();
+            ArchipelagoInterface.Instance = gameObject.GetComponent<ArchipelagoInterface>();
             Localize.GetLocalizeTextWithKeyword("", false);
             System.IO.Directory.CreateDirectory(pluginPath + "Data");
             randomizer = Randomizer.Instance;
@@ -164,11 +133,6 @@ namespace TeviRandomizer
                 randomizerEnabled = true;
                 return true;
             }
-        }
-
-        static public void disableRandomizerPlugin()
-        {
-
         }
 
         static void addLang()
@@ -330,38 +294,33 @@ namespace TeviRandomizer
         }
 
 
-        static public ItemList.Type getRandomizedItem(ItemList.Type itemid, byte slotid)
+        static public ItemList.Type getRandomizedItem(ItemList.Type itemid, byte slotid) => getRandomizedItem(itemid.ToString(), slotid);
+ 
+        static public ItemList.Type getRandomizedItem(string item, byte slot)
         {
+
             ItemList.Type data;
-            try
-            {
 
-                data = (ItemList.Type) Enum.Parse(typeof(ItemList.Type), __itemData[$"{itemid} #{slotid}"]);
+            if (ArchipelagoInterface.Instance.isConnected && !ArchipelagoInterface.Instance.isItemNative($"{item} #{slot}") || item == "Remote")
+            {
+                data = ArchipelagoInterface.Instance.isItemProgessive($"{item} #{slot}") ? ArchipelagoInterface.remoteItemProgressive : ArchipelagoInterface.remoteItem;
             }
-            catch
+            else
             {
-                //Debug.LogWarning($"Could not find {itemid.ToString()} {slotid}");
-                data = itemid;
-            }
-            return data;
-        }
-
-        static public string getRandomizedItem(int itemid, int slotid)
-        {
-            string data;
-            try
-            {
-
-                data = __itemData[$"{(ItemList.Type)itemid} #{slotid}"];
-
-            }
-            catch
-            {
-                Debug.LogWarning($"Could not find {((ItemList.Type)itemid).ToString()} {slotid}");
-                data = ((ItemList.Type)itemid).ToString();
+                try { 
+                    data = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), __itemData[$"{item} #{slot}"]);
+                }
+                catch
+                {
+                    //Debug.LogWarning($"Could not find {itemid.ToString()} {slotid}");
+                    data = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), item);
+                }
             }
             return data;
         }
+
+
+
 
         static public Dictionary<string, string> saveRando()
         {
@@ -374,6 +333,7 @@ namespace TeviRandomizer
         static public void deloadRando()
         {
             __itemData.Clear();
+            LocationTracker.clearItemList();
         }
 
         static public bool checkItemGot(ItemList.Type item, byte slot) //not working?

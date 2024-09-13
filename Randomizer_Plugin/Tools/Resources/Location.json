@@ -5095,10 +5095,6 @@
             {
                 "Method": "ITEM_Rotater",
                 "Difficulty": 0
-            },
-            {
-                "Method": "",
-                "Difficulty": 0
             }
         ]
     },
@@ -5120,10 +5116,6 @@
         "Requirement": [
             {
                 "Method": "ITEM_Rotater",
-                "Difficulty": 0
-            },
-            {
-                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -5499,10 +5491,6 @@
         "Requirement": [
             {
                 "Method": "ITEM_AREABOMB && ITEM_LINEBOMB",
-                "Difficulty": 0
-            },
-            {
-                "Method": "",
                 "Difficulty": 0
             }
         ]

@@ -16,6 +16,7 @@ using JetBrains.Annotations;
 using UnityEngine.EventSystems;
 using RewiredConsts;
 using System.Net;
+using UnityEngine.UI;
 
 
 
@@ -135,7 +136,7 @@ namespace TeviRandomizer
     public class RandomizerUI : MonoBehaviour
     {
         private GameObject[][][] options;
-        private int tab = 0, side = 0, selected = 0;
+        private int tab = 1, side = 0, selected = 0;
         private bool isEditing = false; 
         private bool finishEditing = false;
         private Rewired.Player player;
@@ -170,6 +171,39 @@ namespace TeviRandomizer
                     slider.onValueChanged.AddListener(delegate { t.transform.Find("Number").gameObject.GetComponent<TextMeshProUGUI>().text = slider.value.ToString(); });
                     UI.settings.Add(t.name, slider);
                 }
+                
+                else if(t.name.Contains("TextInput")){
+                    TMP_InputField inputField = t.GetComponentInChildren<TMP_InputField>();
+                    inputField.onSubmit.AddListener(delegate
+                    {
+                        finishEditing = true;
+                        EventSystem.current.SetSelectedGameObject(null);
+                    });
+                    UI.settings.Add(t.name, inputField);
+                }
+                else if (t.name.Contains("Button"))
+                {
+
+                    if (t.name.Contains("Connect"))
+                    {
+                        t.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate {
+
+                            string uri = ((TMP_InputField)UI.settings["TextInput Server"]).text;
+                            int port = int.Parse(((TMP_InputField)UI.settings["TextInput Port"]).text);
+                            string user = ((TMP_InputField)UI.settings["TextInput User"]).text;
+                            string password = ((TMP_InputField)UI.settings["TextInput Password"]).text;
+
+                            if (ArchipelagoInterface.Instance.connectToRoom(uri, port, user, password))
+                            {
+                                UnityEngine.Cursor.visible = false;
+                                GemaSuperSample.Instance.ChangeRenderScaleAnimation(1);
+                                gameObject.SetActive(false);
+                            }
+
+                        });
+                    }
+                }
+                
             }
             return option; 
         }
@@ -445,9 +479,9 @@ namespace TeviRandomizer
             }
             if (InputButtonManager.Instance.GetButtonDown(14))
             {
-                UnityEngine.Cursor.visible = false;
-                GemaSuperSample.Instance.ChangeRenderScaleAnimation(1);
-                this.gameObject.SetActive(false);
+                //UnityEngine.Cursor.visible = false;
+                //GemaSuperSample.Instance.ChangeRenderScaleAnimation(1);
+                //this.gameObject.SetActive(false);
             }
             if(InputButtonManager.Instance.GetButton(7) && InputButtonManager.Instance.GetButton(8))
             {

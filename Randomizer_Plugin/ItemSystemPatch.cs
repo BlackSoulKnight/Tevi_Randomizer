@@ -20,7 +20,7 @@ namespace TeviRandomizer
         //Hotswap item recieved
         [HarmonyPatch(typeof(HUDObtainedItem), "GiveItem")]
         [HarmonyPrefix]
-        static void ObtainItem(ref ItemList.Type type, ref byte value)
+        static void ObtainItem(ref ItemList.Type type, ref byte value, ref bool doRandomBadge)
         {
             if (type.ToString().Contains("_OrbType"))
             {
@@ -41,12 +41,21 @@ namespace TeviRandomizer
                 }
             }
 
-            //add checked Location to list
-            LocationTracker.addItemToList(type, value);
-            ItemList.Type data = RandomizerPlugin.getRandomizedItem(type, value);
-            value = 1;
-            type = data;
+            //a native item pickup
+            if (!doRandomBadge)
+            {
+                LocationTracker.addItemToList(type, value);
 
+                ItemList.Type data = RandomizerPlugin.getRandomizedItem(type, value);
+                type = data;
+                
+                value = 1;
+            }
+            else
+            {
+                //Archipelago implementation
+
+            }
 
 
         }
@@ -129,6 +138,14 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static bool ItemChanges(ref ItemList.Type item, ref byte value, ref SaveManager __instance)
         {
+            if(ArchipelagoInterface.Instance.isConnected)
+            {
+                if(item == ArchipelagoInterface.remoteItem || item == ArchipelagoInterface.remoteItemProgressive)
+                {
+                    return false;
+                }
+            }
+
             if (item >= ItemList.Type.BADGE_START && item <= ItemList.Type.BADGE_MAX && SaveManager.Instance.GetMiniFlag(Mini.UnlockedBadge) <= 0)
             {
                 SaveManager.Instance.SetMiniFlag(Mini.UnlockedBadge, 1);
@@ -256,11 +273,11 @@ namespace TeviRandomizer
             {
                 FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.BADGE);
             }
-            else if (itemid.ToString().Contains("ITEM") || itemid.ToString().Contains("QUEST") || itemid == ItemList.Type.STACKABLE_BAG)
+            else if (itemid.ToString().Contains("ITEM") || itemid.ToString().Contains("QUEST") || itemid == ItemList.Type.STACKABLE_BAG || itemid.ToString().Contains("Useable"))
             {
                 FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.ITEM);
             }
-            else if (itemid.ToString().Contains("Useable"))
+            else if (ArchipelagoInterface.Instance.isConnected && (itemid == ArchipelagoInterface.remoteItem || itemid == ArchipelagoInterface.remoteItemProgressive))
             {
                 FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.ITEM);
             }

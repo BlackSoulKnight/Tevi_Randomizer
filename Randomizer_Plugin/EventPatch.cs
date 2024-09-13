@@ -31,11 +31,11 @@ namespace TeviRandomizer
                 }
                 for (int i = RandomizerPlugin.extraPotions[0]; i > 0; i--)
                 {
-                    SaveManager.Instance.SetStackableItem(ItemList.Type.STACKABLE_RATK, (byte)(64 - i), true);
+                    SaveManager.Instance.SetItem(ItemList.Type.STACKABLE_RATK, 1, true);
                 }
                 for (int i = RandomizerPlugin.extraPotions[1]; i > 0; i--)
                 {
-                    SaveManager.Instance.SetStackableItem(ItemList.Type.STACKABLE_MATK, (byte)(64 - i), true);
+                    SaveManager.Instance.SetItem(ItemList.Type.STACKABLE_MATK, 1, true);
                 }
 
                 if (RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart])

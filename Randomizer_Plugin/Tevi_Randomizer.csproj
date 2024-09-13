@@ -37,6 +37,10 @@
 	<Reference Include="Rewired_Core">
     <HintPath>Rewired_Core.dll</HintPath>
   </Reference>	
+
+	<Reference Include="Archipelago MultiClient">
+    <HintPath>Archipelago.MultiClient.Net.dll</HintPath>
+  </Reference>	
   
   <Reference Include="Rewired_Windows_Functions">
     <HintPath>Rewired_Windows_Functions.dll</HintPath>
