@@ -1,16 +1,3 @@
-/* Define:
-        how Items are recieved
-        how Items are send
-        how to hide collected Items
-        Item ID resolve
-
-    v recheck for Archipelago items
- () Crafting
- () Shop
- () WorldItems
-     Add item sending to Archipelago server
-     
-*/
 
 using System.Collections.Generic;
 using System.Linq;

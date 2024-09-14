@@ -354,8 +354,7 @@ namespace TeviRandomizer
                         data = RandomizerPlugin.getRandomizedItem(___itemslots[___Selected].GetItem(),slot);
 
                         // SetItem does not have a function to add a Location check to the list
-                        if(LocationTracker.active)
-                            LocationTracker.addItemToList(___itemslots[___Selected].GetItem(), slot);
+                        LocationTracker.addItemToList(___itemslots[___Selected].GetItem(), slot);
 
                         if (data.ToString().Contains("STACKABLE"))
                         {

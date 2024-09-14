@@ -3302,7 +3302,7 @@
     {
         "Itemname": "BADGE_DodgeEPBoost",
         "Location": "Lab",
-        "slotId": 18,
+        "slotId": 1,
         "Requirement": [
             {
                 "Method": "",

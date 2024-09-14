@@ -132,8 +132,7 @@ namespace TeviRandomizer
             eS3File.Save("Seed", RandomizerPlugin.seed);
             eS3File.Save("HintList", HintSystem.hintList);
             eS3File.Save("GoMode", RandomizerPlugin.GoMode);
-
-            eS3File.Save("Archipelago_ItemList", LocationTracker.getCollectedLocationList());
+            eS3File.Save("LocationList", LocationTracker.getCollectedLocationList());
           
 
             if (ArchipelagoInterface.Instance != null && ArchipelagoInterface.Instance.isConnected)

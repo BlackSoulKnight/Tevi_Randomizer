@@ -3,6 +3,7 @@ using HarmonyLib;
 using Map;
 using System;
 using UnityEngine;
+using static SaveManager;
 
 namespace TeviRandomizer
 {
@@ -48,8 +49,7 @@ namespace TeviRandomizer
 
                 ItemList.Type data = RandomizerPlugin.getRandomizedItem(type, value);
                 type = data;
-                
-                value = 1;
+                value = 255;
             }
             else
             {
@@ -149,6 +149,7 @@ namespace TeviRandomizer
             if (item >= ItemList.Type.BADGE_START && item <= ItemList.Type.BADGE_MAX && SaveManager.Instance.GetMiniFlag(Mini.UnlockedBadge) <= 0)
             {
                 SaveManager.Instance.SetMiniFlag(Mini.UnlockedBadge, 1);
+                value = 1;
             }
             if (item.ToString().Contains("ITEM"))
             {
@@ -188,7 +189,12 @@ namespace TeviRandomizer
             }
             else
             {
-                __instance.savedata.stackableCount[(int)(item - 1)] = (byte) Math.Min(__instance.savedata.stackableCount[(int)(item - 1)]+1,byte.MaxValue);
+                byte val = (byte)Math.Min(__instance.savedata.stackableCount[(int)(item - 1)] + 1, byte.MaxValue);
+                __instance.savedata.stackableCount[(int)(item - 1)] = val;
+                if(item == ItemList.Type.STACKABLE_BAG)
+                {
+                    __instance.savedata.stackableItemList[(int)(item - 1), Math.Min((byte)(val - 1+30), (byte)35)] = true;
+                }
             }
 
             Debug.Log("[SaveManager] " + item.ToString() + " set to "+ __instance.savedata.stackableCount[(int)(item - 1)]);

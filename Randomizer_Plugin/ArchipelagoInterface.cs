@@ -1,17 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq.Expressions;
-using System.Text;
 using Archipelago.MultiClient.Net;
 using Archipelago.MultiClient.Net.Enums;
 using Archipelago.MultiClient.Net.Helpers;
 using Archipelago.MultiClient.Net.Models;
 using Archipelago.MultiClient.Net.Packets;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Steamworks.Ugc;
 using UnityEngine;
-using static System.Collections.Specialized.BitVector32;
+
+
+/*
+ * Things missing:
+ * () Automatic reconnect after loosing connection
+ * () Send all Locations once after a disconnect
+ * () Item Cheating
+ * () Remove Remote Items after Dieing
+ * () Disconnect from a server
+ * () Change Sprite and Text of Remote Items 
+ * () Teleport To morose Give an ItemCheck?
+ * () Recieve all items from server
+ * () Remote items are not on the minimap when discoverd / no minimap icon
+ * () Shops are broken
+ */
+
 
 namespace TeviRandomizer
 {
@@ -34,7 +45,7 @@ namespace TeviRandomizer
         public static ArchipelagoInterface Instance = null;
 
         private ArchipelagoSession session = null;
-        private string uri, user;
+        private string uri, user, password;
         private int port;
         private long player;
         private LoginResult loginResult = null;
@@ -88,6 +99,7 @@ namespace TeviRandomizer
             this.uri = uri;
             this.port = port;
             this.user = user;
+            this.password = password;
             this.player = session.ConnectionInfo.Slot;
             this.isConnected = true;
             sessionsItemNR = 0;
@@ -96,6 +108,8 @@ namespace TeviRandomizer
             long extraPotions = (long)success.SlotData["attackMode"];
             RandomizerPlugin.extraPotions = [(int)extraPotions,(int)extraPotions];
             RandomizerPlugin.customFlags[(int)CustomFlags.TempOption] = (long)success.SlotData["openMorose"] >0;
+            RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart] = (long)success.SlotData["CeliaSable"] >0;
+            RandomizerPlugin.GoMode = (int)(long)success.SlotData["GoalCount"];
             getOwnLocationData(success.SlotData["locationData"]);
             storeData();
             return true;
@@ -144,24 +158,30 @@ namespace TeviRandomizer
 
         public void checkoutLocation(string location)
         {
-            long id;
-            try
+            if (this.isConnected)
             {
-                id = locations[location].id;
+                long id;
+                try
+                {
+                    id = locations[location].id;
+                }
+                catch
+                {
+                    Debug.LogError("location not found in Location Dictionary");
+                    return;
+                }
+                session.Locations.CompleteLocationChecks(id);
             }
-            catch 
-            {
-                Debug.LogError("location not found in Location Dictionary");
-                return;
-            }
-            session.Locations.CompleteLocationChecks(id);
         }
 
         public void sendGOAL()
         {
-            var statusUpdatePacket = new StatusUpdatePacket();
-            statusUpdatePacket.Status = ArchipelagoClientState.ClientGoal;
-            session.Socket.SendPacket(statusUpdatePacket);
+            if (this.isConnected)
+            {
+                var statusUpdatePacket = new StatusUpdatePacket();
+                statusUpdatePacket.Status = ArchipelagoClientState.ClientGoal;
+                session.Socket.SendPacket(statusUpdatePacket);
+            }
         }
 
         public void storeData()
@@ -226,8 +246,8 @@ namespace TeviRandomizer
                 }
 
                 //using setitem for debugging
-                SaveManager.Instance.SetItem(teviItem, 1);
-                //HUDObtainedItem.Instance.GiveItem(teviItem, 1, true);
+                //SaveManager.Instance.SetItem(teviItem, 1);
+                HUDObtainedItem.Instance.GiveItem(teviItem, 1, true);
                 sessionsItemNR++;
                 currentItemNR++;
                 newItems.Remove(item);

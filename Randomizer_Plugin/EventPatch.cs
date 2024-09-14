@@ -277,7 +277,9 @@ namespace TeviRandomizer
             if (SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_COG) < RandomizerPlugin.GoMode)
             {
                 __result = true;
+                return false;
             }
+            ArchipelagoInterface.Instance.sendGOAL();
             return false;
         }
 
