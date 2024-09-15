@@ -279,7 +279,6 @@ namespace TeviRandomizer
                 __result = true;
                 return false;
             }
-            ArchipelagoInterface.Instance.sendGOAL();
             return false;
         }
 
@@ -303,6 +302,17 @@ namespace TeviRandomizer
                 return false;
             }
             return true;
+        }
+
+
+        [HarmonyPatch(typeof(END_REVENANCE),"EVENT")]
+        [HarmonyPrefix]
+        static void EndArchipelago()
+        {
+            if(EventManager.Instance.EventStage == 40 && EventManager.Instance.EventTime >=2.33f)
+            {
+                ArchipelagoInterface.Instance.sendGOAL();
+            }
         }
     }
 

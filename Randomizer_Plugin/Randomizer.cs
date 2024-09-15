@@ -272,7 +272,7 @@ namespace TeviRandomizer
 
         public Randomizer()
         {
-            string path = BepInEx.Paths.PluginPath + "/tevi_randomizer/resource/";
+            string path = RandomizerPlugin.pluginPath + "/resource/";
 
             itemPool = new List<(int, int)>();
             /*

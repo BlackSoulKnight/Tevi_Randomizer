@@ -82,7 +82,7 @@ namespace TeviRandomizer
         static public bool[] customFlags = new bool[Enum.GetNames(typeof(CustomFlags)).Length];
         static public int[] extraPotions = [0, 0]; // Hardcoded omo
         static public int GoMode = -1;
-        static public string pluginPath = BepInEx.Paths.PluginPath + "/tevi_randomizer/";
+        static public string pluginPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         static public string seed;
 
 
@@ -241,7 +241,7 @@ namespace TeviRandomizer
         {
             try
             {
-                string path = $"{BepInEx.Paths.PluginPath}/tevi_randomizer/data/file.dat";
+                string path = $"{RandomizerPlugin.pluginPath}/data/file.dat";
                 string json = File.ReadAllText(path);
                 string[] blocks = json.Split(';');
                 __itemData.Clear();

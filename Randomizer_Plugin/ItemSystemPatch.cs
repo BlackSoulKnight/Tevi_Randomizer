@@ -49,14 +49,16 @@ namespace TeviRandomizer
 
                 ItemList.Type data = RandomizerPlugin.getRandomizedItem(type, value);
                 type = data;
-                value = 255;
+
             }
             else
             {
                 //Archipelago implementation
 
             }
-
+            value = 255;
+            if (type.ToString().Contains("STACKABLE"))
+                value = 1;
 
         }
 
@@ -146,10 +148,12 @@ namespace TeviRandomizer
                 }
             }
 
-            if (item >= ItemList.Type.BADGE_START && item <= ItemList.Type.BADGE_MAX && SaveManager.Instance.GetMiniFlag(Mini.UnlockedBadge) <= 0)
+            if (item >= ItemList.Type.BADGE_START && item <= ItemList.Type.BADGE_MAX)
             {
-                SaveManager.Instance.SetMiniFlag(Mini.UnlockedBadge, 1);
                 value = 1;
+                if(SaveManager.Instance.GetMiniFlag(Mini.UnlockedBadge) <= 0)
+                    SaveManager.Instance.SetMiniFlag(Mini.UnlockedBadge, 1);
+
             }
             if (item.ToString().Contains("ITEM"))
             {

@@ -261,7 +261,7 @@ namespace TeviRandomizer
         {
             BinaryFormatter binaryFormatter = new BinaryFormatter();
             byte area = WorldManager.Instance.Area;
-            string text = $"{BepInEx.Paths.PluginPath}/tevi_randomizer/CustomMaps/CustomMap{area}.dat";
+            string text = $"{RandomizerPlugin.pluginPath}/CustomMaps/CustomMap{area}.dat";
             if (File.Exists(text))
             {
                 FileStream fileStream = File.Open(text, FileMode.Open);

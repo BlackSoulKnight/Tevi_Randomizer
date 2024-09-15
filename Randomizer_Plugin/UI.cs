@@ -42,7 +42,7 @@ namespace TeviRandomizer
 
 
         static byte menuSlot;
-        static GameObject RandoUIPrefab = AssetBundle.LoadFromFile(BepInEx.Paths.PluginPath + "/tevi_randomizer/resource/randomizerui").LoadAsset<GameObject>("Randomizer Setting");
+        static GameObject RandoUIPrefab = AssetBundle.LoadFromFile(RandomizerPlugin.pluginPath + "/resource/randomizerui").LoadAsset<GameObject>("Randomizer Setting");
 
         [HarmonyPatch(typeof(GemaTitleScreenManager),"delayAwake")]
         [HarmonyPostfix]
@@ -51,7 +51,7 @@ namespace TeviRandomizer
             settings.Clear();
             RandomizerPlugin.deloadRando();
             RandomizerPlugin.customDiff = -1;
-            string path = BepInEx.Paths.PluginPath + "/tevi_randomizer/resource/";
+            string path = RandomizerPlugin.pluginPath+ "/resource/";
 
             //GameObject newSelection = new GameObject("Select Slot", typeof(RectTransform));
             //newSelection.AddComponent<GemaMainMenuSelectionSlot>();

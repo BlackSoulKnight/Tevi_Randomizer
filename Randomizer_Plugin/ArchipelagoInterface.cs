@@ -20,7 +20,7 @@ using UnityEngine;
  * () Teleport To morose Give an ItemCheck?
  * () Recieve all items from server
  * () Remote items are not on the minimap when discoverd / no minimap icon
- * () Shops are broken
+ * (x) Shops are broken
  */
 
 
@@ -220,7 +220,7 @@ namespace TeviRandomizer
 
         void Update()
         {
-            if (newItems.Count > 0 && WorldManager.Instance != null && !EventManager.Instance.IsChangingMap() && WorldManager.Instance.MapInited && !HUDObtainedItem.Instance.isDisplaying())
+            if (newItems.Count > 0 && WorldManager.Instance != null && !EventManager.Instance.IsChangingMap() && WorldManager.Instance.MapInited && !HUDObtainedItem.Instance.isDisplaying() && GemaUIPauseMenu.Instance.GetAllowPause())
             {
                 ItemList.Type teviItem;
                 ItemInfo item = newItems[0];
