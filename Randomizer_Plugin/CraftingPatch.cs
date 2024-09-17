@@ -80,16 +80,18 @@ namespace TeviRandomizer
             ___iconbg.enabled = false;
             ___costBox.gameObject.SetActive(value: false);
             ItemList.Type data = RandomizerPlugin.getRandomizedItem(___craftList[___selected].GetItemType(), 1);
-
+            byte slot = 1;
 
 
             ItemList.Type itemType = ___craftList[___selected].GetItemType();
             if (itemType.ToString().Contains("ITEM"))
             {
-                data = RandomizerPlugin.getRandomizedItem(itemType, (byte)(SaveManager.Instance.GetItem(itemType) + 1));
+                slot = (byte)(SaveManager.Instance.GetItem(itemType) + 1);
+                data = RandomizerPlugin.getRandomizedItem(itemType, slot);
                 if (___craftList[___selected].isUpgrade)
                 {
-                    data = RandomizerPlugin.getRandomizedItem(itemType, (byte)(getItemUpgradeCount(itemType) + 1));
+                    slot = (byte)(getItemUpgradeCount(itemType) + 1);
+                    data = RandomizerPlugin.getRandomizedItem(itemType, slot);
                 }
             }
 
@@ -143,6 +145,18 @@ namespace TeviRandomizer
                 {
                     ___selectedDesc.text = "<font-weight=200>" + Localize.GetLocalizeTextWithKeyword("ITEMDESC.ORBTYPESERIES", contains: false);
                     ___selectedDesc.text = Localize.AddColorToBadgeDesc(___selectedDesc.text);
+                }
+                else if (data == ItemList.Type.I10|| data == ItemList.Type.I11)
+                {
+                    if (ArchipelagoInterface.Instance.isConnected)
+                    {
+                        if (data == ItemList.Type.I10 || data == ItemList.Type.I11)
+                        {
+                            string itemName = ArchipelagoInterface.Instance.getLocItemName(itemType, slot);
+                            string playerName = ArchipelagoInterface.Instance.getLocPlayerName(itemType, slot);
+                            ___selectedDesc.text = $"You found {itemName} for {playerName}";
+                        }
+                    }
                 }
                 else
                 {
@@ -353,6 +367,8 @@ namespace TeviRandomizer
 
 
 
+
+
             byte b = 0;
             if (itype == ItemList.Type.Function_MaterialExchangeA || itype == ItemList.Type.Function_MaterialExchangeB)
             {
@@ -390,6 +406,12 @@ namespace TeviRandomizer
                     }
                 }
             }
+            if (ArchipelagoInterface.Instance.isConnected && itype.ToString().Contains("BADGE") && (data == ItemList.Type.I10 || data == ItemList.Type.I11))
+            {
+                string itemName = ArchipelagoInterface.Instance.getLocItemName(itype, 1);
+                ___nameText.text = Localize.GetLocalizeTextWithKeyword("CRAFT_CraftItem", contains: false) + " "+itemName;
+            }
+
             int num = 0;
             int num2 = 0;
             switch (b)

@@ -22,10 +22,11 @@ Thanatara Canyon:Oasis:ITEM_AirDash
 Thanatara Canyon:Ruins Entrance:
 Thanatara Canyon:Heavens Valley:ITEM_LINEBOMB
 Thanatara Canyon:Morose Transit:DieMauerMussWeg
+Thanatara Canyon:Morose Transit:ITEM_LINEBOMB
 Thanatara Canyon:Desert Base Entrance:
 Thanatara Canyon:Crafting:
 Thanatara Canyon:Item Upgrade:
-Thanatara Canyon:Memine All races:AllMemine
+Thanatara Canyon:Memine All:AllMemine
 Memine All::
 Crafting::
 Item Upgrade::
@@ -52,7 +53,7 @@ Travoll Mines:Thanatara Canyon:ITEM_LINEBOMB
 Travoll Mines:Travoll Mines Part 2:ITEM_BOMBFUEL && ITEM_LINEBOMB
 Travoll Mines:Travoll Mines Part 2:ITEM_KNIFE && ITEM_LINEBOMB
 Travoll Mines Part 2:Travoll Mines:
-Travoll Mines Part 2:LavaWorld:
+Travoll Mines Part 2:Magma Pits:
 Travoll Mines Part 2:Swamp Entrance:ITEM_SLIDE
 Travoll Mines Part 2:Forest:
 Travoll Industrie:CopperWood:ITEM_LINEBOMB
@@ -116,20 +117,20 @@ Snowveil Above HQ:DreamKeeper Outside Right:ITEM_WALLJUMP
 Snowveil Above HQ:DreamKeeper Outside Right:ITEM_JETPACK
 Golden Hands HQ:Golden Hands HQ Sewer:ITEM_LINEBOMB && ChargeShot
 Golden Hands HQ Sewer:Snow City:
-LavaWorld:Swamp Entrance:
-LavaWorld:Swamp:ChargeShot && ITEM_LINEBOMB
-LavaWorld:LavaWorld Part 2:ITEM_JETPACK && ITEM_SLIDE
-LavaWorld:LavaWorld Part 2:ITEM_SLIDE && ITEM_AirDash && ChargeShot
-LavaWorld:LavaWorld Part 2:ITEM_SLIDE &&  ITEM_DOUBLEJUMP && ChargeShot
-LavaWorld:LavaWorld Part 2:ITEM_SLIDE &&  ITEM_HIJUMP && ChargeShot
-LavaWorld:LavaWorld Part 2:ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_JETPACK
-LavaWorld Part 2:Sinners Entrance:ITEM_Rotater && ITEM_AirSlide && ITEM_SLIDE
+Magma Pits:Swamp Entrance:
+Magma Pits:Swamp:ChargeShot && ITEM_LINEBOMB
+Magma Pits:Magma Depths:ITEM_JETPACK && ITEM_SLIDE
+Magma Pits:Magma Depths:ITEM_SLIDE && ITEM_AirDash && ChargeShot
+Magma Pits:Magma Depths:ITEM_SLIDE &&  ITEM_DOUBLEJUMP && ChargeShot
+Magma Pits:Magma Depths:ITEM_SLIDE &&  ITEM_HIJUMP && ChargeShot
+Magma Pits:Magma Depths:ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_JETPACK
+Magma Depths:Sinners Entrance:ITEM_Rotater && ITEM_AirSlide && ITEM_SLIDE
 Swamp Entrance:Tartarus:
 Swamp Entrance:Swamp:ITEM_KNIFE
 Swamp Entrance:Swamp:ITEM_ORB
 Swamp Entrance:Swamp:ITEM_AirDash
 Swamp Entrance:Swamp:ITEM_LINEBOMB && ITEM_AREABOMB
-Swamp Entrance:LavaWorld Part 2:ITEM_LINEBOMB
+Swamp Entrance:Magma Depths:ITEM_LINEBOMB
 Swamp:Tartarus:
 DreamKeeper Outside Right:DreamKeeper Outside Left:ChargeShot
 DreamKeeper Outside Right:DreamKeeper:ITEM_Rotater && ChargeShot

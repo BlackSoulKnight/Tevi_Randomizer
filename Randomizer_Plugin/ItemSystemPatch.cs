@@ -43,11 +43,26 @@ namespace TeviRandomizer
             }
 
             //a native item pickup
+
+
             if (!doRandomBadge)
             {
                 LocationTracker.addItemToList(type, value);
 
                 ItemList.Type data = RandomizerPlugin.getRandomizedItem(type, value);
+
+                if (ArchipelagoInterface.Instance.isConnected)
+                {
+                    if (data == ItemList.Type.I10 || data == ItemList.Type.I11)
+                    {
+                        string itemName = ArchipelagoInterface.Instance.getLocItemName(type, value);
+                        string playerName = ArchipelagoInterface.Instance.getLocPlayerName(type, value);
+                        RandomizerPlugin.changeSystemText("ITEMNAME." + GemaItemManager.Instance.GetItemString(data), itemName);
+                        string desc = $"You found {itemName} for {playerName}";
+                        RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(data), desc);
+                    }
+                }
+
                 type = data;
 
             }
@@ -56,9 +71,9 @@ namespace TeviRandomizer
                 //Archipelago implementation
 
             }
-            value = 255;
-            if (type.ToString().Contains("STACKABLE"))
-                value = 1;
+
+            if (!type.ToString().Contains("STACKABLE"))
+                value = 255;
 
         }
 

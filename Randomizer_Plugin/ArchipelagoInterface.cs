@@ -55,7 +55,7 @@ namespace TeviRandomizer
         private Dictionary<string, LocationData> locations = new Dictionary<string, LocationData>();
         public int currentItemNR = 0;
         private int sessionsItemNR = 0;
-
+        private Dictionary<long, string> PlayerNames = new Dictionary<long, string>();
         public bool connectToRoom(string uri, int port, string user, string password = null)
         {
             if (session != null && session.Socket.Connected)
@@ -72,7 +72,7 @@ namespace TeviRandomizer
             session = ArchipelagoSessionFactory.CreateSession(uri, port);
             try
             {
-                loginResult = session.TryConnectAndLogin("Tevi", user, ItemsHandlingFlags.RemoteItems, version: Version.Parse("0.5.0"), password: password);
+                loginResult = session.TryConnectAndLogin("Tevi", user, ItemsHandlingFlags.IncludeStartingInventory, version: Version.Parse("0.5.0"), password: password);
             }
             catch (Exception e)
             {
@@ -103,6 +103,11 @@ namespace TeviRandomizer
             this.player = session.ConnectionInfo.Slot;
             this.isConnected = true;
             sessionsItemNR = 0;
+            PlayerNames.Clear();
+            foreach(var info in session.Players.AllPlayers)
+            {
+                PlayerNames.Add(info.Slot, info.Alias);
+            }
 
             session.Items.ItemReceived += this.addItemToQueue;
             long extraPotions = (long)success.SlotData["attackMode"];
@@ -135,7 +140,7 @@ namespace TeviRandomizer
                 LocationData locationData = new LocationData();
                 locationData.item = (string)item.GetValue("item");
                 locationData.player = (int)item.GetValue("player");
-                locationData.progressive = (bool)item.GetValue("progressive");
+                locationData.progressive = (int)item.GetValue("progressive") > 0;
                 locationData.id = session.Locations.GetLocationIdFromName("Tevi", (string)item.GetValue("location"));
                 
                 locations.Add((string)item.GetValue("location"),locationData);
@@ -203,7 +208,7 @@ namespace TeviRandomizer
         {
             if(locations.ContainsKey(Location))
                 return locations[Location].player == this.player;
-            return false;
+            return true;
         }
         public bool isItemNative(ItemList.Type item,byte slot) => isItemNative($"{item} #{slot}");
 
@@ -215,6 +220,12 @@ namespace TeviRandomizer
         }
         public bool isItemProgessive(ItemList.Type item, byte slot) => isItemProgessive($"{item} #{slot}");
 
+
+        public string getLocItemName(string Location) => locations[Location].item;
+        public string getLocItemName(ItemList.Type item,byte slot) => getLocItemName($"{item} #{slot}");
+
+        public string getLocPlayerName(string Location) => PlayerNames[locations[Location].player];
+        public string getLocPlayerName(ItemList.Type item, byte slot) => getLocPlayerName($"{item} #{slot}");
 
 
 

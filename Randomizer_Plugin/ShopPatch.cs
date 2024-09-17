@@ -178,7 +178,7 @@ namespace TeviRandomizer
                     MainVar.instance.BagID = (byte)(___ShopID + 1);
                 }
 
-                if (RandomizerPlugin.checkRandomizedItemGot(item,slot))
+                if (RandomizerPlugin.checkRandomizedItemGot(item,slot) || ___CurrentMaxItem >= 15)
                     return false;
 
 
@@ -189,6 +189,7 @@ namespace TeviRandomizer
                     case Character.Type.Ian:
                         ___itemslots[___CurrentMaxItem].SetItem(item, num, false);
                         ___CurrentMaxItem++;
+                        
                         break;
                     case Character.Type.CC:
                         if (item == ItemList.Type.STACKABLE_SHARD)
@@ -405,14 +406,20 @@ namespace TeviRandomizer
             Traverse trav = Traverse.Create(__instance);
             __instance.gameObject.SetActive(value: true);
             byte shopID = Traverse.Create(HUDShopMenu.Instance).Field("ShopID").GetValue<byte>();
+            ItemList.Type item = t;
+
+            byte slot = 1;
             if (Traverse.Create(HUDShopMenu.Instance).Field("typeN").GetValue<Character.Type>() == Character.Type.CC)
             {
-                ___itype = RandomizerPlugin.getRandomizedItem(t, (byte)(shopID + 30));
+                slot = (byte)(shopID + 30);
+                ___itype = RandomizerPlugin.getRandomizedItem(t, slot);
+                
             }
             else
             {
                 ___itype = RandomizerPlugin.getRandomizedItem(t, 1);
             }
+
 
             trav.Field("price").SetValue(_price);
 
@@ -442,6 +449,11 @@ namespace TeviRandomizer
                 texts[1].color = new Color32(152, 222, byte.MaxValue, byte.MaxValue);
                 texts[1].text = Localize.GetLocalizeTextWithKeyword("ITEMTYPE.Item", contains: false);
             }
+            if (ArchipelagoInterface.Instance.isConnected && (___itype == ItemList.Type.I10 || ___itype == ItemList.Type.I11))
+            {
+                string itemName = ArchipelagoInterface.Instance.getLocItemName(item, slot);
+                texts[0].text = itemName;
+            }
             texts[2].text = _price.ToString();
             ___itype = t;
             return false;
@@ -455,6 +467,14 @@ namespace TeviRandomizer
 
             if (__instance.ShopType == 0)
             {
+
+                byte slot = 1;
+                if (Traverse.Create(HUDShopMenu.Instance).Field("typeN").GetValue<Character.Type>() == Character.Type.CC)
+                {
+                    byte shopID = Traverse.Create(HUDShopMenu.Instance).Field("ShopID").GetValue<byte>();
+                    slot = (byte)(shopID + 30);
+                }
+
                 ItemList.Type item = ___itemslots[___Selected].GetItem();
                 ItemList.Type data;
                 if (item.ToString().Contains("STACKABLE"))
@@ -466,6 +486,12 @@ namespace TeviRandomizer
                 {
                     data = RandomizerPlugin.getRandomizedItem(item, 1);
                     ___item_desc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(data);
+                    if (ArchipelagoInterface.Instance.isConnected && (data == ItemList.Type.I10 || data == ItemList.Type.I11))
+                    {
+                        string itemName = ArchipelagoInterface.Instance.getLocItemName(item, slot);
+                        string playerName = ArchipelagoInterface.Instance.getLocPlayerName(item, slot);
+                        ___item_desc.text = "<font-weight=200>" + $"You found {itemName} for {playerName}";
+                    }
                 }
                 if (___item_desc.text.Contains("[c2]"))
                 {

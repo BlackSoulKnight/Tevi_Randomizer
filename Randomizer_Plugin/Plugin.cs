@@ -19,6 +19,7 @@ using System.Linq;
 using Newtonsoft.Json;
 using Unity.Curl;
 using Character;
+using static Localize;
 
 
 
@@ -90,7 +91,6 @@ namespace TeviRandomizer
         static private bool randomizerEnabled = false;
         static private Harmony harmonyPatchInstance = new Harmony("Randomizer");
 
-
         private void Awake()
         {
             this.gameObject.AddComponent<ArchipelagoInterface>();
@@ -135,67 +135,67 @@ namespace TeviRandomizer
             }
         }
 
+
+        // Create a new Text without Localization
+        static Localize.SystemText createNewText(string keyword, string text)
+        {
+            Localize.SystemText newText = new Localize.SystemText();
+            newText.keyword = keyword;
+            newText.tchinese = text;
+            newText.japanese = text;
+            newText.english = text;
+            newText.spanish = text;
+            newText.russian = text;
+            newText.ukrainian = text;
+            newText.schinese = text;
+            newText.korean = text;
+
+            return newText;
+        }
+
+        static public void changeSystemText(string keyword,string text)
+        {
+            var t = new Traverse(typeof(Localize));
+            var library = t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, SystemText>>();
+            if (library != null)
+            {
+                if (!library.ContainsKey(keyword))
+                {
+                    Localize.SystemText newText = createNewText(keyword, text);
+                    t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
+                    t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
+                }
+                else
+                {
+                    library[keyword].english = text;
+                }
+            }
+        }
         static void addLang()
         {
             var t = new Traverse(typeof(Localize));
-
-            {
-                Localize.SystemText newText = new Localize.SystemText();
-                newText.keyword = "ITEMNAME.I19";
-                newText.tchinese = "Celia";
-                newText.japanese = "Celia";
-                newText.english = "Celia";
-                newText.spanish = "Celia";
-                newText.russian = "Celia";
-                newText.ukrainian = "Celia";
-                newText.schinese = "Celia";
-                newText.korean = "Celia";
+            { 
+                Localize.SystemText newText = createNewText("ITEMNAME.I19", "Celia");
                 t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
                 t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
             }
             {
-                Localize.SystemText newText = new Localize.SystemText();
-                newText.keyword = "ITEMDESC.I19";
-                newText.tchinese = "Celia is now available";
-                newText.japanese = "Celia is now available";
-                newText.english = "Celia is now available";
-                newText.schinese = "Celia is now available";
-                newText.russian = "Celia is now available";
-                newText.ukrainian = "Celia is now available";
-                newText.korean = "Celia is now available";
-                newText.spanish = "Celia is now available";
+                Localize.SystemText newText = createNewText("ITEMDESC.I19", "Celia is now available");
+                t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
+                t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
+            }
+            {
+                Localize.SystemText newText = createNewText("ITEMNAME.I20", "Sable");
+                t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
+                t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
+            }
+            {
+                Localize.SystemText newText = createNewText("ITEMDESC.I20", "Sable is now available");
                 t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
                 t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
             }
 
-            {
-                Localize.SystemText newText = new Localize.SystemText();
-                newText.keyword = "ITEMNAME.I20";
-                newText.tchinese = "Sable";
-                newText.japanese = "Sable";
-                newText.english = "Sable";
-                newText.schinese = "Sable";
-                newText.spanish = "Sable";
-                newText.korean = "Sable";
-                newText.russian = "Sable";
-                newText.ukrainian = "Sable";
-                t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
-                t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
-            }
-            {
-                Localize.SystemText newText = new Localize.SystemText();
-                newText.keyword = "ITEMDESC.I20";
-                newText.tchinese = "Sable is now available";
-                newText.japanese = "Sable is now available";
-                newText.english = "Sable is now available";
-                newText.schinese = "Sable is now available";
-                newText.korean = "Sable is now available";
-                newText.spanish = "Sable is now available";
-                newText.russian = "Sable is now available";
-                newText.ukrainian = "Sable is now available";
-                t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
-                t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
-            }
+
 
         }
 
@@ -226,60 +226,18 @@ namespace TeviRandomizer
         }
         [HarmonyPatch(typeof(Localize), "GetLocalizeTextWithKeyword")]
         [HarmonyPostfix]
-        static void changeGearCount(ref string __result,ref string keyword)
+        static void changeText(ref string __result,ref string keyword)
         {
             if(keyword == "Todo.GoalTipFreeRoam")
             {
                 __result = __result.Replace("16", GoMode.ToString());
             }
-        }
-
-
-
-        [Command("reloadRandomizer", Platform.AllPlatforms, MonoTargetType.Single)]
-        private void reloadItems()
-        {
-            try
+            if(ArchipelagoInterface.Instance != null && ArchipelagoInterface.Instance.isConnected)
             {
-                string path = $"{RandomizerPlugin.pluginPath}/data/file.dat";
-                string json = File.ReadAllText(path);
-                string[] blocks = json.Split(';');
-                __itemData.Clear();
-                foreach (string block in blocks)
-                {
-                    string data2;
-                    string data1;
-                    if (block.Length < 5) continue;
-                    try
-                    {
-                        string[] completeItem = block.Split(':');
 
-                        string[] itemDetails1 = completeItem[0].Split(',');
-                        string[] itemDetails2 = completeItem[1].Split(',');
-                        data1 = $"{itemDetails1[0]} #{itemDetails1[1]}";
-                        data2 = itemDetails2[0];
-                    }
-                    catch
-                    {
-                        Logger.LogError($"Failed to parse {block}");
-                        continue;
-                    }
-                    try
-                    {
-                        __itemData.Add(data1, data2);
-                    }
-                    catch
-                    {
-                        Logger.LogWarning($"Already changed {data1}");
-
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                Logger.LogError(e);
             }
         }
+
 
         static public void createSeed()
         {
@@ -558,6 +516,37 @@ namespace TeviRandomizer
                 }
             }
             return false;
+        }
+
+        //Replace I10 and I11 with new Sprites
+
+        static Sprite createNewArchipelagoSprite(string file)
+        {
+            string path = pluginPath + "/resource/Archipelago/" + file;
+            Texture2D texture = new Texture2D(2,2);
+            if (!File.Exists(path)) { return null; }
+            byte[] imageAsset = System.IO.File.ReadAllBytes(path);
+            ImageConversion.LoadImage(texture, imageAsset);
+            Sprite sprite = Sprite.Create(texture,new Rect(0,0,28,28),new Vector2(0.5f,0.5f),28);
+            return sprite;
+        }
+
+        [HarmonyPatch(typeof(CommonResource), "Awake")]
+        [HarmonyPostfix]
+        static void replaceSprite(ref Sprite[] ___items,ref Sprite[] ___questitems)
+        {
+            if (___items.Length > 0)
+            {
+
+                ___items[10] = createNewArchipelagoSprite("nonProgression.png");
+                ___items[11] = createNewArchipelagoSprite("Progression.png");
+                if (___items[10] == null)
+                    ___items[10] = ___questitems[9];
+                if (___items[11] == null)
+                    ___items[11]= ___questitems[9];
+            }
+
+
         }
 
     }
