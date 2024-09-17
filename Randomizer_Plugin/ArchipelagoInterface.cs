@@ -210,7 +210,7 @@ namespace TeviRandomizer
                 return locations[Location].player == this.player;
             return true;
         }
-        public bool isItemNative(ItemList.Type item,byte slot) => isItemNative($"{item} #{slot}");
+        public bool isItemNative(ItemList.Type item,byte slot) => isItemNative(LocationTracker.APLocationName[$"{item} #{slot}"]);
 
         public bool isItemProgessive(string Location)
         {
@@ -218,14 +218,14 @@ namespace TeviRandomizer
                 return locations[Location].progressive;
             return false;
         }
-        public bool isItemProgessive(ItemList.Type item, byte slot) => isItemProgessive($"{item} #{slot}");
+        public bool isItemProgessive(ItemList.Type item, byte slot) => isItemProgessive(LocationTracker.APLocationName[$"{item} #{slot}"]);
 
 
         public string getLocItemName(string Location) => locations[Location].item;
-        public string getLocItemName(ItemList.Type item,byte slot) => getLocItemName($"{item} #{slot}");
+        public string getLocItemName(ItemList.Type item,byte slot) => getLocItemName(LocationTracker.APLocationName[$"{item} #{slot}"]);
 
         public string getLocPlayerName(string Location) => PlayerNames[locations[Location].player];
-        public string getLocPlayerName(ItemList.Type item, byte slot) => getLocPlayerName($"{item} #{slot}");
+        public string getLocPlayerName(ItemList.Type item, byte slot) => getLocPlayerName(LocationTracker.APLocationName[$"{item} #{slot}"]);
 
 
 

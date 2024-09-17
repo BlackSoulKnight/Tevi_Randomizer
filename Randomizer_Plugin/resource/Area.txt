@@ -5,7 +5,7 @@ Thanatara Canyon
 Memine All
 Crafting
 Item Upgrade
-Morose Transit
+Gurun Desert
 Oasis
 Moros City
 Forest
@@ -49,12 +49,12 @@ Heavens Valley Snow Route Low
 Heavens Valley Snow Route Middle
 Heavens Valley Snow Route Upper
 Valhalla City
-Valhalla Breath Lower Left Part
+Valhalla Breath West
 Vena Shop
-Heavens Valley
-Valhalla Breath Left Part
-Ruins Entrance
-Ruins
+Heavens Valley West
+Valhalla Breath West Extended
+Solennian Ruins Entrance
+Solennian Ruins
 Sinners Entrance
 Sinners Hell
 Illusion Palace
@@ -63,14 +63,14 @@ Catacombs Entrance
 Catacombs Main
 Catacombs Inner
 Lab
-Lab Part 2
+Lab Extended
 Lab - Verdazure Swamp Connection
-Cloister
-Cloister 2
-Gallery of Mirrors
-Gallery of Mirrors 2
+Cloister Entrance
+Cloister Main
+Gallery of Mirrors West
+Gallery of Mirrors East
 Gallery of Souls
-Gallery of Souls Boss
+Gallery of Souls Boss Area
 Blushwood
 Blushwood Sliding
 EverGarden

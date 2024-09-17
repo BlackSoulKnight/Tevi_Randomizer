@@ -20,6 +20,7 @@ using Newtonsoft.Json;
 using Unity.Curl;
 using Character;
 using static Localize;
+using System.Runtime.InteropServices.ComTypes;
 
 
 
@@ -266,7 +267,7 @@ namespace TeviRandomizer
             else
             {
                 try { 
-                    data = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), __itemData[$"{item} #{slot}"]);
+                    data = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), __itemData[LocationTracker.APLocationName[$"{item} #{slot}"]]);
                 }
                 catch
                 {

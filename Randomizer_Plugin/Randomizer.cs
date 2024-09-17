@@ -808,7 +808,7 @@ namespace TeviRandomizer
         {
             if (!Directory.Exists(RandomizerPlugin.pluginPath + "Data")) Directory.CreateDirectory(RandomizerPlugin.pluginPath + "Data");
 
-            StreamWriter spoilerLog = File.CreateText(RandomizerPlugin.pluginPath + "Data/" + FileName);;
+            StreamWriter spoilerLog = File.CreateText(RandomizerPlugin.pluginPath + "Data/" + FileName);
             foreach (KeyValuePair<string, string> item in itemData)
             {
                 string itemName = "";

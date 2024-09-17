@@ -19,10 +19,10 @@ Thanatara Canyon:Oasis:ITEM_DOUBLEJUMP
 Thanatara Canyon:Oasis:ITEM_DOUBLEJUMP
 Thanatara Canyon:Oasis:ITEM_JETPACK
 Thanatara Canyon:Oasis:ITEM_AirDash
-Thanatara Canyon:Ruins Entrance:
-Thanatara Canyon:Heavens Valley:ITEM_LINEBOMB
-Thanatara Canyon:Morose Transit:DieMauerMussWeg
-Thanatara Canyon:Morose Transit:ITEM_LINEBOMB
+Thanatara Canyon:Solennian Ruins Entrance:
+Thanatara Canyon:Heavens Valley West:ITEM_LINEBOMB
+Thanatara Canyon:Gurun Desert:ITEM_LINEBOMB
+Thanatara Canyon:Gurun Desert:OpenMorose
 Thanatara Canyon:Desert Base Entrance:
 Thanatara Canyon:Crafting:
 Thanatara Canyon:Item Upgrade:
@@ -30,10 +30,10 @@ Thanatara Canyon:Memine All:AllMemine
 Memine All::
 Crafting::
 Item Upgrade::
-Morose Transit:Moros City:
-Morose Transit:Thanatara Canyon:
+Gurun Desert:Moros City:
+Gurun Desert:Thanatara Canyon:
 Oasis:Thanatara Canyon:
-Moros City:Morose Transit:
+Moros City:Gurun Desert:
 Moros City:Travoll Industrie:
 Moros City:Travoll Mines:ITEM_LINEBOMB
 Forest:Moros City:
@@ -58,13 +58,13 @@ Travoll Mines Part 2:Swamp Entrance:ITEM_SLIDE
 Travoll Mines Part 2:Forest:
 Travoll Industrie:CopperWood:ITEM_LINEBOMB
 Travoll Industrie:CopperWood:ITEM_SLIDE
-Travoll Industrie:Heavens Valley:
+Travoll Industrie:Heavens Valley West:
 Travoll Industrie:Moros City:
 CopperWood:Forest:
 CopperWood:Travoll Industrie:
 CopperWood:Relicts:
 CopperWood:Gleamwood Middle:ITEM_LINEBOMB
-Ana Thema:Gallery of Mirrors:ITEM_SLIDE && ITEM_LINEBOMB
+Ana Thema:Gallery of Mirrors West:ITEM_SLIDE && ITEM_LINEBOMB
 Ana Thema:Vena Shop:
 Ana Thema:Gleamwood Bottom:
 Gleamwood Bottom:Gleamwood Middle:ITEM_LINEBOMB
@@ -150,28 +150,28 @@ Heavens Valley Snow Route Middle:Heavens Valley Snow Route Low:ITEM_Rotater && I
 Heavens Valley Snow Route Middle:Heavens Valley Snow Route Low:ITEM_Rotater && ITEM_LINEBOMB
 Heavens Valley Snow Route Middle:Heavens Valley Snow Route Upper:ITEM_LINEBOMB
 Heavens Valley Snow Route Upper:Heavens Valley Snow Route Middle:ITEM_SLIDE
-Valhalla City:Cloister:ITEM_SLIDE && ITEM_LINEBOMB
+Valhalla City:Cloister Entrance:ITEM_SLIDE && ITEM_LINEBOMB
 Valhalla City:EverGarden:ITEM_LINEBOMB
 Valhalla City:Vena Shop:
-Valhalla Breath Lower Left Part:Travoll Industrie:
-Valhalla Breath Lower Left Part:Valhalla City:
-Valhalla Breath Lower Left Part:Valhalla Breath Left Part:ITEM_AirDash
-Valhalla Breath Lower Left Part:Valhalla Breath Left Part:ITEM_DOUBLEJUMP
-Valhalla Breath Lower Left Part:Valhalla Breath Left Part:ITEM_JETPACK
+Valhalla Breath West:Travoll Industrie:
+Valhalla Breath West:Valhalla City:
+Valhalla Breath West:Valhalla Breath West Extended:ITEM_AirDash
+Valhalla Breath West:Valhalla Breath West Extended:ITEM_DOUBLEJUMP
+Valhalla Breath West:Valhalla Breath West Extended:ITEM_JETPACK
 Vena Shop::
-Heavens Valley:Valhalla Breath Lower Left Part:ITEM_JETPACK
-Heavens Valley:Valhalla Breath Lower Left Part:ITEM_AirDash
-Heavens Valley:Valhalla Breath Lower Left Part:ITEM_SLIDE && ITEM_AirSlide
-Heavens Valley:Valhalla Breath Lower Left Part:ITEM_DOUBLEJUMP
-Heavens Valley:Valhalla Breath Lower Left Part:ChargeShot
-Valhalla Breath Left Part::
-Ruins Entrance:Ruins:ITEM_LINEBOMB
-Ruins Entrance:Thanatara Canyon:
-Ruins::
+Heavens Valley West:Valhalla Breath West:ITEM_JETPACK
+Heavens Valley West:Valhalla Breath West:ITEM_AirDash
+Heavens Valley West:Valhalla Breath West:ITEM_SLIDE && ITEM_AirSlide
+Heavens Valley West:Valhalla Breath West:ITEM_DOUBLEJUMP
+Heavens Valley West:Valhalla Breath West:ChargeShot
+Valhalla Breath West Extended::
+Solennian Ruins Entrance:Solennian Ruins:ITEM_LINEBOMB
+Solennian Ruins Entrance:Thanatara Canyon:
+Solennian Ruins::
 Sinners Entrance:Sinners Hell:ITEM_SLIDE && ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP2 && ChargeShot
 Sinners Entrance:Sinners Hell:ITEM_SLIDE && ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP && ITEM_DOUBLEJUMP && ChargeShot
 Sinners Entrance:Sinners Hell:ITEM_SLIDE && ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP && ITEM_JETPACK && ChargeShot
-Sinners Hell:Illusion Palace:
+Sinners Hell:Illusion Palace:Goal
 Illusion Palace::
 Relicts:CopperWood:
 Relicts:Gleamwood Middle:ITEM_LINEBOMB
@@ -184,21 +184,21 @@ Catacombs Main:Catacombs Inner:ITEM_JETPACK2
 Catacombs Main:Catacombs Inner:ITEM_JETPACK && ITEM_HIJUMP
 Catacombs Main:Catacombs Inner:ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash
 Catacombs Main:Lab:ITEM_LINEBOMB
-Catacombs Inner:Lab Part 2:ITEM_LINEBOMB
-Lab:Lab Part 2:ITEM_LINEBOMB
-Lab Part 2:Catacombs Entrance:ITEM_LINEBOMB
-Lab Part 2:Lab - Verdazure Swamp Connection:ITEM_BombLengthExtend3 && ITEM_LINEBOMB
-Lab - Verdazure Swamp Connection:Lab Part 2:ITEM_LINEBOMB
+Catacombs Inner:Lab Extended:ITEM_LINEBOMB
+Lab:Lab Extended:ITEM_LINEBOMB
+Lab Extended:Catacombs Entrance:ITEM_LINEBOMB
+Lab Extended:Lab - Verdazure Swamp Connection:ITEM_BombLengthExtend3 && ITEM_LINEBOMB
+Lab - Verdazure Swamp Connection:Lab Extended:ITEM_LINEBOMB
 Lab - Verdazure Swamp Connection:Verdazure Swamp:ITEM_LINEBOMB && ITEM_BombLengthExtend3
-Cloister:Valhalla City:
-Cloister:Cloister 2:ChargeShot
-Cloister 2::
-Gallery of Mirrors:Gallery of Mirrors 2:ChargeShot
-Gallery of Mirrors 2:Gallery of Souls:
-Gallery of Souls:Gallery of Souls Boss:ITEM_JETPACK2 && ChargeShot
-Gallery of Souls:Gallery of Souls Boss:ITEM_WALLJUMP && ChargeShot
-Gallery of Souls:Gallery of Souls Boss:ITEM_DOUBLEJUMP && ChargeShot
-Gallery of Souls Boss::
+Cloister Entrance:Valhalla City:
+Cloister Entrance:Cloister Main:ChargeShot
+Cloister Main::
+Gallery of Mirrors West:Gallery of Mirrors East:ChargeShot
+Gallery of Mirrors East:Gallery of Souls:
+Gallery of Souls:Gallery of Souls Boss Area:ITEM_JETPACK2 && ChargeShot
+Gallery of Souls:Gallery of Souls Boss Area:ITEM_WALLJUMP && ChargeShot
+Gallery of Souls:Gallery of Souls Boss Area:ITEM_DOUBLEJUMP && ChargeShot
+Gallery of Souls Boss Area::
 Blushwood:Blushwood Sliding:ITEM_SLIDE
 Blushwood:Verdazure Sea:
 Blushwood Sliding::

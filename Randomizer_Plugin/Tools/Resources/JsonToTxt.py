@@ -757,7 +757,9 @@ def convertLocationJsonToTxt():
         l = ""
         for req in k["Requirement"]:
             l+=f"{req['Method']},{req['Difficulty']};"
+            
         l = l[:-1]
+        l += f":{k['LocationName']}"
         d.write(l+"\n")
     d.close()
 
