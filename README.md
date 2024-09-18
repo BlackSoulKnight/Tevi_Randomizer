@@ -20,7 +20,7 @@
 + Memine races won't have mobility items as rewards
 + If you're unfamiliar with the item locations, starting with level 3 compass might be a good idea. Professor Zema will also provide hints if you talk to him
 
-### Join the Tevi Speedrunning [Discord] (https://discord.gg/e4SW6AaBuj) to gain more Information about tricks of the Game
+### Join the Tevi Speedrunning [Discord](https://discord.gg/e4SW6AaBuj) to gain more Information about tricks of the Game
 
 ## Requirements
 
