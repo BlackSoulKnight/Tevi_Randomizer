@@ -60,6 +60,14 @@ namespace TeviRandomizer
             return collectedLocationList.Count();
         }
 
+        public static void syncArchipelagoLocation()
+        {
+            foreach (var item in collectedLocationList)
+            {
+                ArchipelagoInterface.Instance.checkoutLocation(item);
+            }
+            ArchipelagoInterface.Instance.isSynced = true;
+        }
         
     }
 }

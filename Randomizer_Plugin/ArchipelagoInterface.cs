@@ -13,14 +13,8 @@ using UnityEngine;
  * Things missing:
  * () Automatic reconnect after loosing connection
  * () Send all Locations once after a disconnect
- * () Item Cheating
- * () Remove Remote Items after Dieing
  * () Disconnect from a server
- * () Change Sprite and Text of Remote Items 
  * () Teleport To morose Give an ItemCheck?
- * () Recieve all items from server
- * () Remote items are not on the minimap when discoverd / no minimap icon
- * (x) Shops are broken
  */
 
 
@@ -50,6 +44,7 @@ namespace TeviRandomizer
         private long player;
         private LoginResult loginResult = null;
         public bool isConnected = false;
+        public bool isSynced = false;
 
         private const long baseID = 44965410000;
         private Dictionary<string, LocationData> locations = new Dictionary<string, LocationData>();
@@ -102,6 +97,7 @@ namespace TeviRandomizer
             this.password = password;
             this.player = session.ConnectionInfo.Slot;
             this.isConnected = true;
+            this.isSynced = false;
             sessionsItemNR = 0;
             PlayerNames.Clear();
             foreach(var info in session.Players.AllPlayers)
@@ -228,9 +224,14 @@ namespace TeviRandomizer
         public string getLocPlayerName(ItemList.Type item, byte slot) => getLocPlayerName(LocationTracker.APLocationName[$"{item} #{slot}"]);
 
 
-
         void Update()
         {
+            if (session?.Socket?.Connected != true)
+            {
+                isConnected = false;
+                return;
+            }
+
             if (newItems.Count > 0 && WorldManager.Instance != null && !EventManager.Instance.IsChangingMap() && WorldManager.Instance.MapInited && !HUDObtainedItem.Instance.isDisplaying() && GemaUIPauseMenu.Instance.GetAllowPause())
             {
                 ItemList.Type teviItem;

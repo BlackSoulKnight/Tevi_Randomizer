@@ -2,21 +2,15 @@
 using HarmonyLib;
 using Map;
 using System;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using static SaveManager;
 
 namespace TeviRandomizer
 {
     class ItemSystemPatch()
     {
-
-        // may be used for custom icons
-        [HarmonyPatch(typeof(CommonResource), "GetItem")]
-        [HarmonyPrefix]
-        static bool addCustomIcons()
-        {
-            return true;  //copy and insert custom item icon 
-        }
 
         //Hotswap item recieved
         [HarmonyPatch(typeof(HUDObtainedItem), "GiveItem")]
@@ -316,6 +310,34 @@ namespace TeviRandomizer
             return false;
         }
 
+        static readonly ItemList.Type[] newPins = {ItemList.Type.I10, ItemList.Type.I11, ItemList.Type.I19, ItemList.Type.I20, ItemList.Type.STACKABLE_COG };
+
+        //autoPin Icons
+        [HarmonyPatch(typeof(GemaItemExplorer),"StartMe")]
+        [HarmonyPostfix]
+        static void changeDiscoveryPin()
+        {
+            if (WorldManager.Instance.MapTime >= 2.4f && GameSystem.Instance.frame >= 149)
+            {
+                ItemList.Type nearestType = ItemList.Type.OFF;
+                ItemTile tile = null;
+                float num = WorldManager.Instance.FindNearestItem_Room(out nearestType, out tile);
+                if (WorldManager.Instance.CheckIsWall(tile.transform.position, any: false) > 0 || num != 0f)
+                {
+                    return;
+                }
+                if (WorldManager.Instance.GetFrontFadeAlpha() > 0f && WorldManager.Instance.isNearFrontfade(tile.transform.position, MainVar.instance.TILESIZE))
+                {
+                    return;
+                }
+                if (newPins.Contains(nearestType))
+                {
+                    Debug.Log("[GemaItemExplorer] Change icon to item : " + Icon.PIN9);
+                    FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, WorldManager.Instance.CurrentRoomX, WorldManager.Instance.CurrentRoomY, Icon.PIN9);
+                }
+            }
+            return;
+        }
     }
 
 }

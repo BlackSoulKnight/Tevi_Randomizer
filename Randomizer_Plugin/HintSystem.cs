@@ -90,7 +90,7 @@ namespace TeviRandomizer
 
 
             }
-            extraList.Add(createChatRow(section, $"The next Hint is in {nextHint + alreadyCollectedItems * a} Items available.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
+            extraList.Add(createChatRow(section, $"The next Hint is after {nextHint + alreadyCollectedItems * a} Items available.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
 
 
 
