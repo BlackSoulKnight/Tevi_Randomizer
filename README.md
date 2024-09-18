@@ -20,6 +20,8 @@
 + Memine races won't have mobility items as rewards
 + If you're unfamiliar with the item locations, starting with level 3 compass might be a good idea. Professor Zema will also provide hints if you talk to him
 
+### Join the Tevi Speedrunning [Discord] (https://discord.gg/e4SW6AaBuj) to gain more Information about tricks of the Game
+
 ## Requirements
 
 [BepInEx V 5.4 64 bit](https://docs.bepinex.dev/articles/user_guide/installation/index.html#tabpanel_bHGHmlrG6S_tabid-win)<br>
@@ -27,17 +29,7 @@
 ### Optional
 [Tevi Map Tracker](https://github.com/vegemii/Tevi-Tracker/releases) made by Vegemii <br>
 [Tevi Item Tracker](https://github.com/cramps-man/tevi-rando-progression-ui) made by Cramps-Man
-
-## Building the Project
-
-For building the Project, the following DLLs from the Game are required and found in TEVI_data/Managed
-+ Assembly-CSharp.dll
-+ Assembly-CSharp-firstpass.dll
-+ QFSW.QC.dll
-+ Unity.TextMeshPro.dll
-+ UnityEngine.UI.dll
-+ Assembly-CSharp-firstpass.dll
-  
+ 
 
 ## Install
 Download the latest pre-Build version from here [Tevi Randomizer releases](https://github.com/BlackSoulKnight/Tevi_Randomizer/releases)<br>
@@ -77,4 +69,14 @@ Remove the TeviRandomizer.dll
 ## Uninstalling
 Delete the Randomizer Plugin from the plugins folder
 
+
+## Building the Project
+
+For building the Project, the following DLLs from the Game are required and found in TEVI_data/Managed
++ Assembly-CSharp.dll
++ Assembly-CSharp-firstpass.dll
++ QFSW.QC.dll
++ Unity.TextMeshPro.dll
++ UnityEngine.UI.dll
++ Assembly-CSharp-firstpass.dll
 
