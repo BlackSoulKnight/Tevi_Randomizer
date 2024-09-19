@@ -1826,7 +1826,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -1930,7 +1930,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -2014,7 +2014,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_AirSlide && ITEM_SLIDE",
+                "Method": "ITEM_AirSlide && ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -2050,7 +2050,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]

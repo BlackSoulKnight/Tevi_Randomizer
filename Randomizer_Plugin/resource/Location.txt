@@ -142,23 +142,23 @@ STACKABLE_RATK@Ulskan Village Area@5@ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM
 BADGE_AirNormalComboSpeedup@Ulskan Village Area@1@,0@Ulskan Village Area - Aerial Agility
 BADGE_DoubleGroundNormal3N1@Ulskan Village Area@1@ITEM_SLIDE,0@Ulskan Village Area - Dual Combo: Flow
 STACKABLE_MP@Ulskan Village Area@5@,0@Ulskan Village Area - Blueberry Bunny Potion
-ITEM_AntiDecay@Ulskan Village Area@1@ITEM_SLIDE,0@Ulskan Village Area - Decay Antidote
+ITEM_AntiDecay@Ulskan Village Area@1@ITEM_SLIDE && ITEM_LINEBOMB,0@Ulskan Village Area - Decay Antidote
 BADGE_SlideHalt@Ulskan Village Area@1@ITEM_SLIDE && ITEM_LINEBOMB,0@Ulskan Village Area - Slide Halt
 BADGE_GoldenLuck@Ulskan Village Area@1@ITEM_SLIDE && ITEM_LINEBOMB && ITEM_BombLengthExtend && ITEM_DOUBLEJUMP,0;ITEM_SLIDE && ITEM_LINEBOMB && ITEM_BombLengthExtend && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_LINEBOMB && ITEM_BombLengthExtend && ITEM_HIJUMP && ITEM_WALLJUMP,0;ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AREABOMB && ITEM_DOUBLEJUMP,0;ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AREABOMB && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AREABOMB && ITEM_HIJUMP && ITEM_WALLJUMP,0@Ulskan Village Area - Dodge: Golden Luck
 BADGE_WeakAirDownRotate@Plague Forest@1@ChargeShot,0@Plague Forest - Windmill Strike
 BADGE_StyleComboReduceDamageS@Plague Forest@1@ITEM_LINEBOMB,0@Plague Forest - C. Rank Frenzy: Defend
 STACKABLE_HP@Plague Forest@6@ITEM_LINEBOMB,0@Plague Forest - Kiwi Bunny Potion
 STACKABLE_MP@Plague Forest@6@ITEM_LINEBOMB,0@Plague Forest - Blueberry Bunny Potion
-ITEM_SLIDE@Plague Forest@1@,0@Plague Forest - Slick Boots
+ITEM_SLIDE@Plague Forest@1@ITEM_LINEBOMB,0@Plague Forest - Slick Boots
 STACKABLE_EP@Plague Forest@6@ChargeShot,0@Plague Forest - Lemon Bunny Potion
 BADGE_TauntKnife@Plague Forest@1@ITEM_AirDash,0;ITEM_DOUBLEJUMP,0;ITEM_JETPACK,0;ITEM_HIJUMP && ITEM_WALLJUMP,0@Plague Forest - Special Action: Show Off
 BADGE_DodgeWeakGroundUp@Plague Forest@1@ITEM_LINEBOMB,0@Plague Forest - Dodge Enhancer: Upper
 STACKABLE_COG@Plague Forest@30@Boss,0@Plague Forest - Astral Gear
 BADGE_BombNormal4Buffer@Plague Forest@1@ITEM_SLIDE && ITEM_LINEBOMB,0@Plague Forest - Aplomb
-BADGE_PrepDef@Plague Forest@1@ITEM_AirSlide && ITEM_SLIDE,0@Plague Forest - Blood Armor
+BADGE_PrepDef@Plague Forest@1@ITEM_AirSlide && ITEM_SLIDE && ITEM_LINEBOMB,0@Plague Forest - Blood Armor
 STACKABLE_RATK@Plague Forest@6@,0@Plague Forest - Grape Bunny Potion
 STACKABLE_MATK@Plague Forest@5@,0@Plague Forest - Cherry Bunny Potion
-BADGE_Unlucky7@Plague Forest@1@,0@Plague Forest - Unlucky 7
+BADGE_Unlucky7@Plague Forest@1@ITEM_LINEBOMB,0@Plague Forest - Unlucky 7
 BADGE_HP2MP@Ulvosa@1@ChargeShot,0@Ulvosa - MP Quicken: Bloodlust
 STACKABLE_MATK@Ulvosa@19@ITEM_DOUBLEJUMP,0;ITEM_AirDash,0;ITEM_JETPACK,0;ITEM_HIJUMP,0@Middle Ulvosa - Cherry Bunny Potion
 STACKABLE_RATK@Ulvosa@18@ITEM_AREABOMB && ITEM_LINEBOMB,0@Ulvosa - Grape Bunny Potion
