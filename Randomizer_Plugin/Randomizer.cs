@@ -62,7 +62,6 @@ namespace TeviRandomizer
                         {
                             continue;
                         }
-                        // ILLUSION PALACE MISSING REQ NEED TO CHECK GEAR COUNT
 
                         if (item.Contains("Coin") && checkMovementItems(itemList) && (itemList.Contains("ITEM_LINEBOMB") || itemList.Contains("ITEM_KNIFE"))) continue;
                         if (item.Contains("Coin") && item.Contains("250")) continue;
@@ -115,7 +114,8 @@ namespace TeviRandomizer
 
                         if (item.Contains("EliteChallange") && itemList.Contains("ITEM_LINEBOMB") && itemList.Contains("ITEM_SLIDE")) continue;
 
-                        if(item.Contains("DieMauerMussWeg") && RandomizerPlugin.customFlags[(int)CustomFlags.TempOption]) continue;
+                        if(item.Contains("OpenMorose") && RandomizerPlugin.customFlags[(int)CustomFlags.TempOption]) continue;
+                        if (item.Contains("Goal")) continue;
 
                         flag = false;
                         flagCheck = false;
@@ -153,15 +153,17 @@ namespace TeviRandomizer
 
             public string Itemname;
             public string Loaction;
+            public string Locationname;
             public int itemId;
             public int slotId;
             public int newItem;
             public int newSlotId;
             public List<Requirement> Requirement;
-            public Location(int itemId, string loaction, int slotId, string requirements, string itemname = "")
+            public Location(int itemId, string loaction,string locationName, int slotId, string requirements, string itemname = "")
             {
                 Itemname = itemname;
                 Loaction = loaction;
+                this.Locationname = locationName;
                 this.itemId = itemId;
                 this.slotId = slotId;
                 this.Requirement = new List<Requirement>();
@@ -297,8 +299,8 @@ namespace TeviRandomizer
             locationString = new Dictionary<string, Location>();
             foreach (string line in File.ReadLines(path + "Location.txt"))
             {
-                string[] para = line.Split(':');
-                Location newloc = new Location((int)Enum.Parse(typeof(ItemList.Type), para[0]), para[1], int.Parse(para[2]), para[3], para[0]);
+                string[] para = line.Split('@');
+                Location newloc = new Location((int)Enum.Parse(typeof(ItemList.Type), para[0]), para[1], para[4], int.Parse(para[2]), para[3], para[0]);
                 locationString.Add($"{para[0] + para[2]}", newloc);
                 locations.Add(newloc);
                 itemPool.Add(((int)Enum.Parse(typeof(ItemList.Type), para[0]), int.Parse(para[2])));
@@ -623,8 +625,8 @@ namespace TeviRandomizer
 
                     if (loc.isReachAble(itemList))
                     {
-                        if (loc.Loaction == "Lab Part 2" && !itemList.Contains("Demonfray")) itemList.Add("Demonfray"); // Hard coded boss event
-                        if (loc.Loaction == "Gallery of Mirrors 2" && itemList.Contains("ITEM_BombLengthExtend") && !itemList.Contains("Memloch")) itemList.Add("Memloch"); // Hard coded boss event
+                        if (loc.Loaction == "Lab Extended" && !itemList.Contains("Demonfray")) itemList.Add("Demonfray"); // Hard coded boss event
+                        if (loc.Loaction == "Gallery of Mirrors East" && itemList.Contains("ITEM_BombLengthExtend") && !itemList.Contains("Memloch")) itemList.Add("Memloch"); // Hard coded boss event
                         if (loc.Loaction == "Snow City" && !itemList.Contains("Air")) itemList.Add("Air");
 
 
@@ -714,60 +716,60 @@ namespace TeviRandomizer
             int gears = itemList.FindAll(x => x == "STACKABLE_COG").Count;
             if (gears < RandomizerPlugin.GoMode)
             {
-                Debug.Log($"Not Enough Gears in the run. Found {gears}");
+                Debug.LogWarning($"Not Enough Gears in the run. Found {gears}");
                 return false;
             }
             if (!itemList.Contains("ITEM_SLIDE"))
             {
-                Debug.Log($"Slide Not Found");
+                Debug.LogWarning($"Slide Not Found");
 
                 return false;
             }
             if (!itemList.Contains("ITEM_LINEBOMB"))
             {
-                Debug.Log($"LineBomb Not Found");
+                Debug.LogWarning($"LineBomb Not Found");
 
                 return false;
             }
             if (!itemList.Contains("ITEM_DOUBLEJUMP"))
             {
-                Debug.Log($"Double Jump Not Found");
+                Debug.LogWarning($"Double Jump Not Found");
 
                 return false;
             }
             if (!itemList.Contains("ITEM_JETPACK"))
             {
-                Debug.Log($"Jet Not Found");
+                Debug.LogWarning($"Jet Not Found");
 
                 return false;
             }
             if (!itemList.Contains("ITEM_WALLJUMP"))
             {
-                Debug.Log($"Walljump Not Found");
+                Debug.LogWarning($"Walljump Not Found");
 
                 return false;
             }
             if (!itemList.Contains("ITEM_AirDash"))
             {
-                Debug.Log($"Air Dash Not Found");
+                Debug.LogWarning($"Air Dash Not Found");
 
                 return false;
             }
             if (!itemList.Contains("ITEM_AirSlide"))
             {
-                Debug.Log($"Fairy Powder Not Found");
+                Debug.LogWarning($"Fairy Powder Not Found");
 
                 return false;
             }
             if (!itemList.Contains("ITEM_Rotater"))
             {
-                Debug.Log($"Vortex Glove Not Found");
+                Debug.LogWarning($"Vortex Glove Not Found");
 
                 return false;
             }
             if (!itemList.Contains("ITEM_HIJUMP"))
             {
-                Debug.Log($"Highjump Glove Not Found");
+                Debug.LogWarning($"Highjump Glove Not Found");
 
                 return false;
             }
@@ -782,7 +784,7 @@ namespace TeviRandomizer
 
 
 
-                string item1 = $"{loc.Itemname} #{loc.slotId}";
+                string item1 = loc.Locationname;
                 string item2 = ((ItemList.Type)loc.newItem).ToString();
                 try
                 {

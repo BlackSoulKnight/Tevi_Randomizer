@@ -19,7 +19,7 @@ namespace TeviRandomizer
             Dictionary<string,string> dict = new Dictionary<string,string>();
             foreach (string line in File.ReadLines(path + "Location.txt"))
             {
-                string[] para = line.Split(':');
+                string[] para = line.Split('@');
                 dict.Add($"{para[0]} #{para[2]}", para[4]);
             }
             return dict;
@@ -36,15 +36,20 @@ namespace TeviRandomizer
         }
         public static bool hasItem(ItemList.Type item,byte slot)
         {
-            return collectedLocationList.Contains(APLocationName[$"{item} #{slot}"]);
+            if (APLocationName.ContainsKey($"{item} #{slot}"))
+                return collectedLocationList.Contains(APLocationName[$"{item} #{slot}"]);
+            else
+                return collectedLocationList.Contains($"{item} #{slot}");
         }
         public static void clearItemList() => collectedLocationList.Clear();
         public static void addItemToList(ItemList.Type item, byte slot)
         {
-            collectedLocationList.Add(APLocationName[$"{item} #{slot}"]);
-            if (ArchipelagoInterface.Instance.isConnected)
+            if (APLocationName.ContainsKey($"{item} #{slot}"))
+                addItemToList(APLocationName[$"{item} #{slot}"]);
+            else
             {
-                ArchipelagoInterface.Instance.checkoutLocation(APLocationName[$"{item} #{slot}"]);
+                addItemToList($"{item} #{slot}");
+                return;
             }
         }
         public static void addItemToList(string location)

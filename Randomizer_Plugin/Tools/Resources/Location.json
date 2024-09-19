@@ -1778,7 +1778,7 @@
         "slotId": 5,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB3",
+                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB2",
                 "Difficulty": 0
             }
         ]
@@ -2206,7 +2206,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB3",
+                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB2",
                 "Difficulty": 0
             },
             {
@@ -2262,15 +2262,15 @@
         "slotId": 7,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB3",
+                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB2",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeS3 && ChargeShot && I20 && ITEM_ORB3",
+                "Method": "ITEM_OrbTypeS3 && ChargeShot && I20 && ITEM_ORB2",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeC3 && ChargeShot && I19 && ITEM_ORB3",
+                "Method": "ITEM_OrbTypeC3 && ChargeShot && I19 && ITEM_ORB2",
                 "Difficulty": 0
             }
         ]
@@ -2655,6 +2655,18 @@
         "Itemname": "BADGE_StyleComboNormal4HAAA",
         "Location": "Ana Thema",
         "LocationName": "Ana Thema - Style Combo: Lock On A",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2300",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ComboBreakBoost",
+        "Location": "Ana Thema",
+        "LocationName": "Ana Thema - Combo Crasher",
         "slotId": 1,
         "Requirement": [
             {
@@ -3958,7 +3970,7 @@
         "slotId": 15,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeC3 && ChargeShot && I19 && ITEM_ORB3",
+                "Method": "ITEM_OrbTypeC3 && ChargeShot && I19 && ITEM_ORB2",
                 "Difficulty": 0
             },
             {
@@ -3966,15 +3978,15 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_HIJUMP && I20 && ITEM_ORB3",
+                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_HIJUMP && I20 && ITEM_ORB2",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_DOUBLEJUMP && I20 && ITEM_ORB3",
+                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_DOUBLEJUMP && I20 && ITEM_ORB2",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_JETPACK && I20 && ITEM_ORB3",
+                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_JETPACK && I20 && ITEM_ORB2",
                 "Difficulty": 0
             }
         ]
@@ -4390,7 +4402,7 @@
         "slotId": 20,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS3 && ITEM_DOUBLEJUMP && ITEM_AirDash && ChargeShot && I20 && ITEM_ORB3",
+                "Method": "ITEM_OrbTypeS3 && ITEM_DOUBLEJUMP && ITEM_AirDash && ChargeShot && I20 && ITEM_ORB2",
                 "Difficulty": 0
             }
         ]
@@ -4882,7 +4894,7 @@
         "slotId": 24,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB3",
+                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB2",
                 "Difficulty": 0
             }
         ]
@@ -5997,8 +6009,8 @@
     },
     {
         "Itemname": "BADGE_HP2Damage6",
-        "Location": "Sinners Hell",
-        "LocationName": "Sinners Hell - Blood Boil",
+        "Location": "Sinner's Oath",
+        "LocationName": "Sinner's Oath - Blood Boil",
         "slotId": 1,
         "Requirement": [
             {
@@ -6009,8 +6021,20 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Sinners Hell",
-        "LocationName": "Sinners Hell - Kiwi Bunny Potion",
+        "Location": "Sinner's Oath",
+        "LocationName": "Sinner's Oath - Kiwi Bunny Potion",
+        "slotId": 29,
+        "Requirement": [
+            {
+                "Method": "ITEM_AirSlide && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_RapidShots",
+        "Location": "Sinner's Oath",
+        "LocationName": "Sinner's Oath - Rapid Shots Modchip",
         "slotId": 29,
         "Requirement": [
             {
@@ -6021,8 +6045,8 @@
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "Sinners Hell",
-        "LocationName": "Sinners Hell - Astral Gear",
+        "Location": "Illusion Palace Entrance",
+        "LocationName": "Illusion Palace Entrance - Astral Gear",
         "slotId": 43,
         "Requirement": [
             {
@@ -6033,19 +6057,27 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Sinners Hell",
+        "Location": "Sinner's Oath",
         "LocationName": "Sinners Hell - Grape Bunny Potion",
         "slotId": 29,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
+                "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_DOUBLJUMP",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_JETPACK",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_WALLJUMP",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Sinners Hell",
+        "Location": "Sinner's Oath",
         "LocationName": "Sinners Hell - Cherry Bunny Potion",
         "slotId": 29,
         "Requirement": [
@@ -6065,32 +6097,32 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Sinners Hell",
-        "LocationName": "Sinners Hell - Blueberry Bunny Potion",
+        "Location": "Sinner's Oath",
+        "LocationName": "Sinner's Oath - Blueberry Bunny Potion",
         "slotId": 29,
         "Requirement": [
             {
-                "Method": "ITEM_JETPACK",
+                "Method": "ITEM_JETPACK && ITEM_WALLJUMP && ITEM_DOUBLEJUMP && ITEM_Rotater",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_DOUBLEJUMP",
+                "Method": "ITEM_JETPACK && ITEM_WALLJUMP && ITEM_DOUBLEJUMP && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Sinners Hell",
-        "LocationName": "Sinners Hell - Lemon Bunny Potion",
+        "Location": "Sinner's Oath",
+        "LocationName": "Sinner's Oath - Lemon Bunny Potion",
         "slotId": 29,
         "Requirement": [
             {
-                "Method": "ITEM_JETPACK3 && ITEM_AirDash",
+                "Method": "ITEM_JETPACK3 && ITEM_AirDash && ITEM_Rotater && ITEM_SLIDE",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_JETPACK && ITEM_AirDash && ITEM_DOUBLEJUMP",
+                "Method": "ITEM_JETPACK && ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_Rotater && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]

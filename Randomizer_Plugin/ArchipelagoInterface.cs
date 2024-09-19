@@ -117,6 +117,15 @@ namespace TeviRandomizer
         }
 
 
+        public void disconnect()
+        {
+            if (session?.Socket?.DisconnectAsync() != null)
+            {
+                this.isConnected = false;
+            }
+
+        }
+
         public void refreshRecievedItems()
         {
             if (this.isConnected)
@@ -165,13 +174,13 @@ namespace TeviRandomizer
                 try
                 {
                     id = locations[location].id;
+                    session.Locations.CompleteLocationChecks(id);
                 }
                 catch
                 {
                     Debug.LogError("location not found in Location Dictionary");
                     return;
                 }
-                session.Locations.CompleteLocationChecks(id);
             }
         }
 

@@ -124,7 +124,7 @@ Magma Pits:Magma Depths:ITEM_SLIDE && ITEM_AirDash && ChargeShot
 Magma Pits:Magma Depths:ITEM_SLIDE &&  ITEM_DOUBLEJUMP && ChargeShot
 Magma Pits:Magma Depths:ITEM_SLIDE &&  ITEM_HIJUMP && ChargeShot
 Magma Pits:Magma Depths:ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_JETPACK
-Magma Depths:Sinners Entrance:ITEM_Rotater && ITEM_AirSlide && ITEM_SLIDE
+Magma Depths:Sinner's Oath Entrance:
 Swamp Entrance:Tartarus:
 Swamp Entrance:Swamp:ITEM_KNIFE
 Swamp Entrance:Swamp:ITEM_ORB
@@ -168,10 +168,10 @@ Valhalla Breath West Extended::
 Solennian Ruins Entrance:Solennian Ruins:ITEM_LINEBOMB
 Solennian Ruins Entrance:Thanatara Canyon:
 Solennian Ruins::
-Sinners Entrance:Sinners Hell:ITEM_SLIDE && ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP2 && ChargeShot
-Sinners Entrance:Sinners Hell:ITEM_SLIDE && ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP && ITEM_DOUBLEJUMP && ChargeShot
-Sinners Entrance:Sinners Hell:ITEM_SLIDE && ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP && ITEM_JETPACK && ChargeShot
-Sinners Hell:Illusion Palace:Goal
+Sinner's Oath Entrance:Sinner's Oath:ChargeShot
+Sinner's Oath Entrance:Illusion Palace Entrance:ITEM_LINEBOMB
+Sinner's Oath:Illusion Palace Entrance:
+Illusion Palace Entrance:Illusion Palace:Goal
 Illusion Palace::
 Relicts:CopperWood:
 Relicts:Gleamwood Middle:ITEM_LINEBOMB

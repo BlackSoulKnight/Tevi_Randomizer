@@ -66,7 +66,7 @@ namespace TeviRandomizer
 
             }
 
-            if (!type.ToString().Contains("STACKABLE"))
+            if (type.ToString().Contains("ITEM") || type.ToString().Contains("Useable"))
                 value = 255;
 
         }
@@ -159,7 +159,6 @@ namespace TeviRandomizer
 
             if (item >= ItemList.Type.BADGE_START && item <= ItemList.Type.BADGE_MAX)
             {
-                value = 1;
                 if(SaveManager.Instance.GetMiniFlag(Mini.UnlockedBadge) <= 0)
                     SaveManager.Instance.SetMiniFlag(Mini.UnlockedBadge, 1);
 

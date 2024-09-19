@@ -1121,8 +1121,8 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Sinners Entrance",
-                    "Method": "ITEM_Rotater && ITEM_AirSlide && ITEM_SLIDE"
+                    "Exit": "Sinner's Oath Entrance",
+                    "Method": ""
                 }
             ]
         },
@@ -1557,7 +1557,7 @@
     ],
     "Map23": [
         {
-            "Name": "Sinners Entrance",
+            "Name": "Sinner's Oath Entrance",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -1566,21 +1566,32 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Sinners Hell",
-                    "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP2 && ChargeShot"
+                    "Exit": "Sinner's Oath",
+                    "Method": "ChargeShot"
                 },
                 {
-                    "Exit": "Sinners Hell",
-                    "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP && ITEM_DOUBLEJUMP && ChargeShot"
-                },
-                {
-                    "Exit": "Sinners Hell",
-                    "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP && ITEM_JETPACK && ChargeShot"
+                    "Exit": "Illusion Palace Entrance",
+                    "Method":"ITEM_LINEBOMB"
                 }
             ]
         },
         {
-            "Name": "Sinners Hell",
+            "Name": "Sinner's Oath",
+            "Money": [
+                {
+                    "Method": "",
+                    "Amount": 0
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Illusion Palace Entrance",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Illusion Palace Entrance",
             "Money": [
                 {
                     "Method": "",

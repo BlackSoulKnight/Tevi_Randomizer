@@ -242,6 +242,10 @@ namespace TeviRandomizer
 
         static public void createSeed()
         {
+            if (ArchipelagoInterface.Instance.isConnected)
+            {
+                ArchipelagoInterface.Instance.disconnect();
+            }
             System.Random rando;
             if (seed == "")
             {

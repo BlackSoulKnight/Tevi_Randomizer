@@ -74,6 +74,7 @@ namespace TeviRandomizer
             ref TextMeshProUGUI ___mrequiredText, ref byte[] ___currentMaterialNeeded, ref ItemList.Type ___currentItemType)
         {
             Traverse t = Traverse.Create(__instance);
+            if (___craftList[___selected].GetItemType().ToString().Contains("Useable")) return true;
 
 
 
@@ -803,7 +804,12 @@ namespace TeviRandomizer
                     ItemList.Resource resource = ItemList.Resource.COIN;
 
 
-                    if (getItemUpgradeCount(___currentItemType) >= 3) // helperfunction 
+                    if (___currentItemType.ToString().Contains("_OrbBoost") )
+                    {
+                        if(SaveManager.Instance.GetOrbBoostObtained() >= 2)
+                            num5 = -3;
+                    }
+                    else if (getItemUpgradeCount(___currentItemType) >= 3) // helperfunction 
                     {
                         num5 = -3;
                     }

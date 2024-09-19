@@ -133,10 +133,12 @@ namespace TeviRandomizer
         }
     }
 
+
+
     public class RandomizerUI : MonoBehaviour
     {
         private GameObject[][][] options;
-        private int tab = 1, side = 0, selected = 0;
+        private int tab = 0, side = 0, selected = 0;
         private bool isEditing = false; 
         private bool finishEditing = false;
         private Rewired.Player player;
@@ -247,6 +249,14 @@ namespace TeviRandomizer
             });
             Randomizer.settings = UI.settings;
 
+            var tabs = gameObject.transform.Find("SwitchTab");
+            for (int i = 0; i< tabs.childCount; i++)
+            {
+                var child = tabs.GetChild(i);
+                child.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate {
+                    this.swtichTab(int.Parse(child.name));
+                });
+            }
 
             GameObject[]optionsMenu = [s,r,g]; 
             options = new GameObject[settingsAt.transform.childCount][][];
@@ -339,9 +349,16 @@ namespace TeviRandomizer
 
         }
 
-        private void setVisibleTab(int tab,bool state)
+        private void setVisibleTab(int tab,bool state = true)
         {
             gameObject.transform.GetChild(4).GetChild(tab).gameObject.SetActive(state);
+        }
+        public void swtichTab(int tab)
+        {
+            tab -= 1;
+            gameObject.transform.GetChild(4).GetChild(this.tab).gameObject.SetActive(false);
+            gameObject.transform.GetChild(4).GetChild(tab).gameObject.SetActive(true);
+            this.tab = tab;
         }
 
         void OnEnable()
