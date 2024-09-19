@@ -171,7 +171,19 @@ namespace TeviRandomizer
                 }
                 value = SaveManager.Instance.GetItem(item);
                 value = (byte)Math.Min(value + 1, byte.MaxValue);
-                
+                if (item == ItemList.Type.ITEM_BoostSystem)
+                {
+                    if (SaveManager.Instance.GetOrb() == 3)
+                    {
+                        SaveManager.Instance.SetOrb(4);
+                    }
+                    Debug.Log($"[SaveManager] Set Item {item} from {SaveManager.Instance.savedata.itemflag[(int)item]} to {value} | ITEM ID : {(int)item}");
+                    SaveManager.Instance.savedata.itemflag[(int)item] = value;
+                    SaveManager.Instance.RenewGetTotalItemCompletePercent();
+                    SaveManager.Instance.SetMiniFlag(Mini.CanDropCrystal, 1);
+                    SaveManager.Instance.GiveMaxCrystal();
+                    return false;
+                }
             }
             else if (item.ToString().Contains("STACKABLE"))
             {
