@@ -97,7 +97,6 @@ namespace TeviRandomizer
             this.gameObject.AddComponent<ArchipelagoInterface>();
             ArchipelagoInterface.Instance = gameObject.GetComponent<ArchipelagoInterface>();
             Localize.GetLocalizeTextWithKeyword("", false);
-            System.IO.Directory.CreateDirectory(pluginPath + "Data");
             randomizer = Randomizer.Instance;
 
             harmonyPatchInstance.PatchAll(typeof(UI));

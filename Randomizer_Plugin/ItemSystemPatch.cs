@@ -65,6 +65,7 @@ namespace TeviRandomizer
                 //Archipelago implementation
 
             }
+            value = 1;
 
             if (type.ToString().Contains("ITEM") || type.ToString().Contains("Useable"))
                 value = 255;
