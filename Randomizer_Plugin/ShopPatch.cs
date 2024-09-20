@@ -486,12 +486,12 @@ namespace TeviRandomizer
                 {
                     data = RandomizerPlugin.getRandomizedItem(item, 1);
                     ___item_desc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(data);
-                    if (ArchipelagoInterface.Instance.isConnected && (data == ItemList.Type.I10 || data == ItemList.Type.I11))
-                    {
-                        string itemName = ArchipelagoInterface.Instance.getLocItemName(item, slot);
-                        string playerName = ArchipelagoInterface.Instance.getLocPlayerName(item, slot);
-                        ___item_desc.text = "<font-weight=200>" + $"You found {itemName} for {playerName}";
-                    }
+                }
+                if (ArchipelagoInterface.Instance.isConnected && (data == ItemList.Type.I10 || data == ItemList.Type.I11))
+                {
+                    string itemName = ArchipelagoInterface.Instance.getLocItemName(item, slot);
+                    string playerName = ArchipelagoInterface.Instance.getLocPlayerName(item, slot);
+                    ___item_desc.text = "<font-weight=200>" + $"You found {itemName} for {playerName}";
                 }
                 if (___item_desc.text.Contains("[c2]"))
                 {
