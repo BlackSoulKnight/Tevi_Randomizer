@@ -263,14 +263,14 @@ namespace TeviRandomizer
         {
 
             ItemList.Type data;
-
-            if (ArchipelagoInterface.Instance.isConnected && !ArchipelagoInterface.Instance.isItemNative($"{item} #{slot}") || item == "Remote")
-            {
-                data = ArchipelagoInterface.Instance.isItemProgessive($"{item} #{slot}") ? ArchipelagoInterface.remoteItemProgressive : ArchipelagoInterface.remoteItem;
+            if (LocationTracker.APLocationName.ContainsKey($"{item} #{slot}")  && (ArchipelagoInterface.Instance.isConnected && !ArchipelagoInterface.Instance.isItemNative(LocationTracker.APLocationName[$"{item} #{slot}"]) || item == "Remote"))
+            {               
+                    data = ArchipelagoInterface.Instance.isItemProgessive(LocationTracker.APLocationName[$"{item} #{slot}"]) ? ArchipelagoInterface.remoteItemProgressive : ArchipelagoInterface.remoteItem;
             }
             else
             {
-                try { 
+                try
+                {
                     data = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), __itemData[LocationTracker.APLocationName[$"{item} #{slot}"]]);
                 }
                 catch
