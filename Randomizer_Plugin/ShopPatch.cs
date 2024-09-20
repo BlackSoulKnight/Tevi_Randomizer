@@ -270,7 +270,7 @@ namespace TeviRandomizer
                         break;
                     case Character.Type.Vena:
 
-                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaSmall) <= 0)
+                        if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaSmall) != 0)
                         {
                             obj = [ItemList.Type.Useable_VenaBombSmall, false];
                             Traverse.Create(__instance).Method("AddItem", obj).GetValue();
