@@ -314,6 +314,70 @@ namespace TeviRandomizer
                 ArchipelagoInterface.Instance.sendGOAL();
             }
         }
+
+        // All Events that have Random Badge = true
+        [HarmonyPatch(typeof(Chap4CyrilRoom),"EVENT")]
+        [HarmonyPrefix]
+        static bool CyrilBadge()
+        {
+            if(EventManager.Instance.EventStage == 10 && EventManager.Instance.EventTime > 0.7f && EventManager.Instance.EventTime < 100f)
+            {
+                HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_CrystalAbsorberS, 1);
+                EventManager.Instance.EventTime = 100f;
+            }
+            return true;
+        }
+
+        [HarmonyPatch(typeof(AllMemineWon),"EVENT")]
+        [HarmonyPrefix]
+        static bool MemineAllBadge()
+        {
+            if (EventManager.Instance.EventStage == 20 && EventManager.Instance.EventTime > 0.7f && EventManager.Instance.EventTime < 100f)
+            {
+                HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_DoubleAirDash, 1);
+                EventManager.Instance.EventTime = 100f;
+            }
+            return true;
+        }
+
+        [HarmonyPatch(typeof(AfterMission),"EVENT")]
+        [HarmonyPrefix]
+        static bool AfterMissionBadge()
+        {
+            EventManager em = EventManager.Instance;
+            if (EventManager.Instance.EventStage == 50 && EventManager.Instance.EventTime > 0.7f && em.EventTime < 100f)
+            {
+                if (em.getSubMode() == Mode.StartMission3A)
+                {
+                    HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_CrystalGen, 1);
+                }
+                if (em.getSubMode() == Mode.StartMission3B)
+                {
+                    HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_BoostSizeIncrease, 1);
+                }
+                if (em.getSubMode() == Mode.StartMission3C)
+                {
+                    HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_BoostCostCut, 1);
+                }
+                if (em.getSubMode() == Mode.StartMission8A)
+                {
+                    HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_AmuletDouble, 1);
+                }
+                if (em.getSubMode() == Mode.StartMission15A)
+                {
+                    HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_AmuletQuicken, 1);
+                }
+                if (em.getSubMode() == Mode.StartMission20A)
+                {
+                    HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_BoostHitCount, 1);
+                }
+                em.EventTime = 100f;
+            }
+            return true;
+        }
+
     }
+
+
 
 }
