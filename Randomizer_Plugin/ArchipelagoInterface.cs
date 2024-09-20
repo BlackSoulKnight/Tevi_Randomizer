@@ -25,7 +25,7 @@ namespace TeviRandomizer
     class ArchipelagoInterface : MonoBehaviour
     {
         public const ItemList.Type remoteItem = ItemList.Type.I10;
-        public const ItemList.Type remoteItemProgressive = ItemList.Type.I10;
+        public const ItemList.Type remoteItemProgressive = ItemList.Type.I11;
 
 
         private class LocationData
@@ -130,10 +130,11 @@ namespace TeviRandomizer
         {
             if (this.isConnected)
             {
-                sessionsItemNR = Math.Min(sessionsItemNR, session.Items.AllItemsReceived.Count);
-                for (;  sessionsItemNR > currentItemNR; sessionsItemNR--)
+                int sessionsNR = sessionsItemNR;
+                int currentNR = currentItemNR;
+                for (;  sessionsNR > currentNR; sessionsNR--)
                 {
-                    ItemInfo item = session.Items.AllItemsReceived[sessionsItemNR-1];
+                    ItemInfo item = session.Items.AllItemsReceived[sessionsNR-1];
                     newItems.Insert(0,item);
                 }
             }
