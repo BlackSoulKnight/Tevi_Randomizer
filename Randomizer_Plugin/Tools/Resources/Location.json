@@ -7421,8 +7421,8 @@
     },
     {
         "Itemname": "ITEM_OrbTypeC2",
-        "Location": "Orb Type Upgrade",
-        "LocationName": "Item Upgrade - Blue Module Type-B",
+        "Location": "Item Upgrade",
+        "LocationName": "Orb Type Upgrade - Blue Module Type-B",
         "slotId": 1,
         "Requirement": [
             {
@@ -7433,8 +7433,8 @@
     },
     {
         "Itemname": "ITEM_OrbTypeS2",
-        "Location": "Orb Type Upgrade",
-        "LocationName": "Item Upgrade - Red Module Type-B",
+        "Location": "Item Upgrade",
+        "LocationName": "Orb Type Upgrade - Red Module Type-B",
         "slotId": 1,
         "Requirement": [
             {
@@ -7445,8 +7445,8 @@
     },
     {
         "Itemname": "ITEM_OrbTypeC3",
-        "Location": "Orb Type Upgrade",
-        "LocationName": "Item Upgrade - Blue Module Type-C",
+        "Location": "Item Upgrade",
+        "LocationName": "Orb Type Upgrade - Blue Module Type-C",
         "slotId": 1,
         "Requirement": [
             {
@@ -7457,8 +7457,8 @@
     },
     {
         "Itemname": "ITEM_OrbTypeS3",
-        "Location": "Orb Type Upgrade",
-        "LocationName": "Item Upgrade - Red Module Type-C",
+        "Location": "Item Upgrade",
+        "LocationName": "Orb Type Upgrade - Red Module Type-C",
         "slotId": 1,
         "Requirement": [
             {
@@ -7469,8 +7469,8 @@
     },
     {
         "Itemname": "ITEM_OrbBoostU",
-        "Location": "Orb Boost Upgrade",
-        "LocationName": "Item Upgrade - Core Module Type-U",
+        "Location": "Item Upgrade",
+        "LocationName": "Orb Type Upgrade - Core Module Type-U",
         "slotId": 1,
         "Requirement": [
             {
@@ -7481,8 +7481,8 @@
     },
     {
         "Itemname": "ITEM_OrbBoostD",
-        "Location": "Orb Boost Upgrade",
-        "LocationName": "Item Upgrade - Core Module Type-D",
+        "Location": "Item Upgrade",
+        "LocationName": "Orb Type Upgrade - Core Module Type-D",
         "slotId": 1,
         "Requirement": [
             {

@@ -570,9 +570,9 @@ ITEM_Rotater@Item Upgrade@2@ITEM_Rotater && Upgrade 2 && Air,0@Item Upgrade - Vo
 ITEM_Rotater@Item Upgrade@3@ITEM_Rotater && Upgrade 2 && Air,0@Item Upgrade - Vortex Gloves #2
 ITEM_GoldenGlove@Item Upgrade@2@ITEM_GoldenGlove && Upgrade 1 && Fire && Air && Light,0@Item Upgrade - Trinketeer's Fortune #1
 ITEM_GoldenGlove@Item Upgrade@3@ITEM_GoldenGlove && Upgrade 1 && Fire && Air && Light,0@Item Upgrade - Trinketeer's Fortune #2
-ITEM_OrbTypeC2@Orb Type Upgrade@1@Coins 250 && ITEM_ORB3 && Core 4,0@Item Upgrade - Blue Module Type-B
-ITEM_OrbTypeS2@Orb Type Upgrade@1@Coins 250 && ITEM_ORB3 && Core 5,0@Item Upgrade - Red Module Type-B
-ITEM_OrbTypeC3@Orb Type Upgrade@1@Coins 250 && ITEM_ORB3 && Core 7,0@Item Upgrade - Blue Module Type-C
-ITEM_OrbTypeS3@Orb Type Upgrade@1@Coins 250 && ITEM_ORB3 && Core 8,0@Item Upgrade - Red Module Type-C
-ITEM_OrbBoostU@Orb Boost Upgrade@1@Coins 250 && Core 4,0@Item Upgrade - Core Module Type-U
-ITEM_OrbBoostD@Orb Boost Upgrade@1@Coins 250 && Core 8,0@Item Upgrade - Core Module Type-D
+ITEM_OrbTypeC2@Item Upgrade@1@Coins 250 && ITEM_ORB3 && Core 4,0@Orb Type Upgrade - Blue Module Type-B
+ITEM_OrbTypeS2@Item Upgrade@1@Coins 250 && ITEM_ORB3 && Core 5,0@Orb Type Upgrade - Red Module Type-B
+ITEM_OrbTypeC3@Item Upgrade@1@Coins 250 && ITEM_ORB3 && Core 7,0@Orb Type Upgrade - Blue Module Type-C
+ITEM_OrbTypeS3@Item Upgrade@1@Coins 250 && ITEM_ORB3 && Core 8,0@Orb Type Upgrade - Red Module Type-C
+ITEM_OrbBoostU@Item Upgrade@1@Coins 250 && Core 4,0@Orb Type Upgrade - Core Module Type-U
+ITEM_OrbBoostD@Item Upgrade@1@Coins 250 && Core 8,0@Orb Type Upgrade - Core Module Type-D
