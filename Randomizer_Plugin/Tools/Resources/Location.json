@@ -7421,7 +7421,7 @@
     },
     {
         "Itemname": "ITEM_OrbTypeC2",
-        "Location": "Item Upgrade",
+        "Location": "Orb Type Upgrade",
         "LocationName": "Item Upgrade - Blue Module Type-B",
         "slotId": 1,
         "Requirement": [
@@ -7433,7 +7433,7 @@
     },
     {
         "Itemname": "ITEM_OrbTypeS2",
-        "Location": "Item Upgrade",
+        "Location": "Orb Type Upgrade",
         "LocationName": "Item Upgrade - Red Module Type-B",
         "slotId": 1,
         "Requirement": [
@@ -7445,7 +7445,7 @@
     },
     {
         "Itemname": "ITEM_OrbTypeC3",
-        "Location": "Item Upgrade",
+        "Location": "Orb Type Upgrade",
         "LocationName": "Item Upgrade - Blue Module Type-C",
         "slotId": 1,
         "Requirement": [
@@ -7457,7 +7457,7 @@
     },
     {
         "Itemname": "ITEM_OrbTypeS3",
-        "Location": "Item Upgrade",
+        "Location": "Orb Type Upgrade",
         "LocationName": "Item Upgrade - Red Module Type-C",
         "slotId": 1,
         "Requirement": [
@@ -7469,7 +7469,7 @@
     },
     {
         "Itemname": "ITEM_OrbBoostU",
-        "Location": "Item Upgrade",
+        "Location": "Orb Boost Upgrade",
         "LocationName": "Item Upgrade - Core Module Type-U",
         "slotId": 1,
         "Requirement": [
@@ -7481,7 +7481,7 @@
     },
     {
         "Itemname": "ITEM_OrbBoostD",
-        "Location": "Item Upgrade",
+        "Location": "Orb Boost Upgrade",
         "LocationName": "Item Upgrade - Core Module Type-D",
         "slotId": 1,
         "Requirement": [
