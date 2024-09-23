@@ -80,7 +80,7 @@ Gleamwood Middle:Ulskan Village Area:ITEM_DOUBLEJUMP
 Gleamwood Middle:Ulskan Village Area:ITEM_AirDash
 Gleamwood Middle:Ulskan Village Area:ITEM_JETPACK
 Gleamwood Upper:Gleamwood Middle:ITEM_SLIDE
-Gleamwood Upper:Ulvosa:ChargeShot && ITEM_LINEBOMB
+Gleamwood Upper:Ulvosa:ChargeShot && ITEM_LINEBOMB && ITEM_SLODE
 Ulskan Village Area:Gleamwood Middle:
 Ulskan Village Area:Blushwood:
 Ulskan Village Area:Plague Forest:

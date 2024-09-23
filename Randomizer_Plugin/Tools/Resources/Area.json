@@ -662,7 +662,7 @@
                 },
                 {
                     "Exit": "Ulvosa",
-                    "Method": "ChargeShot && ITEM_LINEBOMB"
+                    "Method": "ChargeShot && ITEM_LINEBOMB && ITEM_SLODE"
                 }
             ]
         },
