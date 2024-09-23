@@ -1218,7 +1218,7 @@
                 },
                 {
                     "Exit": "DreamKeeper",
-                    "Method": "ITEM_Rotater && ChargeShot"
+                    "Method": "ITEM_Rotater && ChargeShot && ITEM_LINEBOMB"
                 }
             ]
         },
@@ -1236,20 +1236,8 @@
             ],
             "Connections": [
                 {
-                    "Exit": "DreamKeeper Outside Right",
-                    "Method": "ITEM_JETPACK"
-                },
-                {
-                    "Exit": "DreamKeeper Outside Right",
-                    "Method": "ITEM_DOUBLEJUMP"
-                },
-                {
-                    "Exit": "DreamKeeper Outside Right",
-                    "Method": "ITEM_WALLJUMP"
-                },
-                {
                     "Exit": "DreamKeeper",
-                    "Method": "ITEM_Rotater && ChargeShot"
+                    "Method": "ITEM_Rotater && ChargeShot && ITEM_SLIDE"
                 },
                 {
                     "Exit": "Heavens Valley Snow Route Low",
@@ -1272,6 +1260,10 @@
             "Connections": [
                 {
                     "Exit": "Dreamless Depths",
+                    "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "DreamKeeper Outside Right",
                     "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
                 }
             ]

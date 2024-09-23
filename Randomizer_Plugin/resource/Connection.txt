@@ -133,13 +133,11 @@ Swamp Entrance:Swamp:ITEM_LINEBOMB && ITEM_AREABOMB
 Swamp Entrance:Magma Depths:ITEM_LINEBOMB
 Swamp:Tartarus:
 DreamKeeper Outside Right:DreamKeeper Outside Left:ChargeShot
-DreamKeeper Outside Right:DreamKeeper:ITEM_Rotater && ChargeShot
-DreamKeeper Outside Left:DreamKeeper Outside Right:ITEM_JETPACK
-DreamKeeper Outside Left:DreamKeeper Outside Right:ITEM_DOUBLEJUMP
-DreamKeeper Outside Left:DreamKeeper Outside Right:ITEM_WALLJUMP
-DreamKeeper Outside Left:DreamKeeper:ITEM_Rotater && ChargeShot
+DreamKeeper Outside Right:DreamKeeper:ITEM_Rotater && ChargeShot && ITEM_LINEBOMB
+DreamKeeper Outside Left:DreamKeeper:ITEM_Rotater && ChargeShot && ITEM_SLIDE
 DreamKeeper Outside Left:Heavens Valley Snow Route Low:
 DreamKeeper:Dreamless Depths:ITEM_SLIDE && ITEM_LINEBOMB
+DreamKeeper:DreamKeeper Outside Right:ITEM_SLIDE && ITEM_LINEBOMB
 Dreamless Depths:Dreamless Depths 2:ITEM_HIJUMP
 Dreamless Depths:Dreamless Depths 2:ITEM_WALLJUMP
 Dreamless Depths:Dreamless Depths 2:ITEM_JETPACK
