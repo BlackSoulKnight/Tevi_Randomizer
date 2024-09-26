@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using Archipelago.MultiClient.Net;
 using Archipelago.MultiClient.Net.Enums;
-using Archipelago.MultiClient.Net.Helpers;
 using Archipelago.MultiClient.Net.Models;
 using Archipelago.MultiClient.Net.Packets;
 using Newtonsoft.Json.Linq;
@@ -49,7 +48,6 @@ namespace TeviRandomizer
         private const long baseID = 44965410000;
         private Dictionary<string, LocationData> locations = new Dictionary<string, LocationData>();
         public int currentItemNR = 0;
-        private int sessionsItemNR = 0;
         private Dictionary<long, string> PlayerNames = new Dictionary<long, string>();
         public bool connectToRoom(string uri, int port, string user, string password = null)
         {
@@ -98,14 +96,13 @@ namespace TeviRandomizer
             this.player = session.ConnectionInfo.Slot;
             this.isConnected = true;
             this.isSynced = false;
-            sessionsItemNR = 0;
+            this.currentItemNR = 0;
             PlayerNames.Clear();
             foreach(var info in session.Players.AllPlayers)
             {
                 PlayerNames.Add(info.Slot, info.Alias);
             }
 
-            session.Items.ItemReceived += this.addItemToQueue;
             long extraPotions = (long)success.SlotData["attackMode"];
             RandomizerPlugin.extraPotions = [(int)extraPotions,(int)extraPotions];
             RandomizerPlugin.customFlags[(int)CustomFlags.TempOption] = (long)success.SlotData["openMorose"] >0;
@@ -126,19 +123,7 @@ namespace TeviRandomizer
 
         }
 
-        public void refreshRecievedItems()
-        {
-            if (this.isConnected)
-            {
-                int sessionsNR = sessionsItemNR;
-                int currentNR = currentItemNR;
-                for (;  sessionsNR > currentNR; sessionsNR--)
-                {
-                    ItemInfo item = session.Items.AllItemsReceived[sessionsNR-1];
-                    newItems.Insert(0,item);
-                }
-            }
-        }
+
 
         public void getOwnLocationData(object slotData) {
             locations.Clear();
@@ -153,19 +138,21 @@ namespace TeviRandomizer
             }
         }
 
-        public void addItemToQueue(ReceivedItemsHelper recievedItemsHelper)
+        private List<ItemInfo> alreadyReceivedOnceItems = new List<ItemInfo>();
+        public void refreshRecievedItems(int oldIndex)
         {
-
-            var item = recievedItemsHelper.PeekItem();
-            if (!newItems.Contains(item))
+            /*
+             * From Last item saved to the newest HUD shown Item
+             */
+            if (this.isConnected)
             {
-                newItems.Add(item);
+                for (; oldIndex < currentItemNR; oldIndex++)
+                {
+                    ItemInfo item = session.Items.AllItemsReceived[oldIndex];
+                    alreadyReceivedOnceItems.Add(item);
+                }
             }
-            recievedItemsHelper.DequeueItem();
-
         }
-
-        private List<ItemInfo> newItems = new List<ItemInfo>();
 
         public void checkoutLocation(string location)
         {
@@ -242,37 +229,33 @@ namespace TeviRandomizer
                 return;
             }
 
-            if (newItems.Count > 0 && WorldManager.Instance != null && !EventManager.Instance.IsChangingMap() && WorldManager.Instance.MapInited && !HUDObtainedItem.Instance.isDisplaying() && GemaUIPauseMenu.Instance.GetAllowPause())
+            if (WorldManager.Instance != null && !EventManager.Instance.IsChangingMap() && WorldManager.Instance.MapInited && !HUDObtainedItem.Instance.isDisplaying() && GemaUIPauseMenu.Instance.GetAllowPause())
             {
+
                 ItemList.Type teviItem;
-                ItemInfo item = newItems[0];
-                if (!Enum.TryParse(item.ItemName, out teviItem))
+                if (alreadyReceivedOnceItems.Count > 0)
                 {
-                    Debug.LogWarning($"[Archipelago] Recieved Item {item.ItemName} is not a Tevi Item");
-                    newItems.Remove(item);
-                    return;
-                }
-
-                if (sessionsItemNR < currentItemNR)
-                {
-                    sessionsItemNR++;
-                    newItems.Remove(item);
-                    return;
-                }
-                if (currentItemNR < sessionsItemNR)
-                {
-                    currentItemNR++;
-                    newItems.Remove(item);
+                    ItemInfo item = alreadyReceivedOnceItems[0];
+                    if (!Enum.TryParse(item.ItemName, out teviItem))
+                    {
+                        Debug.LogWarning($"[Archipelago] Recieved Item {item.ItemName} is not a Tevi Item");
+                        alreadyReceivedOnceItems.Remove(item);
+                        return;
+                    }
                     SaveManager.Instance.SetItem(teviItem, 1);
-                    return;
+                    alreadyReceivedOnceItems.Remove(item);
                 }
-
-                //using setitem for debugging
-                //SaveManager.Instance.SetItem(teviItem, 1);
-                HUDObtainedItem.Instance.GiveItem(teviItem, 1, true);
-                sessionsItemNR++;
-                currentItemNR++;
-                newItems.Remove(item);
+                else if(currentItemNR < session.Items.AllItemsReceived.Count)
+                {
+                    ItemInfo item = session.Items.AllItemsReceived[currentItemNR];
+                    if (!Enum.TryParse(item.ItemName, out teviItem))
+                    {
+                        Debug.LogWarning($"[Archipelago] Recieved Item {item.ItemName} is not a item that exist in Tevi");
+                        return;
+                    }
+                    HUDObtainedItem.Instance.GiveItem(teviItem, 1, true);
+                    currentItemNR++;
+                }
 
             }
         }

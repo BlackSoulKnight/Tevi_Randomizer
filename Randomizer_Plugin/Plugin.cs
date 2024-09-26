@@ -296,6 +296,7 @@ namespace TeviRandomizer
         {
             __itemData.Clear();
             LocationTracker.clearItemList();
+            ArchipelagoInterface.Instance.currentItemNR = 0;
         }
 
         static public bool checkItemGot(ItemList.Type item, byte slot) //not working?
