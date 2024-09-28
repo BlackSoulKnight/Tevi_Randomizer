@@ -22,6 +22,10 @@ namespace TeviRandomizer
 
             if (em.EventStage == 1)
             {
+                if(ArchipelagoInterface.Instance?.isConnected == true)
+                {
+                    ArchipelagoInterface.Instance.currentItemNR = 0;
+                }
 
                 if (RandomizerPlugin.customFlags[(int)CustomFlags.CompassStart])
                 {

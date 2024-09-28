@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Archipelago.MultiClient.Net;
+using Archipelago.MultiClient.Net.BounceFeatures.DeathLink;
 using Archipelago.MultiClient.Net.Enums;
 using Archipelago.MultiClient.Net.Models;
 using Archipelago.MultiClient.Net.Packets;
@@ -44,8 +45,10 @@ namespace TeviRandomizer
         private LoginResult loginResult = null;
         public bool isConnected = false;
         public bool isSynced = false;
+        private DeathLinkService deathLink = null;
+        private bool deathLinkTriggered = false;
 
-        private const long baseID = 44965410000;
+        private const long baseID = 44966541000;
         private Dictionary<string, LocationData> locations = new Dictionary<string, LocationData>();
         public int currentItemNR = 0;
         private Dictionary<long, string> PlayerNames = new Dictionary<long, string>();
@@ -108,11 +111,18 @@ namespace TeviRandomizer
             RandomizerPlugin.customFlags[(int)CustomFlags.TempOption] = (long)success.SlotData["openMorose"] >0;
             RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart] = (long)success.SlotData["CeliaSable"] >0;
             RandomizerPlugin.GoMode = (int)(long)success.SlotData["GoalCount"];
+            if ((long)success.SlotData["DeathLink"] > 0)
+            {
+                deathLink = session.CreateDeathLinkService();
+                deathLink.EnableDeathLink();
+                deathLink.OnDeathLinkReceived += (deathLinkObject) => {
+                    deathLinkTriggered = true;
+                };
+            }
             getOwnLocationData(success.SlotData["locationData"]);
             storeData();
             return true;
         }
-
 
         public void disconnect()
         {
@@ -123,6 +133,17 @@ namespace TeviRandomizer
 
         }
 
+        public string causeOfDeath = "Rabbit Sleepy";
+        public void deathLinkTrigger()
+        {
+            if (deathLink == null) return;
+            if (!deathLinkTriggered)
+            {
+                deathLink.SendDeathLink(new DeathLink(user, causeOfDeath));
+                causeOfDeath = "Rabbit Sleepy";
+            }
+            deathLinkTriggered = false;
+        }
 
 
         public void getOwnLocationData(object slotData) {
@@ -138,21 +159,6 @@ namespace TeviRandomizer
             }
         }
 
-        private List<ItemInfo> alreadyReceivedOnceItems = new List<ItemInfo>();
-        public void refreshRecievedItems(int oldIndex)
-        {
-            /*
-             * From Last item saved to the newest HUD shown Item
-             */
-            if (this.isConnected)
-            {
-                for (; oldIndex < currentItemNR; oldIndex++)
-                {
-                    ItemInfo item = session.Items.AllItemsReceived[oldIndex];
-                    alreadyReceivedOnceItems.Add(item);
-                }
-            }
-        }
 
         public void checkoutLocation(string location)
         {
@@ -229,31 +235,20 @@ namespace TeviRandomizer
                 return;
             }
 
-            if (WorldManager.Instance != null && !EventManager.Instance.IsChangingMap() && WorldManager.Instance.MapInited && !HUDObtainedItem.Instance.isDisplaying() && GemaUIPauseMenu.Instance.GetAllowPause())
+            if (WorldManager.Instance != null && !EventManager.Instance.IsChangingMap() && WorldManager.Instance.MapInited && GemaUIPauseMenu.Instance.GetAllowPause() && !GameSystem.Instance.isAnyPause())
             {
+                if (deathLinkTriggered)
+                {
+                    GameObject.FindGameObjectWithTag("MainCharacter")?.GetComponent<playerController>()?.ReduceHealth(int.MaxValue, true);
+                }
 
                 ItemList.Type teviItem;
-                if (alreadyReceivedOnceItems.Count > 0)
-                {
-                    ItemInfo item = alreadyReceivedOnceItems[0];
-                    if (!Enum.TryParse(item.ItemName, out teviItem))
-                    {
-                        Debug.LogWarning($"[Archipelago] Recieved Item {item.ItemName} is not a Tevi Item");
-                        alreadyReceivedOnceItems.Remove(item);
-                        return;
-                    }
-                    SaveManager.Instance.SetItem(teviItem, 1);
-                    alreadyReceivedOnceItems.Remove(item);
-                }
-                else if(currentItemNR < session.Items.AllItemsReceived.Count)
+                if(currentItemNR < session.Items.AllItemsReceived.Count)
                 {
                     ItemInfo item = session.Items.AllItemsReceived[currentItemNR];
-                    if (!Enum.TryParse(item.ItemName, out teviItem))
-                    {
-                        Debug.LogWarning($"[Archipelago] Recieved Item {item.ItemName} is not a item that exist in Tevi");
-                        return;
-                    }
-                    HUDObtainedItem.Instance.GiveItem(teviItem, 1, true);
+                    int itemID = (int)(item.ItemId - baseID);
+                    teviItem = (ItemList.Type)itemID;
+                    HUDObtainedItem.Instance.GiveItem(teviItem,1, true);
                     currentItemNR++;
                 }
 

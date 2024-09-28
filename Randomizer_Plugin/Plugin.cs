@@ -322,6 +322,16 @@ namespace TeviRandomizer
             nearestType = getRandomizedItem(tile.itemid, tile.GetSlotID());
         }
 
+        [HarmonyPatch(typeof(GameSystem),"GameOver")]
+        [HarmonyPostfix]
+        static void APDeathlinkg()
+        {
+            if(ArchipelagoInterface.Instance.isConnected)
+            {
+                ArchipelagoInterface.Instance.deathLinkTrigger();
+            }
+        }
+
         // change how the item Bell Works
         [HarmonyPatch(typeof(CharacterBase), "UseItem")]
         [HarmonyPrefix]
@@ -416,7 +426,11 @@ namespace TeviRandomizer
                 __instance.DisableMe();
                 return false;
             }
+            if (__instance.itemid == ItemList.Type.ITEM_RapidShots) { ___slotid = 29; }
+
             ItemList.Type data = getRandomizedItem(__instance.itemid, ___slotid);
+            //Second Rapid shots location
+
             var spr = CommonResource.Instance.GetItem((int)data);
 
             if (data >= ItemList.Type.BADGE_START && data <= ItemList.Type.BADGE_MAX)

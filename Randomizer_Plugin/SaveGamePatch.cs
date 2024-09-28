@@ -1,8 +1,9 @@
-﻿using HarmonyLib;
+﻿using EventMode;
+using HarmonyLib;
+using Map;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using UnityEngine;
 
 namespace TeviRandomizer
@@ -85,7 +86,7 @@ namespace TeviRandomizer
                 {
                     ArchipelagoInterface.Instance.storeData();
                     int loadCurrItem = eS3File.Load<int>("Archipelago_currItem");
-                    ArchipelagoInterface.Instance.refreshRecievedItems(loadCurrItem);
+                    //ArchipelagoInterface.Instance.refreshRecievedItems(loadCurrItem);
                     ArchipelagoInterface.Instance.currentItemNR = loadCurrItem;
                 }
 
@@ -113,7 +114,6 @@ namespace TeviRandomizer
                 saveslot = 0;
             }
 
-
             string result = "";
             customSaveFileNames(ref result, ref saveslot);
             ES3File eS3File = new ES3File(result);
@@ -127,24 +127,64 @@ namespace TeviRandomizer
                 keyItem[i] = pair.Key;
                 valItem[i] = pair.Value;
             }
-
             eS3File.Save("RandoLocation", keyItem);
             eS3File.Save("RandoValItem", valItem);
             eS3File.Save("CustomDifficulty", RandomizerPlugin.customDiff);
             eS3File.Save("Seed", RandomizerPlugin.seed);
             eS3File.Save("HintList", HintSystem.hintList);
             eS3File.Save("GoMode", RandomizerPlugin.GoMode);
-            eS3File.Save("LocationList", LocationTracker.getCollectedLocationList());
-          
 
-            if (ArchipelagoInterface.Instance != null && ArchipelagoInterface.Instance.isConnected)
+            if (MainVar.instance._isAutoSave)
             {
-                eS3File.Save("Archipelago_currItem", ArchipelagoInterface.Instance.currentItemNR);
+                if (ArchipelagoInterface.Instance != null && ArchipelagoInterface.Instance.isConnected)
+                {
+                    eS3File.Save("Archipelago_currItem", autoSaveAPIndex);
+                }
+                eS3File.Save("LocationList", autoSaveLocations);
+
             }
+            else
+            {
+                if (ArchipelagoInterface.Instance != null && ArchipelagoInterface.Instance.isConnected)
+                {
+                    eS3File.Save("Archipelago_currItem", ArchipelagoInterface.Instance.currentItemNR);
+                }
+                eS3File.Save("LocationList", LocationTracker.getCollectedLocationList());
+            }
+
 
             eS3File.Sync();
             //Randomizer.saveSpoilerLog($"rando.SpoilerSave{saveslot}.txt", s);
         }
+
+        //very cursed Auto save things
+        static int autoSaveAPIndex= 0;
+        static string[] autoSaveLocations;
+        [HarmonyPatch(typeof(SaveManager), "AutoSave")]
+        [HarmonyPrefix]
+        static bool saveAPTemp(ref bool ___AutoSaved,ref bool forced)
+        {
+            if (GemaBossRushMode.Instance.isBossRush() ||
+                (WorldManager.Instance.CurrentRoomArea == AreaType.ZENITH || WorldManager.Instance.CurrentRoomArea == AreaType.SEAL || EventManager.Instance.mainCharacter.t.position.x <= 0f || EventManager.Instance.mainCharacter.t.position.y >= 0f)||
+                (GemaMissionMode.Instance.isInMission())||
+                (EventManager.Instance.getMode() != 0 && !forced)||
+                (SaveManager.Instance.GetMiniFlag(Mini.NoMoreAutoSaveInLastMaps) > 0 && (WorldManager.Instance.CurrentRoomArea == AreaType.FINALPALACE || WorldManager.Instance.CurrentRoomArea == AreaType.ILLUSIONPALACE))||
+                (Time.timeSinceLevelLoad <= 0.5f)
+             
+                )
+            { return true; 
+            }
+            
+
+            if (forced || (EventManager.Instance.boss == Boss.OFF && !___AutoSaved))
+            {
+                autoSaveAPIndex = ArchipelagoInterface.Instance.currentItemNR;
+                autoSaveLocations = LocationTracker.getCollectedLocationList();
+
+            }
+            return true;
+        }
+
 
         [HarmonyPatch(typeof(SaveManager), "GetSaveFileName")]
         [HarmonyPrefix]

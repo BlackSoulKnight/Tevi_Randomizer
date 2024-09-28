@@ -260,16 +260,10 @@ namespace TeviRandomizer
             short atRoomY = __instance.CurrentRoomY;
             __instance.GetRoomWithPosition(data2.transform.position.x, data2.transform.position.y, out atRoomX, out atRoomY);
             Debug.Log("Collecting : X = " + atRoomX + " , Y = " + atRoomY + " , Type : " + itemid);
-            if (data2.itemid.ToString().Contains("STACKABLE"))
-            {
+
                 HUDObtainedItem.Instance.GiveItem(itemid, data2.GetSlotID());
                 itemid = RandomizerPlugin.getRandomizedItem(data2.itemid, data2.GetSlotID());
-            }
-            else
-            {
-                HUDObtainedItem.Instance.GiveItem(itemid, 1);
-                itemid = RandomizerPlugin.getRandomizedItem(data2.itemid, 1);
-            }
+
 
             if (itemid == ItemList.Type.STACKABLE_COG)
             {
