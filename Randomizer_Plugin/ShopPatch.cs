@@ -182,7 +182,10 @@ namespace TeviRandomizer
                     return false;
 
 
-
+                if(ArchipelagoInterface.Instance?.isConnected == true)
+                {
+                    ArchipelagoInterface.Instance.announceScoutedLocation(item, slot);
+                }
 
                 switch (___typeN)
                 {

@@ -14,7 +14,6 @@ using UnityEngine;
  * () Automatic reconnect after loosing connection
  * () Send all Locations once after a disconnect
  * () Disconnect from a server
- * () Teleport To morose Give an ItemCheck?
  */
 
 
@@ -218,7 +217,14 @@ namespace TeviRandomizer
             return false;
         }
         public bool isItemProgessive(ItemList.Type item, byte slot) => isItemProgessive(LocationTracker.APLocationName[$"{item} #{slot}"]);
-
+        public void announceScoutedLocation(ItemList.Type item, byte slot)
+        {
+            
+            string location = LocationTracker.APLocationName[$"{item} #{slot}"];
+            if (isItemNative(location) && !isItemProgessive(location)) return;
+            long locationID = session.Locations.GetLocationIdFromName("Tevi", location);
+            session.Locations.ScoutLocationsAsync(HintCreationPolicy.CreateAndAnnounceOnce, locationID);
+        }
 
         public string getLocItemName(string Location) => locations[Location].item;
         public string getLocItemName(ItemList.Type item,byte slot) => getLocItemName(LocationTracker.APLocationName[$"{item} #{slot}"]);
