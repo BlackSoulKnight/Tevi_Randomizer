@@ -6,7 +6,7 @@
 ![screenshot](./Randomizer_Plugin/resource/pngs/Tartarus.png)
 
 # Snow Veil:
-![screenshot](./Randomizer_Plugin/resource/pngs/SnowVeil.png)
+![screenshot](./Randomizer_Plugin/resource/pngs/Snowveil.png)
 
 
 # Ulvosa

@@ -5,7 +5,7 @@
 + The rando may require the freeroam exclusive tech (wall jumps and wall kicks) for vertical mobility before finding any vertical mobility items
   + To do a wall jump without the wall jump item, face away from a wall then jump, turn towards the wall then press away and jump
   + To do a wall kick, do the wall jump then quick drop into another wall
-  + Hidden Paths are spread around the Game World
+  + [Hidden Paths](Hidden_Paths.md) are spread around the Game World
 + You may need to lure an enemy then quick drop on them to get additional height for some jumps/ledges
 + If you don't start with the knife, you can still use cross bombs/tornado slash/spanner bash
   + For cross bombs, use the cross bomb shortcut
