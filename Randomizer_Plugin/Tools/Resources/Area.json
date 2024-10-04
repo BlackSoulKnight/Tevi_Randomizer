@@ -744,7 +744,7 @@
             "Connections": [
                 {
                     "Exit": "Snowveil",
-                    "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK2 && ITEM_HIGHJUMP && WindSkip"
+                    "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK2 && ITEM_HIJUMP && WindSkip"
                 },
                 {
                     "Exit": "Snowveil",

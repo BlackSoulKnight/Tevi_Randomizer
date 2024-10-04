@@ -5146,7 +5146,7 @@
         "slotId": 14,
         "Requirement": [
             {
-                "Method": "ITEM_AREABOMB && ITEM_LINEBOMB",
+                "Method": "ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -5678,11 +5678,11 @@
         "slotId": 27,
         "Requirement": [
             {
-                "Method": "ITEM_JETPACK && ChargeShot",
+                "Method": "ITEM_JETPACK && ChargeShot && ITEM_SLIDE",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_DOUBLEJUMP && ChargeShot",
+                "Method": "ITEM_DOUBLEJUMP && ChargeShot && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -6062,7 +6062,7 @@
         "slotId": 29,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_DOUBLJUMP",
+                "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
