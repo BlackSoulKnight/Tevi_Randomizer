@@ -3591,10 +3591,14 @@
         "Itemname": "BADGE_DodgeEPBoost",
         "Location": "Lab",
         "LocationName": "Lab - EP Booster: Dodge",
-        "slotId": 18,
+        "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_SLIDE && ITEM_JETPACK",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             }
         ]

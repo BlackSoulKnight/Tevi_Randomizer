@@ -339,7 +339,7 @@ namespace TeviRandomizer
         {
             if (item == ItemList.Type.Useable_Bell)
             {
-                if (!EventManager.Instance.isBossMode() && EventManager.Instance.getMode() == Mode.OFF && EventManager.Instance.getSubMode() == Mode.OFF)
+                if (!EventManager.Instance.isBossMode() && EventManager.Instance.getMode() == Mode.OFF && (EventManager.Instance.getSubMode() == Mode.OFF|| EventManager.Instance.getSubMode() == Mode.Chap7WarpToQueensGarden))
                 {
                     if (GemaMissionMode.Instance.isInMission() || WorldManager.Instance.Area == 30 || (EventManager.Instance.GetCurrentEventBattle() != Mode.Chap7StartRibauldChase && EventManager.Instance.GetCurrentEventBattle() != 0) || EventManager.Instance.isBossMode())
                     {

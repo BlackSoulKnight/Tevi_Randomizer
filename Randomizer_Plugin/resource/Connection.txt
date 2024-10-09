@@ -86,7 +86,7 @@ Ulskan Village Area:Blushwood:
 Ulskan Village Area:Plague Forest:
 Plague Forest:Ulskan Village Area:
 Ulvosa:Gleamwood Upper:
-Snowveil Entrance:Snowveil:ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK2 && ITEM_HIGHJUMP && WindSkip
+Snowveil Entrance:Snowveil:ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK2 && ITEM_HIJUMP && WindSkip
 Snowveil Entrance:Snowveil:ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK3 && WindSkip
 Snowveil Entrance:Snowveil:ITEM_LINEBOMB
 Snowveil:Snow City:

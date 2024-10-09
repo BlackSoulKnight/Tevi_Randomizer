@@ -275,7 +275,7 @@ BADGE_AntiAir@Catacombs Inner@1@ITEM_LINEBOMB && ITEM_SLIDE,0;ITEM_LINEBOMB && C
 BADGE_InstantDodgeMeter@Catacombs Inner@1@ITEM_LINEBOMB,0@Catacombs Inner - Dodge: Panic Switch
 STACKABLE_COG@Catacombs Inner@63@Boss,0@Catacombs Inner - Astral Gear
 STACKABLE_MATK@Lab@18@ITEM_BombLengthExtend3 && ITEM_LINEBOMB,0@Lab - Cherry Bunny Potion
-BADGE_DodgeEPBoost@Lab@18@,0@Lab - EP Booster: Dodge
+BADGE_DodgeEPBoost@Lab@1@ITEM_SLIDE && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_DOUBLEJUMP,0@Lab - EP Booster: Dodge
 STACKABLE_RATK@Lab Extended@17@ITEM_SLIDE,0@Lab Extended - Grape Bunny Potion
 BADGE_DodgeWeakAirDown@Lab Extended@1@,0@Lab Extended - Dodge Enhancer: Spiral
 BADGE_BoostCharging@Lab Extended@1@,0@Lab Extended - Core Expansion: Charge
@@ -389,7 +389,7 @@ STACKABLE_COG@Forgotten City@34@ChargeShot && Boss,0;ITEM_DOUBLEJUMP && ITEM_Bom
 BADGE_BaseComboBooster@Forgotten City@1@ChargeShot,0;ITEM_DOUBLEJUMP && ITEM_BombLengthExtend3 && ITEM_LINEBOMB,0;ITEM_WALLJUMP && ITEM_BombLengthExtend3 && ITEM_LINEBOMB,0;ITEM_HIJUMP && ITEM_JETPACK3 && ITEM_KNIFE && ITEM_BombLengthExtend3 && ITEM_LINEBOMB,0@Forgotten City - Heavy Metal
 BADGE_StyleComboPassiveS@Forgotten City@1@ITEM_LINEBOMB && ITEM_SLIDE,0@Forgotten City - C. Rank Frenzy: Focus S
 BADGE_DodgeChargedDodgeShot@Snowveil Entrance@1@ITEM_SLIDE,0@Snowveil Entrance - Dodge: Discharge
-STACKABLE_RATK@Snowveil@14@ITEM_AREABOMB && ITEM_LINEBOMB,0@Snowveil - Grape Bunny Potion
+STACKABLE_RATK@Snowveil@14@ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_SLIDE,0@Snowveil - Grape Bunny Potion
 BADGE_EPMeleeReduce@Snowveil@1@,0@Snowveil - EP Booster: Melee Menace
 STACKABLE_COG@Snowveil@32@Boss,0@Snowveil - Astral Gear
 BADGE_ChargeHeal@Snowveil@1@ITEM_Rotater,0@Snowveil - Life Steal
@@ -430,7 +430,7 @@ ITEM_AirSlide@Golden Hands HQ Sewer@1@ITEM_WALLJUMP,0;ITEM_DOUBLEJUMP,0;ITEM_JET
 STACKABLE_COG@Golden Hands HQ Sewer@36@Boss,0@Golden Hands HQ Sewer - Astral Gear
 BADGE_SlideThenStrongUp@DreamKeeper Outside Right@1@ITEM_HIJUMP,0;ITEM_JETPACK,0;ITEM_DOUBLEJUMP,0;ITEM_AirDash && ITEM_WALLJUMP,0@DreamKeeper Outside Right - Slide Basher
 STACKABLE_HP@DreamKeeper Outside Right@28@ITEM_BombLengthExtend && ITEM_LINEBOMB && ITEM_SLIDE && ChargeShot,0@DreamKeeper Outside Right - Kiwi Bunny Potion
-STACKABLE_RATK@DreamKeeper Outside Left@27@ITEM_JETPACK && ChargeShot,0;ITEM_DOUBLEJUMP && ChargeShot,0@DreamKeeper Outside Left - Grape Bunny Potion
+STACKABLE_RATK@DreamKeeper Outside Left@27@ITEM_JETPACK && ChargeShot && ITEM_SLIDE,0;ITEM_DOUBLEJUMP && ChargeShot && ITEM_SLIDE,0@DreamKeeper Outside Left - Grape Bunny Potion
 ITEM_TempRing@DreamKeeper Outside Left@1@,0@DreamKeeper Outside Left - Equilibrium Ring
 STACKABLE_HP@DreamKeeper Outside Left@27@,0@DreamKeeper Outside Left - Kiwi Bunny Potion
 BADGE_ConsumeableCharge@DreamKeeper@1@,0@DreamKeeper - MP Quicken: Sugar Rush
@@ -459,7 +459,7 @@ BADGE_HP2Damage6@Sinner's Oath@1@,0@Sinner's Oath - Blood Boil
 STACKABLE_HP@Sinner's Oath@29@ITEM_AirSlide && ITEM_SLIDE,0@Sinner's Oath - Kiwi Bunny Potion
 ITEM_RapidShots@Sinner's Oath@29@ITEM_AirSlide && ITEM_SLIDE,0@Sinner's Oath - Rapid Shots Modchip
 STACKABLE_COG@Illusion Palace Entrance@43@Boss,0@Illusion Palace Entrance - Astral Gear
-STACKABLE_RATK@Sinner's Oath@29@ITEM_BombLengthExtend3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_DOUBLJUMP,0;ITEM_BombLengthExtend3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_JETPACK,0;ITEM_BombLengthExtend3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_WALLJUMP,0@Sinners Hell - Grape Bunny Potion
+STACKABLE_RATK@Sinner's Oath@29@ITEM_BombLengthExtend3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_DOUBLEJUMP,0;ITEM_BombLengthExtend3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_JETPACK,0;ITEM_BombLengthExtend3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_WALLJUMP,0@Sinners Hell - Grape Bunny Potion
 STACKABLE_MATK@Sinner's Oath@29@ITEM_DOUBLEJUMP,0;ITEM_JETPACK,0;ITEM_AirDash,0@Sinners Hell - Cherry Bunny Potion
 STACKABLE_MP@Sinner's Oath@29@ITEM_JETPACK && ITEM_WALLJUMP && ITEM_DOUBLEJUMP && ITEM_Rotater,0;ITEM_JETPACK && ITEM_WALLJUMP && ITEM_DOUBLEJUMP && ITEM_LINEBOMB,0@Sinner's Oath - Blueberry Bunny Potion
 STACKABLE_EP@Sinner's Oath@29@ITEM_JETPACK3 && ITEM_AirDash && ITEM_Rotater && ITEM_SLIDE,0;ITEM_JETPACK && ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_Rotater && ITEM_SLIDE,0@Sinner's Oath - Lemon Bunny Potion

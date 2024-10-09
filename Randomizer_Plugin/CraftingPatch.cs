@@ -20,20 +20,12 @@ namespace TeviRandomizer
             __result = 0;
             if (RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.ITEM_OrbTypeC2, 1))
                 __result++;
-            else
-                return;
             if (RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.ITEM_OrbTypeS2, 1))
                 __result++;
-            else
-                return;
             if (RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.ITEM_OrbTypeC3, 1))
                 __result++;
-            else
-                return;
             if (RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.ITEM_OrbTypeS3, 1))
                 __result++;
-            else
-                return;
         }
 
         [HarmonyPatch(typeof(SaveManager), "GetOrbBoostObtained")]

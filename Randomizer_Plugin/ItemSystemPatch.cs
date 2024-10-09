@@ -17,27 +17,6 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static void ObtainItem(ref ItemList.Type type, ref byte value, ref bool doRandomBadge)
         {
-            if (type.ToString().Contains("_OrbType"))
-            {
-                switch (SaveManager.Instance.GetOrbTypeObtained())
-                {
-                    case 0:
-                        type = ItemList.Type.ITEM_OrbTypeC2;
-                        break;
-                    case 1:
-                        type = ItemList.Type.ITEM_OrbTypeS2;
-                        break;
-                    case 2:
-                        type = ItemList.Type.ITEM_OrbTypeC3;
-                        break;
-                    case 3:
-                        type = ItemList.Type.ITEM_OrbTypeS3;
-                        break;
-                }
-            }
-
-            //a native item pickup
-
 
             if (!doRandomBadge)
             {
