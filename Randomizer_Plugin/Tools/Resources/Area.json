@@ -131,16 +131,20 @@
                     "Method": "ITEM_AirDash"
                 },
                 {
-                    "Exit": "Ruins Entrance",
+                    "Exit": "Solennian Ruins Entrance",
                     "Method": ""
                 },
                 {
-                    "Exit": "Heavens Valley",
+                    "Exit": "Heavens Valley West",
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "Morose Transit",
-                    "Method": "DieMauerMussWeg"
+                    "Exit": "Gurun Desert",
+                    "Method": "ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "Gurun Desert",
+                    "Method": "OpenMorose"
                 },
                 {
                     "Exit": "Desert Base Entrance",
@@ -155,7 +159,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Memine All races",
+                    "Exit": "Memine All",
                     "Method": "AllMemine" 
                 }
             ]
@@ -204,7 +208,7 @@
             ]
         },
         {
-            "Name": "Morose Transit",
+            "Name": "Gurun Desert",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -267,7 +271,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Morose Transit",
+                    "Exit": "Gurun Desert",
                     "Method": ""
                 },
                 {
@@ -472,7 +476,7 @@
                     "Method": "ITEM_SLIDE"
                 },
                 {
-                    "Exit": "Heavens Valley",
+                    "Exit": "Heavens Valley West",
                     "Method": ""
                 },
                 {
@@ -526,7 +530,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Gallery of Mirrors",
+                    "Exit": "Gallery of Mirrors West",
                     "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
                 },
                 {
@@ -642,7 +646,7 @@
                 },
                 {
                     "Exit": "Ulvosa",
-                    "Method": "ChargeShot && ITEM_LINEBOMB"
+                    "Method": "ChargeShot && ITEM_LINEBOMB && ITEM_SLIDE"
                 }
             ]
         },
@@ -724,7 +728,7 @@
             "Connections": [
                 {
                     "Exit": "Snowveil",
-                    "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK2 && ITEM_HIGHJUMP && WindSkip"
+                    "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK2 && ITEM_HIJUMP && WindSkip"
                 },
                 {
                     "Exit": "Snowveil",
@@ -1101,8 +1105,8 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Sinners Entrance",
-                    "Method": "ITEM_Rotater && ITEM_AirSlide && ITEM_SLIDE"
+                    "Exit": "Sinner's Oath Entrance",
+                    "Method": ""
                 }
             ]
         },
@@ -1198,7 +1202,7 @@
                 },
                 {
                     "Exit": "DreamKeeper",
-                    "Method": "ITEM_Rotater && ChargeShot"
+                    "Method": "ITEM_Rotater && ChargeShot && ITEM_LINEBOMB"
                 }
             ]
         },
@@ -1216,20 +1220,8 @@
             ],
             "Connections": [
                 {
-                    "Exit": "DreamKeeper Outside Right",
-                    "Method": "ITEM_JETPACK"
-                },
-                {
-                    "Exit": "DreamKeeper Outside Right",
-                    "Method": "ITEM_DOUBLEJUMP"
-                },
-                {
-                    "Exit": "DreamKeeper Outside Right",
-                    "Method": "ITEM_WALLJUMP"
-                },
-                {
                     "Exit": "DreamKeeper",
-                    "Method": "ITEM_Rotater && ChargeShot"
+                    "Method": "ITEM_Rotater && ChargeShot && ITEM_SLIDE"
                 },
                 {
                     "Exit": "Heavens Valley Snow Route Low",
@@ -1252,6 +1244,10 @@
             "Connections": [
                 {
                     "Exit": "Dreamless Depths",
+                    "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "DreamKeeper Outside Right",
                     "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
                 }
             ]
@@ -1381,7 +1377,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Cloister",
+                    "Exit": "Cloister Entrance",
                     "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
                 },
                 {
@@ -1397,7 +1393,7 @@
     ],
     "Map21": [
         {
-            "Name": "Valhalla Breath Lower Left Part",
+            "Name": "Valhalla Breath West",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -1415,16 +1411,16 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Valhalla Breath Left Part",
+                    "Exit": "Valhalla Breath West Extended",
                     "Method": "ITEM_AirDash"
                 },
                 {
-                    "Exit": "Valhalla Breath Left Part",
+                    "Exit": "Valhalla Breath West Extended",
                     "Method": "ITEM_DOUBLEJUMP"
                 },
 
                 {
-                    "Exit": "Valhalla Breath Left Part",
+                    "Exit": "Valhalla Breath West Extended",
                     "Method": "ITEM_JETPACK"
                 }
             ]
@@ -1445,7 +1441,7 @@
             ]
         },
         {
-            "Name": "Heavens Valley",
+            "Name": "Heavens Valley West",
             "Money": [
                 {
                     "Method": "",
@@ -1454,29 +1450,29 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Valhalla Breath Lower Left Part",
+                    "Exit": "Valhalla Breath West",
                     "Method": "ITEM_JETPACK"
                 },
                 {
-                    "Exit": "Valhalla Breath Lower Left Part",
+                    "Exit": "Valhalla Breath West",
                     "Method": "ITEM_AirDash"
                 },
                 {
-                    "Exit": "Valhalla Breath Lower Left Part",
+                    "Exit": "Valhalla Breath West",
                     "Method": "ITEM_SLIDE && ITEM_AirSlide"
                 },
                 {
-                    "Exit": "Valhalla Breath Lower Left Part",
+                    "Exit": "Valhalla Breath West",
                     "Method": "ITEM_DOUBLEJUMP"
                 },
                 {
-                    "Exit": "Valhalla Breath Lower Left Part",
+                    "Exit": "Valhalla Breath West",
                     "Method": "ChargeShot"
                 }
             ]
         },
         {
-            "Name": "Valhalla Breath Left Part",
+            "Name": "Valhalla Breath West Extended",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -1497,7 +1493,7 @@
     ],
     "Map22": [
         {
-            "Name": "Ruins Entrance",
+            "Name": "Solennian Ruins Entrance",
             "Money": [
                 {
                     "Method": "",
@@ -1506,7 +1502,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Ruins",
+                    "Exit": "Solennian Ruins",
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
@@ -1516,7 +1512,7 @@
             ]
         },
         {
-            "Name": "Ruins",
+            "Name": "Solennian Ruins",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -1537,7 +1533,7 @@
     ],
     "Map23": [
         {
-            "Name": "Sinners Entrance",
+            "Name": "Sinner's Oath Entrance",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -1546,21 +1542,32 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Sinners Hell",
-                    "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP2 && ChargeShot"
+                    "Exit": "Sinner's Oath",
+                    "Method": "ChargeShot"
                 },
                 {
-                    "Exit": "Sinners Hell",
-                    "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP && ITEM_DOUBLEJUMP && ChargeShot"
-                },
-                {
-                    "Exit": "Sinners Hell",
-                    "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_Rotater && ITEM_WALLJUMP && ITEM_JETPACK && ChargeShot"
+                    "Exit": "Illusion Palace Entrance",
+                    "Method":"ITEM_LINEBOMB"
                 }
             ]
         },
         {
-            "Name": "Sinners Hell",
+            "Name": "Sinner's Oath",
+            "Money": [
+                {
+                    "Method": "",
+                    "Amount": 0
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Illusion Palace Entrance",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Illusion Palace Entrance",
             "Money": [
                 {
                     "Method": "",
@@ -1570,7 +1577,7 @@
             "Connections": [
                 {
                     "Exit": "Illusion Palace",
-                    "Method": ""
+                    "Method": "Goal"
                 }
             ]
         },
@@ -1717,7 +1724,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Lab Part 2",
+                    "Exit": "Lab Extended",
                     "Method": "ITEM_LINEBOMB"
                 }
             ]
@@ -1736,13 +1743,13 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Lab Part 2",
+                    "Exit": "Lab Extended",
                     "Method": "ITEM_LINEBOMB"
                 }
             ]
         },
         {
-            "Name": "Lab Part 2",
+            "Name": "Lab Extended",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -1770,7 +1777,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Lab Part 2",
+                    "Exit": "Lab Extended",
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
@@ -1782,7 +1789,7 @@
     ],
     "Map26": [
         {
-            "Name": "Cloister",
+            "Name": "Cloister Entrance",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -1803,13 +1810,13 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Cloister 2",
+                    "Exit": "Cloister Main",
                     "Method": "ChargeShot"
                 }
             ]
         },
         {
-            "Name": "Cloister 2",
+            "Name": "Cloister Main",
             "Money": [
                 {
                     "Method": "",
@@ -1826,7 +1833,7 @@
     ],
     "Map27": [
         {
-            "Name": "Gallery of Mirrors",
+            "Name": "Gallery of Mirrors West",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -1835,13 +1842,13 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Gallery of Mirrors 2",
+                    "Exit": "Gallery of Mirrors East",
                     "Method": "ChargeShot"
                 }
             ]
         },
         {
-            "Name": "Gallery of Mirrors 2",
+            "Name": "Gallery of Mirrors East",
             "Money": [
                 {
                     "Method": "Needs to be Recalculated",
@@ -1865,15 +1872,15 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Gallery of Souls Boss",
+                    "Exit": "Gallery of Souls Boss Area",
                     "Method": "ITEM_JETPACK2 && ChargeShot"
                 },
                 {
-                    "Exit": "Gallery of Souls Boss",
+                    "Exit": "Gallery of Souls Boss Area",
                     "Method": "ITEM_WALLJUMP && ChargeShot"
                 },
                 {
-                    "Exit": "Gallery of Souls Boss",
+                    "Exit": "Gallery of Souls Boss Area",
                     "Method": "ITEM_DOUBLEJUMP && ChargeShot"
                 }
             ]
@@ -1882,7 +1889,7 @@
 
 
         {
-            "Name": "Gallery of Souls Boss",
+            "Name": "Gallery of Souls Boss Area",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
