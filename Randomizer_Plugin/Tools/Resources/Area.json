@@ -1,4 +1,21 @@
 {
+
+    "Transitions":[
+        {
+            "Name":"00-01",
+            "Connections":[
+                {
+                    "Exit":"Desert Base Entrance",
+                    "Method":""
+                },
+                {
+                    "Exit":"Thanatara Canyon",
+                    "Method":""
+                }
+            ]
+        }
+    ],
+
     "Map00": [
         {
             "Name": "Desert Base Main",
@@ -14,10 +31,6 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Thanatara Canyon",
-                    "Method": ""
-                },
-                {
                     "Exit": "Desert Base Upper Half",
                     "Method": "ITEM_HIJUMP && ITEM_DOUBLEJUMP && ITEM_WALLJUMP"
                 },
@@ -27,19 +40,7 @@
                 },
                 {
                     "Exit": "Desert Base Upper Half",
-                    "Method": "ITEM_DOUBLEJUMP && ITEM_WALLJUMP2"
-                },
-                {
-                    "Exit": "Desert Base Upper Half",
-                    "Method": "ITEM_KNIFE && ITEM_SLIDE && ITEM_LINEBOMB"
-                },
-                {
-                    "Exit": "Desert Base Upper Half",
-                    "Method": "ITEM_KNIFE && ITEM_SLIDE && ITEM_LINEBOMB"
-                },
-                {
-                    "Exit": "Desert Base Upper Half",
-                    "Method": "ITEM_KNIFE && ITEM_SLIDE && ITEM_LINEBOMB"
+                    "Method": "ITEM_DOUBLEJUMP && ITEM_WALLJUMP 2"
                 }
             ]
         },
@@ -57,41 +58,24 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Thanatara Canyon",
+                    "Exit": "00-01",
                     "Method": ""
                 },
                 {
                     "Exit": "Desert Base Main",
-                    "Method": "ChargeShot"
+                    "Method": "ChargeShot || ITEM_JETPACK || ITEM_AirDash || ITEM_JETPACK || ITEM_DOUBLEJUMP || ITEM_HIJUMP || (ITEM_LINEBOMB && ITEM_AREABOMB) || RabbitJump"
                 },
                 {
                     "Exit": "Desert Base Main",
-                    "Method": "ITEM_JETPACK"
+                    "Method": "BackFlip"
                 },
                 {
-                    "Exit": "Desert Base Main",
-                    "Method": "ITEM_AirDash"
-                },
-                {
-                    "Exit": "Desert Base Main",
-                    "Method": "ITEM_JETPACK"
-                },
-                {
-                    "Exit": "Desert Base Main",
-                    "Method": "ITEM_DOUBLEJUMP"
-                },
-                {
-                    "Exit": "Desert Base Main",
-                    "Method": "ITEM_HIJUMP"
-                },
-                {
-                    "Exit": "Desert Base Main",
-                    "Method": "ITEM_LINEBOMB && ITEM_AREABOMB" 
+                    "Exit": "Desert Base Upper Half",
+                    "Method": "(BackFlip || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash) && ITEM_SLIDE && ITEM_LINEBOMB"
                 }
+
             ]
         },
-
-
         {
             "Name": "Desert Base Upper Half",
             "Money": [

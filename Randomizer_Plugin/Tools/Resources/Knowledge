@@ -1,0 +1,12 @@
+ItemUse: Negate X.Speed to reach for a ledge after a Walljump
+RabbitJump: Using a Item with 200% speed enables a Walljump near the Walljump
+RabbitWalljump: multiple RabbitJumps
+
+BackFlip: Using a Knife attack to do a BackFlip + Jump 
+
+
+
+HiddenP: A Hidden path from base game
+
+
+CEVENT_ : Creates a EVENT_ for Logic dependency
