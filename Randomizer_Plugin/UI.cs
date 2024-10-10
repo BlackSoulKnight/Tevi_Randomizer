@@ -373,7 +373,13 @@ namespace TeviRandomizer
                     UnityEngine.UI.Slider slide = options[tab][side][selected].GetComponentInChildren<UnityEngine.UI.Slider>();
                     if (slide != null)
                     {
-                        slide.value += InputAxisManager.Instance.GetXAxisRepeat();
+                        float val = InputAxisManager.Instance.GetXAxisRepeat();
+                        if (slide.value == 0 && val < 0)
+                            slide.value = slide.maxValue;
+                        else if (slide.value == slide.maxValue && val > 0)
+                            slide.value = 0;
+                        else                        
+                            slide.value += InputAxisManager.Instance.GetXAxisRepeat();
                     }
                     if (InputButtonManager.Instance.GetButton(13))
                     {

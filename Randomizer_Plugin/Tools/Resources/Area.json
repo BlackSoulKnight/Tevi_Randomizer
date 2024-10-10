@@ -26,6 +26,32 @@
                     "Method":""
                 }
             ]
+        },
+        {
+            "Name":"01-22",
+            "Connections":[
+                {
+                    "Exit":"Solennian Ruins Entrance",
+                    "Method":""
+                },
+                {
+                    "Exit":"Thanatara Canyon",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"01-21",
+            "Connections":[
+                {
+                    "Exit":"Heavens Valley West",
+                    "Method":""
+                },
+                {
+                    "Exit":"Thanatara Canyon",
+                    "Method":""
+                }
+            ]
         }
     ],
 
@@ -76,11 +102,7 @@
                 },
                 {
                     "Exit": "Desert Base Main",
-                    "Method": "ChargeShot || ITEM_JETPACK || ITEM_AirDash || ITEM_JETPACK || ITEM_DOUBLEJUMP || ITEM_HIJUMP || (ITEM_LINEBOMB && ITEM_AREABOMB) || RabbitJump"
-                },
-                {
-                    "Exit": "Desert Base Main",
-                    "Method": "BackFlip"
+                    "Method": "ChargeShot || ITEM_JETPACK || ITEM_AirDash || ITEM_JETPACK || ITEM_DOUBLEJUMP || ITEM_HIJUMP || (ITEM_LINEBOMB && ITEM_AREABOMB) || RabbitJump || BackFlip"
                 },
                 {
                     "Exit": "Desert Base Upper Half",
@@ -128,11 +150,11 @@
                     "Method": "ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash"
                 },
                 {
-                    "Exit": "Solennian Ruins Entrance",
+                    "Exit": "01-22",
                     "Method": ""
                 },
                 {
-                    "Exit": "Heavens Valley West",
+                    "Exit": "Thanatara Canyon - Heavens Valley West",
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
@@ -159,6 +181,26 @@
                     "Exit": "Memine All",
                     "Method": "AllMemine" 
                 }
+            ]
+        },
+
+
+        {
+            "Name":"Thanatara Canyon - Heavens Valley West",
+            "Money":[{
+                    "Method":"",
+                    "Amount":0
+            }],
+            "Connections": [
+                {
+                    "Exit": "01-21",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Thanatara Canyon",
+                    "Method": "ITEM_LINEBOMB"
+                }
+
             ]
         },
         {
@@ -1465,7 +1507,12 @@
                 {
                     "Exit": "Valhalla Breath West",
                     "Method": "ChargeShot"
+                },
+                {
+                    "Exit": "01-21",
+                    "Method": ""
                 }
+
             ]
         },
         {
@@ -1503,7 +1550,7 @@
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "Thanatara Canyon",
+                    "Exit": "01-22",
                     "Method": ""
                 }
             ]
