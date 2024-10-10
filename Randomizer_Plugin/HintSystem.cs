@@ -96,6 +96,15 @@ namespace TeviRandomizer
 
 
         }
+        static public void addNewChatLine(string section, string text, string character = "Info", string flag = "hidden", string position = "", string emotion = "", string pose = "")
+        {
+            extraList.Add(createChatRow(section, text, character, flag, position, emotion, pose));
+        }
+        static public void startChat()
+        {
+            ChatSystem.Instance.setStatus(SystemVar.Status.OPEN);
+            ChatSystem.Instance.StartChat(1, "CustomChat");
+        }
 
         [HarmonyPatch(typeof(ChatSystem),"StartChat")]
         [HarmonyPostfix]
@@ -114,7 +123,7 @@ namespace TeviRandomizer
             {
                 Debug.Log($"[Randomizer] Search for Custom Chat");
 
-
+                
                 ___chatdb.CopyFrom(extraList);
                 extraList.Clear();
             }

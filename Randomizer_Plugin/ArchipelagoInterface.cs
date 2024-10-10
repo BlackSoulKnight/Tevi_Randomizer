@@ -46,6 +46,7 @@ namespace TeviRandomizer
         public bool isSynced = false;
         private DeathLinkService deathLink = null;
         private bool deathLinkTriggered = false;
+        private bool lostConnection = false;
 
         private const long baseID = 44966541000;
         private Dictionary<string, LocationData> locations = new Dictionary<string, LocationData>();
@@ -99,6 +100,7 @@ namespace TeviRandomizer
             this.isConnected = true;
             this.isSynced = false;
             this.currentItemNR = 0;
+            lostConnection = false;
             PlayerNames.Clear();
             foreach(var info in session.Players.AllPlayers)
             {
@@ -235,8 +237,21 @@ namespace TeviRandomizer
 
         void Update()
         {
+            if (WorldManager.Instance != null && !EventManager.Instance.IsChangingMap() && WorldManager.Instance.MapInited && GemaUIPauseMenu.Instance.GetAllowPause() && !GameSystem.Instance.isAnyPause() && (EventManager.Instance.getMode() == EventMode.Mode.OFF || EventManager.Instance.EventTime > 300f))
+
+                if (lostConnection)
+                {
+                HintSystem.addNewChatLine("a", "Lost connection To the AP Server");
+                HintSystem.startChat();
+                lostConnection = false;
+                }
+
             if (session?.Socket?.Connected != true)
             {
+                if (isConnected)
+                {
+                    lostConnection = true;
+                }
                 isConnected = false;
                 return;
             }
