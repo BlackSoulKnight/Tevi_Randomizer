@@ -13,6 +13,19 @@
                     "Method":""
                 }
             ]
+        },
+        {
+            "Name":"01-02",
+            "Connections":[
+                {
+                    "Exit":"Oasis",
+                    "Method":""
+                },
+                {
+                    "Exit":"Thanatara Canyon",
+                    "Method":""
+                }
+            ]
         }
     ],
 
@@ -111,24 +124,8 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Oasis",
-                    "Method": "ChargeShot"
-                },
-                {
-                    "Exit": "Oasis",
-                    "Method": "ITEM_DOUBLEJUMP"
-                },
-                {
-                    "Exit": "Oasis",
-                    "Method": "ITEM_DOUBLEJUMP"
-                },
-                {
-                    "Exit": "Oasis",
-                    "Method": "ITEM_JETPACK"
-                },
-                {
-                    "Exit": "Oasis",
-                    "Method": "ITEM_AirDash"
+                    "Exit": "01-02",
+                    "Method": "ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash"
                 },
                 {
                     "Exit": "Solennian Ruins Entrance",
