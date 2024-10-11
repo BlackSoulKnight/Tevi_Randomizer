@@ -297,6 +297,10 @@
                 {
                     "Exit": "Travoll Mines",
                     "Method": "ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "Forest",
+                    "Method":""
                 }
             ]
         }
