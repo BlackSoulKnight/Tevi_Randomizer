@@ -28,6 +28,19 @@
             ]
         },
         {
+            "Name":"01-05",
+            "Connections":[
+                {
+                    "Exit":"Travoll Mines West Exit",
+                    "Method":""
+                },
+                {
+                    "Exit":"Thanatara Canyon",
+                    "Method":""
+                }
+            ]
+        },
+        {
             "Name":"01-03",
             "Connections":[
                 {
@@ -75,6 +88,32 @@
                 },
                 {
                     "Exit":"Travoll Industrie",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"03-05",
+            "Connections":[
+                {
+                    "Exit":"Moros City",
+                    "Method":""
+                },
+                {
+                    "Exit":"Travoll Mines",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"03-04",
+            "Connections":[
+                {
+                    "Exit":"Moros City",
+                    "Method":""
+                },
+                {
+                    "Exit":"Forest",
                     "Method":""
                 }
             ]
@@ -177,6 +216,10 @@
                 },
                 {
                     "Exit": "01-22",
+                    "Method": ""
+                },
+                {
+                    "Exit": "01-05",
                     "Method": ""
                 },
                 {
@@ -346,8 +389,12 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Travoll Mines",
-                    "Method": "ITEM_LINEBOMB"
+                    "Exit": "03-05",
+                    "Method": ""
+                },
+                {
+                    "Exit": "03-04",
+                    "Method": ""
                 }
             ]
         }
@@ -371,7 +418,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Moros City",
+                    "Exit": "03-04",
                     "Method": ""
                 },
                 {
@@ -458,6 +505,34 @@
     ],
     "Map05": [
         {
+            "Name":"Travoll Mines East Exit",
+            "Money":[],
+            "Connections":[
+                { 
+                    "Exit":"03-05",
+                    "Method":""
+                },
+                {   
+                    "Exit":"Travoll Mines",
+                    "Method":"ITEM_LINEBOMB && ITEM_BOMBFUEL"
+                }
+            ]
+        },
+        {
+            "Name":"Travoll Mines West Exit",
+            "Money":[],
+            "Connections":[
+                { 
+                    "Exit":"01-05",
+                    "Method":""
+                },
+                {   
+                    "Exit":"Travoll Mines",
+                    "Method":"ITEM_LINEBOMB && ITEM_BOMBFUEL"
+                }
+            ]
+        },
+        {
             "Name": "Travoll Mines",
             "Money": [
                 {
@@ -471,8 +546,8 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Moros City",
-                    "Method": "ITEM_LINEBOMB"
+                    "Exit": "Travoll Mines East Exit",
+                    "Method": ""
                 },
                 {
                     "Exit": "Thanatara Canyon",
@@ -547,7 +622,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Moros City",
+                    "Exit": "03-06",
                     "Method": ""
                 }
             ]

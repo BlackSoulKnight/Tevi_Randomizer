@@ -1385,12 +1385,12 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Travoll Mines",
+        "Location": "Travoll Mines East Exit",
         "LocationName": "Travoll Mines - Lemon Bunny Potion",
         "slotId": 0,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
