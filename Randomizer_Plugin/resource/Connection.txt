@@ -36,6 +36,7 @@ Oasis:Thanatara Canyon:
 Moros City:Gurun Desert:
 Moros City:Travoll Industrie:
 Moros City:Travoll Mines:ITEM_LINEBOMB
+Moros City:Forest:
 Forest:Moros City:
 Forest:CopperWood:
 Forest:Verdazure Sea:ITEM_LINEBOMB
