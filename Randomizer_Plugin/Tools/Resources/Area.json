@@ -80,6 +80,19 @@
             ]
         },
         {
+            "Name":"01-05",
+            "Connections":[
+                {
+                    "Exit":"Travoll Mines West Exit",
+                    "Method":""
+                },
+                {
+                    "Exit":"Thanatara Canyon",
+                    "Method":""
+                }
+            ]
+        },
+        {
             "Name":"03-06",
             "Connections":[
                 {
@@ -100,7 +113,7 @@
                     "Method":""
                 },
                 {
-                    "Exit":"Travoll Mines",
+                    "Exit":"Travoll Mines East Exit",
                     "Method":""
                 }
             ]
@@ -110,6 +123,45 @@
             "Connections":[
                 {
                     "Exit":"Moros City",
+                    "Method":""
+                },
+                {
+                    "Exit":"Forest",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"04-07",
+            "Connections":[
+                {
+                    "Exit":"CopperWood",
+                    "Method":""
+                },
+                {
+                    "Exit":"Forest",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"04-09",
+            "Connections":[
+                {
+                    "Exit":"Gleamwood Bottom",
+                    "Method":""
+                },
+                {
+                    "Exit":"Forest",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"04-13",
+            "Connections":[
+                {
+                    "Exit":"Verdazure Sea West Exit",
                     "Method":""
                 },
                 {
@@ -422,19 +474,15 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "CopperWood",
+                    "Exit": "04-07",
                     "Method": ""
                 },
                 {
-                    "Exit": "Verdazure Sea",
-                    "Method": "ITEM_LINEBOMB"
+                    "Exit": "04-13",
+                    "Method": ""
                 },
                 {
-                    "Exit": "Verdazure Sea",
-                    "Method": "ITEM_WATERMOVEMENT"
-                },
-                {
-                    "Exit": "Gleamwood Bottom",
+                    "Exit": "04-09",
                     "Method": ""
                 },
                 {
@@ -643,7 +691,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Forest",
+                    "Exit": "04-07",
                     "Method": ""
                 },
                 {
@@ -960,6 +1008,7 @@
                     "Exit": "Blushwood",
                     "Method": ""
                 },
+
                 {
                     "Exit": "Forgotten City",
                     "Method": "ITEM_WATERMOVEMENT && ITEM_LINEBOMB"
@@ -967,6 +1016,37 @@
                 {
                     "Exit": "Verdazure Ocean",
                     "Method": "ITEM_SLIDE && ChargeShot"
+                },
+                {
+                    "Exit": "Verdazure Sea West Exit",
+                    "Method": "???"
+                }
+            ]
+        },
+        {
+            "Name": "Verdazure Sea West Exit",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 5000
+                },
+                {
+                    "Method": "ITEM_WATERMOVEMENT && ITEM_LINEBOMB",
+                    "Amount": 1000
+                },
+                {
+                    "Method": "ITEM_SLIDE && (ITEM_WALLJUMP || ITEM_HIJUMP || ITEM_JETPACK || ITEM_DOUBLEJUMP)",
+                    "Amount": 1500
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "04-13",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Verdazure Sea",
+                    "Method": "ITEM_LINEBOMB || ITEM_WATERMOVEMENT"
                 }
             ]
         }
