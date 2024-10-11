@@ -28,6 +28,19 @@
             ]
         },
         {
+            "Name":"01-03",
+            "Connections":[
+                {
+                    "Exit":"Moros City",
+                    "Method":""
+                },
+                {
+                    "Exit":"Thanatara Canyon",
+                    "Method":""
+                }
+            ]
+        },
+        {
             "Name":"01-22",
             "Connections":[
                 {
@@ -49,6 +62,19 @@
                 },
                 {
                     "Exit":"Thanatara Canyon",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"03-06",
+            "Connections":[
+                {
+                    "Exit":"Moros City",
+                    "Method":""
+                },
+                {
+                    "Exit":"Travoll Industrie",
                     "Method":""
                 }
             ]
@@ -183,8 +209,6 @@
                 }
             ]
         },
-
-
         {
             "Name":"Thanatara Canyon - Heavens Valley West",
             "Money":[{
@@ -260,12 +284,16 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Moros City",
+                    "Exit": "01-03",
                     "Method": ""
                 },
                 {
                     "Exit": "Thanatara Canyon",
-                    "Method": ""
+                    "Method": "ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "Thanatara Canyon",
+                    "Method": "OpenMorose"
                 }
             ]
         }
@@ -289,7 +317,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Thanatara Canyon",
+                    "Exit": "01-02",
                     "Method": ""
                 }
             ]
@@ -310,11 +338,11 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Gurun Desert",
+                    "Exit": "01-03",
                     "Method": ""
                 },
                 {
-                    "Exit": "Travoll Industrie",
+                    "Exit": "03-06",
                     "Method": ""
                 },
                 {
