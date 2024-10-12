@@ -35,7 +35,7 @@
                     "Method":""
                 },
                 {
-                    "Exit":"Thanatara Canyon",
+                    "Exit":"Thanatara Canyon Lower",
                     "Method":""
                 }
             ]
@@ -48,7 +48,7 @@
                     "Method":""
                 },
                 {
-                    "Exit":"Thanatara Canyon",
+                    "Exit":"Gurun Desert",
                     "Method":""
                 }
             ]
@@ -61,7 +61,7 @@
                     "Method":""
                 },
                 {
-                    "Exit":"Thanatara Canyon",
+                    "Exit":"Thanatara Canyon Lower",
                     "Method":""
                 }
             ]
@@ -87,7 +87,7 @@
                     "Method":""
                 },
                 {
-                    "Exit":"Thanatara Canyon",
+                    "Exit":"Thanatara Canyon Lower",
                     "Method":""
                 }
             ]
@@ -219,11 +219,15 @@
                 },
                 {
                     "Exit": "Desert Base Main",
-                    "Method": "ChargeShot || ITEM_JETPACK || ITEM_AirDash || ITEM_JETPACK || ITEM_DOUBLEJUMP || ITEM_HIJUMP || (ITEM_LINEBOMB && ITEM_AREABOMB) || RabbitJump || BackFlip"
+                    "Method": "ChargeShot || ITEM_JETPACK || ITEM_AirDash || ITEM_JETPACK || ITEM_DOUBLEJUMP || ITEM_HIJUMP || (ITEM_LINEBOMB && ITEM_AREABOMB) || RabbitJump || (BackFlip && ITEM_SPEEDUP)"
+                },
+                {
+                    "Exit": "Desert Base Main",
+                    "Method": "BackFlip && Hard"
                 },
                 {
                     "Exit": "Desert Base Upper Half",
-                    "Method": "(BackFlip || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash) && ITEM_SLIDE && ITEM_LINEBOMB"
+                    "Method": "(BackFlip || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash) && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_KNIFE"
                 }
 
             ]
@@ -267,28 +271,12 @@
                     "Method": "ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash"
                 },
                 {
-                    "Exit": "01-22",
-                    "Method": ""
-                },
-                {
-                    "Exit": "01-05",
+                    "Exit": "Thanatara Canyon Lower",
                     "Method": ""
                 },
                 {
                     "Exit": "Thanatara Canyon - Heavens Valley West",
                     "Method": "ITEM_LINEBOMB"
-                },
-                {
-                    "Exit": "Gurun Desert",
-                    "Method": "ITEM_LINEBOMB"
-                },
-                {
-                    "Exit": "Gurun Desert",
-                    "Method": "OpenMorose"
-                },
-                {
-                    "Exit": "Desert Base Entrance",
-                    "Method": ""
                 },
                 {
                     "Exit": "Crafting",
@@ -302,6 +290,45 @@
                     "Exit": "Memine All",
                     "Method": "AllMemine" 
                 }
+            ]
+        },
+        {
+            "Name": "Thanatara Canyon Lower",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 3500
+                },
+                {
+                    "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK",
+                    "Amount": 2000
+                },
+                {
+                    "Method": "ITEM_SLIDE || ITEM_WALLJUMP3",
+                    "Amount": 1500
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "01-22",
+                    "Method": ""
+                },
+                {
+                    "Exit": "01-05",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Gurun Desert",
+                    "Method": "ITEM_LINEBOMB || OpenMorose"
+                },
+                {
+                    "Exit": "00-01",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Thanatara Canyon",
+                    "Method": "ITEM_LINEBOMB || ITEM_SLIDE"
+                }            
             ]
         },
         {
@@ -447,6 +474,14 @@
                 {
                     "Exit": "03-04",
                     "Method": ""
+                },
+                {
+                    "Exit":"Valhalla City",
+                    "Method":"EVENT_AnathemaVisited && ITEM_AirshipPass"
+                },
+                {
+                    "Exit":"Tartarus",
+                    "Method":"EVENT_AnathemaVisited && ITEM_RailPass"
                 }
             ]
         }

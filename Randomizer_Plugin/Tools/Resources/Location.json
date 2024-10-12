@@ -42,7 +42,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "CKick || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash",
                 "Difficulty": 0
             }
         ]
@@ -237,12 +237,12 @@
     },
     {
         "Itemname": "BADGE_ChangeOrbCharger",
-        "Location": "Desert Base Main",
-        "LocationName": "Desert Base Main - MP Surge: Tag Out",
+        "Location": "Desert Base Entrance",
+        "LocationName": "Desert Base Entrance - MP Surge: Tag Out",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && (ITEM_DOUBLEJUMP || ITEM_JETPACK)",
                 "Difficulty": 0
             }
         ]
@@ -327,7 +327,8 @@
         "Requirement": [
             {
                 "Method": "",
-                "Difficulty": 0
+                "Difficulty": 0,
+                "Note": "Could be a seperate Area"
             }
         ]
     },
@@ -405,7 +406,7 @@
     },
     {
         "Itemname": "BADGE_SuperArmor2",
-        "Location": "Thanatara Canyon",
+        "Location": "Thanatara Canyon Lower",
         "LocationName": "Thanatara Canyon - Even Keel",
         "slotId": 1,
         "Requirement": [
@@ -417,7 +418,7 @@
     },
     {
         "Itemname": "BADGE_PerfectCharge",
-        "Location": "Thanatara Canyon",
+        "Location": "Thanatara Canyon Lower",
         "LocationName": "Thanatara Canyon - MP Quicken: Steady",
         "slotId": 1,
         "Requirement": [
@@ -440,6 +441,22 @@
         ]
     },
     {
+        "Itemname": "EVENT_EliteChallangeB",
+        "Location": "Thanatara Canyon",
+        "LocationName": "Thanatara Canyon EliteB",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB && ITEM_AREABOMB) || ITEM_SLIDE",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_LINEBOMB && HiddenP",
+                "Difficulty": 1
+            }
+        ]
+    },
+    {
         "Itemname": "STACKABLE_MP",
         "Location": "Thanatara Canyon",
         "LocationName": "North Thanatara Canyon - Blueberry Bunny Potion",
@@ -453,7 +470,7 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Thanatara Canyon",
+        "Location": "Thanatara Canyon Lower",
         "LocationName": "Middle Thanatara Canyon - Blueberry Bunny Potion",
         "slotId": 7,
         "Requirement": [
@@ -465,7 +482,7 @@
     },
     {
         "Itemname": "ITEM_LINEBOMB",
-        "Location": "Thanatara Canyon",
+        "Location": "Thanatara Canyon Lower",
         "LocationName": "Thanatara Canyon - Cross Bomb",
         "slotId": 1,
         "Requirement": [
@@ -530,7 +547,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "EliteChallangeA",
+                "Method": "EVENT_EliteChallangeA",
                 "Difficulty": 0
             }
         ]
@@ -860,6 +877,30 @@
         ]
     },
     {
+        "Itemname": "EVENT_MoroseVisited",
+        "Location": "Moros City",
+        "LocationName": "Moros City",
+        "slotId": 0,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_EliteChallangeA",
+        "Location": "Moros City",
+        "LocationName": "Moros City Elite",
+        "slotId": 0,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "STACKABLE_COG",
         "Location": "Moros City",
         "LocationName": "Moros City - Astral Gear",
@@ -902,19 +943,20 @@
         "slotId": 9,
         "Requirement": [
             {
-                "Method": "ITEM_AirDash && ITEM_JETPACK3",
+                "Method": "ITEM_AirDash && ITEM_JETPACK3 && ITEM_LINEBOMB",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK",
+                "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "Note": "There are more ways to reach that Item"
     },
     {
         "Itemname": "ITEM_SPEEDUP",
         "Location": "Moros City",
-        "LocationName": "Moros City - Running Boots",
+        "LocationName": "Moros City Shop - Running Boots",
         "slotId": 1,
         "Requirement": [
             {
@@ -926,7 +968,7 @@
     {
         "Itemname": "BADGE_BossPassing",
         "Location": "Moros City",
-        "LocationName": "Moros City - Metamorphose",
+        "LocationName": "Moros City Shop - Metamorphose",
         "slotId": 1,
         "Requirement": [
             {
@@ -938,7 +980,7 @@
     {
         "Itemname": "BADGE_StyleComboAirDashS",
         "Location": "Moros City",
-        "LocationName": "Moros City - Style Combo: Triple Flash S",
+        "LocationName": "Moros City Shop Demonfray - Style Combo: Triple Flash S",
         "slotId": 1,
         "Requirement": [
             {
@@ -950,7 +992,7 @@
     {
         "Itemname": "BADGE_MAXHPCost",
         "Location": "Moros City",
-        "LocationName": "Moros City - EP Booster: HP",
+        "LocationName": "Moros City Shop Demonfray - EP Booster: HP",
         "slotId": 1,
         "Requirement": [
             {
@@ -962,7 +1004,7 @@
     {
         "Itemname": "BADGE_EnemyDefeatExp",
         "Location": "Moros City",
-        "LocationName": "Moros City - Bone Breaker",
+        "LocationName": "Moros City Shop Demonfray - Bone Breaker",
         "slotId": 1,
         "Requirement": [
             {
@@ -974,7 +1016,7 @@
     {
         "Itemname": "BADGE_1HealthTypeA",
         "Location": "Moros City",
-        "LocationName": "Moros City - Perseverance A",
+        "LocationName": "Moros City Shop Demonfray - Perseverance A",
         "slotId": 1,
         "Requirement": [
             {
@@ -986,7 +1028,7 @@
     {
         "Itemname": "BADGE_TauntThink",
         "Location": "Moros City",
-        "LocationName": "Moros City - Special Action: Question Mark",
+        "LocationName": "Moros City Shop - Special Action: Question Mark",
         "slotId": 1,
         "Requirement": [
             {
@@ -998,7 +1040,7 @@
     {
         "Itemname": "BADGE_QuickMPRegainA",
         "Location": "Moros City",
-        "LocationName": "Moros City - MP Reset A",
+        "LocationName": "Moros City Shop - MP Reset A",
         "slotId": 1,
         "Requirement": [
             {
@@ -1010,7 +1052,7 @@
     {
         "Itemname": "BADGE_MapDiscoverRecover",
         "Location": "Moros City",
-        "LocationName": "Moros City - Intrepid Explorer",
+        "LocationName": "Moros City Shop - Intrepid Explorer",
         "slotId": 1,
         "Requirement": [
             {
@@ -1022,7 +1064,7 @@
     {
         "Itemname": "BADGE_StyleComboAirNormal3A",
         "Location": "Moros City",
-        "LocationName": "Moros City - Style Combo: Windmill B",
+        "LocationName": "Moros City Shop - Style Combo: Windmill B",
         "slotId": 1,
         "Requirement": [
             {
@@ -1034,7 +1076,7 @@
     {
         "Itemname": "BADGE_UpperDoubleHitAfterOutline",
         "Location": "Moros City",
-        "LocationName": "Moros City - Upper Slash: Shatter",
+        "LocationName": "Moros City Shop - Upper Slash: Shatter",
         "slotId": 1,
         "Requirement": [
             {
@@ -1046,7 +1088,7 @@
     {
         "Itemname": "BADGE_Hurt2Punisher",
         "Location": "Moros City",
-        "LocationName": "Moros City - Punisher",
+        "LocationName": "Moros City Shop - Punisher",
         "slotId": 1,
         "Requirement": [
             {
@@ -1058,7 +1100,7 @@
     {
         "Itemname": "STACKABLE_BAG",
         "Location": "Moros City",
-        "LocationName": "Shop Moros City - Bag Expander",
+        "LocationName": "Moros City Shop - Bag Expander",
         "slotId": 30,
         "Requirement": [
             {
@@ -1070,7 +1112,7 @@
     {
         "Itemname": "STACKABLE_HP",
         "Location": "Moros City",
-        "LocationName": "Shop Moros City - Kiwi Bunny Potion",
+        "LocationName": "Moros City Shop - Kiwi Bunny Potion",
         "slotId": 30,
         "Requirement": [
             {
@@ -1082,7 +1124,7 @@
     {
         "Itemname": "STACKABLE_MP",
         "Location": "Moros City",
-        "LocationName": "Shop Moros City - Blueberry Bunny Potion",
+        "LocationName": "Moros City Shop - Blueberry Bunny Potion",
         "slotId": 30,
         "Requirement": [
             {
@@ -1094,7 +1136,7 @@
     {
         "Itemname": "STACKABLE_EP",
         "Location": "Moros City",
-        "LocationName": "Shop Moros City - Lemon Bunny Potion",
+        "LocationName": "Moros City Shop - Lemon Bunny Potion",
         "slotId": 30,
         "Requirement": [
             {
@@ -1106,7 +1148,7 @@
     {
         "Itemname": "STACKABLE_MATK",
         "Location": "Moros City",
-        "LocationName": "Shop Moros City - Cherry Bunny Potion",
+        "LocationName": "Moros City Shop - Cherry Bunny Potion",
         "slotId": 30,
         "Requirement": [
             {
@@ -1118,7 +1160,7 @@
     {
         "Itemname": "STACKABLE_RATK",
         "Location": "Moros City",
-        "LocationName": "Shop Moros City - Grape Bunny Potion",
+        "LocationName": "Moros City Shop - Grape Bunny Potion",
         "slotId": 30,
         "Requirement": [
             {
@@ -1130,7 +1172,7 @@
     {
         "Itemname": "STACKABLE_SHARD",
         "Location": "Moros City",
-        "LocationName": "Shop Moros City - Rainbow Bunny Potion",
+        "LocationName": "Moros City Shop Chap6 - Rainbow Bunny Potion",
         "slotId": 30,
         "Requirement": [
             {
@@ -1142,7 +1184,7 @@
     {
         "Itemname": "Useable_WaffleAHoneycloud",
         "Location": "Moros City",
-        "LocationName": "Moros City - Honeycloud Waffle",
+        "LocationName": "Moros City Shop - Honeycloud Waffle",
         "slotId": 1,
         "Requirement": [
             {
@@ -1154,7 +1196,7 @@
     {
         "Itemname": "Useable_WaffleBMeringue",
         "Location": "Moros City",
-        "LocationName": "Moros City - Toasted Meringue Waffle",
+        "LocationName": "Moros City Shop Chap3 - Toasted Meringue Waffle",
         "slotId": 1,
         "Requirement": [
             {
@@ -1170,7 +1212,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 300 && Chapter 4",
+                "Method": "Coins 300 Shop Chap4 && Chapter 4",
                 "Difficulty": 0
             }
         ]
@@ -1182,7 +1224,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 300 && Chapter 5",
+                "Method": "Coins 300 Shop Chap5 && Chapter 5",
                 "Difficulty": 0
             }
         ]
@@ -1194,7 +1236,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 300 && Chapter 6",
+                "Method": "Coins 300 Chap6 && Chapter 6",
                 "Difficulty": 0
             }
         ]
