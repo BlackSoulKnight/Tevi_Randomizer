@@ -80,19 +80,6 @@
             ]
         },
         {
-            "Name":"01-05",
-            "Connections":[
-                {
-                    "Exit":"Travoll Mines West Exit",
-                    "Method":""
-                },
-                {
-                    "Exit":"Thanatara Canyon Lower",
-                    "Method":""
-                }
-            ]
-        },
-        {
             "Name":"03-06",
             "Connections":[
                 {
@@ -274,7 +261,7 @@
                 },
                 {
                     "Exit": "Desert Base Upper Half",
-                    "Method": "ITEM_DOUBLEJUMP && ITEM_WALLJUMP 2"
+                    "Method": "ITEM_DOUBLEJUMP && ITEM_WALLJUMP2"
                 }
             ]
         },

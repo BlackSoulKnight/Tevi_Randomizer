@@ -631,7 +631,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK 2",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK2",
                 "Difficulty": 0
             }
         ]
