@@ -93,6 +93,19 @@
             ]
         },
         {
+            "Name":"06-21",
+            "Connections":[
+                {
+                    "Exit":"Heavens Valley West",
+                    "Method":""
+                },
+                {
+                    "Exit":"Travoll Industrie",
+                    "Method":""
+                }
+            ]
+        },
+        {
             "Name":"03-06",
             "Connections":[
                 {
@@ -166,6 +179,19 @@
                 },
                 {
                     "Exit":"Forest",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"20-21",
+            "Connections":[
+                {
+                    "Exit":"Valhalla City",
+                    "Method":""
+                },
+                {
+                    "Exit":"Valhalla Breath West",
                     "Method":""
                 }
             ]
@@ -1658,13 +1684,12 @@
                 }
             ],
             "Connections": [
-
                 {
-                    "Exit": "Travoll Industrie",
-                    "Method": ""
+                    "Exit":"Heavens Valley West",
+                    "Method":"ITEM_LINEBOMB && (CKick || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash)"
                 },
                 {
-                    "Exit": "Valhalla City",
+                    "Exit": "20-21",
                     "Method": ""
                 },
                 {
@@ -1675,7 +1700,6 @@
                     "Exit": "Valhalla Breath West Extended",
                     "Method": "ITEM_DOUBLEJUMP"
                 },
-
                 {
                     "Exit": "Valhalla Breath West Extended",
                     "Method": "ITEM_JETPACK"
@@ -1708,26 +1732,30 @@
             "Connections": [
                 {
                     "Exit": "Valhalla Breath West",
-                    "Method": "ITEM_JETPACK"
+                    "Method": "ITEM_JETPACK && (ITEM_AREABOMB || HiddenP)"
                 },
                 {
                     "Exit": "Valhalla Breath West",
-                    "Method": "ITEM_AirDash"
+                    "Method": "ITEM_AirDash && (ITEM_AREABOMB || HiddenP)"
                 },
                 {
                     "Exit": "Valhalla Breath West",
-                    "Method": "ITEM_SLIDE && ITEM_AirSlide"
+                    "Method": "ITEM_SLIDE && ITEM_AirSlide && (ITEM_AREABOMB || HiddenP)"
                 },
                 {
                     "Exit": "Valhalla Breath West",
-                    "Method": "ITEM_DOUBLEJUMP"
+                    "Method": "ITEM_DOUBLEJUMP && (ITEM_AREABOMB || HiddenP)"
                 },
                 {
                     "Exit": "Valhalla Breath West",
-                    "Method": "ChargeShot"
+                    "Method": "ChargeShot && (ITEM_AREABOMB || HiddenP)"
                 },
                 {
                     "Exit": "01-21",
+                    "Method": ""
+                },
+                {
+                    "Exit": "06-21",
                     "Method": ""
                 }
 

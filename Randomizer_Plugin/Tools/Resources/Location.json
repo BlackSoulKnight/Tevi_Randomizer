@@ -629,6 +629,10 @@
             {
                 "Method": "ITEM_WALLJUMP",
                 "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK 2",
+                "Difficulty": 0
             }
         ]
     },
@@ -643,11 +647,11 @@
                 "Difficulty": 0
             },
             {
-                "Method": "VoidBomb",
+                "Method": "VenaBomb",
                 "Difficulty": 0
             },
             {
-                "Method": "ChargeShot",
+                "Method": "ITEM_ORB",
                 "Difficulty": 0
             },
             {
@@ -675,7 +679,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "EliteChallangeB",
+                "Method": "EVENT_EliteChallangeB",
                 "Difficulty": 0
             }
         ]
@@ -713,7 +717,15 @@
             {
                 "Method": "ITEM_AirDash",
                 "Difficulty": 0
-            }
+            },
+            {
+                "Method": "ITEM_HIJUMP",
+                "Difficulty": 0
+            },
+            {
+                "Method": "RabbitWalljump",
+                "Difficulty": 0
+            }          
         ]
     },
     {
@@ -724,18 +736,6 @@
         "Requirement": [
             {
                 "Method": "ITEM_LINEBOMB && ITEM_AREABOMB",
-                "Difficulty": 0
-            }
-        ]
-    },
-    {
-        "Itemname": "BADGE_DoubleJumpAttack",
-        "Location": "Valhalla Breath West",
-        "LocationName": "Valhalla Breath West - Orbital Slash",
-        "slotId": 1,
-        "Requirement": [
-            {
-                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -765,13 +765,25 @@
         ]
     },
     {
+        "Itemname": "BADGE_DoubleJumpAttack",
+        "Location": "Valhalla Breath West",
+        "LocationName": "Valhalla Breath West - Orbital Slash",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "BADGE_Normal3HModStabB",
         "Location": "Valhalla Breath West",
         "LocationName": "Valhalla Breath West - Quickstab: Flurry",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -817,6 +829,10 @@
             {
                 "Method": "ITEM_SLIDE && ITEM_AirDash",
                 "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_SLIDE",
+                "Difficulty": 1
             }
         ]
     },
@@ -1504,15 +1520,15 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ChargeShot",
+                "Method": "ChargeShot && QUEST_RabiPillow",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "ITEM_BoostSystem",
-        "Location": "Forest",
-        "LocationName": "Forest - Modular Blueprints",
+        "Location": "Forest Maze",
+        "LocationName": "Forest Maze - Modular Blueprints",
         "slotId": 1,
         "Requirement": [
             {
@@ -1523,8 +1539,8 @@
     },
     {
         "Itemname": "BADGE_GroundNormal4Mod",
-        "Location": "Forest",
-        "LocationName": "Forest - Titanium Spanner",
+        "Location": "Forest Maze",
+        "LocationName": "Forest Maze - Titanium Spanner",
         "slotId": 1,
         "Requirement": [
             {
@@ -1535,12 +1551,12 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Forest",
-        "LocationName": "Forest - Kiwi Bunny Potion",
+        "Location": "Forest Maze",
+        "LocationName": "Forest Maze - Kiwi Bunny Potion",
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "ChargeShot",
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -1564,7 +1580,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_WATERMOVEMENT",
                 "Difficulty": 0
             }
         ]
