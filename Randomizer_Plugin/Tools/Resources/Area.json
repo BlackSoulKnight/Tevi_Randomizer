@@ -93,19 +93,6 @@
             ]
         },
         {
-            "Name":"06-21",
-            "Connections":[
-                {
-                    "Exit":"Heavens Valley West",
-                    "Method":""
-                },
-                {
-                    "Exit":"Travoll Industrie",
-                    "Method":""
-                }
-            ]
-        },
-        {
             "Name":"03-06",
             "Connections":[
                 {
@@ -136,6 +123,19 @@
             "Connections":[
                 {
                     "Exit":"Moros City",
+                    "Method":""
+                },
+                {
+                    "Exit":"Forest",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"04-05",
+            "Connections":[
+                {
+                    "Exit":"Travoll Mines Forest Exit",
                     "Method":""
                 },
                 {
@@ -179,6 +179,58 @@
                 },
                 {
                     "Exit":"Forest",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"05-17M",
+            "Connections":[
+                {
+                    "Exit":"Magma Pits",
+                    "Method":""
+                },
+                {
+                    "Exit":"Travoll Mines Swamp Exit",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"05-17S",
+            "Connections":[
+                {
+                    "Exit":"Swamp Entrance",
+                    "Method":""
+                },
+                {
+                    "Exit":"Travoll Mines Swamp Exit",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"06-07",
+            "Connections":[
+                {
+                    "Exit":"Travoll Industrie East Exit",
+                    "Method":""
+                },
+                {
+                    "Exit":"CopperWood",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"06-21",
+            "Connections":[
+                {
+                    "Exit":"Heavens Valley West",
+                    "Method":""
+                },
+                {
+                    "Exit":"Travoll Industrie",
                     "Method":""
                 }
             ]
@@ -659,21 +711,44 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Thanatara Canyon",
+                    "Exit": "Travoll Mines Forest Exit",
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "Travoll Mines Part 2",
-                    "Method": "ITEM_BOMBFUEL && ITEM_LINEBOMB"
+                    "Exit": "05-17M",
+                    "Method": ""
                 },
                 {
-                    "Exit": "Travoll Mines Part 2",
-                    "Method": "ITEM_KNIFE && ITEM_LINEBOMB"
+                    "Exit": "Travoll Mines Swamp Exit",
+                    "Method": "ITEM_SLIDE && ITEM_BOMBFUEL"
                 }
             ]
         },
         {
-            "Name": "Travoll Mines Part 2",
+            "Name": "Travoll Mines Forest Exit",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 7500
+                },
+                {
+                    "Method": "Boss",
+                    "Amount": 1000
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Travoll Mines",
+                    "Method": "ITEM_LINEBOMB && (ITEM_KNIFE || EVENT_FreeStrongAttack)"
+                },
+                {
+                    "Exit": "04-05",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Travoll Mines Swamp Exit",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -690,15 +765,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Magma Pits",
-                    "Method": ""
-                },
-                {
-                    "Exit": "Swamp Entrance",
-                    "Method": "ITEM_SLIDE"
-                },
-                {
-                    "Exit": "Forest",
+                    "Exit": "05-17S",
                     "Method": ""
                 }
             ]
@@ -719,12 +786,8 @@
             ],
             "Connections": [
                 {
-                    "Exit": "CopperWood",
-                    "Method": "ITEM_LINEBOMB"
-                },
-                {
-                    "Exit": "CopperWood",
-                    "Method": "ITEM_SLIDE"
+                    "Exit": "Travoll Industrie East Exit",
+                    "Method": "ITEM_LINEBOMB || ITEM_SLIDE"
                 },
                 {
                     "Exit": "Heavens Valley West",
@@ -733,6 +796,29 @@
                 {
                     "Exit": "03-06",
                     "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Travoll Industrie East Exit",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 1000
+                },
+                {
+                    "Method": "ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK",
+                    "Amount": 1000
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "06-07",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Travoll Industrie",
+                    "Method": "ITEM_LINEBOMB || ITEM_SLIDE"
                 }
             ]
         }
