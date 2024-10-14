@@ -44,7 +44,7 @@
             "Name":"01-03",
             "Connections":[
                 {
-                    "Exit":"Moros City",
+                    "Exit":"Morose City",
                     "Method":""
                 },
                 {
@@ -83,7 +83,7 @@
             "Name":"03-06",
             "Connections":[
                 {
-                    "Exit":"Moros City",
+                    "Exit":"Morose City",
                     "Method":""
                 },
                 {
@@ -96,7 +96,7 @@
             "Name":"03-05",
             "Connections":[
                 {
-                    "Exit":"Moros City",
+                    "Exit":"Morose City",
                     "Method":""
                 },
                 {
@@ -109,7 +109,7 @@
             "Name":"03-04",
             "Connections":[
                 {
-                    "Exit":"Moros City",
+                    "Exit":"Morose City",
                     "Method":""
                 },
                 {
@@ -204,7 +204,7 @@
                     "Method":""
                 },
                 {
-                    "Exit":"CopperWood",
+                    "Exit":"CopperWood Industry Exit",
                     "Method":""
                 }
             ]
@@ -218,6 +218,58 @@
                 },
                 {
                     "Exit":"Travoll Industrie",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"07-09",
+            "Connections":[
+                {
+                    "Exit":"Gleamwood Middle",
+                    "Method":""
+                },
+                {
+                    "Exit":"CopperWood",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"07-24",
+            "Connections":[
+                {
+                    "Exit":"Relicts",
+                    "Method":""
+                },
+                {
+                    "Exit":"CopperWood",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"08-09",
+            "Connections":[
+                {
+                    "Exit":"Ana Thema",
+                    "Method":""
+                },
+                {
+                    "Exit":"Gleamwood Bottom",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"08-27",
+            "Connections":[
+                {
+                    "Exit":"Ana Thema",
+                    "Method":""
+                },
+                {
+                    "Exit":"Gallery of Mirrors West",
                     "Method":""
                 }
             ]
@@ -512,7 +564,7 @@
     ],
     "Map03": [
         {
-            "Name": "Moros City",
+            "Name": "Morose City",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -812,6 +864,50 @@
     ],
     "Map07": [
         {
+            "Name": "CopperWood Industry Exit",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 2500
+                },
+                {
+                    "Method": "((ITEM_JETPACK3 || (ITEM_JETPACK&& ITEM_AirDash)) && ITEM_WALLJUMP && ITEM_DOUBLEJUMP)",
+                    "Amount": 2500
+                }
+            ],
+            "Connections": [
+
+                {
+                    "Exit": "CopperWood",
+                    "Method": "ITEM_LINEBOMB || ITEM_SLIDE"
+                },
+                {
+                    "Exit": "CopperWood EP Pot",
+                    "Method": "ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "06-07",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "CopperWood EP Pot",
+            "Money": [
+            ],
+            "Connections": [
+
+                {
+                    "Exit": "CopperWood",
+                    "Method": ""
+                },
+                {
+                    "Exit": "CopperWood Industry Exit",
+                    "Method": "ITEM_LINEBOMB"
+                }
+            ]
+        },
+        {
             "Name": "CopperWood",
             "Money": [
                 {
@@ -829,15 +925,15 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Travoll Industrie",
+                    "Exit": "CopperWood EP Pot",
+                    "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK"
+                },
+                {
+                    "Exit": "07-24",
                     "Method": ""
                 },
                 {
-                    "Exit": "Relicts",
-                    "Method": ""
-                },
-                {
-                    "Exit":"Gleamwood Middle",
+                    "Exit":"07-09",
                     "Method":"ITEM_LINEBOMB"
                 }
             ]
@@ -854,7 +950,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Gallery of Mirrors West",
+                    "Exit": "Ana Thema Gallery Exit",
                     "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
                 },
                 {
@@ -862,7 +958,49 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Gleamwood Bottom",
+                    "Exit": "08-09",
+                    "Method": ""
+                },
+                {
+                    "Exit":"Valhalla City",
+                    "Method":"EVENT_MoroseVisited && ITEM_AirshipPass"
+                },
+                {
+                    "Exit":"Tartarus",
+                    "Method":"EVENT_MoroseVisited && ITEM_RailPass"
+                }
+            ]
+        },
+        {
+            "Name": "Ana Thema Gallery Exit",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 5000
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Ana Thema",
+                    "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "08-27",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Vena Shop",
+            "Money": [
+                {
+                    "Method": "",
+                    "Amount": 0
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "",
                     "Method": ""
                 }
             ]
@@ -1776,21 +1914,6 @@
                 {
                     "Exit": "Valhalla Breath West Extended",
                     "Method": "ITEM_JETPACK"
-                }
-            ]
-        },
-        {
-            "Name": "Vena Shop",
-            "Money": [
-                {
-                    "Method": "",
-                    "Amount": 0
-                }
-            ],
-            "Connections": [
-                {
-                    "Exit": "",
-                    "Method": ""
                 }
             ]
         },
