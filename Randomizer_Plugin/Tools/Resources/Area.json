@@ -340,6 +340,45 @@
             ]
         },
         {
+            "Name":"12-14",
+            "Connections":[
+                {
+                    "Exit":"Snowveil Entrance",
+                    "Method":""
+                },
+                {
+                    "Exit":"Verdazure Ocean",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"12-16",
+            "Connections":[
+                {
+                    "Exit":"Snowveil Entrance",
+                    "Method":""
+                },
+                {
+                    "Exit":"Snow City",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"12-18",
+            "Connections":[
+                {
+                    "Exit":"Snowveil Entrance",
+                    "Method":""
+                },
+                {
+                    "Exit":"DreamKeeper Outside Left",
+                    "Method":""
+                }
+            ]
+        },
+        {
             "Name":"20-21",
             "Connections":[
                 {
@@ -1367,7 +1406,12 @@
                 {
                     "Exit": "Snowveil",
                     "Method": "ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "12-14",
+                    "Method": ""
                 }
+                
             ]
         },
         {
@@ -1380,7 +1424,26 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Snow City",
+                    "Exit": "12-16",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Snowveil Ex",
+                    "Method": "ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK"
+                }
+            ]
+        },
+        {
+            "Name": "Snowveil Ex",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 2000
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Snowveil",
                     "Method": ""
                 },
                 {
@@ -1415,11 +1478,11 @@
             ],
             "Connections": [
                 {
-                    "Exit": "DreamKeeper Outside Left",
+                    "Exit": "12-18",
                     "Method": ""
                 },
                 {
-                    "Exit": "Snowveil",
+                    "Exit": "Snowveil Ex",
                     "Method": "ITEM_LINEBOMB"
                 }
 

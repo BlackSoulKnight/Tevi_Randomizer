@@ -5271,7 +5271,7 @@
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "Snowveil",
+        "Location": "Snowveil Ex",
         "LocationName": "Snowveil - Astral Gear",
         "slotId": 32,
         "Requirement": [
@@ -5283,7 +5283,7 @@
     },
     {
         "Itemname": "BADGE_ChargeHeal",
-        "Location": "Snowveil",
+        "Location": "Snowveil Ex",
         "LocationName": "Snowveil - Life Steal",
         "slotId": 1,
         "Requirement": [
@@ -5295,7 +5295,7 @@
     },
     {
         "Itemname": "ITEM_Rotater",
-        "Location": "Snowveil",
+        "Location": "Snowveil Ex",
         "LocationName": "Snowveil - Vortex Gloves",
         "slotId": 1,
         "Requirement": [
@@ -5307,7 +5307,7 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Snowveil",
+        "Location": "Snowveil Ex",
         "LocationName": "Snowveil - Cherry Bunny Potion",
         "slotId": 22,
         "Requirement": [
@@ -5343,8 +5343,8 @@
     },
     {
         "Itemname": "BADGE_JetpackMP",
-        "Location": "Snowveil above Verglas Village",
-        "LocationName": "Snowveil above Verglas Village - Aerial Assist",
+        "Location": "Snowveil Ex",
+        "LocationName": "Snowveil - Aerial Assist",
         "slotId": 1,
         "Requirement": [
             {
@@ -5359,8 +5359,8 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Snowveil above Verglas Village",
-        "LocationName": "Snowveil above Verglas Village - Kiwi Bunny Potion",
+        "Location": "Snowveil Ex",
+        "LocationName": "Snowveil - Kiwi Bunny Potion",
         "slotId": 22,
         "Requirement": [
             {
