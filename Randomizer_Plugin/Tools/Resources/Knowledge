@@ -7,6 +7,8 @@ CKick: Dropkick a ceiling
 BounceKick: Dropkick an enemy to bounce back up (req: Doublejump)
 VenaBomb: Any Consumeable Bomb from Vena
 
+EnemyManip: Harder Enemy manipulation
+
 HiddenP: A Hidden path from base game
 OpenMorose: No Crossbomb requirement for Morose
 

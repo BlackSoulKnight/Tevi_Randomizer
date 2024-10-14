@@ -1663,12 +1663,12 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Gleamwood Middle",
+        "Location": "Gleamwood Bottom",
         "LocationName": "Gleamwood Middle - Lemon Bunny Potion",
         "slotId": 5,
         "Requirement": [
             {
-                "Method": "ITEM_KNIFE",
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -1736,11 +1736,11 @@
     {
         "Itemname": "BADGE_ComboTimeExtendC",
         "Location": "Gleamwood Middle",
-        "LocationName": "Gleamwood Middle - Combo Time Extend C",
+        "LocationName": "Gleamwood Middle - Combo Time Extend III",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE",
+                "Method": "ITEM_SLIDE && ( ( EnemyManip && ITEM_ORB ) || VenaBomb) && ITEM_KNIFE",
                 "Difficulty": 0
             }
         ]
@@ -1779,7 +1779,7 @@
     },
     {
         "Itemname": "BADGE_TauntStare",
-        "Location": "Gleamwood Middle",
+        "Location": "Gleamwood Forest Exit",
         "LocationName": "Gleamwood Middle - Special Action: Speechless",
         "slotId": 1,
         "Requirement": [
@@ -1794,13 +1794,29 @@
             {
                 "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB",
                 "Difficulty": 0
+            },
+            {
+                "Method": "RabbitWalljump && ITEM_LINEBOMB",
+                "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "BADGE_DodgeMeterBoost",
-        "Location": "Gleamwood Upper",
+        "Location": "Gleamwood Middle",
         "LocationName": "Gleamwood Upper - Dodge: Optimize",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_SLIDE || HiddenP) && (ITEM_KNIFE || ITEM_ORB)",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_EliteChallangeC",
+        "Location": "Gleamwood Ulvosa Exit",
+        "LocationName": "Gleamwood Upper - Elite",
         "slotId": 1,
         "Requirement": [
             {
@@ -1811,7 +1827,7 @@
     },
     {
         "Itemname": "BADGE_BattleStartCharger",
-        "Location": "Ulskan Village Area",
+        "Location": "Gleamwood Right",
         "LocationName": "Ulskan Village Area - MP Surge: Battle Start",
         "slotId": 1,
         "Requirement": [
@@ -1823,12 +1839,16 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Ulskan Village Area",
+        "Location": "Gleamwood Right",
         "LocationName": "Ulskan Village Area - Grape Bunny Potion",
         "slotId": 5,
         "Requirement": [
             {
                 "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB2",
+                "Difficulty": 0
+            },
+            {
+                "Method": "VenaBomb",
                 "Difficulty": 0
             }
         ]
@@ -1840,7 +1860,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_KNIFE || VenaBomb || ITEM_ORB",
                 "Difficulty": 0
             }
         ]
@@ -1852,7 +1872,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -1864,14 +1884,14 @@
         "slotId": 5,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_KNIFE || VenaBomb",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "ITEM_AntiDecay",
-        "Location": "Ulskan Village Area",
+        "Location": "Ulskan Plague Exit",
         "LocationName": "Ulskan Village Area - Decay Antidote",
         "slotId": 1,
         "Requirement": [
@@ -1883,7 +1903,7 @@
     },
     {
         "Itemname": "BADGE_SlideHalt",
-        "Location": "Ulskan Village Area",
+        "Location": "Gleamwood Right",
         "LocationName": "Ulskan Village Area - Slide Halt",
         "slotId": 1,
         "Requirement": [
@@ -1895,32 +1915,12 @@
     },
     {
         "Itemname": "BADGE_GoldenLuck",
-        "Location": "Ulskan Village Area",
+        "Location": "Ulskan Plague Exit",
         "LocationName": "Ulskan Village Area - Dodge: Golden Luck",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_BombLengthExtend && ITEM_DOUBLEJUMP",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_BombLengthExtend && ITEM_JETPACK",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_BombLengthExtend && ITEM_HIJUMP && ITEM_WALLJUMP",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AREABOMB && ITEM_DOUBLEJUMP",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AREABOMB && ITEM_JETPACK",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AREABOMB && ITEM_HIJUMP && ITEM_WALLJUMP",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ChargeShot",
                 "Difficulty": 0
             }
         ]

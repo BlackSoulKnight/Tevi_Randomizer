@@ -148,7 +148,7 @@
             "Name":"04-09",
             "Connections":[
                 {
-                    "Exit":"Gleamwood Bottom",
+                    "Exit":"Gleamwood Forest Exit",
                     "Method":""
                 },
                 {
@@ -226,7 +226,7 @@
             "Name":"07-09",
             "Connections":[
                 {
-                    "Exit":"Gleamwood Middle",
+                    "Exit":"Gleamwood Copperwood Exit",
                     "Method":""
                 },
                 {
@@ -270,6 +270,71 @@
                 },
                 {
                     "Exit":"Gallery of Mirrors West",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"09-10En",
+            "Connections":[
+                {
+                    "Exit":"Ulskan Village Area",
+                    "Method":""
+                },
+                {
+                    "Exit":"Plague Forest",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"09-10Ex",
+            "Connections":[
+                {
+                    "Exit":"Ulskan Plague Exit",
+                    "Method":""
+                },
+                {
+                    "Exit":"Plague Forest",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"09-11",
+            "Connections":[
+                {
+                    "Exit":"Gleamwood Relicts Exit",
+                    "Method":""
+                },
+                {
+                    "Exit":"Ulvosa",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"09-24",
+            "Connections":[
+                {
+                    "Exit":"Gleamwood Relicts Exit",
+                    "Method":""
+                },
+                {
+                    "Exit":"Relicts",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"09-28",
+            "Connections":[
+                {
+                    "Exit":"Gleamwood Blush Exit",
+                    "Method":""
+                },
+                {
+                    "Exit":"Blushwood",
                     "Method":""
                 }
             ]
@@ -1008,6 +1073,62 @@
     ],
     "Map09": [
         {
+            "Name":"Gleamwood Forest Exit",
+            "Money":[],
+            "Connections":[
+                {
+                    "Exit":"04-09",
+                    "Method":""
+                },
+                {
+                    "Exit":"Gleamwood Bottom",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"Gleamwood Copperwood Exit",
+            "Money":[],
+            "Connections":[
+                {
+                    "Exit":"07-09",
+                    "Method":""
+                },
+                {
+                    "Exit":"Gleamwood Middle",
+                    "Method":"ITEM_LINEBOMB"
+                }
+            ]
+        },
+        {
+            "Name":"Gleamwood Relicts Exit",
+            "Money":[],
+            "Connections":[
+                {
+                    "Exit":"09-24",
+                    "Method":""
+                },
+                {
+                    "Exit":"Gleamwood Middle",
+                    "Method":"ITEM_BombLengthExtend"
+                }
+            ]
+        },
+        {
+            "Name":"Gleamwood Blush Exit",
+            "Money":[],
+            "Connections":[
+                {
+                    "Exit":"09-28",
+                    "Method":""
+                },
+                {
+                    "Exit":"Gleamwood Right",
+                    "Method":"ITEM_HIJUMP || ITEM_DOUBLEJUMP || ITEM_AirDash || ITEM_JETPACK || RabbitJump"
+                }
+            ]
+        },
+        {
             "Name": "Gleamwood Bottom",
             "Money": [
                 {
@@ -1025,20 +1146,16 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Gleamwood Middle",
+                    "Exit": "Gleamwood Forest Exit",
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Gleamwood Middle",
-                    "Method": "ITEM_DOUBLEJUMP"
+                    "Method": "ITEM_DOUBLEJUMP || ITEM_LINEBOMB || ITEM_JETPACK || ITEM_AirDash"
                 },
                 {
                     "Exit": "Gleamwood Middle",
-                    "Method": "ITEM_JETPACK"
-                },
-                {
-                    "Exit": "Gleamwood Middle",
-                    "Method": "ITEM_AirDash"
+                    "Method": "EnemyManip"
                 }
             ]
         },
@@ -1060,41 +1177,29 @@
             ],
             "Connections": [
                 {
-                    "Exit": "CopperWood",
+                    "Exit": "Gleamwood Copperwood Exit",
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "Gleamwood Upper",
-                    "Method": "ITEM_SLIDE"
+                    "Exit": "Gleamwood Relicts Exit",
+                    "Method": "ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "Gleamwood Ulvosa Exit",
+                    "Method": "(ITEM_SLIDE || HiddenP) && ChargeShot"
                 },
                 {
                     "Exit": "Gleamwood Bottom",
                     "Method": ""
                 },
                 {
-                    "Exit": "Relicts",
-                    "Method": ""
-                },
-                {
-                    "Exit": "Ana Thema",
-                    "Method": ""
-                },
-                {
-                    "Exit": "Ulskan Village Area",
-                    "Method": "ITEM_DOUBLEJUMP"
-                },
-                {
-                    "Exit": "Ulskan Village Area",
-                    "Method": "ITEM_AirDash"
-                },
-                {
-                    "Exit": "Ulskan Village Area",
-                    "Method": "ITEM_JETPACK"
+                    "Exit": "Gleamwood Right",
+                    "Method": "ITEM_DOUBLEJUMP || ITEM_AirDash || ITEM_JETPACK || RabbitJump"
                 }
             ]
         },
         {
-            "Name": "Gleamwood Upper",
+            "Name": "Gleamwood Ulvosa Exit",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -1104,16 +1209,16 @@
             "Connections": [
                 {
                     "Exit": "Gleamwood Middle",
-                    "Method": "ITEM_SLIDE"
+                    "Method": ""
                 },
                 {
-                    "Exit": "Ulvosa",
-                    "Method": "ChargeShot && ITEM_LINEBOMB && ITEM_SLIDE"
+                    "Exit": "09-11",
+                    "Method": ""
                 }
             ]
         },
         {
-            "Name": "Ulskan Village Area",
+            "Name": "Gleamwood Right",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -1130,12 +1235,44 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Blushwood",
+                    "Exit": "Gleamwood Blush Exit",
                     "Method": ""
                 },
                 {
-                    "Exit": "Plague Forest",
+                    "Exit": "Ulskan Village Area",
                     "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Ulskan Village Area",
+            "Money": [
+
+            ],
+            "Connections": [
+                {
+                    "Exit": "Gleamwood Middle",
+                    "Method": "ITEM_KNIFE || VenaBomb || ITEM_ORB"
+                },
+                {
+                    "Exit": "09-10En",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Ulskan Plague Exit",
+            "Money": [
+
+            ],
+            "Connections": [
+                {
+                    "Exit": "09-10Ex",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Ulskan Village Area",
+                    "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
                 }
             ]
         }
@@ -1151,7 +1288,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Ulskan Village Area",
+                    "Exit": "Gleamwood Right",
                     "Method": ""
                 }
             ]
@@ -1172,7 +1309,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Gleamwood Upper",
+                    "Exit": "Gleamwood Ulvosa Exit",
                     "Method": ""
                 }
             ]
