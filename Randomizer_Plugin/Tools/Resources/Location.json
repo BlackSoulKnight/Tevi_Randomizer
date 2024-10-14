@@ -1555,7 +1555,7 @@
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "Forest",
+        "Location": "Forest Maze boss",
         "LocationName": "Forest - Astral Gear",
         "slotId": 24,
         "Requirement": [
@@ -2016,6 +2016,10 @@
                 "Difficulty": 0
             },
             {
+                "Method": "ITEM_LINEBOMB",
+                "Difficulty": 0
+            },
+            {
                 "Method": "ITEM_HIJUMP && ITEM_WALLJUMP",
                 "Difficulty": 0
             }
@@ -2047,7 +2051,7 @@
     },
     {
         "Itemname": "BADGE_BombNormal4Buffer",
-        "Location": "Plague Forest",
+        "Location": "Plague Forest Exit",
         "LocationName": "Plague Forest - Aplomb",
         "slotId": 1,
         "Requirement": [
@@ -2059,7 +2063,7 @@
     },
     {
         "Itemname": "BADGE_PrepDef",
-        "Location": "Plague Forest",
+        "Location": "Plague Forest Exit",
         "LocationName": "Plague Forest - Blood Armor",
         "slotId": 1,
         "Requirement": [
@@ -2148,7 +2152,7 @@
         "slotId": 18,
         "Requirement": [
             {
-                "Method": "ITEM_AREABOMB && ITEM_LINEBOMB",
+                "Method": "ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -2160,7 +2164,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "EliteChallangeD",
+                "Method": "EVENT_EliteChallangeD",
                 "Difficulty": 0
             }
         ]
@@ -2220,7 +2224,7 @@
         "slotId": 20,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -2256,15 +2260,15 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB2",
+                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB2 && ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbAmulet",
+                "Method": "ITEM_OrbAmulet && ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             },
             {
-                "Method": "BADGE_GStrongUpWidth",
+                "Method": "VenaBomb && ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]

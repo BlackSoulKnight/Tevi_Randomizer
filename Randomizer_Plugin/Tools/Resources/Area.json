@@ -295,7 +295,7 @@
                     "Method":""
                 },
                 {
-                    "Exit":"Plague Forest",
+                    "Exit":"Plague Forest Exit",
                     "Method":""
                 }
             ]
@@ -304,11 +304,11 @@
             "Name":"09-11",
             "Connections":[
                 {
-                    "Exit":"Gleamwood Relicts Exit",
+                    "Exit":"Gleamwood Ulvosa Exit",
                     "Method":""
                 },
                 {
-                    "Exit":"Ulvosa",
+                    "Exit":"Ulvosa Exit",
                     "Method":""
                 }
             ]
@@ -1288,13 +1288,47 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Gleamwood Right",
+                    "Exit": "09-10En",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Plague Forest Exit",
+                    "Method": "ITEM_LINEBOMB && ITEM_SLIDE"
+                }
+            ]
+        },
+        {
+            "Name": "Plague Forest Exit",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 13000
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "09-10Ex",
                     "Method": ""
                 }
             ]
         }
     ],
     "Map11": [
+        {
+            "Name": "Ulvosa Exit",
+            "Money": [
+            ],
+            "Connections": [
+                {
+                    "Exit": "Ulvosa",
+                    "Method": "ITEM_LINEBOMB && ChargeShot && (HiddenP || ITEM_SLIDE)"
+                },
+                {
+                    "Exit": "09-11",
+                    "Method": ""
+                }
+            ]
+        },
         {
             "Name": "Ulvosa",
             "Money": [
@@ -1308,10 +1342,7 @@
                 }
             ],
             "Connections": [
-                {
-                    "Exit": "Gleamwood Ulvosa Exit",
-                    "Method": ""
-                }
+
             ]
         }
     ],
