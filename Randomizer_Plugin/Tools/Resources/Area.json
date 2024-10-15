@@ -379,6 +379,58 @@
             ]
         },
         {
+            "Name":"13-14",
+            "Connections":[
+                {
+                    "Exit":"Verdazure Sea Forgotten Exit",
+                    "Method":""
+                },
+                {
+                    "Exit":"Forgotten City",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"13-14O",
+            "Connections":[
+                {
+                    "Exit":"Verdazure Sea East",
+                    "Method":""
+                },
+                {
+                    "Exit":"Verdazure Ocean",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"13-27",
+            "Connections":[
+                {
+                    "Exit":"Verdazure Sea West",
+                    "Method":""
+                },
+                {
+                    "Exit":"Gallery of Souls",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"13-28",
+            "Connections":[
+                {
+                    "Exit":"Verdazure Sea West",
+                    "Method":""
+                },
+                {
+                    "Exit":"Blushwood",
+                    "Method":""
+                }
+            ]
+        },
+        {
             "Name":"20-21",
             "Connections":[
                 {
@@ -1491,7 +1543,7 @@
     ],
     "Map13": [
         {
-            "Name": "Verdazure Sea",
+            "Name": "Verdazure Sea West",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -1508,39 +1560,45 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Blushwood",
-                    "Method": ""
-                },
-
-                {
-                    "Exit": "Forgotten City",
-                    "Method": "ITEM_WATERMOVEMENT && ITEM_LINEBOMB"
-                },
-                {
-                    "Exit": "Verdazure Ocean",
-                    "Method": "ITEM_SLIDE && ChargeShot"
+                    "Exit": "Verdazure Sea Forgotten Exit",
+                    "Method": "ITEM_WATERMOVEMENT && (ITEM_LINEBOMB || RabbitJump)"
                 },
                 {
                     "Exit": "Verdazure Sea West Exit",
-                    "Method": "???"
+                    "Method": ""
+                },
+                {
+                    "Exit": "Verdazure Sea East",
+                    "Method": ""
+                },
+                {
+                    "Exit": "13-27",
+                    "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK || ADCKick"
+                }
+            ]
+        },
+        {
+            "Name": "Verdazure Sea East",
+            "Money": [
+            ],
+            "Connections": [
+                {
+                    "Exit": "13-28",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Verdazure Sea West",
+                    "Method": "ITEM_WATERMOVEMENT"
+                },
+                {
+                    "Exit": "13-14O",
+                    "Method": "ITEM_SLIDE && ChargeShot"
                 }
             ]
         },
         {
             "Name": "Verdazure Sea West Exit",
             "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 5000
-                },
-                {
-                    "Method": "ITEM_WATERMOVEMENT && ITEM_LINEBOMB",
-                    "Amount": 1000
-                },
-                {
-                    "Method": "ITEM_SLIDE && (ITEM_WALLJUMP || ITEM_HIJUMP || ITEM_JETPACK || ITEM_DOUBLEJUMP)",
-                    "Amount": 1500
-                }
             ],
             "Connections": [
                 {
@@ -1550,6 +1608,17 @@
                 {
                     "Exit": "Verdazure Sea",
                     "Method": "ITEM_LINEBOMB || ITEM_WATERMOVEMENT"
+                }
+            ]
+        },
+        {
+            "Name": "Verdazure Sea Forgotten Exit",
+            "Money": [
+            ],
+            "Connections": [
+                {
+                    "Exit": "13-14",
+                    "Method": ""
                 }
             ]
         }

@@ -3815,7 +3815,7 @@
     },
     {
         "Itemname": "ITEM_WATERMOVEMENT",
-        "Location": "Verdazure Sea",
+        "Location": "Verdazure Sea West",
         "LocationName": "Verdazure Sea - Hydrodynamo",
         "slotId": 1,
         "Requirement": [
@@ -3827,7 +3827,7 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Verdazure Sea",
+        "Location": "Verdazure Sea West",
         "LocationName": "Verdazure Sea - Kiwi Bunny Potion",
         "slotId": 4,
         "Requirement": [
@@ -3839,7 +3839,7 @@
     },
     {
         "Itemname": "BADGE_CommonDropRecover",
-        "Location": "Verdazure Sea",
+        "Location": "Verdazure Sea East",
         "LocationName": "Verdazure Sea - Grub Guru",
         "slotId": 1,
         "Requirement": [
@@ -3851,7 +3851,7 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Verdazure Sea",
+        "Location": "Verdazure Sea West",
         "LocationName": "Verdazure Sea - Blueberry Bunny Potion",
         "slotId": 4,
         "Requirement": [
@@ -3863,7 +3863,7 @@
     },
     {
         "Itemname": "BADGE_InvincibilityExtend",
-        "Location": "Verdazure Sea",
+        "Location": "Verdazure Sea West",
         "LocationName": "Verdazure Sea - Invictus",
         "slotId": 1,
         "Requirement": [
@@ -3875,8 +3875,8 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Verdazure Sea",
-        "LocationName": "Verdazure Sea - Grape Bunny Potion",
+        "Location": "Verdazure Sea Forgotten Exit",
+        "LocationName": "Verdazure Sea to Forgotton City - Grape Bunny Potion",
         "slotId": 26,
         "Requirement": [
             {
