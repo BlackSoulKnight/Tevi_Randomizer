@@ -431,6 +431,32 @@
             ]
         },
         {
+            "Name":"15-17",
+            "Connections":[
+                {
+                    "Exit":"Tartarus",
+                    "Method":""
+                },
+                {
+                    "Exit":"Swamp",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"15-25",
+            "Connections":[
+                {
+                    "Exit":"Tartarus Catacombs",
+                    "Method":""
+                },
+                {
+                    "Exit":"Catacombs Entrance",
+                    "Method":""
+                }
+            ]
+        },
+        {
             "Name":"20-21",
             "Connections":[
                 {
@@ -1729,8 +1755,35 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Catacombs Entrance",
-                    "Method": "ITEM_SLIDE"
+                    "Exit": "15-17",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Tartarus Catacombs",
+                    "Method": "ITEM_SLIDE || ITEM_LINEBOMB"
+                }
+            ]
+        },
+        {
+            "Name": "Tartarus Catacombs",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 2000
+                },
+                {
+                    "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
+                    "Amount": 1500
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Tartarus",
+                    "Method": "ITEM_SLIDE || ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "15-25",
+                    "Method": ""
                 }
             ]
         }

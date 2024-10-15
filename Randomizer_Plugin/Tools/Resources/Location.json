@@ -3320,7 +3320,7 @@
     {
         "Itemname": "ITEM_RailPass",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Tartarus VIP Pass ",
+        "LocationName": "Tartarus Shop - Tartarus VIP Pass ",
         "slotId": 1,
         "Requirement": [
             {
@@ -3332,7 +3332,7 @@
     {
         "Itemname": "BADGE_StyleComboBackflipA",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Style Combo: Trickshot",
+        "LocationName": "Tartarus Shop - Style Combo: Trickshot",
         "slotId": 1,
         "Requirement": [
             {
@@ -3344,7 +3344,7 @@
     {
         "Itemname": "BADGE_RevengeB",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Hot Buzz",
+        "LocationName": "Tartarus Shop - Hot Buzz",
         "slotId": 1,
         "Requirement": [
             {
@@ -3356,7 +3356,7 @@
     {
         "Itemname": "BADGE_ComboCharge",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - MP Quicken: Combo",
+        "LocationName": "Tartarus Shop - MP Quicken: Combo",
         "slotId": 1,
         "Requirement": [
             {
@@ -3368,7 +3368,7 @@
     {
         "Itemname": "BADGE_SimpleBreak",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Quick Break",
+        "LocationName": "Tartarus Shop - Quick Break",
         "slotId": 1,
         "Requirement": [
             {
@@ -3380,7 +3380,7 @@
     {
         "Itemname": "BADGE_PurchaseBadgeCost",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - EP Booster: Shopaholic",
+        "LocationName": "Tartarus Shop - EP Booster: Shopaholic",
         "slotId": 1,
         "Requirement": [
             {
@@ -3392,7 +3392,7 @@
     {
         "Itemname": "BADGE_DoubleJumpStrike",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Bounce Bonus",
+        "LocationName": "Tartarus Shop - Bounce Bonus",
         "slotId": 1,
         "Requirement": [
             {
@@ -3404,7 +3404,7 @@
     {
         "Itemname": "BADGE_BoostTimeExtend",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Core Expansion: Extend",
+        "LocationName": "Tartarus Shop - Core Expansion: Extend",
         "slotId": 1,
         "Requirement": [
             {
@@ -3416,7 +3416,7 @@
     {
         "Itemname": "BADGE_CrystalHeal",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Crystal Healing",
+        "LocationName": "Tartarus Shop - Crystal Healing",
         "slotId": 1,
         "Requirement": [
             {
@@ -3428,7 +3428,7 @@
     {
         "Itemname": "BADGE_FallDamageReduce",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Head Over Heels",
+        "LocationName": "Tartarus Shop - Head Over Heels",
         "slotId": 1,
         "Requirement": [
             {
@@ -3440,7 +3440,7 @@
     {
         "Itemname": "BADGE_DoubleDispelLineBombLow",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Low Defence Bomber",
+        "LocationName": "Tartarus Shop - Low Defence Bomber",
         "slotId": 1,
         "Requirement": [
             {
@@ -3452,7 +3452,7 @@
     {
         "Itemname": "STACKABLE_BAG",
         "Location": "Tartarus",
-        "LocationName": "Shop Tartarus - Bag Expander",
+        "LocationName": "Tartarus Shop - Bag Expander",
         "slotId": 32,
         "Requirement": [
             {
@@ -3464,7 +3464,7 @@
     {
         "Itemname": "STACKABLE_EP",
         "Location": "Tartarus",
-        "LocationName": "Shop Tartarus - Lemon Bunny Potion",
+        "LocationName": "Tartarus Shop - Lemon Bunny Potion",
         "slotId": 32,
         "Requirement": [
             {
@@ -3476,7 +3476,7 @@
     {
         "Itemname": "STACKABLE_HP",
         "Location": "Tartarus",
-        "LocationName": "Shop Tartarus - Kiwi Bunny Potion",
+        "LocationName": "Tartarus Shop - Kiwi Bunny Potion",
         "slotId": 32,
         "Requirement": [
             {
@@ -3488,7 +3488,7 @@
     {
         "Itemname": "STACKABLE_MATK",
         "Location": "Tartarus",
-        "LocationName": "Shop Tartarus - Cherry Bunny Potion",
+        "LocationName": "Tartarus Shop - Cherry Bunny Potion",
         "slotId": 32,
         "Requirement": [
             {
@@ -3500,7 +3500,7 @@
     {
         "Itemname": "STACKABLE_MP",
         "Location": "Tartarus",
-        "LocationName": "Shop Tartarus - Blueberry Bunny Potion",
+        "LocationName": "Tartarus Shop - Blueberry Bunny Potion",
         "slotId": 32,
         "Requirement": [
             {
@@ -3512,7 +3512,7 @@
     {
         "Itemname": "STACKABLE_RATK",
         "Location": "Tartarus",
-        "LocationName": "Shop Tartarus - Grape Bunny Potion",
+        "LocationName": "Tartarus Shop - Grape Bunny Potion",
         "slotId": 32,
         "Requirement": [
             {
@@ -3524,7 +3524,7 @@
     {
         "Itemname": "STACKABLE_SHARD",
         "Location": "Tartarus",
-        "LocationName": "Shop Tartarus - Rainbow Bunny Potion",
+        "LocationName": "Tartarus Shop Chap 6 - Rainbow Bunny Potion",
         "slotId": 32,
         "Requirement": [
             {
