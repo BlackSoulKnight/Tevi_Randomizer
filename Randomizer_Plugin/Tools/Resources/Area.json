@@ -386,7 +386,7 @@
                     "Method":""
                 },
                 {
-                    "Exit":"Forgotten City",
+                    "Exit":"Forgotten City Entrance",
                     "Method":""
                 }
             ]
@@ -399,7 +399,7 @@
                     "Method":""
                 },
                 {
-                    "Exit":"Verdazure Ocean",
+                    "Exit":"Verdazure Ocean Sea Exit",
                     "Method":""
                 }
             ]
@@ -426,6 +426,19 @@
                 },
                 {
                     "Exit":"Blushwood",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"14-25",
+            "Connections":[
+                {
+                    "Exit":"Verdazure Swamp Lab Exit",
+                    "Method":""
+                },
+                {
+                    "Exit":"Lab - Verdazure Swamp Connection",
                     "Method":""
                 }
             ]
@@ -1651,6 +1664,21 @@
     ],
     "Map14": [
         {
+            "Name": "Verdazure Ocean Sea Exit",
+            "Money": [
+            ],
+            "Connections": [
+                {
+                    "Exit": "Verdazure Ocean",
+                    "Method": "ITEM_SLIDE"
+                },
+                {
+                    "Exit": "13-14O",
+                    "Method": ""
+                }
+            ]
+        },
+        {
             "Name": "Verdazure Ocean",
             "Money": [
                 {
@@ -1668,7 +1696,11 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Snowveil Entrance",
+                    "Exit": "Verdazure Ocean Sea Exit",
+                    "Method": "ITEM_SLIDE"
+                },
+                {
+                    "Exit": "12-14",
                     "Method": ""
                 },
                 {
@@ -1695,7 +1727,34 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Lab - Verdazure Swamp Connection",
+                    "Exit": "Verdazure Swamp Lab Exit",
+                    "Method": "ITEM_SLIDE"
+                },
+                {
+                    "Exit": "Verdazure Ocean",
+                    "Method": "ITEM_SLIDE && ITEM_LINEBOMB && (ITEM_HIJUMP || ITEM_DOUBLEJUMP || ITEM_JETPACK)"
+                }
+            ]
+        },
+        {
+            "Name": "Verdazure Swamp Lab Exit",
+            "Money": [
+                {
+                    "Method": "ITEM_JETPACK3 || ITEM_AirDash &&(ITEM_JETPACK || ITEM_DOUBLEJUMP) || ITEM_JETPACK && ITEM_DOUBLEJUMP",
+                    "Amount": 1500
+                },
+                {
+                    "Method": "ITEM_JETPACK || ITEM_DOUBLEJUMP ",
+                    "Amount": 1000
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Verdazure Swamp",
+                    "Method": "ITEM_SLIDE"
+                },
+                {
+                    "Exit": "14-25",
                     "Method": ""
                 }
             ]
@@ -1716,6 +1775,26 @@
             ]
         },
         {
+            "Name": "Forgotten City Entrance",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 6000
+                },
+                {
+                    "Method": "ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_WALLJUMP",
+                    "Amount": 5000
+                }
+                
+            ],
+            "Connections": [
+                {
+                    "Exit": "Forgotten City",
+                    "Method": "ITEM_LINEBOMB"
+                }
+            ]
+        },
+        {
             "Name": "Forgotten City",
             "Money": [
                 {
@@ -1730,8 +1809,24 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Forgotten City Upper Exit",
-                    "Method": "ITEM_LINEBOMB"
+                    "Exit": "Forgotten City Entrance",
+                    "Method": "ITEM_LINEBOMB && (ITEM_SLIDE || ITEM_WATERMOVEMENT)"
+                },
+                {
+                    "Method": "ChargeShot",
+                    "Exit": "Forgotten City Upper Exit"
+                },
+                {
+                    "Method": "ITEM_DOUBLEJUMP && ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
+                    "Exit": "Forgotten City Upper Exit"
+                },
+                {
+                    "Method": "ITEM_WALLJUMP && ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
+                    "Exit": "Forgotten City Upper Exit"
+                },
+                {
+                    "Method": "ITEM_HIJUMP && ITEM_JETPACK3 && ITEM_KNIFE && ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
+                    "Exit": "Forgotten City Upper Exit"
                 }
             ]
         }

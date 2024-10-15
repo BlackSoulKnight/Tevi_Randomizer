@@ -4997,6 +4997,7 @@
         "Itemname": "STACKABLE_MP",
         "Location": "Verdazure Ocean",
         "LocationName": "Verdazure Ocean - Blueberry Bunny Potion #2",
+        "Note":"It will change",
         "slotId": 24,
         "Requirement": [
             {
@@ -5008,7 +5009,7 @@
     {
         "Itemname": "BADGE_ComboTimeExtendB",
         "Location": "Verdazure Swamp",
-        "LocationName": "Verdazure Swamp - Combo Time Extend B",
+        "LocationName": "Verdazure Swamp - Combo Time Extend II",
         "slotId": 1,
         "Requirement": [
             {
