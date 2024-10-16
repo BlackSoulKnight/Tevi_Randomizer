@@ -5615,6 +5615,18 @@
         ]
     },
     {
+        "Itemname": "EVENT_SnowMechanic",
+        "Location": "Snowveil Above HQ",
+        "LocationName": "Snowveil Above HQ - Snow Orb",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "STACKABLE_MP",
         "Location": "Golden Hands HQ",
         "LocationName": "Golden Hands HQ - Blueberry Bunny Potion",
