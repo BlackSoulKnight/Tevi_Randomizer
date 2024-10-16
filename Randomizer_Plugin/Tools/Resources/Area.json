@@ -470,6 +470,19 @@
             ]
         },
         {
+            "Name":"16-18",
+            "Connections":[
+                {
+                    "Exit":"Snowveil Above HQ",
+                    "Method":""
+                },
+                {
+                    "Exit":"DreamKeeper Outside Right",
+                    "Method":""
+                }
+            ]
+        },
+        {
             "Name":"20-21",
             "Connections":[
                 {
@@ -1894,6 +1907,10 @@
             ],
             "Connections": [
                 {
+                    "Exit": "12-16",
+                    "Method": ""
+                },
+                {
                     "Exit": "Snowveil Above HQ",
                     "Method": "ITEM_LINEBOMB && ITEM_SLIDE"
                 },
@@ -1929,16 +1946,12 @@
             ],
             "Connections": [
                 {
-                    "Exit": "DreamKeeper Outside Right",
-                    "Method": "ITEM_DOUBLEJUMP"
+                    "Exit": "16-18",
+                    "Method": "ITEM_DOUBLEJUMP || ITEM_WALLJUMP || ITEM_JETPACK"
                 },
                 {
-                    "Exit": "DreamKeeper Outside Right",
-                    "Method": "ITEM_WALLJUMP"
-                },
-                {
-                    "Exit": "DreamKeeper Outside Right",
-                    "Method": "ITEM_JETPACK"
+                    "Exit": "Snow City",
+                    "Method": "ITEM_LINEBOMB && ITEM_AREABOMB"
                 }
             ]
         },
@@ -1975,6 +1988,25 @@
         },
         {
             "Name": "Golden Hands HQ Sewer",
+            "Money": [
+                {
+                    "Method": "Boss",
+                    "Amount": 1000
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Snow City",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Golden Hands HQ Extra",
+                    "Method": "ITEM_SLIDE &&  ITEM_Rotater && ChargeShot"
+                }
+            ]
+        },
+        {
+            "Name": "Golden Hands HQ Extra",
             "Money": [
                 {
                     "Method": "Boss",

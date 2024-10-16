@@ -5393,7 +5393,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -5401,7 +5401,7 @@
     {
         "Itemname": "ITEM_GoldenGlove",
         "Location": "Snow City",
-        "LocationName": "Snow City - Trinketeer's Fortune",
+        "LocationName": "Snow City Shop - Trinketeer's Fortune",
         "slotId": 1,
         "Requirement": [
             {
@@ -5413,7 +5413,7 @@
     {
         "Itemname": "BADGE_DodgeSlide",
         "Location": "Snow City",
-        "LocationName": "Snow City - Dodge Enhancer: Slide",
+        "LocationName": "Snow City Shop - Dodge Enhancer: Slide",
         "slotId": 1,
         "Requirement": [
             {
@@ -5425,7 +5425,7 @@
     {
         "Itemname": "BADGE_GroundNormalCombo4AltDmg",
         "Location": "Snow City",
-        "LocationName": "Snow City - Slayer",
+        "LocationName": "Snow City Shop - Slayer",
         "slotId": 1,
         "Requirement": [
             {
@@ -5437,7 +5437,7 @@
     {
         "Itemname": "BADGE_AutoChargeCombo",
         "Location": "Snow City",
-        "LocationName": "Snow City - Ranged Roulette",
+        "LocationName": "Snow City Shop - Ranged Roulette",
         "slotId": 1,
         "Requirement": [
             {
@@ -5449,7 +5449,7 @@
     {
         "Itemname": "BADGE_1HealthTypeD",
         "Location": "Snow City",
-        "LocationName": "Snow City - Perseverance C",
+        "LocationName": "Snow City Shop - Perseverance C",
         "slotId": 1,
         "Requirement": [
             {
@@ -5461,7 +5461,7 @@
     {
         "Itemname": "BADGE_KnockConvert",
         "Location": "Snow City",
-        "LocationName": "Snow City - Ballasting Off",
+        "LocationName": "Snow City Shop - Ballasting Off",
         "slotId": 1,
         "Requirement": [
             {
@@ -5473,7 +5473,7 @@
     {
         "Itemname": "BADGE_BombCharge",
         "Location": "Snow City",
-        "LocationName": "Snow City - MP Surge: Explosives",
+        "LocationName": "Snow City Shop - MP Surge: Explosives",
         "slotId": 1,
         "Requirement": [
             {
@@ -5485,7 +5485,7 @@
     {
         "Itemname": "BADGE_MPAllBurst",
         "Location": "Snow City",
-        "LocationName": "Snow City - Mana Flare",
+        "LocationName": "Snow City Shop - Mana Flare",
         "slotId": 1,
         "Requirement": [
             {
@@ -5497,7 +5497,7 @@
     {
         "Itemname": "BADGE_FasterTeviStrongGroundUp",
         "Location": "Snow City",
-        "LocationName": "Snow City - Fast Pillar",
+        "LocationName": "Snow City Shop - Fast Pillar",
         "slotId": 1,
         "Requirement": [
             {
@@ -5509,7 +5509,7 @@
     {
         "Itemname": "STACKABLE_BAG",
         "Location": "Snow City",
-        "LocationName": "Shop Snow City - Bag Expander",
+        "LocationName": "Snow City Shop - Bag Expander",
         "slotId": 34,
         "Requirement": [
             {
@@ -5521,7 +5521,7 @@
     {
         "Itemname": "STACKABLE_EP",
         "Location": "Snow City",
-        "LocationName": "Shop Snow City - Lemon Bunny Potion",
+        "LocationName": "Snow City Shop - Lemon Bunny Potion",
         "slotId": 34,
         "Requirement": [
             {
@@ -5533,7 +5533,7 @@
     {
         "Itemname": "STACKABLE_HP",
         "Location": "Snow City",
-        "LocationName": "Shop Snow City - Kiwi Bunny Potion",
+        "LocationName": "Snow City Shop - Kiwi Bunny Potion",
         "slotId": 34,
         "Requirement": [
             {
@@ -5545,7 +5545,7 @@
     {
         "Itemname": "STACKABLE_MATK",
         "Location": "Snow City",
-        "LocationName": "Shop Snow City - Cherry Bunny Potion",
+        "LocationName": "Snow City Shop - Cherry Bunny Potion",
         "slotId": 34,
         "Requirement": [
             {
@@ -5557,7 +5557,7 @@
     {
         "Itemname": "STACKABLE_MP",
         "Location": "Snow City",
-        "LocationName": "Shop Snow City - Blueberry Bunny Potion",
+        "LocationName": "Snow City Shop - Blueberry Bunny Potion",
         "slotId": 34,
         "Requirement": [
             {
@@ -5569,7 +5569,7 @@
     {
         "Itemname": "STACKABLE_RATK",
         "Location": "Snow City",
-        "LocationName": "Shop Snow City - Grape Bunny Potion",
+        "LocationName": "Snow City Shop - Grape Bunny Potion",
         "slotId": 34,
         "Requirement": [
             {
@@ -5581,7 +5581,7 @@
     {
         "Itemname": "STACKABLE_SHARD",
         "Location": "Snow City",
-        "LocationName": "Shop Snow City - Rainbow Bunny Potion",
+        "LocationName": "Snow City Shop Chap 6 - Rainbow Bunny Potion",
         "slotId": 34,
         "Requirement": [
             {
@@ -5597,7 +5597,7 @@
         "slotId": 27,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
+                "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -5609,7 +5609,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_LINEBOMB",
+                "Method": "ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -5621,7 +5621,7 @@
         "slotId": 23,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB && EVENT_HQSwitch1",
                 "Difficulty": 0
             }
         ]
@@ -5633,7 +5633,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_Rotater",
+                "Method": "ITEM_AirSlide && EVENT_HQSwitch1 && Chargeshot",
                 "Difficulty": 0
             }
         ]
@@ -5645,7 +5645,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_AREABOMB && ITEM_LINEBOMB",
+                "Method": "ITEM_LINEBOMB && ITEM_SLIDE && EVENT_HQSwitch1",
                 "Difficulty": 0
             }
         ]
@@ -5664,12 +5664,12 @@
     },
     {
         "Itemname": "BADGE_DodgeStrongAirDown",
-        "Location": "Golden Hands HQ",
+        "Location": "Golden Hands HQ Extra",
         "LocationName": "Golden Hands HQ - Dodge Enhancer: Spanner",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ChargeShot",
+                "Method": "ITEM_SLIDE && ITEM_Rotater && ChargeShot && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -5681,7 +5681,19 @@
         "slotId": 12,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE",
+                "Method": "ITEM_SLIDE && ChargeShot && EVENT_HQSwitch1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_HQSwitch1",
+        "Location": "Golden Hands HQ",
+        "LocationName": "Golden Hands HQ - EVENT_HQSwitch1",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_SLIDE && ChargeShot && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -5727,7 +5739,12 @@
             {
                 "Method": "ITEM_JETPACK",
                 "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_LINEBOMB && ChargeShot && ITEM_SLIDE",
+                "Difficulty": 0
             }
+
         ]
     },
     {
@@ -5737,7 +5754,19 @@
         "slotId": 36,
         "Requirement": [
             {
-                "Method": "Boss",
+                "Method": "ITEM_WALLJUMP && Boss",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_DOUBLEJUMP && Boss",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_JETPACK && Boss",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_LINEBOMB && ChargeShot && ITEM_SLIDE && Boss",
                 "Difficulty": 0
             }
         ]
