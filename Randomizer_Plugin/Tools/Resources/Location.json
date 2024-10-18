@@ -2884,7 +2884,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "EliteChallangeE && ITEM_SLIDE",
+                "Method": "EVENT_EliteChallangeE && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -2927,7 +2927,7 @@
     },
     {
         "Itemname": "BADGE_EPCombo",
-        "Location": "Magma Depths",
+        "Location": "Magma Depths O",
         "LocationName": "Magma Depths - EP Booster: Quintuple",
         "slotId": 1,
         "Requirement": [
@@ -2939,7 +2939,7 @@
     },
     {
         "Itemname": "BADGE_ArrowDamageUp",
-        "Location": "Magma Depths",
+        "Location": "Magma Depths O",
         "LocationName": "Magma Depths - Razor Arrow",
         "slotId": 1,
         "Requirement": [
@@ -2966,6 +2966,7 @@
         "Location": "Magma Depths",
         "LocationName": "Magma Depths - Perseverance B",
         "slotId": 1,
+        "Note": "More ways to reach this item",
         "Requirement": [
             {
                 "Method": "ChargeShot",
@@ -3048,30 +3049,18 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP",
+                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_LINEBOMB",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_JETPACK",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_AirDash",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_SLIDE && ITEM_JETPACK && ITEM_AirDash",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_SLIDE && ITEM_JETPACK",
+                "Method": "ITEM_SLIDE && ITEM_JETPACK && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Swamp Entrance",
+        "Location": "Pre Swamp",
         "LocationName": "Swamp Entrance - Cherry Bunny Potion",
         "slotId": 12,
         "Requirement": [
@@ -3083,7 +3072,7 @@
     },
     {
         "Itemname": "BADGE_AirComboExtend",
-        "Location": "Swamp",
+        "Location": "Pre Swamp",
         "LocationName": "Swamp - Aerial Kinetics",
         "slotId": 1,
         "Requirement": [
@@ -3107,12 +3096,12 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Swamp Entrance",
+        "Location": "Pre Swamp",
         "LocationName": "Swamp Entrance - Grape Bunny Potion",
         "slotId": 12,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -3160,15 +3149,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_AirDash",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_JETPACK",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_DOUBLEJUMP",
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -5597,7 +5578,7 @@
         "slotId": 27,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB && ITEM_SLIDE",
+                "Method": "( ITEM_BombLengthExtend3 || ITEM_AREABOMB ) && ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]

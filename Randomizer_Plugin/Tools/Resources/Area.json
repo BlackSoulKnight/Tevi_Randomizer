@@ -174,7 +174,7 @@
             "Name":"05-17M",
             "Connections":[
                 {
-                    "Exit":"Magma Pits",
+                    "Exit":"Magma Pits Entrance",
                     "Method":""
                 },
                 {
@@ -451,7 +451,7 @@
                     "Method":""
                 },
                 {
-                    "Exit":"Swamp",
+                    "Exit":"Swamp Tartarus Exit",
                     "Method":""
                 }
             ]
@@ -478,6 +478,19 @@
                 },
                 {
                     "Exit":"DreamKeeper Outside Right",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"17-23",
+            "Connections":[
+                {
+                    "Exit":"Magma Depths Sinner Exit",
+                    "Method":""
+                },
+                {
+                    "Exit":"Sinner's Oath Entrance",
                     "Method":""
                 }
             ]
@@ -2023,6 +2036,30 @@
     ],
     "Map17": [
         {
+            "Name": "Magma Pits Entrance",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 5500
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Magma Pits",
+                    "Method": "ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "Pre Swamp",
+                    "Method": "ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "05-17M",
+                    "Method": "ITEM_LINEBOMB"
+                }
+
+            ]
+        },
+        {
             "Name": "Magma Pits",
             "Money": [
                 {
@@ -2032,32 +2069,55 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Swamp Entrance",
-                    "Method": ""
+                    "Exit": "Pre Swamp",
+                    "Method": "ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Swamp",
                     "Method": "ChargeShot && ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "Magma Depths",
-                    "Method": "ITEM_JETPACK && ITEM_SLIDE"
+                    "Exit": "Magma Depths O",
+                    "Method": "ITEM_JETPACK && ITEM_AirSlide"
                 },
                 {
-                    "Exit": "Magma Depths",
-                    "Method": "ITEM_SLIDE && ITEM_AirDash && ChargeShot"
+                    "Exit": "Magma Depths O",
+                    "Method": "ITEM_AirSlide && ITEM_AirDash && ChargeShot"
                 },
                 {
-                    "Exit": "Magma Depths",
-                    "Method": "ITEM_SLIDE &&  ITEM_DOUBLEJUMP && ChargeShot"
+                    "Exit": "Magma Depths O",
+                    "Method": "ITEM_AirSlide &&  ITEM_DOUBLEJUMP && ChargeShot"
                 },
                 {
-                    "Exit": "Magma Depths",
-                    "Method": "ITEM_SLIDE &&  ITEM_HIJUMP && ChargeShot"
+                    "Exit": "Magma Depths O",
+                    "Method": "ITEM_AirSlide &&  ITEM_HIJUMP && ChargeShot"
                 },
                 {
-                    "Exit": "Magma Depths",
-                    "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_JETPACK"
+                    "Exit": "Magma Depths O",
+                    "Method": "ITEM_AirSlide && ITEM_DOUBLEJUMP && ITEM_JETPACK"
+                }
+            ]
+        },
+        {
+            "Name": "Magma Depths O",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 1500
+                },
+                {
+                    "Method": "ITEM_SLIDE",
+                    "Amount": 2000
+                },
+                {
+                    "Method": "ITEM_AirSlide && ITEM_SLIDE",
+                    "Amount": 2000
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit":"Magma Depths",
+                    "Method":"ITEM_AirSlide"
                 }
             ]
         },
@@ -2079,7 +2139,31 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Sinner's Oath Entrance",
+                    "Exit": "Magma Depths Sinner Exit",
+                    "Method": "HiddenP || (ITEM_AirSlide && ITEM_Rotater && (ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_SPEEDUP3))",
+                    "Note": "Place a block to recover from a failed jump"
+                }
+            ]
+        },
+        {
+            "Name": "Magma Depths Sinner Exit",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 1500
+                },
+                {
+                    "Method": "ITEM_SLIDE",
+                    "Amount": 2000
+                },
+                {
+                    "Method": "ITEM_AirSlide && ITEM_SLIDE",
+                    "Amount": 2000
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "17-23",
                     "Method": ""
                 }
             ]
@@ -2094,7 +2178,26 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Tartarus",
+                    "Exit": "Magma Pits Entrance",
+                    "Method": "ITEM_SLIDE && ITEM_AREABOMB"
+                },
+                {
+                    "Exit": "Pre Swamp",
+                    "Method": "ITEM_SLIDE"
+                },
+                {
+                    "Exit": "05-17S",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Pre Swamp",
+            "Money": [
+            ],
+            "Connections": [
+                {
+                    "Exit": "Swamp Entrance",
                     "Method": ""
                 },
                 {
@@ -2112,10 +2215,6 @@
                 {
                     "Exit": "Swamp",
                     "Method": "ITEM_LINEBOMB && ITEM_AREABOMB"
-                },
-                {
-                    "Exit": "Magma Depths",
-                    "Method": "ITEM_LINEBOMB"
                 }
 
             ]
@@ -2142,7 +2241,41 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Tartarus",
+                    "Exit": "Pre Swamp",
+                    "Method": "ITEM_AirDash || ITEM_ORB || ITEM_KNIFE"
+                },
+                {
+                    "Exit": "Swamp Tartarus Exit",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Magma Depths",
+                    "Method": "ITEM_LINEBOMB"
+                }
+            ]
+        },
+        {
+            "Name": "Swamp Tartarus Exit",
+            "Money": [],
+            "Connections": [
+                {
+                    "Method": " (HiddenP || ITEM_LINEBOMB) && (ITEM_JETPACK2 || (ITEM_JETPACK && (ITEM_DOUBLEJUMP || ITEM_AirDash)) || (ITEM_AirDash && ITEM_DOUBLEJUMP))",
+                    "Exit": "Swamp"
+                },
+                {
+                    "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP",
+                    "Exit": "Swamp"
+                },
+                {
+                    "Method": "ITEM_JETPACK && ITEM_AirDash",
+                    "Exit": "Swamp"
+                },
+                {
+                    "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP",
+                    "Exit": "Swamp"
+                },
+                {
+                    "Exit": "15-17",
                     "Method": ""
                 }
             ]
