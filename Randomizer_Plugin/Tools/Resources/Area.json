@@ -343,7 +343,7 @@
             "Name":"12-14",
             "Connections":[
                 {
-                    "Exit":"Snowveil Entrance",
+                    "Exit":"Snowveil",
                     "Method":""
                 },
                 {
@@ -369,11 +369,11 @@
             "Name":"12-18",
             "Connections":[
                 {
-                    "Exit":"Snowveil Entrance",
+                    "Exit":"Snowveil above Verglas Village",
                     "Method":""
                 },
                 {
-                    "Exit":"DreamKeeper Outside Left",
+                    "Exit":"DreamKeeper Outside Left Snow Exit",
                     "Method":""
                 }
             ]
@@ -2305,11 +2305,15 @@
             "Connections": [
                 {
                     "Exit": "DreamKeeper Outside Left",
-                    "Method": "ChargeShot"
+                    "Method": "ChargeShot && ITEM_SLIDE && ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "DreamKeeper",
-                    "Method": "ITEM_Rotater && ChargeShot && ITEM_LINEBOMB"
+                    "Method": "ITEM_Rotater && (ChargeShot || HiddenP) && ITEM_LINEBOMB && ITEM_SLIDE && (EVENT_SnowMechanic2 || EarlyDream)"
+                },
+                {
+                    "Exit": "16-18",
+                    "Method": ""
                 }
             ]
         },
@@ -2328,11 +2332,30 @@
             "Connections": [
                 {
                     "Exit": "DreamKeeper",
-                    "Method": "ITEM_Rotater && ChargeShot && ITEM_SLIDE"
+                    "Method": "ITEM_Rotater && (ChargeShot || HiddenP) && ITEM_SLIDE && (EVENT_SnowMechanic2 || EarlyDream)"
                 },
                 {
                     "Exit": "Heavens Valley Snow Route Low",
                     "Method": ""
+                },
+                {
+                    "Exit": "DreamKeeper Outside Left Snow Exit",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "DreamKeeper Outside Left Snow Exit",
+            "Money": [
+            ],
+            "Connections": [
+                {
+                    "Exit": "12-18",
+                    "Method": ""
+                },
+                {
+                    "Exit": "DreamKeeper Outside Left",
+                    "Method": "RabbitJump || ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_HIJUMP"
                 }
             ]
         },
@@ -2378,7 +2401,7 @@
             "Connections": [
                 {
                     "Exit": "Dreamless Depths 2" ,
-                    "Method": "ITEM_HIJUMP"
+                    "Method": "ITEM_HIJUMP && ITEM_KNIFE"
                 },
                 {
                     "Exit": "Dreamless Depths 2" ,
@@ -2386,16 +2409,17 @@
                 },
                 {
                     "Exit": "Dreamless Depths 2" ,
-                    "Method": "ITEM_JETPACK"
+                    "Method": "ITEM_JETPACK && ITEM_KNIFE"
                 },
                 {
                     "Exit": "Dreamless Depths 2" ,
-                    "Method": "ITEM_DOUBLEJUMP"
+                    "Method": "ITEM_DOUBLEJUMP && ITEM_KNIFE"
                 }
             ]
         },
         {
             "Name": "Dreamless Depths 2",
+            "Note": "Could be in Trasition Rando, isnt yet",
             "Money": [
                 {
                     "Method": "",

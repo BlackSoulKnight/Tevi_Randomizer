@@ -5847,7 +5847,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_KNIFE || VenabBomB || ChargeShot || ITEM_AREABOMB",
                 "Difficulty": 0
             }
         ]
@@ -5883,7 +5883,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_LINEBOMB",
+                "Method": "ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -5907,7 +5907,7 @@
         "slotId": 28,
         "Requirement": [
             {
-                "Method": "ITEM_Rotater",
+                "Method": "ITEM_Rotater && ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -5985,6 +5985,10 @@
             {
                 "Method": "ITEM_SLIDE && ITEM_AirSlide && ITEM_KNIFE",
                 "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_SLIDE && ITEM_AirSlide && ITEM_AREABOMB",
+                "Difficulty": 0
             }
         ]
     },
@@ -5992,18 +5996,19 @@
         "Itemname": "BADGE_BadgeCDReduce",
         "Location": "Dreamless Depths 2",
         "LocationName": "Dreamless Depths 2 - Sigil Quicken",
+        "Note": "Wrong Location name",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK2 && ItemUse",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK2 && ItemUse && ITEM_LINEBOMB",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash && ITEM_LINEBOMB",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_HIJUMP && ItemUse",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_HIJUMP && ItemUse && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]

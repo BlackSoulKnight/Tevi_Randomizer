@@ -12,5 +12,6 @@ EnemyManip: Harder Enemy manipulation
 
 HiddenP: A Hidden path from base game
 OpenMorose: No Crossbomb requirement for Morose
+EarlyDream: Enter DreamKeeper without destroying 2 Snow Orbs
 
 CEVENT_ : Creates a EVENT_ for Logic dependency
