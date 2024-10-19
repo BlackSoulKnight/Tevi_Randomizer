@@ -4023,7 +4023,12 @@
             {
                 "Method": "ITEM_AirDash && ITEM_WALLJUMP",
                 "Difficulty": 0
+            },
+            {
+                "Method": "RabbitWalljump",
+                "Difficulty": 0
             }
+
         ]
     },
     {
@@ -4049,7 +4054,11 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP",
+                "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP && ChargeShot",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_AirDash && (ITEM_JETPACK || ITEM_DOUBLEJUMP) && ChargeShot",
                 "Difficulty": 0
             },
             {
@@ -4073,7 +4082,11 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_AREABOMB",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_BombLengthExtend 3",
                 "Difficulty": 0
             }
         ]
@@ -4081,7 +4094,7 @@
     {
         "Itemname": "ITEM_AirshipPass",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - Valhalla VIP Pass",
+        "LocationName": "Valhalla City Shop - Valhalla VIP Pass",
         "slotId": 1,
         "Requirement": [
             {
@@ -4093,7 +4106,7 @@
     {
         "Itemname": "BADGE_StyleComboAirDashA",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - Style Combo: Flash A",
+        "LocationName": "Valhalla City Shop - Style Combo: Flash A",
         "slotId": 1,
         "Requirement": [
             {
@@ -4105,7 +4118,7 @@
     {
         "Itemname": "BADGE_StrongFrontRapid",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - Tornado Spin: Flurry",
+        "LocationName": "Valhalla City Shop - Tornado Spin: Flurry",
         "slotId": 1,
         "Requirement": [
             {
@@ -4117,7 +4130,7 @@
     {
         "Itemname": "BADGE_BackflipMultiHit",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - Backflip Flurry",
+        "LocationName": "Valhalla City Shop - Backflip Flurry",
         "slotId": 1,
         "Requirement": [
             {
@@ -4129,7 +4142,7 @@
     {
         "Itemname": "BADGE_ComboDodgeMeter",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - Combo Momentum: Dodge",
+        "LocationName": "Valhalla City Shop - Combo Momentum: Dodge",
         "slotId": 1,
         "Requirement": [
             {
@@ -4141,7 +4154,7 @@
     {
         "Itemname": "BADGE_RythemCharge",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - MP Saver: Rhythm",
+        "LocationName": "Valhalla City Shop - MP Saver: Rhythm",
         "slotId": 1,
         "Requirement": [
             {
@@ -4153,7 +4166,7 @@
     {
         "Itemname": "BADGE_PerfectCost",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - EP Booster: Perfectionist",
+        "LocationName": "Valhalla City Shop - EP Booster: Perfectionist",
         "slotId": 1,
         "Requirement": [
             {
@@ -4165,7 +4178,7 @@
     {
         "Itemname": "BADGE_StyleComboSlidingS",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - Style Combo: Bunny Kick S",
+        "LocationName": "Valhalla City Shop - Style Combo: Bunny Kick S",
         "slotId": 1,
         "Requirement": [
             {
@@ -4177,7 +4190,7 @@
     {
         "Itemname": "BADGE_DamageToMaxHP",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - Shock Armor",
+        "LocationName": "Valhalla City Shop - Shock Armor",
         "slotId": 1,
         "Requirement": [
             {
@@ -4189,7 +4202,7 @@
     {
         "Itemname": "BADGE_Normal3HRedCancel",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - Quickstab: Sunder",
+        "LocationName": "Valhalla City Shop - Quickstab: Sunder",
         "slotId": 1,
         "Requirement": [
             {
@@ -4201,7 +4214,7 @@
     {
         "Itemname": "BADGE_BoostQuickErase",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - Core Expansion: Erase",
+        "LocationName": "Valhalla City Shop - Core Expansion: Erase",
         "slotId": 1,
         "Requirement": [
             {
@@ -4213,7 +4226,7 @@
     {
         "Itemname": "STACKABLE_BAG",
         "Location": "Valhalla City",
-        "LocationName": "Shop Valhalla City - Bag Expander",
+        "LocationName": "Valhalla City Shop - Bag Expander",
         "slotId": 33,
         "Requirement": [
             {
@@ -4225,7 +4238,7 @@
     {
         "Itemname": "STACKABLE_EP",
         "Location": "Valhalla City",
-        "LocationName": "Shop Valhalla City - Lemon Bunny Potion",
+        "LocationName": "Valhalla City Shop - Lemon Bunny Potion",
         "slotId": 33,
         "Requirement": [
             {
@@ -4237,7 +4250,7 @@
     {
         "Itemname": "STACKABLE_HP",
         "Location": "Valhalla City",
-        "LocationName": "Shop Valhalla City - Kiwi Bunny Potion",
+        "LocationName": "Valhalla City - Shop Kiwi Bunny Potion",
         "slotId": 33,
         "Requirement": [
             {
@@ -4249,7 +4262,7 @@
     {
         "Itemname": "STACKABLE_MATK",
         "Location": "Valhalla City",
-        "LocationName": "Shop Valhalla City - Cherry Bunny Potion",
+        "LocationName": "Valhalla City Shop - Cherry Bunny Potion",
         "slotId": 33,
         "Requirement": [
             {
@@ -4261,7 +4274,7 @@
     {
         "Itemname": "STACKABLE_MP",
         "Location": "Valhalla City",
-        "LocationName": "Shop Valhalla City - Blueberry Bunny Potion",
+        "LocationName": "Valhalla City Shop - Blueberry Bunny Potion",
         "slotId": 33,
         "Requirement": [
             {
@@ -4273,7 +4286,7 @@
     {
         "Itemname": "STACKABLE_RATK",
         "Location": "Valhalla City",
-        "LocationName": "Shop Valhalla City - Grape Bunny Potion",
+        "LocationName": "Valhalla City Shop - Grape Bunny Potion",
         "slotId": 33,
         "Requirement": [
             {
@@ -4285,7 +4298,7 @@
     {
         "Itemname": "STACKABLE_SHARD",
         "Location": "Valhalla City",
-        "LocationName": "Shop Valhalla City - Rainbow Bunny Potion",
+        "LocationName": "Valhalla City Shop Chap 6 - Rainbow Bunny Potion",
         "slotId": 33,
         "Requirement": [
             {

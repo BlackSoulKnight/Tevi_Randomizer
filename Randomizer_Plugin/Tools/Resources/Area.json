@@ -533,6 +533,32 @@
                     "Method":""
                 }
             ]
+        },
+        {
+            "Name":"20-21",
+            "Connections":[
+                {
+                    "Exit":"Valhalla City",
+                    "Method":""
+                },
+                {
+                    "Exit":"EverGarden",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"20-21",
+            "Connections":[
+                {
+                    "Exit":"Valhalla City",
+                    "Method":""
+                },
+                {
+                    "Exit":"Cloister Entrance",
+                    "Method":""
+                }
+            ]
         }
     ],
 
@@ -2542,12 +2568,16 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Cloister Entrance",
+                    "Exit": "20-26",
                     "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "EverGarden",
-                    "Method": "ITEM_LINEBOMB"
+                    "Exit": "20-29",
+                    "Method": ""
+                },
+                {
+                    "Exit": "20-21",
+                    "Method": ""
                 },
                 {
                     "Exit": "Vena Shop",
