@@ -239,11 +239,11 @@
             "Name":"07-24",
             "Connections":[
                 {
-                    "Exit":"Relicts",
+                    "Exit":"CopperWood",
                     "Method":""
                 },
                 {
-                    "Exit":"CopperWood",
+                    "Exit":"Relicts",
                     "Method":""
                 }
             ]
@@ -321,7 +321,7 @@
                     "Method":""
                 },
                 {
-                    "Exit":"Relicts",
+                    "Exit":"Relicts Exit",
                     "Method":""
                 }
             ]
@@ -535,7 +535,7 @@
             ]
         },
         {
-            "Name":"20-21",
+            "Name":"20-29",
             "Connections":[
                 {
                     "Exit":"Valhalla City",
@@ -548,7 +548,7 @@
             ]
         },
         {
-            "Name":"20-21",
+            "Name":"20-26",
             "Connections":[
                 {
                     "Exit":"Valhalla City",
@@ -2733,8 +2733,12 @@
                     "Method": "ChargeShot"
                 },
                 {
+                    "Exit": "17-23",
+                    "Method": ""
+                },
+                {
                     "Exit": "Illusion Palace Entrance",
-                    "Method":"ITEM_LINEBOMB"
+                    "Method":"ITEM_LINEBOMB && HiddenP"
                 }
             ]
         },
@@ -2808,11 +2812,26 @@
             ],
             "Connections": [
                 {
-                    "Exit": "CopperWood",
+                    "Exit": "07-24",
                     "Method": ""
                 },
                 {
-                    "Exit": "Gleamwood Middle",
+                    "Exit": "Relicts Exit",
+                    "Method": "ITEM_LINEBOMB"
+                }
+            ]
+        },
+        {
+            "Name": "Relicts Exit",
+            "Money": [
+            ],
+            "Connections": [
+                {
+                    "Exit": "Relicts",
+                    "Method": "ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "09-24",
                     "Method": "ITEM_LINEBOMB"
                 }
             ]
