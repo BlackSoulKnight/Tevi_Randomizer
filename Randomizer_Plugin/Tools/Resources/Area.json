@@ -3078,17 +3078,32 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Valhalla City",
+                    "Exit": "20-26",
                     "Method": ""
                 },
                 {
-                    "Exit": "Cloister Main",
+                    "Exit": "Cloister",
+                    "Method": "ITEM_SLIDE"
+                }
+            ]
+        },
+        {
+            "Name": "Cloister",
+            "Money": [
+                {
+                    "Method": "",
+                    "Amount": 0
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Cloister Pre Boss",
                     "Method": "ChargeShot"
                 }
             ]
         },
         {
-            "Name": "Cloister Main",
+            "Name": "Cloister Pre Boss",
             "Money": [
                 {
                     "Method": "",

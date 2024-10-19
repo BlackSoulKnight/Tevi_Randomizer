@@ -4497,12 +4497,12 @@
     },
     {
         "Itemname": "BADGE_BoostHitCount",
-        "Location": "Cloister Entrance",
-        "LocationName": "Cloister Entrance - Core Expansion: Combo",
+        "Location": "Cloister",
+        "LocationName": "Cloister Elite - Core Expansion: Combo",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "EliteChallangeF",
+                "Method": "EVENT_EliteChallangeF",
                 "Difficulty": 0
             }
         ]
@@ -4510,7 +4510,7 @@
     {
         "Itemname": "EVENT_FreeStrongAttack",
         "Location": "Cloister Entrance",
-        "LocationName": "Cloister Entrance - Free Attack",
+        "LocationName": "Cloister - Free Attack",
         "slotId": 1,
         "Requirement": [
             {
@@ -4521,8 +4521,8 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Cloister Entrance",
-        "LocationName": "Cloister Entrance - Grape Bunny Potion",
+        "Location": "Cloister",
+        "LocationName": "Cloister - Grape Bunny Potion",
         "slotId": 16,
         "Requirement": [
             {
@@ -4533,8 +4533,8 @@
     },
     {
         "Itemname": "BADGE_StyleComboNormal1QuickFar",
-        "Location": "Cloister Entrance",
-        "LocationName": "Cloister Entrance - Style Combo: Aerial A",
+        "Location": "Cloister",
+        "LocationName": "Cloister - Style Combo: Aerial A",
         "slotId": 1,
         "Requirement": [
             {
@@ -4545,68 +4545,68 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Cloister Entrance",
-        "LocationName": "Cloister Entrance - Kiwi Bunny Potion",
+        "Location": "Cloister",
+        "LocationName": "Cloister - Kiwi Bunny Potion",
         "slotId": 18,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_AREABOMB || ITEM_BombLengthExtend",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Cloister Main",
+        "Location": "Cloister Pre Boss",
         "LocationName": "Cloister Main - Blueberry Bunny Potion",
         "slotId": 22,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Cloister Main",
+        "Location": "Cloister Pre Boss",
         "LocationName": "Cloister Main - Lemon Bunny Potion",
         "slotId": 18,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "BADGE_BreakHeal",
-        "Location": "Cloister Main",
+        "Location": "Cloister Pre Boss",
         "LocationName": "Cloister Main - Coffee Break",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "ITEM_WALLJUMP",
-        "Location": "Cloister Main",
+        "Location": "Cloister Pre Boss",
         "LocationName": "Cloister Main - Parkour Boots",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Cloister Main",
-        "LocationName": "Cloister Main - Cherry Bunny Potion",
+        "Location": "Cloister Pre Boss",
+        "LocationName": "Cloister Pre Boss - Cherry Bunny Potion",
         "slotId": 17,
         "Requirement": [
             {
@@ -4617,8 +4617,8 @@
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "Cloister Main",
-        "LocationName": "Cloister Main - Astral Gear",
+        "Location": "Cloister Pre Boss",
+        "LocationName": "Cloister Boss - Astral Gear",
         "slotId": 46,
         "Requirement": [
             {
@@ -4629,8 +4629,8 @@
     },
     {
         "Itemname": "BADGE_QuickMPRegainB",
-        "Location": "Cloister Main",
-        "LocationName": "Cloister Main - MP Reset B",
+        "Location": "Cloister Pre Boss",
+        "LocationName": "Cloister Pre Boss - MP Reset B",
         "slotId": 1,
         "Requirement": [
             {
@@ -4653,7 +4653,7 @@
     },
     {
         "Itemname": "BADGE_StyleComboPassiveMAX",
-        "Location": "Cloister Main",
+        "Location": "Cloister Pre Boss",
         "LocationName": "Cloister Main - C. Rank Frenzy: Focus MAX",
         "slotId": 1,
         "Requirement": [
@@ -4673,12 +4673,12 @@
     },
     {
         "Itemname": "BADGE_LateAttack",
-        "Location": "Cloister Entrance",
-        "LocationName": "Cloister Entrance - Crouching Bunny",
+        "Location": "Cloister",
+        "LocationName": "Cloister - Crouching Bunny",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_LINEBOMB",
+                "Method": "(ITEM_BombLengthExtend || ITEM_AREABOMB) && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
