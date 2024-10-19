@@ -2849,14 +2849,10 @@
             "Connections": [
                 {
                     "Exit": "Catacombs Main",
-                    "Method": "ITEM_DOUBLEJUMP"
+                    "Method": "ITEM_SLIDE && (ITEM_DOUBLEJUMP || ITEM_JETPACK)"
                 },
                 {
-                    "Exit": "Catacombs Main",
-                    "Method": "ITEM_JETPACK"
-                },
-                {
-                    "Exit": "Tartarus",
+                    "Exit": "15-25",
                     "Method": ""
                 }
             ]
@@ -2888,27 +2884,28 @@
                 },
                 {
                     "Exit": "Catacombs Inner",
-                    "Method": "ITEM_DOUBLEJUMP"
+                    "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_SLIDE"
                 },
                 {
                     "Exit": "Catacombs Inner",
-                    "Method": "ITEM_JETPACK2"
+                    "Method": "ITEM_JETPACK2 && ITEM_LINEBOMB && ITEM_SLIDE"
                 },
                 {
                     "Exit": "Catacombs Inner",
-                    "Method": "ITEM_JETPACK && ITEM_HIJUMP"
+                    "Method": "ITEM_JETPACK && ITEM_HIJUMP && ITEM_LINEBOMB && ITEM_SLIDE"
                 },
                 {
                     "Exit": "Catacombs Inner",
-                    "Method": "ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash"
+                    "Method": "ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash && ITEM_LINEBOMB && ITEM_SLIDE"
                 },
                 {
-                    "Exit": "Lab",
-                    "Method": "ITEM_LINEBOMB"
+                    "Exit": "Pre Lab",
+                    "Method": "ITEM_LINEBOMB && ITEM_SLIDE && (ITEM_DOUBLEJUMP || ITEM_JETPACK)"
                 }
             ]
         },
         {
+            "Note": "Need 1 verctical movement option",
             "Name": "Catacombs Inner",
             "Money": [
                 {
@@ -2929,9 +2926,93 @@
                 }
             ],
             "Connections": [
+            ]
+        },
+        {
+            "Name": "Pre Lab",
+            "Money": [
                 {
-                    "Exit": "Lab Extended",
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 3500
+                },
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 2000
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Lab Entrance",
                     "Method": "ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "Catacombs Main",
+                    "Method": "(ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_SLIDE && (ITEM_JETPACK || ITEM_AirDash || ITEM_DOUBLEJUMP)"
+                }
+            ]
+        },
+        {
+            "Name": "Lab Entrance",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 3500
+                },
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 2000
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Lab Hub",
+                    "Method": "ITEM_SLIDE"
+                }
+            ]
+        },
+        {
+            "Name": "Lab Hub",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 3500
+                },
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 2000
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Lab Entrance",
+                    "Method": "ITEM_DOUBLEJUMP || (ITEM_AirDash && ITEM_WALLJUMP) || ITEM_JETPACK || RabbitWallJump"
+                },
+                {
+                    "Exit": "Lab Left",
+                    "Method": "(ITEM_DOUBLEJUMP || (ITEM_AirDash && ITEM_WALLJUMP) || ITEM_JETPACK || RabbitWallJump) && ITEM_SLIDE && ITEM_LINEBOMB"
+                }
+            ]
+        },
+        {
+            "Name": "Lab Left",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 3500
+                },
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 2000
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Lab Hub",
+                    "Method": "ITEM_SLIDE"
+                },
+                {
+                    "Exit": "Lab",
+                    "Method": "ITEM_LINEBOMB && (ITEM_DOUBLEJUMP || ITEM_JETPACK || (ITEM_WALLJUMP && ITEM_AirDash) || RabbitWalljump)"
                 }
             ]
         },
@@ -2949,23 +3030,8 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Lab Extended",
-                    "Method": "ITEM_LINEBOMB"
-                }
-            ]
-        },
-        {
-            "Name": "Lab Extended",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 7000
-                }
-            ],
-            "Connections": [
-                {
-                    "Exit": "Catacombs Entrance",
-                    "Method": "ITEM_LINEBOMB"
+                    "Exit": "Lab Hub",
+                    "Method": "ITEM_SLIDE"
                 },
                 {
                     "Exit": "Lab - Verdazure Swamp Connection",
@@ -2983,12 +3049,12 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Lab Extended",
-                    "Method": "ITEM_LINEBOMB"
+                    "Exit": "Lab",
+                    "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "Verdazure Swamp",
-                    "Method": "ITEM_LINEBOMB && ITEM_BombLengthExtend3"
+                    "Exit": "14-25",
+                    "Method": ""
                 }
             ]
         }

@@ -3521,7 +3521,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB && (ITEM_DOUBLEJUMP || ITEM_Airdash || ITEM_JETPACK || ITEM_HIJUMP)",
                 "Difficulty": 0
             }
         ]
@@ -3533,14 +3533,14 @@
         "slotId": 16,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_AirDash || ITEM_JETPACK || ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Catacombs Main",
+        "Location": "Pre Lab",
         "LocationName": "Sout East Catacombs Main - Blueberry Bunny Potion",
         "slotId": 19,
         "Requirement": [
@@ -3552,12 +3552,12 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Catacombs Main",
-        "LocationName": "Catacombs Main - Kiwi Bunny Potion",
+        "Location": "Pre Lab",
+        "LocationName": "Pre Lab - Kiwi Bunny Potion",
         "slotId": 19,
         "Requirement": [
             {
-                "Method": "ITEM_LINEBOMB",
+                "Method": "ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -3628,8 +3628,8 @@
     },
     {
         "Itemname": "BADGE_InstantDodgeMeter",
-        "Location": "Catacombs Inner",
-        "LocationName": "Catacombs Inner - Dodge: Panic Switch",
+        "Location": "Catacombs Main",
+        "LocationName": "Catacombs Main - Dodge: Panic Switch",
         "slotId": 1,
         "Requirement": [
             {
@@ -3657,14 +3657,14 @@
         "slotId": 18,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
+                "Method": "(ITEM_BombLengthExtend3 || ITEM_AREABOMB ) && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "BADGE_DodgeEPBoost",
-        "Location": "Lab",
+        "Location": "Lab Left",
         "LocationName": "Lab - EP Booster: Dodge",
         "slotId": 18,
         "Requirement": [
@@ -3676,12 +3676,12 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Lab Extended",
-        "LocationName": "Lab Extended - Grape Bunny Potion",
+        "Location": "Lab",
+        "LocationName": "Lab - Grape Bunny Potion",
         "slotId": 17,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -3729,15 +3729,15 @@
         "slotId": 19,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "Lab Extended",
-        "LocationName": "Lab Extended - Astral Gear",
+        "Location": "Lab",
+        "LocationName": "Lab - Astral Gear",
         "slotId": 45,
         "Requirement": [
             {
@@ -3748,20 +3748,20 @@
     },
     {
         "Itemname": "BADGE_StyleComboPassiveA",
-        "Location": "Lab Extended",
-        "LocationName": "Lab Extended - C. Rank Frenzy: Focus A",
+        "Location": "Lab",
+        "LocationName": "Lab - C. Rank Frenzy: Focus A",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "ITEM_DodgeShot",
-        "Location": "Lab Extended",
-        "LocationName": "Lab Extended - Shining Bangle",
+        "Location": "Lab",
+        "LocationName": "Lab - Shining Bangle",
         "slotId": 1,
         "Requirement": [
             {
