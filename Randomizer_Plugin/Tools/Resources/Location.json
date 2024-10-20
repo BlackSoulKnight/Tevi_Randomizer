@@ -4726,7 +4726,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_AREABOMB && ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -4738,7 +4738,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB && ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -4750,7 +4750,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB && ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -4800,6 +4800,10 @@
             {
                 "Method": "ITEM_AirDash && ChargeShot",
                 "Difficulty": 0
+            },
+            {
+                "Method": "RabbitJump && ChargeShot",
+                "Difficulty": 0
             }
         ]
     },
@@ -4834,22 +4838,14 @@
         "slotId": 5,
         "Requirement": [
             {
-                "Method": "ITEM_AirDash && ITEM_WALLJUMP",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_JETPACK",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_DOUBLEJUMP",
+                "Method": "",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Gallery of Souls",
+        "Location": "Gallery of Souls Entrance",
         "LocationName": "Gallery of Souls - Blueberry Bunny Potion",
         "slotId": 10,
         "Requirement": [
@@ -4885,12 +4881,12 @@
     },
     {
         "Itemname": "BADGE_Instant1",
-        "Location": "Gallery of Souls",
-        "LocationName": "Gallery of Souls - Hero Call",
+        "Location": "Gallery of Souls Boss Area",
+        "LocationName": "Gallery of Souls Boss Area - Hero Call",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": -1
             }
         ]

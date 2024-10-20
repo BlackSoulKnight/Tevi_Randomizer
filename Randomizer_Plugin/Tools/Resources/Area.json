@@ -265,7 +265,7 @@
             "Name":"08-27",
             "Connections":[
                 {
-                    "Exit":"Ana Thema",
+                    "Exit":"Ana Thema Gallery Exit",
                     "Method":""
                 },
                 {
@@ -3131,6 +3131,10 @@
                 {
                     "Exit": "Gallery of Mirrors East",
                     "Method": "ChargeShot"
+                },
+                {
+                    "Exit": "08-27",
+                    "Method": "ChargeShot"
                 }
             ]
         },
@@ -3144,8 +3148,19 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Gallery of Souls",
+                    "Exit": "Gallery of Souls Entrance",
                     "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Gallery of Souls Entrance",
+            "Money": [
+            ],
+            "Connections": [
+                {
+                    "Exit": "Gallery of Souls",
+                    "Method": "ITEM_LINEBOMB"
                 }
             ]
         },
@@ -3169,12 +3184,13 @@
                 {
                     "Exit": "Gallery of Souls Boss Area",
                     "Method": "ITEM_DOUBLEJUMP && ChargeShot"
+                },
+                {
+                    "Exit": "Gallery of Souls Boss Area",
+                    "Method": "ITEM_LINEBOMB && ChargeShot"
                 }
             ]
         },
-
-
-
         {
             "Name": "Gallery of Souls Boss Area",
             "Money": [
@@ -3189,8 +3205,35 @@
             ],
             "Connections": [
                 {
-                    "Exit": "",
+                    "Exit": "Gallery of Souls Sea Exit",
+                    "Method": "ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "Gallery of Souls",
+                    "Method": "ITEM_JETPACK2 && ITEM_LINEBOMB && BarrierSkip"
+                },
+                {
+                    "Exit": "Gallery of Souls",
+                    "Method": "ITEM_WALLJUMP && ITEM_LINEBOMB && BarrierSkip"
+                },
+                {
+                    "Exit": "Gallery of Souls",
+                    "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && BarrierSkip"
+                }
+            ]
+        },
+        {
+            "Name": "Gallery of Souls Sea Exit",
+            "Money": [
+            ],
+            "Connections": [
+                {
+                    "Exit": "13-27",
                     "Method": ""
+                },
+                {
+                    "Exit": "Gallery of Souls Boss Area",
+                    "Method": "ITEM_BombLengthExtend 3"
                 }
             ]
         }

@@ -1,6 +1,6 @@
 ItemUse: Negate X.Speed to reach for a ledge after a Walljump
-RabbitJump: Using a Item with 200% speed enables a Walljump near the Walljump
-RabbitWalljump: multiple RabbitJumps
+RabbitJump: Using a Item with 200% speed enables a Walljump near the Walljump, Higher FPS is easier
+RabbitWalljump: multiple RabbitJumps, Higher FPS is easier
 
 BackFlip: Using a Knife attack to do a BackFlip + Jump 
 CKick: Dropkick a ceiling
@@ -13,5 +13,7 @@ EnemyManip: Harder Enemy manipulation
 HiddenP: A Hidden path from base game
 OpenMorose: No Crossbomb requirement for Morose
 EarlyDream: Enter DreamKeeper without destroying 2 Snow Orbs
+
+BarrierSkip: Easy> Airdash Hard> Slide
 
 CEVENT_ : Creates a EVENT_ for Logic dependency
