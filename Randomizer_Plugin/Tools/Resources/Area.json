@@ -3257,7 +3257,15 @@
                     "Method": "ITEM_SLIDE"
                 },
                 {
-                    "Exit": "Verdazure Sea",
+                    "Exit": "Blushwood Sliding",
+                    "Method": "HiddenP && ((ITEM_DOUBLJUMP && ITEM_JETPACK)|| ITEM_JETPACK 3)"
+                },
+                {
+                    "Exit": "13-28",
+                    "Method":""
+                },
+                {
+                    "Exit": "09-28",
                     "Method":""
                 }
 

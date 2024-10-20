@@ -3869,7 +3869,7 @@
     {
         "Itemname": "BADGE_ComboTimeExtendA",
         "Location": "Blushwood",
-        "LocationName": "Blushwood - Combo Time Extend A ",
+        "LocationName": "Blushwood - Combo Time Extend I",
         "slotId": 1,
         "Requirement": [
             {
@@ -3897,7 +3897,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
+                "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -3965,7 +3965,7 @@
         "slotId": 8,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK || RabbitWalljump || (ITEM_AirDash && ITEM_WALLJUMP)",
                 "Difficulty": 0
             }
         ]
@@ -3977,7 +3977,7 @@
         "slotId": 17,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && (ITEM_DOUBLEJUMP || ITEM_JETPACK || RabbitWalljump || (ITEM_AirDash && ITEM_WALLJUMP))",
                 "Difficulty": 0
             }
         ]
