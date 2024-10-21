@@ -6385,7 +6385,7 @@
     {
         "Itemname": "Useable_VenaBombBig",
         "Location": "Vena Shop",
-        "LocationName": "Vena Shop - Cloud Bomb",
+        "LocationName": "Vena Shop Chap 4 - Cloud Bomb",
         "slotId": 1,
         "Requirement": [
             {
@@ -6397,7 +6397,7 @@
     {
         "Itemname": "Useable_VenaBombBunBun",
         "Location": "Vena Shop",
-        "LocationName": "Vena Shop - BB Rabbit",
+        "LocationName": "Vena Shop Chap 2 - BB Rabbit",
         "slotId": 1,
         "Requirement": [
             {
@@ -6409,7 +6409,7 @@
     {
         "Itemname": "Useable_VenaBombDispel",
         "Location": "Vena Shop",
-        "LocationName": "Vena Shop - Calico Bomb",
+        "LocationName": "Vena Shop Chap 3 - Calico Bomb",
         "slotId": 1,
         "Requirement": [
             {
@@ -6421,7 +6421,7 @@
     {
         "Itemname": "Useable_VenaBombHealBlock",
         "Location": "Vena Shop",
-        "LocationName": "Vena Shop - Tabby Bomb",
+        "LocationName": "Vena Shop Chap 5 - Tabby Bomb",
         "slotId": 1,
         "Requirement": [
             {
@@ -6529,7 +6529,7 @@
     {
         "Itemname": "BADGE_SableALastHitEnhance",
         "Location": "Crafting",
-        "LocationName": "Crafting - Sable Type-A: Voracious",
+        "LocationName": "Crafting Chap 1 - Sable Type-A: Voracious",
         "slotId": 1,
         "Requirement": [
             {
@@ -6613,7 +6613,7 @@
     {
         "Itemname": "BADGE_RememberBrutalForce",
         "Location": "Morose City",
-        "LocationName": "Morose City - Muscle Memory",
+        "LocationName": "Morose City Waffle Shop - Muscle Memory",
         "slotId": 1,
         "Requirement": [
             {
@@ -6625,7 +6625,7 @@
     {
         "Itemname": "BADGE_CeliaALongStun",
         "Location": "Crafting",
-        "LocationName": "Crafting - Celia Type-A: Stunning",
+        "LocationName": "Crafting Chap 1 - Celia Type-A: Stunning",
         "slotId": 1,
         "Requirement": [
             {
@@ -6709,7 +6709,7 @@
     {
         "Itemname": "BADGE_ComboStyleDamageUp",
         "Location": "Crafting",
-        "LocationName": "Crafting - C. Rank Frenzy: Fierce",
+        "LocationName": "Crafting Chap 2 - C. Rank Frenzy: Fierce",
         "slotId": 1,
         "Requirement": [
             {
@@ -6721,7 +6721,7 @@
     {
         "Itemname": "BADGE_FrameCancel",
         "Location": "Crafting",
-        "LocationName": "Crafting - Full Stop A",
+        "LocationName": "Crafting Chap 2 - Full Stop A",
         "slotId": 1,
         "Requirement": [
             {
@@ -6733,7 +6733,7 @@
     {
         "Itemname": "BADGE_NormalShotReducerB",
         "Location": "Crafting",
-        "LocationName": "Crafting - Orbital Efficiency B",
+        "LocationName": "Crafting Chap 2 - Orbital Efficiency B",
         "slotId": 1,
         "Requirement": [
             {
@@ -6745,7 +6745,7 @@
     {
         "Itemname": "BADGE_StyleComboWeakGroundUpA",
         "Location": "Crafting",
-        "LocationName": "Crafting - Style Combo: Upper A",
+        "LocationName": "Crafting Chap 2 - Style Combo: Upper A",
         "slotId": 1,
         "Requirement": [
             {
@@ -6757,7 +6757,7 @@
     {
         "Itemname": "BADGE_NormalShotWhenChargedShot",
         "Location": "Crafting",
-        "LocationName": "Crafting - Two-pronged Shot",
+        "LocationName": "Crafting Chap 3 - Two-pronged Shot",
         "slotId": 1,
         "Requirement": [
             {
@@ -6769,7 +6769,7 @@
     {
         "Itemname": "BADGE_120CHARGE",
         "Location": "Crafting",
-        "LocationName": "Crafting - MP Quicken: Melee",
+        "LocationName": "Crafting Chap 3 - MP Quicken: Melee",
         "slotId": 1,
         "Requirement": [
             {
@@ -6781,11 +6781,11 @@
     {
         "Itemname": "BADGE_AllMeleeSpeedUp",
         "Location": "Crafting",
-        "LocationName": "Crafting - Dextrous",
+        "LocationName": "Crafting Chap 3 - Dextrous",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter 3",
+                "Method": "Coins 250 Chap 3 && Chapter 3",
                 "Difficulty": 0
             }
         ]
@@ -6793,7 +6793,7 @@
     {
         "Itemname": "BADGE_PowerDrop",
         "Location": "Crafting",
-        "LocationName": "Crafting - Drop Kick",
+        "LocationName": "Crafting Chap 3 - Drop Kick",
         "slotId": 1,
         "Requirement": [
             {
@@ -6805,7 +6805,7 @@
     {
         "Itemname": "BADGE_DominantEffectDownA",
         "Location": "Crafting",
-        "LocationName": "Crafting - Weak Dominance A",
+        "LocationName": "Crafting Chap 3 - Weak Dominance A",
         "slotId": 1,
         "Requirement": [
             {
@@ -6817,7 +6817,7 @@
     {
         "Itemname": "BADGE_QuickDropExtendA",
         "Location": "Crafting",
-        "LocationName": "Crafting - Power Drop",
+        "LocationName": "Crafting Chap 4 - Power Drop",
         "slotId": 1,
         "Requirement": [
             {
@@ -6829,7 +6829,7 @@
     {
         "Itemname": "BADGE_Cannon",
         "Location": "Crafting",
-        "LocationName": "Crafting - Magic Cannon",
+        "LocationName": "Crafting Chap 4 - Magic Cannon",
         "slotId": 1,
         "Requirement": [
             {
@@ -6841,7 +6841,7 @@
     {
         "Itemname": "BADGE_NormalSupportShot",
         "Location": "Crafting",
-        "LocationName": "Crafting - Synchronized Support I",
+        "LocationName": "Crafting Chap 4 - Synchronized Support I",
         "slotId": 1,
         "Requirement": [
             {
@@ -6853,7 +6853,7 @@
     {
         "Itemname": "BADGE_MAXHPBIGUP",
         "Location": "Crafting",
-        "LocationName": "Crafting - Health Surge",
+        "LocationName": "Crafting Chap 4 - Health Surge",
         "slotId": 1,
         "Requirement": [
             {
@@ -6865,7 +6865,7 @@
     {
         "Itemname": "BADGE_BoostFullOffense",
         "Location": "Crafting",
-        "LocationName": "Crafting - Core Expansion: Full Offense",
+        "LocationName": "Crafting Chap 4 - Core Expansion: Full Offense",
         "slotId": 1,
         "Requirement": [
             {
@@ -6877,7 +6877,7 @@
     {
         "Itemname": "BADGE_MAXHP2MP",
         "Location": "Crafting",
-        "LocationName": "Crafting - MP Quicken: Sacrifice",
+        "LocationName": "Crafting Chap 5 - MP Quicken: Sacrifice",
         "slotId": 1,
         "Requirement": [
             {
@@ -6889,7 +6889,7 @@
     {
         "Itemname": "BADGE_CraftBadgeCost",
         "Location": "Crafting",
-        "LocationName": "Crafting - EP Booster: Synthesizer",
+        "LocationName": "Crafting Chap 5 - EP Booster: Synthesizer",
         "slotId": 1,
         "Requirement": [
             {
@@ -6901,7 +6901,7 @@
     {
         "Itemname": "BADGE_StyleComboBackImageS",
         "Location": "Crafting",
-        "LocationName": "Crafting - Style Combo: Afterimage S",
+        "LocationName": "Crafting Chap 5 - Style Combo: Afterimage S",
         "slotId": 1,
         "Requirement": [
             {
@@ -6913,7 +6913,7 @@
     {
         "Itemname": "BADGE_AntiAirPlat",
         "Location": "Crafting",
-        "LocationName": "Crafting - Mana Platform",
+        "LocationName": "Crafting Chap 5 - Mana Platform",
         "slotId": 1,
         "Requirement": [
             {
@@ -6925,7 +6925,7 @@
     {
         "Itemname": "BADGE_StyleComboHeavyGroundFrontA",
         "Location": "Crafting",
-        "LocationName": "Crafting - Style Combo: Tornado A",
+        "LocationName": "Crafting Chap 5 - Style Combo: Tornado A",
         "slotId": 1,
         "Requirement": [
             {
@@ -6937,7 +6937,7 @@
     {
         "Itemname": "BADGE_AutoBombChain",
         "Location": "Crafting",
-        "LocationName": "Crafting - Daisy Chain",
+        "LocationName": "Crafting Chap 6 - Daisy Chain",
         "slotId": 1,
         "Requirement": [
             {
@@ -6949,7 +6949,7 @@
     {
         "Itemname": "BADGE_BounceTeviStrongAirUp",
         "Location": "Crafting",
-        "LocationName": "Crafting - Spanner Bash: Bounce",
+        "LocationName": "Crafting Chap 6 - Spanner Bash: Bounce",
         "slotId": 1,
         "Requirement": [
             {
@@ -6961,7 +6961,7 @@
     {
         "Itemname": "BADGE_SuperFrameCancel",
         "Location": "Crafting",
-        "LocationName": "Crafting - Full Stop B",
+        "LocationName": "Crafting Chap 6 - Full Stop B",
         "slotId": 1,
         "Requirement": [
             {
@@ -6973,7 +6973,7 @@
     {
         "Itemname": "BADGE_ArmorCritCrit",
         "Location": "Crafting",
-        "LocationName": "Crafting - Armor Piercer",
+        "LocationName": "Crafting Chap 6 - Armor Piercer",
         "slotId": 1,
         "Requirement": [
             {
@@ -6985,7 +6985,7 @@
     {
         "Itemname": "BADGE_Amulet10",
         "Location": "Crafting",
-        "LocationName": "Crafting - Supernova",
+        "LocationName": "Crafting Chap 6 - Supernova",
         "slotId": 1,
         "Requirement": [
             {
@@ -6997,7 +6997,7 @@
     {
         "Itemname": "BADGE_MAXMPCost",
         "Location": "Crafting",
-        "LocationName": "Crafting - EP Booster: MP",
+        "LocationName": "Crafting Chap 7 - EP Booster: MP",
         "slotId": 1,
         "Requirement": [
             {
@@ -7009,7 +7009,7 @@
     {
         "Itemname": "BADGE_100COMBO",
         "Location": "Crafting",
-        "LocationName": "Crafting - The Untamed",
+        "LocationName": "Crafting Chap 7 - The Untamed",
         "slotId": 1,
         "Requirement": [
             {
@@ -7021,7 +7021,7 @@
     {
         "Itemname": "BADGE_DominantEffectDownB",
         "Location": "Crafting",
-        "LocationName": "Crafting - Weak Dominance B",
+        "LocationName": "Crafting Chap 7 - Weak Dominance B",
         "slotId": 1,
         "Requirement": [
             {
@@ -7033,7 +7033,7 @@
     {
         "Itemname": "BADGE_RangeBreak",
         "Location": "Crafting",
-        "LocationName": "Crafting - Range Break",
+        "LocationName": "Crafting Chap 7 - Range Break",
         "slotId": 1,
         "Requirement": [
             {
