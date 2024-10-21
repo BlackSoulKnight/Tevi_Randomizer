@@ -588,7 +588,7 @@
                 },
                 {
                     "Exit": "Desert Base Upper Half",
-                    "Method": "ITEM_DOUBLEJUMP && ITEM_WALLJUMP2"
+                    "Method": "ITEM_DOUBLEJUMP && ITEM_WALLJUMP 2"
                 }
             ]
         },
@@ -653,7 +653,7 @@
                     "Amount": 2000
                 },
                 {
-                    "Method": "ITEM_SLIDE || ITEM_WALLJUMP3",
+                    "Method": "ITEM_SLIDE || ITEM_WALLJUMP 3",
                     "Amount": 1500
                 }
             ],
@@ -696,7 +696,7 @@
                     "Amount": 2000
                 },
                 {
-                    "Method": "ITEM_SLIDE || ITEM_WALLJUMP3",
+                    "Method": "ITEM_SLIDE || ITEM_WALLJUMP 3",
                     "Amount": 1500
                 }
             ],
@@ -1154,7 +1154,7 @@
                     "Amount": 2500
                 },
                 {
-                    "Method": "((ITEM_JETPACK3 || (ITEM_JETPACK&& ITEM_AirDash)) && ITEM_WALLJUMP && ITEM_DOUBLEJUMP)",
+                    "Method": "((ITEM_JETPACK 3 || (ITEM_JETPACK&& ITEM_AirDash)) && ITEM_WALLJUMP && ITEM_DOUBLEJUMP)",
                     "Amount": 2500
                 }
             ],
@@ -1198,7 +1198,7 @@
                     "Amount": 2500
                 },
                 {
-                    "Method": "((ITEM_JETPACK3 || (ITEM_JETPACK&& ITEM_AirDash)) && ITEM_WALLJUMP && ITEM_DOUBLEJUMP)",
+                    "Method": "((ITEM_JETPACK 3 || (ITEM_JETPACK&& ITEM_AirDash)) && ITEM_WALLJUMP && ITEM_DOUBLEJUMP)",
                     "Amount": 2500
                 }
             ],
@@ -1580,11 +1580,11 @@
             "Connections": [
                 {
                     "Exit": "Snowveil",
-                    "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK2 && ITEM_HIJUMP && WindSkip"
+                    "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK 2 && ITEM_HIJUMP && WindSkip"
                 },
                 {
                     "Exit": "Snowveil",
-                    "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK3 && WindSkip"
+                    "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK 3 && WindSkip"
                 },
                 {
                     "Exit": "Snowveil",
@@ -1647,7 +1647,7 @@
                 },
                 {
                     "Exit": "Snowveil above Verglas Village",
-                    "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB"
+                    "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB"
                 }
             ]
         },
@@ -1778,7 +1778,7 @@
                     "Amount": 2500
                 },
                 {
-                    "Method": "(ITEM_WALLJUMP2 && (ITEM_DOUBLEJUMP || ITEM_JETPACK)) || ITEM_WALLJUMP3",
+                    "Method": "(ITEM_WALLJUMP 2 && (ITEM_DOUBLEJUMP || ITEM_JETPACK)) || ITEM_WALLJUMP 3",
                     "Amount": 3000
                 },
                 {
@@ -1801,7 +1801,7 @@
                 },
                 {
                     "Exit": "Forgotten City Upper Exit",
-                    "Method": "ITEM_WATERMOVEMENT && ITEM_OrbTypeS3 && I20 && ChargeShot && ITEM_ORB3"
+                    "Method": "ITEM_WATERMOVEMENT && ITEM_OrbTypeS3 && I20 && ChargeShot && ITEM_ORB 3"
                 }
             ]
         },
@@ -1809,7 +1809,7 @@
             "Name": "Verdazure Swamp",
             "Money": [
                 {
-                    "Method": "ITEM_JETPACK3 || ITEM_AirDash &&(ITEM_JETPACK || ITEM_DOUBLEJUMP) || ITEM_JETPACK && ITEM_DOUBLEJUMP",
+                    "Method": "ITEM_JETPACK 3 || ITEM_AirDash &&(ITEM_JETPACK || ITEM_DOUBLEJUMP) || ITEM_JETPACK && ITEM_DOUBLEJUMP",
                     "Amount": 1500
                 },
                 {
@@ -1832,7 +1832,7 @@
             "Name": "Verdazure Swamp Lab Exit",
             "Money": [
                 {
-                    "Method": "ITEM_JETPACK3 || ITEM_AirDash &&(ITEM_JETPACK || ITEM_DOUBLEJUMP) || ITEM_JETPACK && ITEM_DOUBLEJUMP",
+                    "Method": "ITEM_JETPACK 3 || ITEM_AirDash &&(ITEM_JETPACK || ITEM_DOUBLEJUMP) || ITEM_JETPACK && ITEM_DOUBLEJUMP",
                     "Amount": 1500
                 },
                 {
@@ -1913,15 +1913,15 @@
                     "Exit": "Forgotten City Upper Exit"
                 },
                 {
-                    "Method": "ITEM_DOUBLEJUMP && ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
+                    "Method": "ITEM_DOUBLEJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
                     "Exit": "Forgotten City Upper Exit"
                 },
                 {
-                    "Method": "ITEM_WALLJUMP && ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
+                    "Method": "ITEM_WALLJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
                     "Exit": "Forgotten City Upper Exit"
                 },
                 {
-                    "Method": "ITEM_HIJUMP && ITEM_JETPACK3 && ITEM_KNIFE && ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
+                    "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
                     "Exit": "Forgotten City Upper Exit"
                 }
             ]
@@ -1936,7 +1936,7 @@
                     "Amount": 2000
                 },
                 {
-                    "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
+                    "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
                     "Amount": 1500
                 }
             ],
@@ -1963,7 +1963,7 @@
                     "Amount": 2000
                 },
                 {
-                    "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
+                    "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
                     "Amount": 1500
                 }
             ],
@@ -2329,7 +2329,7 @@
             "Money": [],
             "Connections": [
                 {
-                    "Method": " (HiddenP || ITEM_LINEBOMB) && (ITEM_JETPACK2 || (ITEM_JETPACK && (ITEM_DOUBLEJUMP || ITEM_AirDash)) || (ITEM_AirDash && ITEM_DOUBLEJUMP))",
+                    "Method": " (HiddenP || ITEM_LINEBOMB) && (ITEM_JETPACK 2 || (ITEM_JETPACK && (ITEM_DOUBLEJUMP || ITEM_AirDash)) || (ITEM_AirDash && ITEM_DOUBLEJUMP))",
                     "Exit": "Swamp"
                 },
                 {
@@ -2360,7 +2360,7 @@
                     "Amount": 1000
                 },
                 {
-                    "Method": "ITEM_LINEBOMB && ITEM_AREABOMB || ITEM_BombLengthExtend3",
+                    "Method": "ITEM_LINEBOMB && ITEM_AREABOMB || ITEM_BombLengthExtend 3",
                     "Amount": 1500
                 },
                 {
@@ -2379,7 +2379,7 @@
                 },
                 {
                     "Exit": "DreamKeeper",
-                    "Method": "ITEM_Rotater && (ChargeShot || ITEM_SLIDE) && ITEM_LINEBOMB && ITEM_SLIDE && (EVENT_SnowMechanic2 || EarlyDream)"
+                    "Method": "ITEM_Rotater && (ChargeShot || ITEM_SLIDE) && ITEM_LINEBOMB && ITEM_SLIDE && (EVENT_SnowMechanic 2 || EarlyDream)"
                 },
                 {
                     "Exit": "16-18",
@@ -2395,14 +2395,14 @@
                     "Amount": 1500
                 },
                 {
-                    "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
+                    "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
                     "Amount": 1500
                 }
             ],
             "Connections": [
                 {
                     "Exit": "DreamKeeper",
-                    "Method": "ITEM_Rotater && (ChargeShot || ITEM_SLIDE) && ITEM_SLIDE && (EVENT_SnowMechanic2 || EarlyDream)"
+                    "Method": "ITEM_Rotater && (ChargeShot || ITEM_SLIDE) && ITEM_SLIDE && (EVENT_SnowMechanic 2 || EarlyDream)"
                 },
                 {
                     "Exit": "18-19",
@@ -2559,7 +2559,7 @@
                     "Amount": 3000
                 },
                 {
-                    "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
+                    "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
                     "Amount": 2000
                 }
             ],
@@ -2902,7 +2902,7 @@
                 },
                 {
                     "Exit": "Catacombs Inner",
-                    "Method": "ITEM_JETPACK2 && ITEM_LINEBOMB && ITEM_SLIDE"
+                    "Method": "ITEM_JETPACK 2 && ITEM_LINEBOMB && ITEM_SLIDE"
                 },
                 {
                     "Exit": "Catacombs Inner",
@@ -3049,7 +3049,7 @@
                 },
                 {
                     "Exit": "Lab - Verdazure Swamp Connection",
-                    "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB"
+                    "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB"
                 }
             ]
         },
@@ -3064,7 +3064,7 @@
             "Connections": [
                 {
                     "Exit": "Lab",
-                    "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB"
+                    "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "14-25",
@@ -3082,7 +3082,7 @@
                     "Amount": 6000
                 },
                 {
-                    "Method": "ITEM_JETPACK2 || ITEM_DOUBLEJUMP || (ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash)",
+                    "Method": "ITEM_JETPACK 2 || ITEM_DOUBLEJUMP || (ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash)",
                     "Amount": 1000
                 },
                 {
@@ -3189,7 +3189,7 @@
             "Connections": [
                 {
                     "Exit": "Gallery of Souls Boss Area",
-                    "Method": "ITEM_JETPACK2 && ChargeShot"
+                    "Method": "ITEM_JETPACK 2 && ChargeShot"
                 },
                 {
                     "Exit": "Gallery of Souls Boss Area",
@@ -3224,7 +3224,7 @@
                 },
                 {
                     "Exit": "Gallery of Souls",
-                    "Method": "ITEM_JETPACK2 && ITEM_LINEBOMB && BarrierSkip"
+                    "Method": "ITEM_JETPACK 2 && ITEM_LINEBOMB && BarrierSkip"
                 },
                 {
                     "Exit": "Gallery of Souls",
@@ -3376,7 +3376,7 @@
                     "Amount": 1500
                 },
                 {
-                    "Method": "ITEM_JETPACK3 || ITEM_DOUBLEJUMP && (ITEM_JETPACK || ITEM_AirDash)",
+                    "Method": "ITEM_JETPACK 3 || ITEM_DOUBLEJUMP && (ITEM_JETPACK || ITEM_AirDash)",
                     "Amount": 1500
                 }
             ],
@@ -3391,11 +3391,11 @@
                 },
                 {
                     "Exit": "EverGarden Boss Area",
-                    "Method": "ITEM_JETPACK3"
+                    "Method": "ITEM_JETPACK 3"
                 },
                 {
                     "Exit": "EverGarden Boss Area",
-                    "Method": "ITEM_JETPACK2"
+                    "Method": "ITEM_JETPACK 2"
                 },
                 {
                     "Exit": "EverGarden",
