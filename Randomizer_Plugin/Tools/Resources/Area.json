@@ -9,7 +9,7 @@
                     "Method":""
                 },
                 {
-                    "Exit":"Thanatara Canyon",
+                    "Exit":"Thanatara Canyon Lower",
                     "Method":""
                 }
             ]
@@ -18,24 +18,25 @@
             "Name":"01-02",
             "Connections":[
                 {
-                    "Exit":"Oasis",
+                    "Exit":"Thanatara Canyon",
                     "Method":""
                 },
                 {
-                    "Exit":"Thanatara Canyon",
+                    "Exit":"Oasis",
                     "Method":""
                 }
+
             ]
         },
         {
             "Name":"01-05",
             "Connections":[
                 {
-                    "Exit":"Travoll Mines West Exit",
+                    "Exit":"Thanatara Canyon Lower",
                     "Method":""
                 },
                 {
-                    "Exit":"Thanatara Canyon Lower",
+                    "Exit":"Travoll Mines West Exit",
                     "Method":""
                 }
             ]
@@ -44,11 +45,11 @@
             "Name":"01-03",
             "Connections":[
                 {
-                    "Exit":"Morose City",
+                    "Exit":"Gurun Desert",
                     "Method":""
                 },
                 {
-                    "Exit":"Gurun Desert",
+                    "Exit":"Morose City",
                     "Method":""
                 }
             ]
@@ -57,11 +58,11 @@
             "Name":"01-22",
             "Connections":[
                 {
-                    "Exit":"Solennian Ruins Entrance",
+                    "Exit":"Thanatara Canyon Lower",
                     "Method":""
                 },
                 {
-                    "Exit":"Thanatara Canyon Lower",
+                    "Exit":"Solennian Ruins Entrance",
                     "Method":""
                 }
             ]
@@ -70,11 +71,11 @@
             "Name":"01-21",
             "Connections":[
                 {
-                    "Exit":"Heavens Valley West",
+                    "Exit":"Thanatara Canyon - Heavens Valley West",
                     "Method":""
                 },
                 {
-                    "Exit":"Thanatara Canyon",
+                    "Exit":"Heavens Valley West",
                     "Method":""
                 }
             ]
@@ -122,11 +123,11 @@
             "Name":"04-05",
             "Connections":[
                 {
-                    "Exit":"Travoll Mines Forest Exit",
+                    "Exit":"Forest",
                     "Method":""
                 },
                 {
-                    "Exit":"Forest",
+                    "Exit":"Travoll Mines Forest Exit",
                     "Method":""
                 }
             ]
@@ -135,11 +136,11 @@
             "Name":"04-07",
             "Connections":[
                 {
-                    "Exit":"CopperWood",
+                    "Exit":"Forest",
                     "Method":""
                 },
                 {
-                    "Exit":"Forest",
+                    "Exit":"CopperWood",
                     "Method":""
                 }
             ]
@@ -148,11 +149,11 @@
             "Name":"04-09",
             "Connections":[
                 {
-                    "Exit":"Gleamwood Forest Exit",
+                    "Exit":"Forest",
                     "Method":""
                 },
                 {
-                    "Exit":"Forest",
+                    "Exit":"Gleamwood Forest Exit",
                     "Method":""
                 }
             ]
@@ -161,11 +162,11 @@
             "Name":"04-13",
             "Connections":[
                 {
-                    "Exit":"Verdazure Sea West Exit",
+                    "Exit":"Forest",
                     "Method":""
                 },
                 {
-                    "Exit":"Forest",
+                    "Exit":"Verdazure Sea West Exit",
                     "Method":""
                 }
             ]
@@ -174,24 +175,25 @@
             "Name":"05-17M",
             "Connections":[
                 {
-                    "Exit":"Magma Pits Entrance",
+                    "Exit":"Travoll Mines Swamp Exit",
                     "Method":""
                 },
                 {
-                    "Exit":"Travoll Mines Swamp Exit",
+                    "Exit":"Magma Pits Entrance",
                     "Method":""
                 }
+
             ]
         },
         {
             "Name":"05-17S",
             "Connections":[
                 {
-                    "Exit":"Swamp Entrance",
+                    "Exit":"Travoll Mines Swamp Exit",
                     "Method":""
                 },
                 {
-                    "Exit":"Travoll Mines Swamp Exit",
+                    "Exit":"Swamp Entrance",
                     "Method":""
                 }
             ]
@@ -213,11 +215,11 @@
             "Name":"06-21",
             "Connections":[
                 {
-                    "Exit":"Heavens Valley West",
+                    "Exit":"Travoll Industrie",
                     "Method":""
                 },
                 {
-                    "Exit":"Travoll Industrie",
+                    "Exit":"Heavens Valley West",
                     "Method":""
                 }
             ]
@@ -226,11 +228,11 @@
             "Name":"07-09",
             "Connections":[
                 {
-                    "Exit":"Gleamwood Copperwood Exit",
+                    "Exit":"CopperWood",
                     "Method":""
                 },
                 {
-                    "Exit":"CopperWood",
+                    "Exit":"Gleamwood Copperwood Exit",
                     "Method":""
                 }
             ]
@@ -356,7 +358,7 @@
             "Name":"12-16",
             "Connections":[
                 {
-                    "Exit":"Snowveil Entrance",
+                    "Exit":"Snowveil",
                     "Method":""
                 },
                 {
@@ -412,7 +414,7 @@
                     "Method":""
                 },
                 {
-                    "Exit":"Gallery of Souls",
+                    "Exit":"Gallery of Souls Sea Exit",
                     "Method":""
                 }
             ]
@@ -421,7 +423,7 @@
             "Name":"13-28",
             "Connections":[
                 {
-                    "Exit":"Verdazure Sea West",
+                    "Exit":"Verdazure Sea East",
                     "Method":""
                 },
                 {
@@ -903,6 +905,10 @@
                     "Method": ""
                 },
                 {
+                    "Exit": "04-05",
+                    "Method": ""
+                },
+                {
                     "Exit": "04-13",
                     "Method": ""
                 },
@@ -1107,6 +1113,10 @@
                 },
                 {
                     "Exit": "03-06",
+                    "Method": ""
+                },
+                {
+                    "Exit": "06-21",
                     "Method": ""
                 }
             ]
@@ -1364,6 +1374,10 @@
                 {
                     "Exit": "Gleamwood Middle",
                     "Method": "EnemyManip"
+                },
+                {
+                    "Exit": "08-09",
+                    "Method": ""
                 }
             ]
         },
@@ -1869,6 +1883,10 @@
                 {
                     "Exit": "Forgotten City",
                     "Method": "ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "13-14",
+                    "Method": ""
                 }
             ]
         },
