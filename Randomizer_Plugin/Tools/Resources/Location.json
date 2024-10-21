@@ -4307,14 +4307,14 @@
             }
         ]
     },
-    {
+    { 
         "Itemname": "ITEM_AirDash",
         "Location": "EverGarden",
         "LocationName": "EverGarden - Slipstream Boots",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -4394,59 +4394,59 @@
         "slotId": 16,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && (ITEM_DOUBLEJUMP || ITEM_JETPACK || (ITEM_AirDash && ITEM_WALLJUMP))",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "BADGE_ToArmorReducer",
-        "Location": "EverGarden",
-        "LocationName": "EverGarden - Whipcrack",
+        "Location": "EverGarden Path to Boss",
+        "LocationName": "EverGarden Path to Boss - Whipcrack",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_JETPACK",
+                "Method": "ITEM_JETPACK && ITEM_LINEBOMB",
                 "Difficulty": 3
             },
             {
-                "Method": "ITEM_AirDash",
+                "Method": "ITEM_AirDash && ITEM_LINEBOMB",
                 "Difficulty": 4
             },
             {
-                "Method": "ITEM_WALLJUMP && ITEM_DOUBLEJUMP",
+                "Method": "ITEM_WALLJUMP && ITEM_LINEBOMB && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "BADGE_DashFlashInv",
-        "Location": "EverGardenPortals",
-        "LocationName": "EverGardenPortals - Shooting Star",
+        "Location": "EverGarden Path to Boss",
+        "LocationName": "EverGarden Path to Boss - Shooting Star",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ChargeShot",
+                "Method": "ChargeShot && (ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || RabbitWalljump)",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "BADGE_ComboAntiFullHealth",
-        "Location": "EverGarden",
-        "LocationName": "EverGarden - Battlecry",
+        "Location": "EverGarden Path to Boss",
+        "LocationName": "EverGarden Path to Boss - Battlecry",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ChargeShot",
+                "Method": "ITEM_SLIDE && ChargeShot && (ITEM_JETPACK || ITEM_DOUBLEJUMP)",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "Heaven Portal Hub",
-        "LocationName": "Heaven Portal Hub - Astral Gear",
+        "Location": "EverGarden Boss Area",
+        "LocationName": "EverGarden Boss Area - Astral Gear",
         "slotId": 49,
         "Requirement": [
             {
@@ -4457,8 +4457,8 @@
     },
     {
         "Itemname": "BADGE_DebuffCounter",
-        "Location": "Heaven Portal Hub",
-        "LocationName": "Heaven Portal Hub - Debuff Counter",
+        "Location": "EverGarden Boss Area",
+        "LocationName": "EverGarden Boss Area - Debuff Counter",
         "slotId": 1,
         "Requirement": [
             {
@@ -4469,24 +4469,24 @@
     },
     {
         "Itemname": "BADGE_CrystalIncrease",
-        "Location": "Heaven Portal Hub",
+        "Location": "EverGarden Boss Area",
         "LocationName": "Heaven Portal Hub - Crystal Boon",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_WALLJUMP",
+                "Method": "ITEM_WALLJUMP && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Heaven Portal Hub",
-        "LocationName": "Heaven Portal Hub - Grape Bunny Potion",
+        "Location": "EverGarden Boss Area",
+        "LocationName": "EverGarden Boss Area - Grape Bunny Potion",
         "slotId": 20,
         "Requirement": [
             {

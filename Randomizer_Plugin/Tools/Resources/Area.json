@@ -509,14 +509,14 @@
             ]
         },
         {
-            "Name":"19-20",
+            "Name":"19-29",
             "Connections":[
                 {
                     "Exit":"Heavens Valley Snow Route Upper",
                     "Method":""
                 },
                 {
-                    "Exit":"d",
+                    "Exit":"EverGarden To Valley",
                     "Method":""
                 }
             ]
@@ -542,7 +542,7 @@
                     "Method":""
                 },
                 {
-                    "Exit":"EverGarden",
+                    "Exit":"EverGarden To Valhalla",
                     "Method":""
                 }
             ]
@@ -3298,38 +3298,76 @@
             ],
             "Connections": [
                 {
-                    "Exit": "EverGardenPortals",
+                    "Exit": "EverGarden Path to Boss",
                     "Method": "ITEM_DOUBLEJUMP"
                 },
                 {
-                    "Exit": "EverGardenPortals",
+                    "Exit": "EverGarden Path to Boss",
                     "Method": "ITEM_JETPACK && ITEM_AirDash"
                 },
                 {
-                    "Exit": "EverGardenPortals",
+                    "Exit": "EverGarden Path to Boss",
                     "Method": "ITEM_JETPACK3"
                 },
                 {
-                    "Exit": "EverGardenPortals",
+                    "Exit": "EverGarden Path to Boss",
                     "Method": "ITEM_JETPACK2"
                 },
                 {
-                    "Exit": "Heavens Valley Snow Route Upper",
+                    "Exit": "EverGarden To Valley",
                     "Method": "ITEM_JETPACK"
                 },
                 {
-                    "Exit": "Heavens Valley Snow Route Upper",
+                    "Exit": "EverGarden To Valley",
                     "Method": "ITEM_DOUBLEJUMP"
                 },
                 {
-                    "Exit": "Heavens Valley Snow Route Upper",
+                    "Exit": "EverGarden To Valley",
                     "Method": "ITEM_AirDash"
+                },
+                {
+                    "Exit": "EverGarden To Valley",
+                    "Method": "ITEM_AirDash"
+                },
+                {
+                    "Exit": "EverGarden To Valhalla",
+                    "Method": "ITEM_LINEBOMB && (HiddenP || ITEM_JETPACK || ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_SPEEDUP 3)"
                 }
 
             ]
         },
         {
-            "Name": "EverGardenPortals",
+            "Name": "EverGarden To Valley",
+            "Money": [
+            ],
+            "Connections": [
+                {
+                    "Exit": "EverGarden",
+                    "Method": "ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK"
+                },
+                {
+                    "Exit": "19-29",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "EverGarden To Valhalla",
+            "Money": [
+            ],
+            "Connections": [
+                {
+                    "Exit": "EverGarden",
+                    "Method": "ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "20-29",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "EverGarden Path to Boss",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -3342,19 +3380,19 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Heaven Portal Hub",
+                    "Exit": "EverGarden Boss Area",
                     "Method": "ITEM_DOUBLEJUMP && ITEM_AirDash"
                 },
                 {
-                    "Exit": "Heaven Portal Hub",
+                    "Exit": "EverGarden Boss Area",
                     "Method": "ITEM_JETPACK && ITEM_AirDash"
                 },
                 {
-                    "Exit": "Heaven Portal Hub",
+                    "Exit": "EverGarden Boss Area",
                     "Method": "ITEM_JETPACK3"
                 },
                 {
-                    "Exit": "Heaven Portal Hub",
+                    "Exit": "EverGarden Boss Area",
                     "Method": "ITEM_JETPACK2"
                 },
                 {
@@ -3364,7 +3402,7 @@
             ]
         },
         {
-            "Name": "Heaven Portal Hub",
+            "Name": "EverGarden Boss Area",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -3377,7 +3415,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "EverGardenPortals",
+                    "Exit": "EverGarden Path to Boss",
                     "Method": ""
                 },
                 {
