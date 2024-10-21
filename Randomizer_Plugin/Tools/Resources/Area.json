@@ -2730,7 +2730,7 @@
             "Connections": [
                 {
                     "Exit": "Sinner's Oath",
-                    "Method": "ChargeShot"
+                    "Method": "ChargeShot && ITEM_LINEBOMB && (HiddenP || (ITEM_SLIDE && ITEM_Rotater && (ITEM_AirDash || ITEM_JETPACK || ITEM_DOUBLEJUMP)))"
                 },
                 {
                     "Exit": "17-23",
@@ -2768,7 +2768,7 @@
             "Connections": [
                 {
                     "Exit": "Illusion Palace",
-                    "Method": "Goal"
+                    "Method": "Goal && (ChargeShot || HiddenP)"
                 }
             ]
         },
@@ -2781,10 +2781,6 @@
                 }
             ],
             "Connections": [
-                {
-                    "Exit": "",
-                    "Method": ""
-                }
             ]
         }
 
@@ -3307,27 +3303,15 @@
                 },
                 {
                     "Exit": "EverGarden Path to Boss",
-                    "Method": "ITEM_JETPACK3"
+                    "Method": "ITEM_JETPACK 3"
                 },
                 {
                     "Exit": "EverGarden Path to Boss",
-                    "Method": "ITEM_JETPACK2"
+                    "Method": "ITEM_JETPACK 2"
                 },
                 {
                     "Exit": "EverGarden To Valley",
-                    "Method": "ITEM_JETPACK"
-                },
-                {
-                    "Exit": "EverGarden To Valley",
-                    "Method": "ITEM_DOUBLEJUMP"
-                },
-                {
-                    "Exit": "EverGarden To Valley",
-                    "Method": "ITEM_AirDash"
-                },
-                {
-                    "Exit": "EverGarden To Valley",
-                    "Method": "ITEM_AirDash"
+                    "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash"
                 },
                 {
                     "Exit": "EverGarden To Valhalla",

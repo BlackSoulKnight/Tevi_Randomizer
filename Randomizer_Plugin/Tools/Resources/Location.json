@@ -6168,7 +6168,7 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Sinner's Oath",
+        "Location": "Illusion Palace Entrance",
         "LocationName": "Sinner's Oath - Kiwi Bunny Potion",
         "slotId": 29,
         "Requirement": [
@@ -6180,12 +6180,12 @@
     },
     {
         "Itemname": "ITEM_RapidShots",
-        "Location": "Sinner's Oath",
+        "Location": "Sinner's Oath Entrance",
         "LocationName": "Sinner's Oath - Rapid Shots Modchip",
         "slotId": 29,
         "Requirement": [
             {
-                "Method": "ITEM_AirSlide && ITEM_SLIDE",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -6204,7 +6204,7 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Sinner's Oath",
+        "Location": "Sinner's Oath Entrance",
         "LocationName": "Sinners Hell - Grape Bunny Potion",
         "slotId": 29,
         "Requirement": [
@@ -6229,15 +6229,15 @@
         "slotId": 29,
         "Requirement": [
             {
-                "Method": "ITEM_DOUBLEJUMP",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_SLIDE",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_JETPACK",
+                "Method": "ITEM_JETPACK && ITEM_SLIDE",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_AirDash",
+                "Method": "ITEM_AirDash && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -6249,11 +6249,11 @@
         "slotId": 29,
         "Requirement": [
             {
-                "Method": "ITEM_JETPACK && ITEM_WALLJUMP && ITEM_DOUBLEJUMP && ITEM_Rotater",
+                "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP && ITEM_Rotater",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_JETPACK && ITEM_WALLJUMP && ITEM_DOUBLEJUMP && ITEM_LINEBOMB",
+                "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
