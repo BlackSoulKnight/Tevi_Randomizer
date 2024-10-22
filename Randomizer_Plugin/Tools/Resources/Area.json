@@ -1,8 +1,8 @@
 {
-
+    "TransitionNote":"MapID+EntranceID",
     "Transitions":[
         {
-            "Name":"00-01",
+            "Name":"0000-0100",
             "Connections":[
                 {
                     "Exit":"Desert Base Entrance",
@@ -15,7 +15,7 @@
             ]
         },
         {
-            "Name":"01-02",
+            "Name":"0101-0201",
             "Connections":[
                 {
                     "Exit":"Thanatara Canyon",
@@ -29,20 +29,7 @@
             ]
         },
         {
-            "Name":"01-05",
-            "Connections":[
-                {
-                    "Exit":"Thanatara Canyon Lower",
-                    "Method":""
-                },
-                {
-                    "Exit":"Travoll Mines West Exit",
-                    "Method":""
-                }
-            ]
-        },
-        {
-            "Name":"01-03",
+            "Name":"0102-0302",
             "Connections":[
                 {
                     "Exit":"Gurun Desert",
@@ -55,20 +42,20 @@
             ]
         },
         {
-            "Name":"01-22",
+            "Name":"0107-0507",
             "Connections":[
                 {
                     "Exit":"Thanatara Canyon Lower",
                     "Method":""
                 },
                 {
-                    "Exit":"Solennian Ruins Entrance",
+                    "Exit":"Travoll Mines West Exit",
                     "Method":""
                 }
             ]
         },
         {
-            "Name":"01-21",
+            "Name":"0105-2105",
             "Connections":[
                 {
                     "Exit":"Thanatara Canyon - Heavens Valley West",
@@ -81,7 +68,20 @@
             ]
         },
         {
-            "Name":"03-06",
+            "Name":"0106-2206",
+            "Connections":[
+                {
+                    "Exit":"Thanatara Canyon Lower",
+                    "Method":""
+                },
+                {
+                    "Exit":"Solennian Ruins Entrance",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"0303-0603",
             "Connections":[
                 {
                     "Exit":"Morose City",
@@ -94,7 +94,7 @@
             ]
         },
         {
-            "Name":"03-05",
+            "Name":"0301-0501",
             "Connections":[
                 {
                     "Exit":"Morose City",
@@ -107,7 +107,7 @@
             ]
         },
         {
-            "Name":"03-04",
+            "Name":"0300-0400",
             "Connections":[
                 {
                     "Exit":"Morose City",
@@ -120,7 +120,7 @@
             ]
         },
         {
-            "Name":"04-05",
+            "Name":"0409-0509",
             "Connections":[
                 {
                     "Exit":"Forest",
@@ -133,7 +133,7 @@
             ]
         },
         {
-            "Name":"04-07",
+            "Name":"0401-0701",
             "Connections":[
                 {
                     "Exit":"Forest",
@@ -146,7 +146,7 @@
             ]
         },
         {
-            "Name":"04-09",
+            "Name":"0408-0908",
             "Connections":[
                 {
                     "Exit":"Forest",
@@ -159,7 +159,7 @@
             ]
         },
         {
-            "Name":"04-13",
+            "Name":"0404-1304",
             "Connections":[
                 {
                     "Exit":"Forest",
@@ -172,21 +172,7 @@
             ]
         },
         {
-            "Name":"05-17M",
-            "Connections":[
-                {
-                    "Exit":"Travoll Mines Swamp Exit",
-                    "Method":""
-                },
-                {
-                    "Exit":"Magma Pits Entrance",
-                    "Method":""
-                }
-
-            ]
-        },
-        {
-            "Name":"05-17S",
+            "Name":"0503-1703",
             "Connections":[
                 {
                     "Exit":"Travoll Mines Swamp Exit",
@@ -196,10 +182,24 @@
                     "Exit":"Swamp Entrance",
                     "Method":""
                 }
+
             ]
         },
         {
-            "Name":"06-07",
+            "Name":"0500-1700",
+            "Connections":[
+                {
+                    "Exit":"Travoll Mines Swamp Exit",
+                    "Method":""
+                },
+                {
+                    "Exit":"Magma Pits Entrance",
+                    "Method":""
+                }
+            ]
+        },
+        {
+            "Name":"0605-0705",
             "Connections":[
                 {
                     "Exit":"Travoll Industrie East Exit",
@@ -212,7 +212,7 @@
             ]
         },
         {
-            "Name":"06-21",
+            "Name":"0600-2100",
             "Connections":[
                 {
                     "Exit":"Travoll Industrie",
@@ -225,7 +225,7 @@
             ]
         },
         {
-            "Name":"07-09",
+            "Name":"0700-0900",
             "Connections":[
                 {
                     "Exit":"CopperWood",
@@ -238,7 +238,7 @@
             ]
         },
         {
-            "Name":"07-24",
+            "Name":"0704-2404",
             "Connections":[
                 {
                     "Exit":"CopperWood",
@@ -251,7 +251,7 @@
             ]
         },
         {
-            "Name":"08-09",
+            "Name":"0805-0905",
             "Connections":[
                 {
                     "Exit":"Ana Thema",
@@ -264,7 +264,7 @@
             ]
         },
         {
-            "Name":"08-27",
+            "Name":"0806-2706",
             "Connections":[
                 {
                     "Exit":"Ana Thema Gallery Exit",
@@ -277,7 +277,7 @@
             ]
         },
         {
-            "Name":"09-10En",
+            "Name":"0901-1001",
             "Connections":[
                 {
                     "Exit":"Ulskan Village Area",
@@ -290,7 +290,7 @@
             ]
         },
         {
-            "Name":"09-10Ex",
+            "Name":"0904-1004",
             "Connections":[
                 {
                     "Exit":"Ulskan Plague Exit",
@@ -303,7 +303,7 @@
             ]
         },
         {
-            "Name":"09-11",
+            "Name":"0902-1102",
             "Connections":[
                 {
                     "Exit":"Gleamwood Ulvosa Exit",
@@ -316,7 +316,7 @@
             ]
         },
         {
-            "Name":"09-24",
+            "Name":"0906-2406",
             "Connections":[
                 {
                     "Exit":"Gleamwood Relicts Exit",
@@ -329,7 +329,7 @@
             ]
         },
         {
-            "Name":"09-28",
+            "Name":"0903-2803",
             "Connections":[
                 {
                     "Exit":"Gleamwood Blush Exit",
@@ -342,7 +342,7 @@
             ]
         },
         {
-            "Name":"12-14",
+            "Name":"1202-1402",
             "Connections":[
                 {
                     "Exit":"Snowveil Entrance",
@@ -355,7 +355,7 @@
             ]
         },
         {
-            "Name":"12-16",
+            "Name":"1204-1604",
             "Connections":[
                 {
                     "Exit":"Snowveil",
@@ -368,7 +368,7 @@
             ]
         },
         {
-            "Name":"12-18",
+            "Name":"1205-1805",
             "Connections":[
                 {
                     "Exit":"Snowveil above Verglas Village",
@@ -381,7 +381,7 @@
             ]
         },
         {
-            "Name":"13-14",
+            "Name":"1303-1403",
             "Connections":[
                 {
                     "Exit":"Verdazure Sea Forgotten Exit",
@@ -394,7 +394,7 @@
             ]
         },
         {
-            "Name":"13-14O",
+            "Name":"1300-1400",
             "Connections":[
                 {
                     "Exit":"Verdazure Sea East",
@@ -407,7 +407,7 @@
             ]
         },
         {
-            "Name":"13-27",
+            "Name":"1307-2707",
             "Connections":[
                 {
                     "Exit":"Verdazure Sea West",
@@ -420,7 +420,7 @@
             ]
         },
         {
-            "Name":"13-28",
+            "Name":"1301-2801",
             "Connections":[
                 {
                     "Exit":"Verdazure Sea East",
@@ -433,7 +433,7 @@
             ]
         },
         {
-            "Name":"14-25",
+            "Name":"1410-2510",
             "Connections":[
                 {
                     "Exit":"Verdazure Swamp Lab Exit",
@@ -446,7 +446,7 @@
             ]
         },
         {
-            "Name":"15-17",
+            "Name":"1502-1702",
             "Connections":[
                 {
                     "Exit":"Tartarus",
@@ -459,7 +459,7 @@
             ]
         },
         {
-            "Name":"15-25",
+            "Name":"1503-2503",
             "Connections":[
                 {
                     "Exit":"Tartarus Catacombs",
@@ -472,7 +472,7 @@
             ]
         },
         {
-            "Name":"16-18",
+            "Name":"1600-1800",
             "Connections":[
                 {
                     "Exit":"Snowveil Above HQ",
@@ -485,7 +485,7 @@
             ]
         },
         {
-            "Name":"17-23",
+            "Name":"1701-2301",
             "Connections":[
                 {
                     "Exit":"Magma Depths Sinner Exit",
@@ -498,7 +498,7 @@
             ]
         },
         {
-            "Name":"18-19",
+            "Name":"1801-1901",
             "Connections":[
                 {
                     "Exit":"DreamKeeper Outside Left",
@@ -511,7 +511,7 @@
             ]
         },
         {
-            "Name":"19-29",
+            "Name":"1900-2900",
             "Connections":[
                 {
                     "Exit":"Heavens Valley Snow Route Upper",
@@ -524,7 +524,7 @@
             ]
         },
         {
-            "Name":"20-21",
+            "Name":"2001-2101",
             "Connections":[
                 {
                     "Exit":"Valhalla City",
@@ -537,7 +537,7 @@
             ]
         },
         {
-            "Name":"20-29",
+            "Name":"2003-2903",
             "Connections":[
                 {
                     "Exit":"Valhalla City",
@@ -550,7 +550,7 @@
             ]
         },
         {
-            "Name":"20-26",
+            "Name":"2008-2608",
             "Connections":[
                 {
                     "Exit":"Valhalla City",
@@ -606,7 +606,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "00-01",
+                    "Exit": "0000-0100",
                     "Method": ""
                 },
                 {
@@ -659,7 +659,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "01-02",
+                    "Exit": "0101-0201",
                     "Method": "ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash"
                 },
                 {
@@ -702,11 +702,11 @@
             ],
             "Connections": [
                 {
-                    "Exit": "01-22",
+                    "Exit": "0106-2206",
                     "Method": ""
                 },
                 {
-                    "Exit": "01-05",
+                    "Exit": "0107-0507",
                     "Method": ""
                 },
                 {
@@ -714,7 +714,7 @@
                     "Method": "ITEM_LINEBOMB || OpenMorose"
                 },
                 {
-                    "Exit": "00-01",
+                    "Exit": "0000-0100",
                     "Method": ""
                 },
                 {
@@ -731,7 +731,7 @@
             }],
             "Connections": [
                 {
-                    "Exit": "01-21",
+                    "Exit": "0105-2105",
                     "Method": ""
                 },
                 {
@@ -798,7 +798,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "01-03",
+                    "Exit": "0102-0302",
                     "Method": ""
                 },
                 {
@@ -831,7 +831,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "01-02",
+                    "Exit": "0101-0201",
                     "Method": ""
                 }
             ]
@@ -852,19 +852,19 @@
             ],
             "Connections": [
                 {
-                    "Exit": "01-03",
+                    "Exit": "0102-0302",
                     "Method": ""
                 },
                 {
-                    "Exit": "03-06",
+                    "Exit": "0303-0603",
                     "Method": ""
                 },
                 {
-                    "Exit": "03-05",
+                    "Exit": "0301-0501",
                     "Method": ""
                 },
                 {
-                    "Exit": "03-04",
+                    "Exit": "0300-0400",
                     "Method": ""
                 },
                 {
@@ -897,23 +897,23 @@
             ],
             "Connections": [
                 {
-                    "Exit": "03-04",
+                    "Exit": "0300-0400",
                     "Method": ""
                 },
                 {
-                    "Exit": "04-07",
+                    "Exit": "0401-0701",
                     "Method": ""
                 },
                 {
-                    "Exit": "04-05",
+                    "Exit": "0409-0509",
                     "Method": ""
                 },
                 {
-                    "Exit": "04-13",
+                    "Exit": "0404-1304",
                     "Method": ""
                 },
                 {
-                    "Exit": "04-09",
+                    "Exit": "0408-0908",
                     "Method": ""
                 },
                 {
@@ -988,7 +988,7 @@
             "Money":[],
             "Connections":[
                 { 
-                    "Exit":"03-05",
+                    "Exit":"0301-0501",
                     "Method":""
                 },
                 {   
@@ -1002,7 +1002,7 @@
             "Money":[],
             "Connections":[
                 { 
-                    "Exit":"01-05",
+                    "Exit":"0107-0507",
                     "Method":""
                 },
                 {   
@@ -1033,7 +1033,7 @@
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "05-17M",
+                    "Exit": "0503-1703",
                     "Method": ""
                 },
                 {
@@ -1060,7 +1060,7 @@
                     "Method": "ITEM_LINEBOMB && (ITEM_KNIFE || EVENT_FreeStrongAttack)"
                 },
                 {
-                    "Exit": "04-05",
+                    "Exit": "0409-0509",
                     "Method": ""
                 }
             ]
@@ -1083,7 +1083,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "05-17S",
+                    "Exit": "0500-1700",
                     "Method": ""
                 }
             ]
@@ -1112,11 +1112,11 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "03-06",
+                    "Exit": "0303-0603",
                     "Method": ""
                 },
                 {
-                    "Exit": "06-21",
+                    "Exit": "0600-2100",
                     "Method": ""
                 }
             ]
@@ -1135,7 +1135,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "06-07",
+                    "Exit": "0605-0705",
                     "Method": ""
                 },
                 {
@@ -1169,7 +1169,7 @@
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "06-07",
+                    "Exit": "0605-0705",
                     "Method": ""
                 }
             ]
@@ -1204,7 +1204,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "04-07",
+                    "Exit": "0401-0701",
                     "Method": ""
                 },
                 {
@@ -1212,11 +1212,11 @@
                     "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK"
                 },
                 {
-                    "Exit": "07-24",
+                    "Exit": "0704-2404",
                     "Method": ""
                 },
                 {
-                    "Exit":"07-09",
+                    "Exit":"0700-0900",
                     "Method":"ITEM_LINEBOMB"
                 }
             ]
@@ -1241,7 +1241,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "08-09",
+                    "Exit": "0805-0905",
                     "Method": ""
                 },
                 {
@@ -1268,7 +1268,7 @@
                     "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "08-27",
+                    "Exit": "0806-2706",
                     "Method": ""
                 }
             ]
@@ -1295,7 +1295,7 @@
             "Money":[],
             "Connections":[
                 {
-                    "Exit":"04-09",
+                    "Exit":"0408-0908",
                     "Method":""
                 },
                 {
@@ -1309,7 +1309,7 @@
             "Money":[],
             "Connections":[
                 {
-                    "Exit":"07-09",
+                    "Exit":"0700-0900",
                     "Method":""
                 },
                 {
@@ -1323,7 +1323,7 @@
             "Money":[],
             "Connections":[
                 {
-                    "Exit":"09-24",
+                    "Exit":"0906-2406",
                     "Method":""
                 },
                 {
@@ -1337,7 +1337,7 @@
             "Money":[],
             "Connections":[
                 {
-                    "Exit":"09-28",
+                    "Exit":"0903-2803",
                     "Method":""
                 },
                 {
@@ -1376,7 +1376,7 @@
                     "Method": "EnemyManip"
                 },
                 {
-                    "Exit": "08-09",
+                    "Exit": "0805-0905",
                     "Method": ""
                 }
             ]
@@ -1434,7 +1434,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "09-11",
+                    "Exit": "0902-1102",
                     "Method": ""
                 }
             ]
@@ -1477,7 +1477,7 @@
                     "Method": "ITEM_KNIFE || VenaBomb || ITEM_ORB"
                 },
                 {
-                    "Exit": "09-10En",
+                    "Exit": "0901-1001",
                     "Method": ""
                 }
             ]
@@ -1489,7 +1489,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "09-10Ex",
+                    "Exit": "0904-1004",
                     "Method": ""
                 },
                 {
@@ -1510,7 +1510,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "09-10En",
+                    "Exit": "0901-1001",
                     "Method": ""
                 },
                 {
@@ -1529,7 +1529,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "09-10Ex",
+                    "Exit": "0904-1004",
                     "Method": ""
                 }
             ]
@@ -1546,7 +1546,7 @@
                     "Method": "ITEM_LINEBOMB && ChargeShot && (HiddenP || ITEM_SLIDE)"
                 },
                 {
-                    "Exit": "09-11",
+                    "Exit": "0902-1102",
                     "Method": ""
                 }
             ]
@@ -1591,7 +1591,7 @@
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "12-14",
+                    "Exit": "1202-1402",
                     "Method": ""
                 }
                 
@@ -1607,7 +1607,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "12-16",
+                    "Exit": "1204-1604",
                     "Method": ""
                 },
                 {
@@ -1665,7 +1665,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "12-18",
+                    "Exit": "1205-1805",
                     "Method": ""
                 },
                 {
@@ -1707,7 +1707,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "13-27",
+                    "Exit": "1307-2707",
                     "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK || ADCKick"
                 }
             ]
@@ -1718,7 +1718,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "13-28",
+                    "Exit": "1301-2801",
                     "Method": ""
                 },
                 {
@@ -1726,7 +1726,7 @@
                     "Method": "ITEM_WATERMOVEMENT"
                 },
                 {
-                    "Exit": "13-14O",
+                    "Exit": "1300-1400",
                     "Method": "ITEM_SLIDE && ChargeShot"
                 }
             ]
@@ -1737,7 +1737,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "04-13",
+                    "Exit": "0404-1304",
                     "Method": ""
                 },
                 {
@@ -1752,7 +1752,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "13-14",
+                    "Exit": "1303-1403",
                     "Method": ""
                 }
             ]
@@ -1769,7 +1769,7 @@
                     "Method": "ITEM_SLIDE"
                 },
                 {
-                    "Exit": "13-14O",
+                    "Exit": "1300-1400",
                     "Method": ""
                 }
             ]
@@ -1796,7 +1796,7 @@
                     "Method": "ITEM_SLIDE"
                 },
                 {
-                    "Exit": "12-14",
+                    "Exit": "1202-1402",
                     "Method": ""
                 },
                 {
@@ -1850,7 +1850,7 @@
                     "Method": "ITEM_SLIDE"
                 },
                 {
-                    "Exit": "14-25",
+                    "Exit": "1410-2510",
                     "Method": ""
                 }
             ]
@@ -1889,7 +1889,7 @@
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "13-14",
+                    "Exit": "1303-1403",
                     "Method": ""
                 }
             ]
@@ -1950,7 +1950,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "15-17",
+                    "Exit": "1502-1702",
                     "Method": ""
                 },
                 {
@@ -1977,7 +1977,7 @@
                     "Method": "ITEM_SLIDE || ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "15-25",
+                    "Exit": "1503-2503",
                     "Method": ""
                 }
             ]
@@ -1994,7 +1994,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "12-16",
+                    "Exit": "1204-1604",
                     "Method": ""
                 },
                 {
@@ -2033,7 +2033,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "16-18",
+                    "Exit": "1600-1800",
                     "Method": "ITEM_DOUBLEJUMP || ITEM_WALLJUMP || ITEM_JETPACK"
                 },
                 {
@@ -2127,7 +2127,7 @@
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "05-17M",
+                    "Exit": "0503-1703",
                     "Method": "ITEM_LINEBOMB"
                 }
 
@@ -2237,7 +2237,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "17-23",
+                    "Exit": "1701-2301",
                     "Method": ""
                 }
             ]
@@ -2260,7 +2260,7 @@
                     "Method": "ITEM_SLIDE"
                 },
                 {
-                    "Exit": "05-17S",
+                    "Exit": "0500-1700",
                     "Method": ""
                 }
             ]
@@ -2349,7 +2349,7 @@
                     "Exit": "Swamp"
                 },
                 {
-                    "Exit": "15-17",
+                    "Exit": "1502-1702",
                     "Method": ""
                 }
             ]
@@ -2386,7 +2386,7 @@
                     "Method": "ITEM_Rotater && (ChargeShot || ITEM_SLIDE) && ITEM_LINEBOMB && ITEM_SLIDE && (EVENT_SnowMechanic 2 || EarlyDream)"
                 },
                 {
-                    "Exit": "16-18",
+                    "Exit": "1600-1800",
                     "Method": ""
                 }
             ]
@@ -2409,7 +2409,7 @@
                     "Method": "ITEM_Rotater && (ChargeShot || ITEM_SLIDE) && ITEM_SLIDE && (EVENT_SnowMechanic 2 || EarlyDream)"
                 },
                 {
-                    "Exit": "18-19",
+                    "Exit": "1801-1901",
                     "Method": ""
                 },
                 {
@@ -2424,7 +2424,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "12-18",
+                    "Exit": "1205-1805",
                     "Method": ""
                 },
                 {
@@ -2523,7 +2523,7 @@
                     "Method": "ITEM_SLIDE &&  ITEM_Rotater"
                 },
                 {
-                    "Exit": "18-19",
+                    "Exit": "1801-1901",
                     "Method": ""
                 }
             ]
@@ -2573,7 +2573,7 @@
                     "Method": "ITEM_SLIDE"
                 },
                 {
-                    "Exit": "19-29",
+                    "Exit": "1900-2900",
                     "Method": ""
                 }
             ]
@@ -2590,15 +2590,15 @@
             ],
             "Connections": [
                 {
-                    "Exit": "20-26",
+                    "Exit": "2008-2608",
                     "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "20-29",
+                    "Exit": "2003-2903",
                     "Method": ""
                 },
                 {
-                    "Exit": "20-21",
+                    "Exit": "2001-2101",
                     "Method": ""
                 },
                 {
@@ -2623,7 +2623,7 @@
                     "Method":"ITEM_LINEBOMB && (CKick || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash)"
                 },
                 {
-                    "Exit": "20-21",
+                    "Exit": "2001-2101",
                     "Method": ""
                 },
                 {
@@ -2670,11 +2670,11 @@
                     "Method": "ChargeShot && (ITEM_AREABOMB || HiddenP)"
                 },
                 {
-                    "Exit": "01-21",
+                    "Exit": "0105-2105",
                     "Method": ""
                 },
                 {
-                    "Exit": "06-21",
+                    "Exit": "0600-2100",
                     "Method": ""
                 }
 
@@ -2715,7 +2715,7 @@
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "01-22",
+                    "Exit": "0106-2206",
                     "Method": ""
                 }
             ]
@@ -2755,7 +2755,7 @@
                     "Method": "ChargeShot && ITEM_LINEBOMB && (HiddenP || (ITEM_SLIDE && ITEM_Rotater && (ITEM_AirDash || ITEM_JETPACK || ITEM_DOUBLEJUMP)))"
                 },
                 {
-                    "Exit": "17-23",
+                    "Exit": "1701-2301",
                     "Method": ""
                 },
                 {
@@ -2830,7 +2830,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "07-24",
+                    "Exit": "0704-2404",
                     "Method": ""
                 },
                 {
@@ -2849,7 +2849,7 @@
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "09-24",
+                    "Exit": "0906-2406",
                     "Method": "ITEM_LINEBOMB"
                 }
             ]
@@ -2870,7 +2870,7 @@
                     "Method": "ITEM_SLIDE && (ITEM_DOUBLEJUMP || ITEM_JETPACK)"
                 },
                 {
-                    "Exit": "15-25",
+                    "Exit": "1503-2503",
                     "Method": ""
                 }
             ]
@@ -3071,7 +3071,7 @@
                     "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "14-25",
+                    "Exit": "1410-2510",
                     "Method": ""
                 }
             ]
@@ -3096,7 +3096,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "20-26",
+                    "Exit": "2008-2608",
                     "Method": ""
                 },
                 {
@@ -3151,7 +3151,7 @@
                     "Method": "ChargeShot"
                 },
                 {
-                    "Exit": "08-27",
+                    "Exit": "0806-2706",
                     "Method": "ChargeShot"
                 }
             ]
@@ -3246,7 +3246,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "13-27",
+                    "Exit": "1307-2707",
                     "Method": ""
                 },
                 {
@@ -3279,11 +3279,11 @@
                     "Method": "HiddenP && ((ITEM_DOUBLJUMP && ITEM_JETPACK)|| ITEM_JETPACK 3)"
                 },
                 {
-                    "Exit": "13-28",
+                    "Exit": "1301-2801",
                     "Method":""
                 },
                 {
-                    "Exit": "09-28",
+                    "Exit": "0903-2803",
                     "Method":""
                 }
 
@@ -3352,7 +3352,7 @@
                     "Method": "ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK"
                 },
                 {
-                    "Exit": "19-29",
+                    "Exit": "1900-2900",
                     "Method": ""
                 }
             ]
@@ -3367,7 +3367,7 @@
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "20-29",
+                    "Exit": "2003-2903",
                     "Method": ""
                 }
             ]
