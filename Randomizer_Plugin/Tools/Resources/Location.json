@@ -42,7 +42,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "CKick || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash",
                 "Difficulty": 0
             }
         ]
@@ -237,12 +237,12 @@
     },
     {
         "Itemname": "BADGE_ChangeOrbCharger",
-        "Location": "Desert Base Main",
-        "LocationName": "Desert Base Main - MP Surge: Tag Out",
+        "Location": "Desert Base Entrance",
+        "LocationName": "Desert Base Entrance - MP Surge: Tag Out",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && (ITEM_DOUBLEJUMP || ITEM_JETPACK)",
                 "Difficulty": 0
             }
         ]
@@ -327,7 +327,8 @@
         "Requirement": [
             {
                 "Method": "",
-                "Difficulty": 0
+                "Difficulty": 0,
+                "Note": "Could be a seperate Area"
             }
         ]
     },
@@ -351,18 +352,6 @@
         "Requirement": [
             {
                 "Method": "",
-                "Difficulty": 0
-            }
-        ]
-    },
-    {
-        "Itemname": "I20",
-        "Location": "Ana Thema",
-        "LocationName": "Ana Thema - Sable",
-        "slotId": 1,
-        "Requirement": [
-            {
-                "Method": "QUEST_LibraryKey",
                 "Difficulty": 0
             }
         ]
@@ -405,7 +394,7 @@
     },
     {
         "Itemname": "BADGE_SuperArmor2",
-        "Location": "Thanatara Canyon",
+        "Location": "Thanatara Canyon Lower",
         "LocationName": "Thanatara Canyon - Even Keel",
         "slotId": 1,
         "Requirement": [
@@ -417,7 +406,7 @@
     },
     {
         "Itemname": "BADGE_PerfectCharge",
-        "Location": "Thanatara Canyon",
+        "Location": "Thanatara Canyon Lower",
         "LocationName": "Thanatara Canyon - MP Quicken: Steady",
         "slotId": 1,
         "Requirement": [
@@ -440,6 +429,22 @@
         ]
     },
     {
+        "Itemname": "EVENT_EliteChallangeB",
+        "Location": "Thanatara Canyon",
+        "LocationName": "Thanatara Canyon EliteB",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB && ITEM_AREABOMB) || ITEM_SLIDE",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_LINEBOMB && HiddenP",
+                "Difficulty": 1
+            }
+        ]
+    },
+    {
         "Itemname": "STACKABLE_MP",
         "Location": "Thanatara Canyon",
         "LocationName": "North Thanatara Canyon - Blueberry Bunny Potion",
@@ -453,7 +458,7 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Thanatara Canyon",
+        "Location": "Thanatara Canyon Lower",
         "LocationName": "Middle Thanatara Canyon - Blueberry Bunny Potion",
         "slotId": 7,
         "Requirement": [
@@ -465,7 +470,7 @@
     },
     {
         "Itemname": "ITEM_LINEBOMB",
-        "Location": "Thanatara Canyon",
+        "Location": "Thanatara Canyon Lower",
         "LocationName": "Thanatara Canyon - Cross Bomb",
         "slotId": 1,
         "Requirement": [
@@ -530,7 +535,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "EliteChallangeA",
+                "Method": "EVENT_EliteChallangeA",
                 "Difficulty": 0
             }
         ]
@@ -542,7 +547,7 @@
         "slotId": 15,
         "Requirement": [
             {
-                "Method": "ITEM_JETPACK2",
+                "Method": "ITEM_JETPACK 2",
                 "Difficulty": 0
             },
             {
@@ -612,6 +617,10 @@
             {
                 "Method": "ITEM_WALLJUMP",
                 "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK 2",
+                "Difficulty": 0
             }
         ]
     },
@@ -626,11 +635,11 @@
                 "Difficulty": 0
             },
             {
-                "Method": "VoidBomb",
+                "Method": "VenaBomb",
                 "Difficulty": 0
             },
             {
-                "Method": "ChargeShot",
+                "Method": "ITEM_ORB",
                 "Difficulty": 0
             },
             {
@@ -658,7 +667,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "EliteChallangeB",
+                "Method": "EVENT_EliteChallangeB",
                 "Difficulty": 0
             }
         ]
@@ -696,7 +705,15 @@
             {
                 "Method": "ITEM_AirDash",
                 "Difficulty": 0
-            }
+            },
+            {
+                "Method": "ITEM_HIJUMP",
+                "Difficulty": 0
+            },
+            {
+                "Method": "RabbitWalljump",
+                "Difficulty": 0
+            }          
         ]
     },
     {
@@ -707,18 +724,6 @@
         "Requirement": [
             {
                 "Method": "ITEM_LINEBOMB && ITEM_AREABOMB",
-                "Difficulty": 0
-            }
-        ]
-    },
-    {
-        "Itemname": "BADGE_DoubleJumpAttack",
-        "Location": "Valhalla Breath West",
-        "LocationName": "Valhalla Breath West - Orbital Slash",
-        "slotId": 1,
-        "Requirement": [
-            {
-                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -748,13 +753,25 @@
         ]
     },
     {
+        "Itemname": "BADGE_DoubleJumpAttack",
+        "Location": "Valhalla Breath West",
+        "LocationName": "Valhalla Breath West - Orbital Slash",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "BADGE_Normal3HModStabB",
         "Location": "Valhalla Breath West",
         "LocationName": "Valhalla Breath West - Quickstab: Flurry",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -800,6 +817,10 @@
             {
                 "Method": "ITEM_SLIDE && ITEM_AirDash",
                 "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_SLIDE",
+                "Difficulty": 1
             }
         ]
     },
@@ -860,9 +881,33 @@
         ]
     },
     {
+        "Itemname": "EVENT_MoroseVisited",
+        "Location": "Morose City",
+        "LocationName": "Morose City",
+        "slotId": 0,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_EliteChallangeA",
+        "Location": "Morose City",
+        "LocationName": "Morose City Elite",
+        "slotId": 0,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "STACKABLE_COG",
-        "Location": "Moros City",
-        "LocationName": "Moros City - Astral Gear",
+        "Location": "Morose City",
+        "LocationName": "Morose City - Astral Gear",
         "slotId": 23,
         "Requirement": [
             {
@@ -873,8 +918,8 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Moros City",
-        "LocationName": "Moros City - Blueberry Bunny Potion",
+        "Location": "Morose City",
+        "LocationName": "Morose City - Blueberry Bunny Potion",
         "slotId": 9,
         "Requirement": [
             {
@@ -885,8 +930,8 @@
     },
     {
         "Itemname": "BADGE_TauntPhoto",
-        "Location": "Moros City",
-        "LocationName": "Moros City - Special Action: Paparazzo",
+        "Location": "Morose City",
+        "LocationName": "Morose City - Special Action: Paparazzo",
         "slotId": 1,
         "Requirement": [
             {
@@ -897,24 +942,25 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Moros City",
-        "LocationName": "Moros City - Lemon Bunny Potion",
+        "Location": "Morose City",
+        "LocationName": "Morose City - Lemon Bunny Potion",
         "slotId": 9,
         "Requirement": [
             {
-                "Method": "ITEM_AirDash && ITEM_JETPACK3",
+                "Method": "ITEM_AirDash && ITEM_JETPACK 3 && ITEM_LINEBOMB",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK",
+                "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "Note": "There are more ways to reach that Item"
     },
     {
         "Itemname": "ITEM_SPEEDUP",
-        "Location": "Moros City",
-        "LocationName": "Moros City - Running Boots",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - Running Boots",
         "slotId": 1,
         "Requirement": [
             {
@@ -925,8 +971,8 @@
     },
     {
         "Itemname": "BADGE_BossPassing",
-        "Location": "Moros City",
-        "LocationName": "Moros City - Metamorphose",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - Metamorphose",
         "slotId": 1,
         "Requirement": [
             {
@@ -937,8 +983,8 @@
     },
     {
         "Itemname": "BADGE_StyleComboAirDashS",
-        "Location": "Moros City",
-        "LocationName": "Moros City - Style Combo: Triple Flash S",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop Demonfray - Style Combo: Triple Flash S",
         "slotId": 1,
         "Requirement": [
             {
@@ -949,8 +995,8 @@
     },
     {
         "Itemname": "BADGE_MAXHPCost",
-        "Location": "Moros City",
-        "LocationName": "Moros City - EP Booster: HP",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop Demonfray - EP Booster: HP",
         "slotId": 1,
         "Requirement": [
             {
@@ -961,8 +1007,8 @@
     },
     {
         "Itemname": "BADGE_EnemyDefeatExp",
-        "Location": "Moros City",
-        "LocationName": "Moros City - Bone Breaker",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop Demonfray - Bone Breaker",
         "slotId": 1,
         "Requirement": [
             {
@@ -973,8 +1019,8 @@
     },
     {
         "Itemname": "BADGE_1HealthTypeA",
-        "Location": "Moros City",
-        "LocationName": "Moros City - Perseverance A",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop Demonfray - Perseverance A",
         "slotId": 1,
         "Requirement": [
             {
@@ -985,8 +1031,8 @@
     },
     {
         "Itemname": "BADGE_TauntThink",
-        "Location": "Moros City",
-        "LocationName": "Moros City - Special Action: Question Mark",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - Special Action: Question Mark",
         "slotId": 1,
         "Requirement": [
             {
@@ -997,8 +1043,8 @@
     },
     {
         "Itemname": "BADGE_QuickMPRegainA",
-        "Location": "Moros City",
-        "LocationName": "Moros City - MP Reset A",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - MP Reset A",
         "slotId": 1,
         "Requirement": [
             {
@@ -1009,8 +1055,8 @@
     },
     {
         "Itemname": "BADGE_MapDiscoverRecover",
-        "Location": "Moros City",
-        "LocationName": "Moros City - Intrepid Explorer",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - Intrepid Explorer",
         "slotId": 1,
         "Requirement": [
             {
@@ -1021,8 +1067,8 @@
     },
     {
         "Itemname": "BADGE_StyleComboAirNormal3A",
-        "Location": "Moros City",
-        "LocationName": "Moros City - Style Combo: Windmill B",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - Style Combo: Windmill B",
         "slotId": 1,
         "Requirement": [
             {
@@ -1033,8 +1079,8 @@
     },
     {
         "Itemname": "BADGE_UpperDoubleHitAfterOutline",
-        "Location": "Moros City",
-        "LocationName": "Moros City - Upper Slash: Shatter",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - Upper Slash: Shatter",
         "slotId": 1,
         "Requirement": [
             {
@@ -1045,8 +1091,8 @@
     },
     {
         "Itemname": "BADGE_Hurt2Punisher",
-        "Location": "Moros City",
-        "LocationName": "Moros City - Punisher",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - Punisher",
         "slotId": 1,
         "Requirement": [
             {
@@ -1057,8 +1103,8 @@
     },
     {
         "Itemname": "STACKABLE_BAG",
-        "Location": "Moros City",
-        "LocationName": "Shop Moros City - Bag Expander",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - Bag Expander",
         "slotId": 30,
         "Requirement": [
             {
@@ -1069,8 +1115,8 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Moros City",
-        "LocationName": "Shop Moros City - Kiwi Bunny Potion",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - Kiwi Bunny Potion",
         "slotId": 30,
         "Requirement": [
             {
@@ -1081,8 +1127,8 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Moros City",
-        "LocationName": "Shop Moros City - Blueberry Bunny Potion",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - Blueberry Bunny Potion",
         "slotId": 30,
         "Requirement": [
             {
@@ -1093,8 +1139,8 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Moros City",
-        "LocationName": "Shop Moros City - Lemon Bunny Potion",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - Lemon Bunny Potion",
         "slotId": 30,
         "Requirement": [
             {
@@ -1105,8 +1151,8 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Moros City",
-        "LocationName": "Shop Moros City - Cherry Bunny Potion",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - Cherry Bunny Potion",
         "slotId": 30,
         "Requirement": [
             {
@@ -1117,8 +1163,8 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Moros City",
-        "LocationName": "Shop Moros City - Grape Bunny Potion",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - Grape Bunny Potion",
         "slotId": 30,
         "Requirement": [
             {
@@ -1129,8 +1175,8 @@
     },
     {
         "Itemname": "STACKABLE_SHARD",
-        "Location": "Moros City",
-        "LocationName": "Shop Moros City - Rainbow Bunny Potion",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop Chap 6 - Rainbow Bunny Potion",
         "slotId": 30,
         "Requirement": [
             {
@@ -1141,8 +1187,8 @@
     },
     {
         "Itemname": "Useable_WaffleAHoneycloud",
-        "Location": "Moros City",
-        "LocationName": "Moros City - Honeycloud Waffle",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - Honeycloud Waffle",
         "slotId": 1,
         "Requirement": [
             {
@@ -1153,8 +1199,8 @@
     },
     {
         "Itemname": "Useable_WaffleBMeringue",
-        "Location": "Moros City",
-        "LocationName": "Moros City - Toasted Meringue Waffle",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop Chap 3 - Toasted Meringue Waffle",
         "slotId": 1,
         "Requirement": [
             {
@@ -1165,8 +1211,8 @@
     },
     {
         "Itemname": "Useable_WaffleCMorning",
-        "Location": "Moros City",
-        "LocationName": "Moros City - Good Morning Waffle",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop Chap 4  - Good Morning Waffle",
         "slotId": 1,
         "Requirement": [
             {
@@ -1177,8 +1223,8 @@
     },
     {
         "Itemname": "Useable_WaffleDJellydrop",
-        "Location": "Moros City",
-        "LocationName": "Moros City - Berry Pink Waffle",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop Chap 5  - Berry Pink Waffle",
         "slotId": 1,
         "Requirement": [
             {
@@ -1189,8 +1235,8 @@
     },
     {
         "Itemname": "Useable_WaffleElueberry",
-        "Location": "Moros City",
-        "LocationName": "Moros City - Blueberry Waffle",
+        "Location": "Morose City",
+        "LocationName": "Morose City Chap 6 - Blueberry Waffle",
         "slotId": 1,
         "Requirement": [
             {
@@ -1215,6 +1261,10 @@
             },
             {
                 "Method": "ITEM_SLIDE && ITEM_WALLJUMP && ITEM_DOUBLEJUMP",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_SLIDE && BounceKick",
                 "Difficulty": 0
             }
         ]
@@ -1245,7 +1295,7 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Travoll Industrie",
+        "Location": "Travoll Industrie East Exit",
         "LocationName": "Travoll Industrie - Cherry Bunny Potion",
         "slotId": 26,
         "Requirement": [
@@ -1301,8 +1351,8 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Travoll Mines Part 2",
-        "LocationName": "Travoll Mines Part 2 - Cherry Bunny Potion",
+        "Location": "Travoll Mines",
+        "LocationName": "Travoll Mines - Cherry Bunny Potion",
         "slotId": 15,
         "Requirement": [
             {
@@ -1313,20 +1363,20 @@
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "Travoll Mines Part 2",
-        "LocationName": "Travoll Mines Part 2 - Astral Gear",
+        "Location": "Travoll Mines",
+        "LocationName": "Travoll Mines - Astral Gear",
         "slotId": 25,
         "Requirement": [
             {
-                "Method": "ChargeShot && Boss",
+                "Method": "ChargeShot && ITEM_BOMBFUEL && Boss",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "BADGE_AirComboQuicken",
-        "Location": "Travoll Mines Part 2",
-        "LocationName": "Travoll Mines Part 2 - Aerial Accel",
+        "Location": "Travoll Mines",
+        "LocationName": "Travoll Mines - Aerial Accel",
         "slotId": 1,
         "Requirement": [
             {
@@ -1337,32 +1387,32 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Travoll Mines Part 2",
-        "LocationName": "Travoll Mines Part 2 - Grape Bunny Potion",
+        "Location": "Travoll Mines",
+        "LocationName": "Travoll Mines - Grape Bunny Potion",
         "slotId": 0,
         "Requirement": [
             {
-                "Method": "ITEM_LINEBOMB",
+                "Method": "ITEM_LINEBOMB || CKick",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Travoll Mines Part 2",
-        "LocationName": "Travoll Mines Part 2 - Blueberry Bunny Potion",
+        "Location": "Travoll Mines",
+        "LocationName": "Travoll Mines - Blueberry Bunny Potion",
         "slotId": 15,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_LINEBOMB",
+                "Method": "ITEM_SLIDE && ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_BOMBFUEL",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Travoll Mines Part 2",
-        "LocationName": "Travoll Mines Part 2 - Kiwi Bunny Potion",
+        "Location": "Travoll Mines",
+        "LocationName": "Travoll Mines - Kiwi Bunny Potion",
         "slotId": 14,
         "Requirement": [
             {
@@ -1373,8 +1423,8 @@
     },
     {
         "Itemname": "BADGE_EasyDodge",
-        "Location": "Travoll Mines Part 2",
-        "LocationName": "Travoll Mines Part 2 - Dodge: Headstrong",
+        "Location": "Travoll Mines Swamp Exit",
+        "LocationName": "Travoll Mines Swamp Exit - Dodge: Headstrong",
         "slotId": 1,
         "Requirement": [
             {
@@ -1385,20 +1435,20 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Travoll Mines",
+        "Location": "Travoll Mines East Exit",
         "LocationName": "Travoll Mines - Lemon Bunny Potion",
         "slotId": 0,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "BADGE_EnergyDefend",
-        "Location": "Travoll Mines",
-        "LocationName": "Travoll Mines - Mana Armor",
+        "Location": "Travoll Mines Forest Exit",
+        "LocationName": "Travoll Mines Forest Exit - Mana Armor",
         "slotId": 1,
         "Requirement": [
             {
@@ -1462,15 +1512,15 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ChargeShot",
+                "Method": "ChargeShot && QUEST_RabiPillow",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "ITEM_BoostSystem",
-        "Location": "Forest",
-        "LocationName": "Forest - Modular Blueprints",
+        "Location": "Forest Maze",
+        "LocationName": "Forest Maze - Modular Blueprints",
         "slotId": 1,
         "Requirement": [
             {
@@ -1481,8 +1531,8 @@
     },
     {
         "Itemname": "BADGE_GroundNormal4Mod",
-        "Location": "Forest",
-        "LocationName": "Forest - Titanium Spanner",
+        "Location": "Forest Maze",
+        "LocationName": "Forest Maze - Titanium Spanner",
         "slotId": 1,
         "Requirement": [
             {
@@ -1493,19 +1543,19 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Forest",
-        "LocationName": "Forest - Kiwi Bunny Potion",
+        "Location": "Forest Maze",
+        "LocationName": "Forest Maze - Kiwi Bunny Potion",
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "ChargeShot",
+                "Method": "",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "Forest",
+        "Location": "Forest Maze boss",
         "LocationName": "Forest - Astral Gear",
         "slotId": 24,
         "Requirement": [
@@ -1522,7 +1572,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_WATERMOVEMENT",
                 "Difficulty": 0
             }
         ]
@@ -1613,12 +1663,12 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Gleamwood Middle",
+        "Location": "Gleamwood Bottom",
         "LocationName": "Gleamwood Middle - Lemon Bunny Potion",
         "slotId": 5,
         "Requirement": [
             {
-                "Method": "ITEM_KNIFE",
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -1686,11 +1736,11 @@
     {
         "Itemname": "BADGE_ComboTimeExtendC",
         "Location": "Gleamwood Middle",
-        "LocationName": "Gleamwood Middle - Combo Time Extend C",
+        "LocationName": "Gleamwood Middle - Combo Time Extend III",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE",
+                "Method": "ITEM_SLIDE && ( ( EnemyManip && ITEM_ORB ) || VenaBomb) && ITEM_KNIFE",
                 "Difficulty": 0
             }
         ]
@@ -1729,7 +1779,7 @@
     },
     {
         "Itemname": "BADGE_TauntStare",
-        "Location": "Gleamwood Middle",
+        "Location": "Gleamwood Forest Exit",
         "LocationName": "Gleamwood Middle - Special Action: Speechless",
         "slotId": 1,
         "Requirement": [
@@ -1744,13 +1794,29 @@
             {
                 "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB",
                 "Difficulty": 0
+            },
+            {
+                "Method": "RabbitWalljump && ITEM_LINEBOMB",
+                "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "BADGE_DodgeMeterBoost",
-        "Location": "Gleamwood Upper",
+        "Location": "Gleamwood Middle",
         "LocationName": "Gleamwood Upper - Dodge: Optimize",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_SLIDE || HiddenP) && (ITEM_KNIFE || ITEM_ORB)",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_EliteChallangeC",
+        "Location": "Gleamwood Ulvosa Exit",
+        "LocationName": "Gleamwood Upper - Elite",
         "slotId": 1,
         "Requirement": [
             {
@@ -1761,7 +1827,7 @@
     },
     {
         "Itemname": "BADGE_BattleStartCharger",
-        "Location": "Ulskan Village Area",
+        "Location": "Gleamwood Right",
         "LocationName": "Ulskan Village Area - MP Surge: Battle Start",
         "slotId": 1,
         "Requirement": [
@@ -1773,12 +1839,16 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Ulskan Village Area",
+        "Location": "Gleamwood Right",
         "LocationName": "Ulskan Village Area - Grape Bunny Potion",
         "slotId": 5,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB2",
+                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB 2",
+                "Difficulty": 0
+            },
+            {
+                "Method": "VenaBomb",
                 "Difficulty": 0
             }
         ]
@@ -1790,7 +1860,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_KNIFE || VenaBomb || ITEM_ORB",
                 "Difficulty": 0
             }
         ]
@@ -1802,7 +1872,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -1814,14 +1884,14 @@
         "slotId": 5,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_KNIFE || VenaBomb",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "ITEM_AntiDecay",
-        "Location": "Ulskan Village Area",
+        "Location": "Ulskan Plague Exit",
         "LocationName": "Ulskan Village Area - Decay Antidote",
         "slotId": 1,
         "Requirement": [
@@ -1833,7 +1903,7 @@
     },
     {
         "Itemname": "BADGE_SlideHalt",
-        "Location": "Ulskan Village Area",
+        "Location": "Gleamwood Right",
         "LocationName": "Ulskan Village Area - Slide Halt",
         "slotId": 1,
         "Requirement": [
@@ -1845,32 +1915,12 @@
     },
     {
         "Itemname": "BADGE_GoldenLuck",
-        "Location": "Ulskan Village Area",
+        "Location": "Ulskan Plague Exit",
         "LocationName": "Ulskan Village Area - Dodge: Golden Luck",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_BombLengthExtend && ITEM_DOUBLEJUMP",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_BombLengthExtend && ITEM_JETPACK",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_BombLengthExtend && ITEM_HIJUMP && ITEM_WALLJUMP",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AREABOMB && ITEM_DOUBLEJUMP",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AREABOMB && ITEM_JETPACK",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_AREABOMB && ITEM_HIJUMP && ITEM_WALLJUMP",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -1966,6 +2016,10 @@
                 "Difficulty": 0
             },
             {
+                "Method": "ITEM_LINEBOMB",
+                "Difficulty": 0
+            },
+            {
                 "Method": "ITEM_HIJUMP && ITEM_WALLJUMP",
                 "Difficulty": 0
             }
@@ -1997,7 +2051,7 @@
     },
     {
         "Itemname": "BADGE_BombNormal4Buffer",
-        "Location": "Plague Forest",
+        "Location": "Plague Forest Exit",
         "LocationName": "Plague Forest - Aplomb",
         "slotId": 1,
         "Requirement": [
@@ -2009,7 +2063,7 @@
     },
     {
         "Itemname": "BADGE_PrepDef",
-        "Location": "Plague Forest",
+        "Location": "Plague Forest Exit",
         "LocationName": "Plague Forest - Blood Armor",
         "slotId": 1,
         "Requirement": [
@@ -2098,7 +2152,7 @@
         "slotId": 18,
         "Requirement": [
             {
-                "Method": "ITEM_AREABOMB && ITEM_LINEBOMB",
+                "Method": "ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -2110,7 +2164,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "EliteChallangeD",
+                "Method": "EVENT_EliteChallangeD",
                 "Difficulty": 0
             }
         ]
@@ -2170,7 +2224,7 @@
         "slotId": 20,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -2206,15 +2260,15 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB2",
+                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB 2 && ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbAmulet",
+                "Method": "ITEM_OrbAmulet && ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             },
             {
-                "Method": "BADGE_GStrongUpWidth",
+                "Method": "VenaBomb && ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -2245,7 +2299,7 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "CopperWood",
+        "Location": "CopperWood EP Pot",
         "LocationName": "CopperWood - Lemon Bunny Potion",
         "slotId": 2,
         "Requirement": [
@@ -2262,15 +2316,15 @@
         "slotId": 7,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB2",
+                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB 2",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeS3 && ChargeShot && I20 && ITEM_ORB2",
+                "Method": "ITEM_OrbTypeS3 && ChargeShot && I20 && ITEM_ORB 2",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeC3 && ChargeShot && I19 && ITEM_ORB2",
+                "Method": "ITEM_OrbTypeC3 && ChargeShot && I19 && ITEM_ORB 2",
                 "Difficulty": 0
             }
         ]
@@ -2278,11 +2332,11 @@
     {
         "Itemname": "BADGE_BoostCostCut",
         "Location": "CopperWood",
-        "LocationName": "CopperWood - Core Expansion: Saver",
+        "LocationName": "CopperWood Elite - Core Expansion: Saver",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "EliteChallangeC",
+                "Method": "EVENT_EliteChallangeC",
                 "Difficulty": 0
             }
         ]
@@ -2301,8 +2355,8 @@
     },
     {
         "Itemname": "BADGE_StyleCharge",
-        "Location": "CopperWood",
-        "LocationName": "CopperWood - MP Quicken: Style",
+        "Location": "CopperWood Industry Exit",
+        "LocationName": "CopperWood Industry Exit - MP Quicken: Style",
         "slotId": 1,
         "Requirement": [
             {
@@ -2402,7 +2456,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -2414,15 +2468,15 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_WALLJUMP",
+                "Method": "ITEM_AREABOMB && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_WALLJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_DOUBLEJUMP && ITEM_JETPACK3",
+                "Method": "ITEM_AREABOMB && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_DOUBLEJUMP && ITEM_JETPACK 3",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_DOUBLEJUMP && ITEM_HIJUMP && ITEM_JETPACK",
+                "Method": "ITEM_AREABOMB && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_DOUBLEJUMP && ITEM_HIJUMP && ITEM_JETPACK",
                 "Difficulty": 0
             }
         ]
@@ -2434,15 +2488,43 @@
         "slotId": 7,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_AirDash",
+                "Method": "ITEM_SLIDE && ITEM_AirDash && ITEM_LINEBOMB",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP",
+                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_LINEBOMB",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && ITEM_JETPACK",
+                "Method": "ITEM_SLIDE && RabbitJump && ITEM_LINEBOMB",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_SLIDE && ITEM_JETPACK && ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I20",
+        "Location": "Ana Thema",
+        "LocationName": "Ana Thema - Sable",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "QUEST_LibraryKey",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_EliteChallangeD",
+        "Location": "Ana Thema",
+        "LocationName": "Ana Thema - Elite",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -2450,11 +2532,23 @@
     {
         "Itemname": "BADGE_QuickMeleeLagA",
         "Location": "Ana Thema",
-        "LocationName": "Ana Thema - Deft A",
+        "LocationName": "Ana Thema - Deft I",
         "slotId": 1,
         "Requirement": [
             {
                 "Method": "ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_AnathemaVisited",
+        "Location": "Ana Thema",
+        "LocationName": "Ana Thema",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -2473,12 +2567,12 @@
     },
     {
         "Itemname": "BADGE_StyleComboNewAttack",
-        "Location": "Ana Thema",
-        "LocationName": "Ana Thema - C. Rank Frenzy: Starter",
+        "Location": "Ana Thema Gallery Exit",
+        "LocationName": "Ana Thema Gallery Exit - C. Rank Frenzy: Starter",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -2486,7 +2580,7 @@
     {
         "Itemname": "ITEM_AttackRange",
         "Location": "Ana Thema",
-        "LocationName": "Ana Thema - Deadly Reach",
+        "LocationName": "Ana Thema Shop - Deadly Reach",
         "slotId": 1,
         "Requirement": [
             {
@@ -2498,7 +2592,7 @@
     {
         "Itemname": "BADGE_GroundNormalCombo4AltTiming",
         "Location": "Ana Thema",
-        "LocationName": "Ana Thema - Flash Point",
+        "LocationName": "Ana Thema Shop Memloch - Flash Point",
         "slotId": 1,
         "Requirement": [
             {
@@ -2510,7 +2604,7 @@
     {
         "Itemname": "BADGE_BreakTimeExtend",
         "Location": "Ana Thema",
-        "LocationName": "Ana Thema - Break Extend",
+        "LocationName": "Ana Thema Shop Memloch - Break Extend",
         "slotId": 1,
         "Requirement": [
             {
@@ -2522,7 +2616,7 @@
     {
         "Itemname": "BADGE_StrongFrontFly",
         "Location": "Ana Thema",
-        "LocationName": "Ana Thema - Tornado Spin: Grav Reversal",
+        "LocationName": "Ana Thema Shop Memloch - Tornado Spin: Grav Reversal",
         "slotId": 1,
         "Requirement": [
             {
@@ -2534,7 +2628,7 @@
     {
         "Itemname": "BADGE_1HealthTypeB",
         "Location": "Ana Thema",
-        "LocationName": "Ana Thema - Perseverance D",
+        "LocationName": "Ana Thema Shop Memloch - Perseverance D",
         "slotId": 1,
         "Requirement": [
             {
@@ -2546,7 +2640,7 @@
     {
         "Itemname": "BADGE_StepUpCharge",
         "Location": "Ana Thema",
-        "LocationName": "Ana Thema - MP Quicken: Step Up",
+        "LocationName": "Ana Thema Shop - MP Quicken: Step Up",
         "slotId": 1,
         "Requirement": [
             {
@@ -2558,7 +2652,7 @@
     {
         "Itemname": "BADGE_GroundWeakUpAirExcute",
         "Location": "Ana Thema",
-        "LocationName": "Ana Thema - Upper Slash: Augment",
+        "LocationName": "Ana Thema Shop - Upper Slash: Augment",
         "slotId": 1,
         "Requirement": [
             {
@@ -2570,7 +2664,7 @@
     {
         "Itemname": "BADGE_SupportShot",
         "Location": "Ana Thema",
-        "LocationName": "Ana Thema - Synchronized Support II",
+        "LocationName": "Ana Thema Shop - Synchronized Support II",
         "slotId": 1,
         "Requirement": [
             {
@@ -2582,7 +2676,7 @@
     {
         "Itemname": "BADGE_StraightCost",
         "Location": "Ana Thema",
-        "LocationName": "Ana Thema - EP Booster: Variety",
+        "LocationName": "Ana Thema Shop - EP Booster: Variety",
         "slotId": 1,
         "Requirement": [
             {
@@ -2594,7 +2688,7 @@
     {
         "Itemname": "BADGE_WeakAirNormal3ModDamageBoost",
         "Location": "Ana Thema",
-        "LocationName": "Ana Thema - Air Combo: Focus",
+        "LocationName": "Ana Thema Shop - Air Combo: Focus",
         "slotId": 1,
         "Requirement": [
             {
@@ -2606,7 +2700,7 @@
     {
         "Itemname": "BADGE_DodgeHealthCounter",
         "Location": "Ana Thema",
-        "LocationName": "Ana Thema - Dodge Recovery",
+        "LocationName": "Ana Thema Shop - Dodge Recovery",
         "slotId": 1,
         "Requirement": [
             {
@@ -2618,7 +2712,7 @@
     {
         "Itemname": "BADGE_AutoAirCombo",
         "Location": "Ana Thema",
-        "LocationName": "Ana Thema - C. Count Frenzy: Acrobatics",
+        "LocationName": "Ana Thema Shop - C. Count Frenzy: Acrobatics",
         "slotId": 1,
         "Requirement": [
             {
@@ -2630,7 +2724,7 @@
     {
         "Itemname": "BADGE_SuperArmor33",
         "Location": "Ana Thema",
-        "LocationName": "Ana Thema - Act Tough",
+        "LocationName": "Ana Thema Shop - Act Tough",
         "slotId": 1,
         "Requirement": [
             {
@@ -2642,7 +2736,7 @@
     {
         "Itemname": "BADGE_FreeFoodRefill",
         "Location": "Ana Thema",
-        "LocationName": "Ana Thema - Biscuit Delivery",
+        "LocationName": "Ana Thema Shop - Biscuit Delivery",
         "slotId": 1,
         "Requirement": [
             {
@@ -2654,7 +2748,7 @@
     {
         "Itemname": "BADGE_StyleComboNormal4HAAA",
         "Location": "Ana Thema",
-        "LocationName": "Ana Thema - Style Combo: Lock On A",
+        "LocationName": "Ana Thema Shop - Style Combo: Lock On A",
         "slotId": 1,
         "Requirement": [
             {
@@ -2666,7 +2760,7 @@
     {
         "Itemname": "BADGE_ComboBreakBoost",
         "Location": "Ana Thema",
-        "LocationName": "Ana Thema - Combo Crasher",
+        "LocationName": "Ana Thema Shop - Combo Crasher",
         "slotId": 1,
         "Requirement": [
             {
@@ -2678,7 +2772,7 @@
     {
         "Itemname": "STACKABLE_BAG",
         "Location": "Ana Thema",
-        "LocationName": "Shop Ana Thema - Bag Expander",
+        "LocationName": "Ana Thema Shop - Bag Expander",
         "slotId": 31,
         "Requirement": [
             {
@@ -2690,7 +2784,7 @@
     {
         "Itemname": "STACKABLE_HP",
         "Location": "Ana Thema",
-        "LocationName": "Shop Ana Thema - Kiwi Bunny Potion",
+        "LocationName": "Ana Thema Shop - Kiwi Bunny Potion",
         "slotId": 31,
         "Requirement": [
             {
@@ -2702,7 +2796,7 @@
     {
         "Itemname": "STACKABLE_MP",
         "Location": "Ana Thema",
-        "LocationName": "Shop Ana Thema - Blueberry Bunny Potion",
+        "LocationName": "Ana Thema Shop - Blueberry Bunny Potion",
         "slotId": 31,
         "Requirement": [
             {
@@ -2714,7 +2808,7 @@
     {
         "Itemname": "STACKABLE_EP",
         "Location": "Ana Thema",
-        "LocationName": "Shop Ana Thema - Lemon Bunny Potion",
+        "LocationName": "Ana Thema Shop - Lemon Bunny Potion",
         "slotId": 31,
         "Requirement": [
             {
@@ -2726,7 +2820,7 @@
     {
         "Itemname": "STACKABLE_MATK",
         "Location": "Ana Thema",
-        "LocationName": "Shop Ana Thema - Cherry Bunny Potion",
+        "LocationName": "Ana Thema Shop - Cherry Bunny Potion",
         "slotId": 31,
         "Requirement": [
             {
@@ -2738,7 +2832,7 @@
     {
         "Itemname": "STACKABLE_RATK",
         "Location": "Ana Thema",
-        "LocationName": "Shop Ana Thema - Grape Bunny Potion",
+        "LocationName": "Ana Thema Shop - Grape Bunny Potion",
         "slotId": 31,
         "Requirement": [
             {
@@ -2750,7 +2844,7 @@
     {
         "Itemname": "STACKABLE_SHARD",
         "Location": "Ana Thema",
-        "LocationName": "Shop Ana Thema - Rainbow Bunny Potion",
+        "LocationName": "Ana Thema Shop Chap 6 - Rainbow Bunny Potion",
         "slotId": 31,
         "Requirement": [
             {
@@ -2790,7 +2884,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "EliteChallangeE && ITEM_SLIDE",
+                "Method": "EVENT_EliteChallangeE && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -2833,7 +2927,7 @@
     },
     {
         "Itemname": "BADGE_EPCombo",
-        "Location": "Magma Depths",
+        "Location": "Magma Depths O",
         "LocationName": "Magma Depths - EP Booster: Quintuple",
         "slotId": 1,
         "Requirement": [
@@ -2845,7 +2939,7 @@
     },
     {
         "Itemname": "BADGE_ArrowDamageUp",
-        "Location": "Magma Depths",
+        "Location": "Magma Depths O",
         "LocationName": "Magma Depths - Razor Arrow",
         "slotId": 1,
         "Requirement": [
@@ -2872,6 +2966,7 @@
         "Location": "Magma Depths",
         "LocationName": "Magma Depths - Perseverance B",
         "slotId": 1,
+        "Note": "More ways to reach this item",
         "Requirement": [
             {
                 "Method": "ChargeShot",
@@ -2954,30 +3049,18 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP",
+                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_LINEBOMB",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_JETPACK",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_AirDash",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_SLIDE && ITEM_JETPACK && ITEM_AirDash",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_SLIDE && ITEM_JETPACK",
+                "Method": "ITEM_SLIDE && ITEM_JETPACK && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Swamp Entrance",
+        "Location": "Pre Swamp",
         "LocationName": "Swamp Entrance - Cherry Bunny Potion",
         "slotId": 12,
         "Requirement": [
@@ -2989,7 +3072,7 @@
     },
     {
         "Itemname": "BADGE_AirComboExtend",
-        "Location": "Swamp",
+        "Location": "Pre Swamp",
         "LocationName": "Swamp - Aerial Kinetics",
         "slotId": 1,
         "Requirement": [
@@ -3013,12 +3096,12 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Swamp Entrance",
+        "Location": "Pre Swamp",
         "LocationName": "Swamp Entrance - Grape Bunny Potion",
         "slotId": 12,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -3066,15 +3149,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_AirDash",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_JETPACK",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_DOUBLEJUMP",
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -3086,7 +3161,7 @@
         "slotId": 12,
         "Requirement": [
             {
-                "Method": "ITEM_JETPACK2",
+                "Method": "ITEM_JETPACK 2",
                 "Difficulty": 0
             },
             {
@@ -3123,6 +3198,18 @@
         "Requirement": [
             {
                 "Method": "ChargeShot",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_EliteChallangeE",
+        "Location": "Tartarus",
+        "LocationName": "Tartarus - EVENT_EliteChallangeE",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -3194,7 +3281,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_JETPACK2",
+                "Method": "ITEM_JETPACK 2",
                 "Difficulty": 0
             }
         ]
@@ -3226,7 +3313,7 @@
     {
         "Itemname": "ITEM_RailPass",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Tartarus VIP Pass ",
+        "LocationName": "Tartarus Shop - Tartarus VIP Pass ",
         "slotId": 1,
         "Requirement": [
             {
@@ -3238,7 +3325,7 @@
     {
         "Itemname": "BADGE_StyleComboBackflipA",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Style Combo: Trickshot",
+        "LocationName": "Tartarus Shop - Style Combo: Trickshot",
         "slotId": 1,
         "Requirement": [
             {
@@ -3250,7 +3337,7 @@
     {
         "Itemname": "BADGE_RevengeB",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Hot Buzz",
+        "LocationName": "Tartarus Shop - Hot Buzz",
         "slotId": 1,
         "Requirement": [
             {
@@ -3262,7 +3349,7 @@
     {
         "Itemname": "BADGE_ComboCharge",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - MP Quicken: Combo",
+        "LocationName": "Tartarus Shop - MP Quicken: Combo",
         "slotId": 1,
         "Requirement": [
             {
@@ -3274,7 +3361,7 @@
     {
         "Itemname": "BADGE_SimpleBreak",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Quick Break",
+        "LocationName": "Tartarus Shop - Quick Break",
         "slotId": 1,
         "Requirement": [
             {
@@ -3286,7 +3373,7 @@
     {
         "Itemname": "BADGE_PurchaseBadgeCost",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - EP Booster: Shopaholic",
+        "LocationName": "Tartarus Shop - EP Booster: Shopaholic",
         "slotId": 1,
         "Requirement": [
             {
@@ -3298,7 +3385,7 @@
     {
         "Itemname": "BADGE_DoubleJumpStrike",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Bounce Bonus",
+        "LocationName": "Tartarus Shop - Bounce Bonus",
         "slotId": 1,
         "Requirement": [
             {
@@ -3310,7 +3397,7 @@
     {
         "Itemname": "BADGE_BoostTimeExtend",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Core Expansion: Extend",
+        "LocationName": "Tartarus Shop - Core Expansion: Extend",
         "slotId": 1,
         "Requirement": [
             {
@@ -3322,7 +3409,7 @@
     {
         "Itemname": "BADGE_CrystalHeal",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Crystal Healing",
+        "LocationName": "Tartarus Shop - Crystal Healing",
         "slotId": 1,
         "Requirement": [
             {
@@ -3334,7 +3421,7 @@
     {
         "Itemname": "BADGE_FallDamageReduce",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Head Over Heels",
+        "LocationName": "Tartarus Shop - Head Over Heels",
         "slotId": 1,
         "Requirement": [
             {
@@ -3346,7 +3433,7 @@
     {
         "Itemname": "BADGE_DoubleDispelLineBombLow",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Low Defence Bomber",
+        "LocationName": "Tartarus Shop - Low Defence Bomber",
         "slotId": 1,
         "Requirement": [
             {
@@ -3358,7 +3445,7 @@
     {
         "Itemname": "STACKABLE_BAG",
         "Location": "Tartarus",
-        "LocationName": "Shop Tartarus - Bag Expander",
+        "LocationName": "Tartarus Shop - Bag Expander",
         "slotId": 32,
         "Requirement": [
             {
@@ -3370,7 +3457,7 @@
     {
         "Itemname": "STACKABLE_EP",
         "Location": "Tartarus",
-        "LocationName": "Shop Tartarus - Lemon Bunny Potion",
+        "LocationName": "Tartarus Shop - Lemon Bunny Potion",
         "slotId": 32,
         "Requirement": [
             {
@@ -3382,7 +3469,7 @@
     {
         "Itemname": "STACKABLE_HP",
         "Location": "Tartarus",
-        "LocationName": "Shop Tartarus - Kiwi Bunny Potion",
+        "LocationName": "Tartarus Shop - Kiwi Bunny Potion",
         "slotId": 32,
         "Requirement": [
             {
@@ -3394,7 +3481,7 @@
     {
         "Itemname": "STACKABLE_MATK",
         "Location": "Tartarus",
-        "LocationName": "Shop Tartarus - Cherry Bunny Potion",
+        "LocationName": "Tartarus Shop - Cherry Bunny Potion",
         "slotId": 32,
         "Requirement": [
             {
@@ -3406,7 +3493,7 @@
     {
         "Itemname": "STACKABLE_MP",
         "Location": "Tartarus",
-        "LocationName": "Shop Tartarus - Blueberry Bunny Potion",
+        "LocationName": "Tartarus Shop - Blueberry Bunny Potion",
         "slotId": 32,
         "Requirement": [
             {
@@ -3418,7 +3505,7 @@
     {
         "Itemname": "STACKABLE_RATK",
         "Location": "Tartarus",
-        "LocationName": "Shop Tartarus - Grape Bunny Potion",
+        "LocationName": "Tartarus Shop - Grape Bunny Potion",
         "slotId": 32,
         "Requirement": [
             {
@@ -3430,7 +3517,7 @@
     {
         "Itemname": "STACKABLE_SHARD",
         "Location": "Tartarus",
-        "LocationName": "Shop Tartarus - Rainbow Bunny Potion",
+        "LocationName": "Tartarus Shop Chap 6 - Rainbow Bunny Potion",
         "slotId": 32,
         "Requirement": [
             {
@@ -3446,7 +3533,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB && (ITEM_DOUBLEJUMP || ITEM_Airdash || ITEM_JETPACK || ITEM_HIJUMP)",
                 "Difficulty": 0
             }
         ]
@@ -3458,14 +3545,14 @@
         "slotId": 16,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_AirDash || ITEM_JETPACK || ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Catacombs Main",
+        "Location": "Pre Lab",
         "LocationName": "Sout East Catacombs Main - Blueberry Bunny Potion",
         "slotId": 19,
         "Requirement": [
@@ -3477,12 +3564,12 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Catacombs Main",
-        "LocationName": "Catacombs Main - Kiwi Bunny Potion",
+        "Location": "Pre Lab",
+        "LocationName": "Pre Lab - Kiwi Bunny Potion",
         "slotId": 19,
         "Requirement": [
             {
-                "Method": "ITEM_LINEBOMB",
+                "Method": "ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -3553,8 +3640,8 @@
     },
     {
         "Itemname": "BADGE_InstantDodgeMeter",
-        "Location": "Catacombs Inner",
-        "LocationName": "Catacombs Inner - Dodge: Panic Switch",
+        "Location": "Catacombs Main",
+        "LocationName": "Catacombs Main - Dodge: Panic Switch",
         "slotId": 1,
         "Requirement": [
             {
@@ -3582,35 +3669,31 @@
         "slotId": 18,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
+                "Method": "(ITEM_BombLengthExtend 3 || ITEM_AREABOMB ) && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "BADGE_DodgeEPBoost",
-        "Location": "Lab",
+        "Location": "Lab Left",
         "LocationName": "Lab - EP Booster: Dodge",
-        "slotId": 1,
+        "slotId": 18,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_JETPACK",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP",
+                "Method": "",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Lab Extended",
-        "LocationName": "Lab Extended - Grape Bunny Potion",
+        "Location": "Lab",
+        "LocationName": "Lab - Grape Bunny Potion",
         "slotId": 17,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -3658,15 +3741,15 @@
         "slotId": 19,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "Lab Extended",
-        "LocationName": "Lab Extended - Astral Gear",
+        "Location": "Lab",
+        "LocationName": "Lab - Astral Gear",
         "slotId": 45,
         "Requirement": [
             {
@@ -3677,20 +3760,20 @@
     },
     {
         "Itemname": "BADGE_StyleComboPassiveA",
-        "Location": "Lab Extended",
-        "LocationName": "Lab Extended - C. Rank Frenzy: Focus A",
+        "Location": "Lab",
+        "LocationName": "Lab - C. Rank Frenzy: Focus A",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "ITEM_DodgeShot",
-        "Location": "Lab Extended",
-        "LocationName": "Lab Extended - Shining Bangle",
+        "Location": "Lab",
+        "LocationName": "Lab - Shining Bangle",
         "slotId": 1,
         "Requirement": [
             {
@@ -3725,7 +3808,7 @@
     },
     {
         "Itemname": "ITEM_WATERMOVEMENT",
-        "Location": "Verdazure Sea",
+        "Location": "Verdazure Sea West",
         "LocationName": "Verdazure Sea - Hydrodynamo",
         "slotId": 1,
         "Requirement": [
@@ -3737,7 +3820,7 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Verdazure Sea",
+        "Location": "Verdazure Sea West",
         "LocationName": "Verdazure Sea - Kiwi Bunny Potion",
         "slotId": 4,
         "Requirement": [
@@ -3749,7 +3832,7 @@
     },
     {
         "Itemname": "BADGE_CommonDropRecover",
-        "Location": "Verdazure Sea",
+        "Location": "Verdazure Sea East",
         "LocationName": "Verdazure Sea - Grub Guru",
         "slotId": 1,
         "Requirement": [
@@ -3761,7 +3844,7 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Verdazure Sea",
+        "Location": "Verdazure Sea West",
         "LocationName": "Verdazure Sea - Blueberry Bunny Potion",
         "slotId": 4,
         "Requirement": [
@@ -3773,7 +3856,7 @@
     },
     {
         "Itemname": "BADGE_InvincibilityExtend",
-        "Location": "Verdazure Sea",
+        "Location": "Verdazure Sea West",
         "LocationName": "Verdazure Sea - Invictus",
         "slotId": 1,
         "Requirement": [
@@ -3785,8 +3868,8 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Verdazure Sea",
-        "LocationName": "Verdazure Sea - Grape Bunny Potion",
+        "Location": "Verdazure Sea Forgotten Exit",
+        "LocationName": "Verdazure Sea to Forgotton City - Grape Bunny Potion",
         "slotId": 26,
         "Requirement": [
             {
@@ -3798,7 +3881,7 @@
     {
         "Itemname": "BADGE_ComboTimeExtendA",
         "Location": "Blushwood",
-        "LocationName": "Blushwood - Combo Time Extend A ",
+        "LocationName": "Blushwood - Combo Time Extend I",
         "slotId": 1,
         "Requirement": [
             {
@@ -3826,7 +3909,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
+                "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -3894,7 +3977,7 @@
         "slotId": 8,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK || RabbitWalljump || (ITEM_AirDash && ITEM_WALLJUMP)",
                 "Difficulty": 0
             }
         ]
@@ -3906,7 +3989,7 @@
         "slotId": 17,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && (ITEM_DOUBLEJUMP || ITEM_JETPACK || RabbitWalljump || (ITEM_AirDash && ITEM_WALLJUMP))",
                 "Difficulty": 0
             }
         ]
@@ -3919,6 +4002,18 @@
         "Requirement": [
             {
                 "Method": "ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_EliteChallangeF",
+        "Location": "Valhalla City",
+        "LocationName": "Valhalla City - EVENT_EliteChallangeF",
+        "slotId": 18,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -3952,7 +4047,12 @@
             {
                 "Method": "ITEM_AirDash && ITEM_WALLJUMP",
                 "Difficulty": 0
+            },
+            {
+                "Method": "RabbitWalljump",
+                "Difficulty": 0
             }
+
         ]
     },
     {
@@ -3974,23 +4074,27 @@
         "slotId": 15,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeC3 && ChargeShot && I19 && ITEM_ORB2",
+                "Method": "ITEM_OrbTypeC3 && ChargeShot && I19 && ITEM_ORB 2",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP",
+                "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP && ChargeShot",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_HIJUMP && I20 && ITEM_ORB2",
+                "Method": "ITEM_AirDash && (ITEM_JETPACK || ITEM_DOUBLEJUMP) && ChargeShot",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_DOUBLEJUMP && I20 && ITEM_ORB2",
+                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_HIJUMP && I20 && ITEM_ORB 2",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_JETPACK && I20 && ITEM_ORB2",
+                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_DOUBLEJUMP && I20 && ITEM_ORB 2",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_OrbTypeS3 && ChargeShot && ITEM_JETPACK && I20 && ITEM_ORB 2",
                 "Difficulty": 0
             }
         ]
@@ -4002,7 +4106,11 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_AREABOMB",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_BombLengthExtend 3",
                 "Difficulty": 0
             }
         ]
@@ -4010,7 +4118,7 @@
     {
         "Itemname": "ITEM_AirshipPass",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - Valhalla VIP Pass",
+        "LocationName": "Valhalla City Shop - Valhalla VIP Pass",
         "slotId": 1,
         "Requirement": [
             {
@@ -4022,7 +4130,7 @@
     {
         "Itemname": "BADGE_StyleComboAirDashA",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - Style Combo: Flash A",
+        "LocationName": "Valhalla City Shop - Style Combo: Flash A",
         "slotId": 1,
         "Requirement": [
             {
@@ -4034,7 +4142,7 @@
     {
         "Itemname": "BADGE_StrongFrontRapid",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - Tornado Spin: Flurry",
+        "LocationName": "Valhalla City Shop - Tornado Spin: Flurry",
         "slotId": 1,
         "Requirement": [
             {
@@ -4046,7 +4154,7 @@
     {
         "Itemname": "BADGE_BackflipMultiHit",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - Backflip Flurry",
+        "LocationName": "Valhalla City Shop - Backflip Flurry",
         "slotId": 1,
         "Requirement": [
             {
@@ -4058,7 +4166,7 @@
     {
         "Itemname": "BADGE_ComboDodgeMeter",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - Combo Momentum: Dodge",
+        "LocationName": "Valhalla City Shop - Combo Momentum: Dodge",
         "slotId": 1,
         "Requirement": [
             {
@@ -4070,7 +4178,7 @@
     {
         "Itemname": "BADGE_RythemCharge",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - MP Saver: Rhythm",
+        "LocationName": "Valhalla City Shop - MP Saver: Rhythm",
         "slotId": 1,
         "Requirement": [
             {
@@ -4082,7 +4190,7 @@
     {
         "Itemname": "BADGE_PerfectCost",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - EP Booster: Perfectionist",
+        "LocationName": "Valhalla City Shop - EP Booster: Perfectionist",
         "slotId": 1,
         "Requirement": [
             {
@@ -4094,7 +4202,7 @@
     {
         "Itemname": "BADGE_StyleComboSlidingS",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - Style Combo: Bunny Kick S",
+        "LocationName": "Valhalla City Shop - Style Combo: Bunny Kick S",
         "slotId": 1,
         "Requirement": [
             {
@@ -4106,7 +4214,7 @@
     {
         "Itemname": "BADGE_DamageToMaxHP",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - Shock Armor",
+        "LocationName": "Valhalla City Shop - Shock Armor",
         "slotId": 1,
         "Requirement": [
             {
@@ -4118,7 +4226,7 @@
     {
         "Itemname": "BADGE_Normal3HRedCancel",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - Quickstab: Sunder",
+        "LocationName": "Valhalla City Shop - Quickstab: Sunder",
         "slotId": 1,
         "Requirement": [
             {
@@ -4130,7 +4238,7 @@
     {
         "Itemname": "BADGE_BoostQuickErase",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - Core Expansion: Erase",
+        "LocationName": "Valhalla City Shop - Core Expansion: Erase",
         "slotId": 1,
         "Requirement": [
             {
@@ -4142,7 +4250,7 @@
     {
         "Itemname": "STACKABLE_BAG",
         "Location": "Valhalla City",
-        "LocationName": "Shop Valhalla City - Bag Expander",
+        "LocationName": "Valhalla City Shop - Bag Expander",
         "slotId": 33,
         "Requirement": [
             {
@@ -4154,7 +4262,7 @@
     {
         "Itemname": "STACKABLE_EP",
         "Location": "Valhalla City",
-        "LocationName": "Shop Valhalla City - Lemon Bunny Potion",
+        "LocationName": "Valhalla City Shop - Lemon Bunny Potion",
         "slotId": 33,
         "Requirement": [
             {
@@ -4166,7 +4274,7 @@
     {
         "Itemname": "STACKABLE_HP",
         "Location": "Valhalla City",
-        "LocationName": "Shop Valhalla City - Kiwi Bunny Potion",
+        "LocationName": "Valhalla City - Shop Kiwi Bunny Potion",
         "slotId": 33,
         "Requirement": [
             {
@@ -4178,7 +4286,7 @@
     {
         "Itemname": "STACKABLE_MATK",
         "Location": "Valhalla City",
-        "LocationName": "Shop Valhalla City - Cherry Bunny Potion",
+        "LocationName": "Valhalla City Shop - Cherry Bunny Potion",
         "slotId": 33,
         "Requirement": [
             {
@@ -4190,7 +4298,7 @@
     {
         "Itemname": "STACKABLE_MP",
         "Location": "Valhalla City",
-        "LocationName": "Shop Valhalla City - Blueberry Bunny Potion",
+        "LocationName": "Valhalla City Shop - Blueberry Bunny Potion",
         "slotId": 33,
         "Requirement": [
             {
@@ -4202,7 +4310,7 @@
     {
         "Itemname": "STACKABLE_RATK",
         "Location": "Valhalla City",
-        "LocationName": "Shop Valhalla City - Grape Bunny Potion",
+        "LocationName": "Valhalla City Shop - Grape Bunny Potion",
         "slotId": 33,
         "Requirement": [
             {
@@ -4214,7 +4322,7 @@
     {
         "Itemname": "STACKABLE_SHARD",
         "Location": "Valhalla City",
-        "LocationName": "Shop Valhalla City - Rainbow Bunny Potion",
+        "LocationName": "Valhalla City Shop Chap 6 - Rainbow Bunny Potion",
         "slotId": 33,
         "Requirement": [
             {
@@ -4223,14 +4331,14 @@
             }
         ]
     },
-    {
+    { 
         "Itemname": "ITEM_AirDash",
         "Location": "EverGarden",
         "LocationName": "EverGarden - Slipstream Boots",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -4274,7 +4382,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_LINEBOMB && ITEM_JETPACK2",
+                "Method": "ITEM_LINEBOMB && ITEM_JETPACK 2",
                 "Difficulty": 0
             },
             {
@@ -4294,11 +4402,11 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && ITEM_JETPACK3",
+                "Method": "ITEM_SLIDE && ITEM_JETPACK 3",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && ITEM_HIJUMP && ITEM_JETPACK2",
+                "Method": "ITEM_SLIDE && ITEM_HIJUMP && ITEM_JETPACK 2",
                 "Difficulty": 0
             }
         ]
@@ -4310,59 +4418,59 @@
         "slotId": 16,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && (ITEM_DOUBLEJUMP || ITEM_JETPACK || (ITEM_AirDash && ITEM_WALLJUMP))",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "BADGE_ToArmorReducer",
-        "Location": "EverGarden",
-        "LocationName": "EverGarden - Whipcrack",
+        "Location": "EverGarden Path to Boss",
+        "LocationName": "EverGarden Path to Boss - Whipcrack",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_JETPACK",
+                "Method": "ITEM_JETPACK && ITEM_LINEBOMB",
                 "Difficulty": 3
             },
             {
-                "Method": "ITEM_AirDash",
+                "Method": "ITEM_AirDash && ITEM_LINEBOMB",
                 "Difficulty": 4
             },
             {
-                "Method": "ITEM_WALLJUMP && ITEM_DOUBLEJUMP",
+                "Method": "ITEM_WALLJUMP && ITEM_LINEBOMB && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "BADGE_DashFlashInv",
-        "Location": "EverGardenPortals",
-        "LocationName": "EverGardenPortals - Shooting Star",
+        "Location": "EverGarden Path to Boss",
+        "LocationName": "EverGarden Path to Boss - Shooting Star",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ChargeShot",
+                "Method": "ChargeShot && (ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || RabbitWalljump)",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "BADGE_ComboAntiFullHealth",
-        "Location": "EverGarden",
-        "LocationName": "EverGarden - Battlecry",
+        "Location": "EverGarden Path to Boss",
+        "LocationName": "EverGarden Path to Boss - Battlecry",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ChargeShot",
+                "Method": "ITEM_SLIDE && ChargeShot && (ITEM_JETPACK || ITEM_DOUBLEJUMP)",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "Heaven Portal Hub",
-        "LocationName": "Heaven Portal Hub - Astral Gear",
+        "Location": "EverGarden Boss Area",
+        "LocationName": "EverGarden Boss Area - Astral Gear",
         "slotId": 49,
         "Requirement": [
             {
@@ -4373,8 +4481,8 @@
     },
     {
         "Itemname": "BADGE_DebuffCounter",
-        "Location": "Heaven Portal Hub",
-        "LocationName": "Heaven Portal Hub - Debuff Counter",
+        "Location": "EverGarden Boss Area",
+        "LocationName": "EverGarden Boss Area - Debuff Counter",
         "slotId": 1,
         "Requirement": [
             {
@@ -4385,48 +4493,60 @@
     },
     {
         "Itemname": "BADGE_CrystalIncrease",
-        "Location": "Heaven Portal Hub",
+        "Location": "EverGarden Boss Area",
         "LocationName": "Heaven Portal Hub - Crystal Boon",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_WALLJUMP",
+                "Method": "ITEM_WALLJUMP && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Heaven Portal Hub",
-        "LocationName": "Heaven Portal Hub - Grape Bunny Potion",
+        "Location": "EverGarden Boss Area",
+        "LocationName": "EverGarden Boss Area - Grape Bunny Potion",
         "slotId": 20,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS3 && ITEM_DOUBLEJUMP && ITEM_AirDash && ChargeShot && I20 && ITEM_ORB2",
+                "Method": "ITEM_OrbTypeS3 && ITEM_DOUBLEJUMP && ITEM_AirDash && ChargeShot && I20 && ITEM_ORB 2",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "BADGE_BoostHitCount",
-        "Location": "Cloister Entrance",
-        "LocationName": "Cloister Entrance - Core Expansion: Combo",
+        "Location": "Cloister",
+        "LocationName": "Cloister Elite - Core Expansion: Combo",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "EliteChallangeF",
+                "Method": "EVENT_EliteChallangeF",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_FreeStrongAttack",
+        "Location": "Cloister Entrance",
+        "LocationName": "Cloister - Free Attack",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Cloister Entrance",
-        "LocationName": "Cloister Entrance - Grape Bunny Potion",
+        "Location": "Cloister",
+        "LocationName": "Cloister - Grape Bunny Potion",
         "slotId": 16,
         "Requirement": [
             {
@@ -4437,8 +4557,8 @@
     },
     {
         "Itemname": "BADGE_StyleComboNormal1QuickFar",
-        "Location": "Cloister Entrance",
-        "LocationName": "Cloister Entrance - Style Combo: Aerial A",
+        "Location": "Cloister",
+        "LocationName": "Cloister - Style Combo: Aerial A",
         "slotId": 1,
         "Requirement": [
             {
@@ -4449,68 +4569,68 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Cloister Entrance",
-        "LocationName": "Cloister Entrance - Kiwi Bunny Potion",
+        "Location": "Cloister",
+        "LocationName": "Cloister - Kiwi Bunny Potion",
         "slotId": 18,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_AREABOMB || ITEM_BombLengthExtend",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Cloister Main",
+        "Location": "Cloister Pre Boss",
         "LocationName": "Cloister Main - Blueberry Bunny Potion",
         "slotId": 22,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Cloister Main",
+        "Location": "Cloister Pre Boss",
         "LocationName": "Cloister Main - Lemon Bunny Potion",
         "slotId": 18,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "BADGE_BreakHeal",
-        "Location": "Cloister Main",
+        "Location": "Cloister Pre Boss",
         "LocationName": "Cloister Main - Coffee Break",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "ITEM_WALLJUMP",
-        "Location": "Cloister Main",
+        "Location": "Cloister Pre Boss",
         "LocationName": "Cloister Main - Parkour Boots",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Cloister Main",
-        "LocationName": "Cloister Main - Cherry Bunny Potion",
+        "Location": "Cloister Pre Boss",
+        "LocationName": "Cloister Pre Boss - Cherry Bunny Potion",
         "slotId": 17,
         "Requirement": [
             {
@@ -4521,8 +4641,8 @@
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "Cloister Main",
-        "LocationName": "Cloister Main - Astral Gear",
+        "Location": "Cloister Pre Boss",
+        "LocationName": "Cloister Boss - Astral Gear",
         "slotId": 46,
         "Requirement": [
             {
@@ -4533,8 +4653,8 @@
     },
     {
         "Itemname": "BADGE_QuickMPRegainB",
-        "Location": "Cloister Main",
-        "LocationName": "Cloister Main - MP Reset B",
+        "Location": "Cloister Pre Boss",
+        "LocationName": "Cloister Pre Boss - MP Reset B",
         "slotId": 1,
         "Requirement": [
             {
@@ -4557,7 +4677,7 @@
     },
     {
         "Itemname": "BADGE_StyleComboPassiveMAX",
-        "Location": "Cloister Main",
+        "Location": "Cloister Pre Boss",
         "LocationName": "Cloister Main - C. Rank Frenzy: Focus MAX",
         "slotId": 1,
         "Requirement": [
@@ -4577,12 +4697,12 @@
     },
     {
         "Itemname": "BADGE_LateAttack",
-        "Location": "Cloister Entrance",
-        "LocationName": "Cloister Entrance - Crouching Bunny",
+        "Location": "Cloister",
+        "LocationName": "Cloister - Crouching Bunny",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_LINEBOMB",
+                "Method": "(ITEM_BombLengthExtend || ITEM_AREABOMB) && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -4630,7 +4750,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_AREABOMB && ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -4642,7 +4762,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB && ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -4654,7 +4774,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB && ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -4704,6 +4824,10 @@
             {
                 "Method": "ITEM_AirDash && ChargeShot",
                 "Difficulty": 0
+            },
+            {
+                "Method": "RabbitJump && ChargeShot",
+                "Difficulty": 0
             }
         ]
     },
@@ -4722,7 +4846,7 @@
                 "Difficulty": 3
             },
             {
-                "Method": "ITEM_Rotater && ITEM_JETPACK2 && ITEM_AirDash",
+                "Method": "ITEM_Rotater && ITEM_JETPACK 2 && ITEM_AirDash",
                 "Difficulty": 0
             },
             {
@@ -4738,22 +4862,14 @@
         "slotId": 5,
         "Requirement": [
             {
-                "Method": "ITEM_AirDash && ITEM_WALLJUMP",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_JETPACK",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_DOUBLEJUMP",
+                "Method": "",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Gallery of Souls",
+        "Location": "Gallery of Souls Entrance",
         "LocationName": "Gallery of Souls - Blueberry Bunny Potion",
         "slotId": 10,
         "Requirement": [
@@ -4789,12 +4905,12 @@
     },
     {
         "Itemname": "BADGE_Instant1",
-        "Location": "Gallery of Souls",
-        "LocationName": "Gallery of Souls - Hero Call",
+        "Location": "Gallery of Souls Boss Area",
+        "LocationName": "Gallery of Souls Boss Area - Hero Call",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": -1
             }
         ]
@@ -4822,7 +4938,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_WALLJUMP && ITEM_JETPACK2",
+                "Method": "ITEM_WALLJUMP && ITEM_JETPACK 2",
                 "Difficulty": 0
             },
             {
@@ -4895,10 +5011,11 @@
         "Itemname": "STACKABLE_MP",
         "Location": "Verdazure Ocean",
         "LocationName": "Verdazure Ocean - Blueberry Bunny Potion #2",
+        "Note":"It will change",
         "slotId": 24,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB2",
+                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB 2",
                 "Difficulty": 0
             }
         ]
@@ -4906,7 +5023,7 @@
     {
         "Itemname": "BADGE_ComboTimeExtendB",
         "Location": "Verdazure Swamp",
-        "LocationName": "Verdazure Swamp - Combo Time Extend B",
+        "LocationName": "Verdazure Swamp - Combo Time Extend II",
         "slotId": 1,
         "Requirement": [
             {
@@ -4983,6 +5100,18 @@
         "Itemname": "BADGE_GStrongUpBulletCancelS",
         "Location": "Verdazure Swamp",
         "LocationName": "Verdazure Swamp - Bulletproof Pillar S",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_SnowMechanic",
+        "Location": "Verdazure Swamp",
+        "LocationName": "Verdazure Swamp - Snow Mechanic",
         "slotId": 1,
         "Requirement": [
             {
@@ -5082,15 +5211,15 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_BombLengthExtend3 && ITEM_LINEBOMB && Boss",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && Boss",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_WALLJUMP && ITEM_BombLengthExtend3 && ITEM_LINEBOMB && Boss",
+                "Method": "ITEM_WALLJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && Boss",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_HIJUMP && ITEM_JETPACK3 && ITEM_KNIFE && ITEM_BombLengthExtend3 && ITEM_LINEBOMB && Boss",
+                "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && Boss",
                 "Difficulty": 0
             }
         ]
@@ -5106,15 +5235,15 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_WALLJUMP && ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
+                "Method": "ITEM_WALLJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_HIJUMP && ITEM_JETPACK3 && ITEM_KNIFE && ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
+                "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -5169,7 +5298,7 @@
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "Snowveil",
+        "Location": "Snowveil Ex",
         "LocationName": "Snowveil - Astral Gear",
         "slotId": 32,
         "Requirement": [
@@ -5181,7 +5310,7 @@
     },
     {
         "Itemname": "BADGE_ChargeHeal",
-        "Location": "Snowveil",
+        "Location": "Snowveil Ex",
         "LocationName": "Snowveil - Life Steal",
         "slotId": 1,
         "Requirement": [
@@ -5193,7 +5322,7 @@
     },
     {
         "Itemname": "ITEM_Rotater",
-        "Location": "Snowveil",
+        "Location": "Snowveil Ex",
         "LocationName": "Snowveil - Vortex Gloves",
         "slotId": 1,
         "Requirement": [
@@ -5205,12 +5334,12 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Snowveil",
+        "Location": "Snowveil Ex",
         "LocationName": "Snowveil - Cherry Bunny Potion",
         "slotId": 22,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_JETPACK2",
+                "Method": "ITEM_SLIDE && ITEM_JETPACK 2",
                 "Difficulty": 0
             },
             {
@@ -5226,23 +5355,23 @@
         "slotId": 24,
         "Requirement": [
             {
-                "Method": "ITEM_LINEBOMB && ITEM_JETPACK2 && ITEM_DOUBLEJUMP",
+                "Method": "ITEM_LINEBOMB && ITEM_JETPACK 2 && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_LINEBOMB && ITEM_JETPACK3",
+                "Method": "ITEM_LINEBOMB && ITEM_JETPACK 3",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_LINEBOMB && ITEM_JETPACK2 && ITEM_HIJUMP && SpinnerBash",
+                "Method": "ITEM_LINEBOMB && ITEM_JETPACK 2 && ITEM_HIJUMP && SpinnerBash",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "BADGE_JetpackMP",
-        "Location": "Snowveil above Verglas Village",
-        "LocationName": "Snowveil above Verglas Village - Aerial Assist",
+        "Location": "Snowveil Ex",
+        "LocationName": "Snowveil - Aerial Assist",
         "slotId": 1,
         "Requirement": [
             {
@@ -5250,19 +5379,19 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_JETPACK3",
+                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_JETPACK 3",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Snowveil above Verglas Village",
-        "LocationName": "Snowveil above Verglas Village - Kiwi Bunny Potion",
+        "Location": "Snowveil Ex",
+        "LocationName": "Snowveil - Kiwi Bunny Potion",
         "slotId": 22,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_JETPACK3 && ITEM_AirDash",
+                "Method": "ITEM_SLIDE && ITEM_JETPACK 3 && ITEM_AirDash",
                 "Difficulty": 0
             },
             {
@@ -5290,7 +5419,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -5298,7 +5427,7 @@
     {
         "Itemname": "ITEM_GoldenGlove",
         "Location": "Snow City",
-        "LocationName": "Snow City - Trinketeer's Fortune",
+        "LocationName": "Snow City Shop - Trinketeer's Fortune",
         "slotId": 1,
         "Requirement": [
             {
@@ -5310,7 +5439,7 @@
     {
         "Itemname": "BADGE_DodgeSlide",
         "Location": "Snow City",
-        "LocationName": "Snow City - Dodge Enhancer: Slide",
+        "LocationName": "Snow City Shop - Dodge Enhancer: Slide",
         "slotId": 1,
         "Requirement": [
             {
@@ -5322,7 +5451,7 @@
     {
         "Itemname": "BADGE_GroundNormalCombo4AltDmg",
         "Location": "Snow City",
-        "LocationName": "Snow City - Slayer",
+        "LocationName": "Snow City Shop - Slayer",
         "slotId": 1,
         "Requirement": [
             {
@@ -5334,7 +5463,7 @@
     {
         "Itemname": "BADGE_AutoChargeCombo",
         "Location": "Snow City",
-        "LocationName": "Snow City - Ranged Roulette",
+        "LocationName": "Snow City Shop - Ranged Roulette",
         "slotId": 1,
         "Requirement": [
             {
@@ -5346,7 +5475,7 @@
     {
         "Itemname": "BADGE_1HealthTypeD",
         "Location": "Snow City",
-        "LocationName": "Snow City - Perseverance C",
+        "LocationName": "Snow City Shop - Perseverance C",
         "slotId": 1,
         "Requirement": [
             {
@@ -5358,7 +5487,7 @@
     {
         "Itemname": "BADGE_KnockConvert",
         "Location": "Snow City",
-        "LocationName": "Snow City - Ballasting Off",
+        "LocationName": "Snow City Shop - Ballasting Off",
         "slotId": 1,
         "Requirement": [
             {
@@ -5370,7 +5499,7 @@
     {
         "Itemname": "BADGE_BombCharge",
         "Location": "Snow City",
-        "LocationName": "Snow City - MP Surge: Explosives",
+        "LocationName": "Snow City Shop - MP Surge: Explosives",
         "slotId": 1,
         "Requirement": [
             {
@@ -5382,7 +5511,7 @@
     {
         "Itemname": "BADGE_MPAllBurst",
         "Location": "Snow City",
-        "LocationName": "Snow City - Mana Flare",
+        "LocationName": "Snow City Shop - Mana Flare",
         "slotId": 1,
         "Requirement": [
             {
@@ -5394,7 +5523,7 @@
     {
         "Itemname": "BADGE_FasterTeviStrongGroundUp",
         "Location": "Snow City",
-        "LocationName": "Snow City - Fast Pillar",
+        "LocationName": "Snow City Shop - Fast Pillar",
         "slotId": 1,
         "Requirement": [
             {
@@ -5406,7 +5535,7 @@
     {
         "Itemname": "STACKABLE_BAG",
         "Location": "Snow City",
-        "LocationName": "Shop Snow City - Bag Expander",
+        "LocationName": "Snow City Shop - Bag Expander",
         "slotId": 34,
         "Requirement": [
             {
@@ -5418,7 +5547,7 @@
     {
         "Itemname": "STACKABLE_EP",
         "Location": "Snow City",
-        "LocationName": "Shop Snow City - Lemon Bunny Potion",
+        "LocationName": "Snow City Shop - Lemon Bunny Potion",
         "slotId": 34,
         "Requirement": [
             {
@@ -5430,7 +5559,7 @@
     {
         "Itemname": "STACKABLE_HP",
         "Location": "Snow City",
-        "LocationName": "Shop Snow City - Kiwi Bunny Potion",
+        "LocationName": "Snow City Shop - Kiwi Bunny Potion",
         "slotId": 34,
         "Requirement": [
             {
@@ -5442,7 +5571,7 @@
     {
         "Itemname": "STACKABLE_MATK",
         "Location": "Snow City",
-        "LocationName": "Shop Snow City - Cherry Bunny Potion",
+        "LocationName": "Snow City Shop - Cherry Bunny Potion",
         "slotId": 34,
         "Requirement": [
             {
@@ -5454,7 +5583,7 @@
     {
         "Itemname": "STACKABLE_MP",
         "Location": "Snow City",
-        "LocationName": "Shop Snow City - Blueberry Bunny Potion",
+        "LocationName": "Snow City Shop - Blueberry Bunny Potion",
         "slotId": 34,
         "Requirement": [
             {
@@ -5466,7 +5595,7 @@
     {
         "Itemname": "STACKABLE_RATK",
         "Location": "Snow City",
-        "LocationName": "Shop Snow City - Grape Bunny Potion",
+        "LocationName": "Snow City Shop - Grape Bunny Potion",
         "slotId": 34,
         "Requirement": [
             {
@@ -5478,7 +5607,7 @@
     {
         "Itemname": "STACKABLE_SHARD",
         "Location": "Snow City",
-        "LocationName": "Shop Snow City - Rainbow Bunny Potion",
+        "LocationName": "Snow City Shop Chap 6 - Rainbow Bunny Potion",
         "slotId": 34,
         "Requirement": [
             {
@@ -5494,7 +5623,7 @@
         "slotId": 27,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
+                "Method": "( ITEM_BombLengthExtend 3 || ITEM_AREABOMB ) && ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -5506,7 +5635,19 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_LINEBOMB",
+                "Method": "ITEM_LINEBOMB && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_SnowMechanic",
+        "Location": "Snowveil Above HQ",
+        "LocationName": "Snowveil Above HQ - Snow Orb",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -5518,7 +5659,7 @@
         "slotId": 23,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB && EVENT_HQSwitch1",
                 "Difficulty": 0
             }
         ]
@@ -5530,7 +5671,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_Rotater",
+                "Method": "ITEM_AirSlide && EVENT_HQSwitch1 && Chargeshot",
                 "Difficulty": 0
             }
         ]
@@ -5542,7 +5683,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_AREABOMB && ITEM_LINEBOMB",
+                "Method": "ITEM_LINEBOMB && ITEM_SLIDE && EVENT_HQSwitch1",
                 "Difficulty": 0
             }
         ]
@@ -5561,12 +5702,12 @@
     },
     {
         "Itemname": "BADGE_DodgeStrongAirDown",
-        "Location": "Golden Hands HQ",
+        "Location": "Golden Hands HQ Extra",
         "LocationName": "Golden Hands HQ - Dodge Enhancer: Spanner",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ChargeShot",
+                "Method": "ITEM_SLIDE && ITEM_Rotater && ChargeShot && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -5578,7 +5719,19 @@
         "slotId": 12,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE",
+                "Method": "ITEM_SLIDE && ChargeShot && EVENT_HQSwitch1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_HQSwitch1",
+        "Location": "Golden Hands HQ",
+        "LocationName": "Golden Hands HQ - EVENT_HQSwitch1",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_SLIDE && ChargeShot && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -5624,7 +5777,12 @@
             {
                 "Method": "ITEM_JETPACK",
                 "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_LINEBOMB && ChargeShot && ITEM_SLIDE",
+                "Difficulty": 0
             }
+
         ]
     },
     {
@@ -5634,7 +5792,19 @@
         "slotId": 36,
         "Requirement": [
             {
-                "Method": "Boss",
+                "Method": "ITEM_WALLJUMP && Boss",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_DOUBLEJUMP && Boss",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_JETPACK && Boss",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_LINEBOMB && ChargeShot && ITEM_SLIDE && Boss",
                 "Difficulty": 0
             }
         ]
@@ -5722,7 +5892,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_KNIFE || VenabBomB || ChargeShot || ITEM_AREABOMB",
                 "Difficulty": 0
             }
         ]
@@ -5758,7 +5928,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_LINEBOMB",
+                "Method": "ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -5782,7 +5952,7 @@
         "slotId": 28,
         "Requirement": [
             {
-                "Method": "ITEM_Rotater",
+                "Method": "ITEM_Rotater && ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -5842,7 +6012,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB",
+                "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -5860,6 +6030,10 @@
             {
                 "Method": "ITEM_SLIDE && ITEM_AirSlide && ITEM_KNIFE",
                 "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_SLIDE && ITEM_AirSlide && ITEM_AREABOMB",
+                "Difficulty": 0
             }
         ]
     },
@@ -5867,18 +6041,19 @@
         "Itemname": "BADGE_BadgeCDReduce",
         "Location": "Dreamless Depths 2",
         "LocationName": "Dreamless Depths 2 - Sigil Quicken",
+        "Note": "Wrong Location name",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK2 && ItemUse",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK 2 && ItemUse && ITEM_LINEBOMB",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash && ITEM_LINEBOMB",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_HIJUMP && ItemUse",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_HIJUMP && ItemUse && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -5898,7 +6073,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_JETPACK2 && ITEM_AirDash",
+                "Method": "ITEM_JETPACK 2 && ITEM_AirDash",
                 "Difficulty": 0
             },
             {
@@ -5926,11 +6101,15 @@
         "slotId": 24,
         "Requirement": [
             {
-                "Method": "ITEM_LINEBOMB && ITEM_JETPACK",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_LINEBOMB && ITEM_DOUBLEJUMP",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_DOUBLEJUMP",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && EnemyManip",
                 "Difficulty": 0
             }
         ]
@@ -5958,7 +6137,7 @@
         "slotId": 17,
         "Requirement": [
             {
-                "Method": "ITEM_AREABOMB && ITEM_LINEBOMB",
+                "Method": "ITEM_SLIDE || (ITEM_AREABOMB && ITEM_LINEBOMB)",
                 "Difficulty": 0
             }
         ]
@@ -5982,7 +6161,19 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "SpinnerBash",
+                "Method": "ITEM_LINEBOMB && (SpinnerBash || ITEM_DOUBLEJUMP || ITEM_JETPACK)",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_SnowMechanic",
+        "Location": "Heavens Valley Snow Route Middle",
+        "LocationName": "Heavens Valley Snow Route Middle - Snow Orb",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -6025,7 +6216,7 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Sinner's Oath",
+        "Location": "Illusion Palace Entrance",
         "LocationName": "Sinner's Oath - Kiwi Bunny Potion",
         "slotId": 29,
         "Requirement": [
@@ -6037,12 +6228,12 @@
     },
     {
         "Itemname": "ITEM_RapidShots",
-        "Location": "Sinner's Oath",
+        "Location": "Sinner's Oath Entrance",
         "LocationName": "Sinner's Oath - Rapid Shots Modchip",
         "slotId": 29,
         "Requirement": [
             {
-                "Method": "ITEM_AirSlide && ITEM_SLIDE",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -6061,20 +6252,20 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Sinner's Oath",
+        "Location": "Sinner's Oath Entrance",
         "LocationName": "Sinners Hell - Grape Bunny Potion",
         "slotId": 29,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_DOUBLEJUMP",
+                "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_JETPACK",
+                "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_BombLengthExtend3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_WALLJUMP",
+                "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_WALLJUMP",
                 "Difficulty": 0
             }
         ]
@@ -6086,15 +6277,15 @@
         "slotId": 29,
         "Requirement": [
             {
-                "Method": "ITEM_DOUBLEJUMP",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_SLIDE",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_JETPACK",
+                "Method": "ITEM_JETPACK && ITEM_SLIDE",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_AirDash",
+                "Method": "ITEM_AirDash && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -6106,11 +6297,11 @@
         "slotId": 29,
         "Requirement": [
             {
-                "Method": "ITEM_JETPACK && ITEM_WALLJUMP && ITEM_DOUBLEJUMP && ITEM_Rotater",
+                "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP && ITEM_Rotater",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_JETPACK && ITEM_WALLJUMP && ITEM_DOUBLEJUMP && ITEM_LINEBOMB",
+                "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -6122,7 +6313,7 @@
         "slotId": 29,
         "Requirement": [
             {
-                "Method": "ITEM_JETPACK3 && ITEM_AirDash && ITEM_Rotater && ITEM_SLIDE",
+                "Method": "ITEM_JETPACK 3 && ITEM_AirDash && ITEM_Rotater && ITEM_SLIDE",
                 "Difficulty": 0
             },
             {
@@ -6242,7 +6433,7 @@
     {
         "Itemname": "Useable_VenaBombBig",
         "Location": "Vena Shop",
-        "LocationName": "Vena Shop - Cloud Bomb",
+        "LocationName": "Vena Shop Chap 4 - Cloud Bomb",
         "slotId": 1,
         "Requirement": [
             {
@@ -6254,7 +6445,7 @@
     {
         "Itemname": "Useable_VenaBombBunBun",
         "Location": "Vena Shop",
-        "LocationName": "Vena Shop - BB Rabbit",
+        "LocationName": "Vena Shop Chap 2 - BB Rabbit",
         "slotId": 1,
         "Requirement": [
             {
@@ -6266,7 +6457,7 @@
     {
         "Itemname": "Useable_VenaBombDispel",
         "Location": "Vena Shop",
-        "LocationName": "Vena Shop - Calico Bomb",
+        "LocationName": "Vena Shop Chap 3 - Calico Bomb",
         "slotId": 1,
         "Requirement": [
             {
@@ -6278,7 +6469,7 @@
     {
         "Itemname": "Useable_VenaBombHealBlock",
         "Location": "Vena Shop",
-        "LocationName": "Vena Shop - Tabby Bomb",
+        "LocationName": "Vena Shop Chap 5 - Tabby Bomb",
         "slotId": 1,
         "Requirement": [
             {
@@ -6386,7 +6577,7 @@
     {
         "Itemname": "BADGE_SableALastHitEnhance",
         "Location": "Crafting",
-        "LocationName": "Crafting - Sable Type-A: Voracious",
+        "LocationName": "Crafting Chap 1 - Sable Type-A: Voracious",
         "slotId": 1,
         "Requirement": [
             {
@@ -6469,8 +6660,8 @@
     },
     {
         "Itemname": "BADGE_RememberBrutalForce",
-        "Location": "Moros City",
-        "LocationName": "Moros City - Muscle Memory",
+        "Location": "Morose City",
+        "LocationName": "Morose City Waffle Shop - Muscle Memory",
         "slotId": 1,
         "Requirement": [
             {
@@ -6482,7 +6673,7 @@
     {
         "Itemname": "BADGE_CeliaALongStun",
         "Location": "Crafting",
-        "LocationName": "Crafting - Celia Type-A: Stunning",
+        "LocationName": "Crafting Chap 1 - Celia Type-A: Stunning",
         "slotId": 1,
         "Requirement": [
             {
@@ -6566,7 +6757,7 @@
     {
         "Itemname": "BADGE_ComboStyleDamageUp",
         "Location": "Crafting",
-        "LocationName": "Crafting - C. Rank Frenzy: Fierce",
+        "LocationName": "Crafting Chap 2 - C. Rank Frenzy: Fierce",
         "slotId": 1,
         "Requirement": [
             {
@@ -6578,7 +6769,7 @@
     {
         "Itemname": "BADGE_FrameCancel",
         "Location": "Crafting",
-        "LocationName": "Crafting - Full Stop A",
+        "LocationName": "Crafting Chap 2 - Full Stop A",
         "slotId": 1,
         "Requirement": [
             {
@@ -6590,7 +6781,7 @@
     {
         "Itemname": "BADGE_NormalShotReducerB",
         "Location": "Crafting",
-        "LocationName": "Crafting - Orbital Efficiency B",
+        "LocationName": "Crafting Chap 2 - Orbital Efficiency B",
         "slotId": 1,
         "Requirement": [
             {
@@ -6602,7 +6793,7 @@
     {
         "Itemname": "BADGE_StyleComboWeakGroundUpA",
         "Location": "Crafting",
-        "LocationName": "Crafting - Style Combo: Upper A",
+        "LocationName": "Crafting Chap 2 - Style Combo: Upper A",
         "slotId": 1,
         "Requirement": [
             {
@@ -6614,7 +6805,7 @@
     {
         "Itemname": "BADGE_NormalShotWhenChargedShot",
         "Location": "Crafting",
-        "LocationName": "Crafting - Two-pronged Shot",
+        "LocationName": "Crafting Chap 3 - Two-pronged Shot",
         "slotId": 1,
         "Requirement": [
             {
@@ -6626,7 +6817,7 @@
     {
         "Itemname": "BADGE_120CHARGE",
         "Location": "Crafting",
-        "LocationName": "Crafting - MP Quicken: Melee",
+        "LocationName": "Crafting Chap 3 - MP Quicken: Melee",
         "slotId": 1,
         "Requirement": [
             {
@@ -6638,11 +6829,11 @@
     {
         "Itemname": "BADGE_AllMeleeSpeedUp",
         "Location": "Crafting",
-        "LocationName": "Crafting - Dextrous",
+        "LocationName": "Crafting Chap 3 - Dextrous",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Chapter 3",
+                "Method": "Coins 250 Chap 3 && Chapter 3",
                 "Difficulty": 0
             }
         ]
@@ -6650,7 +6841,7 @@
     {
         "Itemname": "BADGE_PowerDrop",
         "Location": "Crafting",
-        "LocationName": "Crafting - Drop Kick",
+        "LocationName": "Crafting Chap 3 - Drop Kick",
         "slotId": 1,
         "Requirement": [
             {
@@ -6662,7 +6853,7 @@
     {
         "Itemname": "BADGE_DominantEffectDownA",
         "Location": "Crafting",
-        "LocationName": "Crafting - Weak Dominance A",
+        "LocationName": "Crafting Chap 3 - Weak Dominance A",
         "slotId": 1,
         "Requirement": [
             {
@@ -6674,7 +6865,7 @@
     {
         "Itemname": "BADGE_QuickDropExtendA",
         "Location": "Crafting",
-        "LocationName": "Crafting - Power Drop",
+        "LocationName": "Crafting Chap 4 - Power Drop",
         "slotId": 1,
         "Requirement": [
             {
@@ -6686,7 +6877,7 @@
     {
         "Itemname": "BADGE_Cannon",
         "Location": "Crafting",
-        "LocationName": "Crafting - Magic Cannon",
+        "LocationName": "Crafting Chap 4 - Magic Cannon",
         "slotId": 1,
         "Requirement": [
             {
@@ -6698,7 +6889,7 @@
     {
         "Itemname": "BADGE_NormalSupportShot",
         "Location": "Crafting",
-        "LocationName": "Crafting - Synchronized Support I",
+        "LocationName": "Crafting Chap 4 - Synchronized Support I",
         "slotId": 1,
         "Requirement": [
             {
@@ -6710,7 +6901,7 @@
     {
         "Itemname": "BADGE_MAXHPBIGUP",
         "Location": "Crafting",
-        "LocationName": "Crafting - Health Surge",
+        "LocationName": "Crafting Chap 4 - Health Surge",
         "slotId": 1,
         "Requirement": [
             {
@@ -6722,7 +6913,7 @@
     {
         "Itemname": "BADGE_BoostFullOffense",
         "Location": "Crafting",
-        "LocationName": "Crafting - Core Expansion: Full Offense",
+        "LocationName": "Crafting Chap 4 - Core Expansion: Full Offense",
         "slotId": 1,
         "Requirement": [
             {
@@ -6734,7 +6925,7 @@
     {
         "Itemname": "BADGE_MAXHP2MP",
         "Location": "Crafting",
-        "LocationName": "Crafting - MP Quicken: Sacrifice",
+        "LocationName": "Crafting Chap 5 - MP Quicken: Sacrifice",
         "slotId": 1,
         "Requirement": [
             {
@@ -6746,7 +6937,7 @@
     {
         "Itemname": "BADGE_CraftBadgeCost",
         "Location": "Crafting",
-        "LocationName": "Crafting - EP Booster: Synthesizer",
+        "LocationName": "Crafting Chap 5 - EP Booster: Synthesizer",
         "slotId": 1,
         "Requirement": [
             {
@@ -6758,7 +6949,7 @@
     {
         "Itemname": "BADGE_StyleComboBackImageS",
         "Location": "Crafting",
-        "LocationName": "Crafting - Style Combo: Afterimage S",
+        "LocationName": "Crafting Chap 5 - Style Combo: Afterimage S",
         "slotId": 1,
         "Requirement": [
             {
@@ -6770,7 +6961,7 @@
     {
         "Itemname": "BADGE_AntiAirPlat",
         "Location": "Crafting",
-        "LocationName": "Crafting - Mana Platform",
+        "LocationName": "Crafting Chap 5 - Mana Platform",
         "slotId": 1,
         "Requirement": [
             {
@@ -6782,7 +6973,7 @@
     {
         "Itemname": "BADGE_StyleComboHeavyGroundFrontA",
         "Location": "Crafting",
-        "LocationName": "Crafting - Style Combo: Tornado A",
+        "LocationName": "Crafting Chap 5 - Style Combo: Tornado A",
         "slotId": 1,
         "Requirement": [
             {
@@ -6794,7 +6985,7 @@
     {
         "Itemname": "BADGE_AutoBombChain",
         "Location": "Crafting",
-        "LocationName": "Crafting - Daisy Chain",
+        "LocationName": "Crafting Chap 6 - Daisy Chain",
         "slotId": 1,
         "Requirement": [
             {
@@ -6806,7 +6997,7 @@
     {
         "Itemname": "BADGE_BounceTeviStrongAirUp",
         "Location": "Crafting",
-        "LocationName": "Crafting - Spanner Bash: Bounce",
+        "LocationName": "Crafting Chap 6 - Spanner Bash: Bounce",
         "slotId": 1,
         "Requirement": [
             {
@@ -6818,7 +7009,7 @@
     {
         "Itemname": "BADGE_SuperFrameCancel",
         "Location": "Crafting",
-        "LocationName": "Crafting - Full Stop B",
+        "LocationName": "Crafting Chap 6 - Full Stop B",
         "slotId": 1,
         "Requirement": [
             {
@@ -6830,7 +7021,7 @@
     {
         "Itemname": "BADGE_ArmorCritCrit",
         "Location": "Crafting",
-        "LocationName": "Crafting - Armor Piercer",
+        "LocationName": "Crafting Chap 6 - Armor Piercer",
         "slotId": 1,
         "Requirement": [
             {
@@ -6842,7 +7033,7 @@
     {
         "Itemname": "BADGE_Amulet10",
         "Location": "Crafting",
-        "LocationName": "Crafting - Supernova",
+        "LocationName": "Crafting Chap 6 - Supernova",
         "slotId": 1,
         "Requirement": [
             {
@@ -6854,7 +7045,7 @@
     {
         "Itemname": "BADGE_MAXMPCost",
         "Location": "Crafting",
-        "LocationName": "Crafting - EP Booster: MP",
+        "LocationName": "Crafting Chap 7 - EP Booster: MP",
         "slotId": 1,
         "Requirement": [
             {
@@ -6866,7 +7057,7 @@
     {
         "Itemname": "BADGE_100COMBO",
         "Location": "Crafting",
-        "LocationName": "Crafting - The Untamed",
+        "LocationName": "Crafting Chap 7 - The Untamed",
         "slotId": 1,
         "Requirement": [
             {
@@ -6878,7 +7069,7 @@
     {
         "Itemname": "BADGE_DominantEffectDownB",
         "Location": "Crafting",
-        "LocationName": "Crafting - Weak Dominance B",
+        "LocationName": "Crafting Chap 7 - Weak Dominance B",
         "slotId": 1,
         "Requirement": [
             {
@@ -6890,7 +7081,7 @@
     {
         "Itemname": "BADGE_RangeBreak",
         "Location": "Crafting",
-        "LocationName": "Crafting - Range Break",
+        "LocationName": "Crafting Chap 7 - Range Break",
         "slotId": 1,
         "Requirement": [
             {
@@ -7298,7 +7489,7 @@
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend2 && Upgrade 3 && Fire",
+                "Method": "ITEM_BombLengthExtend 2 && Upgrade 3 && Fire",
                 "Difficulty": 0
             }
         ]
@@ -7430,7 +7621,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && ITEM_ORB3 && Core 4",
+                "Method": "Coins 250 && ITEM_ORB 3 && Core 4",
                 "Difficulty": 0
             }
         ]
@@ -7442,7 +7633,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && ITEM_ORB3 && Core 5",
+                "Method": "Coins 250 && ITEM_ORB 3 && Core 5",
                 "Difficulty": 0
             }
         ]
@@ -7454,7 +7645,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && ITEM_ORB3 && Core 7",
+                "Method": "Coins 250 && ITEM_ORB 3 && Core 7",
                 "Difficulty": 0
             }
         ]
@@ -7466,7 +7657,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && ITEM_ORB3 && Core 8",
+                "Method": "Coins 250 && ITEM_ORB 3 && Core 8",
                 "Difficulty": 0
             }
         ]
