@@ -5229,6 +5229,18 @@
         ]
     },
     {
+        "Itemname": "EVENT_SnowMechanic",
+        "Location": "Verdazure Swamp",
+        "LocationName": "Verdazure Swamp - Snow Orb",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "STACKABLE_RATK",
         "Location": "Verdazure Swamp",
         "LocationName": "Verdazure Swamp - Grape Bunny Potion",
@@ -6366,6 +6378,18 @@
         "Requirement": [
             {
                 "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_SnowMechanic",
+        "Location": "Heavens Valley Snow Route Middle",
+        "LocationName": "Heavens Valley Snow Route Middle - Snow Orb",
+        "slotId": 24,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
