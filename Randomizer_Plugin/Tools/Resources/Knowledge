@@ -16,4 +16,4 @@ EarlyDream: Enter DreamKeeper without destroying 2 Snow Orbs
 
 BarrierSkip: Easy> Airdash Hard> Slide
 
-CEVENT_ : Creates a EVENT_ for Logic dependency
+EVENT_ : Creates a EVENT_ for Logic dependency

@@ -1737,7 +1737,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Verdazure Sea",
+                    "Exit": "Verdazure Sea West",
                     "Method": "ITEM_LINEBOMB || ITEM_WATERMOVEMENT"
                 }
             ]

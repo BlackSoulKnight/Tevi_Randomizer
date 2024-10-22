@@ -561,6 +561,18 @@
         ]
     },
     {
+        "Itemname": "EVENT_Fire",
+        "Location": "Solennian Ruins",
+        "LocationName": "Solennian Ruins - Fire",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "STACKABLE_MATK",
         "Location": "Solennian Ruins",
         "LocationName": "Solennian Ruins - Cherry Bunny Potion",
@@ -741,10 +753,34 @@
         ]
     },
     {
+        "Itemname": "EVENT_Light",
+        "Location": "Heavens Valley West",
+        "LocationName": "Heavens Valley West - Light",
+        "slotId": 25,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "STACKABLE_EP",
         "Location": "Valhalla Breath West",
         "LocationName": "Valhalla Breath West - Lemon Bunny Potion",
         "slotId": 13,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_Light",
+        "Location": "Valhalla Breath West",
+        "LocationName": "Valhalla Breath West - Light",
+        "slotId": 1,
         "Requirement": [
             {
                 "Method": "",
@@ -988,7 +1024,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 2000 && Demonfray",
+                "Method": "Coins 2000 && EVENT_Demonfray",
                 "Difficulty": 0
             }
         ]
@@ -1000,7 +1036,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 2600 && Demonfray",
+                "Method": "Coins 2600 && EVENT_Demonfray",
                 "Difficulty": 0
             }
         ]
@@ -1012,7 +1048,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 2750 && Demonfray",
+                "Method": "Coins 2750 && EVENT_Demonfray",
                 "Difficulty": 0
             }
         ]
@@ -1024,7 +1060,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 2750 && Demonfray",
+                "Method": "Coins 2750 && EVENT_Demonfray",
                 "Difficulty": 0
             }
         ]
@@ -1357,6 +1393,18 @@
         "Requirement": [
             {
                 "Method": "ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_Fire",
+        "Location": "Travoll Mines",
+        "LocationName": "Travoll Mines - Fire",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -1814,6 +1862,18 @@
         ]
     },
     {
+        "Itemname": "EVENT_Earth",
+        "Location": "Gleamwood Middle",
+        "LocationName": "Gleamwood Upper - Earth",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "EVENT_EliteChallangeC",
         "Location": "Gleamwood Ulvosa Exit",
         "LocationName": "Gleamwood Upper - Elite",
@@ -1833,6 +1893,18 @@
         "Requirement": [
             {
                 "Method": "ChargeShot",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_Earth",
+        "Location": "Gleamwood Right",
+        "LocationName": "Ulskan Village Area - Earth",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -2398,6 +2470,18 @@
         ]
     },
     {
+        "Itemname": "EVENT_Fire",
+        "Location": "Relicts",
+        "LocationName": "Relicts - Fire",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "BADGE_8thDamageHeal",
         "Location": "Relicts",
         "LocationName": "Relicts - Attenu-8",
@@ -2596,7 +2680,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 2000 && Memloch",
+                "Method": "Coins 2000 && EVENT_Memloch",
                 "Difficulty": 0
             }
         ]
@@ -2608,7 +2692,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 2650 && Memloch",
+                "Method": "Coins 2650 && EVENT_Memloch",
                 "Difficulty": 0
             }
         ]
@@ -2620,7 +2704,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 1800 && Memloch",
+                "Method": "Coins 1800 && EVENT_Memloch",
                 "Difficulty": 0
             }
         ]
@@ -2632,7 +2716,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 2250 && Memloch",
+                "Method": "Coins 2250 && EVENT_Memloch",
                 "Difficulty": 0
             }
         ]
@@ -3071,6 +3155,18 @@
         ]
     },
     {
+        "Itemname": "EVENT_Dark",
+        "Location": "Pre Swamp",
+        "LocationName": "Swamp Entrance - Dark",
+        "slotId": 12,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "BADGE_AirComboExtend",
         "Location": "Pre Swamp",
         "LocationName": "Swamp - Aerial Kinetics",
@@ -3090,6 +3186,18 @@
         "Requirement": [
             {
                 "Method": "ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_Dark",
+        "Location": "Swamp",
+        "LocationName": "Swamp - Dark",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -3198,6 +3306,18 @@
         "Requirement": [
             {
                 "Method": "ChargeShot",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_EliteChallangeE",
+        "Location": "Tartarus",
+        "LocationName": "Tartarus - Elite E",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -3521,7 +3641,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_LINEBOMB && (ITEM_DOUBLEJUMP || ITEM_Airdash || ITEM_JETPACK || ITEM_HIJUMP)",
+                "Method": "ITEM_LINEBOMB && (ITEM_DOUBLEJUMP || ITEM_AirDash || ITEM_JETPACK || ITEM_HIJUMP)",
                 "Difficulty": 0
             }
         ]
@@ -3688,8 +3808,8 @@
     },
     {
         "Itemname": "BADGE_DodgeWeakAirDown",
-        "Location": "Lab Extended",
-        "LocationName": "Lab Extended - Dodge Enhancer: Spiral",
+        "Location": "Lab",
+        "LocationName": "Lab - Dodge Enhancer: Spiral",
         "slotId": 1,
         "Requirement": [
             {
@@ -3700,8 +3820,8 @@
     },
     {
         "Itemname": "BADGE_BoostCharging",
-        "Location": "Lab Extended",
-        "LocationName": "Lab Extended - Core Expansion: Charge",
+        "Location": "Lab",
+        "LocationName": "Lab - Core Expansion: Charge",
         "slotId": 1,
         "Requirement": [
             {
@@ -3712,8 +3832,8 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Lab Extended",
-        "LocationName": "Lab Extended - Lemon Bunny Potion #1",
+        "Location": "Lab",
+        "LocationName": "Lab - Lemon Bunny Potion #1",
         "slotId": 20,
         "Requirement": [
             {
@@ -3724,7 +3844,7 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Lab Extended",
+        "Location": "Lab",
         "LocationName": "Lab Extended - Lemon Bunny Potion #2",
         "slotId": 19,
         "Requirement": [
@@ -3742,6 +3862,18 @@
         "Requirement": [
             {
                 "Method": "Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_Demonfray",
+        "Location": "Lab",
+        "LocationName": "Lab - Demon Fray",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -3807,6 +3939,18 @@
         ]
     },
     {
+        "Itemname": "EVENT_Water",
+        "Location": "Verdazure Sea West",
+        "LocationName": "Verdazure Sea - Hydrodynamo",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "STACKABLE_HP",
         "Location": "Verdazure Sea West",
         "LocationName": "Verdazure Sea - Kiwi Bunny Potion",
@@ -3822,6 +3966,18 @@
         "Itemname": "BADGE_CommonDropRecover",
         "Location": "Verdazure Sea East",
         "LocationName": "Verdazure Sea - Grub Guru",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_Water",
+        "Location": "Verdazure Sea East",
+        "LocationName": "Verdazure Sea - Water",
         "slotId": 1,
         "Requirement": [
             {
@@ -3874,6 +4030,18 @@
         "Requirement": [
             {
                 "Method": "ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_Dark",
+        "Location": "Blushwood",
+        "LocationName": "Blushwood - Dark",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -3990,6 +4158,18 @@
         "Requirement": [
             {
                 "Method": "ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_EliteChallangeF",
+        "Location": "Valhalla City",
+        "LocationName": "Valhalla City - Elite F",
+        "slotId": 18,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -4768,6 +4948,18 @@
         ]
     },
     {
+        "Itemname": "EVENT_Memloch",
+        "Location": "Gallery of Mirrors East",
+        "LocationName": "Gallery of Mirrors East - Memloch",
+        "slotId": 47,
+        "Requirement": [
+            {
+                "Method": "ITEM_BombLengthExtend",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "STACKABLE_HP",
         "Location": "Gallery of Mirrors East",
         "LocationName": "Gallery of Mirrors East - Kiwi Bunny Potion",
@@ -4918,7 +5110,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_WALLJUMP && WaterMovement",
+                "Method": "ITEM_WALLJUMP && ITEM_WATERMOVEMENT",
                 "Difficulty": 0
             },
             {
@@ -4926,11 +5118,11 @@
                 "Difficulty": 0
             },
             {
-                "Method": "WaterMovement && ITEM_AirDash && ITEM_DOUBLEJUMP",
+                "Method": "ITEM_WATERMOVEMENT && ITEM_AirDash && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "WaterMovement && ITEM_DOUBLEJUMP && ITEM_JETPACK",
+                "Method": "ITEM_WATERMOVEMENT && ITEM_DOUBLEJUMP && ITEM_JETPACK",
                 "Difficulty": 0
             }
         ]
@@ -5016,6 +5208,18 @@
         "Itemname": "BADGE_BOnceHeal",
         "Location": "Verdazure Swamp",
         "LocationName": "Verdazure Swamp - Enthusiastic Excavator",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_Dark",
+        "Location": "Verdazure Swamp",
+        "LocationName": "Verdazure Swamp - Dark",
         "slotId": 1,
         "Requirement": [
             {
@@ -5244,6 +5448,18 @@
         "Requirement": [
             {
                 "Method": "ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_Air",
+        "Location": "Snowveil",
+        "LocationName": "Snowveil - Air",
+        "slotId": 14,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -5605,6 +5821,18 @@
         ]
     },
     {
+        "Itemname": "EVENT_Air",
+        "Location": "Snowveil Above HQ",
+        "LocationName": "Snowveil Above HQ - Air",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "EVENT_SnowMechanic",
         "Location": "Snowveil Above HQ",
         "LocationName": "Snowveil Above HQ - Snow Orb",
@@ -5635,7 +5863,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_AirSlide && EVENT_HQSwitch1 && Chargeshot",
+                "Method": "ITEM_AirSlide && EVENT_HQSwitch1 && ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -6054,6 +6282,30 @@
         "Requirement": [
             {
                 "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_Air",
+        "Location": "Heavens Valley Snow Route Low",
+        "LocationName": "Heavens Valley Snow Route Low - Air",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_Light",
+        "Location": "Heavens Valley Snow Route Low",
+        "LocationName": "Heavens Valley Snow Route Low - Light",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -7105,7 +7357,7 @@
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "ITEM_KNIFE && Upgrade 4 && Air",
+                "Method": "ITEM_KNIFE && Upgrade 4 && EVENT_Air",
                 "Difficulty": 0
             }
         ]
@@ -7129,7 +7381,7 @@
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "ITEM_ORB && Upgrade 3 && Air",
+                "Method": "ITEM_ORB && Upgrade 3 && EVENT_Air",
                 "Difficulty": 0
             }
         ]
@@ -7309,7 +7561,7 @@
         "slotId": 2,
         "Requirement": [
             {
-                "Method": "ITEM_WALLJUMP && Upgrade 2 && Air",
+                "Method": "ITEM_WALLJUMP && Upgrade 2 && EVENT_Air",
                 "Difficulty": 0
             }
         ]
@@ -7321,7 +7573,7 @@
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "ITEM_WALLJUMP && Upgrade 2 && Air",
+                "Method": "ITEM_WALLJUMP && Upgrade 2 && EVENT_Air",
                 "Difficulty": 0
             }
         ]
@@ -7369,7 +7621,7 @@
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "ITEM_BoostSystem && Upgrade 5 && Air",
+                "Method": "ITEM_BoostSystem && Upgrade 5 && EVENT_Air",
                 "Difficulty": 0
             }
         ]
@@ -7393,7 +7645,7 @@
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "ITEM_OrbAmulet && Upgrade 5 && Air",
+                "Method": "ITEM_OrbAmulet && Upgrade 5 && EVENT_Air",
                 "Difficulty": 0
             }
         ]
@@ -7441,7 +7693,7 @@
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend 2 && Upgrade 3 && Fire",
+                "Method": "ITEM_BombLengthExtend 2 && Upgrade 3 && EVENT_Fire",
                 "Difficulty": 0
             }
         ]
@@ -7525,7 +7777,7 @@
         "slotId": 2,
         "Requirement": [
             {
-                "Method": "ITEM_Rotater && Upgrade 2 && Air",
+                "Method": "ITEM_Rotater && Upgrade 2 && EVENT_Air",
                 "Difficulty": 0
             }
         ]
@@ -7537,7 +7789,7 @@
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "ITEM_Rotater && Upgrade 2 && Air",
+                "Method": "ITEM_Rotater && Upgrade 2 && EVENT_Air",
                 "Difficulty": 0
             }
         ]
@@ -7549,7 +7801,7 @@
         "slotId": 2,
         "Requirement": [
             {
-                "Method": "ITEM_GoldenGlove && Upgrade 1 && Fire && Air && Light",
+                "Method": "ITEM_GoldenGlove && Upgrade 1 && EVENT_Fire && EVENT_Air && EVENT_Light",
                 "Difficulty": 0
             }
         ]
@@ -7561,7 +7813,7 @@
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "ITEM_GoldenGlove && Upgrade 1 && Fire && Air && Light",
+                "Method": "ITEM_GoldenGlove && Upgrade 1 && EVENT_Fire && EVENT_Air && EVENT_Light",
                 "Difficulty": 0
             }
         ]
