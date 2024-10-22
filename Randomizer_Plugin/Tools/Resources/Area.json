@@ -345,7 +345,7 @@
             "Name":"12-14",
             "Connections":[
                 {
-                    "Exit":"Snowveil",
+                    "Exit":"Snowveil Entrance",
                     "Method":""
                 },
                 {
@@ -1613,6 +1613,10 @@
                 {
                     "Exit": "Snowveil Ex",
                     "Method": "ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK"
+                },
+                {
+                    "Exit": "Snowveil Entrance",
+                    "Method": ""
                 }
             ]
         },
@@ -1737,7 +1741,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Verdazure Sea",
+                    "Exit": "Verdazure Sea West",
                     "Method": "ITEM_LINEBOMB || ITEM_WATERMOVEMENT"
                 }
             ]
@@ -2210,7 +2214,7 @@
             "Connections": [
                 {
                     "Exit": "Magma Depths Sinner Exit",
-                    "Method": "HiddenP || (ITEM_AirSlide && ITEM_Rotater && (ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_SPEEDUP3))",
+                    "Method": "HiddenP || (ITEM_AirSlide && ITEM_Rotater && (ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_SPEEDUP 3))",
                     "Note": "Place a block to recover from a failed jump"
                 }
             ]
@@ -2999,11 +3003,11 @@
             "Connections": [
                 {
                     "Exit": "Lab Entrance",
-                    "Method": "ITEM_DOUBLEJUMP || (ITEM_AirDash && ITEM_WALLJUMP) || ITEM_JETPACK || RabbitWallJump"
+                    "Method": "ITEM_DOUBLEJUMP || (ITEM_AirDash && ITEM_WALLJUMP) || ITEM_JETPACK || RabbitWalljump"
                 },
                 {
                     "Exit": "Lab Left",
-                    "Method": "(ITEM_DOUBLEJUMP || (ITEM_AirDash && ITEM_WALLJUMP) || ITEM_JETPACK || RabbitWallJump) && ITEM_SLIDE && ITEM_LINEBOMB"
+                    "Method": "(ITEM_DOUBLEJUMP || (ITEM_AirDash && ITEM_WALLJUMP) || ITEM_JETPACK || RabbitWalljump) && ITEM_SLIDE && ITEM_LINEBOMB"
                 }
             ]
         },
