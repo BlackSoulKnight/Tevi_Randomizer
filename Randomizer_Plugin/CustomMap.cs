@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
+using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using BepInEx;
 using EditorVar;
@@ -254,6 +255,19 @@ namespace TeviRandomizer
                 {
                     //createNormalTile(296, 177-i, 109, false, false);
                 }
+            }
+        }
+
+        [HarmonyPatch(typeof(ChangeMapTrigger), "OnBecameVisible")]
+        [HarmonyPostfix]
+        static void switchTargetMap(ref byte ___targetPosID, ref byte ___targetArea)
+        {
+            if (RandomizerPlugin.transitionData.ContainsKey(___targetArea * 100 + ___targetPosID))
+            {
+                int val = RandomizerPlugin.transitionData[___targetArea * 100 + ___targetPosID];
+                ___targetPosID = (byte)(val % 100);
+                ___targetArea = (byte)(val / 100);
+
             }
         }
 

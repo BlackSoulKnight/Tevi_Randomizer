@@ -50,6 +50,7 @@ namespace TeviRandomizer
 
         private const long baseID = 44966541000;
         private Dictionary<string, LocationData> locations = new Dictionary<string, LocationData>();
+        private Dictionary<int, int> transitionData = new Dictionary<int, int>();
         public int currentItemNR = 0;
         private Dictionary<long, string> PlayerNames = new Dictionary<long, string>();
         public bool connectToRoom(string uri, int port, string user, string password = null)
@@ -112,17 +113,29 @@ namespace TeviRandomizer
             RandomizerPlugin.customFlags[(int)CustomFlags.TempOption] = (long)success.SlotData["openMorose"] >0;
             RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart] = (long)success.SlotData["CeliaSable"] >0;
             RandomizerPlugin.GoMode = (int)(long)success.SlotData["GoalCount"];
-            if ((long)success.SlotData["DeathLink"] > 0)
+
+            getOwnLocationData(success.SlotData["locationData"]);
+            getOwnTransitionData(success.SlotData["transitionData"]);
+            storeData();
+            return true;
+        }
+
+        private void toggleDeathLink()
+        {
+            if (deathLink == null)
             {
                 deathLink = session.CreateDeathLinkService();
                 deathLink.EnableDeathLink();
-                deathLink.OnDeathLinkReceived += (deathLinkObject) => {
+                deathLink.OnDeathLinkReceived += (deathLinkObject) =>
+                {
                     deathLinkTriggered = true;
                 };
             }
-            getOwnLocationData(success.SlotData["locationData"]);
-            storeData();
-            return true;
+            else
+            {
+                deathLink.DisableDeathLink();
+                deathLink = null;
+            }
         }
 
         public void disconnect()
@@ -157,6 +170,12 @@ namespace TeviRandomizer
                 locationData.id = session.Locations.GetLocationIdFromName("Tevi", (string)item.GetValue("location"));
                 
                 locations.Add((string)item.GetValue("location"),locationData);
+            }
+        }
+        public void getOwnTransitionData(object slotData) {
+            transitionData.Clear();
+            foreach (JObject item in (JArray)slotData) {
+                transitionData.Add((int)item.GetValue("from"), (int)item.GetValue("to"));
             }
         }
 
@@ -201,6 +220,7 @@ namespace TeviRandomizer
                 }
                 RandomizerPlugin.__itemData.Add(entry.Key,item);
             }
+            RandomizerPlugin.transitionData = transitionData;
         }
 
 

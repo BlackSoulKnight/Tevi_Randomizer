@@ -56,6 +56,17 @@ namespace TeviRandomizer
                         Debug.LogError(e);
                     }
                     RandomizerPlugin.__itemData = data;
+                    Dictionary<int,int> transitionData = new Dictionary<int,int>();
+                    if (eS3File.KeyExists("transitionDataFrom") && eS3File.KeyExists("TransitionData2"))
+                    {
+                        int[] from = eS3File.Load<int[]>("transitionDataFrom");
+                        int[] to = eS3File.Load<int[]>("transitionDataTo");
+                        for(int i = 0;i < from.Length; i++)
+                        {
+                            transitionData[from[i]] = to[i];
+                        }
+                        RandomizerPlugin.transitionData = transitionData;
+                    }
                 }
 
                 if (eS3File.KeyExists("CustomDifficulty"))
@@ -118,6 +129,8 @@ namespace TeviRandomizer
             customSaveFileNames(ref result, ref saveslot);
             ES3File eS3File = new ES3File(result);
             Dictionary<string, string> s = RandomizerPlugin.__itemData;
+            Dictionary<int, int> transitionData = RandomizerPlugin.transitionData;
+
 
             string[] keyItem = new string[s.Count];
             string[] valItem = new string[s.Count];
@@ -127,8 +140,20 @@ namespace TeviRandomizer
                 keyItem[i] = pair.Key;
                 valItem[i] = pair.Value;
             }
+            int[] transitionDataFrom = new int[transitionData.Count];
+            int[] transitionDataTo = new int[transitionData.Count];
+            for (int i = 0; i < s.Count; i++)
+            {
+                KeyValuePair<int, int> pair = transitionData.ElementAt(i);
+                transitionDataFrom[i] = pair.Key;
+                transitionDataTo[i] = pair.Value;
+            }
+
             eS3File.Save("RandoLocation", keyItem);
             eS3File.Save("RandoValItem", valItem);
+            eS3File.Save("transitionDataFrom", transitionDataFrom);
+            eS3File.Save("transitionDataTo", transitionDataTo);
+
             eS3File.Save("CustomDifficulty", RandomizerPlugin.customDiff);
             eS3File.Save("Seed", RandomizerPlugin.seed);
             eS3File.Save("HintList", HintSystem.hintList);

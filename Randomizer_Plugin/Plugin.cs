@@ -86,7 +86,7 @@ namespace TeviRandomizer
         static public int GoMode = -1;
         static public string pluginPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         static public string seed;
-
+        static public Dictionary<int,int> transitionData;
 
         static public Randomizer randomizer;
         static private bool randomizerEnabled = false;
@@ -101,6 +101,7 @@ namespace TeviRandomizer
 
             harmonyPatchInstance.PatchAll(typeof(UI));
             toggleRandomizerPlugin();
+            
 
             Logger.LogInfo($"Plugin Randomizer is loaded!");
 
