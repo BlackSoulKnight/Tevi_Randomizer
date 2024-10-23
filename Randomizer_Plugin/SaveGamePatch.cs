@@ -142,7 +142,7 @@ namespace TeviRandomizer
             }
             int[] transitionDataFrom = new int[transitionData.Count];
             int[] transitionDataTo = new int[transitionData.Count];
-            for (int i = 0; i < s.Count; i++)
+            for (int i = 0; i < transitionData.Count; i++)
             {
                 KeyValuePair<int, int> pair = transitionData.ElementAt(i);
                 transitionDataFrom[i] = pair.Key;
