@@ -429,6 +429,10 @@
                 {
                     "Exit": "Travoll Mines",
                     "Method": "ITEM_LINEBOMB && ITEM_BOMBFUEL"
+                },
+                {
+                    "Exit": "Travoll Mines West Exit",
+                    "Method": "ITEM_LINEBOMB"
                 }
             ]
         },
@@ -443,6 +447,10 @@
                 {
                     "Exit": "Travoll Mines",
                     "Method": "ITEM_LINEBOMB && ITEM_BOMBFUEL"
+                },
+                {
+                    "Exit": "Travoll Mines East Exit",
+                    "Method": "ITEM_LINEBOMB"
                 }
             ]
         },
