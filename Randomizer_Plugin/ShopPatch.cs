@@ -184,7 +184,7 @@ namespace TeviRandomizer
 
                 if(ArchipelagoInterface.Instance?.isConnected == true && ArchipelagoInterface.Instance?.isItemProgessive(item,slot) == true)
                 {
-                    ArchipelagoInterface.Instance.announceScoutedLocation(item, slot);
+                    //ArchipelagoInterface.Instance.announceScoutedLocation(item, slot);
                 }
 
                 switch (___typeN)
