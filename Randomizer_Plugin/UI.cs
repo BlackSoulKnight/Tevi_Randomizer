@@ -32,9 +32,13 @@ namespace TeviRandomizer
 
         public static Dictionary<string,object> settings = new Dictionary<string,object>();
 
-        static public object getSettings(string settingName ="")
+        static public object getSettings(string settingName =null)
         {
-
+            if(settingName != null && settings.ContainsKey(settingName))
+            {
+                return settings[settingName];
+            }
+            
             return settings;
 
         }

@@ -10,6 +10,7 @@ using EventMode;
 using HarmonyLib;
 using UnityEngine;
 using UnityEngine.TextCore;
+using UnityEngine.UIElements;
 using static UnityEngine.UIElements.UIR.Allocator2D;
 
 
@@ -259,16 +260,27 @@ namespace TeviRandomizer
         }
 
         [HarmonyPatch(typeof(ChangeMapTrigger), "OnBecameVisible")]
-        [HarmonyPostfix]
-        static void switchTargetMap(ref byte ___targetPosID, ref byte ___targetArea)
+        [HarmonyPrefix]
+        static void switchTargetMap(ref byte ___targetPosID, ref byte ___targetArea, ref bool ___gotData, ref BoxCollider2D ___box,ref ChangeMapTrigger __instance)
         {
-            if (RandomizerPlugin.transitionData.ContainsKey(WorldManager.Instance.Area*100 + ___targetPosID))
+            Debug.Log($"Before ID:{___targetPosID} Area:{___targetArea}");
+            if (!___gotData && RandomizerPlugin.transitionData.ContainsKey(WorldManager.Instance.Area*100 + ___targetPosID))
             {
+                ___targetArea = (byte)(EventManager.Instance.GetElmData(__instance.transform, 0f, 56f) - 72);
+                ___targetPosID = (byte)(EventManager.Instance.GetElmData(__instance.transform, 0f, -56f) - 72);
                 int val = RandomizerPlugin.transitionData[WorldManager.Instance.Area * 100 + ___targetPosID];
+                ___gotData = true;
+                if (___targetArea == 14 && ___targetPosID == 4)
+                {
+                    ___box.offset = new Vector2(0f, -85f);
+                    ___box.size = new Vector2(56f, 240f);
+                }
                 ___targetPosID = (byte)(val % 100);
                 ___targetArea = (byte)(val / 100);
 
             }
+            Debug.Log($"After ID:{___targetPosID} Area:{___targetArea}");
+
         }
 
         public static void loadMap()

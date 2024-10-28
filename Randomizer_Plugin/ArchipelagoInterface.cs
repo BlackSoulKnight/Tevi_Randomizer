@@ -101,6 +101,8 @@ namespace TeviRandomizer
             this.isConnected = true;
             this.isSynced = false;
             this.currentItemNR = 0;
+            if (((UnityEngine.UI.Toggle)Randomizer.settings["Toggle DeathLink"]).isOn)
+                enableDeathLink();
             lostConnection = false;
             PlayerNames.Clear();
             foreach(var info in session.Players.AllPlayers)
@@ -132,6 +134,26 @@ namespace TeviRandomizer
                 };
             }
             else
+            {
+                deathLink.DisableDeathLink();
+                deathLink = null;
+            }
+        }
+        private void enableDeathLink()
+        {
+            if (deathLink == null)
+            {
+                deathLink = session.CreateDeathLinkService();
+                deathLink.EnableDeathLink();
+                deathLink.OnDeathLinkReceived += (deathLinkObject) =>
+                {
+                    deathLinkTriggered = true;
+                };
+            }
+        }
+        private void disableDeathLink()
+        {
+            if (deathLink != null)
             {
                 deathLink.DisableDeathLink();
                 deathLink = null;
