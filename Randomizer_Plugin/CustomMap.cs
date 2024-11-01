@@ -261,10 +261,11 @@ namespace TeviRandomizer
 
         [HarmonyPatch(typeof(ChangeMapTrigger), "OnBecameVisible")]
         [HarmonyPrefix]
-        static void switchTargetMap(ref byte ___targetPosID, ref byte ___targetArea, ref bool ___gotData, ref BoxCollider2D ___box,ref ChangeMapTrigger __instance)
+        static bool switchTargetMap(ref byte ___targetPosID, ref byte ___targetArea, ref bool ___gotData, ref BoxCollider2D ___box,ref ChangeMapTrigger __instance)
         {
             Debug.Log($"Before ID:{___targetPosID} Area:{___targetArea}");
-            if (!___gotData && RandomizerPlugin.transitionData.ContainsKey(WorldManager.Instance.Area*100 + ___targetPosID))
+            byte targetPos = (byte)(EventManager.Instance.GetElmData(__instance.transform, 0f, -56f) - 72);
+            if (!___gotData && RandomizerPlugin.transitionData.ContainsKey(WorldManager.Instance.Area*100 + targetPos))
             {
                 ___targetArea = (byte)(EventManager.Instance.GetElmData(__instance.transform, 0f, 56f) - 72);
                 ___targetPosID = (byte)(EventManager.Instance.GetElmData(__instance.transform, 0f, -56f) - 72);
@@ -280,6 +281,7 @@ namespace TeviRandomizer
 
             }
             Debug.Log($"After ID:{___targetPosID} Area:{___targetArea}");
+            return true;
 
         }
 

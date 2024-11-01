@@ -105,6 +105,10 @@
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
+                    "Exit": "Morose City",
+                    "Method": "OpenMorose"
+                },
+                {
                     "Exit": "Crafting",
                     "Method": ""
                 },

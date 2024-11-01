@@ -780,7 +780,7 @@
         "Itemname": "EVENT_Light",
         "Location": "Valhalla Breath West",
         "LocationName": "Valhalla Breath West - Light",
-        "slotId": 1,
+        "slotId": 2,
         "Requirement": [
             {
                 "Method": "",
@@ -1401,7 +1401,7 @@
         "Itemname": "EVENT_Fire",
         "Location": "Travoll Mines",
         "LocationName": "Travoll Mines - Fire",
-        "slotId": 1,
+        "slotId": 2,
         "Requirement": [
             {
                 "Method": "",
@@ -1865,7 +1865,7 @@
         "Itemname": "EVENT_Earth",
         "Location": "Gleamwood Middle",
         "LocationName": "Gleamwood Upper - Earth",
-        "slotId": 1,
+        "slotId": 5,
         "Requirement": [
             {
                 "Method": "",
@@ -2473,7 +2473,7 @@
         "Itemname": "EVENT_Fire",
         "Location": "Relicts",
         "LocationName": "Relicts - Fire",
-        "slotId": 1,
+        "slotId": 3,
         "Requirement": [
             {
                 "Method": "",
@@ -3158,7 +3158,7 @@
         "Itemname": "EVENT_Dark",
         "Location": "Pre Swamp",
         "LocationName": "Swamp Entrance - Dark",
-        "slotId": 12,
+        "slotId": 1,
         "Requirement": [
             {
                 "Method": "",
@@ -3194,7 +3194,7 @@
         "Itemname": "EVENT_Dark",
         "Location": "Swamp",
         "LocationName": "Swamp - Dark",
-        "slotId": 1,
+        "slotId": 2,
         "Requirement": [
             {
                 "Method": "",
@@ -3941,8 +3941,8 @@
     {
         "Itemname": "EVENT_Water",
         "Location": "Verdazure Sea West",
-        "LocationName": "Verdazure Sea - Hydrodynamo",
-        "slotId": 1,
+        "LocationName": "Verdazure Sea - Water West",
+        "slotId": 55,
         "Requirement": [
             {
                 "Method": "",
@@ -3978,7 +3978,7 @@
         "Itemname": "EVENT_Water",
         "Location": "Verdazure Sea East",
         "LocationName": "Verdazure Sea - Water",
-        "slotId": 1,
+        "slotId": 2,
         "Requirement": [
             {
                 "Method": "",
@@ -4038,7 +4038,7 @@
         "Itemname": "EVENT_Dark",
         "Location": "Blushwood",
         "LocationName": "Blushwood - Dark",
-        "slotId": 1,
+        "slotId": 3,
         "Requirement": [
             {
                 "Method": "ITEM_SLIDE",
@@ -5220,7 +5220,7 @@
         "Itemname": "EVENT_Dark",
         "Location": "Verdazure Swamp",
         "LocationName": "Verdazure Swamp - Dark",
-        "slotId": 1,
+        "slotId": 5,
         "Requirement": [
             {
                 "Method": "",
@@ -5848,7 +5848,7 @@
         "Itemname": "EVENT_SnowMechanic",
         "Location": "Snowveil Above HQ",
         "LocationName": "Snowveil Above HQ - Snow Orb",
-        "slotId": 1,
+        "slotId": 3,
         "Requirement": [
             {
                 "Method": "ITEM_LINEBOMB && ITEM_SLIDE",
@@ -6302,7 +6302,7 @@
         "Itemname": "EVENT_Air",
         "Location": "Heavens Valley Snow Route Low",
         "LocationName": "Heavens Valley Snow Route Low - Air",
-        "slotId": 1,
+        "slotId": 2,
         "Requirement": [
             {
                 "Method": "",
@@ -6386,7 +6386,7 @@
         "Itemname": "EVENT_SnowMechanic",
         "Location": "Heavens Valley Snow Route Middle",
         "LocationName": "Heavens Valley Snow Route Middle - Snow Orb",
-        "slotId": 24,
+        "slotId": 29,
         "Requirement": [
             {
                 "Method": "ITEM_LINEBOMB",

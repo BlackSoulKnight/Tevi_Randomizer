@@ -57,7 +57,7 @@ namespace TeviRandomizer
                     }
                     RandomizerPlugin.__itemData = data;
                     Dictionary<int,int> transitionData = new Dictionary<int,int>();
-                    if (eS3File.KeyExists("transitionDataFrom") && eS3File.KeyExists("TransitionData2"))
+                    if (eS3File.KeyExists("transitionDataFrom") && eS3File.KeyExists("transitionDataTo"))
                     {
                         int[] from = eS3File.Load<int[]>("transitionDataFrom");
                         int[] to = eS3File.Load<int[]>("transitionDataTo");
