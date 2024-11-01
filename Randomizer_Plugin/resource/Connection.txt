@@ -303,7 +303,7 @@ EverGarden:EverGarden To Valhalla:ITEM_LINEBOMB && (HiddenP || ITEM_JETPACK || I
 EverGarden To Valley:EverGarden:ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK
 EverGarden To Valley:2900:
 EverGarden To Valhalla:EverGarden:ITEM_LINEBOMB
-EverGarden To Valhalla:2903:
+EverGarden To Valhalla:2902:
 EverGarden Path to Boss:EverGarden Boss Area:ITEM_DOUBLEJUMP && ITEM_AirDash
 EverGarden Path to Boss:EverGarden Boss Area:ITEM_JETPACK && ITEM_AirDash
 EverGarden Path to Boss:EverGarden Boss Area:ITEM_JETPACK 3
@@ -475,10 +475,10 @@ EverGarden Boss Area:EverGarden:
 2001:Valhalla City:
 2101:2001:
 2101:Valhalla Breath West:
-2003:2903:
+2003:2902:
 2003:Valhalla City:
-2903:2003:
-2903:EverGarden To Valhalla:
+2902:2003:
+2902:EverGarden To Valhalla:
 2008:2608:
 2008:Valhalla City:
 2608:2008:
