@@ -265,11 +265,14 @@ namespace TeviRandomizer
         {
             Debug.Log($"Before ID:{___targetPosID} Area:{___targetArea}");
             byte targetPos = (byte)(EventManager.Instance.GetElmData(__instance.transform, 0f, -56f) - 72);
+            byte area = WorldManager.Instance.Area;
+            if ((area == 20 && targetPos == 2) || (area == 29 && targetPos == 3))
+                targetPos = (byte) (targetPos ^ 1);
             if (!___gotData && RandomizerPlugin.transitionData.ContainsKey(WorldManager.Instance.Area*100 + targetPos))
             {
                 ___targetArea = (byte)(EventManager.Instance.GetElmData(__instance.transform, 0f, 56f) - 72);
                 ___targetPosID = (byte)(EventManager.Instance.GetElmData(__instance.transform, 0f, -56f) - 72);
-                int val = RandomizerPlugin.transitionData[WorldManager.Instance.Area * 100 + ___targetPosID];
+                int val = RandomizerPlugin.transitionData[WorldManager.Instance.Area * 100 + targetPos];
                 ___gotData = true;
                 if (___targetArea == 14 && ___targetPosID == 4)
                 {
