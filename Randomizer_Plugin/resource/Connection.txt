@@ -3,7 +3,7 @@ Desert Base Main:Desert Base Upper Half:ITEM_JETPACK && ITEM_WALLJUMP
 Desert Base Main:Desert Base Upper Half:ITEM_DOUBLEJUMP && ITEM_WALLJUMP 2
 Desert Base Entrance:0000:
 Desert Base Entrance:Desert Base Main:ChargeShot || ITEM_JETPACK || ITEM_AirDash || ITEM_JETPACK || ITEM_DOUBLEJUMP || ITEM_HIJUMP || (ITEM_LINEBOMB && ITEM_AREABOMB) || RabbitJump || (BackFlip && ITEM_SPEEDUP)
-Desert Base Entrance:Desert Base Main:BackFlip && Hard
+Desert Base Entrance:Desert Base Main:BackFlip
 Desert Base Entrance:Desert Base Upper Half:(BackFlip || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash) && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_KNIFE
 Desert Base Upper Half:Desert Base Main:
 Thanatara Canyon:0101:ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash

@@ -50,7 +50,7 @@
                 },
                 {
                     "Exit": "Desert Base Main",
-                    "Method": "BackFlip && Hard"
+                    "Method": "BackFlip"
                 },
                 {
                     "Exit": "Desert Base Upper Half",
