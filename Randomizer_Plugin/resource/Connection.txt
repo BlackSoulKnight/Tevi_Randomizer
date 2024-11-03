@@ -290,7 +290,7 @@ Gallery of Souls Boss Area:Gallery of Souls:ITEM_DOUBLEJUMP && ITEM_LINEBOMB && 
 Gallery of Souls Sea Exit:2707:
 Gallery of Souls Sea Exit:Gallery of Souls Boss Area:ITEM_BombLengthExtend 3
 Blushwood:Blushwood Sliding:ITEM_SLIDE
-Blushwood:Blushwood Sliding:HiddenP && ((ITEM_DOUBLJUMP && ITEM_JETPACK)|| ITEM_JETPACK 3)
+Blushwood:Blushwood Sliding:HiddenP && ((ITEM_DOUBLEJUMP && ITEM_JETPACK)|| ITEM_JETPACK 3)
 Blushwood:2801:
 Blushwood:2803:
 Blushwood Sliding::

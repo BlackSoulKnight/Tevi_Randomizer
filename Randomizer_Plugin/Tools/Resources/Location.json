@@ -1788,7 +1788,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ( ( EnemyManip && ITEM_ORB ) || VenaBomb) && ITEM_KNIFE",
+                "Method": "ITEM_SLIDE && ( ( EnemyManip && ITEM_ORB ) || VenaBomb ) && ITEM_KNIFE",
                 "Difficulty": 0
             }
         ]
@@ -6096,7 +6096,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_KNIFE || VenabBomB || ChargeShot || ITEM_AREABOMB",
+                "Method": "ITEM_KNIFE || VenaBomb || ChargeShot || ITEM_AREABOMB",
                 "Difficulty": 0
             }
         ]

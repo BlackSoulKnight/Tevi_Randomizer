@@ -2694,7 +2694,7 @@
                 },
                 {
                     "Exit": "Blushwood Sliding",
-                    "Method": "HiddenP && ((ITEM_DOUBLJUMP && ITEM_JETPACK)|| ITEM_JETPACK 3)"
+                    "Method": "HiddenP && ((ITEM_DOUBLEJUMP && ITEM_JETPACK)|| ITEM_JETPACK 3)"
                 },
                 {
                     "Exit": "2801",

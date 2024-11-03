@@ -149,6 +149,20 @@ namespace TeviRandomizer
                         default:
                             if (itemList.ContainsKey(split[0]))
                             {
+                                switch (split[0])
+                                {
+                                    case "ITEM_BOMBFUEL":
+                                    case "ITEM_BombLengthExtend":
+                                    case "ITEM_AREABOMB":
+                                        itemList.ContainsKey("ITEM_LINEBOMB");
+                                        break;
+                                    case "ITEM_AirSlide":
+                                        itemList.ContainsKey("ITEM_SLIDE");
+                                        break;
+                                    case "ITEM_Rotater":
+                                        itemList.ContainsKey("ITEM_KNIFE");
+                                        break;
+                                }
                                 if (split.Length > 1)
                                 {
                                     if (int.Parse(split[1]) <= itemList[split[0]])

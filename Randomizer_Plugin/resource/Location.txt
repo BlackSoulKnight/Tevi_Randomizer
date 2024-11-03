@@ -138,7 +138,7 @@ BADGE_QuickBomber@Gleamwood Middle@1@ITEM_LINEBOMB,0@Gleamwood Middle - Quick Bo
 ITEM_MASK@Gleamwood Middle@1@,0@Gleamwood Middle - Decay Mask
 STACKABLE_HP@Gleamwood Bottom@5@ITEM_KNIFE,0@Gleamwood Bottom - Kiwi Bunny Potion
 STACKABLE_MP@Gleamwood Middle@26@ITEM_SLIDE && ITEM_LINEBOMB,0@Gleamwood Middle - Blueberry Bunny Potion
-BADGE_ComboTimeExtendC@Gleamwood Middle@1@ITEM_SLIDE && ( ( EnemyManip && ITEM_ORB ) || VenaBomb) && ITEM_KNIFE,0@Gleamwood Middle - Combo Time Extend III
+BADGE_ComboTimeExtendC@Gleamwood Middle@1@ITEM_SLIDE && ( ( EnemyManip && ITEM_ORB ) || VenaBomb ) && ITEM_KNIFE,0@Gleamwood Middle - Combo Time Extend III
 STACKABLE_RATK@Gleamwood Middle@19@ITEM_SLIDE && ChargeShot && ITEM_LINEBOMB,0@Gleamwood Middle - Grape Bunny Potion
 STACKABLE_SHARD@Gleamwood Middle@15@ITEM_DOUBLEJUMP && ITEM_LINEBOMB,0;ITEM_JETPACK && ITEM_LINEBOMB,0;ITEM_AirDash && ITEM_LINEBOMB,0@Gleamwood Middle - Rainbow Bunny Potion
 BADGE_TauntStare@Gleamwood Forest Exit@1@ITEM_JETPACK && ITEM_LINEBOMB,0;ITEM_AirDash && ITEM_LINEBOMB,0;ITEM_DOUBLEJUMP && ITEM_LINEBOMB,0;RabbitWalljump && ITEM_LINEBOMB,0@Gleamwood Middle - Special Action: Speechless
@@ -462,7 +462,7 @@ STACKABLE_HP@DreamKeeper Outside Right@28@ITEM_BombLengthExtend && ITEM_LINEBOMB
 STACKABLE_RATK@DreamKeeper Outside Left@27@ITEM_JETPACK && ChargeShot && ITEM_SLIDE,0;ITEM_DOUBLEJUMP && ChargeShot && ITEM_SLIDE,0@DreamKeeper Outside Left - Grape Bunny Potion
 ITEM_TempRing@DreamKeeper Outside Left@1@,0@DreamKeeper Outside Left - Equilibrium Ring
 STACKABLE_HP@DreamKeeper Outside Left@27@,0@DreamKeeper Outside Left - Kiwi Bunny Potion
-BADGE_ConsumeableCharge@DreamKeeper@1@ITEM_KNIFE || VenabBomB || ChargeShot || ITEM_AREABOMB,0@DreamKeeper - MP Quicken: Sugar Rush
+BADGE_ConsumeableCharge@DreamKeeper@1@ITEM_KNIFE || VenaBomb || ChargeShot || ITEM_AREABOMB,0@DreamKeeper - MP Quicken: Sugar Rush
 STACKABLE_COG@DreamKeeper@61@Boss,0@DreamKeeper - Astral Gear #2
 ITEM_AntiIce@DreamKeeper@1@,0@DreamKeeper - Grip Sole Boots
 BADGE_LaserRes@DreamKeeper@1@ITEM_LINEBOMB && ITEM_SLIDE,0@DreamKeeper - Refractor
