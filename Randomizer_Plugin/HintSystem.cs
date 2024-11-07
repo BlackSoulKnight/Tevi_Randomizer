@@ -59,10 +59,15 @@ namespace TeviRandomizer
             if (RandomizerPlugin.__itemData.Count == 0) return;
             extraList.Clear();
             //search from top to bottom for progression items
+            if(ArchipelagoInterface.Instance.isConnected) { 
+                    extraList.Add(createChatRow(section, $"Please use the common AP client to get Hints.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
+                return;
+            }
             int collected = LocationTracker.getListLenght();
             int a = (int)(RandomizerPlugin.__itemData.Count*0.75f * (float)(1f / numberOfHints));
             int nextHint = a  - (collected % a);
             System.Random rand = new System.Random(RandomizerPlugin.seed.GetHashCode());
+
             for (int i = 0; i < Math.Floor((double)collected / a); i++)
             {
 
