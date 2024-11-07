@@ -141,15 +141,12 @@ namespace TeviRandomizer
         }
         private void enableDeathLink()
         {
-            if (deathLink == null)
+            deathLink = session.CreateDeathLinkService();
+            deathLink.EnableDeathLink();
+            deathLink.OnDeathLinkReceived += (deathLinkObject) =>
             {
-                deathLink = session.CreateDeathLinkService();
-                deathLink.EnableDeathLink();
-                deathLink.OnDeathLinkReceived += (deathLinkObject) =>
-                {
-                    deathLinkTriggered = true;
-                };
-            }
+                deathLinkTriggered = true;
+            };            
         }
         private void disableDeathLink()
         {

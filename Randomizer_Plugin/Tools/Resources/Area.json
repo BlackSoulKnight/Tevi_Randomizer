@@ -50,7 +50,7 @@
                 },
                 {
                     "Exit": "Desert Base Main",
-                    "Method": "BackFlip"
+                    "Method": "BackFlip && Hard"
                 },
                 {
                     "Exit": "Desert Base Upper Half",
@@ -1810,6 +1810,10 @@
                 {
                     "Exit": "DreamKeeper",
                     "Method": "ITEM_Rotater && (ChargeShot || ITEM_SLIDE) && ITEM_LINEBOMB && ITEM_SLIDE && (EVENT_SnowMechanic 2 || EarlyDream)"
+                },
+                {
+                    "Exit": "DreamKeeper",
+                    "Method": "ITEM_AREABOMB && EarlyDream && ITEM_SLIDE && ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "1800",
