@@ -12,6 +12,7 @@
   + For tornado slash/spanner bash, the same inputs still work, you just need to unlock the moves first
     note: the rando doesn't require these moves and doesn't check for them when placing items
 + Charge shots now require level 2 orbitars
++ Sable / Celia require level 2 orbitars
 + If you don't start with Sable/Celia, the core expansion is not usable until one of them is found. And you're locked to that one character until the other is found
 + Cluster bomb is not usable without Cross bombs
 + The left/right golden hands and the complete golden hands are all separate items which can be found. You can still turn in the left/right hands even if you've found the complete hands for example
@@ -60,7 +61,7 @@ The Randomizer data is saved within the Savefile.
 + Morose is accessable without Cross Bombs (as an Option)
 + Quickdrop damage is increased with each consecutive Quickdrop without receiving Damage or dealing Damage with anything else
 + Rabi Ribi Minigame is in Logic and requires atleast 100 Points and full Clear
-+ Rabi Ribi Easteregg contains a Item location
++ Rabi Ribi Easteregg and Library contains a Item location
 + It is possible to play the game with Sable and Celia locked behind extra Items
 + Talking to Professor Zema will provide hints as to general item locations
 
