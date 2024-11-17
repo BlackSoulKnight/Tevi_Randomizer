@@ -57,10 +57,6 @@ namespace TeviRandomizer
         {
             if (session != null && session.Socket.Connected)
             {
-                if (uri == this.uri && port == this.port && user == this.user)
-                {
-                    return true;
-                }
                 session.Socket.DisconnectAsync();
                 isConnected = false;
             }

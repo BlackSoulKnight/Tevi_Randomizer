@@ -69,10 +69,6 @@ namespace TeviRandomizer
                     }
                 }
 
-                if (eS3File.KeyExists("CustomDifficulty"))
-                {
-                    RandomizerPlugin.customDiff = eS3File.Load<int>("CustomDifficulty");
-                }
                 if (eS3File.KeyExists("Seed"))
                 {
                     RandomizerPlugin.seed = eS3File.Load<string>("Seed");
@@ -131,30 +127,34 @@ namespace TeviRandomizer
             Dictionary<string, string> s = RandomizerPlugin.__itemData;
             Dictionary<int, int> transitionData = RandomizerPlugin.transitionData;
 
-
-            string[] keyItem = new string[s.Count];
-            string[] valItem = new string[s.Count];
-            for (int i = 0; i < s.Count; i++)
+            if (s != null)
             {
-                KeyValuePair<string, string> pair = s.ElementAt(i);
-                keyItem[i] = pair.Key;
-                valItem[i] = pair.Value;
+                string[] keyItem = new string[s.Count];
+                string[] valItem = new string[s.Count];
+                for (int i = 0; i < s.Count; i++)
+                {
+                    KeyValuePair<string, string> pair = s.ElementAt(i);
+                    keyItem[i] = pair.Key;
+                    valItem[i] = pair.Value;
+                }
+                eS3File.Save("RandoLocation", keyItem);
+                eS3File.Save("RandoValItem", valItem);
             }
-            int[] transitionDataFrom = new int[transitionData.Count];
-            int[] transitionDataTo = new int[transitionData.Count];
-            for (int i = 0; i < transitionData.Count; i++)
+            if (transitionData != null)
             {
-                KeyValuePair<int, int> pair = transitionData.ElementAt(i);
-                transitionDataFrom[i] = pair.Key;
-                transitionDataTo[i] = pair.Value;
+                int[] transitionDataFrom = new int[transitionData.Count];
+                int[] transitionDataTo = new int[transitionData.Count];
+                for (int i = 0; i < transitionData.Count; i++)
+                {
+                    KeyValuePair<int, int> pair = transitionData.ElementAt(i);
+                    transitionDataFrom[i] = pair.Key;
+                    transitionDataTo[i] = pair.Value;
+                }
+                eS3File.Save("transitionDataFrom", transitionDataFrom);
+                eS3File.Save("transitionDataTo", transitionDataTo);
             }
 
-            eS3File.Save("RandoLocation", keyItem);
-            eS3File.Save("RandoValItem", valItem);
-            eS3File.Save("transitionDataFrom", transitionDataFrom);
-            eS3File.Save("transitionDataTo", transitionDataTo);
 
-            eS3File.Save("CustomDifficulty", RandomizerPlugin.customDiff);
             eS3File.Save("Seed", RandomizerPlugin.seed);
             eS3File.Save("HintList", HintSystem.hintList);
             eS3File.Save("GoMode", RandomizerPlugin.GoMode);

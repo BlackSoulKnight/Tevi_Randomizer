@@ -263,6 +263,7 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static bool switchTargetMap(ref byte ___targetPosID, ref byte ___targetArea, ref bool ___gotData, ref BoxCollider2D ___box,ref ChangeMapTrigger __instance)
         {
+            if (RandomizerPlugin.transitionData == null) return true;
             Debug.Log($"Before ID:{___targetPosID} Area:{___targetArea}");
             byte targetPos = (byte)(EventManager.Instance.GetElmData(__instance.transform, 0f, -56f) - 72);
             byte area = WorldManager.Instance.Area;

@@ -64,13 +64,6 @@ The Randomizer data is saved within the Savefile.
 + It is possible to play the game with Sable and Celia locked behind extra Items
 + Talking to Professor Zema will provide hints as to general item locations
 
-## Custom Difficulty
-### Currently Disabled 
-When selecting a positive number for Fake Difficulty the enemy speed and bullet behaviour will change.
-The hp and dmg the enemy will deal, is set to the Difficulty selected in the New Game screen selection.
-This value can be change with the Bed in Tevi's Home.<br>
-If a negtive number or nothing is set, the game will handle everything as usual.
-
 ## Disabling Randomizer
 Press in the Randomizer Menu A+S or LT+RT.
 Or remove the TeviRandomizer.dll
@@ -89,3 +82,9 @@ For building the Project, the following DLLs from the Game are required and foun
 + UnityEngine.UI.dll
 + Assembly-CSharp-firstpass.dll
 
+## Custom Features
+### Custom Difficulty
+Change the Enemy HP and ATK to the set Difficulty instead of the original.
+
+### Anti Flash
+Removes all White Flashes from Teleport or other Events.

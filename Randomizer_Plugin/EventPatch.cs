@@ -47,14 +47,8 @@ namespace TeviRandomizer
                     SaveManager.Instance.SetItem(ItemList.Type.I19, 1);
                     SaveManager.Instance.SetItem(ItemList.Type.I20, 1);
                 }
-                int tmp;
-                if (RandomizerPlugin.customDiff >= 0)
-                {
-                    tmp = RandomizerPlugin.customDiff;
-                    RandomizerPlugin.customDiff = SaveManager.Instance.GetDifficulty();
-                    SaveManager.Instance.SetDifficulty(tmp);
-                }
-
+                if (RandomizerPlugin.customStartDiff >= 0)
+                    SaveManager.Instance.SetDifficulty(RandomizerPlugin.customStartDiff);
                 // Make a Path to Morose
                 if (RandomizerPlugin.customFlags[(int)CustomFlags.TempOption])
                 {

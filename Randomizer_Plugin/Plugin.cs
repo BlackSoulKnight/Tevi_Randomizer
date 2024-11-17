@@ -14,13 +14,11 @@ using Bullet;
 using QFSW.QC;
 using TeviRandomizer;
 using Map;
-using System.Linq;
 
 using Newtonsoft.Json;
 using Unity.Curl;
 using Character;
 using static Localize;
-using System.Runtime.InteropServices.ComTypes;
 
 
 
@@ -61,7 +59,6 @@ namespace TeviRandomizer
         CebleStart = 1,
         CompassStart = 2,
         TempOption = 3,
-
     }
 
 
@@ -79,14 +76,16 @@ namespace TeviRandomizer
 
         static public Dictionary<string, string> __itemData = new Dictionary<string, string>();
 
-        static public int customDiff = -1; //fake diff
+        static public int customAtkDiff = -1;
+        static public int customHpDiff = -1;
+        static public int customStartDiff = -1;
 
         static public bool[] customFlags = new bool[Enum.GetNames(typeof(CustomFlags)).Length];
         static public int[] extraPotions = [0, 0]; // Hardcoded omo
         static public int GoMode = -1;
         static public string pluginPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         static public string seed;
-        static public Dictionary<int,int> transitionData;
+        static public Dictionary<int, int> transitionData;
 
         static public Randomizer randomizer;
         static private bool randomizerEnabled = false;
@@ -101,7 +100,7 @@ namespace TeviRandomizer
 
             harmonyPatchInstance.PatchAll(typeof(UI));
             toggleRandomizerPlugin();
-            
+
 
             Logger.LogInfo($"Plugin Randomizer is loaded!");
 
@@ -125,7 +124,7 @@ namespace TeviRandomizer
                 harmonyPatchInstance.PatchAll(typeof(EventPatch));
                 harmonyPatchInstance.PatchAll(typeof(ItemSystemPatch));
                 harmonyPatchInstance.PatchAll(typeof(SaveGamePatch));
-                //instance.PatchAll(typeof(ScalePatch));
+                harmonyPatchInstance.PatchAll(typeof(ScalePatch));
                 harmonyPatchInstance.PatchAll(typeof(OrbPatch));
                 harmonyPatchInstance.PatchAll(typeof(RabiSmashPatch));
                 harmonyPatchInstance.PatchAll(typeof(BonusFeaturePatch));
@@ -154,7 +153,7 @@ namespace TeviRandomizer
             return newText;
         }
 
-        static public void changeSystemText(string keyword,string text)
+        static public void changeSystemText(string keyword, string text)
         {
             var t = new Traverse(typeof(Localize));
             var library = t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, SystemText>>();
@@ -175,7 +174,7 @@ namespace TeviRandomizer
         static void addLang()
         {
             var t = new Traverse(typeof(Localize));
-            { 
+            {
                 Localize.SystemText newText = createNewText("ITEMNAME.I19", "Celia");
                 t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
                 t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
@@ -227,13 +226,13 @@ namespace TeviRandomizer
         }
         [HarmonyPatch(typeof(Localize), "GetLocalizeTextWithKeyword")]
         [HarmonyPostfix]
-        static void changeText(ref string __result,ref string keyword)
+        static void changeText(ref string __result, ref string keyword)
         {
-            if(keyword == "Todo.GoalTipFreeRoam")
+            if (keyword == "Todo.GoalTipFreeRoam")
             {
                 __result = __result.Replace("16", GoMode.ToString());
             }
-            if(ArchipelagoInterface.Instance != null && ArchipelagoInterface.Instance.isConnected)
+            if (ArchipelagoInterface.Instance != null && ArchipelagoInterface.Instance.isConnected)
             {
 
             }
@@ -258,14 +257,14 @@ namespace TeviRandomizer
 
 
         static public ItemList.Type getRandomizedItem(ItemList.Type itemid, byte slotid) => getRandomizedItem(itemid.ToString(), slotid);
- 
+
         static public ItemList.Type getRandomizedItem(string item, byte slot)
         {
 
             ItemList.Type data;
-            if (LocationTracker.APLocationName.ContainsKey($"{item} #{slot}")  && (ArchipelagoInterface.Instance.isConnected && !ArchipelagoInterface.Instance.isItemNative(LocationTracker.APLocationName[$"{item} #{slot}"]) || item == "Remote"))
-            {               
-                    data = ArchipelagoInterface.Instance.isItemProgessive(LocationTracker.APLocationName[$"{item} #{slot}"]) ? ArchipelagoInterface.remoteItemProgressive : ArchipelagoInterface.remoteItem;
+            if (LocationTracker.APLocationName.ContainsKey($"{item} #{slot}") && (ArchipelagoInterface.Instance.isConnected && !ArchipelagoInterface.Instance.isItemNative(LocationTracker.APLocationName[$"{item} #{slot}"]) || item == "Remote"))
+            {
+                data = ArchipelagoInterface.Instance.isItemProgessive(LocationTracker.APLocationName[$"{item} #{slot}"]) ? ArchipelagoInterface.remoteItemProgressive : ArchipelagoInterface.remoteItem;
             }
             else
             {
@@ -302,7 +301,7 @@ namespace TeviRandomizer
 
         static public bool checkItemGot(ItemList.Type item, byte slot) //not working?
         {
-            return LocationTracker.hasItem(item,slot); 
+            return LocationTracker.hasItem(item, slot);
         }
 
         static public bool checkRandomizedItemGot(ItemList.Type item, byte slot)
@@ -323,11 +322,11 @@ namespace TeviRandomizer
             nearestType = getRandomizedItem(tile.itemid, tile.GetSlotID());
         }
 
-        [HarmonyPatch(typeof(GameSystem),"GameOver")]
+        [HarmonyPatch(typeof(GameSystem), "GameOver")]
         [HarmonyPostfix]
         static void APDeathlinkg()
         {
-            if(ArchipelagoInterface.Instance.isConnected)
+            if (ArchipelagoInterface.Instance.isConnected)
             {
                 ArchipelagoInterface.Instance.deathLinkTrigger();
             }
@@ -340,7 +339,7 @@ namespace TeviRandomizer
         {
             if (item == ItemList.Type.Useable_Bell)
             {
-                if (!EventManager.Instance.isBossMode() && EventManager.Instance.getMode() == Mode.OFF && (EventManager.Instance.getSubMode() == Mode.OFF|| EventManager.Instance.getSubMode() == Mode.Chap7WarpToQueensGarden))
+                if (!EventManager.Instance.isBossMode() && EventManager.Instance.getMode() == Mode.OFF && (EventManager.Instance.getSubMode() == Mode.OFF || EventManager.Instance.getSubMode() == Mode.Chap7WarpToQueensGarden))
                 {
                     if (GemaMissionMode.Instance.isInMission() || WorldManager.Instance.Area == 30 || (EventManager.Instance.GetCurrentEventBattle() != Mode.Chap7StartRibauldChase && EventManager.Instance.GetCurrentEventBattle() != 0) || EventManager.Instance.isBossMode())
                     {
@@ -476,7 +475,8 @@ namespace TeviRandomizer
             }
 
 
-            if (checkRandomizedItemGot(__instance.itemid, ___slotid)) {
+            if (checkRandomizedItemGot(__instance.itemid, ___slotid))
+            {
                 Debug.Log($"[ItemTile] {data} # visible in camera. Removed from map because player already obtained it.");
 
                 __instance.DisableMe();
@@ -513,7 +513,7 @@ namespace TeviRandomizer
             }
         }
 
-         //Orb!
+        //Orb!
         [HarmonyPatch(typeof(SaveManager), "FirstTimeEnableOrbColors")]
         [HarmonyPrefix]
         static bool disableOrbOverride(SaveManager __instance)
@@ -523,7 +523,7 @@ namespace TeviRandomizer
         }
 
         //
-        [HarmonyPatch(typeof(SaveManager),"GetMemineCleared")]
+        [HarmonyPatch(typeof(SaveManager), "GetMemineCleared")]
         [HarmonyPrefix]
         static bool GetMemineCleared(ref int __result)
         {
@@ -543,17 +543,17 @@ namespace TeviRandomizer
         static Sprite createNewArchipelagoSprite(string file)
         {
             string path = pluginPath + "/resource/Archipelago/" + file;
-            Texture2D texture = new Texture2D(2,2);
+            Texture2D texture = new Texture2D(2, 2);
             if (!File.Exists(path)) { return null; }
             byte[] imageAsset = System.IO.File.ReadAllBytes(path);
             ImageConversion.LoadImage(texture, imageAsset);
-            Sprite sprite = Sprite.Create(texture,new Rect(0,0,28,28),new Vector2(0.5f,0.5f),28);
+            Sprite sprite = Sprite.Create(texture, new Rect(0, 0, 28, 28), new Vector2(0.5f, 0.5f), 28);
             return sprite;
         }
 
         [HarmonyPatch(typeof(CommonResource), "Awake")]
         [HarmonyPostfix]
-        static void replaceSprite(ref Sprite[] ___items,ref Sprite[] ___questitems)
+        static void replaceSprite(ref Sprite[] ___items, ref Sprite[] ___questitems)
         {
             if (___items.Length > 0)
             {
@@ -563,12 +563,35 @@ namespace TeviRandomizer
                 if (___items[10] == null)
                     ___items[10] = ___questitems[9];
                 if (___items[11] == null)
-                    ___items[11]= ___questitems[9];
+                    ___items[11] = ___questitems[9];
             }
 
 
         }
 
+        [HarmonyPatch(typeof(enemyController), "FreeRoamEnemyBoost")]
+        [HarmonyPrefix]
+        static bool FreeRoamEnemyBoost(ref int ___health, ref int ___atk, ref CharacterBase ___type)
+        {
+            if (WorldManager.Instance.CurrentRoomArea == AreaType.FINALPALACE2 || WorldManager.Instance.CurrentRoomArea == AreaType.FINALPALACE || WorldManager.Instance.CurrentRoomArea == AreaType.ILLUSIONPALACE)
+            {
+                int stackableCount = SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_COG);
+                if (stackableCount < 16)
+                {
+                    stackableCount = 16;
+                }
+                float num = 1f + 0.085f * (float)(24 - stackableCount);
+                if (num > 1f)
+                {
+                    ___health = (int)((float)___health * num);
+                    num = 1f + 0.1f * (float)(24 - stackableCount);
+                    ___atk = (int)((float)___atk * num);
+                    Debug.Log("[BossHealth] Free Roam Enemy Boost COG (" + num + ") : " + "MEH" + "'s health set to " + ___health + ", ATK set to " + ___atk);
+                }
+            }
+            return false;
+        }
+         
     }
 
 
@@ -868,6 +891,8 @@ namespace TeviRandomizer
 
     }
 
+    
+
 
     class ScalePatch()
     {
@@ -876,9 +901,8 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static bool setMaxBossHealth(ref enemyController __instance)
         {
-            if (RandomizerPlugin.customDiff < 0) return true;
 
-            int num = RandomizerPlugin.customDiff - 5;
+            int num = RandomizerPlugin.customAtkDiff - 5;
             float num2 = 0f;
             float num3 = 0f;
             if (num > 0)
@@ -916,7 +940,10 @@ namespace TeviRandomizer
         [HarmonyPostfix]
         static void balanceAct(ref enemyController __instance)
         {
-            if (RandomizerPlugin.customDiff < 0) return;
+            if (RandomizerPlugin.customAtkDiff < 0)
+                RandomizerPlugin.customAtkDiff = (int)(SaveManager.Instance.GetDifficultyName());
+            if (RandomizerPlugin.customHpDiff < 0)
+                RandomizerPlugin.customHpDiff = (int)(SaveManager.Instance.GetDifficultyName());
 
             if (!TeamManager.Instance.enemyMembers.Contains(__instance))
             {
@@ -951,12 +978,12 @@ namespace TeviRandomizer
                     else
                     {
                         float num = 0.002f;
-                        if (RandomizerPlugin.customDiff >= (short)Difficulty.D5)
+                        if (RandomizerPlugin.customAtkDiff >= (short)Difficulty.D5)
                         {
                             num = 0.008f;
                         }
                         atk = (int)((float)atk * (1f + num * (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_HP) + 0.001f * (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD)));
-                        if (RandomizerPlugin.customDiff >= (short)Difficulty.D4)
+                        if (RandomizerPlugin.customAtkDiff >= (short)Difficulty.D4)
                         {
                             atk = (int)((float)atk * (1f + 0.0002f * (float)SaveManager.Instance.GetUsedCost(GetRemain: false)));
                         }
@@ -968,19 +995,19 @@ namespace TeviRandomizer
                 }
 
                 float num2 = 1f;
-                float num3 = RandomizerPlugin.customDiff - 5;
-                if (RandomizerPlugin.customDiff == (short)Difficulty.D6)
+                float num3 = RandomizerPlugin.customAtkDiff - 5;
+                if (RandomizerPlugin.customAtkDiff == (short)Difficulty.D6)
                 {
                     num3 = 2f;
                 }
-                else if (RandomizerPlugin.customDiff == (short)Difficulty.D7)
+                else if (RandomizerPlugin.customAtkDiff == (short)Difficulty.D7)
                 {
                     num3 = 3f;
                 }
                 if (num3 < 0f)
                 {
                     float num4 = 1f + num3 * 0.1f;
-                    if (RandomizerPlugin.customDiff <= (short)Difficulty.D0)
+                    if (RandomizerPlugin.customAtkDiff <= (short)Difficulty.D0)
                     {
                         num4 -= 0.1f;
                     }
@@ -1021,20 +1048,20 @@ namespace TeviRandomizer
                         else
                         {
                             float num6 = 0.005f;
-                            if (RandomizerPlugin.customDiff >= (short)Difficulty.D6)
+                            if (RandomizerPlugin.customHpDiff >= (short)Difficulty.D6)
                             {
                                 num6 = 0.006f;
                             }
-                            if (RandomizerPlugin.customDiff >= (short)Difficulty.D7)
+                            if (RandomizerPlugin.customHpDiff >= (short)Difficulty.D7)
                             {
                                 num6 = 0.007f;
                             }
-                            if (RandomizerPlugin.customDiff >= (short)Difficulty.D9)
+                            if (RandomizerPlugin.customHpDiff >= (short)Difficulty.D9)
                             {
                                 num6 = 0.008f;
                             }
                             num5 = 1f + num6 * ((float)SaveManager.Instance.GetMainLevel() + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD) / 4f + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK) / 3.5f + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_RATK) / 3.5f);
-                            if (RandomizerPlugin.customDiff >= (short)Difficulty.D6 && SaveManager.Instance.GetChapter() >= 4)
+                            if (RandomizerPlugin.customHpDiff >= (short)Difficulty.D6 && SaveManager.Instance.GetChapter() >= 4)
                             {
                                 num5 += 0.000125f * (float)SaveManager.Instance.GetUsedCost(GetRemain: false);
                             }
@@ -1054,11 +1081,11 @@ namespace TeviRandomizer
                             {
                                 num7 = 10;
                             }
-                            if (RandomizerPlugin.customDiff <= (short)Difficulty.D5 && num7 > 8)
+                            if (RandomizerPlugin.customAtkDiff <= (short)Difficulty.D5 && num7 > 8)
                             {
                                 num7 = 8;
                             }
-                            if (RandomizerPlugin.customDiff <= (short)Difficulty.D7 && num7 > 2)
+                            if (RandomizerPlugin.customAtkDiff <= (short)Difficulty.D7 && num7 > 2)
                             {
                                 num7 = 2;
                             }
@@ -1069,10 +1096,10 @@ namespace TeviRandomizer
                                 {
                                     atk = 1;
                                 }
-                                if (RandomizerPlugin.customDiff >= (short)Difficulty.D7)
+                                if (RandomizerPlugin.customAtkDiff >= (short)Difficulty.D7)
                                 {
                                     float num8 = 1f - (float)num7 * 0.025f;
-                                    if (RandomizerPlugin.customDiff <= (short)Difficulty.D5)
+                                    if (RandomizerPlugin.customAtkDiff <= (short)Difficulty.D5)
                                     {
                                         num8 = 1f - (float)num7 * 0.01f;
                                         num8 += 0.025f;
@@ -1085,7 +1112,7 @@ namespace TeviRandomizer
                                     {
                                         num8 = 1f;
                                     }
-                                    if (RandomizerPlugin.customDiff <= (short)Difficulty.D7 && num8 < 0.85f)
+                                    if (RandomizerPlugin.customAtkDiff <= (short)Difficulty.D7 && num8 < 0.85f)
                                     {
                                         num8 = 0.85f;
                                     }
@@ -1112,7 +1139,7 @@ namespace TeviRandomizer
                 {
                     health += (int)((float)(SaveManager.Instance.GetChapter() * 2 + SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD)) + (float)(SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK) + SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_RATK)) / 3f);
                     float num9 = 0f;
-                    num3 = (float)(RandomizerPlugin.customDiff - 5);
+                    num3 = (float)(RandomizerPlugin.customHpDiff - 5);
                     num9 = ((!(num3 > 0f)) ? 0f : ((!(num3 <= 5f)) ? (num9 + (0.375f + (num3 - 5f) * 0.0001f)) : (num9 + num3 * 0.075f)));
                     float num10 = (float)(int)SaveManager.Instance.GetChapter() * 0.1f;
                     if (num10 > 1f)
@@ -1124,20 +1151,20 @@ namespace TeviRandomizer
 
                     if ((WorldManager.Instance.Area != 0 || SaveManager.Instance.GetChapter() >= 1) && !EventManager.Instance.isBossMode() && SaveManager.Instance.GetChapter() <= 3 && EventManager.Instance.GetCurrentEventBattle() == Mode.OFF)
                     {
-                        if (RandomizerPlugin.customDiff <= (short)Difficulty.D6)
+                        if (RandomizerPlugin.customHpDiff <= (short)Difficulty.D6)
                         {
                             health = (int)((float)health * 0.925f);
                         }
-                        if (RandomizerPlugin.customDiff <= (short)Difficulty.D5)
+                        if (RandomizerPlugin.customHpDiff <= (short)Difficulty.D5)
                         {
                             health = (int)((float)health * 0.925f);
                         }
                     }
-                    if (RandomizerPlugin.customDiff >= (short)Difficulty.D5)
+                    if (RandomizerPlugin.customAtkDiff >= (short)Difficulty.D5)
                     {
                         atk = (int)((float)atk * 1.025f);
                     }
-                    if (RandomizerPlugin.customDiff >= (short)Difficulty.D10)
+                    if (RandomizerPlugin.customAtkDiff >= (short)Difficulty.D10)
                     {
                         atk = (int)((float)atk * 1.125f);
                     }
@@ -1146,34 +1173,34 @@ namespace TeviRandomizer
 
 
 
-                if (RandomizerPlugin.customDiff <= (short)Difficulty.D0)
+                if (RandomizerPlugin.customAtkDiff <= (short)Difficulty.D0)
                 {
                     atk = (int)((float)atk * 0.4f);
                 }
-                else if (RandomizerPlugin.customDiff <= (short)Difficulty.D1)
+                else if (RandomizerPlugin.customAtkDiff <= (short)Difficulty.D1)
                 {
                     atk = (int)((float)atk * 0.8f);
                 }
                 if (atk > 0)
                 {
-                    atk += (int)((float)RandomizerPlugin.customDiff / 2f);
-                    if (RandomizerPlugin.customDiff >= (short)Difficulty.D10)
+                    atk += (int)((float)RandomizerPlugin.customAtkDiff / 2f);
+                    if (RandomizerPlugin.customAtkDiff >= (short)Difficulty.D10)
                     {
                         atk += SaveManager.Instance.GetChapter() / 2;
                     }
-                    else if (RandomizerPlugin.customDiff <= (short)Difficulty.D0)
+                    else if (RandomizerPlugin.customAtkDiff <= (short)Difficulty.D0)
                     {
                         atk -= (int)((float)(int)SaveManager.Instance.GetChapter() * 3f);
                     }
-                    else if (RandomizerPlugin.customDiff <= (short)Difficulty.D1)
+                    else if (RandomizerPlugin.customAtkDiff <= (short)Difficulty.D1)
                     {
                         atk -= (int)((float)(int)SaveManager.Instance.GetChapter() * 2f);
                     }
-                    else if (RandomizerPlugin.customDiff <= (short)Difficulty.D3)
+                    else if (RandomizerPlugin.customAtkDiff <= (short)Difficulty.D3)
                     {
                         atk -= (int)((float)(int)SaveManager.Instance.GetChapter() * 1.5f);
                     }
-                    else if (RandomizerPlugin.customDiff <= (short)Difficulty.D5)
+                    else if (RandomizerPlugin.customAtkDiff <= (short)Difficulty.D5)
                     {
                         atk -= (int)((float)(int)SaveManager.Instance.GetChapter() * 1f);
                     }
@@ -1259,7 +1286,7 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static bool subBossBoost(ref enemyController __instance)
         {
-            if (RandomizerPlugin.customDiff < 0) return true;
+
 
             if (GemaBossRushMode.Instance.isBossRush() || (__instance.type != Character.Type.Barados && __instance.type != Character.Type.Caprice && __instance.type != Character.Type.Katu && __instance.type != Character.Type.Thetis && __instance.type != Character.Type.Roleo))
             {
@@ -1267,11 +1294,11 @@ namespace TeviRandomizer
             }
             if (__instance.type == Character.Type.Katu)
             {
-                if (RandomizerPlugin.customDiff >= (short)Difficulty.D7)
+                if (RandomizerPlugin.customHpDiff >= (short)Difficulty.D7)
                 {
                     __instance.health += 125;
                 }
-                if (RandomizerPlugin.customDiff >= (short)Difficulty.D10)
+                if (RandomizerPlugin.customHpDiff >= (short)Difficulty.D10)
                 {
                     __instance.health += 125;
                 }
@@ -1345,10 +1372,10 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static bool difficultyBossHealth(ref enemyController __instance)
         {
-            if (RandomizerPlugin.customDiff < 0) return true;
 
             float num = 0f;
-            Difficulty difficultyName = (Difficulty)RandomizerPlugin.customDiff;
+            Difficulty difficultyName = (Difficulty)RandomizerPlugin.customHpDiff;
+            Difficulty difficultyNameATK = (Difficulty)RandomizerPlugin.customAtkDiff;
             if (difficultyName >= Difficulty.D6)
             {
                 float num2 = 0f;
@@ -1364,7 +1391,8 @@ namespace TeviRandomizer
                 {
                     return false;
                 }
-                __instance.atk += (int)(40f * num2);
+                if (difficultyNameATK >= Difficulty.D6)
+                    __instance.atk += (int)(40f * num2);
                 if (num2 > 0.1f)
                 {
                     float num3 = (float)(SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK) + SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_RATK)) * 0.0667f;
@@ -1450,52 +1478,17 @@ namespace TeviRandomizer
             return false;
         }
 
-        [HarmonyPatch(typeof(GemaUIChangeDifficulty), "Update")]
-        [HarmonyPrefix]
-        static bool changeCustomDiff(ref GemaUIChangeDifficulty __instance, ref bool ___isEnable, ref TextMeshProUGUI ___promotetext, ref int ___difficulty)
-        {
-            if (RandomizerPlugin.customDiff < 0) return true;
-
-            if (___promotetext.enabled && InputButtonManager.Instance.GetButtonDown(13))
-            {
-                ___isEnable = false;
-                CameraScript.Instance.PlaySound(AllSound.SEList.MENUSELECT);
-                FadeManager.Instance.SetAll(0f, 0f, 0f, 0.7f, 0f, 22f);
-                if (!BackgroundManager.Instance.canHeal || EventManager.Instance.getMode() == Mode.Chap1BedSleep)
-                {
-                    RandomizerPlugin.customDiff = ___difficulty;
-                }
-                else
-                {
-                    EventManager.Instance.TryStartEvent(Mode.Chap1ChangeDifficulty, force: true);
-                }
-                return false;
-            }
-            return true;
-        }
-        [HarmonyPatch(typeof(Chap1ChangeDifficulty), "EVENT")]
-        [HarmonyPrefix]
-        static void changeCustomDiffi()
-        {
-            if (EventManager.Instance.EventStage == 60 && RandomizerPlugin.customDiff >= 0)
-            {
-
-                RandomizerPlugin.customDiff = GemaUIChangeDifficulty.Instance.GetSetDifficulty();
-                MusicManager.Instance.SetTargetVolume(1f, 1f);
-                EventManager.Instance.SetStage(70);
-            }
-        }
         [HarmonyPatch(typeof(ObjectPhy), "WallHit")]
         [HarmonyPrefix]
         static bool reduceWallDmg(ref CharacterBase ___cb_perfer)
         {
-            if (RandomizerPlugin.customDiff < 0) return true;
             if (___cb_perfer.isPlayer())
             {
                 float maxMult = 1f;
-                if (RandomizerPlugin.customDiff >= 21)
-                    maxMult = 1.1f + (RandomizerPlugin.customDiff - 20) * 0.0001f;
-                float diff = RandomizerPlugin.customDiff - 5 + SaveManager.Instance.DifficultyMinMaxOffset;
+                
+                if (RandomizerPlugin.customAtkDiff >= 21)
+                    maxMult = 1.1f + (RandomizerPlugin.customAtkDiff - 20) * 0.0001f;
+                float diff = RandomizerPlugin.customAtkDiff - 5 + SaveManager.Instance.DifficultyMinMaxOffset;
                 int num = (int)(5f + Mathf.Lerp(4f, 100f * maxMult, diff * 1.25f)) + (int)((float)(int)___cb_perfer.GetBuffLv(Character.BuffType.WallDamageAmp) * (5f + Mathf.Lerp(4f, 100f * maxMult, diff * 0.8f)));
                 ___cb_perfer.ReduceHealth(num, lethal: false);
                 DamageManager.Instance.CreateDamage(num.ToString(), num, ___cb_perfer.t.position + new Vector3(0f, (float)___cb_perfer.damagePosition * 20f - 10f + ___cb_perfer.OverallOffsetY), ___cb_perfer, Character.DamageTextType.NORMAL, new Color32(225, 177, 177, byte.MaxValue), new Color32(byte.MaxValue, 77, 77, byte.MaxValue), 20f);

@@ -17,6 +17,7 @@ using UnityEngine.EventSystems;
 using RewiredConsts;
 using System.Net;
 using UnityEngine.UI;
+using UnityEngine.SocialPlatforms;
 
 
 
@@ -54,7 +55,7 @@ namespace TeviRandomizer
         {
             settings.Clear();
             RandomizerPlugin.deloadRando();
-            RandomizerPlugin.customDiff = -1;
+
             string path = RandomizerPlugin.pluginPath+ "/resource/";
 
             //GameObject newSelection = new GameObject("Select Slot", typeof(RectTransform));
@@ -131,8 +132,29 @@ namespace TeviRandomizer
         private void updateNumber()
         {
              transform.gameObject.SetActive(false);
-            sliderNumber.GetComponent<TextMeshProUGUI>().text = slider.GetComponent<UnityEngine.UI.Slider>().value.ToString();
+            if (sliderNumber.name == "Difficulty")
+            {
+                int val = (int)slider.GetComponent<UnityEngine.UI.Slider>().value;
+                string text = "";
+                if (val > 10)
+                {
+                    text = Difficulty.D10.ToString()+$"+{val-10}";
+                }
+                else if(val == -1)
+                {
+                    text = "Disabled";
+                }
+                else
+                {
+                    text = ((Difficulty)(slider.GetComponent<UnityEngine.UI.Slider>().value)).ToString(); ;
+                }
 
+                sliderNumber.GetComponent<TextMeshProUGUI>().text = text;
+
+            }
+            else {
+                sliderNumber.GetComponent<TextMeshProUGUI>().text = slider.GetComponent<UnityEngine.UI.Slider>().value.ToString();
+            }
 
         }
     }
@@ -156,6 +178,83 @@ namespace TeviRandomizer
             Gears = new Transform[2];
             Gears[0]=gameObject.transform.Find("Gear 1");
             Gears[1]=gameObject.transform.Find("Gear 2");
+            loadSettings();
+            updateDiffScaler();
+            patchExtraFeatures();
+        }
+
+
+        void patchExtraFeatures()
+        {
+            Extras.patchWhiteFlash(((UnityEngine.UI.Toggle)UI.settings["Toggle AntiFlash"]).isOn);
+            
+        }
+
+        void OnDisable()
+        {
+            saveSettings();
+            updateDiffScaler();
+            patchExtraFeatures();
+        }
+
+        void updateDiffScaler()
+        {
+            RandomizerPlugin.customHpDiff = (int)((UnityEngine.UI.Slider)UI.settings["Slider HPScale"]).value;
+            RandomizerPlugin.customAtkDiff = (int)((UnityEngine.UI.Slider)UI.settings["Slider ATKScale"]).value;
+            RandomizerPlugin.customStartDiff = (int)((UnityEngine.UI.Slider)UI.settings["Slider StartDifficulty"]).value;
+        }
+       private void saveSettings()
+        {
+            ES3File eS3File = new ES3File("randomizer/settings.tevi");
+            foreach (var entry in UI.settings)
+            {
+                if (entry.Key == "Seed") continue;
+
+                switch (entry.Key.Split(' ')[0])
+                {
+                    case "Toggle":
+                        eS3File.Save(entry.Key,((UnityEngine.UI.Toggle)entry.Value).isOn);
+                        break;
+                    case "Slider":
+                        eS3File.Save(entry.Key, ((UnityEngine.UI.Slider)entry.Value).value);
+
+                        break;
+                    case "TextInput":
+                        eS3File.Save(entry.Key, ((TMP_InputField)entry.Value).text);
+                        break;
+
+                }
+
+            }
+            eS3File.Sync();
+            
+        }
+
+        private void loadSettings()
+        {
+            if (ES3.FileExists("randomizer/settings.tevi"))
+            {
+                ES3File eS3File = new ES3File("randomizer/settings.tevi");
+                foreach (var entry in UI.settings)
+                {
+                    if (entry.Key == "Seed") continue;
+                    if (!eS3File.KeyExists(entry.Key)) continue;
+
+                    switch(entry.Key.Split(' ')[0]) {
+                        case "Toggle":
+                            ((UnityEngine.UI.Toggle)entry.Value).isOn = eS3File.Load<bool>(entry.Key);
+                            break;
+                        case "Slider":
+                            ((UnityEngine.UI.Slider)entry.Value).value = eS3File.Load<int>(entry.Key);
+                            break;
+                        case "TextInput":
+                            ((TMP_InputField)entry.Value).text = eS3File.Load<string>(entry.Key);
+                            break;
+
+                    }
+
+                }
+            }
         }
 
         private GameObject[] getOptions(int tab,int side)
@@ -174,7 +273,28 @@ namespace TeviRandomizer
                 else if (t.name.Contains("Slider"))
                 {
                     UnityEngine.UI.Slider slider = t.GetComponentInChildren<UnityEngine.UI.Slider>();
-                    slider.onValueChanged.AddListener(delegate { t.transform.Find("Number").gameObject.GetComponent<TextMeshProUGUI>().text = slider.value.ToString(); });
+                    slider.onValueChanged.AddListener(delegate {
+                        Transform s = t.transform.Find("Difficulty");
+                        if (s != null)
+                        {
+                            if (slider.value > 10)
+                            {
+                                s.gameObject.GetComponent<TextMeshProUGUI>().text = Localize.GetLocalizeTextWithKeyword($"Difficulty.10", false) +$"+{ slider.value - 10}";
+
+                            }
+                            else if (slider.value == -1)
+                            {
+                                s.gameObject.GetComponent<TextMeshProUGUI>().text = "Disabled";
+                            }
+                            else
+                            {
+                                s.gameObject.GetComponent<TextMeshProUGUI>().text = Localize.GetLocalizeTextWithKeyword($"Difficulty.{slider.value}", false);
+                            }
+                            return;
+                        }
+                        t.transform.Find("Number").gameObject.GetComponent<TextMeshProUGUI>().text = slider.value.ToString(); 
+                    
+                    });
                     UI.settings.Add(t.name, slider);
                 }
                 
@@ -244,7 +364,6 @@ namespace TeviRandomizer
             g = gameObject.transform.Find("Generate").gameObject;
 
             g.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate {
-                RandomizerPlugin.customDiff = -1;
                 string input = ((TMP_InputField)UI.settings["Seed"]).text;
 
                 RandomizerPlugin.seed = input;
