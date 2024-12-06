@@ -3,7 +3,7 @@ Desert Base Main:Desert Base Upper Half:ITEM_JETPACK && ITEM_WALLJUMP
 Desert Base Main:Desert Base Upper Half:ITEM_DOUBLEJUMP && ITEM_WALLJUMP 2
 Desert Base Entrance:0000:
 Desert Base Entrance:Desert Base Main:ChargeShot || ITEM_JETPACK || ITEM_AirDash || ITEM_JETPACK || ITEM_DOUBLEJUMP || ITEM_HIJUMP || (ITEM_LINEBOMB && ITEM_AREABOMB) || RabbitJump || (BackFlip && ITEM_SPEEDUP)
-Desert Base Entrance:Desert Base Main:BackFlip
+Desert Base Entrance:Desert Base Main:BackFlip && Hard
 Desert Base Entrance:Desert Base Upper Half:(BackFlip || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash) && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_KNIFE
 Desert Base Upper Half:Desert Base Main:
 Thanatara Canyon:0101:ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash
@@ -53,14 +53,13 @@ Travoll Mines West Exit:Travoll Mines:ITEM_LINEBOMB && ITEM_BOMBFUEL
 Travoll Mines West Exit:Travoll Mines East Exit:ITEM_LINEBOMB
 Travoll Mines:Travoll Mines East Exit:
 Travoll Mines:Travoll Mines Forest Exit:ITEM_LINEBOMB
-Travoll Mines:0503:
+Travoll Mines:0500:
 Travoll Mines:Travoll Mines Swamp Exit:ITEM_SLIDE && ITEM_BOMBFUEL
 Travoll Mines Forest Exit:Travoll Mines:ITEM_LINEBOMB && (ITEM_KNIFE || EVENT_FreeStrongAttack)
 Travoll Mines Forest Exit:0509:
 Travoll Mines Swamp Exit:Travoll Mines:
-Travoll Mines Swamp Exit:0500:
+Travoll Mines Swamp Exit:0503:
 Travoll Industrie:Travoll Industrie East Exit:ITEM_LINEBOMB || ITEM_SLIDE
-Travoll Industrie:Heavens Valley West:
 Travoll Industrie:0603:
 Travoll Industrie:0600:
 Travoll Industrie East Exit:0605:
@@ -128,7 +127,7 @@ Snowveil Ex:Snowveil above Verglas Village:ITEM_DOUBLEJUMP && ITEM_HIJUMP && Ite
 Snowveil Ex:Snowveil above Verglas Village:ITEM_BombLengthExtend 3 && ITEM_LINEBOMB
 Snowveil above Verglas Village:1205:
 Snowveil above Verglas Village:Snowveil Ex:ITEM_LINEBOMB
-Verdazure Sea West:Verdazure Sea Forgotten Exit:ITEM_WATERMOVEMENT && (ITEM_LINEBOMB || RabbitJump)
+Verdazure Sea West:Verdazure Sea Forgotten Exit:ITEM_WATERMOVEMENT && ITEM_LINEBOMB
 Verdazure Sea West:Verdazure Sea West Exit:
 Verdazure Sea West:Verdazure Sea East:
 Verdazure Sea West:1307:ITEM_DOUBLEJUMP || ITEM_JETPACK || ADCKick
@@ -174,7 +173,7 @@ Golden Hands HQ Sewer:Golden Hands HQ Extra:ITEM_SLIDE &&  ITEM_Rotater && Charg
 Golden Hands HQ Extra:Snow City:
 Magma Pits Entrance:Magma Pits:ITEM_LINEBOMB
 Magma Pits Entrance:Pre Swamp:ITEM_LINEBOMB
-Magma Pits Entrance:1703:ITEM_LINEBOMB
+Magma Pits Entrance:1700:ITEM_LINEBOMB
 Magma Pits:Pre Swamp:ITEM_LINEBOMB
 Magma Pits:Swamp:ChargeShot && ITEM_LINEBOMB
 Magma Pits:Magma Depths O:ITEM_JETPACK && ITEM_AirSlide
@@ -187,7 +186,7 @@ Magma Depths:Magma Depths Sinner Exit:HiddenP || (ITEM_AirSlide && ITEM_Rotater 
 Magma Depths Sinner Exit:1701:
 Swamp Entrance:Magma Pits Entrance:ITEM_SLIDE && ITEM_AREABOMB
 Swamp Entrance:Pre Swamp:ITEM_SLIDE
-Swamp Entrance:1700:
+Swamp Entrance:1703:
 Pre Swamp:Swamp Entrance:
 Pre Swamp:Swamp:ITEM_KNIFE
 Pre Swamp:Swamp:ITEM_ORB
@@ -368,7 +367,7 @@ EverGarden Boss Area:EverGarden:
 1703:0503:
 1703:Swamp Entrance:
 0500:1700:
-0500:Travoll Mines Swamp Exit:
+0500:Travoll Mines:
 1700:0500:
 1700:Magma Pits Entrance:
 0605:0705:

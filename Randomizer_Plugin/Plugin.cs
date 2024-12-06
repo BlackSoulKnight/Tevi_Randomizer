@@ -130,6 +130,8 @@ namespace TeviRandomizer
                 harmonyPatchInstance.PatchAll(typeof(BonusFeaturePatch));
                 harmonyPatchInstance.PatchAll(typeof(HintSystem));
                 harmonyPatchInstance.PatchAll(typeof(CustomMap));
+                harmonyPatchInstance.PatchAll(typeof(ResourcePatch));
+                harmonyPatchInstance.PatchAll(typeof(EnemyPatch));
                 randomizerEnabled = true;
                 return true;
             }

@@ -738,12 +738,15 @@ def convertAreaJsonToTxt():
     s = open("Area.json",'r')
     d = open("../../resource/Area.txt",'w+')
     c = open("../../resource/Connection.txt",'w+')
+    l = open("../../resource/TransitionId.txt.txt",'w+')
     s = json.load(s)
     for k,v in s.items():
         for a in v:
             d.write(f"{a['Name']}\n")
             for cs in a["Connections"]:
                 c.write(f"{a['Name']}:{cs['Exit']}:{cs['Method']}\n")
+            if a['Name'].isdigit():
+                l.write(f"{a['Name']}:{a['Connections'][1]['Exit']}\n")
     d.close()
     
 

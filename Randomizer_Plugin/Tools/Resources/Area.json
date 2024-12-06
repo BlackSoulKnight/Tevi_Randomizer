@@ -480,7 +480,7 @@
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "0503",
+                    "Exit": "0500",
                     "Method": ""
                 },
                 {
@@ -530,7 +530,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "0500",
+                    "Exit": "0503",
                     "Method": ""
                 }
             ]
@@ -553,10 +553,6 @@
                 {
                     "Exit": "Travoll Industrie East Exit",
                     "Method": "ITEM_LINEBOMB || ITEM_SLIDE"
-                },
-                {
-                    "Exit": "Heavens Valley West",
-                    "Method": ""
                 },
                 {
                     "Exit": "0603",
@@ -1131,7 +1127,7 @@
             "Connections": [
                 {
                     "Exit": "Verdazure Sea Forgotten Exit",
-                    "Method": "ITEM_WATERMOVEMENT && (ITEM_LINEBOMB || RabbitJump)"
+                    "Method": "ITEM_WATERMOVEMENT && ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Verdazure Sea West Exit",
@@ -1556,7 +1552,7 @@
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "1703",
+                    "Exit": "1700",
                     "Method": "ITEM_LINEBOMB"
                 }
             ]
@@ -1688,7 +1684,7 @@
                     "Method": "ITEM_SLIDE"
                 },
                 {
-                    "Exit": "1700",
+                    "Exit": "1703",
                     "Method": ""
                 }
             ]
@@ -1810,10 +1806,6 @@
                 {
                     "Exit": "DreamKeeper",
                     "Method": "ITEM_Rotater && (ChargeShot || ITEM_SLIDE) && ITEM_LINEBOMB && ITEM_SLIDE && (EVENT_SnowMechanic 2 || EarlyDream)"
-                },
-                {
-                    "Exit": "DreamKeeper",
-                    "Method": "ITEM_AREABOMB && EarlyDream && ITEM_SLIDE && ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "1800",
@@ -3222,7 +3214,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Travoll Mines Swamp Exit",
+                    "Exit": "Travoll Mines",
                     "Method": ""
                 }
             ]

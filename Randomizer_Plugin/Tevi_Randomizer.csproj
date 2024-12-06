@@ -56,6 +56,18 @@
   
   <Reference Include="Unity.TextMeshPro">
     <HintPath>Unity.TextMeshPro.dll</HintPath>
+  </Reference>  
+  
+  <Reference Include="Unity.Addressables">
+    <HintPath>Unity.Addressables.dll</HintPath>
+  </Reference>  
+  
+  <Reference Include="spine-unity">
+    <HintPath>spine-unity.dll</HintPath>
+  </Reference>
+
+  <Reference Include="Unity.ResourceManager">
+    <HintPath>Unity.ResourceManager.dll</HintPath>
   </Reference>
 
   <Reference Include="QFSW.QC">

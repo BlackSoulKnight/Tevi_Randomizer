@@ -187,7 +187,8 @@ namespace TeviRandomizer
         void patchExtraFeatures()
         {
             Extras.patchWhiteFlash(((UnityEngine.UI.Toggle)UI.settings["Toggle AntiFlash"]).isOn);
-            
+            if (((UnityEngine.UI.Toggle)UI.settings["Toggle RandomEnemies"]).isOn)
+                Extras.RandomEnemy.randomEnemies(); ;
         }
 
         void OnDisable()

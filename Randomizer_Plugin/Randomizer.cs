@@ -11,6 +11,7 @@ using UnityEngine.UI;
 using Steamworks.Data;
 using SystemVar;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 
 
 namespace TeviRandomizer
@@ -369,6 +370,7 @@ namespace TeviRandomizer
         private static int bossCount = 0;
         private static int memineCount = 0;
         private List<Area> transitions = new List<Area>();
+        private static Dictionary<int, string> transitionIdToName;
 
         public Randomizer()
         {
@@ -393,6 +395,13 @@ namespace TeviRandomizer
                     transitions.Add(newArea);
                 }
 
+            }
+            transitionIdToName = new Dictionary<int, string>();
+            foreach (string line in File.ReadLines(path + "TransitionId.txt"))
+            {
+                string[] para = line.Split(':');
+                if(para.Count() == 2)
+                    transitionIdToName.Add(int.Parse(para[0]), para[1]);
             }
 
             foreach (string line in File.ReadLines(path + "Connection.txt"))
@@ -878,12 +887,12 @@ namespace TeviRandomizer
                             if (vanillaItemCraft &&  loc.Loaction.Contains("Upgrade"))
                             {
 
-                                    HintSystem.hintList[HintSystem.hintList.Length - currBackHint] = (loc.Loaction, item, (byte)loc.newSlotId);
+                                    HintSystem.hintList[HintSystem.hintList.Length - currBackHint] = (loc.Locationname, item, (byte)loc.newSlotId);
                                     currBackHint++;
                             }
                             else
                             {
-                                HintSystem.hintList[currHint] = (loc.Loaction, item, (byte)loc.newSlotId);
+                                HintSystem.hintList[currHint] = (loc.Locationname, item, (byte)loc.newSlotId);
                                 currHint++;
                             }
                         }
@@ -1084,6 +1093,20 @@ namespace TeviRandomizer
 
         }
 
+        public void saveTransition()
+        {
+            if (!Directory.Exists(RandomizerPlugin.pluginPath + "/Data")) Directory.CreateDirectory(RandomizerPlugin.pluginPath + "/Data");
+
+            StreamWriter spoilerLog = File.CreateText(RandomizerPlugin.pluginPath + "/Data/Transitions");
+            if(RandomizerPlugin.transitionData != null)
+            {
+                foreach(var entry in RandomizerPlugin.transitionData)
+                {
+                    spoilerLog.WriteLine($"{transitionIdToName[entry.Key]} -> {transitionIdToName[entry.Value]}");
+                }
+            }
+            spoilerLog.Close();
+        }
     }
 }
 
