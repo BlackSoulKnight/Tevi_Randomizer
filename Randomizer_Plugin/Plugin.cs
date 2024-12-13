@@ -61,6 +61,7 @@ namespace TeviRandomizer
         TempOption = 3,
         RandomizedEnemy = 4,
         AlwaysRandomizeEnemy = 5,
+        SuperBosses = 6,
     }
 
 
@@ -256,7 +257,7 @@ namespace TeviRandomizer
             }
             rando = new System.Random(seed.GetHashCode());
 
-            randomizer.createSeed(rando);
+            randomizer.synccreateSeed(rando);
         }
 
 

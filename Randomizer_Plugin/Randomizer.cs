@@ -74,7 +74,9 @@ namespace TeviRandomizer
                         case "True":
                             flag = true;
                             break;
-
+                        case "LibraryExtra":
+                            flag = RandomizerPlugin.customFlags[(int)CustomFlags.SuperBosses];
+                            break;
                         case "Backflip":
                             flag = ((UnityEngine.UI.Toggle)settings["Toggle BackFlip"]).isOn;
                             break;
@@ -371,7 +373,7 @@ namespace TeviRandomizer
         private static int memineCount = 0;
         private List<Area> transitions = new List<Area>();
         private static Dictionary<int, string> transitionIdToName;
-
+        private List<string> ignoreLocationList = new List<string>();
         public Randomizer()
         {
             string path = RandomizerPlugin.pluginPath + "/resource/";
@@ -457,6 +459,7 @@ namespace TeviRandomizer
 
         private void CustomOptions(List<(int, int)> tmpItemPool, List<Location> locationPool,System.Random seed)
         {
+            ignoreLocationList.Clear();
             foreach (var option in settings)
             {
                 string[] info = option.Key.Split(' ');
@@ -530,15 +533,20 @@ namespace TeviRandomizer
                                 }
                                 break;
                             case "SuperBosses":
-                                if (((UnityEngine.UI.Toggle)option.Value).isOn)
+                                if (!((UnityEngine.UI.Toggle)option.Value).isOn)
                                 {
                                     locationString["STACKABLE_COG200"].setNewItem(ItemList.Type.STACKABLE_COG, 200);
                                     locationPool.Remove(locationPool.Find(x => x.itemId == (int)ItemList.Type.STACKABLE_COG && x.slotId == 200));
+                                    ignoreLocationList.Add("STACKABLE_COG200");
                                     locationString["STACKABLE_COG201"].setNewItem(ItemList.Type.STACKABLE_COG, 201);
                                     locationPool.Remove(locationPool.Find(x => x.itemId == (int)ItemList.Type.STACKABLE_COG && x.slotId == 201));
+                                    ignoreLocationList.Add("STACKABLE_COG201");
                                     locationString["STACKABLE_COG202"].setNewItem(ItemList.Type.STACKABLE_COG, 202);
                                     locationPool.Remove(locationPool.Find(x => x.itemId == (int)ItemList.Type.STACKABLE_COG && x.slotId == 202));
+                                    ignoreLocationList.Add("STACKABLE_COG202");
                                 }
+                                RandomizerPlugin.customFlags[(int)CustomFlags.SuperBosses] = ((UnityEngine.UI.Toggle)option.Value).isOn;
+
                                 break;
                             default: break;
                         }
@@ -934,6 +942,8 @@ namespace TeviRandomizer
                 bool flag = false;
                 foreach (Location loc in locations)
                 {
+                    if (ignoreLocationList.Contains($"{loc.Itemname}{loc.slotId}"))
+                        continue;
                     flag |= !loc.debugIsReachAble(itemList);
 
                 }
