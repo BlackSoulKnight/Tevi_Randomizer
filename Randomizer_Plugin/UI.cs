@@ -187,8 +187,11 @@ namespace TeviRandomizer
         void patchExtraFeatures()
         {
             Extras.patchWhiteFlash(((UnityEngine.UI.Toggle)UI.settings["Toggle AntiFlash"]).isOn);
-            if (((UnityEngine.UI.Toggle)UI.settings["Toggle RandomEnemies"]).isOn)
-                Extras.RandomEnemy.randomEnemies(); ;
+            if (((UnityEngine.UI.Toggle)UI.settings["Toggle RandomEnemies"]).isOn || ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn) 
+                Extras.RandomEnemy.randomEnemies();
+            RandomizerPlugin.customFlags[(int)CustomFlags.AlwaysRandomizeEnemy] = ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn;
+            RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedEnemy] = ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn || ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomEnemies"]).isOn;
+
         }
 
         void OnDisable()
@@ -480,6 +483,9 @@ namespace TeviRandomizer
         public void swtichTab(int tab)
         {
             tab -= 1;
+            if (tab >= gameObject.transform.GetChild(4).childCount || tab <0) return;
+            side = 0;
+            selected = 0;
             gameObject.transform.GetChild(4).GetChild(this.tab).gameObject.SetActive(false);
             gameObject.transform.GetChild(4).GetChild(tab).gameObject.SetActive(true);
             this.tab = tab;
@@ -585,6 +591,14 @@ namespace TeviRandomizer
                     return;
                 }
             }
+            if (InputButtonManager.Instance.GetButtonDown(3)) //LT
+            {
+                swtichTab(tab);
+            }
+            if (InputButtonManager.Instance.GetButtonDown(4)) //LT
+            {
+                swtichTab(tab + 2);
+            }
             if (InputButtonManager.Instance.GetButtonDown(13))
             {
                 if (options[tab][side][selected].name.Contains("Toggle"))
@@ -624,12 +638,8 @@ namespace TeviRandomizer
                 
 
             }
-            if (InputButtonManager.Instance.GetButtonDown(14))
-            {
-                //UnityEngine.Cursor.visible = false;
-                //GemaSuperSample.Instance.ChangeRenderScaleAnimation(1);
-                //this.gameObject.SetActive(false);
-            }
+
+            
             if(InputButtonManager.Instance.GetButton(7) && InputButtonManager.Instance.GetButton(8))
             {
                 if (RandomizerPlugin.toggleRandomizerPlugin())
@@ -643,5 +653,6 @@ namespace TeviRandomizer
                 GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce(text[0]);
             }
         }
+        static int buttonNR = 13;
     }
 }

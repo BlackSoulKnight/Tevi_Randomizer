@@ -529,6 +529,17 @@ namespace TeviRandomizer
                                     RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart] = false;
                                 }
                                 break;
+                            case "SuperBosses":
+                                if (((UnityEngine.UI.Toggle)option.Value).isOn)
+                                {
+                                    locationString["STACKABLE_COG200"].setNewItem(ItemList.Type.STACKABLE_COG, 200);
+                                    locationPool.Remove(locationPool.Find(x => x.itemId == (int)ItemList.Type.STACKABLE_COG && x.slotId == 200));
+                                    locationString["STACKABLE_COG201"].setNewItem(ItemList.Type.STACKABLE_COG, 201);
+                                    locationPool.Remove(locationPool.Find(x => x.itemId == (int)ItemList.Type.STACKABLE_COG && x.slotId == 201));
+                                    locationString["STACKABLE_COG202"].setNewItem(ItemList.Type.STACKABLE_COG, 202);
+                                    locationPool.Remove(locationPool.Find(x => x.itemId == (int)ItemList.Type.STACKABLE_COG && x.slotId == 202));
+                                }
+                                break;
                             default: break;
                         }
                         break;
@@ -547,7 +558,7 @@ namespace TeviRandomizer
                             case "GearMax":
 
                                 int max = Math.Max((int)((UnityEngine.UI.Slider)option.Value).value, RandomizerPlugin.GoMode);
-
+                                
                                 int gearPos = 0;
                                 int newItemPos = 0;
                                 List<(int,int)> tmpExtra = new List<(int,int)>();

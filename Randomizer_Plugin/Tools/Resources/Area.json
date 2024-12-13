@@ -1044,7 +1044,7 @@
                 },
                 {
                     "Exit": "Snowveil Ex",
-                    "Method": "ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK"
+                    "Method": "( ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK ) && ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Snowveil Entrance",

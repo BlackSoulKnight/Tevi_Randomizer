@@ -59,6 +59,8 @@ namespace TeviRandomizer
         CebleStart = 1,
         CompassStart = 2,
         TempOption = 3,
+        RandomizedEnemy = 4,
+        AlwaysRandomizeEnemy = 5,
     }
 
 
@@ -298,6 +300,7 @@ namespace TeviRandomizer
         {
             __itemData.Clear();
             LocationTracker.clearItemList();
+            transitionData = null;
             ArchipelagoInterface.Instance.currentItemNR = 0;
         }
 
@@ -332,6 +335,14 @@ namespace TeviRandomizer
             {
                 ArchipelagoInterface.Instance.deathLinkTrigger();
             }
+        }
+
+        //Increase Memine Race Timer
+        [HarmonyPatch(typeof(GemaMissionMode),"StartMission")]
+        [HarmonyPostfix]
+        static void increaseTimer(ref float ___timer)
+        {
+            ___timer = 3600;
         }
 
         // change how the item Bell Works
@@ -903,8 +914,16 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static bool setMaxBossHealth(ref enemyController __instance)
         {
+            int customAttack = RandomizerPlugin.customAtkDiff;
+            int customHP = RandomizerPlugin.customHpDiff;
+            if (RandomizerPlugin.customAtkDiff < 0)
+                customAttack = (int)(SaveManager.Instance.GetDifficultyName());
+            if (RandomizerPlugin.customHpDiff < 0)
+                customHP = (int)(SaveManager.Instance.GetDifficultyName());
 
-            int num = RandomizerPlugin.customAtkDiff - 5;
+            if (RandomizerPlugin.customHpDiff < 0)
+                customHP = (int)(SaveManager.Instance.GetDifficultyName());
+            int num = customAttack - 5;
             float num2 = 0f;
             float num3 = 0f;
             if (num > 0)
@@ -942,10 +961,12 @@ namespace TeviRandomizer
         [HarmonyPostfix]
         static void balanceAct(ref enemyController __instance)
         {
+            int customAttack = RandomizerPlugin.customAtkDiff;
+            int customHP = RandomizerPlugin.customHpDiff;
             if (RandomizerPlugin.customAtkDiff < 0)
-                RandomizerPlugin.customAtkDiff = (int)(SaveManager.Instance.GetDifficultyName());
+                customAttack = (int)(SaveManager.Instance.GetDifficultyName());
             if (RandomizerPlugin.customHpDiff < 0)
-                RandomizerPlugin.customHpDiff = (int)(SaveManager.Instance.GetDifficultyName());
+                customHP = (int)(SaveManager.Instance.GetDifficultyName());
 
             if (!TeamManager.Instance.enemyMembers.Contains(__instance))
             {
@@ -980,12 +1001,12 @@ namespace TeviRandomizer
                     else
                     {
                         float num = 0.002f;
-                        if (RandomizerPlugin.customAtkDiff >= (short)Difficulty.D5)
+                        if (customAttack >= (short)Difficulty.D5)
                         {
                             num = 0.008f;
                         }
                         atk = (int)((float)atk * (1f + num * (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_HP) + 0.001f * (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD)));
-                        if (RandomizerPlugin.customAtkDiff >= (short)Difficulty.D4)
+                        if (customAttack >= (short)Difficulty.D4)
                         {
                             atk = (int)((float)atk * (1f + 0.0002f * (float)SaveManager.Instance.GetUsedCost(GetRemain: false)));
                         }
@@ -997,19 +1018,19 @@ namespace TeviRandomizer
                 }
 
                 float num2 = 1f;
-                float num3 = RandomizerPlugin.customAtkDiff - 5;
-                if (RandomizerPlugin.customAtkDiff == (short)Difficulty.D6)
+                float num3 = customAttack - 5;
+                if (customAttack == (short)Difficulty.D6)
                 {
                     num3 = 2f;
                 }
-                else if (RandomizerPlugin.customAtkDiff == (short)Difficulty.D7)
+                else if (customAttack == (short)Difficulty.D7)
                 {
                     num3 = 3f;
                 }
                 if (num3 < 0f)
                 {
                     float num4 = 1f + num3 * 0.1f;
-                    if (RandomizerPlugin.customAtkDiff <= (short)Difficulty.D0)
+                    if (customAttack <= (short)Difficulty.D0)
                     {
                         num4 -= 0.1f;
                     }
@@ -1050,20 +1071,20 @@ namespace TeviRandomizer
                         else
                         {
                             float num6 = 0.005f;
-                            if (RandomizerPlugin.customHpDiff >= (short)Difficulty.D6)
+                            if (customHP >= (short)Difficulty.D6)
                             {
                                 num6 = 0.006f;
                             }
-                            if (RandomizerPlugin.customHpDiff >= (short)Difficulty.D7)
+                            if (customHP >= (short)Difficulty.D7)
                             {
                                 num6 = 0.007f;
                             }
-                            if (RandomizerPlugin.customHpDiff >= (short)Difficulty.D9)
+                            if (customHP >= (short)Difficulty.D9)
                             {
                                 num6 = 0.008f;
                             }
                             num5 = 1f + num6 * ((float)SaveManager.Instance.GetMainLevel() + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD) / 4f + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK) / 3.5f + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_RATK) / 3.5f);
-                            if (RandomizerPlugin.customHpDiff >= (short)Difficulty.D6 && SaveManager.Instance.GetChapter() >= 4)
+                            if (customHP >= (short)Difficulty.D6 && SaveManager.Instance.GetChapter() >= 4)
                             {
                                 num5 += 0.000125f * (float)SaveManager.Instance.GetUsedCost(GetRemain: false);
                             }
@@ -1083,11 +1104,11 @@ namespace TeviRandomizer
                             {
                                 num7 = 10;
                             }
-                            if (RandomizerPlugin.customAtkDiff <= (short)Difficulty.D5 && num7 > 8)
+                            if (customAttack <= (short)Difficulty.D5 && num7 > 8)
                             {
                                 num7 = 8;
                             }
-                            if (RandomizerPlugin.customAtkDiff <= (short)Difficulty.D7 && num7 > 2)
+                            if (customAttack <= (short)Difficulty.D7 && num7 > 2)
                             {
                                 num7 = 2;
                             }
@@ -1098,10 +1119,10 @@ namespace TeviRandomizer
                                 {
                                     atk = 1;
                                 }
-                                if (RandomizerPlugin.customAtkDiff >= (short)Difficulty.D7)
+                                if (customAttack >= (short)Difficulty.D7)
                                 {
                                     float num8 = 1f - (float)num7 * 0.025f;
-                                    if (RandomizerPlugin.customAtkDiff <= (short)Difficulty.D5)
+                                    if (customAttack <= (short)Difficulty.D5)
                                     {
                                         num8 = 1f - (float)num7 * 0.01f;
                                         num8 += 0.025f;
@@ -1114,7 +1135,7 @@ namespace TeviRandomizer
                                     {
                                         num8 = 1f;
                                     }
-                                    if (RandomizerPlugin.customAtkDiff <= (short)Difficulty.D7 && num8 < 0.85f)
+                                    if (customAttack <= (short)Difficulty.D7 && num8 < 0.85f)
                                     {
                                         num8 = 0.85f;
                                     }
@@ -1141,7 +1162,7 @@ namespace TeviRandomizer
                 {
                     health += (int)((float)(SaveManager.Instance.GetChapter() * 2 + SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD)) + (float)(SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK) + SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_RATK)) / 3f);
                     float num9 = 0f;
-                    num3 = (float)(RandomizerPlugin.customHpDiff - 5);
+                    num3 = (float)(customHP - 5);
                     num9 = ((!(num3 > 0f)) ? 0f : ((!(num3 <= 5f)) ? (num9 + (0.375f + (num3 - 5f) * 0.0001f)) : (num9 + num3 * 0.075f)));
                     float num10 = (float)(int)SaveManager.Instance.GetChapter() * 0.1f;
                     if (num10 > 1f)
@@ -1153,20 +1174,20 @@ namespace TeviRandomizer
 
                     if ((WorldManager.Instance.Area != 0 || SaveManager.Instance.GetChapter() >= 1) && !EventManager.Instance.isBossMode() && SaveManager.Instance.GetChapter() <= 3 && EventManager.Instance.GetCurrentEventBattle() == Mode.OFF)
                     {
-                        if (RandomizerPlugin.customHpDiff <= (short)Difficulty.D6)
+                        if (customHP <= (short)Difficulty.D6)
                         {
                             health = (int)((float)health * 0.925f);
                         }
-                        if (RandomizerPlugin.customHpDiff <= (short)Difficulty.D5)
+                        if (customHP <= (short)Difficulty.D5)
                         {
                             health = (int)((float)health * 0.925f);
                         }
                     }
-                    if (RandomizerPlugin.customAtkDiff >= (short)Difficulty.D5)
+                    if (customAttack >= (short)Difficulty.D5)
                     {
                         atk = (int)((float)atk * 1.025f);
                     }
-                    if (RandomizerPlugin.customAtkDiff >= (short)Difficulty.D10)
+                    if (customAttack >= (short)Difficulty.D10)
                     {
                         atk = (int)((float)atk * 1.125f);
                     }
@@ -1175,34 +1196,34 @@ namespace TeviRandomizer
 
 
 
-                if (RandomizerPlugin.customAtkDiff <= (short)Difficulty.D0)
+                if (customAttack <= (short)Difficulty.D0)
                 {
                     atk = (int)((float)atk * 0.4f);
                 }
-                else if (RandomizerPlugin.customAtkDiff <= (short)Difficulty.D1)
+                else if (customAttack <= (short)Difficulty.D1)
                 {
                     atk = (int)((float)atk * 0.8f);
                 }
                 if (atk > 0)
                 {
-                    atk += (int)((float)RandomizerPlugin.customAtkDiff / 2f);
-                    if (RandomizerPlugin.customAtkDiff >= (short)Difficulty.D10)
+                    atk += (int)((float)customAttack / 2f);
+                    if (customAttack >= (short)Difficulty.D10)
                     {
                         atk += SaveManager.Instance.GetChapter() / 2;
                     }
-                    else if (RandomizerPlugin.customAtkDiff <= (short)Difficulty.D0)
+                    else if (customAttack <= (short)Difficulty.D0)
                     {
                         atk -= (int)((float)(int)SaveManager.Instance.GetChapter() * 3f);
                     }
-                    else if (RandomizerPlugin.customAtkDiff <= (short)Difficulty.D1)
+                    else if (customAttack <= (short)Difficulty.D1)
                     {
                         atk -= (int)((float)(int)SaveManager.Instance.GetChapter() * 2f);
                     }
-                    else if (RandomizerPlugin.customAtkDiff <= (short)Difficulty.D3)
+                    else if (customAttack <= (short)Difficulty.D3)
                     {
                         atk -= (int)((float)(int)SaveManager.Instance.GetChapter() * 1.5f);
                     }
-                    else if (RandomizerPlugin.customAtkDiff <= (short)Difficulty.D5)
+                    else if (customAttack <= (short)Difficulty.D5)
                     {
                         atk -= (int)((float)(int)SaveManager.Instance.GetChapter() * 1f);
                     }
@@ -1288,7 +1309,12 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static bool subBossBoost(ref enemyController __instance)
         {
-
+            int customAttack = RandomizerPlugin.customAtkDiff;
+            int customHP = RandomizerPlugin.customHpDiff;
+            if (RandomizerPlugin.customAtkDiff < 0)
+                customAttack = (int)(SaveManager.Instance.GetDifficultyName());
+            if (RandomizerPlugin.customHpDiff < 0)
+                customHP = (int)(SaveManager.Instance.GetDifficultyName());
 
             if (GemaBossRushMode.Instance.isBossRush() || (__instance.type != Character.Type.Barados && __instance.type != Character.Type.Caprice && __instance.type != Character.Type.Katu && __instance.type != Character.Type.Thetis && __instance.type != Character.Type.Roleo))
             {
@@ -1296,11 +1322,11 @@ namespace TeviRandomizer
             }
             if (__instance.type == Character.Type.Katu)
             {
-                if (RandomizerPlugin.customHpDiff >= (short)Difficulty.D7)
+                if (customHP >= (short)Difficulty.D7)
                 {
                     __instance.health += 125;
                 }
-                if (RandomizerPlugin.customHpDiff >= (short)Difficulty.D10)
+                if (customHP >= (short)Difficulty.D10)
                 {
                     __instance.health += 125;
                 }
@@ -1374,10 +1400,15 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static bool difficultyBossHealth(ref enemyController __instance)
         {
-
+            int customAttack = RandomizerPlugin.customAtkDiff;
+            int customHP = RandomizerPlugin.customHpDiff;
+            if (RandomizerPlugin.customAtkDiff < 0)
+                customAttack = (int)(SaveManager.Instance.GetDifficultyName());
+            if (RandomizerPlugin.customHpDiff < 0)
+                customHP = (int)(SaveManager.Instance.GetDifficultyName());
             float num = 0f;
-            Difficulty difficultyName = (Difficulty)RandomizerPlugin.customHpDiff;
-            Difficulty difficultyNameATK = (Difficulty)RandomizerPlugin.customAtkDiff;
+            Difficulty difficultyName = (Difficulty)customHP;
+            Difficulty difficultyNameATK = (Difficulty)customAttack;
             if (difficultyName >= Difficulty.D6)
             {
                 float num2 = 0f;
@@ -1487,10 +1518,16 @@ namespace TeviRandomizer
             if (___cb_perfer.isPlayer())
             {
                 float maxMult = 1f;
-                
-                if (RandomizerPlugin.customAtkDiff >= 21)
-                    maxMult = 1.1f + (RandomizerPlugin.customAtkDiff - 20) * 0.0001f;
-                float diff = RandomizerPlugin.customAtkDiff - 5 + SaveManager.Instance.DifficultyMinMaxOffset;
+                int customAttack = RandomizerPlugin.customAtkDiff;
+                int customHP = RandomizerPlugin.customHpDiff;
+                if (RandomizerPlugin.customAtkDiff < 0)
+                    customAttack = (int)(SaveManager.Instance.GetDifficultyName());
+                if (RandomizerPlugin.customHpDiff < 0)
+                    customHP = (int)(SaveManager.Instance.GetDifficultyName());
+
+                if (customAttack >= 21)
+                    maxMult = 1.1f + (customAttack - 20) * 0.0001f;
+                float diff = customAttack - 5 + SaveManager.Instance.DifficultyMinMaxOffset;
                 int num = (int)(5f + Mathf.Lerp(4f, 100f * maxMult, diff * 1.25f)) + (int)((float)(int)___cb_perfer.GetBuffLv(Character.BuffType.WallDamageAmp) * (5f + Mathf.Lerp(4f, 100f * maxMult, diff * 0.8f)));
                 ___cb_perfer.ReduceHealth(num, lethal: false);
                 DamageManager.Instance.CreateDamage(num.ToString(), num, ___cb_perfer.t.position + new Vector3(0f, (float)___cb_perfer.damagePosition * 20f - 10f + ___cb_perfer.OverallOffsetY), ___cb_perfer, Character.DamageTextType.NORMAL, new Color32(225, 177, 177, byte.MaxValue), new Color32(byte.MaxValue, 77, 77, byte.MaxValue), 20f);

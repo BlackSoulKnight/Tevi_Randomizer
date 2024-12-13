@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Spine.Unity;
 using UnityEngine.ResourceManagement.ResourceLocations;
 using Bullet;
+using Map;
 
 
 namespace TeviRandomizer
@@ -195,7 +196,25 @@ namespace TeviRandomizer
             }
             return;
         }
-        
+
+        [HarmonyPatch(typeof(ObjectPooler), "GetPooledObject", new[] {typeof(string) } )]
+        [HarmonyPostfix]
+        static void getPooledObject(ref GameObject __result,ref string search,ref ObjectPooler __instance)
+        {
+            if (__instance == AreaResource.Instance.AreaPooler && __result == null)
+            {
+                for (int i = 0; i < resources.Length; i++)
+                {
+                    if (i == WorldManager.Instance.Area) continue;
+                    __result = getAreaResource(i).AreaPooler.GetPooledObject(search);
+                    if (__result != null) return;
+                }
+                return;
+            }
+            return;
+        }
+
+
         [HarmonyPostfix]
         [HarmonyPatch(typeof(AreaResource), "GetBossObjectByName")]
         static void GetBossObjectByName(ref AreaResource __instance, ref GameObject __result, ref string sname)
@@ -230,8 +249,14 @@ namespace TeviRandomizer
                 }
                 return;
             }
+            else if (__instance == AreaResource.Instance && __result != -1)
+            {
+                BossObjectArea = WorldManager.Instance.Area;
+            }
             return;
         }
+
+
 
         [HarmonyPrefix]
         [HarmonyPatch(typeof(WorldManager), "SpawnBossObject", new[] {typeof(int),typeof(Vector3) })]
@@ -380,9 +405,12 @@ namespace TeviRandomizer
         [HarmonyPatch(typeof(WorldManager),"InitMap")]
         static bool loadResources(ref WorldManager __instance)
         {
+            if (__instance.Area == 48) return true;
             loadStuff(__instance);
             return false;
         }
+
+
 
 
         // fix all Object Spirtes with numbers

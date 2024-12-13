@@ -197,6 +197,9 @@ BADGE_AmuletMPCharge@Relicts@1@ITEM_SLIDE && ITEM_LINEBOMB,0@Relicts - MP Surge:
 QUEST_LibraryKey@Ana Thema@1@ITEM_AREABOMB && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_WALLJUMP,0;ITEM_AREABOMB && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_DOUBLEJUMP && ITEM_JETPACK 3,0;ITEM_AREABOMB && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_DOUBLEJUMP && ITEM_HIJUMP && ITEM_JETPACK,0@Ana Thema - Library Key
 STACKABLE_MATK@Ana Thema@7@ITEM_SLIDE && ITEM_AirDash && ITEM_LINEBOMB,0;ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_LINEBOMB,0;ITEM_SLIDE && RabbitJump && ITEM_LINEBOMB,0;ITEM_SLIDE && ITEM_JETPACK && ITEM_LINEBOMB,0@Ana Thema - Cherry Bunny Potion
 I20@Ana Thema@1@QUEST_LibraryKey,0@Ana Thema - Sable
+STACKABLE_COG@Ana Thema@202@QUEST_LibraryKey && LibraryExtra && ITEM_KNIFE,0@Ana Thema - GemaYue
+STACKABLE_COG@Ana Thema@201@QUEST_LibraryKey && LibraryExtra && ITEM_KNIFE,0@Ana Thema - EinLee
+STACKABLE_COG@Ana Thema@200@QUEST_LibraryKey && LibraryExtra && ITEM_KNIFE,0@Ana Thema - Waero
 EVENT_EliteChallangeD@Ana Thema@1@,0@Ana Thema - Elite
 BADGE_QuickMeleeLagA@Ana Thema@1@ITEM_LINEBOMB,0@Ana Thema - Deft I
 EVENT_AnathemaVisited@Ana Thema@1@,0@Ana Thema
@@ -389,7 +392,7 @@ STACKABLE_RATK@Gallery of Souls@10@ITEM_SLIDE && ITEM_LINEBOMB,0@Gallery of Soul
 ITEM_DOUBLEJUMP@Gallery of Souls@1@,0@Gallery of Souls - Double Rabi Boots
 BADGE_Instant1@Gallery of Souls Boss Area@1@ITEM_LINEBOMB,-1@Gallery of Souls Boss Area - Hero Call
 STACKABLE_COG@Gallery of Souls Boss Area@62@Boss,0@Gallery of Souls Boss Area - Astral Gear
-STACKABLE_HP@Verdazure Ocean@23@ITEM_WALLJUMP && ITEM_DOUBLEJUMP,0;ITEM_WALLJUMP && ITEM_JETPACK 2,0;ITEM_WALLJUMP && ITEM_WATERMOVEMENT,0;ITEM_WALLJUMP && ITEM_JETPACK && ITEM_AirDash,0;ITEM_WATERMOVEMENT && ITEM_AirDash && ITEM_DOUBLEJUMP,0;ITEM_WATERMOVEMENT && ITEM_DOUBLEJUMP && ITEM_JETPACK,0@Verdazure Ocean - Kiwi Bunny Potion
+STACKABLE_HP@Verdazure Ocean Sea Exit@23@ITEM_WALLJUMP && ITEM_DOUBLEJUMP,0;ITEM_WALLJUMP && ITEM_JETPACK 2,0;ITEM_WALLJUMP && ITEM_WATERMOVEMENT,0;ITEM_WALLJUMP && ITEM_JETPACK && ITEM_AirDash,0;ITEM_WATERMOVEMENT && ITEM_AirDash && ITEM_DOUBLEJUMP,0;ITEM_WATERMOVEMENT && ITEM_DOUBLEJUMP && ITEM_JETPACK,0@Verdazure Ocean - Kiwi Bunny Potion
 BADGE_DodgeCharger@Verdazure Ocean@1@ITEM_AREABOMB && ITEM_LINEBOMB && ChargeShot,0@Verdazure Ocean - MP Surge: Dodge
 STACKABLE_MP@Verdazure Ocean@16@ITEM_LINEBOMB,0@Verdazure Ocean - Blueberry Bunny Potion #1
 STACKABLE_RATK@Verdazure Ocean@25@ITEM_LINEBOMB,0@Verdazure Ocean - Grape Bunny Potion

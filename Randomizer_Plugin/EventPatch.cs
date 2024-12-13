@@ -1,6 +1,8 @@
-﻿using EventMode;
+﻿using Character;
+using EventMode;
 using Game;
 using HarmonyLib;
+using Map;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -372,6 +374,69 @@ namespace TeviRandomizer
                 em.EventTime = 100f;
             }
             return true;
+        }
+
+
+        // Library Bosses
+        // may have to out source GiveItem function to have bosses with higher id than 255 
+        static Character.Type boss = Character.Type.NONE;
+        [HarmonyPatch(typeof(END_BOOKMARK),"EVENT")]
+        [HarmonyPrefix]
+        static void CustomBossesReward()
+        {
+            EventManager em = EventManager.Instance;
+            if(em.EventStage == 0)
+            {
+                for (int num = CharacterManager.Instance.characters.Count - 1; num >= 0; num--)
+                {
+                    if (CharacterManager.Instance.characters[num] != null && !CharacterManager.Instance.characters[num].isPlayer() && CharacterManager.Instance.characters[num].isBoss != BossType.SUMMON && CharacterManager.Instance.characters[num].isBoss != BossType.NPC)
+                    {
+                        boss = CharacterManager.Instance.characters[num].type;
+                    }
+                }
+            }
+            if(em.EventStage == 100)
+            {
+                em.SetStage(101);
+            }
+            if(em.EventStage == 101)
+            {
+                if (!(em.EventTime > 2.5f))
+                {
+                    return;
+                }
+                EventManager.Instance.AllowAutoMap = false;
+                em.StopEvent();
+                WorldManager.Instance.ToggleFlagGate(t: true);
+                MusicManager.Instance.PlayRoomMusic();
+                CameraScript.Instance.DisableEnemySpawn = true;
+                SaveManager.Instance.SetMiniFlag(Mini.BookmarkUsed, 0);
+                if (SaveManager.Instance.GetMiniFlag(Mini.GameCleared) > 0)
+                {
+                    SaveManager.Instance.SetMiniFlag(Mini.NoBookmarkUntilMapChange, 1);
+                }
+                if(boss == Character.Type.Waero_B || boss == Character.Type.EinLee_B || boss == Character.Type.GemaYue_B) {
+
+                    int id = (int)boss % 3 + 200;
+
+                    if (SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam) && !RandomizerPlugin.checkItemGot(ItemList.Type.STACKABLE_COG, (byte)id))
+                    {
+                        HUDObtainedItem.Instance.GiveItem(ItemList.Type.STACKABLE_COG, (byte)id);
+                        if (SaveManager.Instance.GetMiniFlag(Mini.GameCleared) <= 0)
+                        {
+                            HUDResourceGotPopup.Instance.AddPopup(ItemList.Resource.COIN, SaveManager.Instance.GetResource(ItemList.Resource.COIN), 1000);
+                            SaveManager.Instance.AddResource(ItemList.Resource.COIN, 1000);
+                        }
+                    }
+                }
+                EventManager.Instance.DontSetMiniMapIcon = 15;
+                if (SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam) && SaveManager.Instance.GetMiniFlag(Mini.GameCleared) <= 0)
+                {
+                    SaveManager.Instance.AutoSave(forced: true);
+                }
+                EventManager.Instance.AllowAutoMap = true;
+
+            }
         }
 
     }

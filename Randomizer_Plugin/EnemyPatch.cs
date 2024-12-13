@@ -9,6 +9,7 @@ using UnityEngine;
 using static Localize;
 using UnityEngine.Analytics;
 using static UnityEngine.UI.Image;
+using System.Linq;
 
 namespace TeviRandomizer
 {
@@ -21,7 +22,7 @@ namespace TeviRandomizer
         [HarmonyPatch(typeof(EventManager), "TryStartEvent")]
         static public void testBossReplace(ref Mode setMode)
         {
-            if(eventReplace != null && eventReplace.Length > (short)setMode && eventReplace[(short)setMode] != -1) { 
+            if(eventReplace != null && eventReplace.Length > (short)setMode && eventReplace[(short)setMode] != -1 && RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedEnemy]) { 
                 setMode = (Mode)eventReplace[(short)setMode];
             }
         }
@@ -492,12 +493,64 @@ namespace TeviRandomizer
         {
             if(enemyReplace != null && enemyReplace.Length > (short)type)
             {
-                if (enemyReplace[(short)type] != -1)
+
+                if (enemyReplace[(short)type] != -1 && RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedEnemy])
                     type = (Character.Type)enemyReplace[(short)type];
+                 
+            }
+            if (RandomizerPlugin.customFlags[(int)CustomFlags.AlwaysRandomizeEnemy] && Extras.RandomEnemy.enemies != null)
+            {
+                if (Extras.RandomEnemy.enemies.Contains((short)type))
+
+                    type = (Character.Type)Extras.RandomEnemy.enemies[(short)UnityEngine.Random.Range(0, Extras.RandomEnemy.enemies.Count)];
             }
         }
 
+        //Library Bosses
+
+        [HarmonyPatch(typeof(TR_Member_Employee), "INIT")]
+        [HarmonyPrefix]
+        static bool enableLibraryBoss(ref enemyController ___en, ref TR_Member_Employee __instance,ref byte ___isWalk,ref float ___x)
+        {
+            Character.Type[] type = {Character.Type.GemaYue, Character.Type.Waero, Character.Type.EinLee};
+            if (type.Contains(___en.type))
+            {
+                ___x = ___en.t.position.x;
+                ___en.isBoss = BossType.NPC;
+                int id = 0;
+
+                if (___en.type ==  Character.Type.EinLee || ___en.type == Character.Type.Waero) {
+                    ___en.alwaysFaceToPlayer = true;
+                    if(___en.type == Character.Type.EinLee)
+                        id = (int)Character.Type.EinLee_B % 3 + 200;
+                    if(___en.type == Character.Type.Waero)
+                        id = (int)Character.Type.Waero_B % 3 + 200;
+                }
+                if(___en.type == Character.Type.GemaYue)
+                {
+                    ___en.t.position += new Vector3(-15f, MainVar.instance.TILESIZE * 0.425f, 0f);
+                    ___en.AIGravity(0f);
+                    ___en.phy_perfer._velocity.y = 0f;
+                    ___en.SetCounter(9, UnityEngine.Random.Range(0, 999));
+                    ___en.SetCounter(3, ___en.t.position.x);
+                    ___en.SetCounter(4, ___en.t.position.y);
+                    Traverse.Create(__instance).Method("GemaYueStand").GetValue();
+                    id = (int)Character.Type.GemaYue_B % 3 + 200;
+                }
+                if (RandomizerPlugin.checkItemGot(ItemList.Type.STACKABLE_COG, (byte)id))
+                    ___en.DespawnMe();
+                byte iDFromBelow = EventManager.Instance.GetIDFromBelow(___en.t, 4.5f);
+                if (iDFromBelow >= 1 && iDFromBelow < byte.MaxValue)
+                {
+                    ___isWalk = iDFromBelow;
+                    ___en.spranim_prefer.NoForceAnimation();
+                }
+                return false;
+            }
+            return true;
+        }
     }
+
 }
 
 /* DONE
@@ -525,8 +578,3 @@ namespace TeviRandomizer
  *  CHARON
  *  VENA
  */
-
-
-//Traverse t = new Traverse(WorldManager.Instance);
-//t.Method("CreateTile",new object[] {0,0,73,false,false,Layer.ELEMENT}).GetValue(); //ID1
-//t.Method("CreateTile",new object[] {0,0,62,false,false,Layer.ELEMENT}).GetValue(); //EVENTPOINT

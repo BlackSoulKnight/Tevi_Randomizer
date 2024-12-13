@@ -97,6 +97,7 @@ namespace TeviRandomizer
 
         public class RandomEnemy
         {
+            static public List<short> enemies = null;
             static public void randomEnemies()
             {
                 EnemyPatch.enemyReplace = new short[(int)Character.Type.MAX];
@@ -109,16 +110,14 @@ namespace TeviRandomizer
                 {
                     EnemyPatch.eventReplace[i] = -1;
                 }
-                List<short> enemies = new List<short>();
-                enemies.AddRange(new short[] {
+                if (enemies == null)
+                {
+                    enemies = new List<short>();
+                    enemies.AddRange(new short[] {
                 (short)Character.Type.GH_Member_Cat,
                 (short)Character.Type.GH_Member_Dog,
                 (short)Character.Type.Hermitcrab_Cans,
                 (short)Character.Type.Hermitcrab_Shoes,
-                (short)Character.Type.Jacoben,
-                (short)Character.Type.Gromp,
-                (short)Character.Type.TR_Member_Employee,
-                (short)Character.Type.TR_Member_Miner,
                 (short)Character.Type.Greasetrap,
                 (short)Character.Type.Mouse,
                 (short)Character.Type.GH_Bot,
@@ -166,7 +165,6 @@ namespace TeviRandomizer
                 (short)Character.Type.Pomp,
                 (short)Character.Type.Bourbon,
                 (short)Character.Type.Anisette,
-                (short)Character.Type.Amaretto,
                 (short)Character.Type.T_Guard_Elite,
                 (short)Character.Type.V_Guard_Elite,
                 (short)Character.Type.Shroom_Mutant,
@@ -183,7 +181,6 @@ namespace TeviRandomizer
                 (short)Character.Type.Drone_Pollution,
                 (short)Character.Type.Crawler_Pollution,
                 (short)Character.Type.Crawler_Pollution_Sup,
-                (short)Character.Type.Pestilence_Range,
                 (short)Character.Type.Jelly,
                 (short)Character.Type.Jelly_Elite,
                 (short)Character.Type.Jelly_Forest,
@@ -217,7 +214,6 @@ namespace TeviRandomizer
                 (short)Character.Type.Drone_Fire,
                 (short)Character.Type.Monitor_Elite,
                 (short)Character.Type.T_Curse,
-                (short)Character.Type.T_Creeper,
                 (short)Character.Type.T_Creeper_Elite,
                 (short)Character.Type.V_Archer,
                 (short)Character.Type.V_Unicorn,
@@ -225,7 +221,6 @@ namespace TeviRandomizer
                 (short)Character.Type.T_Scientist_B,
                 (short)Character.Type.T_Scientist_G,
                 (short)Character.Type.Landmine,
-                (short)Character.Type.Phantom,
                 (short)Character.Type.Frost_Hive,
                 (short)Character.Type.Frost_Hornet,
                 (short)Character.Type.SnowSock,
@@ -239,9 +234,11 @@ namespace TeviRandomizer
                 (short)Character.Type.Knights_A,
                 (short)Character.Type.Knights_B,
                 (short)Character.Type.Knights_C,
-                (short)Character.Type.PetBunny,
+                (short)Character.Type.PetBunny, //currently bugged
                 (short)Character.Type.PetCat,
-                }) ;
+                });
+                }
+
                 List<short> placed = new List<short>();
 
                 foreach (short a in enemies)

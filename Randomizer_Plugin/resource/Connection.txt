@@ -117,7 +117,7 @@ Snowveil Entrance:Snowveil:ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK 3 && 
 Snowveil Entrance:Snowveil:ITEM_LINEBOMB
 Snowveil Entrance:1202:
 Snowveil:1204:
-Snowveil:Snowveil Ex:ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK
+Snowveil:Snowveil Ex:( ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK ) && ITEM_LINEBOMB
 Snowveil:Snowveil Entrance:
 Snowveil Ex:Snowveil:
 Snowveil Ex:Snowveil above Verglas Village:ITEM_SLIDE
