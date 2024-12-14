@@ -35,6 +35,7 @@
 
 ## Install
 Download the latest released Version from here [Tevi Randomizer releases](https://github.com/BlackSoulKnight/Tevi_Randomizer/releases)<br>
+Note: Archipelago and the Normal version share the same client
 
 Extract the zip in the BepInEx Plugins Folder<br><br>
 
