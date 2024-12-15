@@ -22,6 +22,25 @@
 + Memine races won't have mobility items as rewards
 + If you're unfamiliar with the item locations, starting with level 3 compass might be a good idea. Professor Zema will also provide hints if you talk to him (non Archipelago Randomizer)
 
+## Options
+| Option | Description |
+| ------ | --------- |
+| Orb Start | Start the Game with Orb level 1 |
+| Knife Start              | Start the Game with Knife level 1 |
+| Celia / Sable            | Start the Game with Celia and Sable unlock but still require Orb level 2 |
+| Level 3 Compass          | Start the Game with Compass level 3 |
+| Vanilla Item Upgrades    | Crafting Item result in a level for the item instead of beeing randomized |
+| Early Morose             | Destroys the blocks which require Linebomb to access Morose |
+| Dream Barrier Skip       | Enter Dreamers Keep without destroying 2 of the 3 Blue Orbs required |
+| Hidden Free Roam Path    | Logic will include all hidden Paths |
+| 200% Itemspeed Walljump  | Using a 200% Itemspeed Item to reach maximum height of a Walljump without jumping away from the wall |
+| 200% Itemspeed WallClimb | Multiple Walljumps with 200% Itemspeed (more FPS will make this easier) |
+| Backflip Tricks          | Using the Backflip from Knife to reach certain Locations |
+| Extra X Potions          | Start the Game with Y Potions |
+| Dropkick Ceiling         | Reverse Horizontal direction with a dropkick while near a ceiling |
+| Map Transition Shuffle   | Shuffle all Transition that would normally lead to a different Area |
+| Library Bosses           | Adds Library Bosses to the logic, they are accessable as soon as its possible to enter the Library <br>(currently only in the Enemy Randomizer test version) |
+
 ### Join the Tevi Speedrunning [Discord](https://discord.gg/e4SW6AaBuj) to gain more Information about tricks for the Game
 
 ## Requirements
