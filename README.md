@@ -49,7 +49,8 @@
 
 ### Optional
 [Tevi Map Tracker](https://github.com/vegemii/Tevi-Tracker/releases) made by Vegemii <br>
-[Tevi Item Tracker](https://github.com/cramps-man/tevi-rando-progression-ui) made by Cramps-Man
+[Tevi Poptracker](https://github.com/vegemii/TEVI-Rando-PopTracker) made by Vegemii (WIP) <br>
+[Tevi Item Tracker](https://github.com/cramps-man/tevi-rando-progression-ui) made by Cramps-Man <br>
  
 
 ## Install
