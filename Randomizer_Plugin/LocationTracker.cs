@@ -41,6 +41,10 @@ namespace TeviRandomizer
             else
                 return collectedLocationList.Contains($"{item} #{slot}");
         }
+        public static bool checkLocation(string location)
+        {
+            return collectedLocationList.Contains(location);
+        }
         public static void clearItemList() => collectedLocationList.Clear();
         public static void addItemToList(ItemList.Type item, byte slot)
         {

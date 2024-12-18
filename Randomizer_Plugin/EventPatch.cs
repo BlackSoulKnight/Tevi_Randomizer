@@ -19,12 +19,13 @@ namespace TeviRandomizer
         static bool StartEvent()
         {
             EventManager em = EventManager.Instance;
-            LocationTracker.setCollectedLocationList([]);
             if (HUDObtainedItem.Instance.isDisplaying()) return false;
 
             if (em.EventStage == 1)
             {
-                if(ArchipelagoInterface.Instance?.isConnected == true)
+                LocationTracker.setCollectedLocationList([]);
+
+                if (ArchipelagoInterface.Instance?.isConnected == true)
                 {
                     ArchipelagoInterface.Instance.currentItemNR = 0;
                 }

@@ -257,7 +257,7 @@ namespace TeviRandomizer
             }
             rando = new System.Random(seed.GetHashCode());
 
-            randomizer.synccreateSeed(rando);
+            randomizer.createSeed(rando);
         }
 
 

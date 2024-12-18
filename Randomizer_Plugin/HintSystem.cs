@@ -75,7 +75,7 @@ namespace TeviRandomizer
                     if(extraList.Count == 0) extraList.Add(createChatRow(section, $"No more Hints left.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
                     return;
                 };
-                if (!RandomizerPlugin.checkItemGot((ItemList.Type)Enum.Parse(typeof(ItemList.Type), hintList[i].Item2), hintList[i].Item3))
+                if (!LocationTracker.checkLocation(hintList[i].Item1))
                 {
                     string localizeItem = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + hintList[i].Item2, false);
                     extraList.Add(createChatRow(section, $"You may find {localizeItem} in {hintList[i].Item1}.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
