@@ -205,7 +205,7 @@ namespace TeviRandomizer
             {
                 for (int i = 0; i < resources.Length; i++)
                 {
-                    if (i == WorldManager.Instance.Area) continue;
+                    if (i == WorldManager.Instance.Area || getAreaResource(i).AreaPooler == null) continue;
                     __result = getAreaResource(i).AreaPooler.GetPooledObject(search);
                     if (__result != null) return;
                 }
@@ -337,7 +337,10 @@ namespace TeviRandomizer
             {
                 AreaResource.Instance = getAreaResource(resources.Length-1);
             }
-
+            if(AreaResource.Instance.AreaPooler == null)
+            {
+                AreaResource.Instance.AreaPooler = new ObjectPooler();
+            }
             text = "bakedmap";
             text2 = text + __instance.Area;
             if (!__instance.editorload.loadFromBaked && Application.isEditor)
@@ -407,6 +410,7 @@ namespace TeviRandomizer
         {
             if (__instance.Area == 48) return true;
             loadStuff(__instance);
+            
             return false;
         }
 
