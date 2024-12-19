@@ -681,6 +681,7 @@ namespace TeviRandomizer
                     transitionData.Add(int.Parse(area.Name), int.Parse(area.Connections[0].to.Name));
                 }
                 RandomizerPlugin.transitionData = transitionData;
+                saveSpoilerLog(RandomizerPlugin.__itemData);
             });
         }
 
@@ -786,7 +787,7 @@ namespace TeviRandomizer
                 transitionData.Add(int.Parse(area.Name), int.Parse(area.Connections[0].to.Name));
             }
             RandomizerPlugin.transitionData = transitionData;
-            //saveSpoilerLog("DebugSpoilerLog.txt", GetData(), true);
+            saveSpoilerLog(RandomizerPlugin.__itemData);
         }
 
         public async void seedCreationLoading()
@@ -1052,82 +1053,35 @@ namespace TeviRandomizer
         static public Dictionary<string, object> settings = new Dictionary<string, object>();
 
 
-
-        static public void saveSpoilerLog(string FileName, Dictionary<string, string> itemData, bool debugWrite = false)
+        static public void saveSpoilerLog(Dictionary<string,string> itemData)
         {
             if (!Directory.Exists(RandomizerPlugin.pluginPath + "Data")) Directory.CreateDirectory(RandomizerPlugin.pluginPath + "Data");
-
-            StreamWriter spoilerLog = File.CreateText(RandomizerPlugin.pluginPath + "Data/" + FileName);
-            foreach (KeyValuePair<string, string> item in itemData)
+            DateTime today = DateTime.Now;
+            StreamWriter spoilerLog = File.CreateText(RandomizerPlugin.pluginPath + "/Data/" + $"Spoilerlog.{today.Day}.{today.Month}.{today.Year}.{today.Hour}.{today.Minute}.txt");
+            ItemList.Type value;
+            spoilerLog.WriteLine("Locations:");
+            foreach (KeyValuePair<string,string> item in itemData)
             {
-                string itemName = "";
-                string line = "";
-                string line2 = "";
-                string[] keySep = item.Key.Split(new string[] { " #" }, StringSplitOptions.None);
-                //using only ItemList.Type for now
-                ItemList.Type value = (ItemList.Type)Enum.Parse(typeof(ItemList.Type),item.Value);
-                ItemList.Type key = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), keySep[0]);
-
-                if (!debugWrite)
+                if(ItemList.Type.TryParse(item.Value, out value))
                 {
-                    if ((int)value < 3000) itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + GemaItemManager.Instance.GetItemString(value), false);
-                    else itemName = value.ToString();
-                    line = $"Randomized Item: {itemName}"; // Slot: {item.Key.slotID}
+                    spoilerLog.WriteLine($"{item.Key} => {Localize.GetLocalizeTextWithKeyword("ITEMNAME." + (value).ToString(), false)}");
                 }
-                line2 = $"Randomized Item: {value}";
-                for (int x = line.Length; x < 70; x++)
-                    line += " ";
-                for (int x = line2.Length; x < 70; x++)
-                    line2 += " ";
-                if (!debugWrite)
+                else
                 {
-                    if ((int)key< 3000) itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + GemaItemManager.Instance.GetItemString(key), false);
-                    else itemName = key.ToString();
-                    line += $"Original Item: {itemName}"; // Slot: {item.Value.slotID}
+                    spoilerLog.WriteLine($"{item.Key} => {item.Value}");
                 }
-                line2 += $"Original Item: {item.Key}"; // Slot: {item.Value.slotID}
-                for (int x = line.Length; x < 140; x++)
-                    line += " ";
-
-                for (int x = line2.Length; x < 140; x++)
-                    line2 += " ";
-                Location loc = Instance.locations.Find(x => x.Itemname == key.ToString() && x.slotId == int.Parse(keySep[1]));
-                if (loc != null) { line += $"Location: {loc.Loaction}\n"; }
-                else line += "\n";
-                if (loc != null) { line2 += $"Location: {loc.Loaction}\n"; }
-                else line2 += "\n";
-                if ((int)key < 3000)
-                {
-
-                    if (debugWrite)
-                    {
-                        spoilerLog.Write(line2);
-                    }
-                    else
-                    {
-                        spoilerLog.Write(line);
-                    }
-                }
-
             }
-            spoilerLog.Close();
-
-        }
-
-        public void saveTransition()
-        {
-            if (!Directory.Exists(RandomizerPlugin.pluginPath + "/Data")) Directory.CreateDirectory(RandomizerPlugin.pluginPath + "/Data");
-
-            StreamWriter spoilerLog = File.CreateText(RandomizerPlugin.pluginPath + "/Data/Transitions");
-            if(RandomizerPlugin.transitionData != null)
+            spoilerLog.WriteLine("\nTransitions:");
+            if (RandomizerPlugin.transitionData != null)
             {
-                foreach(var entry in RandomizerPlugin.transitionData)
+                foreach (var entry in RandomizerPlugin.transitionData)
                 {
                     spoilerLog.WriteLine($"{transitionIdToName[entry.Key]} -> {transitionIdToName[entry.Value]}");
                 }
             }
             spoilerLog.Close();
         }
+
     }
 }
 

@@ -194,7 +194,6 @@ namespace TeviRandomizer
 
 
             eS3File.Sync();
-            //Randomizer.saveSpoilerLog($"rando.SpoilerSave{saveslot}.txt", s);
         }
 
         //very cursed Auto save things
