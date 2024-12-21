@@ -23,6 +23,8 @@ namespace TeviRandomizer
 
             if (em.EventStage == 1)
             {
+                SaveManager.Instance.SetOrb(0);
+
                 LocationTracker.setCollectedLocationList([]);
 
                 if (ArchipelagoInterface.Instance?.isConnected == true)
@@ -45,11 +47,7 @@ namespace TeviRandomizer
                     SaveManager.Instance.SetItem(ItemList.Type.STACKABLE_MATK, 1, true);
                 }
 
-                if (RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart])
-                {
-                    SaveManager.Instance.SetItem(ItemList.Type.I19, 1);
-                    SaveManager.Instance.SetItem(ItemList.Type.I20, 1);
-                }
+
                 if (RandomizerPlugin.customStartDiff >= 0)
                     SaveManager.Instance.SetDifficulty(RandomizerPlugin.customStartDiff);
                 // Make a Path to Morose
@@ -85,6 +83,12 @@ namespace TeviRandomizer
             {
                 //ShopPatch.alreadyClaimed();
                 //VenaItemClaimedCheck();
+                if (RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart])
+                {
+                    SaveManager.Instance.SetOrb(3);
+                    SaveManager.Instance.SetItem(ItemList.Type.I19, 1);
+                    SaveManager.Instance.SetItem(ItemList.Type.I20, 1);
+                }
             }
             return true;
         }
