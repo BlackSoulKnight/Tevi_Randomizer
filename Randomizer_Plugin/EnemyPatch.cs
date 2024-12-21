@@ -487,24 +487,29 @@ namespace TeviRandomizer
         }
 
         public static short[] enemyReplace = null;
+        static bool isMission;
         [HarmonyPatch(typeof(EventManager),"CreateEnemy")]
         [HarmonyPrefix]
         static void changeEnemy(ref Character.Type type)
         {
-            if(enemyReplace != null && enemyReplace.Length > (short)type)
+            if (!EventManager.Instance.eventBattle.ToString().Contains("Mission") && !EventManager.Instance.Mode.ToString().Contains("Mission"))
             {
+                if (enemyReplace != null && enemyReplace.Length > (short)type)
+                {
 
-                if (enemyReplace[(short)type] != -1 && RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedEnemy])
-                    type = (Character.Type)enemyReplace[(short)type];
-                 
-            }
-            if (RandomizerPlugin.customFlags[(int)CustomFlags.AlwaysRandomizeEnemy] && Extras.RandomEnemy.enemies != null)
-            {
-                if (Extras.RandomEnemy.enemies.Contains((short)type))
+                    if (enemyReplace[(short)type] != -1 && RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedEnemy])
+                        type = (Character.Type)enemyReplace[(short)type];
 
-                    type = (Character.Type)Extras.RandomEnemy.enemies[(short)UnityEngine.Random.Range(0, Extras.RandomEnemy.enemies.Count)];
+                }
+                if (RandomizerPlugin.customFlags[(int)CustomFlags.AlwaysRandomizeEnemy] && Extras.RandomEnemy.enemies != null)
+                {
+                    if (Extras.RandomEnemy.enemies.Contains((short)type))
+
+                        type = (Character.Type)Extras.RandomEnemy.enemies[(short)UnityEngine.Random.Range(0, Extras.RandomEnemy.enemies.Count)];
+                }
             }
         }
+
 
         //Library Bosses
 
