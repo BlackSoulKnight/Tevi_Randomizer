@@ -185,7 +185,7 @@ namespace TeviRandomizer
                 t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
             }
             {
-                Localize.SystemText newText = createNewText("ITEMDESC.I19", "Celia is now available");
+                Localize.SystemText newText = createNewText("ITEMDESC.I19", "Celia is now available when Orb has reached level 2");
                 t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
                 t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
             }
@@ -195,7 +195,7 @@ namespace TeviRandomizer
                 t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
             }
             {
-                Localize.SystemText newText = createNewText("ITEMDESC.I20", "Sable is now available");
+                Localize.SystemText newText = createNewText("ITEMDESC.I20", "Sable is now available when Orb has reached level 2");
                 t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
                 t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
             }
