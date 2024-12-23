@@ -402,7 +402,10 @@ namespace TeviRandomizer
             }
             if(em.EventStage == 100)
             {
-                em.SetStage(101);
+                if (boss == Character.Type.Waero_B || boss == Character.Type.EinLee_B || boss == Character.Type.GemaYue_B)
+                {
+                    em.SetStage(101);
+                }
             }
             if(em.EventStage == 101)
             {
@@ -422,7 +425,7 @@ namespace TeviRandomizer
                 }
                 if(boss == Character.Type.Waero_B || boss == Character.Type.EinLee_B || boss == Character.Type.GemaYue_B) {
 
-                    int id = (int)boss % 3 + 200;
+                    int id = (int)Character.Type.GemaYue_B - (int)boss + 200;
 
                     if (SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam) && !RandomizerPlugin.checkItemGot(ItemList.Type.STACKABLE_COG, (byte)id))
                     {
