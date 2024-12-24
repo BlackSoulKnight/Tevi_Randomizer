@@ -1,9 +1,7 @@
 ﻿using EventMode;
 using Game;
 using HarmonyLib;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Map;
 using TMPro;
 using UnityEngine;
 
@@ -245,10 +243,15 @@ namespace TeviRandomizer
 
         [HarmonyPatch(typeof(HUDShopMenu), "EnableMe")]
         [HarmonyPostfix]
-        static void addValAndTar(ref string ___fname, ref Character.Type ___typeN, ref int ___CurrentMaxItem, ref GemaShopItemSlot[] ___itemslots, ref HUDShopMenu __instance)
+        static void addValAndTar(ref string ___fname, ref Character.Type ___typeN, ref int ___CurrentMaxItem, ref GemaShopItemSlot[] ___itemslots, ref HUDShopMenu __instance,
+            ref byte ___ShopType, ref TextMeshPro ___shopName, ref byte ___ShopID,ref SpriteRenderer[] ___bgfx,ref SpriteRenderer ___buyo,ref SpriteRenderer ___buyb,ref SpriteRenderer ___talkingcharacter,
+            ref SpriteRenderer ___framemain, ref Transform ___frameitemdetail,ref SpriteRenderer[] ___blackline,ref TextMeshPro ___item_costtitle,ref TextMeshPro ___leaveShopText,
+            ref bool ___exiting,ref float ___isDisplay,ref Transform ___item_detail,ref Transform ___transport_detail,ref Transform ___purchaselist,ref TextMeshPro ___purchaseText,
+            ref CoinCounter ___cc,ref Transform ___transport_target, ref byte ___TransportTo,ref TextMeshPro ___tmp_talk,ref bool __result)
         {
             byte area = WorldManager.Instance.Area;
             ChatStand chatStand = AreaResource.Instance.GetChatStand(___fname);
+            bool flag = ___CurrentMaxItem == 0;
             if ((bool)chatStand)
             {
                 object[] obj = null;
@@ -259,6 +262,7 @@ namespace TeviRandomizer
                         {
                             obj = [ItemList.Type.BADGE_ChangeOrbCharger, false];
                             Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                            if(___CurrentMaxItem >0)
                             ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
 
                         }
@@ -268,6 +272,7 @@ namespace TeviRandomizer
                         {
                             obj = [ItemList.Type.BADGE_AutoAirCombo, false];
                             Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                            if(___CurrentMaxItem >0)
                             ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
                         }
                         break;
@@ -277,32 +282,39 @@ namespace TeviRandomizer
                         {
                             obj = [ItemList.Type.Useable_VenaBombSmall, false];
                             Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                            if(___CurrentMaxItem >0)
                             ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
                         }
                         if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaBB) != 0 && SaveManager.Instance.GetChapter() >= 2)
                         {
                             obj = [ItemList.Type.Useable_VenaBombBunBun, false];
                             Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                            if(___CurrentMaxItem >0)
                             ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
                         }
                         if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaD) != 0 && SaveManager.Instance.GetChapter() >= 3)
                         {
                             obj = [ItemList.Type.Useable_VenaBombDispel, false];
                             Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                            if(___CurrentMaxItem >0)
                             ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
                         }
                         if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaBig) != 0 && SaveManager.Instance.GetChapter() >= 4)
                         {
                             obj = [ItemList.Type.Useable_VenaBombBig, false];
                             Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                            if(___CurrentMaxItem >0)
                             ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
                         }
                         if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaHB) != 0 && SaveManager.Instance.GetChapter() >= 5)
                         {
                             obj = [ItemList.Type.Useable_VenaBombHealBlock, false];
                             Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                            if(___CurrentMaxItem >0)
                             ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
                         }
+
+
                         break;
 
                     case Character.Type.Mia:
@@ -310,9 +322,141 @@ namespace TeviRandomizer
                         {
                             obj = [ItemList.Type.Useable_WaffleAHoneycloud, false];
                             Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                            if(___CurrentMaxItem >0)
                             ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
                         }
                         break;
+                }
+                if (flag)
+                {
+                    flag = ___CurrentMaxItem == 0;
+                }
+                if (!flag)
+                {
+                    Traverse t = Traverse.Create(__instance);
+                    Debug.Log("[HUDShopMenu] Opening shop " + ___typeN.ToString() + " ID : " + ___ShopID);
+                    for (int i = ___CurrentMaxItem; i < ___itemslots.Length; i++)
+                    {
+                        ___itemslots[i].TurnOff();
+                    }
+                    if (___ShopType == 0)
+                    {
+                        ___shopName.text = Localize.GetLocalizeTextWithKeyword("ShopTitle.Shop", contains: false);
+                    }
+                    else if (___ShopID == 0)
+                    {
+                        ___shopName.text = Localize.GetLocalizeTextWithKeyword("ShopTitle.Train", contains: false);
+                    }
+                    else if (___ShopID == 1)
+                    {
+                        ___shopName.text = Localize.GetLocalizeTextWithKeyword("ShopTitle.Airship", contains: false);
+                    }
+                    else if (___ShopID == 2)
+                    {
+                        if (WorldManager.Instance.CurrentRoomArea == AreaType.DENENTRY)
+                        {
+                            ___shopName.text = Localize.GetLocalizeTextWithKeyword("ShopTitle.Colosseum", contains: false);
+                        }
+                        if (WorldManager.Instance.CurrentRoomArea == AreaType.CIRCUSSTAGE)
+                        {
+                            ___shopName.text = Localize.GetLocalizeTextWithKeyword("ShopTitle.Circus", contains: false);
+                        }
+                    }
+                
+                    t.Method("UpdateShopItemDetail").GetValue();
+                    ___bgfx[0].color = new Color(1f, 1f, 1f, 0f);
+                    ___bgfx[1].color = new Color(1f, 1f, 1f, 0f);
+                    ___blackline[0].color = new Color(0f, 0f, 0f, 0f);
+                    ___blackline[1].color = new Color(0f, 0f, 0f, 0f);
+                    ___buyo.color = new Color(1f, 1f, 1f, 0f);
+                    ___buyb.color = new Color(1f, 1f, 1f, 0f);
+                    ___talkingcharacter.transform.localPosition = new Vector3(800f, -400f, 0f);
+                    ___framemain.transform.localPosition = new Vector3(0f, -900f, 0f);
+                    ___frameitemdetail.transform.localPosition = new Vector3(-1000f, 0f, 0f);
+                    ___item_costtitle.text = Localize.GetLocalizeTextWithKeyword("COST_NAME", contains: false);
+                    ___leaveShopText.text = Localize.GetLocalizeTextWithKeyword("LEAVENPC", contains: false);
+                    ___leaveShopText.text = InputButtonManager.Instance.AddButtonsToPromote(___leaveShopText.text);
+                    ___exiting = false;
+                    ___isDisplay = 0.01f;
+                    __instance.gameObject.SetActive(value: true);
+                    __instance.enabled = true;
+                    if (___ShopType == 0)
+                    {
+                        ___item_detail.gameObject.SetActive(value: true);
+                        ___transport_detail.gameObject.SetActive(value: false);
+                        ___purchaselist.transform.localPosition = new Vector3(-152.3f, 204.2f, 0f);
+                        ___purchaseText.text = Localize.GetLocalizeTextWithKeyword("PURCHASE", contains: false);
+                        ___purchaseText.text = InputButtonManager.Instance.AddButtonsToPromote(___purchaseText.text);
+                        ___purchaseText.transform.localPosition = new Vector3(-435.4f, -50f, 0f);
+                        ___cc.transform.parent.gameObject.SetActive(value: true);
+                    }
+                    else
+                    {
+                        ___item_detail.gameObject.SetActive(value: false);
+                        ___transport_detail.gameObject.SetActive(value: true);
+                        if (___ShopType == 1)
+                        {
+                            if (SaveManager.Instance.GetEventFlag(Mode.Chap2FirstCity) > 0)
+                            {
+                                ___transport_target.gameObject.SetActive(value: true);
+                            }
+                            else
+                            {
+                                ___transport_target.gameObject.SetActive(value: false);
+                                ___TransportTo = 0;
+                            }
+                            ___purchaseText.text = Localize.GetLocalizeTextWithKeyword("TRAVEL", contains: false);
+                        }
+                        if (___ShopType == 2)
+                        {
+                            ___purchaseText.text = Localize.GetLocalizeTextWithKeyword("STARTTEXT", contains: false);
+                        }
+                        ___purchaselist.transform.localPosition = new Vector3(-543f, 190f, 0f);
+                        ___purchaseText.text = InputButtonManager.Instance.AddButtonsToPromote(___purchaseText.text);
+                        ___purchaseText.transform.localPosition = new Vector3(-435.4f, -75f, 0f);
+                        ___cc.transform.parent.gameObject.SetActive(value: false);
+                    }
+                    if (___typeN == Character.Type.Mia && SaveManager.Instance.GetMiniFlag(Mini.OpenedMiaShop) <= 0)
+                    {
+                        SaveManager.Instance.SetMiniFlag(Mini.OpenedMiaShop, 1);
+                        string text = "SHOP." + ___typeN.ToString() + "_First";
+                        ___tmp_talk.text = Localize.GetLocalizeTextWithKeyword(text, contains: false);
+                        t.Method("CheckEmotion",new object[] {text}).GetValue();
+                        t.Method("PlayShopVoice", new object[] {Character.Type.Mia,ShopVoiceType.First}).GetValue();
+                    }
+                    else if (___typeN == Character.Type.Ian && SaveManager.Instance.GetMiniFlag(Mini.OpenedIanShop) <= 0)
+                    {
+                        SaveManager.Instance.SetMiniFlag(Mini.OpenedIanShop, 1);
+                        string text2 = "SHOP." + ___typeN.ToString() + "_First";
+                        ___tmp_talk.text = Localize.GetLocalizeTextWithKeyword(text2, contains: false);
+                        t.Method("CheckEmotion",new object[] {text2}).GetValue();
+                        t.Method("PlayShopVoice", new object[] {Character.Type.Ian,ShopVoiceType.First}).GetValue();
+                    }
+                    else if (___typeN == Character.Type.CC && SaveManager.Instance.GetMiniFlag(Mini.OpenedCCShop) <= 0)
+                    {
+                        SaveManager.Instance.SetMiniFlag(Mini.OpenedCCShop, 1);
+                        string text3 = "SHOP." + ___typeN.ToString() + "_First";
+                        ___tmp_talk.text = Localize.GetLocalizeTextWithKeyword(text3, contains: false);
+                        t.Method("CheckEmotion",new object[] {text3}).GetValue();
+                        t.Method("PlayShopVoice", new object[] {Character.Type.CC,ShopVoiceType.First}).GetValue();
+                    }
+                    else if (___typeN == Character.Type.Vena && SaveManager.Instance.GetMiniFlag(Mini.OpenedVenaShop) <= 0)
+                    {
+                        SaveManager.Instance.SetMiniFlag(Mini.OpenedVenaShop, 1);
+                        string text4 = "SHOP." + ___typeN.ToString() + "_First";
+                        ___tmp_talk.text = Localize.GetLocalizeTextWithKeyword(text4, contains: false);
+                        t.Method("CheckEmotion",new object[] {text4}).GetValue();
+                        t.Method("PlayShopVoice", new object[] {Character.Type.Vena,ShopVoiceType.First}).GetValue();
+                    }
+                    else
+                    {
+                        string text5 = "SHOP." + ___typeN.ToString() + "_Welcome";
+                        ___tmp_talk.text = Localize.GetLocalizeTextWithKeyword(text5, contains: false);
+                        t.Method("CheckEmotion",new object[] {text5}).GetValue();
+                        t.Method("PlayShopVoice", new object[] { ___typeN, ShopVoiceType.Welcome }).GetValue();
+                    }
+                    ___tmp_talk.text = Localize.AddColorToChat(___tmp_talk.text);
+                    __result = true;
                 }
 
             }
