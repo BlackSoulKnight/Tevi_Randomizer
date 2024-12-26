@@ -10,6 +10,7 @@ using Spine.Unity;
 using UnityEngine.ResourceManagement.ResourceLocations;
 using Bullet;
 using Map;
+using System.Linq;
 
 
 namespace TeviRandomizer
@@ -20,6 +21,18 @@ namespace TeviRandomizer
         static public Scene ResourceScene;
         static public AreaResource AreaResource;
         static public GameObject[] resources = [];
+        static public bool AddressableResourceExists(string key)
+
+        {
+            foreach (var l in Addressables.ResourceLocators)
+            {
+                if (l.Keys.Contains(key))
+                    return true;
+            }
+            return false;
+        }
+
+
         static async Task getAllResources()
         {
 
@@ -29,11 +42,15 @@ namespace TeviRandomizer
             AreaResource = newObj.AddComponent<AreaResource>();
             SceneManager.MoveGameObjectToScene(newObj, ResourceScene);
 
-
             List<AsyncOperationHandle<SceneInstance>> sceneHandle = new List<AsyncOperationHandle<SceneInstance>>();
             for (int i = 0; i < MainVar.instance.MAXAREA - 2; i++)
             {
-                sceneHandle.Add( Addressables.LoadSceneAsync($"resource{i}", LoadSceneMode.Additive));
+                if (AddressableResourceExists($"resource{i}"))
+                {
+                    Debug.Log($"[Tevi Randomizer] Loading Resources from Map {i}");
+                    sceneHandle.Add(Addressables.LoadSceneAsync($"resource{i}", LoadSceneMode.Additive));
+                }
+
 
             }
             List<GameObject> rootScene = new List<GameObject>();
@@ -47,19 +64,137 @@ namespace TeviRandomizer
                 if (SceneInstance.Result.Scene.IsValid())
                 {
                     rootScene.Add(SceneInstance.Result.Scene.GetRootGameObjects()[0]);
+                    AreaResource tmp = SceneInstance.Result.Scene.GetRootGameObjects()[0].GetComponent<AreaResource>();
+
+                    if (AreaResource.debris1 == null && tmp.debris1.Length >0)
+                        AreaResource.debris1 = tmp.debris1;
+
+                    if (AreaResource.debris2 == null && tmp.debris2.Length >0)
+                        AreaResource.debris2 = tmp.debris2;
+
+                    if (AreaResource.electricity1 == null && tmp.electricity1.Length >0)
+                        AreaResource.electricity1 = tmp.electricity1;
+
+                    if (AreaResource.electricity2 == null && tmp.electricity2.Length >0)
+                        AreaResource.electricity2 = tmp.electricity2;
+
+                    if (AreaResource.electricity3 == null && tmp.electricity3.Length >0)
+                        AreaResource.electricity3 = tmp.electricity3;
+
+                    if (AreaResource.electricity4 == null && tmp.electricity4.Length >0)
+                        AreaResource.electricity4 = tmp.electricity4;
+
+                    if (AreaResource.energy1 == null && tmp.energy1.Length >0)
+                        AreaResource.energy1 = tmp.energy1;
+
+                    if (AreaResource.energy2 == null && tmp.energy2.Length >0)
+                        AreaResource.energy2 = tmp.energy2;
+
+                    if (AreaResource.explosionBlue == null && tmp.explosionBlue.Length >0)
+                        AreaResource.explosionBlue = tmp.explosionBlue;
+
+                    if (AreaResource.flame1 == null && tmp.flame1.Length >0)
+                        AreaResource.flame1 = tmp.flame1;
+
+                    if (AreaResource.flame2 == null && tmp.flame2.Length >0)
+                        AreaResource.flame2 = tmp.flame2;
+
+                    if (AreaResource.flame3 == null && tmp.flame3.Length >0)
+                        AreaResource.flame3 = tmp.flame3;
+
+                    if (AreaResource.flame4 == null && tmp.flame4.Length >0)
+                        AreaResource.flame4 = tmp.flame4;
+
+                    if (AreaResource.flame5 == null && tmp.flame5.Length >0)
+                        AreaResource.flame5 = tmp.flame5;
+
+                    if (AreaResource.flame6 == null && tmp.flame6.Length >0)
+                        AreaResource.flame6 = tmp.flame6;
+
+                    if (AreaResource.flash1 == null && tmp.flash1.Length >0)
+                        AreaResource.flash1 = tmp.flash1;
+
                 }
             }
             resources = rootScene.ToArray();
 
         }
 
+
+        static private void addEffectsToArea(ref AreaResource tmp)
+        {
+
+            if (AreaResource.debris1 != null && tmp.debris1.Length == 0)
+               tmp.debris1 = AreaResource.debris1;
+
+            if (AreaResource.debris2 != null && tmp.debris2.Length == 0)
+                tmp.debris2 = AreaResource.debris2;
+
+            if (AreaResource.electricity1 != null && tmp.electricity1.Length == 0)
+                tmp.electricity1 = AreaResource.electricity1;
+
+            if (AreaResource.electricity2 != null && tmp.electricity2.Length == 0)
+               tmp.electricity2 = AreaResource.electricity2;
+
+            if (AreaResource.electricity3 != null && tmp.electricity3.Length == 0)
+                tmp.electricity3 = AreaResource.electricity3;
+
+            if (AreaResource.electricity4 != null && tmp.electricity4.Length == 0)
+                tmp.electricity4 = AreaResource.electricity4;
+
+            if (AreaResource.energy1 != null && tmp.energy1.Length == 0)
+               tmp.energy1 = AreaResource.energy1 ;
+
+            if (AreaResource.energy2 != null && tmp.energy2.Length == 0)
+               tmp.energy2 = AreaResource.energy2;
+
+            if (AreaResource.explosionBlue != null && tmp.explosionBlue.Length == 0)
+                tmp.explosionBlue = AreaResource.explosionBlue;
+
+            if (AreaResource.flame1 != null && tmp.flame1.Length == 0)
+                tmp.flame1 = AreaResource.flame6;
+
+            if (AreaResource.flame2 != null && tmp.flame2.Length == 0)
+                tmp.flame2 = AreaResource.flame6;
+
+            if (AreaResource.flame3 != null && tmp.flame3.Length == 0)
+                tmp.flame3 = AreaResource.flame6;
+
+            if (AreaResource.flame4 != null && tmp.flame4.Length == 0)
+                tmp.flame4 = AreaResource.flame6;
+
+            if (AreaResource.flame5 != null && tmp.flame5.Length == 0)
+                tmp.flame5 = AreaResource.flame6;
+
+            if (AreaResource.flame6 != null && tmp.flame6.Length == 0)
+                tmp.flame6 = AreaResource.flame6;
+
+            if (AreaResource.flash1 != null && tmp.flash1.Length == 0)
+                tmp.flash1 = AreaResource.flash1;
+        }
+
+
         static public AreaResource getAreaResource(int area)
         {
-            if(resources != null && resources.Length >area)
+            AreaResource tmp = resources[area].GetComponent<AreaResource>();
+
+            if (resources != null && resources.Length >area)
             {
-                return resources[area].GetComponent<AreaResource>();
+                addEffectsToArea(ref tmp);
+                return tmp;
             }
             return AreaResource;
+        }
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(AreaResource),"StartMe")]
+        static bool skipSkeleton(ref SkeletonDataAsset[] ___spines)
+        {
+            if(___spines == null)
+            {
+                return false;
+            }
+            return true;
         }
 
         [HarmonyPostfix]
@@ -331,7 +466,7 @@ namespace TeviRandomizer
             }
             if (__instance.Area < resources.Length)
             {
-                AreaResource.Instance = resources[__instance.Area].GetComponent<AreaResource>();
+                AreaResource.Instance = getAreaResource(__instance.Area);
             }
             else
             {
