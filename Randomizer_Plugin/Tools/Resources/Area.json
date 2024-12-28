@@ -94,7 +94,7 @@
             "Connections": [
                 {
                     "Exit": "0101",
-                    "Method": "ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash"
+                    "Method": "ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || ( ITEM_WALLJUMP && CKick )"
                 },
                 {
                     "Exit": "Thanatara Canyon Lower",
