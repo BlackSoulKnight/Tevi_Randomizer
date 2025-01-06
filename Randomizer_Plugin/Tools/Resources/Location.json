@@ -3373,7 +3373,7 @@
     {
         "Itemname": "QUEST_RabiPillow",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Nap Pillow",
+        "LocationName": "Tartarus - Arcade",
         "slotId": 1,
         "Requirement": [
             {
