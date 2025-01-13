@@ -397,7 +397,7 @@ BADGE_DodgeCharger@Verdazure Ocean@1@ITEM_AREABOMB && ITEM_LINEBOMB && ChargeSho
 STACKABLE_MP@Verdazure Ocean@16@ITEM_LINEBOMB,0@Verdazure Ocean - Blueberry Bunny Potion #1
 STACKABLE_RATK@Verdazure Ocean@25@ITEM_LINEBOMB,0@Verdazure Ocean - Grape Bunny Potion
 STACKABLE_EP@Verdazure Ocean@15@ITEM_BombLengthExtend && ITEM_LINEBOMB,0@Verdazure Ocean - Lemon Bunny Potion
-STACKABLE_MP@Verdazure Ocean@24@ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB 2,0@Verdazure Ocean - Blueberry Bunny Potion #2
+STACKABLE_MP@Verdazure Ocean@24@ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB 2 && ITEM_SLIDE && ( ITEM_BombLengthExtend && ITEM_AREABOMB ),0@Verdazure Ocean - Blueberry Bunny Potion #2
 BADGE_ComboTimeExtendB@Verdazure Swamp@1@ITEM_JETPACK,0;ITEM_DOUBLEJUMP,0@Verdazure Swamp - Combo Time Extend II
 BADGE_BOnceHeal@Verdazure Swamp@1@,0@Verdazure Swamp - Enthusiastic Excavator
 EVENT_Dark@Verdazure Swamp@5@,0@Verdazure Swamp - Dark

@@ -5219,7 +5219,7 @@
         "slotId": 24,
         "Requirement": [
             {
-                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB 2",
+                "Method": "ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB 2 && ITEM_SLIDE && ( ITEM_BombLengthExtend && ITEM_AREABOMB )",
                 "Difficulty": 0
             }
         ]

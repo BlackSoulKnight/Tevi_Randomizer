@@ -6,7 +6,7 @@ Desert Base Entrance:Desert Base Main:ChargeShot || ITEM_JETPACK || ITEM_AirDash
 Desert Base Entrance:Desert Base Main:BackFlip && Hard
 Desert Base Entrance:Desert Base Upper Half:(BackFlip || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash) && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_KNIFE
 Desert Base Upper Half:Desert Base Main:
-Thanatara Canyon:0101:ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash
+Thanatara Canyon:0101:ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || ( ITEM_WALLJUMP && CKick )
 Thanatara Canyon:Thanatara Canyon Lower:
 Thanatara Canyon:Thanatara Canyon - Heavens Valley West:ITEM_LINEBOMB
 Thanatara Canyon:Morose City:OpenMorose
