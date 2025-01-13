@@ -16,17 +16,52 @@ namespace TeviRandomizer
     class EnemyPatch
     {
         static Mode setBoss = Mode.BOSS_VASSAGO;
-
+        static Mode originalBoss;
         public static short[] eventReplace = null;
+
         [HarmonyPrefix]
         [HarmonyPatch(typeof(EventManager), "TryStartEvent")]
         static public void testBossReplace(ref Mode setMode)
         {
-            if(eventReplace != null && eventReplace.Length > (short)setMode && eventReplace[(short)setMode] != -1 && RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedEnemy]) { 
+            if(eventReplace != null && eventReplace.Length > (short)setMode && eventReplace[(short)setMode] != -1 && RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedEnemy]) {
+                originalBoss = setMode;
                 setMode = (Mode)eventReplace[(short)setMode];
             }
         }
 
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(SaveManager), "SetEventFlag")]
+        static void EndBossReplace(ref Mode mode)
+        {
+            if(mode.ToString().Contains("END"))
+            {
+                mode = (Mode)Enum.Parse(typeof(Mode), originalBoss.ToString().Replace("BOSS_", "END_"));
+            }
+        }
+
+
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(SaveManager), "CheckEnemyDefeatedTypeCount", [typeof(enemyController)] )]
+        static void dropCore(ref bool __result,ref enemyController ec)
+        {
+            if(!__result)
+            {
+                byte b = 0;
+                if(ec.type == Character.Type.Pestilence || ec.type == Character.Type.Pestilence_Range)
+                {
+                    b = 16;
+                }
+                if (ec.dropCore)
+                {
+                    b = 24;
+                }
+                if(b>0 && SaveManager.Instance.savedata.enemyDefeatedType[(int)ec.type] == b)
+                {
+                    __result = true;
+                }
+            }
+        }
 
         static void fixTahlia()
         {
