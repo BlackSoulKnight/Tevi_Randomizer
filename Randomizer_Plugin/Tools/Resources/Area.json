@@ -1742,7 +1742,7 @@
                 },
                 {
                     "Exit": "Swamp Tartarus Exit",
-                    "Method": ""
+                    "Method": "HiddenP || ITEM_AREABOMB"
                 },
                 {
                     "Exit": "Magma Depths",
@@ -1755,19 +1755,7 @@
             "Money": [],
             "Connections": [
                 {
-                    "Method": " (HiddenP || ITEM_LINEBOMB) && (ITEM_JETPACK 2 || (ITEM_JETPACK && (ITEM_DOUBLEJUMP || ITEM_AirDash)) || (ITEM_AirDash && ITEM_DOUBLEJUMP))",
-                    "Exit": "Swamp"
-                },
-                {
-                    "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP",
-                    "Exit": "Swamp"
-                },
-                {
-                    "Method": "ITEM_JETPACK && ITEM_AirDash",
-                    "Exit": "Swamp"
-                },
-                {
-                    "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP",
+                    "Method": "ITEM_SLIDE && (HiddenP || ITEM_LINEBOMB) && (ITEM_JETPACK 2 || (ITEM_JETPACK && (ITEM_DOUBLEJUMP || ITEM_AirDash)) || (ITEM_AirDash && ITEM_DOUBLEJUMP))",
                     "Exit": "Swamp"
                 },
                 {

@@ -259,7 +259,7 @@ BADGE_Normal2MultHit@Swamp@1@ITEM_SLIDE && ITEM_LINEBOMB,0@Swamp - C. Count Fren
 BADGE_NonChargeShotRapid@Tartarus@1@ChargeShot,0@Tartarus - Swift Shots
 EVENT_EliteChallangeE@Tartarus@1@,0@Tartarus - Elite E
 BADGE_CrystalAbsorberS@Tartarus@1@,0@Tartarus - Crystalline Scarlet
-QUEST_RabiPillow@Tartarus@1@,0@Tartarus - Nap Pillow
+QUEST_RabiPillow@Tartarus@1@,0@Tartarus - Arcade
 STACKABLE_EP@Tartarus@12@ITEM_LINEBOMB,0@Tartarus - Lemon Bunny Potion
 BADGE_Lucky7Defend@Tartarus@1@ITEM_HIJUMP && ITEM_JETPACK,0;ITEM_HIJUMP && ITEM_DOUBLEJUMP,0;ITEM_HIJUMP && ITEM_DOUBLEJUMP,0;ITEM_JETPACK && ITEM_DOUBLEJUMP,0;ITEM_AirDash && ITEM_DOUBLEJUMP,0;ITEM_AirDash && ITEM_JETPACK,0;ITEM_JETPACK 2,0@Tartarus - Lucky 7: A
 STACKABLE_MP@Tartarus@13@ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK,0@Tartarus - Blueberry Bunny Potion
@@ -526,7 +526,7 @@ BADGE_SableBNormalShotDebuff@Crafting@1@Coins 250 && ITEM_RailPass && ITEM_OrbTy
 BADGE_SableBReturnStyle@Crafting@1@Coins 250 && ITEM_RailPass && ITEM_OrbTypeS2,0@Crafting - Sable Type-B: Backlash
 BADGE_SableCBigExplode@Crafting@1@Coins 250 && ITEM_RailPass && ITEM_OrbTypeS3,0@Crafting - Sable Type-C: Ignite
 BADGE_SableCSaver@Crafting@1@Coins 250 && ITEM_RailPass && ITEM_OrbTypeS3,0@Crafting - Sable Type-C: Fervid
-BADGE_RememberBrutalForce@Morose City@1@Coins 250,0@Morose City Waffle Shop - Muscle Memory
+BADGE_RememberBrutalForce@Morose City@1@Coins 2500,0@Morose City Waffle Shop - Muscle Memory
 BADGE_CeliaALongStun@Crafting@1@Coins 250 && Chapter 1,0@Crafting Chap 1 - Celia Type-A: Stunning
 BADGE_CeliaASlowShot@Crafting@1@Coins 250 && ITEM_AirshipPass,0@Crafting - Celia Type-A: Meteoric
 BADGE_CeliaAShortRangeBurst@Crafting@1@Coins 250 && ITEM_AirshipPass,0@Crafting - Celia Type-A: Beguile

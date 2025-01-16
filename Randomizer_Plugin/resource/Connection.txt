@@ -193,7 +193,7 @@ Pre Swamp:Swamp:ITEM_ORB
 Pre Swamp:Swamp:ITEM_AirDash
 Pre Swamp:Swamp:ITEM_LINEBOMB && ITEM_AREABOMB
 Swamp:Pre Swamp:ITEM_AirDash || ITEM_ORB || ITEM_KNIFE
-Swamp:Swamp Tartarus Exit:
+Swamp:Swamp Tartarus Exit:HiddenP || ITEM_AREABOMB
 Swamp:Magma Depths:ITEM_LINEBOMB
 Swamp Tartarus Exit:Swamp: (HiddenP || ITEM_LINEBOMB) && (ITEM_JETPACK 2 || (ITEM_JETPACK && (ITEM_DOUBLEJUMP || ITEM_AirDash)) || (ITEM_AirDash && ITEM_DOUBLEJUMP))
 Swamp Tartarus Exit:Swamp:ITEM_JETPACK && ITEM_DOUBLEJUMP
