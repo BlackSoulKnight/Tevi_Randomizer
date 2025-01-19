@@ -2552,7 +2552,7 @@
             "Connections": [
                 {
                     "Exit": "Gallery of Mirrors East",
-                    "Method": "ChargeShot"
+                    "Method": "ChargeShot && ITEM_SLIDE"
                 },
                 {
                     "Exit": "2706",

@@ -195,10 +195,7 @@ Pre Swamp:Swamp:ITEM_LINEBOMB && ITEM_AREABOMB
 Swamp:Pre Swamp:ITEM_AirDash || ITEM_ORB || ITEM_KNIFE
 Swamp:Swamp Tartarus Exit:HiddenP || ITEM_AREABOMB
 Swamp:Magma Depths:ITEM_LINEBOMB
-Swamp Tartarus Exit:Swamp: (HiddenP || ITEM_LINEBOMB) && (ITEM_JETPACK 2 || (ITEM_JETPACK && (ITEM_DOUBLEJUMP || ITEM_AirDash)) || (ITEM_AirDash && ITEM_DOUBLEJUMP))
-Swamp Tartarus Exit:Swamp:ITEM_JETPACK && ITEM_DOUBLEJUMP
-Swamp Tartarus Exit:Swamp:ITEM_JETPACK && ITEM_AirDash
-Swamp Tartarus Exit:Swamp:ITEM_AirDash && ITEM_DOUBLEJUMP
+Swamp Tartarus Exit:Swamp:ITEM_SLIDE && (HiddenP || ITEM_LINEBOMB) && (ITEM_JETPACK 2 || (ITEM_JETPACK && (ITEM_DOUBLEJUMP || ITEM_AirDash)) || (ITEM_AirDash && ITEM_DOUBLEJUMP))
 Swamp Tartarus Exit:1702:
 DreamKeeper Outside Right:DreamKeeper Outside Left:ChargeShot && ITEM_SLIDE && ITEM_LINEBOMB
 DreamKeeper Outside Right:DreamKeeper:ITEM_Rotater && (ChargeShot || ITEM_SLIDE) && ITEM_LINEBOMB && ITEM_SLIDE && (EVENT_SnowMechanic 2 || EarlyDream)
@@ -274,7 +271,7 @@ Cloister Entrance:2608:
 Cloister Entrance:Cloister:ITEM_SLIDE
 Cloister:Cloister Pre Boss:ChargeShot
 Cloister Pre Boss::
-Gallery of Mirrors West:Gallery of Mirrors East:ChargeShot
+Gallery of Mirrors West:Gallery of Mirrors East:ChargeShot && ITEM_SLIDE
 Gallery of Mirrors West:2706:ChargeShot
 Gallery of Mirrors East:Gallery of Souls Entrance:
 Gallery of Souls Entrance:Gallery of Souls:ITEM_LINEBOMB
