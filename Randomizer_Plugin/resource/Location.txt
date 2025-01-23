@@ -294,7 +294,7 @@ BADGE_AntiAir@Catacombs Inner@1@ITEM_LINEBOMB && ITEM_SLIDE,0;ITEM_LINEBOMB && C
 BADGE_InstantDodgeMeter@Catacombs Main@1@ITEM_LINEBOMB,0@Catacombs Main - Dodge: Panic Switch
 STACKABLE_COG@Catacombs Inner@63@Boss,0@Catacombs Inner - Astral Gear
 STACKABLE_MATK@Lab@18@(ITEM_BombLengthExtend 3 || ITEM_AREABOMB ) && ITEM_LINEBOMB,0@Lab - Cherry Bunny Potion
-BADGE_DodgeEPBoost@Lab Left@18@,0@Lab - EP Booster: Dodge
+BADGE_DodgeEPBoost@Lab Left@1@,0@Lab - EP Booster: Dodge
 STACKABLE_RATK@Lab@17@ITEM_SLIDE && ITEM_LINEBOMB,0@Lab - Grape Bunny Potion
 BADGE_DodgeWeakAirDown@Lab@1@,0@Lab - Dodge Enhancer: Spiral
 BADGE_BoostCharging@Lab@1@,0@Lab - Core Expansion: Charge
