@@ -121,7 +121,7 @@ BADGE_NormalShotReducerA@Forest@1@ChargeShot,0@Forest - Orbital Efficiency A
 BADGE_TauntSit@Forest@1@ChargeShot && ITEM_LINEBOMB,0@Forest - Special Action: Olive Branch
 I19@Forest@1@ChargeShot && QUEST_RabiPillow,0@Forest - Celia
 ITEM_BoostSystem@Forest Maze@1@,0@Forest Maze - Modular Blueprints
-BADGE_GroundNormal4Mod@Forest Maze@1@,0@Forest Maze - Titanium Spanner
+BADGE_GroundNormal4Mod@Forest Maze@1@ITEM_LINEBOMB,0@Forest Maze - Titanium Spanner
 STACKABLE_HP@Forest Maze@3@,0@Forest Maze - Kiwi Bunny Potion
 STACKABLE_COG@Forest Maze boss@24@Boss,0@Forest - Astral Gear
 BADGE_BackflipSnipe@Forest@1@ITEM_WATERMOVEMENT,0@Forest - Acrobat
