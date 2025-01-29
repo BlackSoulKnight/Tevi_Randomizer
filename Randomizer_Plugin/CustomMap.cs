@@ -1440,6 +1440,7 @@ namespace TeviRandomizer
                     //createNormalTile(296, 177-i, 109, false, false);
                 }
             }
+            //Send AP World Transition Data and change CurrentMap Value
         }
 
         [HarmonyPatch(typeof(ChangeMapTrigger), "OnBecameVisible")]
@@ -1457,6 +1458,7 @@ namespace TeviRandomizer
                 ___targetArea = (byte)(EventManager.Instance.GetElmData(__instance.transform, 0f, 56f) - 72);
                 ___targetPosID = (byte)(EventManager.Instance.GetElmData(__instance.transform, 0f, -56f) - 72);
                 int val = RandomizerPlugin.transitionData[WorldManager.Instance.Area * 100 + targetPos];
+                // Save New Trasition to a static variable to be used when the player changes the Map
                 ___gotData = true;
                 if (___targetArea == 14 && ___targetPosID == 4)
                 {
