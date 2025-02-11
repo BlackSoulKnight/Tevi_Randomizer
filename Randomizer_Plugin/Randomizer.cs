@@ -906,7 +906,7 @@ namespace TeviRandomizer
                         //Add major Item to Hint List
                         if (Enum.IsDefined(typeof(MajorItemFlag), item) && currHint < HintSystem.numberOfHints)
                         {
-                            if (vanillaItemCraft &&  loc.Loaction.Contains("Upgrade"))
+                            if (vanillaItemCraft &&  loc.Loaction.Contains("Upgrade") && currBackHint + currHint < HintSystem.numberOfHints)
                             {
 
                                     HintSystem.hintList[HintSystem.hintList.Length - currBackHint] = (loc.Locationname, item, (byte)loc.newSlotId);
