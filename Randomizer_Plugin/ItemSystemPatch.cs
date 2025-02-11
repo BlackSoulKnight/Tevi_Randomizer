@@ -307,6 +307,7 @@ namespace TeviRandomizer
                 ItemList.Type nearestType = ItemList.Type.OFF;
                 ItemTile tile = null;
                 float num = WorldManager.Instance.FindNearestItem_Room(out nearestType, out tile);
+                if (tile == null) return;
                 if (WorldManager.Instance.CheckIsWall(tile.transform.position, any: false) > 0 || num != 0f)
                 {
                     return;

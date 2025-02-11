@@ -269,6 +269,7 @@ namespace TeviRandomizer
         [HarmonyPatch(typeof(AreaResource), "GetSkyBackground", new[] { typeof(string) })]
         static void getBG(ref AreaResource __instance,ref SkyBackground __result, ref string bgname)
         {
+            Debug.Log(bgname);
             if (__instance == AreaResource.Instance && __result == null)
             {
                 for (int i = 0; i < resources.Length; i++)
@@ -646,5 +647,14 @@ namespace TeviRandomizer
             return false;
         }
 
+
+        [HarmonyPatch(typeof(BackgroundData), "ChangeSprite")]
+        [HarmonyPrefix]
+        static bool fixRoomBG(ref RoomBG bgtype)
+        {
+            if (WorldManager.Instance.CurrentRoomArea == AreaType.FINALPALACE2 && RoomBG.HEAVENGARDEN3 == bgtype)
+                return false;
+            return true;
+        }
     }
 }
