@@ -423,7 +423,7 @@ namespace TeviRandomizer
             //___Instance = AreaResource;
 
         }
-
+        
 
         [HarmonyPrefix]
         [HarmonyPatch(typeof(ObjectPooler), "GetPooledObject", new[]{ typeof(string)})]
@@ -443,6 +443,7 @@ namespace TeviRandomizer
                         if (obj.itemsToPool[i].objectToPool.name.Contains(search))
                         {
                             __result = obj.GetPooledObject(i);
+                            return false;
                         }
                     }
                 }
