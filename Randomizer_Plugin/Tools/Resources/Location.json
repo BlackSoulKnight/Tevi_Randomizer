@@ -2116,7 +2116,7 @@
         "slotId": 30,
         "Requirement": [
             {
-                "Method": "Boss",
+                "Method": "( ITEM_MASK ) && Boss",
                 "Difficulty": 0
             }
         ]
@@ -4978,7 +4978,7 @@
         "slotId": 47,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend && Boss",
+                "Method": "ITEM_BombLengthExtend && ITEM_AntiDecay && Boss",
                 "Difficulty": 0
             }
         ]
@@ -5126,7 +5126,7 @@
         "slotId": 62,
         "Requirement": [
             {
-                "Method": "Boss",
+                "Method": "( ITEM_AntiDecay || ITEM_ZCrystal) && Boss",
                 "Difficulty": 0
             }
         ]
