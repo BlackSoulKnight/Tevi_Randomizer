@@ -174,7 +174,14 @@ namespace TeviRandomizer
             deathLinkTriggered = false;
         }
 
-
+        public void updateTransitionVisited(int[] transitionList)
+        {
+            session.DataStorage[Scope.Slot,"transitionVisited"] = transitionList;
+        }
+        public void updateCurretMap(int map)
+        {
+            session.DataStorage[Scope.Slot, "currentMap"] = map;
+        }
         public void getOwnLocationData(object slotData) {
             locations.Clear();
             foreach (JObject item in (JArray)slotData) {

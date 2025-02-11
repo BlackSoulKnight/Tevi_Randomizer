@@ -82,6 +82,7 @@ namespace TeviRandomizer
         static public int customAtkDiff = -1;
         static public int customHpDiff = -1;
         static public int customStartDiff = -1;
+        static public List<int> transitionVisited = new List<int>();
 
         static public bool[] customFlags = new bool[Enum.GetNames(typeof(CustomFlags)).Length];
         static public int[] extraPotions = [0, 0]; // Hardcoded omo
@@ -300,6 +301,7 @@ namespace TeviRandomizer
         static public void deloadRando()
         {
             __itemData.Clear();
+            transitionVisited.Clear();
             LocationTracker.clearItemList();
             transitionData = null;
             ArchipelagoInterface.Instance.currentItemNR = 0;

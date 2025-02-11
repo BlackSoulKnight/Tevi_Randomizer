@@ -1440,6 +1440,10 @@ namespace TeviRandomizer
                     //createNormalTile(296, 177-i, 109, false, false);
                 }
             }
+            if(ArchipelagoInterface.Instance.isConnected)
+            {
+                ArchipelagoInterface.Instance.updateCurretMap(__instance.Area);
+            }
             //Send AP World Transition Data and change CurrentMap Value
         }
 
@@ -1453,11 +1457,13 @@ namespace TeviRandomizer
             byte area = WorldManager.Instance.Area;
             if ((area == 20 && targetPos == 2) || (area == 29 && targetPos == 3))
                 targetPos = (byte)(targetPos ^ 1);
-            if (!___gotData && RandomizerPlugin.transitionData.ContainsKey(WorldManager.Instance.Area * 100 + targetPos))
+            int targetMapAndID = WorldManager.Instance.Area * 100 + targetPos;
+            if (!___gotData && RandomizerPlugin.transitionData.ContainsKey(targetMapAndID))
             {
                 ___targetArea = (byte)(EventManager.Instance.GetElmData(__instance.transform, 0f, 56f) - 72);
                 ___targetPosID = (byte)(EventManager.Instance.GetElmData(__instance.transform, 0f, -56f) - 72);
-                int val = RandomizerPlugin.transitionData[WorldManager.Instance.Area * 100 + targetPos];
+                int val = RandomizerPlugin.transitionData[targetMapAndID];
+
                 // Save New Trasition to a static variable to be used when the player changes the Map
                 ___gotData = true;
                 if (___targetArea == 14 && ___targetPosID == 4)
@@ -1467,7 +1473,14 @@ namespace TeviRandomizer
                 }
                 ___targetPosID = (byte)(val % 100);
                 ___targetArea = (byte)(val / 100);
-
+                if (ArchipelagoInterface.Instance.isConnected)
+                {
+                    if (!RandomizerPlugin.transitionVisited.Contains(targetMapAndID))
+                    {
+                        RandomizerPlugin.transitionVisited.Add(targetMapAndID);
+                        ArchipelagoInterface.Instance.updateTransitionVisited(RandomizerPlugin.transitionVisited.ToArray());
+                    }
+                }
             }
             Debug.Log($"After ID:{___targetPosID} Area:{___targetArea}");
             return true;

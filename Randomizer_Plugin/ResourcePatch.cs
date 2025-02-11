@@ -269,7 +269,6 @@ namespace TeviRandomizer
         [HarmonyPatch(typeof(AreaResource), "GetSkyBackground", new[] { typeof(string) })]
         static void getBG(ref AreaResource __instance,ref SkyBackground __result, ref string bgname)
         {
-            Debug.Log(bgname);
             if (__instance == AreaResource.Instance && __result == null)
             {
                 for (int i = 0; i < resources.Length; i++)
