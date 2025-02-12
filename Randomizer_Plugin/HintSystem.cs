@@ -66,6 +66,7 @@ namespace TeviRandomizer
             int collected = LocationTracker.getListLenght();
             int a = (int)(RandomizerPlugin.__itemData.Count*0.75f * (float)(1f / numberOfHints));
             int nextHint = a  - (collected % a);
+            extraList.Add(createChatRow(section, $"You have checked {collected} Locations from a total of {RandomizerPlugin.__itemData.Count}", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
             System.Random rand = new System.Random(RandomizerPlugin.seed.GetHashCode());
 
             for (int i = 0; i < Math.Floor((double)collected / a); i++)
