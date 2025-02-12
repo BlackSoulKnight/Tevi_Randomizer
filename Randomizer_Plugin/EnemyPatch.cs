@@ -23,7 +23,7 @@ namespace TeviRandomizer
         [HarmonyPatch(typeof(EventManager), "TryStartEvent")]
         static public void testBossReplace(ref Mode setMode)
         {
-            if(eventReplace != null && eventReplace.Length > (short)setMode && eventReplace[(short)setMode] != -1 && RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedEnemy]) {
+            if(eventReplace != null && eventReplace.Length > (short)setMode && eventReplace[(short)setMode] != -1 && RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss]) {
                 originalBoss = setMode;
                 setMode = (Mode)eventReplace[(short)setMode];
             }
@@ -536,11 +536,11 @@ namespace TeviRandomizer
                         type = (Character.Type)enemyReplace[(short)type];
 
                 }
-                if (RandomizerPlugin.customFlags[(int)CustomFlags.AlwaysRandomizeEnemy] && Extras.RandomEnemy.enemies != null)
+                if (RandomizerPlugin.customFlags[(int)CustomFlags.AlwaysRandomizeEnemy] && Extras.RandomizeExtra.enemies != null)
                 {
-                    if (Extras.RandomEnemy.enemies.Contains((short)type))
+                    if (Extras.RandomizeExtra.enemies.Contains((short)type))
 
-                        type = (Character.Type)Extras.RandomEnemy.enemies[(short)UnityEngine.Random.Range(0, Extras.RandomEnemy.enemies.Count)];
+                        type = (Character.Type)Extras.RandomizeExtra.enemies[(short)UnityEngine.Random.Range(0, Extras.RandomizeExtra.enemies.Count)];
                 }
             }
         }

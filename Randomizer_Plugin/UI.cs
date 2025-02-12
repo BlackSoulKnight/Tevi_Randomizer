@@ -188,10 +188,19 @@ namespace TeviRandomizer
         {
             Extras.patchWhiteFlash(((UnityEngine.UI.Toggle)UI.settings["Toggle AntiFlash"]).isOn);
             if (((UnityEngine.UI.Toggle)UI.settings["Toggle RandomEnemies"]).isOn || ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn) 
-                Extras.RandomEnemy.randomEnemies();
+                Extras.RandomizeExtra.randomEnemies();
             RandomizerPlugin.customFlags[(int)CustomFlags.AlwaysRandomizeEnemy] = ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn;
+            RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss] = ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomBoss"]).isOn;
             RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedEnemy] = ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn || ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomEnemies"]).isOn;
-
+            RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBG] = ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomBG"]).isOn;
+            if (RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBG]){
+                Extras.RandomizeExtra.randomBG();
+            }
+            RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedMusic] = ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomMusic"]).isOn;
+            if (RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedMusic])
+            {
+                Extras.RandomizeExtra.randomMusic();
+            }
         }
 
         void OnDisable()

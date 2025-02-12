@@ -102,6 +102,14 @@ namespace TeviRandomizer
                         RandomizerPlugin.transitionVisited = new List<int>();
                     }
                 }
+                if (eS3File.KeyExists("randomizedMusic"))
+                {
+                    Extras.RandomizeExtra.randomizedMusic = eS3File.Load<byte[]>("randomizedMusic");
+                }
+                if (eS3File.KeyExists("randomizedBG"))
+                {
+                    Extras.RandomizeExtra.randomizedBG = eS3File.Load<byte[]>("randomizedBG");
+                }
                 if (eS3File.KeyExists("LocationList"))
                 {
                     LocationTracker.setCollectedLocationList(eS3File.Load<string[]>("LocationList"));
@@ -177,7 +185,8 @@ namespace TeviRandomizer
             eS3File.Save("transitionVisited", RandomizerPlugin.transitionVisited);
             eS3File.Save("EventReplace", EnemyPatch.eventReplace);
             eS3File.Save("EnemyReplace", EnemyPatch.enemyReplace);
-
+            eS3File.Save("randomizedMusic", Extras.RandomizeExtra.randomizedMusic);
+            eS3File.Save("randomizedBG", Extras.RandomizeExtra.randomizedBG);
             eS3File.Save("SuperBosses", RandomizerPlugin.customFlags[(int)CustomFlags.SuperBosses]);
 
             eS3File.Save("Seed", RandomizerPlugin.seed);

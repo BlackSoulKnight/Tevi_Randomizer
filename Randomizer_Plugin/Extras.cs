@@ -3,6 +3,7 @@ using Game;
 using HarmonyLib;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using UnityEngine;
 
@@ -95,21 +96,19 @@ namespace TeviRandomizer
 
         }
 
-        public class RandomEnemy
+        public class RandomizeExtra
         {
             static public List<short> enemies = null;
+            static public byte[] randomizedBG = new byte[(int)Map.RoomBG.MAX];
+            static public byte[] randomizedMusic = new byte[(int)Music.MAX];
             static public void randomEnemies()
             {
                 EnemyPatch.enemyReplace = new short[(int)Character.Type.MAX];
-                EnemyPatch.eventReplace = new short[(int)Mode.MAX];
                 for(int i = 0;i < EnemyPatch.enemyReplace.Length;i++)
                 {
                     EnemyPatch.enemyReplace[i] = -1;
                 }
-                for(int i = 0;i < EnemyPatch.eventReplace.Length;i++)
-                {
-                    EnemyPatch.eventReplace[i] = -1;
-                }
+
                 if (enemies == null)
                 {
                     enemies =
@@ -257,6 +256,15 @@ namespace TeviRandomizer
                         }
                     }
                 }
+
+            }
+            static public void randomBoss()
+            {
+                EnemyPatch.eventReplace = new short[(int)Mode.MAX];
+                for (int i = 0; i < EnemyPatch.eventReplace.Length; i++)
+                {
+                    EnemyPatch.eventReplace[i] = -1;
+                }
                 List<short> events = new List<short>();
                 events.AddRange(new short[]
                 {
@@ -280,6 +288,7 @@ namespace TeviRandomizer
                     (short) Mode.BOSS_TYBRIOUS,
                     (short) Mode.BOSS_VASSAGO,
                 });
+                List<short> placed = new List<short>();
                 foreach (short a in events)
                 {
                     while (true)
@@ -292,9 +301,36 @@ namespace TeviRandomizer
                             EnemyPatch.eventReplace[a] = events[num1];
                             break;
                         }
-                    } 
+                    }
                 }
-
+            }
+            static public void randomBG()
+            {
+                List<int> arr = Enumerable.Range(1, (int)((byte)Map.RoomBG.MAX)-1).ToList();
+                int[] removed = [58, 59, 66, 67, 68,89,90,94, 102, 103, 105, 106];
+                foreach(int i in removed)
+                {
+                    arr.Remove(i);
+                }
+                for (int i = 1; i < (byte)(Map.RoomBG.MAX); i++) {
+                    if (removed.Contains(i)) continue;
+                    byte num = (byte)UnityEngine.Random.Range(0, arr.Count);
+                    randomizedBG[i] = (byte)arr[num];
+                    arr.RemoveAt(num);
+                }
+            }
+            static public void randomMusic()
+            {
+                List<int> arr = Enumerable.Range(4, (int)((byte)Music.MAX)-1).ToList();
+                arr.Remove(93);
+                arr.Remove(94);
+                arr.Remove(95);
+                for (int i = 5; i < (byte)(Music.MAX); i++) {
+                    if (i == 93 || i == 94 || i == 95) continue;
+                    byte num = (byte)UnityEngine.Random.Range(0, arr.Count);
+                    randomizedMusic[i] = (byte)arr[num];
+                    arr.RemoveAt(num);
+                }
             }
         }
     }

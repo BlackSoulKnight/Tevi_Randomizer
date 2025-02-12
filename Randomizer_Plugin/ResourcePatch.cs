@@ -11,6 +11,7 @@ using UnityEngine.ResourceManagement.ResourceLocations;
 using Bullet;
 using Map;
 using System.Linq;
+using static TeviRandomizer.Extras;
 
 
 namespace TeviRandomizer
@@ -463,6 +464,7 @@ namespace TeviRandomizer
             AsyncOperationHandle<SceneInstance> sceneHandle;
             if(AreaResource == null)
             {
+                Debug.Log("Load all Resources");
                 await getAllResources();
             }
             if (__instance.Area < resources.Length)
@@ -546,7 +548,7 @@ namespace TeviRandomizer
         {
             if (__instance.Area == 48) return true;
             loadStuff(__instance);
-            
+
             return false;
         }
 
@@ -653,6 +655,12 @@ namespace TeviRandomizer
         {
             if (WorldManager.Instance.CurrentRoomArea == AreaType.FINALPALACE2 && RoomBG.HEAVENGARDEN3 == bgtype)
                 return false;
+            if (RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBG])
+            {
+                if(RandomizeExtra.randomizedBG[(byte)bgtype] != 0)
+                    bgtype = (RoomBG)RandomizeExtra.randomizedBG[(byte)bgtype];
+
+            }
             return true;
         }
     }

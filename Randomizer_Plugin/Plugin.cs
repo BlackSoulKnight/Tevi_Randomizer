@@ -60,8 +60,11 @@ namespace TeviRandomizer
         CompassStart = 2,
         TempOption = 3,
         RandomizedEnemy = 4,
+        RandomizedBoss = 7,
         AlwaysRandomizeEnemy = 5,
         SuperBosses = 6,
+        RandomizedMusic = 8,
+        RandomizedBG = 9,
     }
 
 
@@ -304,6 +307,8 @@ namespace TeviRandomizer
             transitionVisited.Clear();
             LocationTracker.clearItemList();
             transitionData = null;
+            ResourcePatch.AreaResource = null;
+            ResourcePatch.resources = new GameObject[0];
             ArchipelagoInterface.Instance.currentItemNR = 0;
         }
 
@@ -904,7 +909,35 @@ namespace TeviRandomizer
                 currentDropKick.SetDamage(num3);
             }
         }
+        [HarmonyPatch(typeof(MusicManager), "PlayMusic")]
+        [HarmonyPrefix]
+        static void changeMusic(ref Music musicname, ref Music __state)
+        {
+            if (RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedMusic])
+            {
+                if (Extras.RandomizeExtra.randomizedMusic[(byte)musicname] == 0) {
+                    __state = Music.OFF;
+                    return;
+                        }
 
+                __state = musicname;
+                if (musicname == Music.LOOP) { return; }
+                musicname = (Music)Extras.RandomizeExtra.randomizedMusic[(byte)musicname];
+            }
+        }
+        [HarmonyPatch(typeof(MusicManager), "PlayMusic")]
+        [HarmonyPostfix]
+        static void saveLastMusic(ref Music ___lastMusic, ref Music __state, ref Music ___readyMusic)
+        {
+
+            if (RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedMusic])
+            {
+
+                if (__state == Music.LOOP || __state == Music.OFF) { return; }
+                ___lastMusic = __state;
+                ___readyMusic = Music.OFF;
+            }
+        }
     }
 
     
