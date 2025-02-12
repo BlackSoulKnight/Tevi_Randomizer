@@ -189,6 +189,8 @@ namespace TeviRandomizer
             Extras.patchWhiteFlash(((UnityEngine.UI.Toggle)UI.settings["Toggle AntiFlash"]).isOn);
             if (((UnityEngine.UI.Toggle)UI.settings["Toggle RandomEnemies"]).isOn || ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn) 
                 Extras.RandomizeExtra.randomEnemies();
+            if (((UnityEngine.UI.Toggle)UI.settings["Toggle RandomBoss"]).isOn) 
+                Extras.RandomizeExtra.randomBoss();
             RandomizerPlugin.customFlags[(int)CustomFlags.AlwaysRandomizeEnemy] = ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn;
             RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss] = ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomBoss"]).isOn;
             RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedEnemy] = ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn || ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomEnemies"]).isOn;

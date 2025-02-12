@@ -23,8 +23,8 @@ namespace TeviRandomizer
         [HarmonyPatch(typeof(EventManager), "TryStartEvent")]
         static public void testBossReplace(ref Mode setMode)
         {
-            if(eventReplace != null && eventReplace.Length > (short)setMode && eventReplace[(short)setMode] != -1 && RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss]) {
-                originalBoss = setMode;
+            originalBoss = setMode;
+            if (eventReplace != null && eventReplace.Length > (short)setMode && eventReplace[(short)setMode] != -1 && RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss]) {
                 setMode = (Mode)eventReplace[(short)setMode];
             }
         }
@@ -33,9 +33,13 @@ namespace TeviRandomizer
         [HarmonyPatch(typeof(SaveManager), "SetEventFlag")]
         static void EndBossReplace(ref Mode mode)
         {
-            if(mode.ToString().Contains("END"))
+            if(RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss] &&mode.ToString().Contains("END"))
             {
+                if (mode.ToString().Contains("VENA"))
+                    mode = Mode.END_VENA;
+                else
                 mode = (Mode)Enum.Parse(typeof(Mode), originalBoss.ToString().Replace("BOSS_", "END_"));
+
             }
         }
 

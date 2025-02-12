@@ -162,7 +162,7 @@ ITEM_SLIDE@Plague Forest@1@ITEM_LINEBOMB,0@Plague Forest - Slick Boots
 STACKABLE_EP@Plague Forest@6@ChargeShot,0@Plague Forest - Lemon Bunny Potion
 BADGE_TauntKnife@Plague Forest@1@ITEM_AirDash,0;ITEM_DOUBLEJUMP,0;ITEM_JETPACK,0;ITEM_LINEBOMB,0;ITEM_HIJUMP && ITEM_WALLJUMP,0@Plague Forest - Special Action: Show Off
 BADGE_DodgeWeakGroundUp@Plague Forest@1@ITEM_LINEBOMB,0@Plague Forest - Dodge Enhancer: Upper
-STACKABLE_COG@Plague Forest@30@Boss,0@Plague Forest - Astral Gear
+STACKABLE_COG@Plague Forest@30@( ITEM_MASK ) && Boss,0@Plague Forest - Astral Gear
 BADGE_BombNormal4Buffer@Plague Forest Exit@1@ITEM_SLIDE && ITEM_LINEBOMB,0@Plague Forest - Aplomb
 BADGE_PrepDef@Plague Forest Exit@1@ITEM_AirSlide && ITEM_SLIDE && ITEM_LINEBOMB,0@Plague Forest - Blood Armor
 STACKABLE_RATK@Plague Forest@6@,0@Plague Forest - Grape Bunny Potion
@@ -381,7 +381,7 @@ BADGE_ChargeShotDiscount@Gallery of Mirrors West@1@,0@Gallery of Mirrors West - 
 BADGE_AreaBombThrower@Gallery of Mirrors East@1@ITEM_AREABOMB && ChargeShot,0@Gallery of Mirrors East - Bomb Pitcher
 BADGE_Recover3@Gallery of Mirrors East@1@ITEM_LINEBOMB && ChargeShot,0@Gallery of Mirrors East - Triple Threat
 ITEM_BombLengthExtend@Gallery of Mirrors East@1@ITEM_LINEBOMB && ChargeShot,0@Gallery of Mirrors East - Combustible
-STACKABLE_COG@Gallery of Mirrors East@47@ITEM_BombLengthExtend && Boss,0@Gallery of Mirrors East - Astral Gear
+STACKABLE_COG@Gallery of Mirrors East@47@ITEM_BombLengthExtend && ITEM_AntiDecay && Boss,0@Gallery of Mirrors East - Astral Gear
 EVENT_Memloch@Gallery of Mirrors East@47@ITEM_BombLengthExtend,0@Gallery of Mirrors East - Memloch
 STACKABLE_HP@Gallery of Mirrors East@10@ITEM_SLIDE,0@Gallery of Mirrors East - Kiwi Bunny Potion
 BADGE_WeakGroundUpModCombo@Gallery of Mirrors East@1@ITEM_HIJUMP && ChargeShot,0;ITEM_DOUBLEJUMP && ChargeShot,0;ITEM_JETPACK && ChargeShot,0;ITEM_AirDash && ChargeShot,0;RabbitJump && ChargeShot,0@Gallery of Mirrors East - C. Count Frenzy: Uprise
@@ -391,7 +391,7 @@ STACKABLE_MP@Gallery of Souls Entrance@10@ITEM_SLIDE && ITEM_LINEBOMB,0@Gallery 
 STACKABLE_RATK@Gallery of Souls@10@ITEM_SLIDE && ITEM_LINEBOMB,0@Gallery of Souls - Grape Bunny Potion
 ITEM_DOUBLEJUMP@Gallery of Souls@1@,0@Gallery of Souls - Double Rabi Boots
 BADGE_Instant1@Gallery of Souls Boss Area@1@ITEM_LINEBOMB,-1@Gallery of Souls Boss Area - Hero Call
-STACKABLE_COG@Gallery of Souls Boss Area@62@Boss,0@Gallery of Souls Boss Area - Astral Gear
+STACKABLE_COG@Gallery of Souls Boss Area@62@( ITEM_AntiDecay || ITEM_ZCrystal) && Boss,0@Gallery of Souls Boss Area - Astral Gear
 STACKABLE_HP@Verdazure Ocean Sea Exit@23@ITEM_WALLJUMP && ITEM_DOUBLEJUMP,0;ITEM_WALLJUMP && ITEM_JETPACK 2,0;ITEM_WALLJUMP && ITEM_WATERMOVEMENT,0;ITEM_WALLJUMP && ITEM_JETPACK && ITEM_AirDash,0;ITEM_WATERMOVEMENT && ITEM_AirDash && ITEM_DOUBLEJUMP,0;ITEM_WATERMOVEMENT && ITEM_DOUBLEJUMP && ITEM_JETPACK,0@Verdazure Ocean - Kiwi Bunny Potion
 BADGE_DodgeCharger@Verdazure Ocean@1@ITEM_AREABOMB && ITEM_LINEBOMB && ChargeShot,0@Verdazure Ocean - MP Surge: Dodge
 STACKABLE_MP@Verdazure Ocean@16@ITEM_LINEBOMB,0@Verdazure Ocean - Blueberry Bunny Potion #1
