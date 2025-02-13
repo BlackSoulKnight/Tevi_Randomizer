@@ -51,7 +51,7 @@
 [Tevi Map Tracker](https://github.com/vegemii/Tevi-Tracker/releases) made by Vegemii <br>
 [Tevi Poptracker](https://github.com/vegemii/TEVI-Rando-PopTracker) made by Vegemii (WIP) <br>
 [Tevi Item Tracker](https://github.com/cramps-man/tevi-rando-progression-ui) made by Cramps-Man <br>
- 
+[Tevi AP World](https://github.com/BlackSoulKnight/Tevi_Archipelago)
 
 ## Install
 Download the latest released Version from here [Tevi Randomizer releases](https://github.com/BlackSoulKnight/Tevi_Randomizer/releases)<br>
