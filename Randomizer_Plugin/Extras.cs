@@ -165,8 +165,8 @@ namespace TeviRandomizer
                         //(short)Character.Type.Pomp,
                         //(short)Character.Type.Bourbon,
                         //(short)Character.Type.Anisette,
-                        (short)Character.Type.T_Guard_Elite,
-                        (short)Character.Type.V_Guard_Elite,
+                        //(short)Character.Type.T_Guard_Elite,
+                        //(short)Character.Type.V_Guard_Elite,
                         (short)Character.Type.Shroom_Mutant,
                         (short)Character.Type.Toothberry,
                         (short)Character.Type.Porapora,
@@ -307,7 +307,7 @@ namespace TeviRandomizer
             static public void randomBG()
             {
                 List<int> arr = Enumerable.Range(1, (int)((byte)Map.RoomBG.MAX)-1).ToList();
-                int[] removed = [3,58, 59, 66, 67, 68,89,90, 91,94,  102, 103, 105, 106];
+                int[] removed = [3,9,11,15,18,19,21,23,24,34,35,36,37,38,40,42,43,46,55,58, 59, 66, 67, 68,70,72,74,83,85, 88, 89,90, 91,94,98,100,101,  102, 103, 105, 106];
                 foreach(int i in removed)
                 {
                     arr.Remove(i);
@@ -322,11 +322,13 @@ namespace TeviRandomizer
             static public void randomMusic()
             {
                 List<int> arr = Enumerable.Range(4, (int)((byte)Music.MAX)-1).ToList();
-                arr.Remove(93);
-                arr.Remove(94);
-                arr.Remove(95);
+                int[] removed = [93,94,95,82,83,81];
+                foreach (int i in removed)
+                {
+                    arr.Remove(i);
+                }
                 for (int i = 5; i < (byte)(Music.MAX); i++) {
-                    if (i == 93 || i == 94 || i == 95) continue;
+                    if (removed.Contains(i)) continue;
                     byte num = (byte)UnityEngine.Random.Range(0, arr.Count);
                     randomizedMusic[i] = (byte)arr[num];
                     arr.RemoveAt(num);

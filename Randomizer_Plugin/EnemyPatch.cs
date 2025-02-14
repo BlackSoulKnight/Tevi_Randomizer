@@ -533,6 +533,7 @@ namespace TeviRandomizer
         {
             if (!EventManager.Instance.eventBattle.ToString().Contains("Mission") && !EventManager.Instance.Mode.ToString().Contains("Mission"))
             {
+                Debug.Log(type.ToString());
                 if (enemyReplace != null && enemyReplace.Length > (short)type)
                 {
 

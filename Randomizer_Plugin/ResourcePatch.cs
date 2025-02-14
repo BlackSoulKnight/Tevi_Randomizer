@@ -657,6 +657,7 @@ namespace TeviRandomizer
                 return false;
             if (RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBG])
             {
+                Debug.Log($"Original BG:{(int)bgtype}");
                 if(RandomizeExtra.randomizedBG[(byte)bgtype] != 0)
                     bgtype = (RoomBG)RandomizeExtra.randomizedBG[(byte)bgtype];
 
