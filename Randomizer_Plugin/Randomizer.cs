@@ -1057,7 +1057,7 @@ namespace TeviRandomizer
 
         static public void saveSpoilerLog(Dictionary<string,string> itemData)
         {
-            if (!Directory.Exists(RandomizerPlugin.pluginPath + "Data")) Directory.CreateDirectory(RandomizerPlugin.pluginPath + "Data");
+            if (!Directory.Exists(RandomizerPlugin.pluginPath + "/Data")) Directory.CreateDirectory(RandomizerPlugin.pluginPath + "/Data");
             DateTime today = DateTime.Now;
             StreamWriter spoilerLog = File.CreateText(RandomizerPlugin.pluginPath + "/Data/" + $"Spoilerlog.{today.Day}.{today.Month}.{today.Year}.{today.Hour}.{today.Minute}.txt");
             ItemList.Type value;

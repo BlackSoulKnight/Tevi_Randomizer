@@ -1,11 +1,10 @@
 ﻿using EventMode;
 using Game;
 using HarmonyLib;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace TeviRandomizer
 {
@@ -241,20 +240,12 @@ namespace TeviRandomizer
                 }
 
                 List<short> placed = new List<short>();
-
+                placed.CopyFrom(enemies);
                 foreach (short a in enemies)
                 {
-                    while (true)
-                    {
-                        short num1 = (short)UnityEngine.Random.Range(0, enemies.Count);
-                        if (placed.Contains(num1))
-                            continue;
-                        else
-                        {
-                            EnemyPatch.enemyReplace[a] = enemies[num1];
-                            break;
-                        }
-                    }
+                    byte num = (byte)UnityEngine.Random.Range(0, placed.Count);
+                    EnemyPatch.eventReplace[a] = enemies[num];
+                    placed.RemoveAt(num);
                 }
 
             }
@@ -268,7 +259,6 @@ namespace TeviRandomizer
                 List<short> events = new List<short>();
                 events.AddRange(new short[]
                 {
-                    (short) Mode.BOSS_AMARYLLIS,
                     (short) Mode.BOSS_BARADOS,
                     (short) Mode.BOSS_CAPRICE,
                     (short) Mode.BOSS_CYRIL,
@@ -284,24 +274,18 @@ namespace TeviRandomizer
                     (short) Mode.BOSS_ROLEO,
                     (short) Mode.BOSS_TEVIB11x11,
                     (short) Mode.BOSS_THETIS,
-                    (short) Mode.BOSS_AMARYLLIS,
                     (short) Mode.BOSS_TYBRIOUS,
                     (short) Mode.BOSS_VASSAGO,
                 });
+
                 List<short> placed = new List<short>();
+                placed.CopyFrom(events);
+
                 foreach (short a in events)
                 {
-                    while (true)
-                    {
-                        short num1 = (short)UnityEngine.Random.Range(0, events.Count);
-                        if (placed.Contains(num1))
-                            continue;
-                        else
-                        {
-                            EnemyPatch.eventReplace[a] = events[num1];
-                            break;
-                        }
-                    }
+                    byte num = (byte)UnityEngine.Random.Range(0, placed.Count);
+                    EnemyPatch.eventReplace[a] = events[num];
+                    placed.RemoveAt(num);
                 }
             }
             static public void randomBG()
