@@ -815,7 +815,7 @@ namespace TeviRandomizer
         static void fixLILY(ref enemyController ___lily)
         {
             EventManager em = EventManager.Instance;
-            if (WorldManager.Instance.Area != 3)
+            if (WorldManager.Instance.Area != 2)
             {
                 switch (em.EventStage)
                 {

@@ -789,24 +789,32 @@ namespace TeviRandomizer
                 __state.Item2 = EventManager.Instance.mainCharacter.cphy_perfer.orbShootType[0];
                 __state.Item3 = EventManager.Instance.mainCharacter.cphy_perfer.orbShootType[1];
                 __state.Item4 = true;
-                if (___currentItemType.ToString().Contains("ITEM") && ___craftList[___selected].isUpgrade || ___currentItemType.ToString().Contains("BADGE") || ___currentItemType.ToString().Contains("_OrbBoost"))
+                if (___currentItemType.ToString().Contains("ITEM") && ___craftList[___selected].isUpgrade || ___currentItemType.ToString().Contains("BADGE") || ___currentItemType.ToString().Contains("_OrbBoost") || ___currentItemType.ToString().Contains("_OrbType"))
                 {
 
                     int num5 = 1;
                     ItemList.Resource resource = ItemList.Resource.COIN;
 
+                    Debug.Log(___currentItemType);
+                    ItemList.Type rnd = RandomizerPlugin.getRandomizedItem(___currentItemType, 1);
 
                     if (___currentItemType.ToString().Contains("_OrbBoost") )
                     {
                         if(SaveManager.Instance.GetOrbBoostObtained() >= 2)
                             num5 = -3;
                     }
+                    else if (___currentItemType.ToString().Contains("_OrbType"))
+                    {
+                        if (SaveManager.Instance.GetOrbTypeObtained() >= 4)
+                        {
+                            num5 = -3;
+                        }
+                    }
                     else if (getItemUpgradeCount(___currentItemType) >= 3) // helperfunction 
                     {
                         num5 = -3;
                     }
-                    ItemList.Type rnd = RandomizerPlugin.getRandomizedItem(___currentItemType, 1);
-                    if (!Enum.IsDefined(typeof(Upgradable), ___currentItemType.ToString()) && RandomizerPlugin.checkRandomizedItemGot(___currentItemType,1))
+                    else if (!Enum.IsDefined(typeof(Upgradable), ___currentItemType.ToString()) && RandomizerPlugin.checkRandomizedItemGot(___currentItemType,1))
                     {
 
                         num5 = -3;
@@ -913,7 +921,24 @@ namespace TeviRandomizer
                         {
                             ___currentItemType = RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.ITEM_OrbBoostD, 1) ? ItemList.Type.ITEM_OrbBoostU : ItemList.Type.ITEM_OrbBoostD;
                         }
-
+                        else if (___currentItemType.ToString().Contains("_OrbTyp"))
+                        {
+                            switch (SaveManager.Instance.GetOrbTypeObtained())
+                            {
+                                case 0:
+                                    ___currentItemType = ItemList.Type.ITEM_OrbTypeC2;
+                                    break;
+                                case 1:
+                                    ___currentItemType = ItemList.Type.ITEM_OrbTypeS2;
+                                    break;
+                                case 2:
+                                    ___currentItemType = ItemList.Type.ITEM_OrbTypeC3;
+                                    break;
+                                case 3:
+                                    ___currentItemType = ItemList.Type.ITEM_OrbTypeS3;
+                                    break;
+                            }
+                        }
                         if (___craftList[___selected].isUpgrade)
                         {
                             HUDObtainedItem.Instance.GiveItem(___currentItemType, (byte)(getItemUpgradeCount(___currentItemType) + 1));

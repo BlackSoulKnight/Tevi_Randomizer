@@ -447,6 +447,36 @@ namespace TeviRandomizer
             }
         }
 
+
+
+        [HarmonyPatch(typeof(Chap4CyrilRoom),"EVENT")]
+        [HarmonyPrefix]
+        static void NoFreeStuffFromCyril()
+        {
+            EventManager em = EventManager.Instance;
+            switch (em.EventStage)
+            {
+                case 10:
+                    em.SetStage(11);
+                    break;
+                case 11:
+                    if(RandomizerPlugin.checkItemGot(ItemList.Type.BADGE_CrystalAbsorberS, 1))
+                    {
+                        em.SetStage(20);
+                        break;
+                    }
+                    if (em.EventTime > 0.75f && em.EventTime < 100f)
+                    {
+                        HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_CrystalAbsorberS, 1, doRandomBadge: true);
+                        em.EventTime = 100f;
+                    }
+                    if (em.EventTime >= 100.5f && !HUDObtainedItem.Instance.isDisplaying())
+                    {
+                        em.NextStage();
+                    }
+                    break;
+            }
+        }
     }
 
 

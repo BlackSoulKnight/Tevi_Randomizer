@@ -76,67 +76,6 @@ namespace TeviRandomizer
             }
         }
 
-        static void fixTahlia()
-        {
-            if (EventManager.Instance.EventStage == 0)
-                EventManager.Instance.mainCharacter.SetPosition(CameraScript.Instance.GetTrueX(), CameraScript.Instance.GetTrueY());
-            EventManager.Instance.SetStage(10);
-            if (EventManager.Instance.EventStage == 20)
-                EventManager.Instance.SetStage(110);
-        }
-
-
-        static void fixCHARON(ref float ___center,ref enemyController ___m,ref enemyController ___c,ref float ___centeroffx,ref float ___ypos)
-        {
-            EventManager em = EventManager.Instance;
-            if(em.EventStage == 0) {
-                EventManager.Instance.mainCharacter.SetPosition(CameraScript.Instance.GetTrueX(), CameraScript.Instance.GetTrueY());
-
-            }
-            if  (em.EventStage == 4) {
-                em.SetStage(5);
-            }
-            if(em.EventStage == 5)
-            {
-                em.SetCutSceneBarAlpha(0f);
-                ___center = CameraScript.Instance.GetTrueX();
-                CameraScript.Instance.SetLimitLR(___center, ___center);
-                CameraScript.Instance.SetCameraSpeed(100f);
-                em.mainCharacter.ChangeDirection(Direction.RIGHT);
-                CharacterBase characterBase = em.CreateEnemy(Character.Type.Charon, BossType.BOSS);
-                em.AddActor(characterBase);
-                characterBase.SetPositionX(___center + MainVar.instance.TILESIZE * 6f);
-                characterBase.SetPositionY(em.mainCharacter.t.position.y);
-                characterBase.direction = Direction.TOPLAYER;
-                characterBase.SetDefeatEvent(Mode.END_CHARON);
-                ___c = characterBase as enemyController;
-                em.SetBossBarOwner(characterBase);
-                CharacterBase characterBase2 = em.CreateEnemy(Character.Type.MagnaLegacy, BossType.NONE);
-                em.AddActor(characterBase2);
-                characterBase2.SetPositionX(___center);
-                characterBase2.SetPositionY(em.mainCharacter.t.position.y + MainVar.instance.TILESIZE * 1.5f);
-                characterBase2.direction = Direction.LEFT;
-                characterBase2.phy_perfer.AIGravity(0f);
-                characterBase2.phy_perfer.AIFloatMode();
-                characterBase2.DoNotDelete = true;
-                ___m = characterBase2 as enemyController;
-                em.SetStage(6);
-            }
-        }
-
-
-            static void movePlayerToLeftSide(bool left)
-        {
-            if (left)
-            {
-                EventManager.Instance.mainCharacter.SetPosition(CameraScript.Instance.GetTrueX() - 625, CameraScript.Instance.GetTrueY());
-            }
-            else
-            {
-                EventManager.Instance.mainCharacter.SetPosition(CameraScript.Instance.GetTrueX() + 625, CameraScript.Instance.GetTrueY());
-            }
-        }
-
         public static short[] enemyReplace = null;
         static bool isMission;
         [HarmonyPatch(typeof(EventManager),"CreateEnemy")]
