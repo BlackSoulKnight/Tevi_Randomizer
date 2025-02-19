@@ -57,8 +57,10 @@
 Download the latest released Version from here [Tevi Randomizer releases](https://github.com/BlackSoulKnight/Tevi_Randomizer/releases)<br>
 Note: Archipelago and the Normal version share the same client
 
-Extract the zip in the BepInEx Plugins Folder<br><br>
-
+Install BepInEx<br>
+Start Game<br>
+Extract the Tevi Randomizer Rar into the BepInEx/plugins Folder<br>
+Finished<br><br>
 Make sure that Build contains no .cs files <- those are C# source files and cannot be run by BepInEX
 
 ## Usage
