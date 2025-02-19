@@ -2608,7 +2608,7 @@
         "slotId": 202,
         "Requirement": [
             {
-                "Method": "QUEST_LibraryKey && LibraryExtra && ITEM_KNIFE",
+                "Method": "QUEST_LibraryKey && LibraryExtra && ITEM_KNIFE && Chapter 4",
                 "Difficulty": 0
             }
         ]
@@ -2620,7 +2620,7 @@
         "slotId": 201,
         "Requirement": [
             {
-                "Method": "QUEST_LibraryKey && LibraryExtra && ITEM_KNIFE",
+                "Method": "QUEST_LibraryKey && LibraryExtra && ITEM_KNIFE && Chapter 4",
                 "Difficulty": 0
             }
         ]
@@ -2632,7 +2632,7 @@
         "slotId": 200,
         "Requirement": [
             {
-                "Method": "QUEST_LibraryKey && LibraryExtra && ITEM_KNIFE",
+                "Method": "QUEST_LibraryKey && LibraryExtra && ITEM_KNIFE && Chapter 4",
                 "Difficulty": 0
             }
         ]
