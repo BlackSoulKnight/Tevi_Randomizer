@@ -5573,6 +5573,10 @@
             {
                 "Method": "ITEM_SLIDE && ITEM_JETPACK && ITEM_HIJUMP && SpinnerBash",
                 "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_DOUBLEJUMP && (ITEM_WALLJUMP || SpinnerBash)",
+                "Difficulty": 0
             }
         ]
     },
