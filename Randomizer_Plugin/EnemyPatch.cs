@@ -133,7 +133,7 @@ namespace TeviRandomizer
                     Traverse.Create(__instance).Method("GemaYueStand").GetValue();
                     id = (int)Character.Type.GemaYue_B % 3 + 200;
                 }
-                if (RandomizerPlugin.checkItemGot(ItemList.Type.STACKABLE_COG, (byte)id) || !RandomizerPlugin.customFlags[(int)CustomFlags.SuperBosses])
+                if (RandomizerPlugin.checkItemGot(ItemList.Type.STACKABLE_COG, (byte)id) || SaveManager.Instance.GetChapter() < 4)
                     ___en.DespawnMe();
                 byte iDFromBelow = EventManager.Instance.GetIDFromBelow(___en.t, 4.5f);
                 if (iDFromBelow >= 1 && iDFromBelow < byte.MaxValue)

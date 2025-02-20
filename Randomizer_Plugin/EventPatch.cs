@@ -443,7 +443,10 @@ namespace TeviRandomizer
                     SaveManager.Instance.AutoSave(forced: true);
                 }
                 EventManager.Instance.AllowAutoMap = true;
-
+                MusicManager.Instance.PlayRoomMusic();
+                SaveManager.Instance.AutoSave(forced: true);
+                em.mainCharacter._controller.ResetPhy();
+                SaveManager.Instance.ReallyRenewLevel();
             }
         }
 

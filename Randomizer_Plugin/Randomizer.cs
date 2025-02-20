@@ -1086,10 +1086,3 @@ namespace TeviRandomizer
 
     }
 }
-
-
-
-
-/*
- * Returning to main Menu deloads randmoized data
- */

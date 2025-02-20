@@ -238,17 +238,19 @@ namespace TeviRandomizer
                         },
                     ];
                 }
-
+                //This is Broken
                 List<short> placed = new List<short>();
                 placed.CopyFrom(enemies);
                 foreach (short a in enemies)
                 {
                     byte num = (byte)UnityEngine.Random.Range(0, placed.Count);
-                    EnemyPatch.eventReplace[a] = enemies[num];
+                    EnemyPatch.enemyReplace[a] = enemies[num];
                     placed.RemoveAt(num);
                 }
 
             }
+
+
             static public void randomBoss()
             {
                 EnemyPatch.eventReplace = new short[(int)Mode.MAX];
@@ -284,7 +286,7 @@ namespace TeviRandomizer
                 foreach (short a in events)
                 {
                     byte num = (byte)UnityEngine.Random.Range(0, placed.Count);
-                    EnemyPatch.eventReplace[a] = events[num];
+                    EnemyPatch.eventReplace[a] = placed[num];
                     placed.RemoveAt(num);
                 }
             }
