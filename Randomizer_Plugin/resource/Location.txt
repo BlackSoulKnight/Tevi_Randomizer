@@ -197,9 +197,9 @@ BADGE_AmuletMPCharge@Relicts@1@ITEM_SLIDE && ITEM_LINEBOMB,0@Relicts - MP Surge:
 QUEST_LibraryKey@Ana Thema@1@ITEM_AREABOMB && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_WALLJUMP,0;ITEM_AREABOMB && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_DOUBLEJUMP && ITEM_JETPACK 3,0;ITEM_AREABOMB && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_DOUBLEJUMP && ITEM_HIJUMP && ITEM_JETPACK,0@Ana Thema - Library Key
 STACKABLE_MATK@Ana Thema@7@ITEM_SLIDE && ITEM_AirDash && ITEM_LINEBOMB,0;ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_LINEBOMB,0;ITEM_SLIDE && RabbitJump && ITEM_LINEBOMB,0;ITEM_SLIDE && ITEM_JETPACK && ITEM_LINEBOMB,0@Ana Thema - Cherry Bunny Potion
 I20@Ana Thema@1@QUEST_LibraryKey,0@Ana Thema - Sable
-STACKABLE_COG@Ana Thema@202@QUEST_LibraryKey && LibraryExtra && ITEM_KNIFE,0@Ana Thema - GemaYue
-STACKABLE_COG@Ana Thema@201@QUEST_LibraryKey && LibraryExtra && ITEM_KNIFE,0@Ana Thema - EinLee
-STACKABLE_COG@Ana Thema@200@QUEST_LibraryKey && LibraryExtra && ITEM_KNIFE,0@Ana Thema - Waero
+STACKABLE_COG@Ana Thema@202@QUEST_LibraryKey && LibraryExtra && ITEM_KNIFE && Chapter 4,0@Ana Thema - GemaYue
+STACKABLE_COG@Ana Thema@201@QUEST_LibraryKey && LibraryExtra && ITEM_KNIFE && Chapter 4,0@Ana Thema - EinLee
+STACKABLE_COG@Ana Thema@200@QUEST_LibraryKey && LibraryExtra && ITEM_KNIFE && Chapter 4,0@Ana Thema - Waero
 EVENT_EliteChallangeD@Ana Thema@1@,0@Ana Thema - Elite
 BADGE_QuickMeleeLagA@Ana Thema@1@ITEM_LINEBOMB,0@Ana Thema - Deft I
 EVENT_AnathemaVisited@Ana Thema@1@,0@Ana Thema
@@ -475,7 +475,7 @@ STACKABLE_COG@DreamKeeper@60@Boss,0@DreamKeeper - Astral Gear #1
 STACKABLE_MATK@DreamKeeper@28@ITEM_LINEBOMB,0@DreamKeeper - Cherry Bunny Potion
 STACKABLE_EP@DreamKeeper@28@ITEM_LINEBOMB,0@DreamKeeper - Lemon Bunny Potion
 BADGE_KnockHitEnhance@DreamKeeper@1@ITEM_AREABOMB && ITEM_LINEBOMB,0@DreamKeeper - Dominator
-BADGE_CrystalBulletCancel@Dreamless Depths 2@1@ITEM_BombLengthExtend 3 && ITEM_LINEBOMB,0@Dreamless Depths 2 - Crystal Mirror
+BADGE_CrystalBulletCancel@Dreamless Depths 2@1@ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide,0@Dreamless Depths 2 - Crystal Mirror
 BADGE_GroundNormalComboAutoSpeedup@Dreamless Depths@1@ITEM_SLIDE && ITEM_AirSlide && ITEM_ORB,0;ITEM_SLIDE && ITEM_AirSlide && ITEM_KNIFE,0;ITEM_SLIDE && ITEM_AirSlide && ITEM_AREABOMB,0@Dreamless Depths - Terrestrial Momentum
 BADGE_BadgeCDReduce@Dreamless Depths 2@1@ITEM_DOUBLEJUMP && ITEM_JETPACK 2 && ItemUse && ITEM_LINEBOMB,0;ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash && ITEM_LINEBOMB,0;ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_HIJUMP && ItemUse && ITEM_LINEBOMB,0@Dreamless Depths 2 - Sigil Quicken
 ITEM_Royal@Dreamless Depths 2@1@ITEM_JETPACK && ITEM_DOUBLEJUMP,0;ITEM_DOUBLEJUMP && ITEM_AirDash,0;ITEM_JETPACK 2 && ITEM_AirDash,0;ITEM_JETPACK && ITEM_AirDash && ITEM_HIJUMP,0@Dreamless Depths 2 - Royal Emblem

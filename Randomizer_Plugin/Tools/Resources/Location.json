@@ -6252,7 +6252,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
+                "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide",
                 "Difficulty": 0
             }
         ]
