@@ -115,8 +115,10 @@ namespace TeviRandomizer
             }
 
 
-            if (SaveManager.Instance.GetOrb() == 2 && (SaveManager.Instance.GetItem(ItemList.Type.I19) > 0 || SaveManager.Instance.GetItem(ItemList.Type.I20) > 0 || item == ItemList.Type.I20 || item == ItemList.Type.I19))
+            if (SaveManager.Instance.GetOrb() == 2 && (SaveManager.Instance.GetItem(ItemList.Type.I19) > 0 || SaveManager.Instance.GetItem(ItemList.Type.I20) > 0 || item == ItemList.Type.I20 || item == ItemList.Type.I19) || (SaveManager.Instance.GetOrb() == 1 && RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart]))
             {
+                if((SaveManager.Instance.GetOrb() == 1 && RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart]))
+                    RandomizerPlugin.addOrbStatus(1);
                 RandomizerPlugin.addOrbStatus(1);
 
             }

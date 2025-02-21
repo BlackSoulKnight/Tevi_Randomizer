@@ -114,7 +114,7 @@ namespace TeviRandomizer
                         case "ChargeShot":
                             flag = RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart];
                             if (itemList.ContainsKey("ITEM_ORB"))
-                                flag = itemList["ITEM_ORB"] > 1;
+                                flag = itemList["ITEM_ORB"] >= 1;
                                 
                             break;
                         case "Upgrade":

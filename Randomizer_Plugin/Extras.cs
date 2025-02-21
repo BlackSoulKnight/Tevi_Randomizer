@@ -274,7 +274,7 @@ namespace TeviRandomizer
                     (short) Mode.BOSS_MALPHAGE,
                     (short) Mode.BOSS_RIBAULD,
                     (short) Mode.BOSS_ROLEO,
-                    (short) Mode.BOSS_TEVIB11x11,
+                    //(short) Mode.BOSS_TEVIB11x11, BUGGED
                     (short) Mode.BOSS_THETIS,
                     (short) Mode.BOSS_TYBRIOUS,
                     (short) Mode.BOSS_VASSAGO,
@@ -293,7 +293,7 @@ namespace TeviRandomizer
             static public void randomBG()
             {
                 List<int> arr = Enumerable.Range(1, (int)((byte)Map.RoomBG.MAX)-1).ToList();
-                int[] removed = [3,9,11,15,18,19,21,23,24,34,35,36,37,38,40,42,43,46,55,58, 59, 66, 67, 68,70,72,74,83,85, 88, 89,90, 91,94,98,100,101,  102, 103, 105, 106];
+                int[] removed = [3,9,11, 12,15, 18,19,21,23,24,34,35,36,37,38,40,42,43,46,55,58, 59, 66, 67, 68,70,72,74,83,85, 88, 89,90, 91,94,98,100,101,  102, 103, 105, 106];
                 foreach(int i in removed)
                 {
                     arr.Remove(i);
