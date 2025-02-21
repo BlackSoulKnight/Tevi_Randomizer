@@ -349,9 +349,10 @@ namespace TeviRandomizer
         //Increase Memine Race Timer
         [HarmonyPatch(typeof(GemaMissionMode),"StartMission")]
         [HarmonyPostfix]
-        static void increaseTimer(ref float ___timer)
+        static void increaseTimer(ref float ___timer,ref byte ___maxHitChance)
         {
             ___timer = 3600;
+            ___maxHitChance = 0;
         }
 
         // change how the item Bell Works

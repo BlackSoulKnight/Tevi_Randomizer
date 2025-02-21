@@ -431,7 +431,7 @@
     {
         "Itemname": "EVENT_EliteChallangeB",
         "Location": "Thanatara Canyon",
-        "LocationName": "Thanatara Canyon EliteB",
+        "LocationName": "Thanatara Canyon - EliteB",
         "slotId": 1,
         "Requirement": [
             {
@@ -919,7 +919,7 @@
     {
         "Itemname": "EVENT_MoroseVisited",
         "Location": "Morose City",
-        "LocationName": "Morose City",
+        "LocationName": "Morose City - Visit",
         "slotId": 0,
         "Requirement": [
             {
@@ -931,7 +931,7 @@
     {
         "Itemname": "EVENT_EliteChallangeA",
         "Location": "Morose City",
-        "LocationName": "Morose City Elite",
+        "LocationName": "Morose City - Elite A",
         "slotId": 0,
         "Requirement": [
             {
@@ -2664,7 +2664,7 @@
     {
         "Itemname": "EVENT_AnathemaVisited",
         "Location": "Ana Thema",
-        "LocationName": "Ana Thema",
+        "LocationName": "Ana Thema - Visit",
         "slotId": 1,
         "Requirement": [
             {
