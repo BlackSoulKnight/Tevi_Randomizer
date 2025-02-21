@@ -85,7 +85,6 @@ namespace TeviRandomizer
                 //VenaItemClaimedCheck();
                 if (RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart])
                 {
-                    SaveManager.Instance.SetOrb(3);
                     SaveManager.Instance.SetItem(ItemList.Type.I19, 1);
                     SaveManager.Instance.SetItem(ItemList.Type.I20, 1);
                 }

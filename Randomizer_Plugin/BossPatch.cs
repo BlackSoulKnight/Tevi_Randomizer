@@ -109,7 +109,7 @@ namespace TeviRandomizer
                 case 16:
                     //JEZBELLE
                     bossSpawnLocation.x = CameraScript.Instance.GetTrueX() - MainVar.instance.TILESIZE * 3f;
-                    bossSpawnLocation.y = CameraScript.Instance.GetTrueY() + MainVar.instance.TILESIZE * 30f;
+                    bossSpawnLocation.y = CameraScript.Instance.GetTrueY() + MainVar.instance.TILESIZE;
                     break;
                 case 18:
                     if (nr == 0)
@@ -138,14 +138,20 @@ namespace TeviRandomizer
                     {
                         center = CameraScript.Instance.GetTrueX();
                     }
+                    bossSpawnLocation.y = elementTile.transform.position.y;
+                    bossSpawnLocation.x = elementTile.transform.position.x;
+                    
                     CameraScript.Instance.SetLimitLR(center - MainVar.instance.TILESIZE * 5f, center + MainVar.instance.TILESIZE * 5f);
                     CameraScript.Instance.SetLimitY(CameraScript.Instance.t.position.y);
                     break;
                 case 23:
                     // CYRIL
-                    bossSpawnLocation.x = CameraScript.Instance.GetTrueX() + MainVar.instance.SCREEN_WIDTH * 0.61f;
-                    bossSpawnLocation.y = CameraScript.Instance.GetTrueY();
-                    CameraScript.Instance.SetLimitLR(CameraScript.Instance.GetTrueX(), CameraScript.Instance.GetTrueX());
+                    if (nr == 1)
+                    {
+                        bossSpawnLocation.x = CameraScript.Instance.GetTrueX() + MainVar.instance.SCREEN_WIDTH * 0.61f;
+                        bossSpawnLocation.y = CameraScript.Instance.GetTrueY();
+                        CameraScript.Instance.SetLimitLR(CameraScript.Instance.GetTrueX(), CameraScript.Instance.GetTrueX());
+                    }
                     //illusion palace?
                     //TAHLIA
                     // CameraScript.Instance.SetLimitLR(CameraScript.Instance.GetTrueX(), CameraScript.Instance.GetTrueX());
@@ -157,8 +163,9 @@ namespace TeviRandomizer
                     {
                         num = -1f;
                     }
-                    SetCharacterPosition(CreateType.BASEONCAMERAO, CreateType.BASEONCAMERA, 3.75f * num, 8f);
-                    CameraScript.Instance.SetLimitLR(CameraScript.Instance.GetTrueX(), CameraScript.Instance.GetTrueX());
+                    SetCharacterPosition(CreateType.BASEONCAMERAO, CreateType.BASEONCAMERA, 5.75f * num, 8f);
+                    em.mainCharacter.transform.position += new Vector3(100f, 0f, 0f);
+                    CameraScript.Instance.SetLimitLR(CameraScript.Instance.GetTrueX()+625, CameraScript.Instance.GetTrueX()+625);
                     break;
                 case 25:
                     if (nr == 0)
@@ -180,7 +187,7 @@ namespace TeviRandomizer
                 case 26:
                     //TYBRIOUS
                     elementTile = WorldManager.Instance.FindElementID(ElementType.EventPoint, 1);
-                    extraDis = -45*56f;
+                    extraDis = -25*56f;
                     SetCharacterPosition(CreateType.FIXEDPOSITION, CreateType.BASEONPLAYER, elementTile.transform.position.x - MainVar.instance.TILESIZE / 2f, -0.02f);
                     CameraScript.Instance.SetLimitLR(elementTile.transform.position.x, elementTile.transform.position.x);
                     break;
@@ -206,8 +213,8 @@ namespace TeviRandomizer
                     CameraScript.Instance.SetNoZoomIn(99f);
                     EventManager.Instance.TurnOnFall(em.mainCharacter.t.position.x);
                     CameraScript.Instance.ForceYMode = false;
-
-
+                    break;
+                case 30:
                     break;
                 default:
                     CameraScript.Instance.SetLimitLR(CameraScript.Instance.GetTrueX(), CameraScript.Instance.GetTrueX());
@@ -1070,7 +1077,6 @@ namespace TeviRandomizer
                         ___b.spranim_prefer.ToggleRunWalk(1);
                         ___b.spranim_prefer.SetMaterial(AreaResource.Instance.GetMaterialByName("TeviB Material"));
                         em.NextStage();
-                        GemaSuperSample.Instance.ChangeRenderScaleAnimation(0.02f);
                         MusicManager.Instance.SetTargetVolume(0f, 15f);
                         ___b.PlaySound("boss_appear");
                         GameObject pooledObject = AreaResource.Instance.AreaPooler.GetPooledObject("TeviB Aura");
@@ -1242,6 +1248,105 @@ namespace TeviRandomizer
                     }
                 }
             }
+        }
+
+        [HarmonyPatch(typeof(FrayDemon),"ALWAYS")]
+        [HarmonyPrefix]
+        static bool fixFray(ref enemyController ___en,ref bool ___addedOff,ref float ___P2,ref float ___lockw,ref bool ___gotlimitx,ref ParticleSystem[] ___ps,ref GameObject ___aura)
+        {
+            if (WorldManager.Instance.Area != 25)
+            {
+                if (EventManager.Instance.BossTime >= 5f && !___addedOff && ___en.HPLeft() <= ___P2)
+                {
+                    ___addedOff = true;
+                    ___en.GiveBuffWithAdd(BuffType.DefenceUp, 110f, (byte)(2f + SaveManager.Instance.GetDifficultyModMinMax(0.4f, 0f, 8f)), 0);
+                    ___en.GiveBuffWithAdd(BuffType.OffenseUp, 110f, (byte)(5f + SaveManager.Instance.GetDifficultyModMinMax(0.5f, -4f, 5f)), 0);
+                }
+                if (___en.phase == AIPhase.MAIN_1)
+                {
+                    LightManager.Instance.AddSunLight(1.2f, 1.2f);
+                }
+                if (___lockw < 203f && EventManager.Instance.getMode() == Mode.OFF)
+                {
+                    if (GemaBossRushMode.Instance.isBossRush() && !___gotlimitx)
+                    {
+                        ___gotlimitx = true;
+                        EventManager.Instance.SetCounter(9, CameraScript.Instance.GetLimitLRCenter());
+                    }
+                    ___lockw = Mathf.Lerp(___lockw, 203f, Utility.GetSmooth(4f));
+                    if (___lockw > 202f)
+                    {
+                        ___lockw = 203f;
+                    }
+                    //CameraScript.Instance.SetLimitLR(EventManager.Instance.GetCounter(9) - ___lockw, EventManager.Instance.GetCounter(9) + ___lockw);
+                }
+                if ((bool)___aura)
+                {
+                    ___aura.transform.position = ___en.t.position;
+                    if (___en.GetBuffLv(BuffType.FrayBulletUp_TOP) > 0)
+                    {
+                        for (int i = 0; i < ___ps.Length; i++)
+                        {
+                            ParticleSystem.EmissionModule emission = ___ps[i].emission;
+                            emission.enabled = true;
+                            emission.rateOverTime = (int)___en.GetBuffLv(BuffType.FrayBulletUp_TOP);
+                            if (!___ps[i].isPlaying)
+                            {
+                                ___ps[i].Play();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        for (int j = 0; j < ___ps.Length; j++)
+                        {
+                            ___ps[j].Stop(withChildren: false, ParticleSystemStopBehavior.StopEmitting);
+                        }
+                    }
+                }
+                //CameraScript.Instance.SetTargetXY(___en.t, (EventManager.Instance.mainCharacter.t.position.x - ___en.t.position.x) / 1.25f, (EventManager.Instance.mainCharacter.t.position.y - ___en.t.position.y) / 3f, forcePositionIgnoreRoom: false);
+
+                return false;
+            }
+            return true;
+        }
+
+        [HarmonyPatch(typeof(FrayDemon), "ALWAYS")]
+        [HarmonyPrefix]
+        static bool fixFrayAI(ref enemyController ___en,ref GameObject ___aura,ref ParticleSystem[] ___ps,ref byte ___APhase)
+        {
+            if(WorldManager.Instance.Area != 25 && ___en.phase == AIPhase.MAIN_1)
+            { 
+                if (!___aura)
+                {
+                    ___aura = UnityEngine.Object.Instantiate(ResourcePatch.getAreaResource(25).GetBossObject(0));
+                    ___aura.transform.localScale = new Vector3(48f, 48f, 48f);
+                    ___ps = ___aura.GetComponentsInChildren<ParticleSystem>();
+                    ___APhase = (byte)(UnityEngine.Random.Range(0, 99) % 2);
+                }
+            }   
+            return true;
+        }
+        [HarmonyPatch(typeof(Jethro), "ALWAYS")]
+        [HarmonyPrefix]
+        static bool fixJethroAI(ref enemyController ___en,ref GameObject ___aura,ref ParticleSystem[] ___ps,ref byte ___KMode, ref GameObject ___aura2, ref ParticleSystem[] ___ps2)
+        {
+            if(WorldManager.Instance.Area != 12)
+            { 
+                if (!___aura && ___en.phase == AIPhase.K_PHASE_3 && ___KMode == 0)
+                {
+                    ___aura = UnityEngine.Object.Instantiate(ResourcePatch.getAreaResource(12).GetBossObject(0));
+                    ___aura.transform.localScale = new Vector3(70f, 70f, 70f);
+                    ___ps = ___aura.GetComponentsInChildren<ParticleSystem>();
+                }
+                if (!___aura && ___en.phase == AIPhase.K_PHASE_3 && ___KMode == 1)
+                {
+                    ___aura2 = UnityEngine.Object.Instantiate(ResourcePatch.getAreaResource(12).GetBossObject(1));
+                    ___aura2.transform.localScale = new Vector3(70f, 70f, 70f);
+                    ___ps2 = ___aura.GetComponentsInChildren<ParticleSystem>();
+                }
+            }   
+            return true;
         }
     }
 }

@@ -47,7 +47,7 @@ namespace TeviRandomizer
             byte nr = 0;
             if (em.Mode.ToString().Contains("BOSS") && em.EventStage == 0 && RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss])
             {
-                if(originalBoss == Mode.BOSS_DEMONFRAY || originalBoss == Mode.BOSS_FRANKIE)
+                if(originalBoss == Mode.BOSS_DEMONFRAY || originalBoss == Mode.BOSS_FRANKIE || originalBoss == Mode.BOSS_CYRIL)
                     nr = 1;
                 BossPatch.lockCameraToArena(em,nr);
             }
@@ -82,7 +82,8 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static void changeEnemy(ref Character.Type type)
         {
-            if (!EventManager.Instance.eventBattle.ToString().Contains("Mission") && !EventManager.Instance.Mode.ToString().Contains("Mission"))
+            EventManager em = new EventManager();
+            if (!em.eventBattle.ToString().Contains("Mission") && !em.Mode.ToString().Contains("Mission") && !(em.Mode == Mode.Chap1S_Wasteland_Greasetrap) &&!(em.Mode == Mode.Chap2S_Beach_Friedman) &&!(em.Mode == Mode.Chap4MonitorRoom))
             {
                 Debug.Log(type.ToString());
                 if (enemyReplace != null && enemyReplace.Length > (short)type)
