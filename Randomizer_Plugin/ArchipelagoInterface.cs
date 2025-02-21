@@ -106,16 +106,26 @@ namespace TeviRandomizer
                 PlayerNames.Add(info.Slot, info.Alias);
             }
 
-            long extraPotions = (long)success.SlotData["attackMode"];
-            RandomizerPlugin.extraPotions = [(int)extraPotions,(int)extraPotions];
-            RandomizerPlugin.customFlags[(int)CustomFlags.TempOption] = (long)success.SlotData["openMorose"] >0;
-            RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart] = (long)success.SlotData["CeliaSable"] >0;
-            RandomizerPlugin.GoMode = (int)(long)success.SlotData["GoalCount"];
 
+            setCustomFlags((JObject)success.SlotData["options"]);
             getOwnLocationData(success.SlotData["locationData"]);
             getOwnTransitionData(success.SlotData["transitionData"]);
             storeData();
             return true;
+        }
+
+        private void setCustomFlags(JObject optionData)
+        {
+            Debug.Log(optionData);
+            LocationData locationData = new LocationData();
+            long extraPotions = (long)optionData.GetValue("free_attack_up");
+            RandomizerPlugin.extraPotions = [(int)extraPotions, (int)extraPotions];
+            RandomizerPlugin.customFlags[(int)CustomFlags.TempOption] = (bool)optionData.GetValue("open_morose");
+            RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart] = (bool)optionData.GetValue("celia_sable");
+            RandomizerPlugin.customFlags[(int)CustomFlags.SuperBosses] = (bool)optionData.GetValue("superBosses");
+            RandomizerPlugin.GoMode = (int)(long)optionData.GetValue("goal_count");
+
+
         }
 
         private void toggleDeathLink()
