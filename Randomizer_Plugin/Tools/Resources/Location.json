@@ -5627,6 +5627,10 @@
                 "Difficulty": 0
             },
             {
+                "Method": "ITEM_SLIDE && BounceKick && ITEM_AirDash",
+                "Difficulty": 0
+            },
+            {
                 "Method": "ITEM_SLIDE && ITEM_JETPACK && ITEM_AirDash && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             }
