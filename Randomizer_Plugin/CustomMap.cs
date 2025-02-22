@@ -38,7 +38,8 @@ namespace TeviRandomizer
         {
             Traverse worldmng = Traverse.Create(WorldManager.Instance);
             GameObject gameObject = UnityEngine.Object.Instantiate(worldmng.Field("itemset_prefab").GetValue<GameObject>());                          //Create new Item
-            gameObject.transform.SetParent(worldmng.Field("TileHolder").GetValue<GameObject>().transform);
+
+           //gameObject.transform.SetParent(worldmng.Field("TileHolder").GetValue<GameObject>().transform);
             Layer layer = Layer.ITEM;
             WorldManager.TileData tileData = setUpTileData(x, y, spriteID, flipH, flipV, layer);
 
@@ -68,6 +69,8 @@ namespace TeviRandomizer
             Layer layer = Layer.NORMAL;
             Traverse worldmng = Traverse.Create(WorldManager.Instance);
             GameObject gameObject = UnityEngine.Object.Instantiate(worldmng.Field("tileset_prefab").GetValue<GameObject>());                          //Create new Item
+            //gameObject.transform.GetChild(0).gameObject.SetActive(false);
+
             BoxCollider2D boxCollider2D = gameObject.GetComponentInChildren<BoxCollider2D>();
             EdgeCollider2D edgeCollider2D = gameObject.GetComponent<EdgeCollider2D>();
             AreaResource resource = ResourcePatch.getAreaResource(area);
@@ -262,6 +265,7 @@ namespace TeviRandomizer
 
             Traverse worldmng = Traverse.Create(WorldManager.Instance);
             GameObject gameObject = UnityEngine.Object.Instantiate(worldmng.Field("enemy_prefab").GetValue<GameObject>());                          //Create new Item
+            //gameObject.transform.GetChild(0).gameObject.SetActive(false);
             BoxCollider2D boxCollider2D = gameObject.GetComponentInChildren<BoxCollider2D>();
             EdgeCollider2D edgeCollider2D = gameObject.GetComponent<EdgeCollider2D>();
 
@@ -369,6 +373,7 @@ namespace TeviRandomizer
 
             Traverse worldmng = Traverse.Create(WorldManager.Instance);
             GameObject gameObject = UnityEngine.Object.Instantiate(worldmng.Field("elementset_prefab").GetValue<GameObject>());                          //Create new Item
+            //gameObject.transform.GetChild(0).gameObject.SetActive(false);
             BoxCollider2D boxCollider2D = gameObject.GetComponentInChildren<BoxCollider2D>();
             EdgeCollider2D edgeCollider2D = gameObject.GetComponent<EdgeCollider2D>();
 
@@ -1397,6 +1402,7 @@ namespace TeviRandomizer
                     }
                 }
                 component6._ElementStart(num2);
+              
             }
 
             if (flag2)
@@ -1409,6 +1415,274 @@ namespace TeviRandomizer
             }
 
             WorldManager.Instance.areadata.tilelist.Add(tileData);
+        }
+
+                
+        public static void createBackGroundTile(int x, int y, int spriteID,int Area = -1)
+        {
+            bool flipH = false;
+            bool flipV = false;
+            float TILESIZE = MainVar.instance.TILESIZE;
+            Layer layer = Layer.BACKDROP;
+            WorldManager wm = WorldManager.Instance;
+            if (Area == -1) Area = WorldManager.Instance.Area;
+
+            AreaResource areaResource = ResourcePatch.getAreaResource(Area);
+            if (x < 0 || x < 0 || x >= MainVar.instance.MaxTileX || y >= MainVar.instance.MaxTileY)
+            {
+                return;
+            }
+            if (Application.isPlaying && WorldManager.Instance.FindTile(x, y, layer) != null)
+            {
+                {
+                    Debug.Log("[WorldManager] Warning! File have duplicated tiles in same position! (" + (float)x * TILESIZE + "," + (float)y * (0f - TILESIZE) + ")");
+                    return;
+                }
+            }
+
+            Traverse worldmng = Traverse.Create(WorldManager.Instance);
+            GameObject gameObject = UnityEngine.Object.Instantiate(worldmng.Field("backdrop_prefab").GetValue<GameObject>());                          //Create new Item
+            //gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            BoxCollider2D boxCollider2D = gameObject.GetComponentInChildren<BoxCollider2D>();
+            EdgeCollider2D edgeCollider2D = gameObject.GetComponent<EdgeCollider2D>();
+
+            gameObject.transform.SetParent(worldmng.Field("TileHolder").GetValue<GameObject>().transform);
+
+            WorldManager.TileData tileData = setUpTileData(x, y, spriteID, flipH, flipV, layer);
+
+            float num5 = (float)x * MainVar.instance.TILESIZE;
+            Vector3 localPosition = new Vector3(num5, (float)(-y) * MainVar.instance.TILESIZE + MainVar.instance.TILESIZE / 2f, 1f);
+            if (layer == Layer.BACKDROP)
+            {
+                localPosition.z += (float)x / MainVar.instance.TILESIZE * 0.1f + (float)y / MainVar.instance.TILESIZE * 0.0001f;
+            }
+            gameObject.transform.localPosition = localPosition;
+
+
+            TileLink component = gameObject.GetComponent<TileLink>();
+            SpriteRenderer spriteRenderer = null;
+            spriteRenderer = (component ? component.sprite_prefab : gameObject.GetComponent<SpriteRenderer>());
+            spriteRenderer.material = CommonResource.Instance.mat_SpriteLighting;
+            spriteRenderer.enabled = false;
+            //backdrop stuff
+
+            spriteRenderer.sprite = areaResource.GetBackdrop(spriteID);
+            Vector3 position = spriteRenderer.transform.position;
+            position.y += TILESIZE * -0.5f;
+            spriteRenderer.transform.position = position;
+            if (EditorManager.instance.Editor_LayerSelected == Layer.BACKDROP)
+            {
+                gameObject.GetComponentsInChildren<SpriteRenderer>()[1].enabled = true;
+            }
+            int num10 = -1;
+            float zpos = 0f;
+            float ypos = 0f;
+            float xpos = 0f;
+            float size = -1f;
+            string text = "";
+            bool flag5 = false;
+            if (spriteRenderer.sprite != null)
+            {
+                if (spriteRenderer.sprite.name.Contains("_f1") || spriteRenderer.sprite.name.Contains("_f2") || spriteRenderer.sprite.name.Contains("_f3") || spriteRenderer.sprite.name.Contains("_f4"))
+                {
+                    flag5 = true;
+                }
+                ScrollingBackdrop component3 = gameObject.GetComponent<ScrollingBackdrop>();
+                if (flag5)
+                {
+                    component3.SetSR(spriteRenderer);
+                }
+            }
+            if (text.Length > 2)
+            {
+                num10 = 99999;
+            }
+            if (num10 >= 0)
+            {
+                GameObject gameObject2 = null;
+                gameObject2 = ((num10 != 99999) ? UnityEngine.Object.Instantiate(worldmng.Field("elementObjects").GetValue<GameObject[]>()[num10]) : UnityEngine.Object.Instantiate(AreaResource.Instance.GetMapObjectByName(text)));
+                wm.FinalCreateObject(gameObject2, xpos, ypos, zpos, size, -1f, 1f, gameObject.transform);
+            }
+            if (spriteRenderer.sprite != null && spriteRenderer.sprite.name.Contains("_a_"))
+            {
+                AnimatedBackdrop animatedBackdrop = areaResource.GetAnimatedBackdrop(spriteRenderer.sprite.name);
+                AnimatedBackdrop animatedBackdrop2 = gameObject.AddComponent<AnimatedBackdrop>();
+                if ((bool)animatedBackdrop2 && (bool)animatedBackdrop)
+                {
+                    animatedBackdrop2.CloneData(animatedBackdrop);
+                }
+            }
+            if (!Application.isPlaying)
+            {
+                UnityEngine.Object.DestroyImmediate(gameObject.transform.GetChild(0).gameObject);
+            }
+
+            //BackDrop end
+            switch (layer) {
+                case Layer.BACKDROP:
+            spriteRenderer.sortingOrder = 1200;                                                                                                         //Normal Layer
+                    {
+                        spriteRenderer.sortingOrder = 20;
+                        if (spriteRenderer.sprite == null)
+                        {
+                            spriteRenderer.sprite = areaResource.GetBackdrop(1);
+                        }
+                        if (spriteRenderer.sprite.name.Contains("_f1") || spriteRenderer.sprite.name.Contains("_f2") || spriteRenderer.sprite.name.Contains("_f3") || spriteRenderer.sprite.name.Contains("_f4") || spriteRenderer.sprite.name.Contains("_f5") || spriteRenderer.sprite.name.Contains("_f6"))
+                        {
+                            if (spriteRenderer.sprite.name.Contains("_f1"))
+                            {
+                                spriteRenderer.sortingOrder = 406;
+                            }
+                            if (spriteRenderer.sprite.name.Contains("_f2"))
+                            {
+                                spriteRenderer.sortingOrder = 407;
+                            }
+                            if (spriteRenderer.sprite.name.Contains("_f3"))
+                            {
+                                spriteRenderer.sortingOrder = 408;
+                            }
+                            if (spriteRenderer.sprite.name.Contains("_f4"))
+                            {
+                                spriteRenderer.sortingOrder = 409;
+                            }
+                            if (spriteRenderer.sprite.name.Contains("_f5"))
+                            {
+                                spriteRenderer.sortingOrder = 410;
+                            }
+                            if (spriteRenderer.sprite.name.Contains("_f6"))
+                            {
+                                spriteRenderer.sortingOrder = 411;
+                            }
+                            spriteRenderer.gameObject.layer = 31;
+                            ScrollingBackdrop component9 = gameObject.GetComponent<ScrollingBackdrop>();
+                            component9.t = component9.transform;
+                            wm.areadata.scrolllist.Add(component9);
+                            break;
+                        }
+                        ScrollingBackdrop component10 = gameObject.GetComponent<ScrollingBackdrop>();
+                        if (!Application.isPlaying)
+                        {
+                            UnityEngine.Object.DestroyImmediate(component10);
+                        }
+                        else
+                        {
+                            UnityEngine.Object.Destroy(component10);
+                        }
+                        if (spriteRenderer.sprite.name.Contains("_light20"))
+                        {
+                            spriteRenderer.material = CommonResource.Instance.mat_SpriteAdditiveFull;
+                            Color color3 = spriteRenderer.color;
+                            color3.a = 0.2f;
+                            spriteRenderer.color = color3;
+                        }
+                        else if (spriteRenderer.sprite.name.Contains("_light25"))
+                        {
+                            spriteRenderer.material = CommonResource.Instance.mat_SpriteAdditiveFull;
+                            Color color4 = spriteRenderer.color;
+                            color4.a = 0.25f;
+                            spriteRenderer.color = color4;
+                        }
+                        else if (spriteRenderer.sprite.name.Contains("_light50"))
+                        {
+                            spriteRenderer.material = CommonResource.Instance.mat_SpriteAdditiveFull;
+                            Color color5 = spriteRenderer.color;
+                            color5.a = 0.5f;
+                            spriteRenderer.color = color5;
+                        }
+                        else if (spriteRenderer.sprite.name.Contains("_light75"))
+                        {
+                            spriteRenderer.material = CommonResource.Instance.mat_SpriteAdditiveFull;
+                            Color color6 = spriteRenderer.color;
+                            color6.a = 0.75f;
+                            spriteRenderer.color = color6;
+                        }
+                        if (spriteRenderer.sprite.name.Contains("_t1"))
+                        {
+                            spriteRenderer.sortingOrder = 52;
+                        }
+                        else if (spriteRenderer.sprite.name.Contains("_b7"))
+                        {
+                            spriteRenderer.sortingOrder = 4;
+                        }
+                        else if (spriteRenderer.sprite.name.Contains("_b6"))
+                        {
+                            spriteRenderer.sortingOrder = 5;
+                        }
+                        else if (spriteRenderer.sprite.name.Contains("_b5"))
+                        {
+                            spriteRenderer.sortingOrder = 14;
+                        }
+                        else if (spriteRenderer.sprite.name.Contains("_b4"))
+                        {
+                            spriteRenderer.sortingOrder = 16;
+                        }
+                        else if (spriteRenderer.sprite.name.Contains("_b3"))
+                        {
+                            spriteRenderer.sortingOrder = 17;
+                        }
+                        else if (spriteRenderer.sprite.name.Contains("_b2"))
+                        {
+                            spriteRenderer.sortingOrder = 18;
+                        }
+                        else if (spriteRenderer.sprite.name.Contains("_b1"))
+                        {
+                            spriteRenderer.sortingOrder = 19;
+                        }
+                        else if (spriteRenderer.sprite.name.Contains("_l1"))
+                        {
+                            spriteRenderer.sortingOrder = 21;
+                        }
+                        else if (spriteRenderer.sprite.name.Contains("_l2"))
+                        {
+                            spriteRenderer.sortingOrder = 22;
+                        }
+                        else if (spriteRenderer.sprite.name.Contains("_l3"))
+                        {
+                            spriteRenderer.sortingOrder = 23;
+                        }
+                        else if (spriteRenderer.sprite.name.Contains("_l4"))
+                        {
+                            spriteRenderer.sortingOrder = 24;
+                        }
+                        else if (spriteRenderer.sprite.name.Contains("_c1"))
+                        {
+                            spriteRenderer.sortingOrder = 401;
+                        }
+                        else if (spriteRenderer.sprite.name.Contains("_c2"))
+                        {
+                            spriteRenderer.sortingOrder = 402;
+                        }
+                        else if (spriteRenderer.sprite.name.Contains("_c3"))
+                        {
+                            spriteRenderer.sortingOrder = 403;
+                        }
+                        else if (spriteRenderer.sprite.name.Contains("_c4"))
+                        {
+                            spriteRenderer.sortingOrder = 404;
+                        }
+                        else if (spriteRenderer.sprite.name.Contains("_c5"))
+                        {
+                            spriteRenderer.sortingOrder = 405;
+                        }
+                        else if (spriteRenderer.sprite.name.Contains("crack"))
+                        {
+                            wm.areadata.backdrop.Add(spriteRenderer);
+                            spriteRenderer.sortingOrder = 52;
+                        }
+                        if (spriteRenderer.sortingOrder >= 300)
+                        {
+                            spriteRenderer.gameObject.layer = 31;
+                        }
+                        else
+                        {
+                            spriteRenderer.gameObject.layer = 30;
+                        }
+
+                    }
+                    break;
+            }
+            WorldManager.Instance.areadata.tilelist.Add(tileData);
+            spriteRenderer.enabled = true;
         }
 
 
