@@ -38,7 +38,6 @@ namespace TeviRandomizer
                 case 0:
                     //RIBAULD
                     em.mainCharacter.SetPositionX(WorldManager.Instance.CurrentRoomLeft + 1150f);
-                    extraDis = 1150f;
                     SetCharacterPosition(CreateType.BASEONPLAYERD, CreateType.BASEONCAMERA, 18f, 8f);
                     CameraScript.Instance.SetLimitLR(WorldManager.Instance.CurrentRoomLeft + 1530f, WorldManager.Instance.CurrentRoomLeft + 1530f);
                     break;
@@ -736,37 +735,37 @@ namespace TeviRandomizer
             EventManager em = EventManager.Instance;
             if (em.EventStage == 0 && WorldManager.Instance.Area != 16)
             {
-
-                short rX = WorldManager.Instance.CurrentRoomX;
-                short rY = WorldManager.Instance.CurrentRoomY;
-                // x:-5 y: -3
-                int originX = (int)(rX * CustomMap.firstBlockMultiplierX + extraDis / MainVar.instance.TILESIZE);
-                int originY = (int)(rY * CustomMap.firstBlockMultiplierY + extraDisY / MainVar.instance.TILESIZE);
-
-                CustomMap.createElementTile(originX + 12, originY + 4, 63, 16);
-                CustomMap.createNormalTile(originX + 4, originY + 9, 21, false, false, 16);
-                CustomMap.createNormalTile(originX + 5, originY + 9, 21, false, false, 16);
-                CustomMap.createNormalTile(originX + 6, originY + 9, 21, false, false, 16);
-                CustomMap.createNormalTile(originX + 7, originY + 9, 21, false, false, 16);
-                CustomMap.createNormalTile(originX + 8, originY + 9, 21, false, false, 16);
-                CustomMap.createNormalTile(originX + 9, originY + 9, 21, false, false, 16);
-                CustomMap.createNormalTile(originX + 10, originY + 9, 21, false, false, 16);
-                CustomMap.createNormalTile(originX + 11, originY + 9, 21, false, false, 16);
-                CustomMap.createNormalTile(originX + 12, originY + 9, 21, false, false, 16);
-                CustomMap.createNormalTile(originX + 13, originY + 9, 21, false, false, 16);
-                CustomMap.createNormalTile(originX + 14, originY + 9, 21, false, false, 16);
-                CustomMap.createNormalTile(originX + 15, originY + 9, 21, false, false, 16);
-                CustomMap.createNormalTile(originX + 16, originY + 9, 21, false, false, 16);
-                CustomMap.createNormalTile(originX + 17, originY + 9, 21, false, false, 16);
-                CustomMap.createNormalTile(originX + 18, originY + 9, 21, false, false, 16);
-                CustomMap.createNormalTile(originX + 19, originY + 9, 21, false, false, 16);
-                CustomMap.createNormalTile(originX + 20, originY + 9, 21, false, false, 16);
-
                 em.SetStage(1);
             }
             switch(em.EventStage)
             {
                 case 1:
+                    if (em.EventTime < 0.7) break;
+                    int originX = (int)((CameraScript.Instance.GetTrueX() + extraDis) / MainVar.instance.TILESIZE);
+                    int originY = Mathf.Abs((int)((CameraScript.Instance.GetTrueY() - extraDisY) / MainVar.instance.TILESIZE));
+
+
+                    CustomMap.createElementTile(originX, originY, 63, 16);
+                    CustomMap.createNormalTile(originX - 1, originY + 4, 21, false, false, 16);
+                    CustomMap.createNormalTile(originX - 2, originY + 4, 21, false, false, 16);
+                    CustomMap.createNormalTile(originX - 3, originY + 4, 21, false, false, 16);
+                    CustomMap.createNormalTile(originX - 4, originY + 4, 21, false, false, 16);
+                    CustomMap.createNormalTile(originX - 5, originY + 4, 21, false, false, 16);
+                    CustomMap.createNormalTile(originX - 6, originY + 4, 21, false, false, 16);
+                    CustomMap.createNormalTile(originX - 7, originY + 4, 21, false, false, 16);
+                    CustomMap.createNormalTile(originX - 8, originY + 4, 21, false, false, 16);
+                    CustomMap.createNormalTile(originX + 0, originY + 4, 21, false, false, 16);
+                    CustomMap.createNormalTile(originX + 1, originY + 4, 21, false, false, 16);
+                    CustomMap.createNormalTile(originX + 2, originY + 4, 21, false, false, 16);
+                    CustomMap.createNormalTile(originX + 3, originY + 4, 21, false, false, 16);
+                    CustomMap.createNormalTile(originX + 4, originY + 4, 21, false, false, 16);
+                    CustomMap.createNormalTile(originX + 5, originY + 4, 21, false, false, 16);
+                    CustomMap.createNormalTile(originX + 6, originY + 4, 21, false, false, 16);
+                    CustomMap.createNormalTile(originX + 7, originY + 4, 21, false, false, 16);
+                    CustomMap.createNormalTile(originX + 8, originY + 4, 21, false, false, 16);
+                    em.SetStage(2);
+                    break;
+                case 2:
                     CharacterBase characterBase2 = em.CreateEnemy(Type.Jezbelle, BossType.BOSS);
                     em.AddActor(characterBase2);
                     characterBase2.SetPosition(bossSpawnLocation.x, bossSpawnLocation.y);
@@ -1018,7 +1017,7 @@ namespace TeviRandomizer
 
                     CustomMap.createElementTile(originX + 11, originY + 11, 164, 10);
 
-                    CustomMap.createElementTile(originX + 11, originY + 8, 165, 10);
+                    CustomMap.createElementTile(originX + 11, originY + 8, 165, 10); //MaplhageWIND
 
 
                     CustomMap.createElementTile(originX + 16, originY - 2, 159, 10);
