@@ -557,6 +557,24 @@ namespace TeviRandomizer
             }
         }
 
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(Eidolon),"ALWAYS")]
+        static void fixEidolonAI()
+        {
+            if (WorldManager.Instance.Area != 25)
+            {
+                CharacterBase[] chars = EnemyPatch.getCharacters(Type.EnergyBall_Pollution);
+                float camY = CameraScript.Instance.GetTrueY();
+                foreach (CharacterBase character in chars)
+                {
+                    if (character.transform.position.y > camY + 380)
+                    {
+                        character.SetPositionY(camY + 300);
+                    }
+                }
+            }
+        }
+
         [HarmonyPrefix]
         [HarmonyPatch(typeof(BOSS_FRANKIE), "EVENT")]
         static void fixFrankie(ref enemyController ___pkoa, ref enemyController ___g1, ref enemyController ___g2)
