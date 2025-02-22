@@ -944,6 +944,9 @@ namespace TeviRandomizer
         {
             EventManager em = EventManager.Instance;
 
+            int originX = (int)((CameraScript.Instance.GetTrueX() + extraDis) / MainVar.instance.TILESIZE);
+            int originY = Mathf.Abs((int)((CameraScript.Instance.GetTrueY() - extraDisY) / MainVar.instance.TILESIZE));
+
             if (em.EventStage == 0 && WorldManager.Instance.Area != 10) em.SetStage(1);
             if (em.EventStage == 1  && em.EventTime >0.7f)
             {
@@ -951,8 +954,6 @@ namespace TeviRandomizer
                 if (WorldManager.Instance.Area != 10)
                 {
 
-                    int originX = (int)((CameraScript.Instance.GetTrueX() + extraDis) / MainVar.instance.TILESIZE);
-                    int originY = Mathf.Abs((int)((CameraScript.Instance.GetTrueY() - extraDisY) / MainVar.instance.TILESIZE));
 
                     CustomMap.createElementTile(originX - 13, originY - 11, 158, 10);
                     CustomMap.createElementTile(originX - 13, originY - 11, 158, 10);
@@ -1042,7 +1043,7 @@ namespace TeviRandomizer
                         characterBase.SetPosition(bossSpawnLocation.x, bossSpawnLocation.y);
 
                         em.AddActor(characterBase);
-                        movEntityToLeft(characterBase, false);
+                        characterBase.SetPositionX((originX + 8) * MainVar.instance.TILESIZE);
                         characterBase.SetDefeatEvent(Mode.END_MALPHAGE);
                         characterBase.direction = Direction.TOPLAYER;
                         ___m = characterBase as enemyController;

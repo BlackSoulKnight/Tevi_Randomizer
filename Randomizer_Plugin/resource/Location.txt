@@ -33,7 +33,7 @@ BADGE_RangeCombo@Thanatara Canyon@1@,0@Thanatara Canyon - C. Count Frenzy: Hotsh
 BADGE_SuperArmor2@Thanatara Canyon Lower@1@,0@Thanatara Canyon - Even Keel
 BADGE_PerfectCharge@Thanatara Canyon Lower@1@ChargeShot,0@Thanatara Canyon - MP Quicken: Steady
 BADGE_StyleComboAddDamageA@Thanatara Canyon@1@,0@Thanatara Canyon - C. Rank Frenzy: Attack
-EVENT_EliteChallangeB@Thanatara Canyon@1@(ITEM_LINEBOMB && ITEM_AREABOMB) || ITEM_SLIDE,0;ITEM_LINEBOMB && HiddenP,1@Thanatara Canyon EliteB
+EVENT_EliteChallangeB@Thanatara Canyon@1@(ITEM_LINEBOMB && ITEM_AREABOMB) || ITEM_SLIDE,0;ITEM_LINEBOMB && HiddenP,1@Thanatara Canyon - EliteB
 STACKABLE_MP@Thanatara Canyon@0@ITEM_LINEBOMB,0@North Thanatara Canyon - Blueberry Bunny Potion
 STACKABLE_MP@Thanatara Canyon Lower@7@ITEM_LINEBOMB,0@Middle Thanatara Canyon - Blueberry Bunny Potion
 ITEM_LINEBOMB@Thanatara Canyon Lower@1@,0@Thanatara Canyon - Cross Bomb
@@ -68,8 +68,8 @@ BADGE_DoubleNormalComboSpeedup@Valhalla Breath West Extended@1@ITEM_SLIDE,0@Valh
 BADGE_RapidShotsEnhance@Valhalla Breath West Extended@1@ITEM_AirSlide && ITEM_SLIDE && ITEM_DOUBLEJUMP,0;ITEM_AirSlide && ITEM_SLIDE && ITEM_JETPACK,0@Valhalla Breath West Extended - Rapid Shots Enhance
 BADGE_Lucky7C@Valhalla Breath West Extended@1@ITEM_SLIDE && ITEM_DOUBLEJUMP,0;ITEM_SLIDE && ITEM_JETPACK,0@Valhalla Breath West Extended - Lucky 7: C
 STACKABLE_MP@Valhalla Breath West Extended@14@ChargeShot,0@Valhalla Breath West Extended - Blueberry Bunny Potion
-EVENT_MoroseVisited@Morose City@0@,0@Morose City
-EVENT_EliteChallangeA@Morose City@0@,0@Morose City Elite
+EVENT_MoroseVisited@Morose City@0@,0@Morose City - Visit
+EVENT_EliteChallangeA@Morose City@0@,0@Morose City - Elite A
 STACKABLE_COG@Morose City@23@Boss,0@Morose City - Astral Gear
 STACKABLE_MP@Morose City@9@,0@Morose City - Blueberry Bunny Potion
 BADGE_TauntPhoto@Morose City@1@ITEM_SLIDE && ITEM_LINEBOMB && ChargeShot,0@Morose City - Special Action: Paparazzo
@@ -202,7 +202,7 @@ STACKABLE_COG@Ana Thema@201@QUEST_LibraryKey && LibraryExtra && ITEM_KNIFE && Ch
 STACKABLE_COG@Ana Thema@200@QUEST_LibraryKey && LibraryExtra && ITEM_KNIFE && Chapter 4,0@Ana Thema - Waero
 EVENT_EliteChallangeD@Ana Thema@1@,0@Ana Thema - Elite
 BADGE_QuickMeleeLagA@Ana Thema@1@ITEM_LINEBOMB,0@Ana Thema - Deft I
-EVENT_AnathemaVisited@Ana Thema@1@,0@Ana Thema
+EVENT_AnathemaVisited@Ana Thema@1@,0@Ana Thema - Visit
 BADGE_GroundNormalComboSpeedup@Ana Thema@1@ITEM_LINEBOMB,0@Ana Thema - Terrestrial Agility
 BADGE_StyleComboNewAttack@Ana Thema Gallery Exit@1@ITEM_LINEBOMB,0@Ana Thema Gallery Exit - C. Rank Frenzy: Starter
 ITEM_AttackRange@Ana Thema@1@Coins 2300,0@Ana Thema Shop - Deadly Reach
@@ -423,10 +423,10 @@ BADGE_EPMeleeReduce@Snowveil@1@,0@Snowveil - EP Booster: Melee Menace
 STACKABLE_COG@Snowveil Ex@32@Boss,0@Snowveil - Astral Gear
 BADGE_ChargeHeal@Snowveil Ex@1@ITEM_Rotater,0@Snowveil - Life Steal
 ITEM_Rotater@Snowveil Ex@1@,0@Snowveil - Vortex Gloves
-STACKABLE_MATK@Snowveil Ex@22@ITEM_SLIDE && ITEM_JETPACK 2,0;ITEM_SLIDE && ITEM_JETPACK && ITEM_HIJUMP && SpinnerBash,0@Snowveil - Cherry Bunny Potion
+STACKABLE_MATK@Snowveil Ex@22@ITEM_SLIDE && ITEM_JETPACK 2,0;ITEM_SLIDE && ITEM_JETPACK && ITEM_HIJUMP && SpinnerBash,0;ITEM_DOUBLEJUMP && (ITEM_WALLJUMP || SpinnerBash),0@Snowveil - Cherry Bunny Potion
 STACKABLE_EP@Snowveil above Verglas Village@24@ITEM_LINEBOMB && ITEM_JETPACK 2 && ITEM_DOUBLEJUMP,0;ITEM_LINEBOMB && ITEM_JETPACK 3,0;ITEM_LINEBOMB && ITEM_JETPACK 2 && ITEM_HIJUMP && SpinnerBash,0@Snowveil above Verglas Village - Lemon Bunny Potion
 BADGE_JetpackMP@Snowveil Ex@1@ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_JETPACK 3,0@Snowveil - Aerial Assist
-STACKABLE_HP@Snowveil Ex@22@ITEM_SLIDE && ITEM_JETPACK 3 && ITEM_AirDash,0;ITEM_SLIDE && ITEM_JETPACK && ITEM_AirDash && ITEM_DOUBLEJUMP,0@Snowveil - Kiwi Bunny Potion
+STACKABLE_HP@Snowveil Ex@22@ITEM_SLIDE && ITEM_JETPACK 3 && ITEM_AirDash,0;ITEM_SLIDE && BounceKick && ITEM_AirDash,0;ITEM_SLIDE && ITEM_JETPACK && ITEM_AirDash && ITEM_DOUBLEJUMP,0@Snowveil - Kiwi Bunny Potion
 STACKABLE_RATK@Snow City@21@ITEM_SLIDE && ITEM_LINEBOMB,0@Snow City - Grape Bunny Potion
 BADGE_4Knifes@Snow City@1@ITEM_SLIDE && ITEM_LINEBOMB,0@Snow City - Slash Quartet
 ITEM_GoldenGlove@Snow City@1@Coins 4500,0@Snow City Shop - Trinketeer's Fortune

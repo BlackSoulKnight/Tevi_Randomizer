@@ -11,7 +11,7 @@ namespace TeviRandomizer
     class EnemyPatch
     {
         static Mode setBoss = Mode.BOSS_JEZBELLE;
-        static Mode originalBoss;
+        public static Mode originalBoss;
         public static short[] eventReplace = null;
 
         public static CharacterBase[] getCharacters(Character.Type t)
@@ -70,9 +70,9 @@ namespace TeviRandomizer
 
         [HarmonyPrefix]
         [HarmonyPatch(typeof(SaveManager), "SetEventFlag")]
-        static void EndBossReplace(ref Mode mode)
+        static void EndBossReplace(ref Mode mode, ref byte value)
         {
-            if(RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss] &&mode.ToString().Contains("END") && mode != Mode.END_BOOKMARK)
+            if(RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss] &&mode.ToString().Contains("END") && mode != Mode.END_BOOKMARK && value != 0)
             {
                 Debug.Log(mode);
                 if (originalBoss.ToString().Contains("VENA"))
