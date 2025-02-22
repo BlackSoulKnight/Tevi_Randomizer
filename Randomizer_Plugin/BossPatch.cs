@@ -130,6 +130,7 @@ namespace TeviRandomizer
                 case 22:
                     //KATU
                     elementTile = WorldManager.Instance.FindElementTileNearCamera(EventMode.ElementType.MapPoint, MainVar.instance.SCREEN_WIDTH);
+                    Debug.Log(elementTile);
                     if ((bool)elementTile)
                     {
                         center = elementTile.transform.position.x - MainVar.instance.TILESIZE / 2f;
@@ -298,6 +299,59 @@ namespace TeviRandomizer
                     SaveManager.Instance.SetMiniFlag(Mini.BookmarkUsed, 0);
                 }
             }
+        }
+
+        [HarmonyPatch(typeof(EventManager), "ReallyStartEvent")]
+        [HarmonyPostfix]
+        static void fixAutoSave(ref EventBase ___eventbase)
+        {
+            EventManager em = EventManager.Instance;
+            byte area = WorldManager.Instance.Area;
+
+            if (RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss])
+            {
+                Debug.LogWarning(EnemyPatch.originalBoss);
+                if (
+                    (EnemyPatch.originalBoss.ToString().Contains("BOSS_") || EnemyPatch.originalBoss == Mode.Chap3UndergalleryBattle3 || EnemyPatch.originalBoss == EventMode.Mode.Chap2S_Beach_Friedman || EnemyPatch.originalBoss == EventMode.Mode.Chap1FreeRoamVena7x7)
+                    && EnemyPatch.originalBoss != EventMode.Mode.BOSS_PKOA && EnemyPatch.originalBoss != EventMode.Mode.BOSS_FRANKIE && EnemyPatch.originalBoss != EventMode.Mode.BOSS_THETIS && EnemyPatch.originalBoss != EventMode.Mode.BOSS_AMARYLLIS 
+                    && EnemyPatch.originalBoss != EventMode.Mode.BOSS_VASSAGO && EnemyPatch.originalBoss != EventMode.Mode.BOSS_CHARON && EnemyPatch.originalBoss != EventMode.Mode.BOSS_TAHLIA)
+                {
+                    Vector3 position = em.mainCharacter.t.position;
+                    if (EnemyPatch.originalBoss == EventMode.Mode.BOSS_EIDOLON || EnemyPatch.originalBoss == Mode.BOSS_MALPHAGE || EnemyPatch.originalBoss == EventMode.Mode.BOSS_REVENANCE || EnemyPatch.originalBoss == EventMode.Mode.BOSS_MEMLOCH5x5 || EnemyPatch.originalBoss == EventMode.Mode.BOSS_JETHRO)
+                    {
+                        WorldManager.Instance.WarpPlayerByElementID(ElementType.MapPoint, 20, 0f, 0f, _setOrbPosToPlayer: false);
+                        em.mainCharacter.t.position += new Vector3(0f, MainVar.instance.TILESIZE * -0.5f, 0f);
+                    }
+                    else
+                    {
+                        float num2 = -1.5f;
+                        if (EnemyPatch.originalBoss == Mode.BOSS_BARADOS || EnemyPatch.originalBoss == Mode.BOSS_LILY || EnemyPatch.originalBoss == Mode.BOSS_JEZBELLE)
+                        {
+                            num2 = -4.5f;
+                        }
+                        else if (EnemyPatch.originalBoss == EventMode.Mode.Chap3UndergalleryBattle3)
+                        {
+                            num2 = -13f;
+                        }
+                        em.mainCharacter.t.position += new Vector3(MainVar.instance.TILESIZE * em.mainCharacter.GetDirectionMod() * num2, 0f, 0f);
+                    }
+                    Debug.Log("[EventManger] Auto save again because entering Boss Event. Position : " + em.mainCharacter.t.position.ToString());
+                    byte miniFlag = SaveManager.Instance.GetMiniFlag(Mini.NoMoreAutoSaveInLastMaps);
+                    if (miniFlag > 0)
+                    {
+                        SaveManager.Instance.SetMiniFlag(Mini.NoMoreAutoSaveInLastMaps, 0);
+                    }
+                    SaveManager.Instance.AutoSave(forced: true);
+                    if (miniFlag > 0)
+                    {
+                        SaveManager.Instance.SetMiniFlag(Mini.NoMoreAutoSaveInLastMaps, 1);
+                    }
+                    em.mainCharacter.t.position = position;
+                }
+
+            }
+
+
         }
 
         //Rework Boss Spawning
