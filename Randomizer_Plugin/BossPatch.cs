@@ -1367,17 +1367,27 @@ namespace TeviRandomizer
         {
             if(WorldManager.Instance.Area != 12)
             { 
-                if (!___aura && ___en.phase == AIPhase.K_PHASE_3 && ___KMode == 0)
+                if (!___aura)
                 {
                     ___aura = UnityEngine.Object.Instantiate(ResourcePatch.getAreaResource(12).GetBossObject(0));
                     ___aura.transform.localScale = new Vector3(70f, 70f, 70f);
+                    ___aura.SetActive(false);
                     ___ps = ___aura.GetComponentsInChildren<ParticleSystem>();
                 }
-                if (!___aura && ___en.phase == AIPhase.K_PHASE_3 && ___KMode == 1)
+                if (!___aura2)
                 {
                     ___aura2 = UnityEngine.Object.Instantiate(ResourcePatch.getAreaResource(12).GetBossObject(1));
                     ___aura2.transform.localScale = new Vector3(70f, 70f, 70f);
+                    ___aura2.SetActive(false);
                     ___ps2 = ___aura.GetComponentsInChildren<ParticleSystem>();
+                }
+
+                if(___en.phase == AIPhase.K_PHASE_3 && ___KMode == 0){
+                    ___aura.SetActive(true);
+                }
+                if (___en.phase == AIPhase.K_PHASE_3 && ___KMode == 1)
+                {
+                    ___aura2.SetActive(true);
                 }
             }   
             return true;
