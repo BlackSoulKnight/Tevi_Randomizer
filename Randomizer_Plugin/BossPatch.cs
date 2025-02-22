@@ -423,9 +423,25 @@ namespace TeviRandomizer
                     }
                 }
             }
-            
+        }
+
+        [HarmonyPatch(typeof(Caprice),"AI")]
+        [HarmonyPrefix]
+        static void fixCapriceAI(ref enemyController ___en)
+        {
+            float scrennWidth = MainVar.instance.SCREEN_WIDTH;
+            float cameraPosy = CameraScript.Instance.GetTrueX();
+            if(___en.phase == AIPhase.A_PHASE_2)
+            {
+                if (___en.direction == Direction.LEFT && ___en.transform.position.x < cameraPosy - scrennWidth / 2 + 50)
+                    ___en.AI_FlipDir();
+                if (___en.direction == Direction.RIGHT && ___en.transform.position.x > cameraPosy + scrennWidth / 2 - 50)
+                    ___en.AI_FlipDir();
+
+            }
 
         }
+
         [HarmonyPatch(typeof(BOSS_CYRIL), "EVENT")]
         [HarmonyPrefix]
         static void fixCYRIL(ref enemyController ___b)
