@@ -944,88 +944,86 @@ namespace TeviRandomizer
         {
             EventManager em = EventManager.Instance;
 
-            if (em.EventStage == 0 && WorldManager.Instance.Area != 10)
+            if (em.EventStage == 0 && WorldManager.Instance.Area != 10) em.SetStage(1);
+            if (em.EventStage == 1  && em.EventTime >0.7f)
             {
-
                 //spawn every object for MALPHAGE
                 if (WorldManager.Instance.Area != 10)
                 {
-                    short rX = WorldManager.Instance.CurrentRoomX;
-                    short rY = WorldManager.Instance.CurrentRoomY;
-                    // x:-5 y: -3
-                    int originX = (int)(rX * CustomMap.firstBlockMultiplierX + extraDis / MainVar.instance.TILESIZE);
-                    int originY = (int)(rY * CustomMap.firstBlockMultiplierY + extraDisY / MainVar.instance.TILESIZE);
-                    CustomMap.createElementTile(originX - 5, originY - 3, 158, 10);
-                    CustomMap.createElementTile(originX - 5, originY - 3, 158, 10);
+
+                    int originX = (int)((CameraScript.Instance.GetTrueX() + extraDis) / MainVar.instance.TILESIZE);
+                    int originY = Mathf.Abs((int)((CameraScript.Instance.GetTrueY() - extraDisY) / MainVar.instance.TILESIZE));
+
+                    CustomMap.createElementTile(originX - 13, originY - 11, 158, 10);
+                    CustomMap.createElementTile(originX - 13, originY - 11, 158, 10);
                     //ID0
-                    CustomMap.createElementTile(originX - 5, originY + 16, 72, 10);
-                    CustomMap.createElementTile(originX - 5, originY + 15, 162, 10);
+                    CustomMap.createElementTile(originX - 13, originY + 10, 72, 10);
+                    CustomMap.createElementTile(originX - 13, originY + 9, 162, 10);
 
-                    CustomMap.createElementTile(originX - 4, originY + 18, 73, 10);
-                    CustomMap.createElementTile(originX - 4, originY + 17, 161, 10);
+                    CustomMap.createElementTile(originX - 12, originY + 12, 73, 10);
+                    CustomMap.createElementTile(originX - 12, originY + 11, 161, 10);
 
-                    CustomMap.createElementTile(originX - 2, originY + 15, 73, 10);
-                    CustomMap.createElementTile(originX - 2, originY + 17, 74, 10);
-                    CustomMap.createElementTile(originX - 2, originY + 14, 163, 10);
-                    CustomMap.createElementTile(originX - 2, originY + 16, 162, 10);
+                    CustomMap.createElementTile(originX - 10, originY + 9, 73, 10);
+                    CustomMap.createElementTile(originX - 10, originY + 11, 74, 10);
+                    CustomMap.createElementTile(originX - 10, originY + 8, 163, 10);
+                    CustomMap.createElementTile(originX - 10, originY + 10, 162, 10);
 
-                    CustomMap.createElementTile(originX - 1, originY + 13, 74, 10);
-                    CustomMap.createElementTile(originX - 1, originY + 17, 72, 10);
-                    CustomMap.createElementTile(originX - 1, originY + 12, 163, 10);
-                    CustomMap.createElementTile(originX - 1, originY + 16, 162, 10);
+                    CustomMap.createElementTile(originX - 9, originY + 7, 74, 10);
+                    CustomMap.createElementTile(originX - 9, originY + 11, 72, 10);
+                    CustomMap.createElementTile(originX - 9, originY + 6, 163, 10);
+                    CustomMap.createElementTile(originX - 9, originY + 10, 162, 10);
 
-                    CustomMap.createElementTile(originX + 1, originY + 13, 73, 10);
-                    CustomMap.createElementTile(originX + 1, originY + 15, 72, 10);
-                    CustomMap.createElementTile(originX + 1, originY + 12, 162, 10);
-                    CustomMap.createElementTile(originX + 1, originY + 14, 163, 10);
+                    CustomMap.createElementTile(originX + -7, originY + 7, 73, 10);
+                    CustomMap.createElementTile(originX + -7, originY + 9, 72, 10);
+                    CustomMap.createElementTile(originX + -7, originY + 6, 162, 10);
+                    CustomMap.createElementTile(originX + -7, originY + 8, 163, 10);
 
-                    CustomMap.createElementTile(originX + 2, originY + 17, 74, 10);
-                    CustomMap.createElementTile(originX + 2, originY + 18, 82, 10);
-                    CustomMap.createElementTile(originX + 2, originY + 16, 161, 10);
+                    CustomMap.createElementTile(originX + -6, originY + 11, 74, 10);
+                    CustomMap.createElementTile(originX + -6, originY + 12, 82, 10);
+                    CustomMap.createElementTile(originX + -6, originY + 10, 161, 10);
 
-                    CustomMap.createElementTile(originX + 3, originY + 16, 73, 10);
-                    CustomMap.createElementTile(originX + 3, originY + 18, 72, 10);
-                    CustomMap.createElementTile(originX + 3, originY + 15, 162, 10);
-                    CustomMap.createElementTile(originX + 3, originY + 17, 162, 10);
+                    CustomMap.createElementTile(originX + -5, originY + 10, 73, 10);
+                    CustomMap.createElementTile(originX + -5, originY + 12, 72, 10);
+                    CustomMap.createElementTile(originX + -5, originY + 9, 162, 10);
+                    CustomMap.createElementTile(originX + -5, originY + 11, 162, 10);
 
-                    CustomMap.createElementTile(originX + 4, originY + 14, 74, 10);
-                    CustomMap.createElementTile(originX + 4, originY + 13, 161, 10);
+                    CustomMap.createElementTile(originX + -4, originY + 8, 74, 10);
+                    CustomMap.createElementTile(originX + -4, originY + 7, 161, 10);
 
-                    CustomMap.createElementTile(originX + 6, originY + 18, 73, 10);
-                    CustomMap.createElementTile(originX + 6, originY + 17, 161, 10);
+                    CustomMap.createElementTile(originX - 2, originY + 12, 73, 10);
+                    CustomMap.createElementTile(originX - 2, originY + 11, 161, 10);
 
-                    CustomMap.createElementTile(originX + 7, originY + 14, 72, 10);
-                    CustomMap.createElementTile(originX + 7, originY + 13, 163, 10);
+                    CustomMap.createElementTile(originX -1, originY + 8, 72, 10);
+                    CustomMap.createElementTile(originX -1, originY + 7, 163, 10);
 
-                    CustomMap.createElementTile(originX + 8, originY + 14, 72, 10);
-                    CustomMap.createElementTile(originX + 8, originY + 12, 73, 10);
-                    CustomMap.createEnemyTile(originX + 8, originY + 13, 164, 10); //MalphageCore
-                    CustomMap.createElementTile(originX + 7, originY + 13, 163, 10);
+                    CustomMap.createElementTile(originX , originY + 8, 72, 10);
+                    CustomMap.createElementTile(originX , originY + 6, 73, 10);
+                    CustomMap.createEnemyTile(originX , originY + 7, 164, 10); //MalphageCore
+                    CustomMap.createElementTile(originX - 1, originY + 7, 163, 10);
 
-                    CustomMap.createElementTile(originX + 8, originY + 14, 72, 10);
-                    CustomMap.createElementTile(originX + 8, originY + 12, 73, 10);
-                    CustomMap.createElementTile(originX + 7, originY + 13, 163, 10);
+                    CustomMap.createElementTile(originX , originY + 8, 72, 10);
+                    CustomMap.createElementTile(originX , originY + 6, 73, 10);
+                    CustomMap.createElementTile(originX - 1, originY + 7, 163, 10);
 
-                    CustomMap.createElementTile(originX + 6, originY + 2, 75, 10);
-                    CustomMap.createEnemyTile(originX + 6, originY + 3, 164, 10); //MalphageCore
+                    CustomMap.createElementTile(originX - 2 , originY - 4, 75, 10);
+                    CustomMap.createEnemyTile(originX - 2, originY - 3, 164, 10); //MalphageCore
 
-                    CustomMap.createElementTile(originX - 2, originY + 4, 74, 10);
-                    CustomMap.createEnemyTile(originX - 2, originY + 5, 164, 10); //MalphageCore
+                    CustomMap.createElementTile(originX - 10, originY - 2, 74, 10);
+                    CustomMap.createEnemyTile(originX - 10, originY - 1, 164, 10); //MalphageCore
 
-                    CustomMap.createEnemyTile(originX + 17, originY + 4, 164, 10); //MalphageCore
+                    CustomMap.createEnemyTile(originX + 9, originY - 2, 164, 10); //MalphageCore
 
 
-                    CustomMap.createElementTile(originX + 11, originY + 11, 164, 10);
+                    CustomMap.createElementTile(originX + 3, originY + 5, 164, 10);
 
                     CustomMap.createElementTile(originX + 11, originY + 8, 165, 10); //MaplhageWIND
+                    CustomMap.createElementTile(originX + 3, originY + 2, 165, 10); //MaplhageWIND
 
 
-                    CustomMap.createElementTile(originX + 16, originY - 2, 159, 10);
-                    CustomMap.createElementTile(originX + 6, originY - 2, 160, 10);
-                    CustomMap.createElementTile(originX - 5, originY - 2, 158, 10);
-                    CustomMap.createElementTile(originX + 6, originY + 11, 157, 10);
-
-
+                    CustomMap.createElementTile(originX + 8, originY - 8, 159, 10);
+                    CustomMap.createElementTile(originX - 2, originY - 8, 160, 10);
+                    CustomMap.createElementTile(originX - 13, originY - 8, 158, 10);
+                    CustomMap.createElementTile(originX - 2, originY + 5, 157, 10);
 
                 }
 
@@ -1038,7 +1036,7 @@ namespace TeviRandomizer
             switch(em.EventStage)
             {
                 case 4:
-                    if (em.EventTime >= 0.1333f)
+                    if (em.EventTime >= 0.3333f)
                     {
                         CharacterBase characterBase = em.CreateEnemy(Type.Malphage, BossType.BOSS);
                         characterBase.SetPosition(bossSpawnLocation.x, bossSpawnLocation.y);
