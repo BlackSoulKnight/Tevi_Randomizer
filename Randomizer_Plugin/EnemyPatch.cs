@@ -4,6 +4,7 @@ using EventMode;
 using Character;
 using UnityEngine;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace TeviRandomizer
 {
@@ -12,16 +13,60 @@ namespace TeviRandomizer
         static Mode setBoss = Mode.BOSS_JEZBELLE;
         static Mode originalBoss;
         public static short[] eventReplace = null;
+
+        public static CharacterBase[] getCharacters(Character.Type t)
+        {
+            List<CharacterBase> characterBases = new List<CharacterBase>();
+            foreach (CharacterBase cb in CharacterManager.Instance.characters)
+            {
+                if(!cb.isPlayer() && cb.type == t)
+                {
+                    characterBases.Add(cb);
+                }
+            }
+            return characterBases.ToArray();
+        }
+
         [HarmonyPrefix]
         [HarmonyPatch(typeof(EventManager), "TryStartEvent")]
         static public void testBossReplace(ref Mode setMode)
         {
             originalBoss = setMode;
             if (eventReplace != null && eventReplace.Length > (short)setMode && eventReplace[(short)setMode] != -1 && RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss]) {
-                setMode = (Mode)eventReplace[(short)setMode];
+                if(SaveManager.Instance.GetEventFlag(originalBoss) > 0)
+                {
+                    setMode = Mode.OFF;
+                }
+                else
+                    setMode = (Mode)eventReplace[(short)setMode];
             }
             
         }
+
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(EventManager),"StopEvent")]
+        static void setFlagForBoss(ref Mode __state)
+        {
+            EventManager em = EventManager.Instance;
+            if (__state.ToString().Contains("BOSS_"))
+            {
+                if (eventReplace != null && eventReplace.Length > (short)originalBoss && eventReplace[(short)originalBoss] != -1 && RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss])
+                {
+
+                    SaveManager.Instance.SetEventFlag(__state, 0);
+                    SaveManager.Instance.SetEventFlag(originalBoss, 1);
+
+                }
+            }
+        }
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(EventManager),"StopEvent")]
+        static void setFlagForBossPreflag(ref Mode __state)
+        {
+            __state = EventManager.Instance.Mode;
+
+        }
+
 
         [HarmonyPrefix]
         [HarmonyPatch(typeof(SaveManager), "SetEventFlag")]
