@@ -741,11 +741,11 @@ namespace TeviRandomizer
             {
                 case 1:
                     if (em.EventTime < 0.7) break;
-                    int originX = (int)((CameraScript.Instance.GetTrueX() + extraDis) / MainVar.instance.TILESIZE);
-                    int originY = Mathf.Abs((int)((CameraScript.Instance.GetTrueY() - extraDisY) / MainVar.instance.TILESIZE));
+                    int originX = (int)((CameraScript.Instance.GetTrueX() ) / MainVar.instance.TILESIZE);
+                    int originY = Mathf.Abs((int)((CameraScript.Instance.GetTrueY() ) / MainVar.instance.TILESIZE));
 
 
-                    CustomMap.createElementTile(originX, originY, 63, 16);
+                    TeviRandomizer.CustomMap.createElementTile(originX, originY, 63, 16);
                     CustomMap.createNormalTile(originX - 1, originY + 4, 21, false, false, 16);
                     CustomMap.createNormalTile(originX - 2, originY + 4, 21, false, false, 16);
                     CustomMap.createNormalTile(originX - 3, originY + 4, 21, false, false, 16);
@@ -803,52 +803,78 @@ namespace TeviRandomizer
                 float size = MainVar.instance.TILESIZE;
                 if (em.EventStage == 0)
                 {
-                    short rX = WorldManager.Instance.CurrentRoomX;
-                    short rY = WorldManager.Instance.CurrentRoomY;
-                    // x:-5 y: -3
-                    int originX = (int)(rX * CustomMap.firstBlockMultiplierX + extraDis / MainVar.instance.TILESIZE);
-                    int originY = (int)(rY * CustomMap.firstBlockMultiplierY + extraDisY / MainVar.instance.TILESIZE);
-
-
-                    CustomMap.createNormalTile(originX + 2, originY + 7, 92, false, false, 22);
-                    CharacterBase characterBase = em.CreateEnemy(Character.Type.Katu, BossType.BOSS);
-                    //characterBase.SetPosition((originX + 2)*size, (originY + 7)*size);
-                    em.SetCharacterPosition(characterBase, CreateType.BASEONCAMERAO, CreateType.BASEONCAMERA, 1f, 6.5f);
-
-                    characterBase.direction = Direction.RIGHT;
-                    em.AddActor(characterBase);
-
-
-
-                    CustomMap.createNormalTile(originX + 5, originY + 7, 92, false, false, 22);
-                    //characterBase.SetPosition((originX + 5) * size, (originY + 7) * size);
-                    characterBase = em.CreateEnemy(Character.Type.Katu, BossType.BOSS);
-                    em.SetCharacterPosition(characterBase, CreateType.BASEONCAMERAO, CreateType.BASEONCAMERA, 1f, 6.5f);
-
-                    characterBase.direction = Direction.RIGHT;
-                    em.AddActor(characterBase);
-
-
-                    CustomMap.createNormalTile(originX + 16, originY + 7, 92, false, false, 22);
-                    characterBase = em.CreateEnemy(Character.Type.Katu, BossType.BOSS);
-                    em.SetCharacterPosition(characterBase, CreateType.BASEONCAMERAO, CreateType.BASEONCAMERA, 1f, 6.5f);
-                    //characterBase.SetPosition((originX + 16) * size, (originY + 7) * size);
-                    characterBase.direction = Direction.LEFT;
-                    em.AddActor(characterBase);
-
-                    CustomMap.createNormalTile(originX + 19, originY + 7, 92, false, false, 22);
-                    characterBase = em.CreateEnemy(Character.Type.Katu, BossType.BOSS);
-                    em.SetCharacterPosition(characterBase, CreateType.BASEONCAMERAO, CreateType.BASEONCAMERA, 1f, 6.5f);
-                    //characterBase.SetPosition((originX + 19) * size, (originY + 7) * size);
-                    characterBase.direction = Direction.LEFT;
-                    em.AddActor(characterBase);
-
-                    CustomMap.createElementTile(originX + 13, originY + 7, 63, 22);
-
                     em.SetStage(1);
+                }
+                    if (em.EventStage == 1 && em.EventTime > 0.3f)
+                {
+                    int originX = (int)((CameraScript.Instance.GetTrueX() ) / MainVar.instance.TILESIZE);
+                    int originY = Mathf.Abs((int)((CameraScript.Instance.GetTrueY() ) / MainVar.instance.TILESIZE));
+
+                    
+                    TeviRandomizer.CustomMap.createElementTile(originX, originY, 63, 16);
+                    CustomMap.createElementTile(originX - 6, originY + 6, 155, 22);
+
+
+                    CustomMap.createNormalTile(originX -1, originY - 1, 92, false, false, 22);
+                    CustomMap.createNormalTile(originX , originY - 1, 92, false, false, 22);
+
+                    CustomMap.createNormalTile(originX -3, originY + 4, 92, false, false, 22);
+                    CustomMap.createNormalTile(originX -2, originY + 4, 92, false, false, 22);
+                    CustomMap.createNormalTile(originX -1, originY + 4, 92, false, false, 22);
+                    CustomMap.createNormalTile(originX , originY + 4, 92, false, false, 22);
+                    CustomMap.createNormalTile(originX+1 , originY + 4, 92, false, false, 22);
+                    CustomMap.createNormalTile(originX+2 , originY + 4, 92, false, false, 22);
+
+                    //backDrop
+                    // X+3,x+6,x-8,x-11 and y +6  41
+                    CustomMap.createBackGroundTile(originX+4, originY+6,41,22);
+                    CustomMap.createBackGroundTile(originX+7, originY+6,41,22);
+                    CustomMap.createBackGroundTile(originX-7, originY+6,41,22);
+                    CustomMap.createBackGroundTile(originX-10, originY+6,41,22);
+
+                    CustomMap.createNormalTile(originX - 6, originY+1, 92, false, false, 22);
+                    CharacterBase characterBase = em.CreateEnemy(Character.Type.Katu, BossType.NONE);
+                    characterBase.SetPosition((originX -6)*size+ MainVar.instance.TILESIZE / 2, (originY - 1) *-size+ MainVar.instance.TILESIZE / 2);
+                    characterBase.ID = 0;
+                    characterBase.isBoss = BossType.NPC;
+                    //em.SetCharacterPosition(characterBase, CreateType.BASEONCAMERAO, CreateType.BASEONCAMERA, 1f, 6.5f);
+
+                    characterBase.direction = Direction.RIGHT;
+                    em.AddActor(characterBase);
+
+
+
+                    CustomMap.createNormalTile(originX - 9, originY + 1, 92, false, false, 22);
+                    characterBase = em.CreateEnemy(Character.Type.Katu, BossType.NONE);
+                    characterBase.SetPosition((originX - 9) * size + MainVar.instance.TILESIZE / 2, (originY-1) * -size + MainVar.instance.TILESIZE / 2);
+                    //em.SetCharacterPosition(characterBase, CreateType.BASEONCAMERAO, CreateType.BASEONCAMERA, 1f, 6.5f);
+
+                    characterBase.direction = Direction.RIGHT;
+                    em.AddActor(characterBase);
+
+
+                    CustomMap.createNormalTile(originX + 5, originY + 1, 92, false, false, 22);
+                    characterBase = em.CreateEnemy(Character.Type.Katu, BossType.NONE);
+                   //em.SetCharacterPosition(characterBase, CreateType.BASEONCAMERAO, CreateType.BASEONCAMERA, 1f, 6.5f);
+                    characterBase.SetPosition((originX + 5) * size + MainVar.instance.TILESIZE / 2, (originY-1) * -size + MainVar.instance.TILESIZE / 2);
+                    characterBase.direction = Direction.LEFT;
+                    characterBase.ID = 0;
+                    characterBase.isBoss = BossType.NPC;
+
+                    em.AddActor(characterBase);
+
+                    CustomMap.createNormalTile(originX + 8, originY + 1, 92, false, false, 22);
+                    characterBase = em.CreateEnemy(Character.Type.Katu, BossType.BOSS);
+                    //em.SetCharacterPosition(characterBase, CreateType.BASEONCAMERAO, CreateType.BASEONCAMERA, 1f, 6.5f);
+                    characterBase.SetPosition((originX + 8) * size + MainVar.instance.TILESIZE / 2, (originY-1) * -size + MainVar.instance.TILESIZE / 2);
+                    characterBase.direction = Direction.LEFT;
+                    em.AddActor(characterBase);
+
+
+                    em.SetStage(2);
 
                 }
-                if (em.EventStage == 1)
+                if (em.EventStage == 2)
                 {
                     if (em.EventTime >= 1.35f)
                     {
@@ -884,6 +910,7 @@ namespace TeviRandomizer
                         ___boss.SetDefeatEvent(Mode.END_KATU);
                         ___boss.ID = 99;
                         ___sboss.ID = 1;
+                        ___sboss.isBoss = BossType.NONE;
                         em.SetStage(101);
                     }
                 }
@@ -899,6 +926,9 @@ namespace TeviRandomizer
                     ___boss.enemy_perfer.SwitchPhase(AIPhase.O_PHASE_1);
                     ___sboss.enemy_perfer.SwitchPhase(AIPhase.O_PHASE_1);
                     BackgroundManager.Instance.StopBackgroundUpdateBoss(t: false);
+                    CameraScript.Instance.SetZoomCenter(CameraScript.Instance.GetTruePos());
+                    CameraScript.Instance.SetLimitY(CameraScript.Instance.GetTrueY());
+
                 }
             }
         }
@@ -944,8 +974,8 @@ namespace TeviRandomizer
         {
             EventManager em = EventManager.Instance;
 
-            int originX = (int)((CameraScript.Instance.GetTrueX() + extraDis) / MainVar.instance.TILESIZE);
-            int originY = Mathf.Abs((int)((CameraScript.Instance.GetTrueY() - extraDisY) / MainVar.instance.TILESIZE));
+            int originX = (int)((CameraScript.Instance.GetTrueX() ) / MainVar.instance.TILESIZE);
+            int originY = Mathf.Abs((int)((CameraScript.Instance.GetTrueY() ) / MainVar.instance.TILESIZE));
 
             if (em.EventStage == 0 && WorldManager.Instance.Area != 10) em.SetStage(1);
             if (em.EventStage == 1  && em.EventTime >0.7f)

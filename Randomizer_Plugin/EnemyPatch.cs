@@ -74,7 +74,8 @@ namespace TeviRandomizer
         {
             if(RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss] &&mode.ToString().Contains("END") && mode != Mode.END_BOOKMARK && value != 0)
             {
-                Debug.Log(mode);
+                CameraScript.Instance.NoLimitLR();
+                CameraScript.Instance.NoLimitY();
                 if (originalBoss.ToString().Contains("VENA"))
                     mode = Mode.END_VENA;
                 else if (originalBoss.ToString().Contains("TEVIB"))
