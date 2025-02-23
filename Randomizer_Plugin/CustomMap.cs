@@ -1747,18 +1747,42 @@ namespace TeviRandomizer
                 }
                 ___targetPosID = (byte)(val % 100);
                 ___targetArea = (byte)(val / 100);
-                if (ArchipelagoInterface.Instance.isConnected)
-                {
-                    if (!RandomizerPlugin.transitionVisited.Contains(targetMapAndID))
-                    {
-                        RandomizerPlugin.transitionVisited.Add(targetMapAndID);
-                        ArchipelagoInterface.Instance.updateTransitionVisited(RandomizerPlugin.transitionVisited.ToArray());
-                    }
-                }
             }
             Debug.Log($"After ID:{___targetPosID} Area:{___targetArea}");
             return true;
 
+        }
+
+        [HarmonyPatch(typeof(ChangeMapTrigger), "OnTriggerEnter2D")]
+        [HarmonyPrefix]
+        static void addTransitionInfo(ref Collider2D ___col,ref byte ___targetArea,ref byte ___targetPosID)
+        {
+
+            if (!___col.name.Equals("Event Detect") || EventManager.Instance.isBossMode())
+            {
+                return;
+            }
+            if (GameSystem.Instance.isGameOver() > 0f || EventManager.Instance.mainCharacter.health <= 0)
+            {
+                return;
+            }
+            if (EventManager.Instance.IsChangingMap())
+            {
+                return;
+            }
+            if (EventManager.Instance.getMode() != 0 && EventManager.Instance.DisableMapChangeTrigger)
+            {
+                return;
+            }
+            int targetMapAndID = ___targetArea * 100 + ___targetPosID;
+            if (ArchipelagoInterface.Instance.isConnected)
+            {
+                if (!RandomizerPlugin.transitionVisited.Contains(targetMapAndID))
+                {
+                    RandomizerPlugin.transitionVisited.Add(targetMapAndID);
+                    ArchipelagoInterface.Instance.updateTransitionVisited(RandomizerPlugin.transitionVisited.ToArray());
+                }
+            }
         }
 
         public static void loadMap()
