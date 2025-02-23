@@ -429,11 +429,11 @@ namespace TeviRandomizer
                     if (SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam) && !RandomizerPlugin.checkItemGot(ItemList.Type.STACKABLE_COG, (byte)id))
                     {
                         HUDObtainedItem.Instance.GiveItem(ItemList.Type.STACKABLE_COG, (byte)id);
-                        if (SaveManager.Instance.GetMiniFlag(Mini.GameCleared) <= 0)
-                        {
-                            HUDResourceGotPopup.Instance.AddPopup(ItemList.Resource.COIN, SaveManager.Instance.GetResource(ItemList.Resource.COIN), 1000);
-                            SaveManager.Instance.AddResource(ItemList.Resource.COIN, 1000);
-                        }
+                    }
+                    if (SaveManager.Instance.GetMiniFlag(Mini.GameCleared) <= 0)
+                    {
+                        HUDResourceGotPopup.Instance.AddPopup(ItemList.Resource.COIN, SaveManager.Instance.GetResource(ItemList.Resource.COIN), 1000);
+                        SaveManager.Instance.AddResource(ItemList.Resource.COIN, 1000);
                     }
                 }
                 EventManager.Instance.DontSetMiniMapIcon = 15;

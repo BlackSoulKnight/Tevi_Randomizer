@@ -15,11 +15,13 @@ namespace TeviRandomizer
         //Hotswap item recieved
         [HarmonyPatch(typeof(HUDObtainedItem), "GiveItem")]
         [HarmonyPrefix]
-        static void ObtainItem(ref ItemList.Type type, ref byte value, ref bool doRandomBadge)
+        static bool ObtainItem(ref ItemList.Type type, ref byte value, ref bool doRandomBadge)
         {
 
             if (!doRandomBadge)
             {
+                if(RandomizerPlugin.checkItemGot(type,value))
+                    return false;
                 LocationTracker.addItemToList(type, value);
 
                 ItemList.Type data = RandomizerPlugin.getRandomizedItem(type, value);
@@ -48,7 +50,7 @@ namespace TeviRandomizer
 
             if (type.ToString().Contains("ITEM") || type.ToString().Contains("Useable"))
                 value = 255;
-
+            return true;
         }
 
         // Called everytime when an Item is obtained through any means

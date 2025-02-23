@@ -68,7 +68,7 @@ namespace TeviRandomizer
     }
 
 
-    [BepInPlugin("tevi.plugins.randomizer", "Randomizer", "1.2")]
+    [BepInPlugin("tevi.plugins.randomizer", "Randomizer", "1.2.1")]
     [BepInProcess("TEVI.exe")]
     public class RandomizerPlugin : BaseUnityPlugin
     {
@@ -358,7 +358,7 @@ namespace TeviRandomizer
         // change how the item Bell Works
         [HarmonyPatch(typeof(CharacterBase), "UseItem")]
         [HarmonyPrefix]
-        static bool WarpBell(ref ItemList.Type item, ref bool playvoice, ref ObjectPhy ___phy_perfer, ref playerController ___playerc_perfer, ref CharacterBase __instance)
+        static bool WarpBell(ref ItemList.Type item, ref bool playvoice, ref ObjectPhy ___phy_perfer, ref playerController ___playerc_perfer, ref CharacterBase __instance, ref int ___health)
         {
             if (item == ItemList.Type.Useable_Bell)
             {
@@ -404,6 +404,65 @@ namespace TeviRandomizer
                 }
                 return false;
             }
+            if (item == ItemList.Type.Useable_Bookmark)
+            {
+                if (!EventManager.Instance.isBossMode() && EventManager.Instance.getMode() == Mode.OFF && (EventManager.Instance.getSubMode() == Mode.OFF || EventManager.Instance.getSubMode() == Mode.Chap7WarpToQueensGarden))
+                {
+                    if (GemaMissionMode.Instance.isInMission() || WorldManager.Instance.Area == 30 || (EventManager.Instance.GetCurrentEventBattle() != Mode.Chap7StartRibauldChase && EventManager.Instance.GetCurrentEventBattle() != 0) || EventManager.Instance.isBossMode())
+                    {
+                        __instance.PlaySound(AllSound.SEList.MENUFAIL);
+                        __instance.ChangeLogicStatus(Character.PlayerLogicState.NORMAL);
+                        EventManager.Instance.EFF_CreateEmotion(__instance, null, __instance.t.position, EffectSprite.EMOTION_QUESTION);
+                        return false;
+                    }
+
+
+                    int num5 = (int)___phy_perfer.GetCounter(4);
+
+                    if (SaveManager.Instance.GetMiniFlag(Mini.BookmarkUsed) == 0)
+                    {
+                        SaveManager.Instance.SetMiniFlag(Mini.BookmarkUsed, 1);
+                        __instance.GiveBookMarkBuff();
+                    }
+
+                    if(___health > 0) {
+                        GameObject pooledObject2 = GemaPoolManager.Instance.CommonEffectsPooler.GetPooledObject(42);
+                        pooledObject2.transform.position = __instance.t.position;
+                        pooledObject2.transform.localScale = new Vector3(180f, 180f, 180f);
+                        pooledObject2.SetActive(value: true);
+                        CameraScript.Instance.PlaySound(AllSound.SEList.Collect_Heal, 1f);
+                    }
+                    Debug.Log("[CharacterBase] " + __instance.type.ToString() + " used item " + item.ToString() + " Slot : " + num5 + " Heal : " + 0);
+
+                    SaveManager.Instance.RemoveItemFromBagSlot(num5);
+                    HUDResourceGotPopup.Instance.AddPopup(item, useTop: true, forcepop: true);
+                    if (SaveManager.Instance.GetBadgeEquipped(ItemList.Type.BADGE_ConsumeableCharge))
+                    {
+                        SaveManager.Instance.SetItem(ItemList.Type.BADGE_ConsumeableCharge, (byte)(SaveManager.Instance.GetItem(ItemList.Type.BADGE_ConsumeableCharge) + 1), output: false);
+                    }
+                    if (playvoice)
+                    {
+                        if (item == ItemList.Type.Useable_BSnack)
+                        {
+                            ___playerc_perfer.PlayItemVoice(isbad: true);
+                        }
+                        else
+                        {
+                            ___playerc_perfer.PlayItemVoice(isbad: false);
+                        }
+                    }
+                    __instance.ChangeLogicStatus(Character.PlayerLogicState.NORMAL);
+                }
+                else
+                {
+                    __instance.PlaySound(AllSound.SEList.MENUFAIL);
+                    __instance.ChangeLogicStatus(Character.PlayerLogicState.NORMAL);
+                    EventManager.Instance.EFF_CreateEmotion(__instance, null, __instance.t.position, EffectSprite.EMOTION_QUESTION);
+                }
+                return false;
+            }
+
+
             return true;
         }
 

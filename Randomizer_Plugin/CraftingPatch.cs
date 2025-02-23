@@ -1039,7 +1039,7 @@ namespace TeviRandomizer
 
             Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_Bell, false, (byte)0 }).GetValue();
 
-            if (SaveManager.Instance.GetMiniFlag(Mini.GameCleared) > 0)
+            if (SaveManager.Instance.GetMiniFlag(Mini.GameCleared) > 0 || true)
             {
                 Traverse.Create(__instance).Method("AddItem", new object[] { ItemList.Type.Useable_Bookmark, false, (byte)0 }).GetValue();
 
