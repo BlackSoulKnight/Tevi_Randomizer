@@ -1755,10 +1755,10 @@ namespace TeviRandomizer
 
         [HarmonyPatch(typeof(ChangeMapTrigger), "OnTriggerEnter2D")]
         [HarmonyPrefix]
-        static void addTransitionInfo(ref Collider2D ___col,ref byte ___targetArea,ref byte ___targetPosID)
+        static void addTransitionInfo(ref Collider2D col,ref byte ___targetArea,ref byte ___targetPosID)
         {
 
-            if (!___col.name.Equals("Event Detect") || EventManager.Instance.isBossMode())
+            if (!col.name.Equals("Event Detect") || EventManager.Instance.isBossMode())
             {
                 return;
             }

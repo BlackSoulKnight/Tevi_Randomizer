@@ -40,6 +40,11 @@ namespace TeviRandomizer
                     em.mainCharacter.SetPositionX(WorldManager.Instance.CurrentRoomLeft + 1150f);
                     SetCharacterPosition(CreateType.BASEONPLAYERD, CreateType.BASEONCAMERA, 18f, 8f);
                     CameraScript.Instance.SetLimitLR(WorldManager.Instance.CurrentRoomLeft + 1530f, WorldManager.Instance.CurrentRoomLeft + 1530f);
+
+                    for(int i = 394; i < 420; i++)
+                    {
+                        CustomMap.createNormalTile(i, 234, 209, false, false, 0);
+                    }
                     break;
                 case 2:
                     //LILY
