@@ -72,7 +72,7 @@ namespace TeviRandomizer
         [HarmonyPatch(typeof(SaveManager), "SetEventFlag")]
         static void EndBossReplace(ref Mode mode, ref byte value)
         {
-            if(RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss] &&mode.ToString().Contains("END") && mode != Mode.END_BOOKMARK && value != 0)
+            if(RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss] &&mode.ToString().Contains("END") && mode != Mode.END_BOOKMARK && value != 0 && (short)originalBoss != eventReplace[(short)originalBoss])
             {
                 CameraScript.Instance.NoLimitLR();
                 CameraScript.Instance.NoLimitY();
@@ -91,7 +91,7 @@ namespace TeviRandomizer
         {
             EventManager em = EventManager.Instance;
             byte nr = 0;
-            if (em.Mode.ToString().Contains("BOSS") && em.EventStage == 0 && RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss])
+            if (em.Mode.ToString().Contains("BOSS") && em.EventStage == 0 && (short)originalBoss != eventReplace[(short)originalBoss] && RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss])
             {
                 if(originalBoss == Mode.BOSS_DEMONFRAY || originalBoss == Mode.BOSS_FRANKIE || originalBoss == Mode.BOSS_CYRIL)
                     nr = 1;
