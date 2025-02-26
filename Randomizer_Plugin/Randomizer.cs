@@ -676,14 +676,17 @@ namespace TeviRandomizer
                     bossCount = 0;
                 } while (!validate());
                 creating = false;
-                RandomizerPlugin.__itemData = GetData();
-                Dictionary<int,int> transitionData = new Dictionary<int,int>();
-                foreach(Area area in transitions)
+                if (!ArchipelagoInterface.Instance.isConnected)
                 {
-                    transitionData.Add(int.Parse(area.Name), int.Parse(area.Connections[0].to.Name));
+                    RandomizerPlugin.__itemData = GetData();
+                    Dictionary<int, int> transitionData = new Dictionary<int, int>();
+                    foreach (Area area in transitions)
+                    {
+                        transitionData.Add(int.Parse(area.Name), int.Parse(area.Connections[0].to.Name));
+                    }
+                    RandomizerPlugin.transitionData = transitionData;
+                    saveSpoilerLog(RandomizerPlugin.__itemData);
                 }
-                RandomizerPlugin.transitionData = transitionData;
-                saveSpoilerLog(RandomizerPlugin.__itemData);
             });
         }
 
@@ -807,8 +810,15 @@ namespace TeviRandomizer
                     text.text = t + new string('.', count % 4);
                     Task.Delay(300).Wait();
                 }
-                text.text = "Finished Creating Seed";
+                if (ArchipelagoInterface.Instance.isConnected)
+                {
+                    text.text = "Connected to AP Server";
+                }
+                else
+                    text.text = "Finished Creating Seed";
+
             });
+
         }
 
         private (int, int) createItem(System.Random seed, List<(int, int)> pool)
@@ -830,6 +840,10 @@ namespace TeviRandomizer
         List<Area> areaList;
         private bool validate()
         {
+            if(ArchipelagoInterface.Instance.isConnected)
+            {
+                return true;
+            }
             int currHint = 0;
             int currBackHint = 1;
             areaList = [areas.Find(x => x.Name == "Thanatara Canyon")];

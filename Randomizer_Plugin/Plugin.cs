@@ -251,10 +251,6 @@ namespace TeviRandomizer
 
         static public void createSeed()
         {
-            if (ArchipelagoInterface.Instance.isConnected)
-            {
-                ArchipelagoInterface.Instance.disconnect();
-            }
             System.Random rando;
             if (seed == "")
             {
@@ -327,6 +323,18 @@ namespace TeviRandomizer
         {
             return CommonResource.Instance.GetItem(itemID);
         }
+
+        public static BulletType[] bulletSwap = new BulletType[(int)BulletType.MAX];
+        [HarmonyPatch(typeof(BulletManager),"ShootBullet")]
+        [HarmonyPrefix]
+        static void randomBullet(ref BulletType type)
+        {
+            //Debug.Log($"original: {type.ToString()}");
+           //type = bulletSwap[(int)type];
+            //Debug.Log($"after: {type.ToString()}");
+
+        }
+
 
         [HarmonyPatch(typeof(WorldManager), "FindNearestItem_Room")]
         [HarmonyPostfix]
