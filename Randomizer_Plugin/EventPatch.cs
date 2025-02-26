@@ -161,7 +161,7 @@ namespace TeviRandomizer
                 return false;
             }
 
-            __result = !RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.STACKABLE_COG, 23);
+            __result = (!RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.STACKABLE_COG, 23) || SaveManager.Instance.GetMiniFlag(Mini.BookmarkUsed) == 1);
             return false;
         }
 
@@ -182,10 +182,10 @@ namespace TeviRandomizer
                     {
                         if (SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam))
                         {
-                            bool flag = !RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.STACKABLE_COG, 23);
+                            bool flag = (!RandomizerPlugin.checkRandomizedItemGot(ItemList.Type.STACKABLE_COG, 23) || SaveManager.Instance.GetMiniFlag(Mini.BookmarkUsed) == 1);
                             if (component.mode == Mode.Chap1FreeRoamVena7x7)
                             {
-                                if (component.mode == Mode.Chap1FreeRoamVena7x7 && ((SaveManager.Instance.GetMiniFlag(Mini.GameCleared) > 0 && SaveManager.Instance.GetMiniFlag(Mini.BookmarkUsed) == 1) || flag))
+                                if ((component.mode == Mode.Chap1FreeRoamVena7x7 && SaveManager.Instance.GetMiniFlag(Mini.BookmarkUsed) == 1) || flag)
                                 {
                                     if (WorldManager.Instance.CheckIsWall(component.transform.position, any: false) == 1)
                                     {
