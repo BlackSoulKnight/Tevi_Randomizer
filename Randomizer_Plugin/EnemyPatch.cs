@@ -126,9 +126,9 @@ namespace TeviRandomizer
         static bool isMission;
         [HarmonyPatch(typeof(EventManager),"CreateEnemy")]
         [HarmonyPrefix]
-        static void changeEnemy(ref Character.Type type)
+        static void changeEnemy(ref Character.Type type,ref EventManager __instance)
         {
-            EventManager em = new EventManager();
+            EventManager em = __instance;
             if (!em.eventBattle.ToString().Contains("Mission") && !em.Mode.ToString().Contains("Mission") && !(em.Mode == Mode.Chap1S_Wasteland_Greasetrap) &&!(em.Mode == Mode.Chap2S_Beach_Friedman) &&!(em.Mode == Mode.Chap4MonitorRoom))
             {
                 Debug.Log(type.ToString());

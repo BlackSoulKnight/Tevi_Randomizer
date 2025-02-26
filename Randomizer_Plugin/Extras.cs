@@ -1,4 +1,5 @@
-﻿using EventMode;
+﻿using Bullet;
+using EventMode;
 using Game;
 using HarmonyLib;
 using System.Collections.Generic;
@@ -317,6 +318,26 @@ namespace TeviRandomizer
                     if (removed.Contains(i)) continue;
                     byte num = (byte)UnityEngine.Random.Range(0, arr.Count);
                     randomizedMusic[i] = (byte)arr[num];
+                    arr.RemoveAt(num);
+                }
+            }
+            static public void randomBullets()
+            {
+                List<int> arr = Enumerable.Range(0, ((int)BulletType.MAX)).ToList();
+                int[] removed = [551,212,201,237,319, 638, 639, 685, 798, 799, 862, 863, 864];
+                foreach (int i in removed)
+                {
+                    arr.Remove(i);
+                }
+                for (int i = 0; i < (int)(BulletType.MAX); i++)
+                {
+                    if (removed.Contains(i))
+                    {
+                        RandomizerPlugin.bulletSwap[i] = (BulletType)i;
+                        continue;
+                    }
+                    byte num = (byte)UnityEngine.Random.Range(0, arr.Count);
+                    RandomizerPlugin.bulletSwap[i] = (BulletType)arr[num];
                     arr.RemoveAt(num);
                 }
             }
