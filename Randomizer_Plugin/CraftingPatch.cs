@@ -4,6 +4,7 @@ using HarmonyLib;
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.ResourceManagement;
 using UnityEngine.UI;
 
 namespace TeviRandomizer
@@ -158,6 +159,8 @@ namespace TeviRandomizer
                     else
                         ___selectedDesc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(data);
 
+                    if (itemType.ToString().Contains("MaterialExchange"))
+                        ___selectedDesc.text += "<br>It also creates 250 Zenny.";
                     if (___selectedDesc.text.Contains("[c2]"))
                     {
                         if (___craftList[___selected].isUpgrade)
@@ -789,7 +792,7 @@ namespace TeviRandomizer
                 __state.Item2 = EventManager.Instance.mainCharacter.cphy_perfer.orbShootType[0];
                 __state.Item3 = EventManager.Instance.mainCharacter.cphy_perfer.orbShootType[1];
                 __state.Item4 = true;
-                if (___currentItemType.ToString().Contains("ITEM") && ___craftList[___selected].isUpgrade || ___currentItemType.ToString().Contains("BADGE") || ___currentItemType.ToString().Contains("_OrbBoost") || ___currentItemType.ToString().Contains("_OrbType"))
+                if (___currentItemType.ToString().Contains("ITEM") && ___craftList[___selected].isUpgrade || ___currentItemType.ToString().Contains("BADGE") || ___currentItemType.ToString().Contains("_OrbBoost") || ___currentItemType.ToString().Contains("_OrbType")|| ___currentItemType.ToString().Contains("MaterialExchange"))
                 {
 
                     int num5 = 1;
@@ -808,6 +811,17 @@ namespace TeviRandomizer
                         if (SaveManager.Instance.GetOrbTypeObtained() >= 4)
                         {
                             num5 = -3;
+                        }
+                    }
+                    if (___currentItemType == ItemList.Type.Function_MaterialExchangeA || ___currentItemType == ItemList.Type.Function_MaterialExchangeB)
+                    {
+                        if (!__instance.canExchange(___currentItemType))
+                        {
+                            num5 = ((___currentItemType != ItemList.Type.Function_MaterialExchangeA) ? (-8) : (-6));
+                        }
+                        else if (SaveManager.Instance.GetFunctionExchangeRemain() <= 0)
+                        {
+                            num5 = -7;
                         }
                     }
                     else if (getItemUpgradeCount(___currentItemType) >= 3) // helperfunction 
@@ -888,6 +902,11 @@ namespace TeviRandomizer
                     }
                     else
                     {
+                        if (___currentItemType.ToString().Contains("MaterialExchange"))
+                        {
+                            SaveManager.Instance.AddResource(ItemList.Resource.COIN, 250);
+                            return true;
+                        }
                         for (int n = 0; n < GemaItemManager.Instance.maxMaterial; n++)
                         {
                             if (n > 0)
