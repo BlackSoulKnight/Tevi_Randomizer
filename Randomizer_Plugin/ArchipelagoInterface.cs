@@ -106,8 +106,10 @@ namespace TeviRandomizer
                 PlayerNames.Add(info.Slot, info.Alias);
             }
 
-
-            setCustomFlags((JObject)success.SlotData["options"]);
+            if (success.SlotData.ContainsKey("options"))
+                setCustomFlags((JObject)success.SlotData["options"]);
+            else
+                oldSlotData(success.SlotData);
             getOwnLocationData(success.SlotData["locationData"]);
             getOwnTransitionData(success.SlotData["transitionData"]);
             storeData();
@@ -127,7 +129,15 @@ namespace TeviRandomizer
 
 
         }
+        private void oldSlotData(Dictionary<string,object> SlotData)
+        {
 
+            long extraPotions = (long)SlotData["attackMode"];
+            RandomizerPlugin.extraPotions = [(int)extraPotions, (int)extraPotions];
+            RandomizerPlugin.customFlags[(int)CustomFlags.TempOption] = (long)SlotData["openMorose"] > 0;
+            RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart] = (long)SlotData["CeliaSable"] > 0;
+            RandomizerPlugin.GoMode = (int)(long)SlotData["GoalCount"];
+        }
         private void toggleDeathLink()
         {
             if (deathLink == null)
