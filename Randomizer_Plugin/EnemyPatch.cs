@@ -91,11 +91,15 @@ namespace TeviRandomizer
         {
             EventManager em = EventManager.Instance;
             byte nr = 0;
-            if (em.Mode.ToString().Contains("BOSS") && em.EventStage == 0 && (short)originalBoss != eventReplace[(short)originalBoss] && RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss])
+            if (em.Mode.ToString().Contains("BOSS") && em.EventStage == 0 && RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss])
             {
-                if(originalBoss == Mode.BOSS_DEMONFRAY || originalBoss == Mode.BOSS_FRANKIE || originalBoss == Mode.BOSS_CYRIL)
-                    nr = 1;
-                BossPatch.lockCameraToArena(em,nr);
+                if ((short)originalBoss != eventReplace[(short)originalBoss])
+                {
+                    if (originalBoss == Mode.BOSS_DEMONFRAY || originalBoss == Mode.BOSS_FRANKIE || originalBoss == Mode.BOSS_CYRIL)
+                        nr = 1;
+
+                    BossPatch.lockCameraToArena(em, nr);
+                }
             }
         }
 

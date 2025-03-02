@@ -68,7 +68,7 @@ namespace TeviRandomizer
     }
 
 
-    [BepInPlugin("tevi.plugins.randomizer", "Randomizer", "1.2.1")]
+    [BepInPlugin("tevi.plugins.randomizer", "Randomizer", "1.2.2")]
     [BepInProcess("TEVI.exe")]
     public class RandomizerPlugin : BaseUnityPlugin
     {
