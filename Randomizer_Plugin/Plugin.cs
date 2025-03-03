@@ -79,6 +79,11 @@ namespace TeviRandomizer
             IllusionPalace = 9999
         }
 
+        public enum GoalType
+        {
+            AstralGear,
+            BossDefeat
+        }
 
         static public Dictionary<string, string> __itemData = new Dictionary<string, string>();
 
@@ -86,7 +91,7 @@ namespace TeviRandomizer
         static public int customHpDiff = -1;
         static public int customStartDiff = -1;
         static public List<int> transitionVisited = new List<int>();
-
+        static public GoalType goalType = GoalType.AstralGear;
         static public bool[] customFlags = new bool[Enum.GetNames(typeof(CustomFlags)).Length];
         static public int[] extraPotions = [0, 0]; // Hardcoded omo
         static public int GoMode = -1;
