@@ -1,0 +1,27 @@
+{
+    "Map00": [
+        {
+            "Name": "Desert Base",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 2500
+                },
+                {
+                    "Method": "Boss",
+                    "Amount": 1000
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Crafting",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Exit",
+                    "Method": "ChargeShot || (ITEM_LINEBOMB && ITEM_SLIDE && ((QdCancel && ITEM_AirDash)|| (ITEM_WALLJUMP && ITEM_DOUBLEJUMP) || (ITEM_AirDash && ITEM_DOUBLEJUMP) ||(ITEM_SPEEDUP 3 && QdCancel && SpinnerBash ) || ITEM_JETPACK 3 || (ITEM_JETPACK 2 && (ITEM_SPEEDUP || extJet || ITEM_HIJUMP)) || (ITEM_JETPACK && (EnemyManip || ITEM_DOUBLEJUMP || ITEM_AirDash || ITEM_WALLJUMP || ( (ITEM_SPEEDUP || ITEM_HIJUMP) && extJET) || ITEM_SPEEDUP 2 ))))"
+                }
+            ]
+        }
+    ]
+}

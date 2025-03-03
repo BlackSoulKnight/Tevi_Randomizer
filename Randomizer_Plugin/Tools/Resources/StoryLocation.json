@@ -1,0 +1,1330 @@
+[
+    {
+        "Itemname": "ITEM_DAGGER",
+        "Location": "Desert Base",
+        "LocationName": "Desert Base - Dagger",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_ORB",
+        "Location": "Desert Base",
+        "LocationName": "Desert Base - Orbitar",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BossPassing",
+        "Location": "Desert Base",
+        "LocationName": "Desert Base - Metamorphose",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ConvertDef2Off",
+        "Location": "Desert Base",
+        "LocationName": "Desert Base - Glass Knife",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_DOUBLEJUMP && (ITEM_JETPACK || ITEM_AirDash || ITEM_HIJUMP)) || ITEM_JETPACK 2 || ITEM_WALLJUMP || (ITEM_JETPACK && ITEM_HIJUMP)", 
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_LowerThan20",
+        "Location": "Desert Base",
+        "LocationName": "Desert Base - Under Score",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB && ITEM_SLIDE) || (ITEM_KNIFE && (QdCancel || ITEM_AirDash || ITEM_JETPACK || (ITEM_SPEEDUP && ITEM_DOUBLEJUMP)))",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Desert Base",
+        "LocationName": "Desert Base - Lemon Bunny Potion",
+        "slotId": 16,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "Desert Base",
+        "LocationName": "Desert Base - Astral Gear",
+        "slotId": 0,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "QUEST_GHandL",
+        "Location": "Desert Base",
+        "LocationName": "Desert Base - Gilded Left Hand",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB && (ITEM_WALLJUMP || ITEM_JETPACK || ITEM_DOUBLEJUMP)",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Desert Base",
+        "LocationName": "Desert Base - Kiwi Bunny Potion",
+        "slotId": 0,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ANTIENERGYBALL",
+        "Location": "Desert Base",
+        "LocationName": "Desert Base - Palladium",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BACKSTAB",
+        "Location": "Desert Base",
+        "LocationName": "Desert Base - Backstab",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Desert Base",
+        "LocationName": "Desert Base - Cherry Bunny Potion",
+        "slotId": 6,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB && ( ITEM_SLIDE || ITEM_WALLJUMP || ITEM_HIJUMP || ITEM_DOUBLEJUMP || ITEM_JETPACK)",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Desert Base",
+        "LocationName": "Desert Base - Grape Bunny Potion",
+        "slotId": 6,
+        "Requirement": [
+            {
+                "Method": "(ITEM_WALLJUMP || (ITEM_JETPACK && ITEM_DOUBLEJUMP) || ITEM_JETPACK 2  || (ITEM_LINEBOMB && ITEM_AREABOMB && (ChargeShot || (ITEM_SLIDE && (ITEM_HIJUMP || ITEM_DOUBLEJUMP || ITEM_JETPACK))))",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_LINEBOMB",
+        "Location": "Desert Base",
+        "LocationName": "Desert Base - Cross Bomb",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ChargeShot || (ITEM_LINEBOMB && (ITEM_WALLJUMP || (ITEM_JETPACK && ITEM_DOUBLEJUMP) || ITEM_JETPACK 2 ))",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Nothing",
+        "Location": "Desert Base",
+        "LocationName": "Desert Base - Ribauld fight",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Desert Base",
+        "LocationName": "Desert Base - Lemon Bunny Potion #2",
+        "slotId": 22,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AutoCombo",
+        "Location": "Desert Base",
+        "LocationName": "Desert Base - Combo Assist",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ChangeOrbCharger",
+        "Location": "Desert Base",
+        "LocationName": "Desert Base - MP Surge: Tag Out",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && (ITEM_WALLJUMP && (ITEM_DOUBLEJUMP || ITEM_JETPACK)) || (ITEM_DOUBLEJUMP && ITEM_JETPACK)",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SableALastHitEnhance",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 1 - Sable Type-A: Voracious",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SableALongRangeSnipe",
+        "Location": "Crafting",
+        "LocationName": "Crafting - Sable Type-A: Fanged",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_RailPass",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SableAHitIncrease",
+        "Location": "Crafting",
+        "LocationName": "Crafting - Sable Type-A: Ensnare",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_RailPass",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SableBNormalShotDebuff",
+        "Location": "Crafting",
+        "LocationName": "Crafting - Sable Type-B: Malediction",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_RailPass && ITEM_OrbTypeS2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SableBReturnStyle",
+        "Location": "Crafting",
+        "LocationName": "Crafting - Sable Type-B: Backlash",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_RailPass && ITEM_OrbTypeS2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SableCBigExplode",
+        "Location": "Crafting",
+        "LocationName": "Crafting - Sable Type-C: Ignite",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_RailPass && ITEM_OrbTypeS3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SableCSaver",
+        "Location": "Crafting",
+        "LocationName": "Crafting - Sable Type-C: Fervid",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_RailPass && ITEM_OrbTypeS3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_RememberBrutalForce",
+        "Location": "Morose City",
+        "LocationName": "Morose City Waffle Shop - Muscle Memory",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2500",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CeliaALongStun",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 1 - Celia Type-A: Stunning",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CeliaASlowShot",
+        "Location": "Crafting",
+        "LocationName": "Crafting - Celia Type-A: Meteoric",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_AirshipPass",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CeliaAShortRangeBurst",
+        "Location": "Crafting",
+        "LocationName": "Crafting - Celia Type-A: Beguile",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_AirshipPass",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CeliaTypeBAmount",
+        "Location": "Crafting",
+        "LocationName": "Crafting - Celia Type-B: Halo",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_AirshipPass && ITEM_OrbTypeC2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CELIATYPEBANGLE",
+        "Location": "Crafting",
+        "LocationName": "Crafting - Celia Type-B: Prism",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_AirshipPass && ITEM_OrbTypeC2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CeliaCShotIncrease",
+        "Location": "Crafting",
+        "LocationName": "Crafting - Celia Type-C: Barrage",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_AirshipPass && ITEM_OrbTypeC3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CeliaCShotAllDirection",
+        "Location": "Crafting",
+        "LocationName": "Crafting - Celia Type-C: Panoptic",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_AirshipPass && ITEM_OrbTypeC3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ComboStyleDamageUp",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 2 - C. Rank Frenzy: Fierce",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_FrameCancel",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 2 - Full Stop A",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_NormalShotReducerB",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 2 - Orbital Efficiency B",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleComboWeakGroundUpA",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 2 - Style Combo: Upper A",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_NormalShotWhenChargedShot",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 3 - Two-pronged Shot",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_120CHARGE",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 3 - MP Quicken: Melee",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AllMeleeSpeedUp",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 3 - Dextrous",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 Chap 3 && Chapter 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_PowerDrop",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 3 - Drop Kick",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DominantEffectDownA",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 3 - Weak Dominance A",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_QuickDropExtendA",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 4 - Power Drop",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 4",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_Cannon",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 4 - Magic Cannon",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 4",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_NormalSupportShot",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 4 - Synchronized Support I",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 4",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_MAXHPBIGUP",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 4 - Health Surge",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 4",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BoostFullOffense",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 4 - Core Expansion: Full Offense",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 4",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_MAXHP2MP",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 5 - MP Quicken: Sacrifice",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 5",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CraftBadgeCost",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 5 - EP Booster: Synthesizer",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 5",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleComboBackImageS",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 5 - Style Combo: Afterimage S",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 5",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AntiAirPlat",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 5 - Mana Platform",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 5",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleComboHeavyGroundFrontA",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 5 - Style Combo: Tornado A",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 5 && ITEM_KNIFE",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AutoBombChain",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 6 - Daisy Chain",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 6",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BounceTeviStrongAirUp",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 6 - Spanner Bash: Bounce",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 6",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SuperFrameCancel",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 6 - Full Stop B",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 6",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ArmorCritCrit",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 6 - Armor Piercer",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 6",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_Amulet10",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 6 - Supernova",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 6 && ITEM_OrbAmulet",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_MAXMPCost",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 7 - EP Booster: MP",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 7",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_100COMBO",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 7 - The Untamed",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 7",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_DominantEffectDownB",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 7 - Weak Dominance B",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 7",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_RangeBreak",
+        "Location": "Crafting",
+        "LocationName": "Crafting Chap 7 - Range Break",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Chapter 7",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AutoPilot",
+        "Location": "Crafting",
+        "LocationName": "Crafting - Go Ballistic",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && BADGE_AmuletQuicken",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_Explorer",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Explorer's Compass #1",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_Explorer && Core 3 && Upgrade 1 && RainbowCheck",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_Explorer && Core 1 && Upgrade 1 && Explorer",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_Explorer",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Explorer's Compass #2",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_Explorer && Core 6 && Upgrade 1 && RainbowCheck",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_Explorer && Core 1 && Upgrade 1 && Explorer",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_KNIFE",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Dagger #1",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_KNIFE && Upgrade 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_KNIFE",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Dagger #2",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_KNIFE && Upgrade 4 && EVENT_Air",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_ORB",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Orbitars #1",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_ORB && Upgrade 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_ORB",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Orbitars #2",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_ORB && Upgrade 3 && EVENT_Air",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_RapidShots",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Rapid Shots Modchip #1",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_RapidShots && Upgrade 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_RapidShots",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Rapid Shots Modchip #2",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_RapidShots && Upgrade 4",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_AttackRange",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Deadly Reach #1",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_AttackRange && Upgrade 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_AttackRange",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Deadly Reach #2",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_AttackRange && Upgrade 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_EasyStyle",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Spanner of Wisdom #1",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_EasyStyle && Upgrade 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_EasyStyle",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Spanner of Wisdom #2",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_EasyStyle && Upgrade 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_LINEBOMB",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Cross Bomb #1",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB && Upgrade 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_LINEBOMB",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Cross Bomb #2",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB && Upgrade 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_AREABOMB",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Cluster Bomb #1",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_AREABOMB && Upgrade 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_AREABOMB",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Cluster Bomb #2",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_AREABOMB && Upgrade 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_SPEEDUP",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Running Boots #1",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_SPEEDUP && Upgrade 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_SPEEDUP",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Running Boots #2",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_SPEEDUP && Upgrade 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_AirDash",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Slipstream Boots #1",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_AirDash && Upgrade 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_AirDash",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Slipstream Boots #2",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_AirDash && Upgrade 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_WALLJUMP",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Parkour Boots #1",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_WALLJUMP && Upgrade 2 && EVENT_Air",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_WALLJUMP",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Parkour Boots #2",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_WALLJUMP && Upgrade 2 && EVENT_Air",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_JETPACK",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Jetpack #1",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_JETPACK && Upgrade 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_JETPACK",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Jetpack #2",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_JETPACK && Upgrade 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_BoostSystem",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Modular Blueprints #1",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_BoostSystem && Upgrade 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_BoostSystem",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Modular Blueprints #2",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_BoostSystem && Upgrade 5 && EVENT_Air",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_OrbAmulet",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Soul Burst Module #1",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_OrbAmulet && Upgrade 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_OrbAmulet",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Soul Burst Module #2",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_OrbAmulet && Upgrade 5 && EVENT_Air",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_BOMBFUEL",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Bomb Fuel #1",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_BOMBFUEL && Upgrade 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_BOMBFUEL",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Bomb Fuel #2",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_BOMBFUEL && Upgrade 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_BombLengthExtend",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Combustible #1",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_BombLengthExtend && Upgrade 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_BombLengthExtend",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Combustible #2",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_BombLengthExtend 2 && Upgrade 3 && EVENT_Fire",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_MASK",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Decay Mask #1",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_MASK && Upgrade 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_MASK",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Decay Mask #2",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_MASK && Upgrade 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_TempRing",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Equilibrium Ring #1",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_TempRing && Upgrade 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_TempRing",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Equilibrium Ring #2",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_TempRing && Upgrade 1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_DodgeShot",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Shining Bangle #1",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_DodgeShot && Upgrade 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_DodgeShot",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Shining Bangle #2",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_DodgeShot && Upgrade 3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_Rotater",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Vortex Gloves #1",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_Rotater && Upgrade 2 && EVENT_Air",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_Rotater",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Vortex Gloves #2",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_Rotater && Upgrade 2 && EVENT_Air",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_GoldenGlove",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Trinketeer's Fortune #1",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_GoldenGlove && Upgrade 1 && EVENT_Fire && EVENT_Air && EVENT_Light",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_GoldenGlove",
+        "Location": "Item Upgrade",
+        "LocationName": "Item Upgrade - Trinketeer's Fortune #2",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_GoldenGlove && Upgrade 1 && EVENT_Fire && EVENT_Air && EVENT_Light",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_OrbTypeC2",
+        "Location": "Item Upgrade",
+        "LocationName": "Orb Type Upgrade - Blue Module Type-B",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_ORB 3 && Core 4",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_OrbTypeS2",
+        "Location": "Item Upgrade",
+        "LocationName": "Orb Type Upgrade - Red Module Type-B",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_ORB 3 && Core 5",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_OrbTypeC3",
+        "Location": "Item Upgrade",
+        "LocationName": "Orb Type Upgrade - Blue Module Type-C",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_ORB 3 && Core 7",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_OrbTypeS3",
+        "Location": "Item Upgrade",
+        "LocationName": "Orb Type Upgrade - Red Module Type-C",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && ITEM_ORB 3 && Core 8",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_OrbBoostU",
+        "Location": "Item Upgrade",
+        "LocationName": "Orb Type Upgrade - Core Module Type-U",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Core 4",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_OrbBoostD",
+        "Location": "Item Upgrade",
+        "LocationName": "Orb Type Upgrade - Core Module Type-D",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 250 && Core 8",
+                "Difficulty": 0
+            }
+        ]
+    }
+]

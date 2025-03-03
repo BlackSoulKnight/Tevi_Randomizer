@@ -47,7 +47,8 @@ namespace TeviRandomizer
                     SaveManager.Instance.SetItem(ItemList.Type.STACKABLE_MATK, 1, true);
                 }
 
-
+                SaveManager.Instance.AddBreakTile(0, 394, 244);
+                SaveManager.Instance.AddBreakTile(0, 394, 245);
                 if (RandomizerPlugin.customStartDiff >= 0)
                     SaveManager.Instance.SetDifficulty(RandomizerPlugin.customStartDiff);
                 // Make a Path to Morose
@@ -278,11 +279,27 @@ namespace TeviRandomizer
         static bool IllusionReq(ref bool __result)
         {
             __result = false;
-            if (SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_COG) < RandomizerPlugin.GoMode)
+            switch (RandomizerPlugin.goalType)
             {
-                __result = true;
-                return false;
+                case RandomizerPlugin.GoalType.BossDefeat:
+                    if(SaveManager.Instance.GetCurrentBossBeaten() > 20)
+                    {
+                        __result = true;
+                    }
+                    break;
+                case RandomizerPlugin.GoalType.AstralGear:
+                default:
+                    if (SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_COG) < RandomizerPlugin.GoMode)
+                    {
+                        __result = true;
+                        return false;
+                    }
+                    break;
+
             }
+        
+        
+
             return false;
         }
 
