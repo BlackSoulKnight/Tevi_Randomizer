@@ -325,7 +325,38 @@ namespace TeviRandomizer
                             if(___CurrentMaxItem >0)
                             ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
                         }
-                        break;
+                        if (!SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam))
+                        {
+                            if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleB) != 0 && SaveManager.Instance.GetEventFlag(Mode.Chap4FirstTartarusCity) > 0)
+                            {
+                                obj = [ItemList.Type.Useable_WaffleBMeringue, false];
+                                Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                                if (___CurrentMaxItem > 0)
+                                    ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                            }
+                            if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleC) != 0 && SaveManager.Instance.GetEventFlag(Mode.Chap4FirstValhallaCity) > 0)
+                            {
+                                obj = [ItemList.Type.Useable_WaffleCMorning, false];
+                                Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                                if (___CurrentMaxItem > 0)
+                                    ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                            }
+                            if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleD) != 0 && SaveManager.Instance.GetEventFlag(Mode.Chap5_Ulvosa_Intro) > 0)
+                            {
+                                obj = [ItemList.Type.Useable_WaffleDJellydrop, false];
+                                Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                                if (___CurrentMaxItem > 0)
+                                    ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                            }
+                            if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleE) != 0 && SaveManager.Instance.GetChapter() >= 6)
+                            {
+                                obj = [ItemList.Type.Useable_WaffleElueberry, false];
+                                Traverse.Create(__instance).Method("AddItem", obj).GetValue();
+                                if (___CurrentMaxItem > 0)
+                                    ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                            }
+                        }
+                            break;
                 }
                 if (flag)
                 {
