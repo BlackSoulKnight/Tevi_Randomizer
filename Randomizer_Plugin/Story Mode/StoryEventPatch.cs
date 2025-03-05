@@ -74,7 +74,7 @@ namespace TeviRandomizer.Story_Mode
                 __result = false;
             }
         }
-        [HarmonyPatch(typeof(Chap1S_Mine_Discover), "REQUIREMENT")]
+        [HarmonyPatch(typeof(Chap1S_Mine_Gromp), "REQUIREMENT")]
         [HarmonyPostfix]
         static void BombFuelGuy(ref bool __result)
         {
