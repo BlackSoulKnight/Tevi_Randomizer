@@ -24,7 +24,8 @@ namespace TeviRandomizer
             if (em.EventStage == 1)
             {
                 SaveManager.Instance.SetOrb(0);
-
+                SaveManager.Instance.SetItem(ItemList.Type.BADGE_BossPassing, 0);
+                SaveManager.Instance.SetItem(ItemList.Type.BADGE_FreeFoodRefill, 0);
                 LocationTracker.setCollectedLocationList([]);
 
                 if (ArchipelagoInterface.Instance?.isConnected == true)
@@ -46,9 +47,15 @@ namespace TeviRandomizer
                 {
                     SaveManager.Instance.SetItem(ItemList.Type.STACKABLE_MATK, 1, true);
                 }
+                if (SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam)) // Story Mode unstuck Cross Bomb dependancy
+                {
+                    SaveManager.Instance.AddBreakTile(0, 394, 244);
+                    SaveManager.Instance.AddBreakTile(0, 394, 245);
+                    SaveManager.Instance.AddBreakTile(0, 367, 246);
+                    SaveManager.Instance.AddBreakTile(0, 367, 247);
+                    SaveManager.Instance.AddBreakTile(0, 367, 248);
+                }
 
-                SaveManager.Instance.AddBreakTile(0, 394, 244);
-                SaveManager.Instance.AddBreakTile(0, 394, 245);
                 if (RandomizerPlugin.customStartDiff >= 0)
                     SaveManager.Instance.SetDifficulty(RandomizerPlugin.customStartDiff);
                 // Make a Path to Morose
@@ -76,8 +83,44 @@ namespace TeviRandomizer
                 }
                 else if (em.EventTime > 100.5f)
                 {
-                    em.NextStage();
+                    em.SetStage(21);
                 }
+                return false;
+            }
+            else if (em.EventStage == 21)
+            {
+                if (!SaveManager.Instance.GetCustomGameMainVar(CustomGame.FreeRoam))
+                {
+                    if (em.EventTime > 0.1f && em.EventTime < 100f)
+                    {
+                        HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_BossPassing, 1);
+                        em.EventTime = 100f;
+                    }
+                    else if (em.EventTime > 100.5f)
+                    {
+                        em.SetStage(22);
+                    }
+                }
+                else
+                    em.SetStage(30);
+                return false;
+            }
+            else if (em.EventStage == 22)
+            {
+                if (!SaveManager.Instance.GetCustomGameMainVar(CustomGame.FreeRoam))
+                {
+                    if (em.EventTime > 0.1f && em.EventTime < 100f)
+                    {
+                        HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_FreeFoodRefill, 1);
+                        em.EventTime = 100f;
+                    }
+                    else if (em.EventTime > 100.5f)
+                    {
+                        em.SetStage(30);
+                    }
+                }
+                else
+                    em.SetStage(30);
                 return false;
             }
             else if (em.EventStage == 40)

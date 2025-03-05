@@ -145,6 +145,7 @@ namespace TeviRandomizer
                 harmonyPatchInstance.PatchAll(typeof(ResourcePatch));
                 harmonyPatchInstance.PatchAll(typeof(EnemyPatch));
                 harmonyPatchInstance.PatchAll(typeof(BossPatch));
+                harmonyPatchInstance.PatchAll(typeof(Story_Mode.StoryEventPatch));
                 randomizerEnabled = true;
                 return true;
             }
@@ -516,7 +517,15 @@ namespace TeviRandomizer
                 ___slotid = 1;
             }
 
-            if (EventManager.Instance.GetElm(__instance.transform, 0f, MainVar.instance.TILESIZE) == ElementType.NotFreeRoamOnly)
+            if (!SaveManager.Instance.GetCustomGameMainVar(CustomGame.FreeRoam))
+            {
+                if (EventManager.Instance.GetElm(__instance.transform, 0f, MainVar.instance.TILESIZE) == ElementType.FreeRoamOnly)
+                {
+                    __instance.DisableMe();
+                    return false;
+                }
+            }
+            else if (EventManager.Instance.GetElm(__instance.transform, 0f, MainVar.instance.TILESIZE) == ElementType.NotFreeRoamOnly)
             {
                 __instance.DisableMe();
                 return false;
