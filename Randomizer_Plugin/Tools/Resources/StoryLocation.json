@@ -36,13 +36,25 @@
         ]
     },
     {
+        "Itemname": "BADGE_FreeFoodRefill",
+        "Location": "Desert Base",
+        "LocationName": "Desert Base - Biscuit Delivery",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "BADGE_ConvertDef2Off",
         "Location": "Desert Base",
         "LocationName": "Desert Base - Glass Knife",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_DOUBLEJUMP && (ITEM_JETPACK || ITEM_AirDash || ITEM_HIJUMP)) || ITEM_JETPACK 2 || ITEM_WALLJUMP || (ITEM_JETPACK && ITEM_HIJUMP)", 
+                "Method": "(ITEM_DOUBLEJUMP && (ITEM_JETPACK || ITEM_HIJUMP)) || ITEM_JETPACK 2 || ITEM_WALLJUMP || (ITEM_JETPACK && ITEM_HIJUMP)", 
                 "Difficulty": 0
             }
         ]
@@ -123,6 +135,18 @@
         "Itemname": "BADGE_BACKSTAB",
         "Location": "Desert Base",
         "LocationName": "Desert Base - Backstab",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_Normal2AntiHealth",
+        "Location": "Desert Base",
+        "LocationName": "Desert Base - Knives Out",
         "slotId": 1,
         "Requirement": [
             {
@@ -216,6 +240,606 @@
         ]
     },
     {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Thanatara Canyon - Heavens Valley West",
+        "LocationName": "Thanatara Canyon to Heavens Valley West - Cherry Bunny Potion",
+        "slotId": 14,
+        "Requirement": [
+            {
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_SuperArmor2",
+        "Location": "Thanatara Canyon",
+        "LocationName": "Thanatara Canyon - Even Keel",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Thanatara Canyon",
+        "LocationName": "Thanatara Canyon - Blueberry Bunny Potion",
+        "slotId": 7,
+        "Requirement": [
+            {
+                "Method": "ChargeShot",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_PerfectCharge",
+        "Location": "Thanatara Canyon",
+        "LocationName": "Thanatara Canyon - MP Quicken: Steady",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ChargeShot",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Thanatara Canyon Upper",
+        "LocationName": "Thanatara Canyon Upper - Blueberry Bunny Potion",
+        "slotId": 0,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_RangeCombo",
+        "Location": "Thanatara Canyon Upper",
+        "LocationName": "Thanatara Canyon Upper - C. Count Frenzy: Hotshot",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_MAXHPUP",
+        "Location": "Thanatara Canyon Upper",
+        "LocationName": "Thanatara Canyon Upper - Health Plus",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ChargeShot",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_EasyStyle",
+        "Location": "Thanatara Canyon Upper",
+        "LocationName": "Thanatara Canyon Upper - Spanner of Wisdom",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ChargeShot",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleComboAddDamageA",
+        "Location": "Thanatara Canyon Upper",
+        "LocationName": "Thanatara Canyon Upper - C. Rank Frenzy: Attack",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "QUEST_Necklace",
+        "Location": "Thanatara Canyon Upper",
+        "LocationName": "Thanatara Canyon Upper - Mysterious Necklace",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_Journal",
+        "Location": "Thanatara Canyon Upper",
+        "LocationName": "Thanatara Canyon Upper - Notebook",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "QUEST_Holostat",
+        "Location": "Thanatara Canyon Upper",
+        "LocationName": "Thanatara Canyon Upper - Holostat",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Gurun Desert",
+        "LocationName": "Gurun Desert - Cherry Bunny Potion",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Gurun Desert",
+        "LocationName": "Gurun Desert - Cherry Bunny Potion",
+        "slotId": 9,
+        "Requirement": [
+            {
+                "Method": "ITEM_WALLJUMP || ITEM_JETPACK || ITEM_WALLJUMP",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_CrystalGen",
+        "Location": "Gurun Desert",
+        "LocationName": "Gurun Desert - Crystallize",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "EVENT_EliteChallangeA",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Oasis",
+        "LocationName": "Oasis - Kiwi Bunny Potion",
+        "slotId": 8,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_HIJUMP",
+        "Location": "Oasis",
+        "LocationName": "Oasis - Rabi Boots",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Oasis Ext",
+        "LocationName": "Oasis - Lemon Bunny Potion",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_HIJUMP || ITEM_DOUBLEJUMP || ITEM_WALLJUMP || ITEM_JETPACK",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_WallCharger",
+        "Location": "Oasis Ext",
+        "LocationName": "Oasis - MP Surge: Concuss",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_UpperHigh",
+        "Location": "Oasis Ext",
+        "LocationName": "Oasis - Upper Slash: Volley",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_TauntYawn",
+        "Location": "Oasis Ext",
+        "LocationName": "Oasis - Special Action: Yawn",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK || (ITEM_WALLJUMP && ( ITEM_HIJUMP || CKick)",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_EarlyKnockRecover",
+        "Location": "Oasis Ext",
+        "LocationName": "Oasis - Spring Back",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Oasis Ext",
+        "LocationName": "Oasis - Cherry Bunny Potion",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_SHARD",
+        "Location": "Oasis Ext",
+        "LocationName": "Oasis - Rainbow Bunny Potion",
+        "slotId": 16,
+        "Requirement": [
+            {
+                "Method": "(ITEM_DOUBLEJUMP && (ITEM_JETPACK || ITEM_WALLJUMP)) || (ITEM_JETPACK && ITEM_WALLJUMP)",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "QUEST_AirCam",
+        "Location": "Oasis Ext",
+        "LocationName": "Oasis - Air Camera",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "QUEST_SusDevice",
+        "Location": "Oasis Ext",
+        "LocationName": "Oasis - Suspicious Device",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "QUEST_AirCam && Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_Chapter",
+        "Location": "Oasis Ext",
+        "LocationName": "Oasis - Chapter 2 Start",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "QUEST_AirCam",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_PKBADGE",
+        "Location": "Oasis Ext",
+        "LocationName": "Oasis - PK Recon Badge",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "QUEST_AirCam",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_PKBADGE",
+        "Location": "Oasis Ext",
+        "LocationName": "Oasis - PK Recon Badge",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "QUEST_AirCam",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_TauntPhoto",
+        "Location": "Morose City",
+        "LocationName": "Morose City - Special Action: Paparazzo",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ChargeShot",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Morose City",
+        "LocationName": "Morose City - Blueberry Bunny Potion",
+        "slotId": 9,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Morose City",
+        "LocationName": "Morose City - Lemon Bunny Potion",
+        "slotId": 9,
+        "Requirement": [
+            {
+                "Method": "ITEM_AirDash && ITEM_JETPACK 3 && ITEM_LINEBOMB",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_SPEEDUP && ITEM_JETPACK 2 && extJET && ITEM_LINEBOMB",
+                "Difficulty": 0
+            },
+            {
+                "Method": "(ITEM_SPEEDUP 3 || (ITEM_SPEEDUP && ITEM_DOUBLEJUMP)) && ITEM_JETPACK && extJET && ITEM_LINEBOMB",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_RememberBrutalForce",
+        "Location": "Morose City Waffle Shop",
+        "LocationName": "Morose City Waffle Shop - Muscle Memory",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 2500",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Useable_WaffleAHoneycloud",
+        "Location": "Morose City Waffle Shop",
+        "LocationName": "Morose City Shop - Honeycloud Waffle",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 300",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Useable_WaffleBMeringue",
+        "Location": "Morose City Waffle Shop",
+        "LocationName": "Morose City Shop Chap 3 - Toasted Meringue Waffle",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 300 && EVENT_VisitTartarusCity",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Useable_WaffleCMorning",
+        "Location": "Morose City Waffle Shop",
+        "LocationName": "Morose City Shop Chap 4  - Good Morning Waffle",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 300 && EVENT_VisitValhallaCity",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Useable_WaffleDJellydrop",
+        "Location": "Morose City Waffle Shop",
+        "LocationName": "Morose City Shop Chap 5  - Berry Pink Waffle",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 300 && VisitUlvosa",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "Useable_WaffleElueberry",
+        "Location": "Morose City Waffle Shop",
+        "LocationName": "Morose City Chap 6 - Blueberry Waffle",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "Coins 300 && Chapter 6",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_SPEEDUP",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - Running Boots",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_QuickMPRegainA",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - MP Reset A",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_MapDiscoverRecover",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - Intrepid Explorer",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleComboAirNormal3A",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - Style Combo: Windmill B",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_UpperDoubleHitAfterOutline",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - Upper Slash: Shatter",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_Hurt2Punisher",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - Punisher",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleComboAirDashS",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - Fray - Style Combo: Triple Flash S",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "EVENT_Demonfray",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_MAXHPCost",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - Fray - EP Booster: HP",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "EVENT_Demonfray",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_EnemyDefeatExp",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - Fray - Bone Breaker",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "EVENT_Demonfray",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_1HealthTypeA",
+        "Location": "Morose City",
+        "LocationName": "Morose City Shop - Fray - Perseverance A",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "EVENT_Demonfray",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_EliteChallangeA",
+        "Location": "Morose City",
+        "LocationName": "Morose City - Elite A",
+        "slotId": 0,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "BADGE_SableALastHitEnhance",
         "Location": "Crafting",
         "LocationName": "Crafting Chap 1 - Sable Type-A: Voracious",
@@ -295,18 +919,6 @@
         "Requirement": [
             {
                 "Method": "Coins 250 && ITEM_RailPass && ITEM_OrbTypeS3",
-                "Difficulty": 0
-            }
-        ]
-    },
-    {
-        "Itemname": "BADGE_RememberBrutalForce",
-        "Location": "Morose City",
-        "LocationName": "Morose City Waffle Shop - Muscle Memory",
-        "slotId": 1,
-        "Requirement": [
-            {
-                "Method": "Coins 2500",
                 "Difficulty": 0
             }
         ]
