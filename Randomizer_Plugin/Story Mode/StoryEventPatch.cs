@@ -74,6 +74,19 @@ namespace TeviRandomizer.Story_Mode
                 __result = false;
             }
         }
+        [HarmonyPatch(typeof(Chap1S_Mine_Discover), "REQUIREMENT")]
+        [HarmonyPostfix]
+        static void BombFuelGuy(ref bool __result)
+        {
+            if (SaveManager.Instance.GetItem(ItemList.Type.QUEST_Seal) != 0 && WorldManager.Instance.Area == 6 && SaveManager.Instance.GetEventFlag(Mode.Chap1S_Mine_Discover) > 0)
+            {
+                __result = true;
+            }
+            else
+            {
+                __result = false;
+            }
+        }
         [HarmonyPatch(typeof(BOSS_VENA5x5), "REQUIREMENT")]
         [HarmonyPostfix]
         static void BOSSVENA(ref enemyController ___r)
