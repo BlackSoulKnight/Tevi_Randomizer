@@ -163,6 +163,133 @@
             ]
         }
     ],
+    "Map04": [
+        {
+            "Name": "Forest West",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 8000
+                },
+                {
+                    "Method": "ITEM_AREABOMB || ITEM_SLIDE",
+                    "Amount": 1000
+                },
+                {
+                    "Method": "Boss",
+                    "Amount": 1000
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "0400",
+                    "Method": ""
+                },
+                {
+                    "Exit": "0401",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Forest East",
+                    "Method":"EnemyManip || ITEM_HIJUMP || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash"
+                }
+
+            ]
+        },
+        {
+            "Name": "Forest East",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 8000
+                },
+                {
+                    "Method": "ITEM_AREABOMB || ITEM_SLIDE",
+                    "Amount": 1000
+                },
+                {
+                    "Method": "Boss",
+                    "Amount": 1000
+                }
+            ],
+            "Connections": [
+
+                {
+                    "Exit": "0409",
+                    "Method": ""
+                },
+                {
+                    "Exit": "0404",
+                    "Method": ""
+                },
+                {
+                    "Exit": "0408",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Forest Maze",
+                    "Method": "SpinnerBash || ITEM_HIJUMP || ITEM_DOUBLEJUMP || ITEM_JETPACK || EnemyManip`"
+                }
+            ]
+        },
+        {
+            "Name": "Forest Maze",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 4000
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Forest",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Forest Maze boss",
+                    "Method": "ITEM_LINEBOMB"
+                }
+            ]
+        },
+        {
+            "Name": "Forest Maze boss",
+            "Money": [
+                {
+                    "Method": "ITEM_LINEBOMB",
+                    "Amount": 4000
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "Forest Maze extended",
+                    "Method": "ITEM_JETPACK"
+                },
+                {
+                    "Exit": "Forest Maze extended",
+                    "Method": "ITEM_DOUBLEJUMP"
+                },
+                {
+                    "Exit": "Forest Maze extended",
+                    "Method": "ITEM_AirDash && ITEM_WALLJUMP"
+                }
+            ]
+        },
+        {
+            "Name": "Forest Maze extended",
+            "Money": [
+                {
+                    "Method": "",
+                    "Amount": 0
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "",
+                    "Method": ""
+                }
+            ]
+        }
+    ],
     "Map05": [
         {
             "Name": "Travoll Mines East Exit",
@@ -171,6 +298,10 @@
                 {
                     "Exit": "0501",
                     "Method": ""
+                },
+                {
+                    "Exit": "Travoll Mines Bombfuel Event",
+                    "Method": "ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Travoll Mines",
@@ -193,6 +324,10 @@
                 {
                     "Exit": "Travoll Mines",
                     "Method": "ITEM_LINEBOMB && ITEM_BOMBFUEL"
+                },
+                {
+                    "Exit": "Travoll Mines Bombfuel Event",
+                    "Method": "ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Travoll Mines East Exit",

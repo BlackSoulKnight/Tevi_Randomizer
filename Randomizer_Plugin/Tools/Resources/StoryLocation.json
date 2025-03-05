@@ -831,10 +831,322 @@
         "Itemname": "EVENT_EliteChallangeA",
         "Location": "Morose City",
         "LocationName": "Morose City - Elite A",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_GroundBombQuickExcute",
+        "Location": "Forest West",
+        "LocationName": "Forest West - Short Fuse",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Forest West",
+        "LocationName": "Forest West - Cherry Bunny Potion",
+        "slotId": 0,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_NormalShotReducerA",
+        "Location": "Forest West",
+        "LocationName": "Forest West - Orbital Efficiency A",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ChargeShot",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BackflipSnipe",
+        "Location": "Forest East",
+        "LocationName": "Forest West - Acrobat",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_WATERMOVEMENT",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I19",
+        "Location": "Forest Maze",
+        "LocationName": "Forest - Celia",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ChargeShot && QUEST_RabiPillow",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_TauntSit",
+        "Location": "Forest Maze",
+        "LocationName": "Forest - Special Action: Pet the Bunny",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ChargeShot && ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Forest Maze",
+        "LocationName": "Forest Maze - Kiwi Bunny Potion",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "EnemyManip || ITEM_HIJUMP || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_GroundNormal4Mod",
+        "Location": "Forest Maze",
+        "LocationName": "Forest Maze - Titanium Spanner",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_HealCharge",
+        "Location": "Forest Maze extended",
+        "LocationName": "Forest Maze - MP Surge: Recovery",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Forest Maze extended",
+        "LocationName": "Forest Maze - Grape Bunny Potion",
+        "slotId": 22,
+        "Requirement": [
+            {
+                "Method": "(ITEM_DOUBLEJUMP && (ITEM_HIJUMP || ITEM_JETPACK)) || ITEM_WALLJUMP || ITEM_JETPACK 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Forest Maze extended",
+        "LocationName": "Forest Maze - Blueberry Bunny Potion",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Forest Maze extended",
+        "LocationName": "Forest Maze - Grape Bunny Potion #2",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Forest Maze extended",
+        "LocationName": "Forest Maze - Cherry Bunny Potion",
+        "slotId": 23,
+        "Requirement": [
+            {
+                "Method": "ITEM_WALLJUMP || (ITEM_DOUBLEJUMP && (ITEM_JETPACK || ITEM_HIJUMP)) || ITEM_JETPACK 2 || (ITEM_JETPACK && ITEM_HIJUMP)",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AutoHealing",
+        "Location": "Forest Maze extended",
+        "LocationName": "Forest Maze - Auto Heal",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Travoll Mines West Exit",
+        "LocationName": "Travoll Mines - Enable Bombfuel Guy",
+        "slotId": 0,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "QUEST_Seal",
+        "Location": "Travoll Mines Bombfuel Event",
+        "LocationName": "Travoll Mines - Miner's Seal",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_BombFuelGuy",
+        "Location": "Travoll Mines Bombfuel Event",
+        "LocationName": "Travoll Mines - Enable Bombfuel Guy",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Travoll Mines",
+        "LocationName": "Travoll Mines - Mana Armor",
+        "slotId": 15,
+        "Requirement": [
+            {
+                "Method": "ITEM_AREABOMB && ITEM_FUELBOMB && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "Travoll Mines",
+        "LocationName": "Travoll Mines - Grape Bunny Potion",
         "slotId": 0,
         "Requirement": [
             {
                 "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Travoll Mines",
+        "LocationName": "Travoll Mines - Cherry Bunny Potion #2",
+        "slotId": 15,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB && (ITEM_WALLJUMP || (EnemyManip && (ITEM_DOUBLEJUMP || ITEM_JETPACK)) || (ITEM_DOUBLEJUMP && ITEM_JETPACK))",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_AirComboQuicken",
+        "Location": "Travoll Mines",
+        "LocationName": "Travoll Mines - Aerial Accel",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB && (EnemyManip || ITEM_DOUBLEJUMP || ITEM_BOMBFUEL || ITEM_JETPACK || ITEM_AirDash)",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_COG",
+        "Location": "Travoll Mines",
+        "LocationName": "Travoll Mines - Boss",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ChargeShot && ITEM_BOMBFUEL && Boss",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_EnergyDefend",
+        "Location": "Travoll Mines Forest Exit",
+        "LocationName": "Travoll Mines Forest Exit - Mana Armor",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_Fire",
+        "Location": "Travoll Mines Forest Exit",
+        "LocationName": "Travoll Mines Forest Exit - Fire",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Travoll Mines Forest Exit",
+        "LocationName": "Travoll Mines - Kiwi Bunny Potion",
+        "slotId": 14,
+        "Requirement": [
+            {
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_KNIFE",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_EasyDodge",
+        "Location": "Travoll Mines Swamp Exit",
+        "LocationName": "Travoll Mines Swamp Exit - Dodge: Headstrong",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_Rotater",
                 "Difficulty": 0
             }
         ]
