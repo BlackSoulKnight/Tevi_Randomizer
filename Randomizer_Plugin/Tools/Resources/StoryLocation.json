@@ -1244,6 +1244,87 @@
         ]
     },
     {
+        "Itemname": "BADGE_StyleCharge",
+        "Location": "CopperWood Industry Exit",
+        "LocationName": "CopperWood - MP Quicken: Style",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "QdCancel && SpinnerBash",
+                "Difficulty": 4
+            },
+            {
+                "Method": "(ITEM_DOUBLEJUMP && (ITEM_AirDash || ITEM_JETPACK)) || (ITEM_JETPACK && ITEM_AirDash) || ITEM_JETPACK 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "CopperWood To Relict",
+        "LocationName": "CopperWood To Relict - Blueberry Bunnny Potion",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "CopperWood EP Pot",
+        "LocationName": "CopperWood - Lemon Bunnny Potion",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "CopperWood",
+        "LocationName": "CopperWood - Kiwi Bunnny Potion",
+        "slotId": 25,
+        "Requirement": [
+            {
+                "Method": "(ITEM_DOUBLEJUMP && (ITEM_HIJUMP || ITEM_JETPACK)) || ITEM_WALLJUMP || ITEM_JETPACK 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_BoostCostCut",
+        "Location": "CopperWood",
+        "LocationName": "CopperWood Elite - Core Expansion: Saver",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "EVENT_EliteChallangeC && ((ITEM_DOUBLEJUMP && (ITEM_HIJUMP || ITEM_JETPACK)) || ITEM_WALLJUMP || ITEM_JETPACK 2)",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_RATK",
+        "Location": "CopperWood",
+        "LocationName": "CopperWood - Grape Bunnny Potion",
+        "slotId": 7,
+        "Requirement": [
+            {
+                "Method": "(ITEM_DOUBLEJUMP || ITEM_HIJUMP || ITEM_JETPACK || (ITEM_AirDash && ITEM_WALLJUMP)) && (ITEM_OrbTypeS2 || ITEM_OrbTypeS3)&& ChargeShot && I20 && ITEM_ORB 2",
+                "Difficulty": 0
+            },
+
+            {
+                "Method": "(ITEM_DOUBLEJUMP || ITEM_HIJUMP || ITEM_JETPACK || (ITEM_AirDash && ITEM_WALLJUMP)) && ITEM_OrbTypeC3 && ChargeShot && I19 && ITEM_ORB 2",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "BADGE_SableALastHitEnhance",
         "Location": "Crafting",
         "LocationName": "Crafting Chap 1 - Sable Type-A: Voracious",

@@ -459,6 +459,80 @@
             ]
         }
     ],
+    "Map07": [
+        {
+            "Name": "CopperWood Industry Exit",
+            "Connections": [
+                {
+                    "Exit": "CopperWood",
+                    "Method": "ITEM_LINEBOMB || ITEM_SLIDE"
+                },
+                {
+                    "Exit": "CopperWood EP Pot",
+                    "Method": "ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "CopperWood CopperWood To Relict",
+                    "Method": "ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "0705",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "CopperWood EP Pot",
+            "Connections": [
+                {
+                    "Exit": "CopperWood",
+                    "Method": ""
+                },
+                {
+                    "Exit": "CopperWood Industry Exit",
+                    "Method": "ITEM_LINEBOMB"
+                }
+            ]
+        },
+        {
+            "Name": "CopperWood",
+            "Connections": [
+                {
+                    "Exit": "0701",
+                    "Method": ""
+                },
+                {
+                    "Exit": "CopperWood EP Pot",
+                    "Method": "(ITEM_DOUBLEJUMP && (ITEM_JETPACK||ITEM_WALLJUMP)) || (ITEM_JETPACK && ITEM_WALLJUMP)"
+                },
+                {
+                    "Exit": "CopperWood To Relict",
+                    "Method": "ITEM_LINEBOMB ||  ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_WALLJUMP || ITEM_HIJUMP"
+                },
+                {
+                    "Exit": "0700",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "CopperWood To Relict",
+            "Connections": [
+                {
+                    "Exit": "CopperWood",
+                    "Method": ""
+                },
+                {
+                    "Exit": "0704",
+                    "Method": ""
+                },
+                {
+                    "Exit": "",
+                    "Method": "ITEM_LINEBOMB"
+                }
+            ]
+        }
+    ],
     "Transitions": [
         {
             "Name": "0000",
