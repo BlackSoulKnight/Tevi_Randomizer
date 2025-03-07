@@ -533,6 +533,74 @@
             ]
         }
     ],
+    "Map08": [
+        {
+            "Name": "Ana Thema",
+            "Connections": [
+                {
+                    "Exit": "Ana Thema Gallery Exit",
+                    "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "0805",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Ana Thema Train Station",
+                    "Method": "ITEM_HIJUMP || ITEM_WALLJUMP || ITEM_DOUBLEJUMP || ITEM_JETPACK || Spinnerbash"
+                }
+            ]
+        },
+        {
+            "Name": "Ana Thema Train Station",
+            "Connections": [
+                {
+                    "Exit": "Ana Thema",
+                    "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "Vena Shop",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Valhalla City",
+                    "Method": "EVENT_MoroseVisited && ITEM_AirshipPass"
+                },
+                {
+                    "Exit": "Tartarus",
+                    "Method": "EVENT_MoroseVisited && ITEM_RailPass"
+                }
+            ]
+        },
+        {
+            "Name": "Ana Thema Gallery Exit",
+            "Connections": [
+                {
+                    "Exit": "Ana Thema",
+                    "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
+                },
+                {
+                    "Exit": "0806",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Vena Shop",
+            "Money": [
+                {
+                    "Method": "",
+                    "Amount": 0
+                }
+            ],
+            "Connections": [
+                {
+                    "Exit": "",
+                    "Method": ""
+                }
+            ]
+        }
+    ],
     "Transitions": [
         {
             "Name": "0000",
