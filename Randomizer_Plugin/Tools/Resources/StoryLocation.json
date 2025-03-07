@@ -1152,6 +1152,98 @@
         ]
     },
     {
+        "Itemname": "STACKABLE_MATK",
+        "Location": "Travoll Industrie East Exit",
+        "LocationName": "Travoll Industrie East Exit - Cherry Bunnny Potion",
+        "slotId": 26,
+        "Requirement": [
+            {
+                "Method": "ITEM_AirSlide",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_HP",
+        "Location": "Travoll Industrie",
+        "LocationName": "Travoll Industrie - Kiwi Bunnny Potion",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_EP",
+        "Location": "Travoll Industrie",
+        "LocationName": "Travoll Industrie - Kiwi Bunnny Potion",
+        "slotId": 14,
+        "Requirement": [
+            {
+                "Method": "ITEM_AREABOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_MP",
+        "Location": "Travoll Industrie",
+        "LocationName": "Travoll Industrie - Blueberry Bunnny Potion",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_ConvertOff2Def",
+        "Location": "Travoll Industrie",
+        "LocationName": "Travoll Industrie - Buns of Steel",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_HIJUMP && (ITEM_JETPACK || ITEM_DOUBLEJUMP)) || (ITEM_DOUBLEJUMP && ITEM_JETPACK) || (ITEM_AirDash && (ITEM_AirDash || ITEM_DOUBLEJUMP)) || (ITEM_WALLJUMP && (ITEM_DOUBLEJUMP || ITEM_JETPACK))",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "ITEM_BOMBFUEL",
+        "Location": "Travoll Industrie",
+        "LocationName": "Travoll Industrie - Bombfuel",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method":"EVENT_BombFuelGuy && QUEST_Seal",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "BADGE_StyleComboBackflipBomb",
+        "Location": "Travoll Industrie",
+        "LocationName": "Travoll Industrie - Style Combo: Backbomb S",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_SLIDE && ITEM_WALLJUMP && ITEM_AirDash",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_SLIDE && ITEM_WALLJUMP && ITEM_JETPACK",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_SLIDE && ITEM_WALLJUMP && ITEM_DOUBLEJUMP",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "BADGE_SableALastHitEnhance",
         "Location": "Crafting",
         "LocationName": "Crafting Chap 1 - Sable Type-A: Voracious",

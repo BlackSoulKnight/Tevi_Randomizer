@@ -427,6 +427,38 @@
             ]
         }
     ],
+    "Map06": [
+        {
+            "Name": "Travoll Industrie",
+            "Connections": [
+                {
+                    "Exit": "Travoll Industrie East Exit",
+                    "Method": "ITEM_LINEBOMB || ITEM_SLIDE"
+                },
+                {
+                    "Exit": "0603",
+                    "Method": ""
+                },
+                {
+                    "Exit": "0600",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Travoll Industrie East Exit",
+            "Connections": [
+                {
+                    "Exit": "0605",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Travoll Industrie",
+                    "Method": "ITEM_LINEBOMB || ITEM_SLIDE"
+                }
+            ]
+        }
+    ],
     "Transitions": [
         {
             "Name": "0000",
