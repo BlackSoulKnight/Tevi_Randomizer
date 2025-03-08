@@ -813,7 +813,7 @@ namespace TeviRandomizer
                             num5 = -3;
                         }
                     }
-                    if (___currentItemType == ItemList.Type.Function_MaterialExchangeA || ___currentItemType == ItemList.Type.Function_MaterialExchangeB)
+                   else if (___currentItemType == ItemList.Type.Function_MaterialExchangeA || ___currentItemType == ItemList.Type.Function_MaterialExchangeB)
                     {
                         if (!__instance.canExchange(___currentItemType))
                         {

@@ -47,7 +47,7 @@ namespace TeviRandomizer
                 {
                     SaveManager.Instance.SetItem(ItemList.Type.STACKABLE_MATK, 1, true);
                 }
-                if (SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam)) // Story Mode unstuck Cross Bomb dependancy
+                if (!SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam)) // Story Mode unstuck Cross Bomb dependancy
                 {
                     SaveManager.Instance.AddBreakTile(0, 394, 244);
                     SaveManager.Instance.AddBreakTile(0, 394, 245);
