@@ -6764,8 +6764,8 @@
     },
     {
         "Itemname": "STACKABLE_SHARD",
-        "Location": "Ana Thema",
-        "LocationName": "Memine Ana Thema - Rainbow Bunny Potion #1",
+        "Location": "Gleamwood Bottom",
+        "LocationName": "Memine Gleamwood - Rainbow Bunny Potion",
         "slotId": 0,
         "Requirement": [
             {
