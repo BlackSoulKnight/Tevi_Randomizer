@@ -6764,72 +6764,156 @@
     },
     {
         "Itemname": "STACKABLE_SHARD",
-        "Location": "Gleamwood Bottom",
+        "Location": "Gleamwood Middle",
         "LocationName": "Memine Gleamwood - Rainbow Bunny Potion",
         "slotId": 0,
         "Requirement": [
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
+                "Method": "EVENT_Memine0",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_Memine0",
+        "Location": "Gleamwood Bottom",
+        "LocationName": "Gleamwood - Memine Race",
+        "slotId": 0,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_SHARD",
-        "Location": "Blushwood Sliding",
-        "LocationName": "Memine Blushwood Sliding - Rainbow Bunny Potion",
+        "Location": "Verdazure Ocean",
+        "LocationName": "Verdazure Ocean - Memine Race From Blushwood",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_Memine1",
+        "Location": "Blushwood Sliding",
+        "LocationName": "Blushwood Sliding - Memine Race",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && (ITEM_JETPACK 3 || (ITEM_DOUBLEJUMP && (ITEM_SPEEDUP 3 || ITEM_JETPACK)))",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_SHARD",
-        "Location": "Forest",
-        "LocationName": "Memine Forest - Rainbow Bunny Potion",
+        "Location": "CopperWood Industry Exit",
+        "LocationName": "CopperWood - Memine Race from Forest",
         "slotId": 2,
         "Requirement": [
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
+                "Method": "ITEM_LINEBOMB && ((ITEM_WALLJUMP && (ITEM_HIJUMP || ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK)) || (ITEM_JETPACK && ITEM_DOUBLEJUMP) || ITEM_JEPTACK 3)",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_Memine2",
+        "Location": "Forest",
+        "LocationName": "Forest - Memine Race",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_HIJUMP || ITEM_WALLJUMP",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_SHARD",
-        "Location": "Tartarus",
-        "LocationName": "Memine Tartarus - Rainbow Bunny Potion",
+        "Location": "Valhalla City",
+        "LocationName": "Valhalla City - Memine Race From Tartarus",
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
+                "Method": "EVENT_Memine3",
                 "Difficulty": 0
             }
         ]
     },
     {
-        "Itemname": "STACKABLE_SHARD",
-        "Location": "Valhalla Breath West Extended",
-        "LocationName": "Memine Valhalla Breath West Extended - Rainbow Bunny Potion",
+        "Itemname": "EVENT_Memine3",
+        "Location": "Tartarus",
+        "LocationName": "Tartarus - Memine Race",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_Memine4",
+        "Location": "Heavens Valley Snow Route Middle",
+        "LocationName": "Heavens Valley Snow Route Middle - Memine Race",
         "slotId": 4,
         "Requirement": [
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
+                "Method": "ITEM_SLIDE && ( (ITEM_WALLJUMP 2 && ITEM_DOUBLEJUMP) || (ITEM_WALLJUMP && (((ITEM_JETPACK || ITEM_AirDash) && ITEM_DOUBLEJUMP) || (ITEM_AirDash && ITEM_JETPACK) ))",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_SHARD",
-        "Location": "Ana Thema",
-        "LocationName": "Memine Ana Thema - Rainbow Bunny Potion #2",
+        "Location": "EverGarden Path to Boss",
+        "LocationName": "EverGarden - Memine Race From Valhallas Breath East",
+        "slotId": 4,
+        "Requirement": [
+            {
+                "Method": "EVENT_Memine4",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "STACKABLE_SHARD",
+        "Location": "Forgotten City",
+        "LocationName": "Forgotten City - Memine Race From Ana Thema",
         "slotId": 5,
         "Requirement": [
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine",
+                "Method": "ChargeShot && EVENT_Memine5",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_DOUBLEJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && EVENT_Memine5",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_WALLJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && EVENT_Memine5",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && EVENT_Memine5",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_Memine5",
+        "Location": "Ana Thema",
+        "LocationName": "Ana Thema - Memine Race",
+        "slotId": 5,
+        "Requirement": [
+            {
+                "Method": "Chapter 5",
                 "Difficulty": 0
             }
         ]
@@ -6841,7 +6925,7 @@
         "slotId": 29,
         "Requirement": [
             {
-                "Method": "AllMemine",
+                "Method": "EVENT_Memine0 && EVENT_Memine1 && EVENT_Memine2 && EVENT_Memine3 && EVENT_Memine4 && EVENT_Memine5",
                 "Difficulty": 0
             }
         ]
