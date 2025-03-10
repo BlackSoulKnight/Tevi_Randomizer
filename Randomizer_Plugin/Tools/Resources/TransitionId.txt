@@ -5,7 +5,7 @@
 0102:Gurun Desert
 0302:Morose City
 0107:Thanatara Canyon Lower
-0507:Travoll Mines West Exit
+0507:Travoll Mines to Thanatara Canyon
 0105:Thanatara Canyon - Heavens Valley West
 2105:Heavens Valley West
 0106:Thanatara Canyon Lower
@@ -13,66 +13,66 @@
 0303:Morose City
 0603:Travoll Industrie
 0301:Morose City
-0501:Travoll Mines East Exit
+0501:Travoll Mines to Morose City
 0300:Morose City
 0400:Forest
 0409:Forest
-0509:Travoll Mines Forest Exit
+0509:Travoll Mines to Forest
 0401:Forest
 0701:CopperWood
 0408:Forest
-0908:Gleamwood Forest Exit
+0908:Gloamwood to Forest
 0404:Forest
-1304:Verdazure Sea West Exit
-0503:Travoll Mines Swamp Exit
+1304:Verdazure Sea to Forest
+0503:Travoll Mines to Swamp
 1703:Swamp Entrance
 0500:Travoll Mines
 1700:Magma Pits Entrance
-0605:Travoll Industrie East Exit
-0705:CopperWood Industry Exit
+0605:Travoll Industrie to CopperWood
+0705:CopperWood Industry to Travoll Industrie
 0600:Travoll Industrie
 2100:Heavens Valley West
 0700:CopperWood
-0900:Gleamwood Copperwood Exit
+0900:Gloamwood Copperwood to CopperWood
 0704:CopperWood
 2404:Relicts
 0805:Ana Thema
-0905:Gleamwood Bottom
-0806:Ana Thema Gallery Exit
+0905:Gloamwood Bottom
+0806:Ana Thema to Gallery
 2706:Gallery of Mirrors West
 0901:Ulskan Village Area
 1001:Plague Forest
-0904:Ulskan Plague Exit
-1004:Plague Forest Exit
-0902:Gleamwood Ulvosa Exit
-1102:Ulvosa Exit
-0906:Gleamwood Relicts Exit
-2406:Relicts Exit
-0903:Gleamwood Blush Exit
+0904:Ulskan To Plague Forest
+1004:Plague Forest to Ulskan
+0902:Gloamwood to Ulvosa
+1102:Ulvosa to Gloamwood
+0906:Gloamwood to Relicts
+2406:Relicts to Gloamwood
+0903:Gloamwood to Blushwood
 2803:Blushwood
 1202:Snowveil Entrance
 1402:Verdazure Ocean
 1204:Snowveil
 1604:Snow City
 1205:Snowveil above Verglas Village
-1805:DreamKeeper Outside Left Snow Exit
-1303:Verdazure Sea Forgotten Exit
+1805:DreamKeeper Outside Left Snow To Snowveil
+1303:Verdazure Sea to Forgotten city
 1403:Forgotten City Entrance
 1300:Verdazure Sea East
-1400:Verdazure Ocean Sea Exit
+1400:Verdazure Ocean To Sea
 1307:Verdazure Sea West
-2707:Gallery of Souls Sea Exit
+2707:Gallery of Souls to Sea
 1301:Verdazure Sea East
 2801:Blushwood
-1410:Verdazure Swamp Lab Exit
+1410:Verdazure Swamp to Lab
 2510:Lab to Verdazure Swamp Connection
 1502:Tartarus
-1702:Swamp Tartarus Exit
+1702:Swamp to Tartarus
 1503:Tartarus Catacombs
 2503:Catacombs Entrance
 1600:Snowveil Above HQ
 1800:DreamKeeper Outside Right
-1701:Magma Depths Sinner Exit
+1701:Magma Depths to Sinner
 2301:Sinner's Oath Entrance
 1801:DreamKeeper Outside Left
 1901:Heavens Valley Snow Route Low

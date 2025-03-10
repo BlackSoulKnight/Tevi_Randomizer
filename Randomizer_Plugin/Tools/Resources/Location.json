@@ -623,7 +623,7 @@
     {
         "Itemname": "EVENT_BOSS",
         "Location": "Solennian Ruins",
-        "LocationName": "Solennian Ruins - Astral Gear",
+        "LocationName": "Solennian Ruins - Boss",
         "slotId": 42,
         "Requirement": [
             {
@@ -991,7 +991,7 @@
     {
         "Itemname": "EVENT_BOSS",
         "Location": "Morose City",
-        "LocationName": "Morose City - Astral Gear",
+        "LocationName": "Morose City - Boss",
         "slotId": 23,
         "Requirement": [
             {
@@ -1379,7 +1379,7 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Travoll Industrie East Exit",
+        "Location": "Travoll Industrie to CopperWood",
         "LocationName": "Travoll Industrie - Cherry Bunny Potion",
         "slotId": 26,
         "Requirement": [
@@ -1531,8 +1531,8 @@
     },
     {
         "Itemname": "BADGE_EasyDodge",
-        "Location": "Travoll Mines Swamp Exit",
-        "LocationName": "Travoll Mines Swamp Exit - Dodge: Headstrong",
+        "Location": "Travoll Mines to Swamp",
+        "LocationName": "Travoll Mines to Swamp - Dodge: Headstrong",
         "slotId": 1,
         "Requirement": [
             {
@@ -1543,7 +1543,7 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Travoll Mines East Exit",
+        "Location": "Travoll Mines to Morose City",
         "LocationName": "Travoll Mines - Lemon Bunny Potion",
         "slotId": 0,
         "Requirement": [
@@ -1555,8 +1555,8 @@
     },
     {
         "Itemname": "BADGE_EnergyDefend",
-        "Location": "Travoll Mines Forest Exit",
-        "LocationName": "Travoll Mines Forest Exit - Mana Armor",
+        "Location": "Travoll Mines to Forest",
+        "LocationName": "Travoll Mines to Forest - Mana Armor",
         "slotId": 1,
         "Requirement": [
             {
@@ -1783,8 +1783,8 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Gleamwood Bottom",
-        "LocationName": "Gleamwood Middle - Lemon Bunny Potion",
+        "Location": "Gloamwood Bottom",
+        "LocationName": "Gloamwood Middle - Lemon Bunny Potion",
         "slotId": 5,
         "Requirement": [
             {
@@ -1795,8 +1795,8 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Gleamwood Bottom",
-        "LocationName": "Gleamwood Bottom - Cherry Bunny Potion",
+        "Location": "Gloamwood Bottom",
+        "LocationName": "Gloamwood Bottom - Cherry Bunny Potion",
         "slotId": 3,
         "Requirement": [
             {
@@ -1807,8 +1807,8 @@
     },
     {
         "Itemname": "BADGE_QuickBomber",
-        "Location": "Gleamwood Middle",
-        "LocationName": "Gleamwood Middle - Quick Bomber",
+        "Location": "Gloamwood Middle",
+        "LocationName": "Gloamwood Middle - Quick Bomber",
         "slotId": 1,
         "Requirement": [
             {
@@ -1819,8 +1819,8 @@
     },
     {
         "Itemname": "ITEM_MASK",
-        "Location": "Gleamwood Middle",
-        "LocationName": "Gleamwood Middle - Decay Mask",
+        "Location": "Gloamwood Middle",
+        "LocationName": "Gloamwood Middle - Decay Mask",
         "slotId": 1,
         "Requirement": [
             {
@@ -1831,8 +1831,8 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Gleamwood Bottom",
-        "LocationName": "Gleamwood Bottom - Kiwi Bunny Potion",
+        "Location": "Gloamwood Bottom",
+        "LocationName": "Gloamwood Bottom - Kiwi Bunny Potion",
         "slotId": 5,
         "Requirement": [
             {
@@ -1843,8 +1843,8 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Gleamwood Middle",
-        "LocationName": "Gleamwood Middle - Blueberry Bunny Potion",
+        "Location": "Gloamwood Middle",
+        "LocationName": "Gloamwood Middle - Blueberry Bunny Potion",
         "slotId": 26,
         "Requirement": [
             {
@@ -1855,8 +1855,8 @@
     },
     {
         "Itemname": "BADGE_ComboTimeExtendC",
-        "Location": "Gleamwood Middle",
-        "LocationName": "Gleamwood Middle - Combo Time Extend III",
+        "Location": "Gloamwood Middle",
+        "LocationName": "Gloamwood Middle - Combo Time Extend III",
         "slotId": 1,
         "Requirement": [
             {
@@ -1867,8 +1867,8 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Gleamwood Middle",
-        "LocationName": "Gleamwood Middle - Grape Bunny Potion",
+        "Location": "Gloamwood Middle",
+        "LocationName": "Gloamwood Middle - Grape Bunny Potion",
         "slotId": 19,
         "Requirement": [
             {
@@ -1879,8 +1879,8 @@
     },
     {
         "Itemname": "STACKABLE_SHARD",
-        "Location": "Gleamwood Middle",
-        "LocationName": "Gleamwood Middle - Rainbow Bunny Potion",
+        "Location": "Gloamwood Middle",
+        "LocationName": "Gloamwood Middle - Rainbow Bunny Potion",
         "slotId": 15,
         "Requirement": [
             {
@@ -1899,8 +1899,8 @@
     },
     {
         "Itemname": "BADGE_TauntStare",
-        "Location": "Gleamwood Forest Exit",
-        "LocationName": "Gleamwood Middle - Special Action: Speechless",
+        "Location": "Gloamwood to Forest",
+        "LocationName": "Gloamwood Middle - Special Action: Speechless",
         "slotId": 1,
         "Requirement": [
             {
@@ -1923,8 +1923,8 @@
     },
     {
         "Itemname": "BADGE_DodgeMeterBoost",
-        "Location": "Gleamwood Middle",
-        "LocationName": "Gleamwood Upper - Dodge: Optimize",
+        "Location": "Gloamwood Middle",
+        "LocationName": "Gloamwood Upper - Dodge: Optimize",
         "slotId": 1,
         "Requirement": [
             {
@@ -1935,8 +1935,8 @@
     },
     {
         "Itemname": "EVENT_Earth",
-        "Location": "Gleamwood Middle",
-        "LocationName": "Gleamwood Upper - Earth",
+        "Location": "Gloamwood Middle",
+        "LocationName": "Gloamwood Upper - Earth",
         "slotId": 5,
         "Requirement": [
             {
@@ -1947,8 +1947,8 @@
     },
     {
         "Itemname": "EVENT_EliteChallangeC",
-        "Location": "Gleamwood Ulvosa Exit",
-        "LocationName": "Gleamwood Upper - Elite Challenge C",
+        "Location": "Gloamwood to Ulvosa",
+        "LocationName": "Gloamwood Upper - Elite Challenge C",
         "slotId": 1,
         "Requirement": [
             {
@@ -1959,7 +1959,7 @@
     },
     {
         "Itemname": "BADGE_BattleStartCharger",
-        "Location": "Gleamwood Right",
+        "Location": "Gloamwood Right",
         "LocationName": "Ulskan Village Area - MP Surge: Battle Start",
         "slotId": 1,
         "Requirement": [
@@ -1971,7 +1971,7 @@
     },
     {
         "Itemname": "EVENT_Earth",
-        "Location": "Gleamwood Right",
+        "Location": "Gloamwood Right",
         "LocationName": "Ulskan Village Area - Earth",
         "slotId": 1,
         "Requirement": [
@@ -1983,7 +1983,7 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Gleamwood Right",
+        "Location": "Gloamwood Right",
         "LocationName": "Ulskan Village Area - Grape Bunny Potion",
         "slotId": 5,
         "Requirement": [
@@ -2035,7 +2035,7 @@
     },
     {
         "Itemname": "ITEM_AntiDecay",
-        "Location": "Ulskan Plague Exit",
+        "Location": "Ulskan To Plague Forest",
         "LocationName": "Ulskan Village Area - Decay Antidote",
         "slotId": 1,
         "Requirement": [
@@ -2047,7 +2047,7 @@
     },
     {
         "Itemname": "BADGE_SlideHalt",
-        "Location": "Gleamwood Right",
+        "Location": "Gloamwood Right",
         "LocationName": "Ulskan Village Area - Slide Halt",
         "slotId": 1,
         "Requirement": [
@@ -2059,7 +2059,7 @@
     },
     {
         "Itemname": "BADGE_GoldenLuck",
-        "Location": "Ulskan Plague Exit",
+        "Location": "Ulskan To Plague Forest",
         "LocationName": "Ulskan Village Area - Dodge: Golden Luck",
         "slotId": 1,
         "Requirement": [
@@ -2207,7 +2207,7 @@
     },
     {
         "Itemname": "BADGE_BombNormal4Buffer",
-        "Location": "Plague Forest Exit",
+        "Location": "Plague Forest to Ulskan",
         "LocationName": "Plague Forest - Aplomb",
         "slotId": 1,
         "Requirement": [
@@ -2219,7 +2219,7 @@
     },
     {
         "Itemname": "BADGE_PrepDef",
-        "Location": "Plague Forest Exit",
+        "Location": "Plague Forest to Ulskan",
         "LocationName": "Plague Forest - Blood Armor",
         "slotId": 1,
         "Requirement": [
@@ -2523,8 +2523,8 @@
     },
     {
         "Itemname": "BADGE_StyleCharge",
-        "Location": "CopperWood Industry Exit",
-        "LocationName": "CopperWood Industry Exit - MP Quicken: Style",
+        "Location": "CopperWood Industry to Travoll Industrie",
+        "LocationName": "CopperWood Industry to Travoll Industrie - MP Quicken: Style",
         "slotId": 1,
         "Requirement": [
             {
@@ -2795,8 +2795,8 @@
     },
     {
         "Itemname": "BADGE_StyleComboNewAttack",
-        "Location": "Ana Thema Gallery Exit",
-        "LocationName": "Ana Thema Gallery Exit - C. Rank Frenzy: Starter",
+        "Location": "Ana Thema to Gallery",
+        "LocationName": "Ana Thema to Gallery - C. Rank Frenzy: Starter",
         "slotId": 1,
         "Requirement": [
             {
@@ -4180,7 +4180,7 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Verdazure Sea Forgotten Exit",
+        "Location": "Verdazure Sea to Forgotten city",
         "LocationName": "Verdazure Sea to Forgotton City - Grape Bunny Potion",
         "slotId": 26,
         "Requirement": [
@@ -4749,8 +4749,8 @@
     },
     {
         "Itemname": "BADGE_ToArmorReducer",
-        "Location": "EverGarden Path to Boss",
-        "LocationName": "EverGarden Path to Boss - Whipcrack",
+        "Location": "EverGarden BossPath",
+        "LocationName": "EverGarden BossPath - Whipcrack",
         "slotId": 1,
         "Requirement": [
             {
@@ -4769,8 +4769,8 @@
     },
     {
         "Itemname": "BADGE_DashFlashInv",
-        "Location": "EverGarden Path to Boss",
-        "LocationName": "EverGarden Path to Boss - Shooting Star",
+        "Location": "EverGarden BossPath",
+        "LocationName": "EverGarden BossPath - Shooting Star",
         "slotId": 1,
         "Requirement": [
             {
@@ -4781,8 +4781,8 @@
     },
     {
         "Itemname": "BADGE_ComboAntiFullHealth",
-        "Location": "EverGarden Path to Boss",
-        "LocationName": "EverGarden Path to Boss - Battlecry",
+        "Location": "EverGarden BossPath",
+        "LocationName": "EverGarden BossPath - Battlecry",
         "slotId": 1,
         "Requirement": [
             {
@@ -5313,7 +5313,7 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Verdazure Ocean Sea Exit",
+        "Location": "Verdazure Ocean To Sea",
         "LocationName": "Verdazure Ocean - Kiwi Bunny Potion",
         "slotId": 23,
         "Requirement": [
@@ -7040,8 +7040,8 @@
     },
     {
         "Itemname": "STACKABLE_SHARD",
-        "Location": "Gleamwood Middle",
-        "LocationName": "Memine Gleamwood - Rainbow Bunny Potion",
+        "Location": "Gloamwood Middle",
+        "LocationName": "Memine Gloamwood - Rainbow Bunny Potion",
         "slotId": 0,
         "Requirement": [
             {
@@ -7052,8 +7052,8 @@
     },
     {
         "Itemname": "EVENT_Memine",
-        "Location": "Gleamwood Middle",
-        "LocationName": "Memine Gleamwood - Rainbow Bunny Potion",
+        "Location": "Gloamwood Middle",
+        "LocationName": "Memine Gloamwood - Rainbow Bunny Potion",
         "slotId": 0,
         "Requirement": [
             {
@@ -7064,8 +7064,8 @@
     },
     {
         "Itemname": "EVENT_Memine0",
-        "Location": "Gleamwood Bottom",
-        "LocationName": "Gleamwood - Memine Race",
+        "Location": "Gloamwood Bottom",
+        "LocationName": "Gloamwood - Memine Race",
         "slotId": 0,
         "Requirement": [
             {
@@ -7112,24 +7112,24 @@
     },
     {
         "Itemname": "STACKABLE_SHARD",
-        "Location": "CopperWood Industry Exit",
+        "Location": "CopperWood Industry to Travoll Industrie",
         "LocationName": "CopperWood - Memine Race from Forest",
         "slotId": 2,
         "Requirement": [
             {
-                "Method": "EVENT_Memine2 && ITEM_LINEBOMB && ((ITEM_WALLJUMP && (ITEM_HIJUMP || ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK)) || (ITEM_JETPACK && ITEM_DOUBLEJUMP) || ITEM_JEPTACK 3)",
+                "Method": "EVENT_Memine2 && ITEM_LINEBOMB && ((ITEM_WALLJUMP && (ITEM_HIJUMP || ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK)) || (ITEM_JETPACK && ITEM_DOUBLEJUMP) || ITEM_JETPACK 3)",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "EVENT_Memine",
-        "Location": "CopperWood Industry Exit",
+        "Location": "CopperWood Industry to Travoll Industrie",
         "LocationName": "CopperWood - Memine Race from Forest",
         "slotId": 2,
         "Requirement": [
             {
-                "Method": "EVENT_Memine2 &&  ITEM_LINEBOMB && ((ITEM_WALLJUMP && (ITEM_HIJUMP || ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK)) || (ITEM_JETPACK && ITEM_DOUBLEJUMP) || ITEM_JEPTACK 3)",
+                "Method": "EVENT_Memine2 &&  ITEM_LINEBOMB && ((ITEM_WALLJUMP && (ITEM_HIJUMP || ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK)) || (ITEM_JETPACK && ITEM_DOUBLEJUMP) || ITEM_JETPACK 3)",
                 "Difficulty": 0
             }
         ]
@@ -7189,14 +7189,14 @@
         "slotId": 4,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ( (ITEM_WALLJUMP 2 && ITEM_DOUBLEJUMP) || (ITEM_WALLJUMP && (((ITEM_JETPACK || ITEM_AirDash) && ITEM_DOUBLEJUMP) || (ITEM_AirDash && ITEM_JETPACK) ))",
+                "Method": "ITEM_SLIDE && ( (ITEM_WALLJUMP 2 && ITEM_DOUBLEJUMP) || (ITEM_WALLJUMP && (((ITEM_JETPACK || ITEM_AirDash) && ITEM_DOUBLEJUMP) || (ITEM_AirDash && ITEM_JETPACK))))",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_SHARD",
-        "Location": "EverGarden Path to Boss",
+        "Location": "EverGarden BossPath",
         "LocationName": "EverGarden - Memine Race From Valhallas Breath East",
         "slotId": 4,
         "Requirement": [
@@ -7208,7 +7208,7 @@
     },
     {
         "Itemname": "EVENT_Memine",
-        "Location": "EverGarden Path to Boss",
+        "Location": "EverGarden BossPath",
         "LocationName": "EverGarden - Memine Race From Valhallas Breath East",
         "slotId": 4,
         "Requirement": [

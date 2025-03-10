@@ -14,32 +14,32 @@ Forest
 Forest Maze
 Forest Maze boss
 Forest Maze extended
-Travoll Mines East Exit
-Travoll Mines West Exit
+Travoll Mines to Morose City
+Travoll Mines to Thanatara Canyon
 Travoll Mines
-Travoll Mines Forest Exit
-Travoll Mines Swamp Exit
+Travoll Mines to Forest
+Travoll Mines to Swamp
 Travoll Industrie
-Travoll Industrie East Exit
-CopperWood Industry Exit
+Travoll Industrie to CopperWood
+CopperWood Industry to Travoll Industrie
 CopperWood EP Pot
 CopperWood
 Ana Thema
-Ana Thema Gallery Exit
+Ana Thema to Gallery
 Vena Shop
-Gleamwood Forest Exit
-Gleamwood Copperwood Exit
-Gleamwood Relicts Exit
-Gleamwood Blush Exit
-Gleamwood Bottom
-Gleamwood Middle
-Gleamwood Ulvosa Exit
-Gleamwood Right
+Gloamwood to Forest
+Gloamwood Copperwood to CopperWood
+Gloamwood to Relicts
+Gloamwood to Blushwood
+Gloamwood Bottom
+Gloamwood Middle
+Gloamwood to Ulvosa
+Gloamwood Right
 Ulskan Village Area
-Ulskan Plague Exit
+Ulskan To Plague Forest
 Plague Forest
-Plague Forest Exit
-Ulvosa Exit
+Plague Forest to Ulskan
+Ulvosa to Gloamwood
 Ulvosa
 Snowveil Entrance
 Snowveil
@@ -47,12 +47,12 @@ Snowveil Ex
 Snowveil above Verglas Village
 Verdazure Sea West
 Verdazure Sea East
-Verdazure Sea West Exit
-Verdazure Sea Forgotten Exit
-Verdazure Ocean Sea Exit
+Verdazure Sea to Forest
+Verdazure Sea to Forgotten city
+Verdazure Ocean To Sea
 Verdazure Ocean
 Verdazure Swamp
-Verdazure Swamp Lab Exit
+Verdazure Swamp to Lab
 Forgotten City Upper Exit
 Forgotten City Entrance
 Forgotten City
@@ -67,14 +67,14 @@ Magma Pits Entrance
 Magma Pits
 Magma Depths O
 Magma Depths
-Magma Depths Sinner Exit
+Magma Depths to Sinner
 Swamp Entrance
 Pre Swamp
 Swamp
-Swamp Tartarus Exit
+Swamp to Tartarus
 DreamKeeper Outside Right
 DreamKeeper Outside Left
-DreamKeeper Outside Left Snow Exit
+DreamKeeper Outside Left Snow To Snowveil
 DreamKeeper
 Dreamless Depths
 Dreamless Depths 2
@@ -92,7 +92,7 @@ Sinner's Oath
 Illusion Palace Entrance
 Illusion Palace
 Relicts
-Relicts Exit
+Relicts to Gloamwood
 Catacombs Entrance
 Catacombs Main
 Catacombs Inner
@@ -110,13 +110,13 @@ Gallery of Mirrors East
 Gallery of Souls Entrance
 Gallery of Souls
 Gallery of Souls Boss Area
-Gallery of Souls Sea Exit
+Gallery of Souls to Sea
 Blushwood
 Blushwood Sliding
 EverGarden
 EverGarden To Valley
 EverGarden To Valhalla
-EverGarden Path to Boss
+EverGarden BossPath
 EverGarden Boss Area
 0000
 0100

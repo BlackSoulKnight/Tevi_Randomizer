@@ -1093,7 +1093,7 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Travoll Mines West Exit",
+        "Location": "Travoll Mines to Thanatara Canyon",
         "LocationName": "Travoll Mines - Enable Bombfuel Guy",
         "slotId": 0,
         "Requirement": [
@@ -1189,8 +1189,8 @@
     },
     {
         "Itemname": "BADGE_EnergyDefend",
-        "Location": "Travoll Mines Forest Exit",
-        "LocationName": "Travoll Mines Forest Exit - Mana Armor",
+        "Location": "Travoll Mines to Forest",
+        "LocationName": "Travoll Mines to Forest - Mana Armor",
         "slotId": 1,
         "Requirement": [
             {
@@ -1201,8 +1201,8 @@
     },
     {
         "Itemname": "EVENT_Fire",
-        "Location": "Travoll Mines Forest Exit",
-        "LocationName": "Travoll Mines Forest Exit - Fire",
+        "Location": "Travoll Mines to Forest",
+        "LocationName": "Travoll Mines to Forest - Fire",
         "slotId": 1,
         "Requirement": [
             {
@@ -1213,7 +1213,7 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Travoll Mines Forest Exit",
+        "Location": "Travoll Mines to Forest",
         "LocationName": "Travoll Mines - Kiwi Bunny Potion",
         "slotId": 14,
         "Requirement": [
@@ -1225,8 +1225,8 @@
     },
     {
         "Itemname": "BADGE_EasyDodge",
-        "Location": "Travoll Mines Swamp Exit",
-        "LocationName": "Travoll Mines Swamp Exit - Dodge: Headstrong",
+        "Location": "Travoll Mines to Swamp",
+        "LocationName": "Travoll Mines to Swamp - Dodge: Headstrong",
         "slotId": 1,
         "Requirement": [
             {
@@ -1237,8 +1237,8 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Travoll Industrie East Exit",
-        "LocationName": "Travoll Industrie East Exit - Cherry Bunnny Potion",
+        "Location": "Travoll Industrie to CopperWood",
+        "LocationName": "Travoll Industrie to CopperWood - Cherry Bunnny Potion",
         "slotId": 26,
         "Requirement": [
             {
@@ -1329,7 +1329,7 @@
     },
     {
         "Itemname": "BADGE_StyleCharge",
-        "Location": "CopperWood Industry Exit",
+        "Location": "CopperWood Industry to Travoll Industrie",
         "LocationName": "CopperWood - MP Quicken: Style",
         "slotId": 1,
         "Requirement": [
@@ -1550,8 +1550,8 @@
     },
     {
         "Itemname": "BADGE_StyleComboNewAttack",
-        "Location": "Ana Thema Gallery Exit",
-        "LocationName": "Ana Thema Gallery Exit - C. Rank Frenzy: Starter",
+        "Location": "Ana Thema to Gallery",
+        "LocationName": "Ana Thema to Gallery - C. Rank Frenzy: Starter",
         "slotId": 1,
         "Requirement": [
             {

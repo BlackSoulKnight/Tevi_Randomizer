@@ -112,9 +112,9 @@
 44966541111 : Travoll Mines - Grape Bunny Potion
 44966541112 : Travoll Mines - Blueberry Bunny Potion
 44966541113 : Travoll Mines - Kiwi Bunny Potion
-44966541114 : Travoll Mines Swamp Exit - Dodge: Headstrong
+44966541114 : Travoll Mines to Swamp - Dodge: Headstrong
 44966541115 : Travoll Mines - Lemon Bunny Potion
-44966541116 : Travoll Mines Forest Exit - Mana Armor
+44966541116 : Travoll Mines to Forest - Mana Armor
 44966541117 : Forest - Short Fuse
 44966541118 : Forest - Cherry Bunny Potion
 44966541119 : Forest - Orbital Efficiency A
@@ -132,19 +132,19 @@
 44966541131 : Forest Maze extended - Cherry Bunny Potion
 44966541132 : Forest Maze extended - Grape Bunny Potion #1
 44966541133 : Forest Maze extended - Grape Bunny Potion #2
-44966541134 : Gleamwood Middle - Lemon Bunny Potion
-44966541135 : Gleamwood Bottom - Cherry Bunny Potion
-44966541136 : Gleamwood Middle - Quick Bomber
-44966541137 : Gleamwood Middle - Decay Mask
-44966541138 : Gleamwood Bottom - Kiwi Bunny Potion
-44966541139 : Gleamwood Middle - Blueberry Bunny Potion
-44966541140 : Gleamwood Middle - Combo Time Extend III
-44966541141 : Gleamwood Middle - Grape Bunny Potion
-44966541142 : Gleamwood Middle - Rainbow Bunny Potion
-44966541143 : Gleamwood Middle - Special Action: Speechless
-44966541144 : Gleamwood Upper - Dodge: Optimize
-44966541145 : Gleamwood Upper - Earth
-44966541146 : Gleamwood Upper - Elite
+44966541134 : Gloamwood Middle - Lemon Bunny Potion
+44966541135 : Gloamwood Bottom - Cherry Bunny Potion
+44966541136 : Gloamwood Middle - Quick Bomber
+44966541137 : Gloamwood Middle - Decay Mask
+44966541138 : Gloamwood Bottom - Kiwi Bunny Potion
+44966541139 : Gloamwood Middle - Blueberry Bunny Potion
+44966541140 : Gloamwood Middle - Combo Time Extend III
+44966541141 : Gloamwood Middle - Grape Bunny Potion
+44966541142 : Gloamwood Middle - Rainbow Bunny Potion
+44966541143 : Gloamwood Middle - Special Action: Speechless
+44966541144 : Gloamwood Upper - Dodge: Optimize
+44966541145 : Gloamwood Upper - Earth
+44966541146 : Gloamwood Upper - Elite
 44966541147 : Ulskan Village Area - MP Surge: Battle Start
 44966541148 : Ulskan Village Area - Earth
 44966541149 : Ulskan Village Area - Grape Bunny Potion
@@ -186,7 +186,7 @@
 44966541185 : CopperWood - Grape Bunny Potion
 44966541186 : CopperWood Elite - Core Expansion: Saver
 44966541187 : CopperWood - Kiwi Bunny Potion
-44966541188 : CopperWood Industry Exit - MP Quicken: Style
+44966541188 : CopperWood Industry to Travoll Industrie - MP Quicken: Style
 44966541189 : Relicts - MP Quicken: Accelerate
 44966541190 : Relicts - Grape Bunny Potion
 44966541191 : Relicts - Fire
@@ -201,7 +201,7 @@
 44966541200 : Ana Thema - Deft I
 44966541201 : Ana Thema
 44966541202 : Ana Thema - Terrestrial Agility
-44966541203 : Ana Thema Gallery Exit - C. Rank Frenzy: Starter
+44966541203 : Ana Thema to Gallery - C. Rank Frenzy: Starter
 44966541204 : Ana Thema Shop - Deadly Reach
 44966541205 : Ana Thema Shop Memloch - Flash Point
 44966541206 : Ana Thema Shop Memloch - Break Extend
@@ -351,9 +351,9 @@
 44966541350 : EverGarden - Style Combo: Power A
 44966541351 : EverGarden - Deft B
 44966541352 : EverGarden - Cherry Bunny Potion
-44966541353 : EverGarden Path to Boss - Whipcrack
-44966541354 : EverGarden Path to Boss - Shooting Star
-44966541355 : EverGarden Path to Boss - Battlecry
+44966541353 : EverGarden BossPath - Whipcrack
+44966541354 : EverGarden BossPath - Shooting Star
+44966541355 : EverGarden BossPath - Battlecry
 44966541356 : EverGarden Boss Area - Astral Gear
 44966541357 : EverGarden Boss Area - Debuff Counter
 44966541358 : Heaven Portal Hub - Crystal Boon

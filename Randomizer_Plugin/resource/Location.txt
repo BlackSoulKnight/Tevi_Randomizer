@@ -101,7 +101,7 @@ Useable_WaffleElueberry@Morose City@1@Coins 300 && Chapter 6,0@Morose City Chap 
 BADGE_StyleComboBackflipBomb@Travoll Industrie@1@ITEM_SLIDE && ITEM_WALLJUMP && ITEM_AirDash,0;ITEM_SLIDE && ITEM_WALLJUMP && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_WALLJUMP && ITEM_DOUBLEJUMP,0;ITEM_SLIDE && BounceKick,0@Travoll Industrie - Style Combo: Backbomb S
 STACKABLE_EP@Travoll Industrie@14@ITEM_AREABOMB && ITEM_LINEBOMB,0@Travoll Industrie - Lemon Bunny Potion
 STACKABLE_HP@Travoll Industrie@2@ITEM_LINEBOMB,0@Travoll Industrie - Kiwi Bunny Potion
-STACKABLE_MATK@Travoll Industrie East Exit@26@ITEM_AirSlide && ITEM_SLIDE,0@Travoll Industrie - Cherry Bunny Potion
+STACKABLE_MATK@Travoll Industrie to CopperWood@26@ITEM_AirSlide && ITEM_SLIDE,0@Travoll Industrie - Cherry Bunny Potion
 ITEM_BOMBFUEL@Travoll Industrie@1@,0@Travoll Industrie - Bomb Fuel
 BADGE_ConvertOff2Def@Travoll Industrie@1@ITEM_SLIDE && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_DOUBLEJUMP,0;ITEM_SLIDE && ITEM_WALLJUMP && ITEM_AirDash,0@Travoll Industrie - Buns of Steel
 STACKABLE_MP@Travoll Industrie@1@,0@Travoll Industrie - Blueberry Bunny Potion
@@ -112,9 +112,9 @@ BADGE_AirComboQuicken@Travoll Mines@1@ITEM_LINEBOMB,0@Travoll Mines - Aerial Acc
 STACKABLE_RATK@Travoll Mines@0@ITEM_LINEBOMB || CKick,0@Travoll Mines - Grape Bunny Potion
 STACKABLE_MP@Travoll Mines@15@ITEM_SLIDE && ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_BOMBFUEL,0@Travoll Mines - Blueberry Bunny Potion
 STACKABLE_HP@Travoll Mines@14@ITEM_SLIDE && ITEM_LINEBOMB,0@Travoll Mines - Kiwi Bunny Potion
-BADGE_EasyDodge@Travoll Mines Swamp Exit@1@ITEM_Rotater,0@Travoll Mines Swamp Exit - Dodge: Headstrong
-STACKABLE_EP@Travoll Mines East Exit@0@ITEM_LINEBOMB,0@Travoll Mines - Lemon Bunny Potion
-BADGE_EnergyDefend@Travoll Mines Forest Exit@1@,0@Travoll Mines Forest Exit - Mana Armor
+BADGE_EasyDodge@Travoll Mines to Swamp@1@ITEM_Rotater,0@Travoll Mines to Swamp - Dodge: Headstrong
+STACKABLE_EP@Travoll Mines to Morose City@0@ITEM_LINEBOMB,0@Travoll Mines - Lemon Bunny Potion
+BADGE_EnergyDefend@Travoll Mines to Forest@1@,0@Travoll Mines to Forest - Mana Armor
 BADGE_GroundBombQuickExcute@Forest@1@,0@Forest - Short Fuse
 STACKABLE_MATK@Forest@0@ITEM_LINEBOMB,0@Forest - Cherry Bunny Potion
 BADGE_NormalShotReducerA@Forest@1@ChargeShot,0@Forest - Orbital Efficiency A
@@ -132,28 +132,28 @@ STACKABLE_MP@Forest Maze extended@3@,0@Forest Maze extended - Blueberry Bunny Po
 STACKABLE_MATK@Forest Maze extended@23@,0@Forest Maze extended - Cherry Bunny Potion
 STACKABLE_RATK@Forest Maze extended@1@,0@Forest Maze extended - Grape Bunny Potion #1
 STACKABLE_RATK@Forest Maze extended@22@,0@Forest Maze extended - Grape Bunny Potion #2
-STACKABLE_EP@Gleamwood Bottom@5@,0@Gleamwood Middle - Lemon Bunny Potion
-STACKABLE_MATK@Gleamwood Bottom@3@ChargeShot,0@Gleamwood Bottom - Cherry Bunny Potion
-BADGE_QuickBomber@Gleamwood Middle@1@ITEM_LINEBOMB,0@Gleamwood Middle - Quick Bomber
-ITEM_MASK@Gleamwood Middle@1@,0@Gleamwood Middle - Decay Mask
-STACKABLE_HP@Gleamwood Bottom@5@ITEM_KNIFE,0@Gleamwood Bottom - Kiwi Bunny Potion
-STACKABLE_MP@Gleamwood Middle@26@ITEM_SLIDE && ITEM_LINEBOMB,0@Gleamwood Middle - Blueberry Bunny Potion
-BADGE_ComboTimeExtendC@Gleamwood Middle@1@ITEM_SLIDE && ( ( EnemyManip && ITEM_ORB ) || VenaBomb ) && ITEM_KNIFE,0@Gleamwood Middle - Combo Time Extend III
-STACKABLE_RATK@Gleamwood Middle@19@ITEM_SLIDE && ChargeShot && ITEM_LINEBOMB,0@Gleamwood Middle - Grape Bunny Potion
-STACKABLE_SHARD@Gleamwood Middle@15@ITEM_DOUBLEJUMP && ITEM_LINEBOMB,0;ITEM_JETPACK && ITEM_LINEBOMB,0;ITEM_AirDash && ITEM_LINEBOMB,0@Gleamwood Middle - Rainbow Bunny Potion
-BADGE_TauntStare@Gleamwood Forest Exit@1@ITEM_JETPACK && ITEM_LINEBOMB,0;ITEM_AirDash && ITEM_LINEBOMB,0;ITEM_DOUBLEJUMP && ITEM_LINEBOMB,0;RabbitWalljump && ITEM_LINEBOMB,0@Gleamwood Middle - Special Action: Speechless
-BADGE_DodgeMeterBoost@Gleamwood Middle@1@(ITEM_SLIDE || HiddenP) && (ITEM_KNIFE || ITEM_ORB),0@Gleamwood Upper - Dodge: Optimize
-EVENT_Earth@Gleamwood Middle@5@,0@Gleamwood Upper - Earth
-EVENT_EliteChallangeC@Gleamwood Ulvosa Exit@1@,0@Gleamwood Upper - Elite
-BADGE_BattleStartCharger@Gleamwood Right@1@ChargeShot,0@Ulskan Village Area - MP Surge: Battle Start
-EVENT_Earth@Gleamwood Right@1@,0@Ulskan Village Area - Earth
-STACKABLE_RATK@Gleamwood Right@5@ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB 2,0;VenaBomb,0@Ulskan Village Area - Grape Bunny Potion
+STACKABLE_EP@Gloamwood Bottom@5@,0@Gloamwood Middle - Lemon Bunny Potion
+STACKABLE_MATK@Gloamwood Bottom@3@ChargeShot,0@Gloamwood Bottom - Cherry Bunny Potion
+BADGE_QuickBomber@Gloamwood Middle@1@ITEM_LINEBOMB,0@Gloamwood Middle - Quick Bomber
+ITEM_MASK@Gloamwood Middle@1@,0@Gloamwood Middle - Decay Mask
+STACKABLE_HP@Gloamwood Bottom@5@ITEM_KNIFE,0@Gloamwood Bottom - Kiwi Bunny Potion
+STACKABLE_MP@Gloamwood Middle@26@ITEM_SLIDE && ITEM_LINEBOMB,0@Gloamwood Middle - Blueberry Bunny Potion
+BADGE_ComboTimeExtendC@Gloamwood Middle@1@ITEM_SLIDE && ( ( EnemyManip && ITEM_ORB ) || VenaBomb ) && ITEM_KNIFE,0@Gloamwood Middle - Combo Time Extend III
+STACKABLE_RATK@Gloamwood Middle@19@ITEM_SLIDE && ChargeShot && ITEM_LINEBOMB,0@Gloamwood Middle - Grape Bunny Potion
+STACKABLE_SHARD@Gloamwood Middle@15@ITEM_DOUBLEJUMP && ITEM_LINEBOMB,0;ITEM_JETPACK && ITEM_LINEBOMB,0;ITEM_AirDash && ITEM_LINEBOMB,0@Gloamwood Middle - Rainbow Bunny Potion
+BADGE_TauntStare@Gloamwood to Forest@1@ITEM_JETPACK && ITEM_LINEBOMB,0;ITEM_AirDash && ITEM_LINEBOMB,0;ITEM_DOUBLEJUMP && ITEM_LINEBOMB,0;RabbitWalljump && ITEM_LINEBOMB,0@Gloamwood Middle - Special Action: Speechless
+BADGE_DodgeMeterBoost@Gloamwood Middle@1@(ITEM_SLIDE || HiddenP) && (ITEM_KNIFE || ITEM_ORB),0@Gloamwood Upper - Dodge: Optimize
+EVENT_Earth@Gloamwood Middle@5@,0@Gloamwood Upper - Earth
+EVENT_EliteChallangeC@Gloamwood to Ulvosa@1@,0@Gloamwood Upper - Elite
+BADGE_BattleStartCharger@Gloamwood Right@1@ChargeShot,0@Ulskan Village Area - MP Surge: Battle Start
+EVENT_Earth@Gloamwood Right@1@,0@Ulskan Village Area - Earth
+STACKABLE_RATK@Gloamwood Right@5@ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB 2,0;VenaBomb,0@Ulskan Village Area - Grape Bunny Potion
 BADGE_AirNormalComboSpeedup@Ulskan Village Area@1@ITEM_KNIFE || VenaBomb || ITEM_ORB,0@Ulskan Village Area - Aerial Agility
 BADGE_DoubleGroundNormal3N1@Ulskan Village Area@1@ITEM_SLIDE && ITEM_LINEBOMB,0@Ulskan Village Area - Dual Combo: Flow
 STACKABLE_MP@Ulskan Village Area@5@ITEM_KNIFE || VenaBomb,0@Ulskan Village Area - Blueberry Bunny Potion
-ITEM_AntiDecay@Ulskan Plague Exit@1@ITEM_SLIDE && ITEM_LINEBOMB,0@Ulskan Village Area - Decay Antidote
-BADGE_SlideHalt@Gleamwood Right@1@ITEM_SLIDE && ITEM_LINEBOMB,0@Ulskan Village Area - Slide Halt
-BADGE_GoldenLuck@Ulskan Plague Exit@1@ITEM_SLIDE && ITEM_LINEBOMB && ChargeShot,0@Ulskan Village Area - Dodge: Golden Luck
+ITEM_AntiDecay@Ulskan To Plague Forest@1@ITEM_SLIDE && ITEM_LINEBOMB,0@Ulskan Village Area - Decay Antidote
+BADGE_SlideHalt@Gloamwood Right@1@ITEM_SLIDE && ITEM_LINEBOMB,0@Ulskan Village Area - Slide Halt
+BADGE_GoldenLuck@Ulskan To Plague Forest@1@ITEM_SLIDE && ITEM_LINEBOMB && ChargeShot,0@Ulskan Village Area - Dodge: Golden Luck
 BADGE_WeakAirDownRotate@Plague Forest@1@ChargeShot,0@Plague Forest - Windmill Strike
 BADGE_StyleComboReduceDamageS@Plague Forest@1@ITEM_LINEBOMB,0@Plague Forest - C. Rank Frenzy: Defend
 STACKABLE_HP@Plague Forest@6@ITEM_LINEBOMB,0@Plague Forest - Kiwi Bunny Potion
@@ -163,8 +163,8 @@ STACKABLE_EP@Plague Forest@6@ChargeShot,0@Plague Forest - Lemon Bunny Potion
 BADGE_TauntKnife@Plague Forest@1@ITEM_AirDash,0;ITEM_DOUBLEJUMP,0;ITEM_JETPACK,0;ITEM_LINEBOMB,0;ITEM_HIJUMP && ITEM_WALLJUMP,0@Plague Forest - Special Action: Show Off
 BADGE_DodgeWeakGroundUp@Plague Forest@1@ITEM_LINEBOMB,0@Plague Forest - Dodge Enhancer: Upper
 STACKABLE_COG@Plague Forest@30@( ITEM_MASK ) && Boss,0@Plague Forest - Astral Gear
-BADGE_BombNormal4Buffer@Plague Forest Exit@1@ITEM_SLIDE && ITEM_LINEBOMB,0@Plague Forest - Aplomb
-BADGE_PrepDef@Plague Forest Exit@1@ITEM_AirSlide && ITEM_SLIDE && ITEM_LINEBOMB,0@Plague Forest - Blood Armor
+BADGE_BombNormal4Buffer@Plague Forest to Ulskan@1@ITEM_SLIDE && ITEM_LINEBOMB,0@Plague Forest - Aplomb
+BADGE_PrepDef@Plague Forest to Ulskan@1@ITEM_AirSlide && ITEM_SLIDE && ITEM_LINEBOMB,0@Plague Forest - Blood Armor
 STACKABLE_RATK@Plague Forest@6@,0@Plague Forest - Grape Bunny Potion
 STACKABLE_MATK@Plague Forest@5@,0@Plague Forest - Cherry Bunny Potion
 BADGE_Unlucky7@Plague Forest@1@ITEM_LINEBOMB,0@Plague Forest - Unlucky 7
@@ -186,7 +186,7 @@ STACKABLE_EP@CopperWood EP Pot@2@,0@CopperWood - Lemon Bunny Potion
 STACKABLE_RATK@CopperWood@7@ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB 2,0;ITEM_OrbTypeS3 && ChargeShot && I20 && ITEM_ORB 2,0;ITEM_OrbTypeC3 && ChargeShot && I19 && ITEM_ORB 2,0@CopperWood - Grape Bunny Potion
 BADGE_BoostCostCut@CopperWood@1@EVENT_EliteChallangeC,0@CopperWood Elite - Core Expansion: Saver
 STACKABLE_HP@CopperWood@25@,0@CopperWood - Kiwi Bunny Potion
-BADGE_StyleCharge@CopperWood Industry Exit@1@ITEM_DOUBLEJUMP,2;ITEM_AirDash,0;ITEM_JETPACK,0@CopperWood Industry Exit - MP Quicken: Style
+BADGE_StyleCharge@CopperWood Industry to Travoll Industrie@1@ITEM_DOUBLEJUMP,2;ITEM_AirDash,0;ITEM_JETPACK,0@CopperWood Industry to Travoll Industrie - MP Quicken: Style
 BADGE_LateCharge@Relicts@1@ITEM_LINEBOMB,0@Relicts - MP Quicken: Accelerate
 STACKABLE_RATK@Relicts@2@ITEM_LINEBOMB,0@Relicts - Grape Bunny Potion
 EVENT_Fire@Relicts@3@,0@Relicts - Fire
@@ -204,7 +204,7 @@ EVENT_EliteChallangeD@Ana Thema@1@,0@Ana Thema - Elite
 BADGE_QuickMeleeLagA@Ana Thema@1@ITEM_LINEBOMB,0@Ana Thema - Deft I
 EVENT_AnathemaVisited@Ana Thema@1@,0@Ana Thema - Visit
 BADGE_GroundNormalComboSpeedup@Ana Thema@1@ITEM_LINEBOMB,0@Ana Thema - Terrestrial Agility
-BADGE_StyleComboNewAttack@Ana Thema Gallery Exit@1@ITEM_LINEBOMB,0@Ana Thema Gallery Exit - C. Rank Frenzy: Starter
+BADGE_StyleComboNewAttack@Ana Thema to Gallery@1@ITEM_LINEBOMB,0@Ana Thema to Gallery - C. Rank Frenzy: Starter
 ITEM_AttackRange@Ana Thema@1@Coins 2300,0@Ana Thema Shop - Deadly Reach
 BADGE_GroundNormalCombo4AltTiming@Ana Thema@1@Coins 2000 && EVENT_Memloch,0@Ana Thema Shop Memloch - Flash Point
 BADGE_BreakTimeExtend@Ana Thema@1@Coins 2650 && EVENT_Memloch,0@Ana Thema Shop Memloch - Break Extend
@@ -313,7 +313,7 @@ BADGE_CommonDropRecover@Verdazure Sea East@1@,0@Verdazure Sea - Grub Guru
 EVENT_Water@Verdazure Sea East@2@,0@Verdazure Sea - Water
 STACKABLE_MP@Verdazure Sea West@4@,0@Verdazure Sea - Blueberry Bunny Potion
 BADGE_InvincibilityExtend@Verdazure Sea West@1@ITEM_LINEBOMB,0@Verdazure Sea - Invictus
-STACKABLE_RATK@Verdazure Sea Forgotten Exit@26@ITEM_LINEBOMB,0@Verdazure Sea to Forgotton City - Grape Bunny Potion
+STACKABLE_RATK@Verdazure Sea to Forgotten city@26@ITEM_LINEBOMB,0@Verdazure Sea to Forgotton City - Grape Bunny Potion
 BADGE_ComboTimeExtendA@Blushwood@1@ITEM_LINEBOMB,0@Blushwood - Combo Time Extend I
 EVENT_Dark@Blushwood@3@ITEM_SLIDE,0@Blushwood - Dark
 STACKABLE_MATK@Blushwood@8@,0@Blushwood - Cherry Bunny Potion
@@ -354,9 +354,9 @@ BADGE_CrystalAbsorberC@EverGarden@1@ITEM_LINEBOMB,0;ITEM_AirDash,0;ITEM_JETPACK,
 BADGE_StyleComboNormal3H@EverGarden@1@ITEM_LINEBOMB && ITEM_DOUBLEJUMP,0;ITEM_LINEBOMB && ITEM_HIJUMP && ITEM_JETPACK,0;ITEM_LINEBOMB && ITEM_JETPACK 2,0;ITEM_LINEBOMB && ITEM_WALLJUMP && ITEM_AirDash,0@EverGarden - Style Combo: Power A
 BADGE_QuickMeleeLagB@EverGarden@1@ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_JETPACK 3,0;ITEM_SLIDE && ITEM_HIJUMP && ITEM_JETPACK 2,0@EverGarden - Deft B
 STACKABLE_MATK@EverGarden@16@ITEM_SLIDE && ITEM_LINEBOMB && (ITEM_DOUBLEJUMP || ITEM_JETPACK || (ITEM_AirDash && ITEM_WALLJUMP)),0@EverGarden - Cherry Bunny Potion
-BADGE_ToArmorReducer@EverGarden Path to Boss@1@ITEM_JETPACK && ITEM_LINEBOMB,3;ITEM_AirDash && ITEM_LINEBOMB,4;ITEM_WALLJUMP && ITEM_LINEBOMB && ITEM_DOUBLEJUMP,0@EverGarden Path to Boss - Whipcrack
-BADGE_DashFlashInv@EverGarden Path to Boss@1@ChargeShot && (ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || RabbitWalljump),0@EverGarden Path to Boss - Shooting Star
-BADGE_ComboAntiFullHealth@EverGarden Path to Boss@1@ITEM_SLIDE && ChargeShot && (ITEM_JETPACK || ITEM_DOUBLEJUMP),0@EverGarden Path to Boss - Battlecry
+BADGE_ToArmorReducer@EverGarden BossPath@1@ITEM_JETPACK && ITEM_LINEBOMB,3;ITEM_AirDash && ITEM_LINEBOMB,4;ITEM_WALLJUMP && ITEM_LINEBOMB && ITEM_DOUBLEJUMP,0@EverGarden BossPath - Whipcrack
+BADGE_DashFlashInv@EverGarden BossPath@1@ChargeShot && (ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || RabbitWalljump),0@EverGarden BossPath - Shooting Star
+BADGE_ComboAntiFullHealth@EverGarden BossPath@1@ITEM_SLIDE && ChargeShot && (ITEM_JETPACK || ITEM_DOUBLEJUMP),0@EverGarden BossPath - Battlecry
 STACKABLE_COG@EverGarden Boss Area@49@Boss,0@EverGarden Boss Area - Astral Gear
 BADGE_DebuffCounter@EverGarden Boss Area@1@ITEM_LINEBOMB,0@EverGarden Boss Area - Debuff Counter
 BADGE_CrystalIncrease@EverGarden Boss Area@1@ITEM_SLIDE && ITEM_LINEBOMB,0;ITEM_WALLJUMP && ITEM_LINEBOMB,0@Heaven Portal Hub - Crystal Boon
@@ -392,7 +392,7 @@ STACKABLE_RATK@Gallery of Souls@10@ITEM_SLIDE && ITEM_LINEBOMB,0@Gallery of Soul
 ITEM_DOUBLEJUMP@Gallery of Souls@1@,0@Gallery of Souls - Double Rabi Boots
 BADGE_Instant1@Gallery of Souls Boss Area@1@ITEM_LINEBOMB,-1@Gallery of Souls Boss Area - Hero Call
 STACKABLE_COG@Gallery of Souls Boss Area@62@( ITEM_AntiDecay || ITEM_ZCrystal) && Boss,0@Gallery of Souls Boss Area - Astral Gear
-STACKABLE_HP@Verdazure Ocean Sea Exit@23@ITEM_WALLJUMP && ITEM_DOUBLEJUMP,0;ITEM_WALLJUMP && ITEM_JETPACK 2,0;ITEM_WALLJUMP && ITEM_WATERMOVEMENT,0;ITEM_WALLJUMP && ITEM_JETPACK && ITEM_AirDash,0;ITEM_WATERMOVEMENT && ITEM_AirDash && ITEM_DOUBLEJUMP,0;ITEM_WATERMOVEMENT && ITEM_DOUBLEJUMP && ITEM_JETPACK,0@Verdazure Ocean - Kiwi Bunny Potion
+STACKABLE_HP@Verdazure Ocean To Sea@23@ITEM_WALLJUMP && ITEM_DOUBLEJUMP,0;ITEM_WALLJUMP && ITEM_JETPACK 2,0;ITEM_WALLJUMP && ITEM_WATERMOVEMENT,0;ITEM_WALLJUMP && ITEM_JETPACK && ITEM_AirDash,0;ITEM_WATERMOVEMENT && ITEM_AirDash && ITEM_DOUBLEJUMP,0;ITEM_WATERMOVEMENT && ITEM_DOUBLEJUMP && ITEM_JETPACK,0@Verdazure Ocean - Kiwi Bunny Potion
 BADGE_DodgeCharger@Verdazure Ocean@1@ITEM_AREABOMB && ITEM_LINEBOMB && ChargeShot,0@Verdazure Ocean - MP Surge: Dodge
 STACKABLE_MP@Verdazure Ocean@16@ITEM_LINEBOMB,0@Verdazure Ocean - Blueberry Bunny Potion #1
 STACKABLE_RATK@Verdazure Ocean@25@ITEM_LINEBOMB,0@Verdazure Ocean - Grape Bunny Potion

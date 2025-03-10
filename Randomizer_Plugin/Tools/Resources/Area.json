@@ -423,7 +423,7 @@
     ],
     "Map05": [
         {
-            "Name": "Travoll Mines East Exit",
+            "Name": "Travoll Mines to Morose City",
             "Money": [],
             "Connections": [
                 {
@@ -435,13 +435,13 @@
                     "Method": "ITEM_LINEBOMB && ITEM_BOMBFUEL"
                 },
                 {
-                    "Exit": "Travoll Mines West Exit",
+                    "Exit": "Travoll Mines to Thanatara Canyon",
                     "Method": "ITEM_LINEBOMB"
                 }
             ]
         },
         {
-            "Name": "Travoll Mines West Exit",
+            "Name": "Travoll Mines to Thanatara Canyon",
             "Money": [],
             "Connections": [
                 {
@@ -453,7 +453,7 @@
                     "Method": "ITEM_LINEBOMB && ITEM_BOMBFUEL"
                 },
                 {
-                    "Exit": "Travoll Mines East Exit",
+                    "Exit": "Travoll Mines to Morose City",
                     "Method": "ITEM_LINEBOMB"
                 }
             ]
@@ -472,11 +472,11 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Travoll Mines East Exit",
+                    "Exit": "Travoll Mines to Morose City",
                     "Method": ""
                 },
                 {
-                    "Exit": "Travoll Mines Forest Exit",
+                    "Exit": "Travoll Mines to Forest",
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
@@ -484,13 +484,13 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Travoll Mines Swamp Exit",
+                    "Exit": "Travoll Mines to Swamp",
                     "Method": "ITEM_SLIDE && ITEM_BOMBFUEL"
                 }
             ]
         },
         {
-            "Name": "Travoll Mines Forest Exit",
+            "Name": "Travoll Mines to Forest",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -513,7 +513,7 @@
             ]
         },
         {
-            "Name": "Travoll Mines Swamp Exit",
+            "Name": "Travoll Mines to Swamp",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -551,7 +551,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Travoll Industrie East Exit",
+                    "Exit": "Travoll Industrie to CopperWood",
                     "Method": "ITEM_LINEBOMB || ITEM_SLIDE"
                 },
                 {
@@ -565,7 +565,7 @@
             ]
         },
         {
-            "Name": "Travoll Industrie East Exit",
+            "Name": "Travoll Industrie to CopperWood",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -590,7 +590,7 @@
     ],
     "Map07": [
         {
-            "Name": "CopperWood Industry Exit",
+            "Name": "CopperWood Industry to Travoll Industrie",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -625,7 +625,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "CopperWood Industry Exit",
+                    "Exit": "CopperWood Industry to Travoll Industrie",
                     "Method": "ITEM_LINEBOMB"
                 }
             ]
@@ -673,7 +673,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Ana Thema Gallery Exit",
+                    "Exit": "Ana Thema to Gallery",
                     "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
                 },
                 {
@@ -695,7 +695,7 @@
             ]
         },
         {
-            "Name": "Ana Thema Gallery Exit",
+            "Name": "Ana Thema to Gallery",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -731,7 +731,7 @@
     ],
     "Map09": [
         {
-            "Name": "Gleamwood Forest Exit",
+            "Name": "Gloamwood to Forest",
             "Money": [],
             "Connections": [
                 {
@@ -739,13 +739,13 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Gleamwood Bottom",
+                    "Exit": "Gloamwood Bottom",
                     "Method": ""
                 }
             ]
         },
         {
-            "Name": "Gleamwood Copperwood Exit",
+            "Name": "Gloamwood Copperwood to CopperWood",
             "Money": [],
             "Connections": [
                 {
@@ -753,13 +753,13 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Gleamwood Middle",
+                    "Exit": "Gloamwood Middle",
                     "Method": "ITEM_LINEBOMB"
                 }
             ]
         },
         {
-            "Name": "Gleamwood Relicts Exit",
+            "Name": "Gloamwood to Relicts",
             "Money": [],
             "Connections": [
                 {
@@ -767,13 +767,13 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Gleamwood Middle",
+                    "Exit": "Gloamwood Middle",
                     "Method": "ITEM_BombLengthExtend"
                 }
             ]
         },
         {
-            "Name": "Gleamwood Blush Exit",
+            "Name": "Gloamwood to Blushwood",
             "Money": [],
             "Connections": [
                 {
@@ -781,13 +781,13 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Gleamwood Right",
+                    "Exit": "Gloamwood Right",
                     "Method": "ITEM_HIJUMP || ITEM_DOUBLEJUMP || ITEM_AirDash || ITEM_JETPACK || RabbitJump"
                 }
             ]
         },
         {
-            "Name": "Gleamwood Bottom",
+            "Name": "Gloamwood Bottom",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -804,15 +804,15 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Gleamwood Forest Exit",
+                    "Exit": "Gloamwood to Forest",
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "Gleamwood Middle",
+                    "Exit": "Gloamwood Middle",
                     "Method": "ITEM_DOUBLEJUMP || ITEM_LINEBOMB || ITEM_JETPACK || ITEM_AirDash"
                 },
                 {
-                    "Exit": "Gleamwood Middle",
+                    "Exit": "Gloamwood Middle",
                     "Method": "EnemyManip"
                 },
                 {
@@ -822,7 +822,7 @@
             ]
         },
         {
-            "Name": "Gleamwood Middle",
+            "Name": "Gloamwood Middle",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -839,29 +839,29 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Gleamwood Copperwood Exit",
+                    "Exit": "Gloamwood Copperwood to CopperWood",
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "Gleamwood Relicts Exit",
+                    "Exit": "Gloamwood to Relicts",
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "Gleamwood Ulvosa Exit",
+                    "Exit": "Gloamwood to Ulvosa",
                     "Method": "(ITEM_SLIDE || HiddenP) && ChargeShot"
                 },
                 {
-                    "Exit": "Gleamwood Bottom",
+                    "Exit": "Gloamwood Bottom",
                     "Method": ""
                 },
                 {
-                    "Exit": "Gleamwood Right",
+                    "Exit": "Gloamwood Right",
                     "Method": "ITEM_DOUBLEJUMP || ITEM_AirDash || ITEM_JETPACK || RabbitJump"
                 }
             ]
         },
         {
-            "Name": "Gleamwood Ulvosa Exit",
+            "Name": "Gloamwood to Ulvosa",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -870,7 +870,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Gleamwood Middle",
+                    "Exit": "Gloamwood Middle",
                     "Method": ""
                 },
                 {
@@ -880,7 +880,7 @@
             ]
         },
         {
-            "Name": "Gleamwood Right",
+            "Name": "Gloamwood Right",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -893,11 +893,11 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Gleamwood Middle",
+                    "Exit": "Gloamwood Middle",
                     "Method": ""
                 },
                 {
-                    "Exit": "Gleamwood Blush Exit",
+                    "Exit": "Gloamwood to Blushwood",
                     "Method": ""
                 },
                 {
@@ -911,7 +911,7 @@
             "Money": [],
             "Connections": [
                 {
-                    "Exit": "Gleamwood Middle",
+                    "Exit": "Gloamwood Middle",
                     "Method": "ITEM_KNIFE || VenaBomb || ITEM_ORB"
                 },
                 {
@@ -921,7 +921,7 @@
             ]
         },
         {
-            "Name": "Ulskan Plague Exit",
+            "Name": "Ulskan To Plague Forest",
             "Money": [],
             "Connections": [
                 {
@@ -950,13 +950,13 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Plague Forest Exit",
+                    "Exit": "Plague Forest to Ulskan",
                     "Method": "ITEM_LINEBOMB && ITEM_SLIDE"
                 }
             ]
         },
         {
-            "Name": "Plague Forest Exit",
+            "Name": "Plague Forest to Ulskan",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -973,7 +973,7 @@
     ],
     "Map11": [
         {
-            "Name": "Ulvosa Exit",
+            "Name": "Ulvosa to Gloamwood",
             "Money": [],
             "Connections": [
                 {
@@ -1126,11 +1126,11 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Verdazure Sea Forgotten Exit",
+                    "Exit": "Verdazure Sea to Forgotten city",
                     "Method": "ITEM_WATERMOVEMENT && ITEM_LINEBOMB"
                 },
                 {
-                    "Exit": "Verdazure Sea West Exit",
+                    "Exit": "Verdazure Sea to Forest",
                     "Method": ""
                 },
                 {
@@ -1162,7 +1162,7 @@
             ]
         },
         {
-            "Name": "Verdazure Sea West Exit",
+            "Name": "Verdazure Sea to Forest",
             "Money": [],
             "Connections": [
                 {
@@ -1176,7 +1176,7 @@
             ]
         },
         {
-            "Name": "Verdazure Sea Forgotten Exit",
+            "Name": "Verdazure Sea to Forgotten city",
             "Money": [],
             "Connections": [
                 {
@@ -1188,7 +1188,7 @@
     ],
     "Map14": [
         {
-            "Name": "Verdazure Ocean Sea Exit",
+            "Name": "Verdazure Ocean To Sea",
             "Money": [],
             "Connections": [
                 {
@@ -1219,7 +1219,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Verdazure Ocean Sea Exit",
+                    "Exit": "Verdazure Ocean To Sea",
                     "Method": "ITEM_SLIDE"
                 },
                 {
@@ -1250,7 +1250,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Verdazure Swamp Lab Exit",
+                    "Exit": "Verdazure Swamp to Lab",
                     "Method": "ITEM_SLIDE"
                 },
                 {
@@ -1260,7 +1260,7 @@
             ]
         },
         {
-            "Name": "Verdazure Swamp Lab Exit",
+            "Name": "Verdazure Swamp to Lab",
             "Money": [
                 {
                     "Method": "ITEM_JETPACK 3 || ITEM_AirDash &&(ITEM_JETPACK || ITEM_DOUBLEJUMP) || ITEM_JETPACK && ITEM_DOUBLEJUMP",
@@ -1637,14 +1637,14 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Magma Depths Sinner Exit",
+                    "Exit": "Magma Depths to Sinner",
                     "Method": "HiddenP || (ITEM_AirSlide && ITEM_Rotater && (ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_SPEEDUP 3))",
                     "Note": "Place a block to recover from a failed jump"
                 }
             ]
         },
         {
-            "Name": "Magma Depths Sinner Exit",
+            "Name": "Magma Depths to Sinner",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -1741,7 +1741,7 @@
                     "Method": "ITEM_AirDash || ITEM_ORB || ITEM_KNIFE"
                 },
                 {
-                    "Exit": "Swamp Tartarus Exit",
+                    "Exit": "Swamp to Tartarus",
                     "Method": "HiddenP || ITEM_AREABOMB"
                 },
                 {
@@ -1751,7 +1751,7 @@
             ]
         },
         {
-            "Name": "Swamp Tartarus Exit",
+            "Name": "Swamp to Tartarus",
             "Money": [],
             "Connections": [
                 {
@@ -1823,13 +1823,13 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "DreamKeeper Outside Left Snow Exit",
+                    "Exit": "DreamKeeper Outside Left Snow To Snowveil",
                     "Method": ""
                 }
             ]
         },
         {
-            "Name": "DreamKeeper Outside Left Snow Exit",
+            "Name": "DreamKeeper Outside Left Snow To Snowveil",
             "Money": [],
             "Connections": [
                 {
@@ -2240,13 +2240,13 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Relicts Exit",
+                    "Exit": "Relicts to Gloamwood",
                     "Method": "ITEM_LINEBOMB"
                 }
             ]
         },
         {
-            "Name": "Relicts Exit",
+            "Name": "Relicts to Gloamwood",
             "Money": [],
             "Connections": [
                 {
@@ -2626,7 +2626,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "Gallery of Souls Sea Exit",
+                    "Exit": "Gallery of Souls to Sea",
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
@@ -2644,7 +2644,7 @@
             ]
         },
         {
-            "Name": "Gallery of Souls Sea Exit",
+            "Name": "Gallery of Souls to Sea",
             "Money": [],
             "Connections": [
                 {
@@ -2717,19 +2717,19 @@
             ],
             "Connections": [
                 {
-                    "Exit": "EverGarden Path to Boss",
+                    "Exit": "EverGarden BossPath",
                     "Method": "ITEM_DOUBLEJUMP"
                 },
                 {
-                    "Exit": "EverGarden Path to Boss",
+                    "Exit": "EverGarden BossPath",
                     "Method": "ITEM_JETPACK && ITEM_AirDash"
                 },
                 {
-                    "Exit": "EverGarden Path to Boss",
+                    "Exit": "EverGarden BossPath",
                     "Method": "ITEM_JETPACK 3"
                 },
                 {
-                    "Exit": "EverGarden Path to Boss",
+                    "Exit": "EverGarden BossPath",
                     "Method": "ITEM_JETPACK 2"
                 },
                 {
@@ -2771,7 +2771,7 @@
             ]
         },
         {
-            "Name": "EverGarden Path to Boss",
+            "Name": "EverGarden BossPath",
             "Money": [
                 {
                     "Method": "ITEM_LINEBOMB",
@@ -2819,7 +2819,7 @@
             ],
             "Connections": [
                 {
-                    "Exit": "EverGarden Path to Boss",
+                    "Exit": "EverGarden BossPath",
                     "Method": ""
                 },
                 {
@@ -2929,7 +2929,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Travoll Mines West Exit",
+                    "Exit": "Travoll Mines to Thanatara Canyon",
                     "Method": ""
                 }
             ]
@@ -3033,7 +3033,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Travoll Mines East Exit",
+                    "Exit": "Travoll Mines to Morose City",
                     "Method": ""
                 }
             ]
@@ -3085,7 +3085,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Travoll Mines Forest Exit",
+                    "Exit": "Travoll Mines to Forest",
                     "Method": ""
                 }
             ]
@@ -3137,7 +3137,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Gleamwood Forest Exit",
+                    "Exit": "Gloamwood to Forest",
                     "Method": ""
                 }
             ]
@@ -3163,7 +3163,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Verdazure Sea West Exit",
+                    "Exit": "Verdazure Sea to Forest",
                     "Method": ""
                 }
             ]
@@ -3176,7 +3176,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Travoll Mines Swamp Exit",
+                    "Exit": "Travoll Mines to Swamp",
                     "Method": ""
                 }
             ]
@@ -3228,7 +3228,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Travoll Industrie East Exit",
+                    "Exit": "Travoll Industrie to CopperWood",
                     "Method": ""
                 }
             ]
@@ -3241,7 +3241,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "CopperWood Industry Exit",
+                    "Exit": "CopperWood Industry to Travoll Industrie",
                     "Method": ""
                 }
             ]
@@ -3293,7 +3293,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Gleamwood Copperwood Exit",
+                    "Exit": "Gloamwood Copperwood to CopperWood",
                     "Method": ""
                 }
             ]
@@ -3345,7 +3345,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Gleamwood Bottom",
+                    "Exit": "Gloamwood Bottom",
                     "Method": ""
                 }
             ]
@@ -3358,7 +3358,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Ana Thema Gallery Exit",
+                    "Exit": "Ana Thema to Gallery",
                     "Method": ""
                 }
             ]
@@ -3410,7 +3410,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Ulskan Plague Exit",
+                    "Exit": "Ulskan To Plague Forest",
                     "Method": ""
                 }
             ]
@@ -3423,7 +3423,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Plague Forest Exit",
+                    "Exit": "Plague Forest to Ulskan",
                     "Method": ""
                 }
             ]
@@ -3436,7 +3436,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Gleamwood Ulvosa Exit",
+                    "Exit": "Gloamwood to Ulvosa",
                     "Method": ""
                 }
             ]
@@ -3449,7 +3449,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Ulvosa Exit",
+                    "Exit": "Ulvosa to Gloamwood",
                     "Method": ""
                 }
             ]
@@ -3462,7 +3462,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Gleamwood Relicts Exit",
+                    "Exit": "Gloamwood to Relicts",
                     "Method": ""
                 }
             ]
@@ -3475,7 +3475,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Relicts Exit",
+                    "Exit": "Relicts to Gloamwood",
                     "Method": ""
                 }
             ]
@@ -3488,7 +3488,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Gleamwood Blush Exit",
+                    "Exit": "Gloamwood to Blushwood",
                     "Method": ""
                 }
             ]
@@ -3579,7 +3579,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "DreamKeeper Outside Left Snow Exit",
+                    "Exit": "DreamKeeper Outside Left Snow To Snowveil",
                     "Method": ""
                 }
             ]
@@ -3592,7 +3592,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Verdazure Sea Forgotten Exit",
+                    "Exit": "Verdazure Sea to Forgotten city",
                     "Method": ""
                 }
             ]
@@ -3631,7 +3631,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Verdazure Ocean Sea Exit",
+                    "Exit": "Verdazure Ocean To Sea",
                     "Method": ""
                 }
             ]
@@ -3657,7 +3657,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Gallery of Souls Sea Exit",
+                    "Exit": "Gallery of Souls to Sea",
                     "Method": ""
                 }
             ]
@@ -3696,7 +3696,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Verdazure Swamp Lab Exit",
+                    "Exit": "Verdazure Swamp to Lab",
                     "Method": ""
                 }
             ]
@@ -3735,7 +3735,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Swamp Tartarus Exit",
+                    "Exit": "Swamp to Tartarus",
                     "Method": ""
                 }
             ]
@@ -3800,7 +3800,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Magma Depths Sinner Exit",
+                    "Exit": "Magma Depths to Sinner",
                     "Method": ""
                 }
             ]
