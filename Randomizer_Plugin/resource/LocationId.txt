@@ -301,8 +301,8 @@
 44966541300 : Lab - Demon Fray
 44966541301 : Lab - C. Rank Frenzy: Focus A
 44966541302 : Lab - Shining Bangle
-44966541303 : Lab - Verdazure Swamp Connection - Alterscope
-44966541304 : Lab - Verdazure Swamp Connection - MP Quicken: Battlescars
+44966541303 : Lab to Verdazure Swamp Connection - Alterscope
+44966541304 : Lab to Verdazure Swamp Connection - MP Quicken: Battlescars
 44966541305 : Verdazure Sea - Hydrodynamo
 44966541306 : Verdazure Sea - Water West
 44966541307 : Verdazure Sea - Kiwi Bunny Potion

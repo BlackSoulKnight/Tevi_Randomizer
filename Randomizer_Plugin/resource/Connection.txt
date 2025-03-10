@@ -264,9 +264,9 @@ Lab Hub:Lab Left:(ITEM_DOUBLEJUMP || (ITEM_AirDash && ITEM_WALLJUMP) || ITEM_JET
 Lab Left:Lab Hub:ITEM_SLIDE
 Lab Left:Lab:ITEM_LINEBOMB && (ITEM_DOUBLEJUMP || ITEM_JETPACK || (ITEM_WALLJUMP && ITEM_AirDash) || RabbitWalljump)
 Lab:Lab Hub:ITEM_SLIDE
-Lab:Lab - Verdazure Swamp Connection:ITEM_BombLengthExtend 3 && ITEM_LINEBOMB
-Lab - Verdazure Swamp Connection:Lab:ITEM_BombLengthExtend 3 && ITEM_LINEBOMB
-Lab - Verdazure Swamp Connection:2510:
+Lab:Lab to Verdazure Swamp Connection:ITEM_BombLengthExtend 3 && ITEM_LINEBOMB
+Lab to Verdazure Swamp Connection:Lab:ITEM_BombLengthExtend 3 && ITEM_LINEBOMB
+Lab to Verdazure Swamp Connection:2510:
 Cloister Entrance:2608:
 Cloister Entrance:Cloister:ITEM_SLIDE
 Cloister:Cloister Pre Boss:ChargeShot
@@ -442,7 +442,7 @@ EverGarden Boss Area:EverGarden:
 1410:2510:
 1410:Verdazure Swamp Lab Exit:
 2510:1410:
-2510:Lab - Verdazure Swamp Connection:
+2510:Lab to Verdazure Swamp Connection:
 1502:1702:
 1502:Tartarus:
 1702:1502:

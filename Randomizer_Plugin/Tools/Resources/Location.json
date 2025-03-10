@@ -431,7 +431,7 @@
     {
         "Itemname": "EVENT_EliteChallangeB",
         "Location": "Thanatara Canyon",
-        "LocationName": "Thanatara Canyon - EliteB",
+        "LocationName": "Thanatara Canyon - Elite Challenge B",
         "slotId": 1,
         "Requirement": [
             {
@@ -623,7 +623,7 @@
     {
         "Itemname": "BADGE_BreakDamageBoost",
         "Location": "Solennian Ruins",
-        "LocationName": "Solennian Ruins - Nasty Break-up",
+        "LocationName": "Solennian Ruins - Nasty Break up",
         "slotId": 1,
         "Requirement": [
             {
@@ -931,7 +931,7 @@
     {
         "Itemname": "EVENT_EliteChallangeA",
         "Location": "Morose City",
-        "LocationName": "Morose City - Elite A",
+        "LocationName": "Morose City - Elite Challenge A",
         "slotId": 0,
         "Requirement": [
             {
@@ -1224,7 +1224,7 @@
     {
         "Itemname": "Useable_WaffleAHoneycloud",
         "Location": "Morose City",
-        "LocationName": "Morose City Shop - Honeycloud Waffle",
+        "LocationName": "Morose City Waffle Shop - Honeycloud Waffle",
         "slotId": 1,
         "Requirement": [
             {
@@ -1236,7 +1236,7 @@
     {
         "Itemname": "Useable_WaffleBMeringue",
         "Location": "Morose City",
-        "LocationName": "Morose City Shop Chap 3 - Toasted Meringue Waffle",
+        "LocationName": "Morose City Waffle Shop Chap 3 - Toasted Meringue Waffle",
         "slotId": 1,
         "Requirement": [
             {
@@ -1248,7 +1248,7 @@
     {
         "Itemname": "Useable_WaffleCMorning",
         "Location": "Morose City",
-        "LocationName": "Morose City Shop Chap 4  - Good Morning Waffle",
+        "LocationName": "Morose City Waffle Shop Chap 4  - Good Morning Waffle",
         "slotId": 1,
         "Requirement": [
             {
@@ -1260,7 +1260,7 @@
     {
         "Itemname": "Useable_WaffleDJellydrop",
         "Location": "Morose City",
-        "LocationName": "Morose City Shop Chap 5  - Berry Pink Waffle",
+        "LocationName": "Morose City Waffle Shop Chap 5  - Berry Pink Waffle",
         "slotId": 1,
         "Requirement": [
             {
@@ -1272,7 +1272,7 @@
     {
         "Itemname": "Useable_WaffleElueberry",
         "Location": "Morose City",
-        "LocationName": "Morose City Chap 6 - Blueberry Waffle",
+        "LocationName": "Morose City Waffle Shop Chap 6 - Blueberry Waffle",
         "slotId": 1,
         "Requirement": [
             {
@@ -1876,7 +1876,7 @@
     {
         "Itemname": "EVENT_EliteChallangeC",
         "Location": "Gleamwood Ulvosa Exit",
-        "LocationName": "Gleamwood Upper - Elite",
+        "LocationName": "Gleamwood Upper - Elite Challenge C",
         "slotId": 1,
         "Requirement": [
             {
@@ -2484,7 +2484,7 @@
     {
         "Itemname": "BADGE_8thDamageHeal",
         "Location": "Relicts",
-        "LocationName": "Relicts - Attenu-8",
+        "LocationName": "Relicts - Attenu 8",
         "slotId": 1,
         "Requirement": [
             {
@@ -2640,7 +2640,7 @@
     {
         "Itemname": "EVENT_EliteChallangeD",
         "Location": "Ana Thema",
-        "LocationName": "Ana Thema - Elite",
+        "LocationName": "Ana Thema - Elite Challenge D",
         "slotId": 1,
         "Requirement": [
             {
@@ -3349,7 +3349,7 @@
     {
         "Itemname": "EVENT_EliteChallangeE",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Elite E",
+        "LocationName": "Tartarus - Elite Challenge E",
         "slotId": 1,
         "Requirement": [
             {
@@ -3940,8 +3940,8 @@
     },
     {
         "Itemname": "ITEM_Alterscope",
-        "Location": "Lab - Verdazure Swamp Connection",
-        "LocationName": "Lab - Verdazure Swamp Connection - Alterscope",
+        "Location": "Lab to Verdazure Swamp Connection",
+        "LocationName": "Lab to Verdazure Swamp Connection - Alterscope",
         "slotId": 1,
         "Requirement": [
             {
@@ -3952,8 +3952,8 @@
     },
     {
         "Itemname": "BADGE_HitCountChargeRate",
-        "Location": "Lab - Verdazure Swamp Connection",
-        "LocationName": "Lab - Verdazure Swamp Connection - MP Quicken: Battlescars",
+        "Location": "Lab to Verdazure Swamp Connection",
+        "LocationName": "Lab to Verdazure Swamp Connection - MP Quicken: Battlescars",
         "slotId": 1,
         "Requirement": [
             {
@@ -4201,7 +4201,7 @@
     {
         "Itemname": "EVENT_EliteChallangeF",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - Elite F",
+        "LocationName": "Valhalla City - Elite Challenge F",
         "slotId": 18,
         "Requirement": [
             {
@@ -4466,7 +4466,7 @@
     {
         "Itemname": "STACKABLE_HP",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - Shop Kiwi Bunny Potion",
+        "LocationName": "Valhalla City Shop - Kiwi Bunny Potion",
         "slotId": 33,
         "Requirement": [
             {
@@ -6849,7 +6849,7 @@
     {
         "Itemname": "BADGE_SableALastHitEnhance",
         "Location": "Crafting",
-        "LocationName": "Crafting Chap 1 - Sable Type-A: Voracious",
+        "LocationName": "Crafting Chap 1 - Sable Type A: Voracious",
         "slotId": 1,
         "Requirement": [
             {
@@ -6861,7 +6861,7 @@
     {
         "Itemname": "BADGE_SableALongRangeSnipe",
         "Location": "Crafting",
-        "LocationName": "Crafting - Sable Type-A: Fanged",
+        "LocationName": "Crafting - Sable Type A: Fanged",
         "slotId": 1,
         "Requirement": [
             {
@@ -6873,7 +6873,7 @@
     {
         "Itemname": "BADGE_SableAHitIncrease",
         "Location": "Crafting",
-        "LocationName": "Crafting - Sable Type-A: Ensnare",
+        "LocationName": "Crafting - Sable Type A: Ensnare",
         "slotId": 1,
         "Requirement": [
             {
@@ -6885,7 +6885,7 @@
     {
         "Itemname": "BADGE_SableBNormalShotDebuff",
         "Location": "Crafting",
-        "LocationName": "Crafting - Sable Type-B: Malediction",
+        "LocationName": "Crafting - Sable Type B: Malediction",
         "slotId": 1,
         "Requirement": [
             {
@@ -6897,7 +6897,7 @@
     {
         "Itemname": "BADGE_SableBReturnStyle",
         "Location": "Crafting",
-        "LocationName": "Crafting - Sable Type-B: Backlash",
+        "LocationName": "Crafting - Sable Type B: Backlash",
         "slotId": 1,
         "Requirement": [
             {
@@ -6909,7 +6909,7 @@
     {
         "Itemname": "BADGE_SableCBigExplode",
         "Location": "Crafting",
-        "LocationName": "Crafting - Sable Type-C: Ignite",
+        "LocationName": "Crafting - Sable Type C: Ignite",
         "slotId": 1,
         "Requirement": [
             {
@@ -6921,7 +6921,7 @@
     {
         "Itemname": "BADGE_SableCSaver",
         "Location": "Crafting",
-        "LocationName": "Crafting - Sable Type-C: Fervid",
+        "LocationName": "Crafting - Sable Type C: Fervid",
         "slotId": 1,
         "Requirement": [
             {
@@ -6945,7 +6945,7 @@
     {
         "Itemname": "BADGE_CeliaALongStun",
         "Location": "Crafting",
-        "LocationName": "Crafting Chap 1 - Celia Type-A: Stunning",
+        "LocationName": "Crafting Chap 1 - Celia Type A: Stunning",
         "slotId": 1,
         "Requirement": [
             {
@@ -6957,7 +6957,7 @@
     {
         "Itemname": "BADGE_CeliaASlowShot",
         "Location": "Crafting",
-        "LocationName": "Crafting - Celia Type-A: Meteoric",
+        "LocationName": "Crafting - Celia Type A: Meteoric",
         "slotId": 1,
         "Requirement": [
             {
@@ -6969,7 +6969,7 @@
     {
         "Itemname": "BADGE_CeliaAShortRangeBurst",
         "Location": "Crafting",
-        "LocationName": "Crafting - Celia Type-A: Beguile",
+        "LocationName": "Crafting - Celia Type A: Beguile",
         "slotId": 1,
         "Requirement": [
             {
@@ -6981,7 +6981,7 @@
     {
         "Itemname": "BADGE_CeliaTypeBAmount",
         "Location": "Crafting",
-        "LocationName": "Crafting - Celia Type-B: Halo",
+        "LocationName": "Crafting - Celia Type B: Halo",
         "slotId": 1,
         "Requirement": [
             {
@@ -6993,7 +6993,7 @@
     {
         "Itemname": "BADGE_CELIATYPEBANGLE",
         "Location": "Crafting",
-        "LocationName": "Crafting - Celia Type-B: Prism",
+        "LocationName": "Crafting - Celia Type B: Prism",
         "slotId": 1,
         "Requirement": [
             {
@@ -7005,7 +7005,7 @@
     {
         "Itemname": "BADGE_CeliaCShotIncrease",
         "Location": "Crafting",
-        "LocationName": "Crafting - Celia Type-C: Barrage",
+        "LocationName": "Crafting - Celia Type C: Barrage",
         "slotId": 1,
         "Requirement": [
             {
@@ -7017,7 +7017,7 @@
     {
         "Itemname": "BADGE_CeliaCShotAllDirection",
         "Location": "Crafting",
-        "LocationName": "Crafting - Celia Type-C: Panoptic",
+        "LocationName": "Crafting - Celia Type C: Panoptic",
         "slotId": 1,
         "Requirement": [
             {
@@ -7077,7 +7077,7 @@
     {
         "Itemname": "BADGE_NormalShotWhenChargedShot",
         "Location": "Crafting",
-        "LocationName": "Crafting Chap 3 - Two-pronged Shot",
+        "LocationName": "Crafting Chap 3 - Two pronged Shot",
         "slotId": 1,
         "Requirement": [
             {
@@ -7889,7 +7889,7 @@
     {
         "Itemname": "ITEM_OrbTypeC2",
         "Location": "Item Upgrade",
-        "LocationName": "Orb Type Upgrade - Blue Module Type-B",
+        "LocationName": "Orb Type Upgrade - Blue Module Type B",
         "slotId": 1,
         "Requirement": [
             {
@@ -7901,7 +7901,7 @@
     {
         "Itemname": "ITEM_OrbTypeS2",
         "Location": "Item Upgrade",
-        "LocationName": "Orb Type Upgrade - Red Module Type-B",
+        "LocationName": "Orb Type Upgrade - Red Module Typ B",
         "slotId": 1,
         "Requirement": [
             {
@@ -7913,7 +7913,7 @@
     {
         "Itemname": "ITEM_OrbTypeC3",
         "Location": "Item Upgrade",
-        "LocationName": "Orb Type Upgrade - Blue Module Type-C",
+        "LocationName": "Orb Type Upgrade - Blue Module Type C",
         "slotId": 1,
         "Requirement": [
             {
@@ -7925,7 +7925,7 @@
     {
         "Itemname": "ITEM_OrbTypeS3",
         "Location": "Item Upgrade",
-        "LocationName": "Orb Type Upgrade - Red Module Type-C",
+        "LocationName": "Orb Type Upgrade - Red Module Type C",
         "slotId": 1,
         "Requirement": [
             {
@@ -7937,7 +7937,7 @@
     {
         "Itemname": "ITEM_OrbBoostU",
         "Location": "Item Upgrade",
-        "LocationName": "Orb Type Upgrade - Core Module Type-U",
+        "LocationName": "Orb Type Upgrade - Core Module Type U",
         "slotId": 1,
         "Requirement": [
             {
@@ -7949,7 +7949,7 @@
     {
         "Itemname": "ITEM_OrbBoostD",
         "Location": "Item Upgrade",
-        "LocationName": "Orb Type Upgrade - Core Module Type-D",
+        "LocationName": "Orb Type Upgrade - Core Module Type D",
         "slotId": 1,
         "Requirement": [
             {

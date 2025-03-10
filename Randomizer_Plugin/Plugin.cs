@@ -68,7 +68,7 @@ namespace TeviRandomizer
     }
 
 
-    [BepInPlugin("tevi.plugins.randomizer", "Randomizer", "1.2.3")]
+    [BepInPlugin("tevi.plugins.randomizer", "Randomizer", "1.2.2.2")]
     [BepInProcess("TEVI.exe")]
     public class RandomizerPlugin : BaseUnityPlugin
     {
@@ -517,17 +517,19 @@ namespace TeviRandomizer
                 ___slotid = 1;
             }
 
-            if (!SaveManager.Instance.GetCustomGameMainVar(CustomGame.FreeRoam))
+            if (!SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam))
             {
                 if (EventManager.Instance.GetElm(__instance.transform, 0f, MainVar.instance.TILESIZE) == ElementType.FreeRoamOnly)
                 {
                     __instance.DisableMe();
+                    Debug.Log($"DISABLE {__instance.itemid.ToString()} because Not Story mode");
                     return false;
                 }
             }
             else if (EventManager.Instance.GetElm(__instance.transform, 0f, MainVar.instance.TILESIZE) == ElementType.NotFreeRoamOnly)
             {
                 __instance.DisableMe();
+                Debug.Log($"DISABLE {__instance.itemid.ToString()} because Not free roam");
                 return false;
             }
             if (__instance.itemid == ItemList.Type.ITEM_RapidShots) { ___slotid = 29; }

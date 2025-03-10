@@ -304,8 +304,8 @@ STACKABLE_COG@Lab@45@Boss,0@Lab - Astral Gear
 EVENT_Demonfray@Lab@1@,0@Lab - Demon Fray
 BADGE_StyleComboPassiveA@Lab@1@ITEM_LINEBOMB,0@Lab - C. Rank Frenzy: Focus A
 ITEM_DodgeShot@Lab@1@ChargeShot,0@Lab - Shining Bangle
-ITEM_Alterscope@Lab - Verdazure Swamp Connection@1@,0@Lab - Verdazure Swamp Connection - Alterscope
-BADGE_HitCountChargeRate@Lab - Verdazure Swamp Connection@1@,0@Lab - Verdazure Swamp Connection - MP Quicken: Battlescars
+ITEM_Alterscope@Lab to Verdazure Swamp Connection@1@,0@Lab to Verdazure Swamp Connection - Alterscope
+BADGE_HitCountChargeRate@Lab to Verdazure Swamp Connection@1@,0@Lab to Verdazure Swamp Connection - MP Quicken: Battlescars
 ITEM_WATERMOVEMENT@Verdazure Sea West@1@,0@Verdazure Sea - Hydrodynamo
 EVENT_Water@Verdazure Sea West@55@,0@Verdazure Sea - Water West
 STACKABLE_HP@Verdazure Sea West@4@ITEM_LINEBOMB,0@Verdazure Sea - Kiwi Bunny Potion

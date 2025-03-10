@@ -2456,13 +2456,13 @@
                     "Method": "ITEM_SLIDE"
                 },
                 {
-                    "Exit": "Lab - Verdazure Swamp Connection",
+                    "Exit": "Lab to Verdazure Swamp Connection",
                     "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB"
                 }
             ]
         },
         {
-            "Name": "Lab - Verdazure Swamp Connection",
+            "Name": "Lab to Verdazure Swamp Connection",
             "Money": [
                 {
                     "Method": "(ITEM_JETPACK||ITEM_DOUBLEJUMP) || ITEM_AirDash",
@@ -3709,7 +3709,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Lab - Verdazure Swamp Connection",
+                    "Exit": "Lab to Verdazure Swamp Connection",
                     "Method": ""
                 }
             ]

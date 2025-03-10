@@ -65,7 +65,7 @@
 1301:Verdazure Sea East
 2801:Blushwood
 1410:Verdazure Swamp Lab Exit
-2510:Lab - Verdazure Swamp Connection
+2510:Lab to Verdazure Swamp Connection
 1502:Tartarus
 1702:Swamp Tartarus Exit
 1503:Tartarus Catacombs
