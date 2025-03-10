@@ -90,7 +90,19 @@
         "slotId": 22,
         "Requirement": [
             {
-                "Method": "Boss",
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_BOSS",
+        "Location": "Oasis",
+        "LocationName": "Oasis - Boss",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -182,7 +194,19 @@
         "slotId": 20,
         "Requirement": [
             {
-                "Method": "Boss",
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_BOSS",
+        "Location": "Desert Base Entrance",
+        "LocationName": "Desert Base Entrance - Boss",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -591,7 +615,19 @@
         "slotId": 42,
         "Requirement": [
             {
-                "Method": "Boss",
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_BOSS",
+        "Location": "Solennian Ruins",
+        "LocationName": "Solennian Ruins - Astral Gear",
+        "slotId": 42,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -947,7 +983,19 @@
         "slotId": 23,
         "Requirement": [
             {
-                "Method": "Boss",
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_BOSS",
+        "Location": "Morose City",
+        "LocationName": "Morose City - Astral Gear",
+        "slotId": 23,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -1416,7 +1464,19 @@
         "slotId": 25,
         "Requirement": [
             {
-                "Method": "ChargeShot && ITEM_BOMBFUEL && Boss",
+                "Method": "ChargeShot && ITEM_BOMBFUEL",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_BOSS",
+        "Location": "Travoll Mines",
+        "LocationName": "Travoll Mines - Boss",
+        "slotId": 25,
+        "Requirement": [
+            {
+                "Method": "ChargeShot && ITEM_BOMBFUEL",
                 "Difficulty": 0
             }
         ]
@@ -1608,7 +1668,19 @@
         "slotId": 24,
         "Requirement": [
             {
-                "Method": "Boss",
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_BOSS",
+        "Location": "Forest Maze boss",
+        "LocationName": "Forest - Boss",
+        "slotId": 24,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -2116,7 +2188,19 @@
         "slotId": 30,
         "Requirement": [
             {
-                "Method": "( ITEM_MASK ) && Boss",
+                "Method": "ITEM_MASK",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_BOSS",
+        "Location": "Plague Forest",
+        "LocationName": "Plague Forest - Boss",
+        "slotId": 30,
+        "Requirement": [
+            {
+                "Method": "ITEM_MASK",
                 "Difficulty": 0
             }
         ]
@@ -2308,7 +2392,19 @@
         "slotId": 31,
         "Requirement": [
             {
-                "Method": "Boss",
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_BOSS",
+        "Location": "Ulvosa",
+        "LocationName": "Ulvosa - Boss",
+        "slotId": 31,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -2516,7 +2612,19 @@
         "slotId": 44,
         "Requirement": [
             {
-                "Method": "Boss",
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_BOSS",
+        "Location": "Relicts",
+        "LocationName": "Relicts - Boss",
+        "slotId": 44,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -3801,7 +3909,19 @@
         "slotId": 63,
         "Requirement": [
             {
-                "Method": "Boss",
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_BOSS",
+        "Location": "Catacombs Inner",
+        "LocationName": "Catacombs Inner - Boss",
+        "slotId": 63,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -3897,7 +4017,19 @@
         "slotId": 45,
         "Requirement": [
             {
-                "Method": "Boss",
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_BOSS",
+        "Location": "Lab",
+        "LocationName": "Lab - Boss",
+        "slotId": 45,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -4666,7 +4798,19 @@
         "slotId": 49,
         "Requirement": [
             {
-                "Method": "Boss",
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_BOSS",
+        "Location": "EverGarden Boss Area",
+        "LocationName": "EverGarden - Boss",
+        "slotId": 49,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -4838,7 +4982,19 @@
         "slotId": 46,
         "Requirement": [
             {
-                "Method": "Boss",
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_BOSS",
+        "Location": "Cloister Pre Boss",
+        "LocationName": "Cloister Boss - Boss",
+        "slotId": 46,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -4978,7 +5134,19 @@
         "slotId": 47,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend && ITEM_AntiDecay && Boss",
+                "Method": "ITEM_BombLengthExtend && ITEM_AntiDecay",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_BOSS",
+        "Location": "Gallery of Mirrors East",
+        "LocationName": "Gallery of Mirrors East - Boss",
+        "slotId": 47,
+        "Requirement": [
+            {
+                "Method": "ITEM_BombLengthExtend && ITEM_AntiDecay",
                 "Difficulty": 0
             }
         ]
@@ -5126,7 +5294,19 @@
         "slotId": 62,
         "Requirement": [
             {
-                "Method": "( ITEM_AntiDecay || ITEM_ZCrystal) && Boss",
+                "Method": "( ITEM_AntiDecay || ITEM_ZCrystal)",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_BOSS",
+        "Location": "Gallery of Souls Boss Area",
+        "LocationName": "Gallery of Souls Boss Area - Boss",
+        "slotId": 62,
+        "Requirement": [
+            {
+                "Method": "( ITEM_AntiDecay || ITEM_ZCrystal)",
                 "Difficulty": 0
             }
         ]
@@ -5423,19 +5603,43 @@
         "slotId": 34,
         "Requirement": [
             {
-                "Method": "ChargeShot && Boss",
+                "Method": "ChargeShot",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_DOUBLEJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && Boss",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_WALLJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && Boss",
+                "Method": "ITEM_WALLJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && Boss",
+                "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_BOSS",
+        "Location": "Forgotten City",
+        "LocationName": "Forgotten City - Boss",
+        "slotId": 34,
+        "Requirement": [
+            {
+                "Method": "ChargeShot",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_DOUBLEJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_WALLJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]
@@ -5531,7 +5735,19 @@
         "slotId": 32,
         "Requirement": [
             {
-                "Method": "Boss",
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_BOSS",
+        "Location": "Snowveil Ex",
+        "LocationName": "Snowveil - Boss",
+        "slotId": 32,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -6040,19 +6256,43 @@
         "slotId": 36,
         "Requirement": [
             {
-                "Method": "ITEM_WALLJUMP && Boss",
+                "Method": "ITEM_WALLJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_DOUBLEJUMP && Boss",
+                "Method": "ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_JETPACK && Boss",
+                "Method": "ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_LINEBOMB && ChargeShot && ITEM_SLIDE && Boss",
+                "Method": "ITEM_LINEBOMB && ChargeShot && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_BOSS",
+        "Location": "Golden Hands HQ Sewer",
+        "LocationName": "Golden Hands HQ Sewer - Boss",
+        "slotId": 36,
+        "Requirement": [
+            {
+                "Method": "ITEM_WALLJUMP",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_DOUBLEJUMP",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_JETPACK",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_LINEBOMB && ChargeShot && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -6152,7 +6392,19 @@
         "slotId": 61,
         "Requirement": [
             {
-                "Method": "Boss",
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_BOSS",
+        "Location": "DreamKeeper",
+        "LocationName": "DreamKeeper - Boss Alius",
+        "slotId": 61,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -6212,7 +6464,19 @@
         "slotId": 60,
         "Requirement": [
             {
-                "Method": "Boss",
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_BOSS",
+        "Location": "DreamKeeper",
+        "LocationName": "DreamKeeper - Boss Charon",
+        "slotId": 60,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -6517,7 +6781,19 @@
         "slotId": 43,
         "Requirement": [
             {
-                "Method": "Boss",
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_BOSS",
+        "Location": "Illusion Palace Entrance",
+        "LocationName": "Illusion Palace Entrance - Boss",
+        "slotId": 43,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -6757,13 +7033,25 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "AllMemine",
+                "Method": "EVENT_Memine 6",
                 "Difficulty": 0
             }
         ]
     },
     {
         "Itemname": "STACKABLE_SHARD",
+        "Location": "Gleamwood Middle",
+        "LocationName": "Memine Gleamwood - Rainbow Bunny Potion",
+        "slotId": 0,
+        "Requirement": [
+            {
+                "Method": "EVENT_Memine0",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_Memine",
         "Location": "Gleamwood Middle",
         "LocationName": "Memine Gleamwood - Rainbow Bunny Potion",
         "slotId": 0,
@@ -6793,7 +7081,19 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "EVENT_Memine1",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_Memine",
+        "Location": "Verdazure Ocean",
+        "LocationName": "Verdazure Ocean - Memine Race From Blushwood",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "EVENT_Memine1",
                 "Difficulty": 0
             }
         ]
@@ -6817,7 +7117,19 @@
         "slotId": 2,
         "Requirement": [
             {
-                "Method": "ITEM_LINEBOMB && ((ITEM_WALLJUMP && (ITEM_HIJUMP || ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK)) || (ITEM_JETPACK && ITEM_DOUBLEJUMP) || ITEM_JEPTACK 3)",
+                "Method": "EVENT_Memine2 && ITEM_LINEBOMB && ((ITEM_WALLJUMP && (ITEM_HIJUMP || ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK)) || (ITEM_JETPACK && ITEM_DOUBLEJUMP) || ITEM_JEPTACK 3)",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_Memine",
+        "Location": "CopperWood Industry Exit",
+        "LocationName": "CopperWood - Memine Race from Forest",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "EVENT_Memine2 &&  ITEM_LINEBOMB && ((ITEM_WALLJUMP && (ITEM_HIJUMP || ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK)) || (ITEM_JETPACK && ITEM_DOUBLEJUMP) || ITEM_JEPTACK 3)",
                 "Difficulty": 0
             }
         ]
@@ -6836,6 +7148,18 @@
     },
     {
         "Itemname": "STACKABLE_SHARD",
+        "Location": "Valhalla City",
+        "LocationName": "Valhalla City - Memine Race From Tartarus",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "EVENT_Memine3",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_Memine",
         "Location": "Valhalla City",
         "LocationName": "Valhalla City - Memine Race From Tartarus",
         "slotId": 3,
@@ -6883,7 +7207,43 @@
         ]
     },
     {
+        "Itemname": "EVENT_Memine",
+        "Location": "EverGarden Path to Boss",
+        "LocationName": "EverGarden - Memine Race From Valhallas Breath East",
+        "slotId": 4,
+        "Requirement": [
+            {
+                "Method": "EVENT_Memine4",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
         "Itemname": "STACKABLE_SHARD",
+        "Location": "Forgotten City",
+        "LocationName": "Forgotten City - Memine Race From Ana Thema",
+        "slotId": 5,
+        "Requirement": [
+            {
+                "Method": "ChargeShot && EVENT_Memine5",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_DOUBLEJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && EVENT_Memine5",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_WALLJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && EVENT_Memine5",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && EVENT_Memine5",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "EVENT_Memine",
         "Location": "Forgotten City",
         "LocationName": "Forgotten City - Memine Race From Ana Thema",
         "slotId": 5,
@@ -6925,7 +7285,7 @@
         "slotId": 29,
         "Requirement": [
             {
-                "Method": "EVENT_Memine0 && EVENT_Memine1 && EVENT_Memine2 && EVENT_Memine3 && EVENT_Memine4 && EVENT_Memine5",
+                "Method": "EVENT_Memine 6",
                 "Difficulty": 0
             }
         ]
