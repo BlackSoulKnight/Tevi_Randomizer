@@ -99,16 +99,18 @@ namespace TeviRandomizer
                             flag = ((UnityEngine.UI.Toggle)settings["Toggle EarlyDream"]).isOn;
                             break;
                         case "Chapter":
-                            if (split[0] == "Chapter")
-                                if (has_chapter_reached(int.Parse(split[1])))
+                            if (split[0] == "Chapter" && itemList.ContainsKey("EVENT_BOSS"))
+                                if (has_chapter_reached(int.Parse(split[1]),itemList["EVENT_BOSS"]))
                                     flag = true;
                                 else
                                     flag = false;
                             break;
                         case "AllMemine":
+                            Debug.LogError("Memine should not be used as Logic");
                             flag = memineCount > 5;
                             break;
                         case "Memine":
+                            Debug.LogError("Memine should not be used as Logic");
                             flag = checkMovementItems(itemList);
                             break;
                         case "ChargeShot":
@@ -193,11 +195,6 @@ namespace TeviRandomizer
                 tmp = tmp.Replace("&&", "AND").Replace("||", "OR");
                 bool retVal = (bool)new DataTable().Compute(tmp, "");
 
-                if (retVal && Method.Contains("Boss"))
-                    bossCount++;
-                if (retVal && Method.Contains("Memine") && !Method.Contains("AllMem"))
-                    memineCount++;
-
                 return retVal;
             }
 
@@ -217,9 +214,10 @@ namespace TeviRandomizer
 
                 return false;
             }
-            private bool has_chapter_reached(int chapter)
+            private bool has_chapter_reached(int chapter,int deadBoss)
             {
                 short counter = 0;
+                bossCount = deadBoss;
                 if (bossCount >= 1)
                     counter += 1;
                 if (bossCount >= 3)
