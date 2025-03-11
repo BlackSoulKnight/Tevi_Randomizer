@@ -48,9 +48,7 @@
 [BepInEx V 5.4 64 bit](https://docs.bepinex.dev/articles/user_guide/installation/index.html#tabpanel_bHGHmlrG6S_tabid-win)<br>
 
 ### Optional
-[Tevi Map Tracker](https://github.com/vegemii/Tevi-Tracker/releases) made by Vegemii <br>
-[Tevi Poptracker](https://github.com/vegemii/TEVI-Rando-PopTracker) made by Vegemii (WIP) <br>
-[Tevi Item Tracker](https://github.com/cramps-man/tevi-rando-progression-ui) made by Cramps-Man <br>
+[Tevi Poptracker](https://github.com/Swaga1icous/Tevi_Poptracker) made by Swagalicous (WIP) <br>
 [Tevi AP World](https://github.com/BlackSoulKnight/Tevi_Archipelago)
 
 ## Install
