@@ -16,7 +16,6 @@ using UnityEngine;
  * () Disconnect from a server
  */
 
-
 namespace TeviRandomizer
 {
 
@@ -26,6 +25,7 @@ namespace TeviRandomizer
         public const ItemList.Type remoteItem = ItemList.Type.I10;
         public const ItemList.Type remoteItemProgressive = ItemList.Type.I11;
 
+        string AP_WORLD_VERSION = "0.4";
 
         private class LocationData
         {
@@ -89,6 +89,17 @@ namespace TeviRandomizer
             }
 
             LoginSuccessful success = (LoginSuccessful)loginResult;
+            Debug.Log(success.SlotData);
+
+            if (success.SlotData.ContainsKey("version"))
+            {
+                if((string)success.SlotData["version"] != AP_WORLD_VERSION)
+                    Debug.LogWarning($"AP World version: {(string)success.SlotData["version"]} does not match with Client");
+            }
+            else
+            {
+                Debug.LogWarning($"AP World version: not existence");
+            }
             this.uri = uri;
             this.port = port;
             this.user = user;

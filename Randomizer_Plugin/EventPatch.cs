@@ -379,19 +379,6 @@ namespace TeviRandomizer
             }
         }
 
-        // All Events that have Random Badge = true
-        [HarmonyPatch(typeof(Chap4CyrilRoom),"EVENT")]
-        [HarmonyPrefix]
-        static bool CyrilBadge()
-        {
-            if(EventManager.Instance.EventStage == 10 && EventManager.Instance.EventTime > 0.7f && EventManager.Instance.EventTime < 100f)
-            {
-                HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_CrystalAbsorberS, 1);
-                EventManager.Instance.EventTime = 100f;
-            }
-            return true;
-        }
-
         [HarmonyPatch(typeof(AllMemineWon),"EVENT")]
         [HarmonyPrefix]
         static bool MemineAllBadge()
@@ -529,12 +516,12 @@ namespace TeviRandomizer
                     }
                     if (em.EventTime > 0.75f && em.EventTime < 100f)
                     {
-                        HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_CrystalAbsorberS, 1, doRandomBadge: true);
+                        HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_CrystalAbsorberS, 1);
                         em.EventTime = 100f;
                     }
                     if (em.EventTime >= 100.5f && !HUDObtainedItem.Instance.isDisplaying())
                     {
-                        em.NextStage();
+                        em.SetStage(20);
                     }
                     break;
             }
