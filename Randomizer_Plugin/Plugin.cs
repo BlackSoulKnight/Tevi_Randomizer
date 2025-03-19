@@ -920,14 +920,9 @@ namespace TeviRandomizer
 
     class BonusFeaturePatch()
     {
-        /*
-        [HarmonyPatch(typeof(GemaChargedShotCombo),"AddMeter")]
-        static void MOREPOWAR(ref int add)
-        {
-            add *= 1;
-        }*/
 
-        // new dropkick mechanic
+
+
         static int bonusDropKickDmg;
         static bulletScript currentDropKick;
         static bool DropKickDmgUpdated = false;
@@ -939,6 +934,25 @@ namespace TeviRandomizer
             bonusDropKickDmg = 0;
         }
 
+        //test Feature
+        [HarmonyPatch(typeof(ObjectPhy), "UseBomb")]
+        [HarmonyPostfix]
+        static void useAreaBomb(ref ObjectPhy __instance, ref CharacterBase ___cb_perfer,ref bool __result)
+        {
+            if (SaveManager.Instance.CanUseItem(ItemList.Type.ITEM_AREABOMB) > 0 && SaveManager.Instance.CanUseItem(ItemList.Type.ITEM_LINEBOMB) == 0)
+            {
+
+                ___cb_perfer.playerc_perfer.meter_bomb.EnableMe(0f);
+                __instance.SetCounter(0, 1f);
+                __instance.SetCounter(1, 0.475f);
+                __instance.SetCounter(5, 0f);
+                __instance.SetCounter(18, 0f);
+                ___cb_perfer.spranim_prefer.ToggleOther(0);
+                ___cb_perfer.SetHitboxStarted(on: false);
+                ___cb_perfer.ChangeLogicStatus(PlayerLogicState.TEVI_GROUND_ITEM);
+                __result = true;
+            }
+        }
 
         [HarmonyPatch(typeof(CharacterBase), "BulletHurtPlayer")]
         [HarmonyPostfix]
@@ -955,7 +969,7 @@ namespace TeviRandomizer
                 else if (damage > 0 && (owner != null && owner.isPlayer()) || __instance.isPlayer())
                 {
                     if (type == BulletType.TEVI_WEAK_DASH || type == BulletType.TEVI_WEAK_ATTACK || type == BulletType.ORB_SHOT_NORMAL || type == BulletType.SUMMONBUNNY_HIT) return;
-                    Debug.Log("Combo was broken by " + type);
+                    //Debug.Log("Combo was broken by " + type);
                     bonusDropKickDmg = 0;
                 }
             }
