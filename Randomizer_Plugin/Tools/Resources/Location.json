@@ -4838,6 +4838,14 @@
                 "Difficulty": 0
             },
             {
+                "Method": "ITEM_JETPACK && ITEM_LINEBOMB",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB",
+                "Difficulty": 0
+            },
+            {
                 "Method": "ITEM_WALLJUMP && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
