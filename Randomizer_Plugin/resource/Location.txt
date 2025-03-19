@@ -14,7 +14,7 @@ BADGE_WallCharger@Oasis@1@,0@Oasis - MP Surge: Concuss
 BADGE_AutoCombo@Desert Base Entrance@1@,0@Desert Base Entrance - Combo Assist
 STACKABLE_EP@Desert Base Entrance@22@ITEM_LINEBOMB,0@Desert Base Entrance - Lemon Bunny Potion
 STACKABLE_COG@Desert Base Entrance@20@,0@Desert Base Entrance - Astral Gear
-EVENT_BOSS@Desert Base Entrance@1@,0@Desert Base Entrance - Boss
+EVENT_BOSS@Desert Base Entrance@0@,0@Desert Base Entrance - Boss
 BADGE_BACKSTAB@Desert Base Main@1@,0@Desert Base Main - Backstab
 BADGE_Normal2AntiHealth@Desert Base Main@1@,0@Desert Base Main - Knives Out
 STACKABLE_MATK@Desert Base Main@6@ITEM_LINEBOMB,0@Desert Base Main - Cherry Bunny Potion

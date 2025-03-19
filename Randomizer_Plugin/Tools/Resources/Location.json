@@ -203,7 +203,7 @@
         "Itemname": "EVENT_BOSS",
         "Location": "Desert Base Entrance",
         "LocationName": "Desert Base Entrance - Boss",
-        "slotId": 1,
+        "slotId": 0,
         "Requirement": [
             {
                 "Method": "",
