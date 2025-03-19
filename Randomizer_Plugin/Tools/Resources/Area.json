@@ -118,7 +118,7 @@
                 },
                 {
                     "Exit": "Memine All",
-                    "Method": "AllMemine"
+                    "Method": "EVENT_Memine 6"
                 }
             ]
         },
@@ -1824,7 +1824,7 @@
                 },
                 {
                     "Exit": "DreamKeeper Outside Left Snow To Snowveil",
-                    "Method": ""
+                    "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
                 }
             ]
         },

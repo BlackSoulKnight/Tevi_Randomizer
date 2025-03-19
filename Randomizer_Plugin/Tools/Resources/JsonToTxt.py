@@ -1,7 +1,7 @@
 import json
 import os
 import random
-import sys
+
 
 ## Reading main Data files
 
@@ -735,10 +735,10 @@ class Generator:
 
 
 def convertAreaJsonToTxt():
-    s = open("Area.json",'r')
-    d = open("../../resource/Area.txt",'w+')
-    c = open("../../resource/Connection.txt",'w+')
-    l = open("../../resource/TransitionId.txt.txt",'w+')
+    s = open(Path+"\Area.json",'r')
+    d = open(Path+"/../../resource/Area.txt",'w+')
+    c = open(Path+"/../../resource/Connection.txt",'w+')
+    l = open(Path+"/../../resource/TransitionId.txt.txt",'w+')
     s = json.load(s)
     for k,v in s.items():
         for a in v:
@@ -752,8 +752,8 @@ def convertAreaJsonToTxt():
 
 
 def convertLocationJsonToTxt():
-    s = open("Location.json",'r')
-    d = open("../../resource/Location.txt",'w+')
+    s = open(Path+"/Location.json",'r')
+    d = open(Path+"/../../resource/Location.txt",'w+')
     s = json.load(s)
     for k in s:
         d.write(f"{k['Itemname']}@{k['Location']}@{k['slotId']}@")

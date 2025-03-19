@@ -12,7 +12,7 @@ Thanatara Canyon:Thanatara Canyon - Heavens Valley West:ITEM_LINEBOMB
 Thanatara Canyon:Morose City:OpenMorose
 Thanatara Canyon:Crafting:
 Thanatara Canyon:Item Upgrade:
-Thanatara Canyon:Memine All:AllMemine
+Thanatara Canyon:Memine All:EVENT_Memine 6
 Thanatara Canyon Lower:0106:
 Thanatara Canyon Lower:0107:
 Thanatara Canyon Lower:Gurun Desert:ITEM_LINEBOMB || OpenMorose
@@ -202,7 +202,7 @@ DreamKeeper Outside Right:DreamKeeper:ITEM_Rotater && (ChargeShot || ITEM_SLIDE)
 DreamKeeper Outside Right:1800:
 DreamKeeper Outside Left:DreamKeeper:ITEM_Rotater && (ChargeShot || ITEM_SLIDE) && ITEM_SLIDE && (EVENT_SnowMechanic 2 || EarlyDream)
 DreamKeeper Outside Left:1801:
-DreamKeeper Outside Left:DreamKeeper Outside Left Snow To Snowveil:
+DreamKeeper Outside Left:DreamKeeper Outside Left Snow To Snowveil:ITEM_SLIDE && ITEM_LINEBOMB
 DreamKeeper Outside Left Snow To Snowveil:1805:
 DreamKeeper Outside Left Snow To Snowveil:DreamKeeper Outside Left:RabbitJump || ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_HIJUMP
 DreamKeeper:Dreamless Depths:ITEM_SLIDE && ITEM_LINEBOMB

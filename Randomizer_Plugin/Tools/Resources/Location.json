@@ -2136,7 +2136,7 @@
         "slotId": 6,
         "Requirement": [
             {
-                "Method": "ChargeShot",
+                "Method": "ChargeShot && (ITEM_LINEBOMB || (ITEM_WALLJUMP && (ITEM_AirDash && (ITEM_JETPACK || ITEM_DOUBLEJUMP)) || (ITEM_DOUBLEJUMP && ITEM_JETPACK)))",
                 "Difficulty": 0
             }
         ]
@@ -5791,7 +5791,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_DOUBLEJUMP && (ITEM_WALLJUMP || SpinnerBash)",
+                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && (ITEM_WALLJUMP || SpinnerBash || ITEM_JETPACK)",
                 "Difficulty": 0
             }
         ]
@@ -5823,7 +5823,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_JETPACK",
+                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && (ITEM_AirDash || ITEM_WALLJUMP) && ITEM_JETPACK",
                 "Difficulty": 0
             },
             {
@@ -7053,7 +7053,7 @@
     {
         "Itemname": "EVENT_Memine",
         "Location": "Gloamwood Middle",
-        "LocationName": "Memine Gloamwood - Rainbow Bunny Potion",
+        "LocationName": "Memine Gloamwood - Rainbow Bunny Potion Event",
         "slotId": 0,
         "Requirement": [
             {
@@ -7089,7 +7089,7 @@
     {
         "Itemname": "EVENT_Memine",
         "Location": "Verdazure Ocean",
-        "LocationName": "Verdazure Ocean - Memine Race From Blushwood",
+        "LocationName": "Verdazure Ocean - Memine Race From Blushwood Event",
         "slotId": 1,
         "Requirement": [
             {
@@ -7125,7 +7125,7 @@
     {
         "Itemname": "EVENT_Memine",
         "Location": "CopperWood Industry to Travoll Industrie",
-        "LocationName": "CopperWood - Memine Race from Forest",
+        "LocationName": "CopperWood - Memine Race from Forest Event",
         "slotId": 2,
         "Requirement": [
             {
@@ -7161,7 +7161,7 @@
     {
         "Itemname": "EVENT_Memine",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - Memine Race From Tartarus",
+        "LocationName": "Valhalla City - Memine Race From Tartarus Event",
         "slotId": 3,
         "Requirement": [
             {
@@ -7209,7 +7209,7 @@
     {
         "Itemname": "EVENT_Memine",
         "Location": "EverGarden BossPath",
-        "LocationName": "EverGarden - Memine Race From Valhallas Breath East",
+        "LocationName": "EverGarden - Memine Race From Valhallas Breath East Event",
         "slotId": 4,
         "Requirement": [
             {
@@ -7245,7 +7245,7 @@
     {
         "Itemname": "EVENT_Memine",
         "Location": "Forgotten City",
-        "LocationName": "Forgotten City - Memine Race From Ana Thema",
+        "LocationName": "Forgotten City - Memine Race From Ana Thema Event",
         "slotId": 5,
         "Requirement": [
             {

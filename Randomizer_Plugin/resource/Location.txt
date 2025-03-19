@@ -5,14 +5,16 @@ BADGE_TauntYawn@Oasis@1@CKick || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash
 BADGE_EarlyKnockRecover@Oasis@1@,0@Oasis - Spring Back
 STACKABLE_MATK@Oasis@1@,0@Oasis - Cherry Bunny Potion
 STACKABLE_HP@Oasis@8@ITEM_LINEBOMB,0@Oasis - Kiwi Bunny Potion
-STACKABLE_COG@Oasis@22@Boss,0@Oasis - Astral Gear
+STACKABLE_COG@Oasis@22@,0@Oasis - Astral Gear
+EVENT_BOSS@Oasis@1@,0@Oasis - Boss
 STACKABLE_SHARD@Oasis@16@ITEM_LINEBOMB && ITEM_HIJUMP,0;ITEM_LINEBOMB && ITEM_DOUBLEJUMP,0;ITEM_LINEBOMB && ITEM_JETPACK,0@Oasis - Rainbow Bunny Potion
 STACKABLE_EP@Oasis@3@,0@Oasis - Lemon Bunny Potion
 ITEM_HIJUMP@Oasis@1@,0@Oasis - Rabi Boots
 BADGE_WallCharger@Oasis@1@,0@Oasis - MP Surge: Concuss
 BADGE_AutoCombo@Desert Base Entrance@1@,0@Desert Base Entrance - Combo Assist
 STACKABLE_EP@Desert Base Entrance@22@ITEM_LINEBOMB,0@Desert Base Entrance - Lemon Bunny Potion
-STACKABLE_COG@Desert Base Entrance@20@Boss,0@Desert Base Entrance - Astral Gear
+STACKABLE_COG@Desert Base Entrance@20@,0@Desert Base Entrance - Astral Gear
+EVENT_BOSS@Desert Base Entrance@1@,0@Desert Base Entrance - Boss
 BADGE_BACKSTAB@Desert Base Main@1@,0@Desert Base Main - Backstab
 BADGE_Normal2AntiHealth@Desert Base Main@1@,0@Desert Base Main - Knives Out
 STACKABLE_MATK@Desert Base Main@6@ITEM_LINEBOMB,0@Desert Base Main - Cherry Bunny Potion
@@ -24,7 +26,7 @@ STACKABLE_EP@Desert Base Upper Half@16@,0@Desert Base Upper Half - Lemon Bunny P
 STACKABLE_COG@Desert Base Upper Half@0@,0@Desert Base Upper Half - Astral Gear
 QUEST_GHandL@Desert Base Upper Half@1@ITEM_LINEBOMB,0@Desert Base Upper Half - Gilded Left Hand
 BADGE_ConvertDef2Off@Desert Base Upper Half@1@,0@Desert Base Upper Half - Glass Knife
-BADGE_LowerThan20@Desert Base Upper Half@1@,0@Desert Base Upper Half - Under Score
+BADGE_LowerThan20@Desert Base Upper Half@1@ITEM_SLIDE && ITEM_LINEBOMB,0@Desert Base Upper Half - Under Score
 ITEM_EasyStyle@Thanatara Canyon@1@ChargeShot,0@Thanatara Canyon - Spanner of Wisdom
 ITEM_KNIFE@Thanatara Canyon@1@,0@Thanatara Canyon - Dagger
 ITEM_ORB@Thanatara Canyon@1@,0@Thanatara Canyon - Orbitars
@@ -33,7 +35,7 @@ BADGE_RangeCombo@Thanatara Canyon@1@,0@Thanatara Canyon - C. Count Frenzy: Hotsh
 BADGE_SuperArmor2@Thanatara Canyon Lower@1@,0@Thanatara Canyon - Even Keel
 BADGE_PerfectCharge@Thanatara Canyon Lower@1@ChargeShot,0@Thanatara Canyon - MP Quicken: Steady
 BADGE_StyleComboAddDamageA@Thanatara Canyon@1@,0@Thanatara Canyon - C. Rank Frenzy: Attack
-EVENT_EliteChallangeB@Thanatara Canyon@1@(ITEM_LINEBOMB && ITEM_AREABOMB) || ITEM_SLIDE,0;ITEM_LINEBOMB && HiddenP,1@Thanatara Canyon - EliteB
+EVENT_EliteChallangeB@Thanatara Canyon@1@(ITEM_LINEBOMB && ITEM_AREABOMB) || ITEM_SLIDE,0;ITEM_LINEBOMB && HiddenP,1@Thanatara Canyon - Elite Challenge B
 STACKABLE_MP@Thanatara Canyon@0@ITEM_LINEBOMB,0@North Thanatara Canyon - Blueberry Bunny Potion
 STACKABLE_MP@Thanatara Canyon Lower@7@ITEM_LINEBOMB,0@Middle Thanatara Canyon - Blueberry Bunny Potion
 ITEM_LINEBOMB@Thanatara Canyon Lower@1@,0@Thanatara Canyon - Cross Bomb
@@ -45,10 +47,11 @@ BADGE_CrystalGen@Gurun Desert@1@EVENT_EliteChallangeA,0@Gurun Desert - Crystalli
 STACKABLE_HP@Solennian Ruins Entrance@15@ITEM_JETPACK 2,0;ITEM_JETPACK && ITEM_DOUBLEJUMP,0;ITEM_JETPACK && ITEM_AirDash && ITEM_WALLJUMP,0@Solennian Ruins Entrance - Kiwi Bunny Potion
 EVENT_Fire@Solennian Ruins@1@,0@Solennian Ruins - Fire
 STACKABLE_MATK@Solennian Ruins@2@,0@Solennian Ruins - Cherry Bunny Potion
-STACKABLE_COG@Solennian Ruins@42@Boss,0@Solennian Ruins - Astral Gear
+STACKABLE_COG@Solennian Ruins@42@,0@Solennian Ruins - Astral Gear
+EVENT_BOSS@Solennian Ruins@42@,0@Solennian Ruins - Boss
 STACKABLE_RATK@Solennian Ruins@3@,0@Solennian Ruins - Grape Bunny Potion
 STACKABLE_EP@Solennian Ruins@1@,0@Solennian Ruins - Lemon Bunny Potion
-BADGE_BreakDamageBoost@Solennian Ruins@1@ITEM_WALLJUMP,0;ITEM_DOUBLEJUMP && ITEM_JETPACK 2,0@Solennian Ruins - Nasty Break-up
+BADGE_BreakDamageBoost@Solennian Ruins@1@ITEM_WALLJUMP,0;ITEM_DOUBLEJUMP && ITEM_JETPACK 2,0@Solennian Ruins - Nasty Break up
 BADGE_Lucky7DamageReduce@Solennian Ruins@1@ITEM_KNIFE,0;VenaBomb,0;ITEM_ORB,0;ITEM_LINEBOMB && ITEM_AREABOMB,0@Solennian Ruins - Lucky 7: B
 STACKABLE_MP@Solennian Ruins@8@ITEM_SLIDE,0@Solennian Ruins - Blueberry Bunny Potion
 BADGE_BoostSizeIncrease@Solennian Ruins@1@EVENT_EliteChallangeB,0@Solennian Ruins - Core Expansion: Radiant
@@ -69,8 +72,9 @@ BADGE_RapidShotsEnhance@Valhalla Breath West Extended@1@ITEM_AirSlide && ITEM_SL
 BADGE_Lucky7C@Valhalla Breath West Extended@1@ITEM_SLIDE && ITEM_DOUBLEJUMP,0;ITEM_SLIDE && ITEM_JETPACK,0@Valhalla Breath West Extended - Lucky 7: C
 STACKABLE_MP@Valhalla Breath West Extended@14@ChargeShot,0@Valhalla Breath West Extended - Blueberry Bunny Potion
 EVENT_MoroseVisited@Morose City@0@,0@Morose City - Visit
-EVENT_EliteChallangeA@Morose City@0@,0@Morose City - Elite A
-STACKABLE_COG@Morose City@23@Boss,0@Morose City - Astral Gear
+EVENT_EliteChallangeA@Morose City@0@,0@Morose City - Elite Challenge A
+STACKABLE_COG@Morose City@23@,0@Morose City - Astral Gear
+EVENT_BOSS@Morose City@23@,0@Morose City - Boss
 STACKABLE_MP@Morose City@9@,0@Morose City - Blueberry Bunny Potion
 BADGE_TauntPhoto@Morose City@1@ITEM_SLIDE && ITEM_LINEBOMB && ChargeShot,0@Morose City - Special Action: Paparazzo
 STACKABLE_EP@Morose City@9@ITEM_AirDash && ITEM_JETPACK 3 && ITEM_LINEBOMB,0;ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_LINEBOMB,0@Morose City - Lemon Bunny Potion
@@ -93,11 +97,11 @@ STACKABLE_EP@Morose City@30@Coins 3000,0@Morose City Shop - Lemon Bunny Potion
 STACKABLE_MATK@Morose City@30@Coins 3000,0@Morose City Shop - Cherry Bunny Potion
 STACKABLE_RATK@Morose City@30@Coins 3000,0@Morose City Shop - Grape Bunny Potion
 STACKABLE_SHARD@Morose City@30@Coins 5000 && Chapter 6,0@Morose City Shop Chap 6 - Rainbow Bunny Potion
-Useable_WaffleAHoneycloud@Morose City@1@Coins 300,0@Morose City Shop - Honeycloud Waffle
-Useable_WaffleBMeringue@Morose City@1@Coins 300 && Chapter 3,0@Morose City Shop Chap 3 - Toasted Meringue Waffle
-Useable_WaffleCMorning@Morose City@1@Coins 300 && Chapter 4,0@Morose City Shop Chap 4  - Good Morning Waffle
-Useable_WaffleDJellydrop@Morose City@1@Coins 300 && Chapter 5,0@Morose City Shop Chap 5  - Berry Pink Waffle
-Useable_WaffleElueberry@Morose City@1@Coins 300 && Chapter 6,0@Morose City Chap 6 - Blueberry Waffle
+Useable_WaffleAHoneycloud@Morose City@1@Coins 300,0@Morose City Waffle Shop - Honeycloud Waffle
+Useable_WaffleBMeringue@Morose City@1@Coins 300 && Chapter 3,0@Morose City Waffle Shop Chap 3 - Toasted Meringue Waffle
+Useable_WaffleCMorning@Morose City@1@Coins 300 && Chapter 4,0@Morose City Waffle Shop Chap 4  - Good Morning Waffle
+Useable_WaffleDJellydrop@Morose City@1@Coins 300 && Chapter 5,0@Morose City Waffle Shop Chap 5  - Berry Pink Waffle
+Useable_WaffleElueberry@Morose City@1@Coins 300 && Chapter 6,0@Morose City Waffle Shop Chap 6 - Blueberry Waffle
 BADGE_StyleComboBackflipBomb@Travoll Industrie@1@ITEM_SLIDE && ITEM_WALLJUMP && ITEM_AirDash,0;ITEM_SLIDE && ITEM_WALLJUMP && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_WALLJUMP && ITEM_DOUBLEJUMP,0;ITEM_SLIDE && BounceKick,0@Travoll Industrie - Style Combo: Backbomb S
 STACKABLE_EP@Travoll Industrie@14@ITEM_AREABOMB && ITEM_LINEBOMB,0@Travoll Industrie - Lemon Bunny Potion
 STACKABLE_HP@Travoll Industrie@2@ITEM_LINEBOMB,0@Travoll Industrie - Kiwi Bunny Potion
@@ -107,7 +111,8 @@ BADGE_ConvertOff2Def@Travoll Industrie@1@ITEM_SLIDE && ITEM_JETPACK,0;ITEM_SLIDE
 STACKABLE_MP@Travoll Industrie@1@,0@Travoll Industrie - Blueberry Bunny Potion
 STACKABLE_MATK@Travoll Mines@15@ITEM_LINEBOMB,0@Travoll Mines - Cherry Bunny Potion
 EVENT_Fire@Travoll Mines@2@,0@Travoll Mines - Fire
-STACKABLE_COG@Travoll Mines@25@ChargeShot && ITEM_BOMBFUEL && Boss,0@Travoll Mines - Astral Gear
+STACKABLE_COG@Travoll Mines@25@ChargeShot && ITEM_BOMBFUEL,0@Travoll Mines - Astral Gear
+EVENT_BOSS@Travoll Mines@25@ChargeShot && ITEM_BOMBFUEL,0@Travoll Mines - Boss
 BADGE_AirComboQuicken@Travoll Mines@1@ITEM_LINEBOMB,0@Travoll Mines - Aerial Accel
 STACKABLE_RATK@Travoll Mines@0@ITEM_LINEBOMB || CKick,0@Travoll Mines - Grape Bunny Potion
 STACKABLE_MP@Travoll Mines@15@ITEM_SLIDE && ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_BOMBFUEL,0@Travoll Mines - Blueberry Bunny Potion
@@ -123,7 +128,8 @@ I19@Forest@1@ChargeShot && QUEST_RabiPillow,0@Forest - Celia
 ITEM_BoostSystem@Forest Maze@1@,0@Forest Maze - Modular Blueprints
 BADGE_GroundNormal4Mod@Forest Maze@1@ITEM_LINEBOMB,0@Forest Maze - Titanium Spanner
 STACKABLE_HP@Forest Maze@3@,0@Forest Maze - Kiwi Bunny Potion
-STACKABLE_COG@Forest Maze boss@24@Boss,0@Forest - Astral Gear
+STACKABLE_COG@Forest Maze boss@24@,0@Forest - Astral Gear
+EVENT_BOSS@Forest Maze boss@24@,0@Forest - Boss
 BADGE_BackflipSnipe@Forest@1@ITEM_WATERMOVEMENT,0@Forest - Acrobat
 BADGE_AutoHealing@Forest Maze extended@1@,0@Forest Maze extended - Auto Heal
 ITEM_GoldenHands@Forest Maze extended@1@QUEST_GHandR && QUEST_GHandL,0@Forest Maze extended - Gilded Exultation
@@ -144,7 +150,7 @@ STACKABLE_SHARD@Gloamwood Middle@15@ITEM_DOUBLEJUMP && ITEM_LINEBOMB,0;ITEM_JETP
 BADGE_TauntStare@Gloamwood to Forest@1@ITEM_JETPACK && ITEM_LINEBOMB,0;ITEM_AirDash && ITEM_LINEBOMB,0;ITEM_DOUBLEJUMP && ITEM_LINEBOMB,0;RabbitWalljump && ITEM_LINEBOMB,0@Gloamwood Middle - Special Action: Speechless
 BADGE_DodgeMeterBoost@Gloamwood Middle@1@(ITEM_SLIDE || HiddenP) && (ITEM_KNIFE || ITEM_ORB),0@Gloamwood Upper - Dodge: Optimize
 EVENT_Earth@Gloamwood Middle@5@,0@Gloamwood Upper - Earth
-EVENT_EliteChallangeC@Gloamwood to Ulvosa@1@,0@Gloamwood Upper - Elite
+EVENT_EliteChallangeC@Gloamwood to Ulvosa@1@,0@Gloamwood Upper - Elite Challenge C
 BADGE_BattleStartCharger@Gloamwood Right@1@ChargeShot,0@Ulskan Village Area - MP Surge: Battle Start
 EVENT_Earth@Gloamwood Right@1@,0@Ulskan Village Area - Earth
 STACKABLE_RATK@Gloamwood Right@5@ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB 2,0;VenaBomb,0@Ulskan Village Area - Grape Bunny Potion
@@ -159,10 +165,11 @@ BADGE_StyleComboReduceDamageS@Plague Forest@1@ITEM_LINEBOMB,0@Plague Forest - C.
 STACKABLE_HP@Plague Forest@6@ITEM_LINEBOMB,0@Plague Forest - Kiwi Bunny Potion
 STACKABLE_MP@Plague Forest@6@ITEM_LINEBOMB,0@Plague Forest - Blueberry Bunny Potion
 ITEM_SLIDE@Plague Forest@1@ITEM_LINEBOMB,0@Plague Forest - Slick Boots
-STACKABLE_EP@Plague Forest@6@ChargeShot,0@Plague Forest - Lemon Bunny Potion
+STACKABLE_EP@Plague Forest@6@ChargeShot && (ITEM_LINEBOMB || (ITEM_WALLJUMP && (ITEM_AirDash && (ITEM_JETPACK || ITEM_DOUBLEJUMP)) || (ITEM_DOUBLEJUMP && ITEM_JETPACK))),0@Plague Forest - Lemon Bunny Potion
 BADGE_TauntKnife@Plague Forest@1@ITEM_AirDash,0;ITEM_DOUBLEJUMP,0;ITEM_JETPACK,0;ITEM_LINEBOMB,0;ITEM_HIJUMP && ITEM_WALLJUMP,0@Plague Forest - Special Action: Show Off
 BADGE_DodgeWeakGroundUp@Plague Forest@1@ITEM_LINEBOMB,0@Plague Forest - Dodge Enhancer: Upper
-STACKABLE_COG@Plague Forest@30@( ITEM_MASK ) && Boss,0@Plague Forest - Astral Gear
+STACKABLE_COG@Plague Forest@30@ITEM_MASK,0@Plague Forest - Astral Gear
+EVENT_BOSS@Plague Forest@30@ITEM_MASK,0@Plague Forest - Boss
 BADGE_BombNormal4Buffer@Plague Forest to Ulskan@1@ITEM_SLIDE && ITEM_LINEBOMB,0@Plague Forest - Aplomb
 BADGE_PrepDef@Plague Forest to Ulskan@1@ITEM_AirSlide && ITEM_SLIDE && ITEM_LINEBOMB,0@Plague Forest - Blood Armor
 STACKABLE_RATK@Plague Forest@6@,0@Plague Forest - Grape Bunny Potion
@@ -177,7 +184,8 @@ BADGE_WeakAirDownFreqUpB@Ulvosa@1@,0@Ulvosa - Spiral Slash: Cyclone
 BADGE_BoostDodgeAdd@Ulvosa@1@,0@Ulvosa - Core Expansion: Dazzle
 BADGE_BoostMeleeOffense@Ulvosa@1@ITEM_LINEBOMB,0@Ulvosa - Core Expansion: Vitalize
 STACKABLE_HP@Ulvosa@20@ITEM_LINEBOMB,0@Ulvosa - Kiwi Bunny Potion
-STACKABLE_COG@Ulvosa@31@Boss,0@Ulvosa - Astral Gear
+STACKABLE_COG@Ulvosa@31@,0@Ulvosa - Astral Gear
+EVENT_BOSS@Ulvosa@31@,0@Ulvosa - Boss
 ITEM_OrbAmulet@Ulvosa@1@,0@Ulvosa - Soul Burst Module
 BADGE_Cursed6@Ulvosa@1@ITEM_OrbTypeS2 && ChargeShot && I20 && ITEM_ORB 2 && ITEM_LINEBOMB && ITEM_SLIDE,0;ITEM_OrbAmulet && ITEM_LINEBOMB && ITEM_SLIDE,0;VenaBomb && ITEM_LINEBOMB && ITEM_SLIDE,0@Ulvosa - Cursed 6
 STACKABLE_MATK@Ulvosa@25@ITEM_Rotater,0@West Ulvosa - Cherry Bunny Potion
@@ -190,8 +198,9 @@ BADGE_StyleCharge@CopperWood Industry to Travoll Industrie@1@ITEM_DOUBLEJUMP,2;I
 BADGE_LateCharge@Relicts@1@ITEM_LINEBOMB,0@Relicts - MP Quicken: Accelerate
 STACKABLE_RATK@Relicts@2@ITEM_LINEBOMB,0@Relicts - Grape Bunny Potion
 EVENT_Fire@Relicts@3@,0@Relicts - Fire
-BADGE_8thDamageHeal@Relicts@1@ITEM_HIJUMP,0;ITEM_DOUBLEJUMP,0;ITEM_JETPACK,0;ITEM_AirDash,0;ChargeShot,0@Relicts - Attenu-8
-STACKABLE_COG@Relicts@44@Boss,0@Relicts - Astral Gear
+BADGE_8thDamageHeal@Relicts@1@ITEM_HIJUMP,0;ITEM_DOUBLEJUMP,0;ITEM_JETPACK,0;ITEM_AirDash,0;ChargeShot,0@Relicts - Attenu 8
+STACKABLE_COG@Relicts@44@,0@Relicts - Astral Gear
+EVENT_BOSS@Relicts@44@,0@Relicts - Boss
 ITEM_WonderNote@Relicts@1@,0@Relicts - Delicious Secret Notes
 BADGE_AmuletMPCharge@Relicts@1@ITEM_SLIDE && ITEM_LINEBOMB,0@Relicts - MP Surge: Soul
 QUEST_LibraryKey@Ana Thema@1@ITEM_AREABOMB && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_WALLJUMP,0;ITEM_AREABOMB && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_DOUBLEJUMP && ITEM_JETPACK 3,0;ITEM_AREABOMB && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_DOUBLEJUMP && ITEM_HIJUMP && ITEM_JETPACK,0@Ana Thema - Library Key
@@ -200,7 +209,7 @@ I20@Ana Thema@1@QUEST_LibraryKey,0@Ana Thema - Sable
 STACKABLE_COG@Ana Thema@202@QUEST_LibraryKey && LibraryExtra && ITEM_KNIFE && Chapter 4,0@Ana Thema - GemaYue
 STACKABLE_COG@Ana Thema@201@QUEST_LibraryKey && LibraryExtra && ITEM_KNIFE && Chapter 4,0@Ana Thema - EinLee
 STACKABLE_COG@Ana Thema@200@QUEST_LibraryKey && LibraryExtra && ITEM_KNIFE && Chapter 4,0@Ana Thema - Waero
-EVENT_EliteChallangeD@Ana Thema@1@,0@Ana Thema - Elite
+EVENT_EliteChallangeD@Ana Thema@1@,0@Ana Thema - Elite Challenge D
 BADGE_QuickMeleeLagA@Ana Thema@1@ITEM_LINEBOMB,0@Ana Thema - Deft I
 EVENT_AnathemaVisited@Ana Thema@1@,0@Ana Thema - Visit
 BADGE_GroundNormalComboSpeedup@Ana Thema@1@ITEM_LINEBOMB,0@Ana Thema - Terrestrial Agility
@@ -257,7 +266,7 @@ BADGE_BreakRangeChaser@Swamp@1@,0@Swamp - MP Surge: Break
 STACKABLE_MP@Swamp@12@ITEM_JETPACK 2,0;ITEM_JETPACK && ITEM_DOUBLEJUMP,0;ITEM_JETPACK && ITEM_AirDash,0;ITEM_AirDash && ITEM_DOUBLEJUMP,0@Swamp - Blueberry Bunny Potion
 BADGE_Normal2MultHit@Swamp@1@ITEM_SLIDE && ITEM_LINEBOMB,0@Swamp - C. Count Frenzy: Preemptive
 BADGE_NonChargeShotRapid@Tartarus@1@ChargeShot,0@Tartarus - Swift Shots
-EVENT_EliteChallangeE@Tartarus@1@,0@Tartarus - Elite E
+EVENT_EliteChallangeE@Tartarus@1@,0@Tartarus - Elite Challenge E
 BADGE_CrystalAbsorberS@Tartarus@1@,0@Tartarus - Crystalline Scarlet
 QUEST_RabiPillow@Tartarus@1@,0@Tartarus - Arcade
 STACKABLE_EP@Tartarus@12@ITEM_LINEBOMB,0@Tartarus - Lemon Bunny Potion
@@ -292,7 +301,8 @@ BADGE_QuickDropDouble@Catacombs Inner@1@ITEM_LINEBOMB,0@Catacombs Inner - Double
 BADGE_CrystalAttack@Catacombs Inner@1@ITEM_LINEBOMB,0@Catacombs Inner - Crystal Shrapnel
 BADGE_AntiAir@Catacombs Inner@1@ITEM_LINEBOMB && ITEM_SLIDE,0;ITEM_LINEBOMB && ChargeShot,0@Catacombs Inner - Dogfight
 BADGE_InstantDodgeMeter@Catacombs Main@1@ITEM_LINEBOMB,0@Catacombs Main - Dodge: Panic Switch
-STACKABLE_COG@Catacombs Inner@63@Boss,0@Catacombs Inner - Astral Gear
+STACKABLE_COG@Catacombs Inner@63@,0@Catacombs Inner - Astral Gear
+EVENT_BOSS@Catacombs Inner@63@,0@Catacombs Inner - Boss
 STACKABLE_MATK@Lab@18@(ITEM_BombLengthExtend 3 || ITEM_AREABOMB ) && ITEM_LINEBOMB,0@Lab - Cherry Bunny Potion
 BADGE_DodgeEPBoost@Lab Left@1@,0@Lab - EP Booster: Dodge
 STACKABLE_RATK@Lab@17@ITEM_SLIDE && ITEM_LINEBOMB,0@Lab - Grape Bunny Potion
@@ -300,7 +310,8 @@ BADGE_DodgeWeakAirDown@Lab@1@,0@Lab - Dodge Enhancer: Spiral
 BADGE_BoostCharging@Lab@1@,0@Lab - Core Expansion: Charge
 STACKABLE_EP@Lab@20@ITEM_SLIDE && ITEM_LINEBOMB,0@Lab - Lemon Bunny Potion #1
 STACKABLE_EP@Lab@19@ITEM_LINEBOMB,0@Lab Extended - Lemon Bunny Potion #2
-STACKABLE_COG@Lab@45@Boss,0@Lab - Astral Gear
+STACKABLE_COG@Lab@45@,0@Lab - Astral Gear
+EVENT_BOSS@Lab@45@,0@Lab - Boss
 EVENT_Demonfray@Lab@1@,0@Lab - Demon Fray
 BADGE_StyleComboPassiveA@Lab@1@ITEM_LINEBOMB,0@Lab - C. Rank Frenzy: Focus A
 ITEM_DodgeShot@Lab@1@ChargeShot,0@Lab - Shining Bangle
@@ -325,7 +336,7 @@ BADGE_BoostShieldAbsorb@Blushwood@1@ITEM_SLIDE && ITEM_LINEBOMB,0@Blushwood - Co
 STACKABLE_EP@Blushwood Sliding@8@ITEM_DOUBLEJUMP || ITEM_JETPACK || RabbitWalljump || (ITEM_AirDash && ITEM_WALLJUMP),0@Blushwood Sliding - Lemon Bunny Potion
 STACKABLE_SHARD@Blushwood Sliding@17@ITEM_SLIDE && ITEM_LINEBOMB && (ITEM_DOUBLEJUMP || ITEM_JETPACK || RabbitWalljump || (ITEM_AirDash && ITEM_WALLJUMP)),0@Blushwood Sliding - Rainbow Bunny Potion
 STACKABLE_MP@Valhalla City@18@ITEM_LINEBOMB,0@Valhalla City - Blueberry Bunny Potion
-EVENT_EliteChallangeF@Valhalla City@18@ITEM_LINEBOMB && ITEM_SLIDE,0@Valhalla City - Elite F
+EVENT_EliteChallangeF@Valhalla City@18@ITEM_LINEBOMB && ITEM_SLIDE,0@Valhalla City - Elite Challenge F
 STACKABLE_HP@Valhalla City@17@ITEM_SLIDE && ITEM_LINEBOMB,0@Valhalla City - Kiwi Bunny Potion
 BADGE_BuffRush@Valhalla City@1@ITEM_JETPACK,0;ITEM_DOUBLEJUMP,0;ITEM_AirDash && ITEM_WALLJUMP,0;RabbitWalljump,0@Valhalla City - Buff Rush
 STACKABLE_EP@Valhalla City@26@ITEM_LINEBOMB,0@Valhalla City - Lemon Bunny Potion
@@ -344,7 +355,7 @@ BADGE_Normal3HRedCancel@Valhalla City@1@Coins 2200,0@Valhalla City Shop - Quicks
 BADGE_BoostQuickErase@Valhalla City@1@Coins 1750,0@Valhalla City Shop - Core Expansion: Erase
 STACKABLE_BAG@Valhalla City@33@Coins 2000,0@Valhalla City Shop - Bag Expander
 STACKABLE_EP@Valhalla City@33@Coins 4000,0@Valhalla City Shop - Lemon Bunny Potion
-STACKABLE_HP@Valhalla City@33@Coins 4000,0@Valhalla City - Shop Kiwi Bunny Potion
+STACKABLE_HP@Valhalla City@33@Coins 4000,0@Valhalla City Shop - Kiwi Bunny Potion
 STACKABLE_MATK@Valhalla City@33@Coins 4000,0@Valhalla City Shop - Cherry Bunny Potion
 STACKABLE_MP@Valhalla City@33@Coins 4000,0@Valhalla City Shop - Blueberry Bunny Potion
 STACKABLE_RATK@Valhalla City@33@Coins 4000,0@Valhalla City Shop - Grape Bunny Potion
@@ -357,7 +368,8 @@ STACKABLE_MATK@EverGarden@16@ITEM_SLIDE && ITEM_LINEBOMB && (ITEM_DOUBLEJUMP || 
 BADGE_ToArmorReducer@EverGarden BossPath@1@ITEM_JETPACK && ITEM_LINEBOMB,3;ITEM_AirDash && ITEM_LINEBOMB,4;ITEM_WALLJUMP && ITEM_LINEBOMB && ITEM_DOUBLEJUMP,0@EverGarden BossPath - Whipcrack
 BADGE_DashFlashInv@EverGarden BossPath@1@ChargeShot && (ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || RabbitWalljump),0@EverGarden BossPath - Shooting Star
 BADGE_ComboAntiFullHealth@EverGarden BossPath@1@ITEM_SLIDE && ChargeShot && (ITEM_JETPACK || ITEM_DOUBLEJUMP),0@EverGarden BossPath - Battlecry
-STACKABLE_COG@EverGarden Boss Area@49@Boss,0@EverGarden Boss Area - Astral Gear
+STACKABLE_COG@EverGarden Boss Area@49@,0@EverGarden Boss Area - Astral Gear
+EVENT_BOSS@EverGarden Boss Area@49@,0@EverGarden - Boss
 BADGE_DebuffCounter@EverGarden Boss Area@1@ITEM_LINEBOMB,0@EverGarden Boss Area - Debuff Counter
 BADGE_CrystalIncrease@EverGarden Boss Area@1@ITEM_SLIDE && ITEM_LINEBOMB,0;ITEM_WALLJUMP && ITEM_LINEBOMB,0@Heaven Portal Hub - Crystal Boon
 STACKABLE_RATK@EverGarden Boss Area@20@ITEM_OrbTypeS3 && ITEM_DOUBLEJUMP && ITEM_AirDash && ChargeShot && I20 && ITEM_ORB 2,0@EverGarden Boss Area - Grape Bunny Potion
@@ -371,7 +383,8 @@ STACKABLE_EP@Cloister Pre Boss@18@ITEM_SLIDE,0@Cloister Main - Lemon Bunny Potio
 BADGE_BreakHeal@Cloister Pre Boss@1@ITEM_SLIDE,0@Cloister Main - Coffee Break
 ITEM_WALLJUMP@Cloister Pre Boss@1@ITEM_SLIDE,0@Cloister Main - Parkour Boots
 STACKABLE_MATK@Cloister Pre Boss@17@ITEM_LINEBOMB,0@Cloister Pre Boss - Cherry Bunny Potion
-STACKABLE_COG@Cloister Pre Boss@46@Boss,0@Cloister Boss - Astral Gear
+STACKABLE_COG@Cloister Pre Boss@46@,0@Cloister Boss - Astral Gear
+EVENT_BOSS@Cloister Pre Boss@46@,0@Cloister Boss - Boss
 BADGE_QuickMPRegainB@Cloister Pre Boss@1@ITEM_DOUBLEJUMP,0;ITEM_HIJUMP && ITEM_WALLJUMP,0;ITEM_AirDash && ITEM_WALLJUMP,0;ITEM_JETPACK,0@Cloister Pre Boss - MP Reset B
 BADGE_StyleComboPassiveMAX@Cloister Pre Boss@1@ITEM_DOUBLEJUMP,0;ITEM_AirDash && ITEM_WALLJUMP,0;ITEM_JETPACK,0@Cloister Main - C. Rank Frenzy: Focus MAX
 BADGE_LateAttack@Cloister@1@(ITEM_BombLengthExtend || ITEM_AREABOMB) && ITEM_LINEBOMB,0@Cloister - Crouching Bunny
@@ -381,7 +394,8 @@ BADGE_ChargeShotDiscount@Gallery of Mirrors West@1@,0@Gallery of Mirrors West - 
 BADGE_AreaBombThrower@Gallery of Mirrors East@1@ITEM_AREABOMB && ChargeShot,0@Gallery of Mirrors East - Bomb Pitcher
 BADGE_Recover3@Gallery of Mirrors East@1@ITEM_LINEBOMB && ChargeShot,0@Gallery of Mirrors East - Triple Threat
 ITEM_BombLengthExtend@Gallery of Mirrors East@1@ITEM_LINEBOMB && ChargeShot,0@Gallery of Mirrors East - Combustible
-STACKABLE_COG@Gallery of Mirrors East@47@ITEM_BombLengthExtend && ITEM_AntiDecay && Boss,0@Gallery of Mirrors East - Astral Gear
+STACKABLE_COG@Gallery of Mirrors East@47@ITEM_BombLengthExtend && ITEM_AntiDecay,0@Gallery of Mirrors East - Astral Gear
+EVENT_BOSS@Gallery of Mirrors East@47@ITEM_BombLengthExtend && ITEM_AntiDecay,0@Gallery of Mirrors East - Boss
 EVENT_Memloch@Gallery of Mirrors East@47@ITEM_BombLengthExtend,0@Gallery of Mirrors East - Memloch
 STACKABLE_HP@Gallery of Mirrors East@10@ITEM_SLIDE,0@Gallery of Mirrors East - Kiwi Bunny Potion
 BADGE_WeakGroundUpModCombo@Gallery of Mirrors East@1@ITEM_HIJUMP && ChargeShot,0;ITEM_DOUBLEJUMP && ChargeShot,0;ITEM_JETPACK && ChargeShot,0;ITEM_AirDash && ChargeShot,0;RabbitJump && ChargeShot,0@Gallery of Mirrors East - C. Count Frenzy: Uprise
@@ -391,7 +405,8 @@ STACKABLE_MP@Gallery of Souls Entrance@10@ITEM_SLIDE && ITEM_LINEBOMB,0@Gallery 
 STACKABLE_RATK@Gallery of Souls@10@ITEM_SLIDE && ITEM_LINEBOMB,0@Gallery of Souls - Grape Bunny Potion
 ITEM_DOUBLEJUMP@Gallery of Souls@1@,0@Gallery of Souls - Double Rabi Boots
 BADGE_Instant1@Gallery of Souls Boss Area@1@ITEM_LINEBOMB,-1@Gallery of Souls Boss Area - Hero Call
-STACKABLE_COG@Gallery of Souls Boss Area@62@( ITEM_AntiDecay || ITEM_ZCrystal) && Boss,0@Gallery of Souls Boss Area - Astral Gear
+STACKABLE_COG@Gallery of Souls Boss Area@62@( ITEM_AntiDecay || ITEM_ZCrystal),0@Gallery of Souls Boss Area - Astral Gear
+EVENT_BOSS@Gallery of Souls Boss Area@62@( ITEM_AntiDecay || ITEM_ZCrystal),0@Gallery of Souls Boss Area - Boss
 STACKABLE_HP@Verdazure Ocean To Sea@23@ITEM_WALLJUMP && ITEM_DOUBLEJUMP,0;ITEM_WALLJUMP && ITEM_JETPACK 2,0;ITEM_WALLJUMP && ITEM_WATERMOVEMENT,0;ITEM_WALLJUMP && ITEM_JETPACK && ITEM_AirDash,0;ITEM_WATERMOVEMENT && ITEM_AirDash && ITEM_DOUBLEJUMP,0;ITEM_WATERMOVEMENT && ITEM_DOUBLEJUMP && ITEM_JETPACK,0@Verdazure Ocean - Kiwi Bunny Potion
 BADGE_DodgeCharger@Verdazure Ocean@1@ITEM_AREABOMB && ITEM_LINEBOMB && ChargeShot,0@Verdazure Ocean - MP Surge: Dodge
 STACKABLE_MP@Verdazure Ocean@16@ITEM_LINEBOMB,0@Verdazure Ocean - Blueberry Bunny Potion #1
@@ -413,19 +428,21 @@ STACKABLE_RATK@Forgotten City@4@ITEM_LINEBOMB,0@Forgotten City - Grape Bunny Pot
 STACKABLE_EP@Forgotten City@4@,0@Forgotten City - Lemon Bunny Potion
 BADGE_QuickDropExtendB@Forgotten City@1@,0@Forgotten City - Pogo Drop
 STACKABLE_MATK@Forgotten City@4@ChargeShot,0@Forgotten City - Cherry Bunny Potion
-STACKABLE_COG@Forgotten City@34@ChargeShot && Boss,0;ITEM_DOUBLEJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && Boss,0;ITEM_WALLJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && Boss,0;ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && Boss,0@Forgotten City - Astral Gear
+STACKABLE_COG@Forgotten City@34@ChargeShot,0;ITEM_DOUBLEJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB,0;ITEM_WALLJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB,0;ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB,0@Forgotten City - Astral Gear
+EVENT_BOSS@Forgotten City@34@ChargeShot,0;ITEM_DOUBLEJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB,0;ITEM_WALLJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB,0;ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB,0@Forgotten City - Boss
 BADGE_BaseComboBooster@Forgotten City@1@ChargeShot,0;ITEM_DOUBLEJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB,0;ITEM_WALLJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB,0;ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB,0@Forgotten City - Heavy Metal
 BADGE_StyleComboPassiveS@Forgotten City@1@ITEM_LINEBOMB && ITEM_SLIDE,0@Forgotten City - C. Rank Frenzy: Focus S
 BADGE_DodgeChargedDodgeShot@Snowveil Entrance@1@ITEM_SLIDE,0@Snowveil Entrance - Dodge: Discharge
 STACKABLE_RATK@Snowveil@14@ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_SLIDE,0@Snowveil - Grape Bunny Potion
 EVENT_Air@Snowveil@14@,0@Snowveil - Air
 BADGE_EPMeleeReduce@Snowveil@1@,0@Snowveil - EP Booster: Melee Menace
-STACKABLE_COG@Snowveil Ex@32@Boss,0@Snowveil - Astral Gear
+STACKABLE_COG@Snowveil Ex@32@,0@Snowveil - Astral Gear
+EVENT_BOSS@Snowveil Ex@32@,0@Snowveil - Boss
 BADGE_ChargeHeal@Snowveil Ex@1@ITEM_Rotater,0@Snowveil - Life Steal
 ITEM_Rotater@Snowveil Ex@1@,0@Snowveil - Vortex Gloves
-STACKABLE_MATK@Snowveil Ex@22@ITEM_SLIDE && ITEM_JETPACK 2,0;ITEM_SLIDE && ITEM_JETPACK && ITEM_HIJUMP && SpinnerBash,0;ITEM_DOUBLEJUMP && (ITEM_WALLJUMP || SpinnerBash),0@Snowveil - Cherry Bunny Potion
+STACKABLE_MATK@Snowveil Ex@22@ITEM_SLIDE && ITEM_JETPACK 2,0;ITEM_SLIDE && ITEM_JETPACK && ITEM_HIJUMP && SpinnerBash,0;ITEM_SLIDE && ITEM_DOUBLEJUMP && (ITEM_WALLJUMP || SpinnerBash || ITEM_JETPACK),0@Snowveil - Cherry Bunny Potion
 STACKABLE_EP@Snowveil above Verglas Village@24@ITEM_LINEBOMB && ITEM_JETPACK 2 && ITEM_DOUBLEJUMP,0;ITEM_LINEBOMB && ITEM_JETPACK 3,0;ITEM_LINEBOMB && ITEM_JETPACK 2 && ITEM_HIJUMP && SpinnerBash,0@Snowveil above Verglas Village - Lemon Bunny Potion
-BADGE_JetpackMP@Snowveil Ex@1@ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_JETPACK 3,0@Snowveil - Aerial Assist
+BADGE_JetpackMP@Snowveil Ex@1@ITEM_SLIDE && ITEM_DOUBLEJUMP && (ITEM_AirDash || ITEM_WALLJUMP) && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_JETPACK 3,0@Snowveil - Aerial Assist
 STACKABLE_HP@Snowveil Ex@22@ITEM_SLIDE && ITEM_JETPACK 3 && ITEM_AirDash,0;ITEM_SLIDE && BounceKick && ITEM_AirDash,0;ITEM_SLIDE && ITEM_JETPACK && ITEM_AirDash && ITEM_DOUBLEJUMP,0@Snowveil - Kiwi Bunny Potion
 STACKABLE_RATK@Snow City@21@ITEM_SLIDE && ITEM_LINEBOMB,0@Snow City - Grape Bunny Potion
 BADGE_4Knifes@Snow City@1@ITEM_SLIDE && ITEM_LINEBOMB,0@Snow City - Slash Quartet
@@ -459,19 +476,22 @@ EVENT_HQSwitch1@Golden Hands HQ@1@ITEM_SLIDE && ChargeShot && ITEM_LINEBOMB,0@Go
 STACKABLE_EP@Golden Hands HQ Sewer@23@ITEM_SLIDE,0@Golden Hands HQ Sewer - Lemon Bunny Potion
 BADGE_SuperKnockBomb@Golden Hands HQ Sewer@1@ITEM_LINEBOMB,0@Golden Hands HQ Sewer - Supercluster Bomb
 ITEM_AirSlide@Golden Hands HQ Sewer@1@ITEM_WALLJUMP,0;ITEM_DOUBLEJUMP,0;ITEM_JETPACK,0;ITEM_LINEBOMB && ChargeShot && ITEM_SLIDE,0@Golden Hands HQ Sewer - Airy Powder
-STACKABLE_COG@Golden Hands HQ Sewer@36@ITEM_WALLJUMP && Boss,0;ITEM_DOUBLEJUMP && Boss,0;ITEM_JETPACK && Boss,0;ITEM_LINEBOMB && ChargeShot && ITEM_SLIDE && Boss,0@Golden Hands HQ Sewer - Astral Gear
+STACKABLE_COG@Golden Hands HQ Sewer@36@ITEM_WALLJUMP,0;ITEM_DOUBLEJUMP,0;ITEM_JETPACK,0;ITEM_LINEBOMB && ChargeShot && ITEM_SLIDE,0@Golden Hands HQ Sewer - Astral Gear
+EVENT_BOSS@Golden Hands HQ Sewer@36@ITEM_WALLJUMP,0;ITEM_DOUBLEJUMP,0;ITEM_JETPACK,0;ITEM_LINEBOMB && ChargeShot && ITEM_SLIDE,0@Golden Hands HQ Sewer - Boss
 BADGE_SlideThenStrongUp@DreamKeeper Outside Right@1@ITEM_HIJUMP,0;ITEM_JETPACK,0;ITEM_DOUBLEJUMP,0;ITEM_AirDash && ITEM_WALLJUMP,0@DreamKeeper Outside Right - Slide Basher
 STACKABLE_HP@DreamKeeper Outside Right@28@ITEM_BombLengthExtend && ITEM_LINEBOMB && ITEM_SLIDE && ChargeShot,0@DreamKeeper Outside Right - Kiwi Bunny Potion
 STACKABLE_RATK@DreamKeeper Outside Left@27@ITEM_JETPACK && ChargeShot && ITEM_SLIDE,0;ITEM_DOUBLEJUMP && ChargeShot && ITEM_SLIDE,0@DreamKeeper Outside Left - Grape Bunny Potion
 ITEM_TempRing@DreamKeeper Outside Left@1@,0@DreamKeeper Outside Left - Equilibrium Ring
 STACKABLE_HP@DreamKeeper Outside Left@27@,0@DreamKeeper Outside Left - Kiwi Bunny Potion
 BADGE_ConsumeableCharge@DreamKeeper@1@ITEM_KNIFE || VenaBomb || ChargeShot || ITEM_AREABOMB,0@DreamKeeper - MP Quicken: Sugar Rush
-STACKABLE_COG@DreamKeeper@61@Boss,0@DreamKeeper - Astral Gear #2
+STACKABLE_COG@DreamKeeper@61@,0@DreamKeeper - Astral Gear #2
+EVENT_BOSS@DreamKeeper@61@,0@DreamKeeper - Boss Alius
 ITEM_AntiIce@DreamKeeper@1@,0@DreamKeeper - Grip Sole Boots
 BADGE_LaserRes@DreamKeeper@1@ITEM_LINEBOMB && ITEM_SLIDE,0@DreamKeeper - Refractor
 STACKABLE_MP@DreamKeeper@28@ITEM_LINEBOMB,0@DreamKeeper - Blueberry Bunny Potion
 STACKABLE_RATK@DreamKeeper@28@ITEM_Rotater && ITEM_SLIDE && ITEM_LINEBOMB,0@DreamKeeper - Grape Bunny Potion
-STACKABLE_COG@DreamKeeper@60@Boss,0@DreamKeeper - Astral Gear #1
+STACKABLE_COG@DreamKeeper@60@,0@DreamKeeper - Astral Gear #1
+EVENT_BOSS@DreamKeeper@60@,0@DreamKeeper - Boss Charon
 STACKABLE_MATK@DreamKeeper@28@ITEM_LINEBOMB,0@DreamKeeper - Cherry Bunny Potion
 STACKABLE_EP@DreamKeeper@28@ITEM_LINEBOMB,0@DreamKeeper - Lemon Bunny Potion
 BADGE_KnockHitEnhance@DreamKeeper@1@ITEM_AREABOMB && ITEM_LINEBOMB,0@DreamKeeper - Dominator
@@ -493,7 +513,8 @@ STACKABLE_MP@Heavens Valley Snow Route Middle@27@,0@Heavens Valley Snow Route Mi
 BADGE_HP2Damage6@Sinner's Oath@1@,0@Sinner's Oath - Blood Boil
 STACKABLE_HP@Illusion Palace Entrance@29@ITEM_AirSlide && ITEM_SLIDE,0@Sinner's Oath - Kiwi Bunny Potion
 ITEM_RapidShots@Sinner's Oath Entrance@29@ChargeShot,0@Sinner's Oath - Rapid Shots Modchip
-STACKABLE_COG@Illusion Palace Entrance@43@Boss,0@Illusion Palace Entrance - Astral Gear
+STACKABLE_COG@Illusion Palace Entrance@43@,0@Illusion Palace Entrance - Astral Gear
+EVENT_BOSS@Illusion Palace Entrance@43@,0@Illusion Palace Entrance - Boss
 STACKABLE_RATK@Sinner's Oath Entrance@29@ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_DOUBLEJUMP,0;ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_JETPACK,0;ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_WALLJUMP,0@Sinners Hell - Grape Bunny Potion
 STACKABLE_MATK@Sinner's Oath@29@ITEM_DOUBLEJUMP && ITEM_SLIDE,0;ITEM_JETPACK && ITEM_SLIDE,0;ITEM_AirDash && ITEM_SLIDE,0@Sinners Hell - Cherry Bunny Potion
 STACKABLE_MP@Sinner's Oath@29@ITEM_JETPACK && ITEM_DOUBLEJUMP && ITEM_Rotater,0;ITEM_JETPACK && ITEM_DOUBLEJUMP && ITEM_LINEBOMB,0@Sinner's Oath - Blueberry Bunny Potion
@@ -511,34 +532,46 @@ Useable_VenaBombBig@Vena Shop@1@Coins 99999 && Chapter 4,0@Vena Shop Chap 4 - Cl
 Useable_VenaBombBunBun@Vena Shop@1@Coins 99999 && Chapter 2,0@Vena Shop Chap 2 - BB Rabbit
 Useable_VenaBombDispel@Vena Shop@1@Coins 99999 && Chapter 3,0@Vena Shop Chap 3 - Calico Bomb
 Useable_VenaBombHealBlock@Vena Shop@1@Coins 99999 && Chapter 5,0@Vena Shop Chap 5 - Tabby Bomb
-BADGE_DoubleAirDash@Memine All@1@AllMemine,0@Memine All - Electric Wind
-STACKABLE_SHARD@Ana Thema@0@ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0@Memine Ana Thema - Rainbow Bunny Potion #1
-STACKABLE_SHARD@Blushwood Sliding@1@ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0@Memine Blushwood Sliding - Rainbow Bunny Potion
-STACKABLE_SHARD@Forest@2@ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0@Memine Forest - Rainbow Bunny Potion
-STACKABLE_SHARD@Tartarus@3@ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0@Memine Tartarus - Rainbow Bunny Potion
-STACKABLE_SHARD@Valhalla Breath West Extended@4@ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0@Memine Valhalla Breath West Extended - Rainbow Bunny Potion
-STACKABLE_SHARD@Ana Thema@5@ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_KNIFE && ITEM_AirDash && ITEM_SLIDE && ITEM_JETPACK && Memine,0@Memine Ana Thema - Rainbow Bunny Potion #2
-STACKABLE_SHARD@Thanatara Canyon@29@AllMemine,0@Memine Completion - Rainbow Bunny Potion
-BADGE_SableALastHitEnhance@Crafting@1@Coins 250 && Chapter 1,0@Crafting Chap 1 - Sable Type-A: Voracious
-BADGE_SableALongRangeSnipe@Crafting@1@Coins 250 && ITEM_RailPass,0@Crafting - Sable Type-A: Fanged
-BADGE_SableAHitIncrease@Crafting@1@Coins 250 && ITEM_RailPass,0@Crafting - Sable Type-A: Ensnare
-BADGE_SableBNormalShotDebuff@Crafting@1@Coins 250 && ITEM_RailPass && ITEM_OrbTypeS2,0@Crafting - Sable Type-B: Malediction
-BADGE_SableBReturnStyle@Crafting@1@Coins 250 && ITEM_RailPass && ITEM_OrbTypeS2,0@Crafting - Sable Type-B: Backlash
-BADGE_SableCBigExplode@Crafting@1@Coins 250 && ITEM_RailPass && ITEM_OrbTypeS3,0@Crafting - Sable Type-C: Ignite
-BADGE_SableCSaver@Crafting@1@Coins 250 && ITEM_RailPass && ITEM_OrbTypeS3,0@Crafting - Sable Type-C: Fervid
+BADGE_DoubleAirDash@Memine All@1@EVENT_Memine 6,0@Memine All - Electric Wind
+STACKABLE_SHARD@Gloamwood Middle@0@EVENT_Memine0,0@Memine Gloamwood - Rainbow Bunny Potion
+EVENT_Memine@Gloamwood Middle@0@EVENT_Memine0,0@Memine Gloamwood - Rainbow Bunny Potion Event
+EVENT_Memine0@Gloamwood Bottom@0@,0@Gloamwood - Memine Race
+STACKABLE_SHARD@Verdazure Ocean@1@EVENT_Memine1,0@Verdazure Ocean - Memine Race From Blushwood
+EVENT_Memine@Verdazure Ocean@1@EVENT_Memine1,0@Verdazure Ocean - Memine Race From Blushwood Event
+EVENT_Memine1@Blushwood Sliding@1@ITEM_SLIDE && ITEM_LINEBOMB && (ITEM_JETPACK 3 || (ITEM_DOUBLEJUMP && (ITEM_SPEEDUP 3 || ITEM_JETPACK))),0@Blushwood Sliding - Memine Race
+STACKABLE_SHARD@CopperWood Industry to Travoll Industrie@2@EVENT_Memine2 && ITEM_LINEBOMB && ((ITEM_WALLJUMP && (ITEM_HIJUMP || ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK)) || (ITEM_JETPACK && ITEM_DOUBLEJUMP) || ITEM_JETPACK 3),0@CopperWood - Memine Race from Forest
+EVENT_Memine@CopperWood Industry to Travoll Industrie@2@EVENT_Memine2 &&  ITEM_LINEBOMB && ((ITEM_WALLJUMP && (ITEM_HIJUMP || ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK)) || (ITEM_JETPACK && ITEM_DOUBLEJUMP) || ITEM_JETPACK 3),0@CopperWood - Memine Race from Forest Event
+EVENT_Memine2@Forest@2@ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_HIJUMP || ITEM_WALLJUMP,0@Forest - Memine Race
+STACKABLE_SHARD@Valhalla City@3@EVENT_Memine3,0@Valhalla City - Memine Race From Tartarus
+EVENT_Memine@Valhalla City@3@EVENT_Memine3,0@Valhalla City - Memine Race From Tartarus Event
+EVENT_Memine3@Tartarus@3@,0@Tartarus - Memine Race
+EVENT_Memine4@Heavens Valley Snow Route Middle@4@ITEM_SLIDE && ( (ITEM_WALLJUMP 2 && ITEM_DOUBLEJUMP) || (ITEM_WALLJUMP && (((ITEM_JETPACK || ITEM_AirDash) && ITEM_DOUBLEJUMP) || (ITEM_AirDash && ITEM_JETPACK)))),0@Heavens Valley Snow Route Middle - Memine Race
+STACKABLE_SHARD@EverGarden BossPath@4@EVENT_Memine4,0@EverGarden - Memine Race From Valhallas Breath East
+EVENT_Memine@EverGarden BossPath@4@EVENT_Memine4,0@EverGarden - Memine Race From Valhallas Breath East Event
+STACKABLE_SHARD@Forgotten City@5@ChargeShot && EVENT_Memine5,0;ITEM_DOUBLEJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && EVENT_Memine5,0;ITEM_WALLJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && EVENT_Memine5,0;ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && EVENT_Memine5,0@Forgotten City - Memine Race From Ana Thema
+EVENT_Memine@Forgotten City@5@ChargeShot && EVENT_Memine5,0;ITEM_DOUBLEJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && EVENT_Memine5,0;ITEM_WALLJUMP && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && EVENT_Memine5,0;ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && EVENT_Memine5,0@Forgotten City - Memine Race From Ana Thema Event
+EVENT_Memine5@Ana Thema@5@Chapter 5,0@Ana Thema - Memine Race
+STACKABLE_SHARD@Thanatara Canyon@29@EVENT_Memine 6,0@Memine Completion - Rainbow Bunny Potion
+BADGE_SableALastHitEnhance@Crafting@1@Coins 250 && Chapter 1,0@Crafting Chap 1 - Sable Type A: Voracious
+BADGE_SableALongRangeSnipe@Crafting@1@Coins 250 && ITEM_RailPass,0@Crafting - Sable Type A: Fanged
+BADGE_SableAHitIncrease@Crafting@1@Coins 250 && ITEM_RailPass,0@Crafting - Sable Type A: Ensnare
+BADGE_SableBNormalShotDebuff@Crafting@1@Coins 250 && ITEM_RailPass && ITEM_OrbTypeS2,0@Crafting - Sable Type B: Malediction
+BADGE_SableBReturnStyle@Crafting@1@Coins 250 && ITEM_RailPass && ITEM_OrbTypeS2,0@Crafting - Sable Type B: Backlash
+BADGE_SableCBigExplode@Crafting@1@Coins 250 && ITEM_RailPass && ITEM_OrbTypeS3,0@Crafting - Sable Type C: Ignite
+BADGE_SableCSaver@Crafting@1@Coins 250 && ITEM_RailPass && ITEM_OrbTypeS3,0@Crafting - Sable Type C: Fervid
 BADGE_RememberBrutalForce@Morose City@1@Coins 2500,0@Morose City Waffle Shop - Muscle Memory
-BADGE_CeliaALongStun@Crafting@1@Coins 250 && Chapter 1,0@Crafting Chap 1 - Celia Type-A: Stunning
-BADGE_CeliaASlowShot@Crafting@1@Coins 250 && ITEM_AirshipPass,0@Crafting - Celia Type-A: Meteoric
-BADGE_CeliaAShortRangeBurst@Crafting@1@Coins 250 && ITEM_AirshipPass,0@Crafting - Celia Type-A: Beguile
-BADGE_CeliaTypeBAmount@Crafting@1@Coins 250 && ITEM_AirshipPass && ITEM_OrbTypeC2,0@Crafting - Celia Type-B: Halo
-BADGE_CELIATYPEBANGLE@Crafting@1@Coins 250 && ITEM_AirshipPass && ITEM_OrbTypeC2,0@Crafting - Celia Type-B: Prism
-BADGE_CeliaCShotIncrease@Crafting@1@Coins 250 && ITEM_AirshipPass && ITEM_OrbTypeC3,0@Crafting - Celia Type-C: Barrage
-BADGE_CeliaCShotAllDirection@Crafting@1@Coins 250 && ITEM_AirshipPass && ITEM_OrbTypeC3,0@Crafting - Celia Type-C: Panoptic
+BADGE_CeliaALongStun@Crafting@1@Coins 250 && Chapter 1,0@Crafting Chap 1 - Celia Type A: Stunning
+BADGE_CeliaASlowShot@Crafting@1@Coins 250 && ITEM_AirshipPass,0@Crafting - Celia Type A: Meteoric
+BADGE_CeliaAShortRangeBurst@Crafting@1@Coins 250 && ITEM_AirshipPass,0@Crafting - Celia Type A: Beguile
+BADGE_CeliaTypeBAmount@Crafting@1@Coins 250 && ITEM_AirshipPass && ITEM_OrbTypeC2,0@Crafting - Celia Type B: Halo
+BADGE_CELIATYPEBANGLE@Crafting@1@Coins 250 && ITEM_AirshipPass && ITEM_OrbTypeC2,0@Crafting - Celia Type B: Prism
+BADGE_CeliaCShotIncrease@Crafting@1@Coins 250 && ITEM_AirshipPass && ITEM_OrbTypeC3,0@Crafting - Celia Type C: Barrage
+BADGE_CeliaCShotAllDirection@Crafting@1@Coins 250 && ITEM_AirshipPass && ITEM_OrbTypeC3,0@Crafting - Celia Type C: Panoptic
 BADGE_ComboStyleDamageUp@Crafting@1@Coins 250 && Chapter 2,0@Crafting Chap 2 - C. Rank Frenzy: Fierce
 BADGE_FrameCancel@Crafting@1@Coins 250 && Chapter 2,0@Crafting Chap 2 - Full Stop A
 BADGE_NormalShotReducerB@Crafting@1@Coins 250 && Chapter 2,0@Crafting Chap 2 - Orbital Efficiency B
 BADGE_StyleComboWeakGroundUpA@Crafting@1@Coins 250 && Chapter 2,0@Crafting Chap 2 - Style Combo: Upper A
-BADGE_NormalShotWhenChargedShot@Crafting@1@Coins 250 && Chapter 3,0@Crafting Chap 3 - Two-pronged Shot
+BADGE_NormalShotWhenChargedShot@Crafting@1@Coins 250 && Chapter 3,0@Crafting Chap 3 - Two pronged Shot
 BADGE_120CHARGE@Crafting@1@Coins 250 && Chapter 3,0@Crafting Chap 3 - MP Quicken: Melee
 BADGE_AllMeleeSpeedUp@Crafting@1@Coins 250 Chap 3 && Chapter 3,0@Crafting Chap 3 - Dextrous
 BADGE_PowerDrop@Crafting@1@Coins 250 && Chapter 3,0@Crafting Chap 3 - Drop Kick
@@ -605,9 +638,9 @@ ITEM_Rotater@Item Upgrade@2@ITEM_Rotater && Upgrade 2 && EVENT_Air,0@Item Upgrad
 ITEM_Rotater@Item Upgrade@3@ITEM_Rotater && Upgrade 2 && EVENT_Air,0@Item Upgrade - Vortex Gloves #2
 ITEM_GoldenGlove@Item Upgrade@2@ITEM_GoldenGlove && Upgrade 1 && EVENT_Fire && EVENT_Air && EVENT_Light,0@Item Upgrade - Trinketeer's Fortune #1
 ITEM_GoldenGlove@Item Upgrade@3@ITEM_GoldenGlove && Upgrade 1 && EVENT_Fire && EVENT_Air && EVENT_Light,0@Item Upgrade - Trinketeer's Fortune #2
-ITEM_OrbTypeC2@Item Upgrade@1@Coins 250 && ITEM_ORB 3 && Core 4,0@Orb Type Upgrade - Blue Module Type-B
-ITEM_OrbTypeS2@Item Upgrade@1@Coins 250 && ITEM_ORB 3 && Core 5,0@Orb Type Upgrade - Red Module Type-B
-ITEM_OrbTypeC3@Item Upgrade@1@Coins 250 && ITEM_ORB 3 && Core 7,0@Orb Type Upgrade - Blue Module Type-C
-ITEM_OrbTypeS3@Item Upgrade@1@Coins 250 && ITEM_ORB 3 && Core 8,0@Orb Type Upgrade - Red Module Type-C
-ITEM_OrbBoostU@Item Upgrade@1@Coins 250 && Core 4,0@Orb Type Upgrade - Core Module Type-U
-ITEM_OrbBoostD@Item Upgrade@1@Coins 250 && Core 8,0@Orb Type Upgrade - Core Module Type-D
+ITEM_OrbTypeC2@Item Upgrade@1@Coins 250 && ITEM_ORB 3 && Core 4,0@Orb Type Upgrade - Blue Module Type B
+ITEM_OrbTypeS2@Item Upgrade@1@Coins 250 && ITEM_ORB 3 && Core 5,0@Orb Type Upgrade - Red Module Typ B
+ITEM_OrbTypeC3@Item Upgrade@1@Coins 250 && ITEM_ORB 3 && Core 7,0@Orb Type Upgrade - Blue Module Type C
+ITEM_OrbTypeS3@Item Upgrade@1@Coins 250 && ITEM_ORB 3 && Core 8,0@Orb Type Upgrade - Red Module Type C
+ITEM_OrbBoostU@Item Upgrade@1@Coins 250 && Core 4,0@Orb Type Upgrade - Core Module Type U
+ITEM_OrbBoostD@Item Upgrade@1@Coins 250 && Core 8,0@Orb Type Upgrade - Core Module Type D
