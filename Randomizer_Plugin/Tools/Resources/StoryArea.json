@@ -52,13 +52,13 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Thanatara Canyon - Heavens Valley West",
+                    "Exit": "Thanatara Canyon to Heavens Valley West",
                     "Method": "ITEM_LINEBOMB && (ITEM_JETPACK || ITEM_DOUBLEJUMP || ((EnemyManip || ITEM_SLIDE)&& (ITEM_HIJUMP || ITEM_WALLJUMP))) || (HiddenP && ITEM_WALLJUMP))"
                 }
             ]
         },
         {
-            "Name": "Thanatara Canyon - Heavens Valley West",
+            "Name": "Thanatara Canyon to Heavens Valley West",
             "Connections": [
                 {
                     "Exit": "0105",
@@ -714,7 +714,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Thanatara Canyon - Heavens Valley West",
+                    "Exit": "Thanatara Canyon to Heavens Valley West",
                     "Method": ""
                 }
             ]

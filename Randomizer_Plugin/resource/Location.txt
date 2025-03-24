@@ -371,7 +371,7 @@ BADGE_ComboAntiFullHealth@EverGarden BossPath@1@ITEM_SLIDE && ChargeShot && (ITE
 STACKABLE_COG@EverGarden Boss Area@49@,0@EverGarden Boss Area - Astral Gear
 EVENT_BOSS@EverGarden Boss Area@49@,0@EverGarden - Boss
 BADGE_DebuffCounter@EverGarden Boss Area@1@ITEM_LINEBOMB,0@EverGarden Boss Area - Debuff Counter
-BADGE_CrystalIncrease@EverGarden Boss Area@1@ITEM_SLIDE && ITEM_LINEBOMB,0;ITEM_WALLJUMP && ITEM_LINEBOMB,0@Heaven Portal Hub - Crystal Boon
+BADGE_CrystalIncrease@EverGarden Boss Area@1@ITEM_SLIDE && ITEM_LINEBOMB,0;ITEM_JETPACK && ITEM_LINEBOMB,0;ITEM_DOUBLEJUMP && ITEM_LINEBOMB,0;ITEM_WALLJUMP && ITEM_LINEBOMB,0@Heaven Portal Hub - Crystal Boon
 STACKABLE_RATK@EverGarden Boss Area@20@ITEM_OrbTypeS3 && ITEM_DOUBLEJUMP && ITEM_AirDash && ChargeShot && I20 && ITEM_ORB 2,0@EverGarden Boss Area - Grape Bunny Potion
 BADGE_BoostHitCount@Cloister@1@EVENT_EliteChallangeF,0@Cloister Elite - Core Expansion: Combo
 EVENT_FreeStrongAttack@Cloister Entrance@1@,0@Cloister - Free Attack

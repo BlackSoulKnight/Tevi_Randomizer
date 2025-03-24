@@ -6,7 +6,7 @@
 0302:Morose City
 0107:Thanatara Canyon Lower
 0507:Travoll Mines to Thanatara Canyon
-0105:Thanatara Canyon - Heavens Valley West
+0105:Thanatara Canyon to Heavens Valley West
 2105:Heavens Valley West
 0106:Thanatara Canyon Lower
 2206:Solennian Ruins Entrance

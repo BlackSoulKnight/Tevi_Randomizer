@@ -101,7 +101,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Thanatara Canyon - Heavens Valley West",
+                    "Exit": "Thanatara Canyon to Heavens Valley West",
                     "Method": "ITEM_LINEBOMB"
                 },
                 {
@@ -162,7 +162,7 @@
             ]
         },
         {
-            "Name": "Thanatara Canyon - Heavens Valley West",
+            "Name": "Thanatara Canyon to Heavens Valley West",
             "Money": [
                 {
                     "Method": "",
@@ -2631,15 +2631,15 @@
                 },
                 {
                     "Exit": "Gallery of Souls",
-                    "Method": "ITEM_JETPACK 2 && ITEM_LINEBOMB && BarrierSkip"
+                    "Method": "ITEM_JETPACK 2 && ITEM_LINEBOMB && BarrierSkip && ITEM_SLIDE"
                 },
                 {
                     "Exit": "Gallery of Souls",
-                    "Method": "ITEM_WALLJUMP && ITEM_LINEBOMB && BarrierSkip"
+                    "Method": "ITEM_WALLJUMP && ITEM_LINEBOMB && BarrierSkip && ITEM_SLIDE"
                 },
                 {
                     "Exit": "Gallery of Souls",
-                    "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && BarrierSkip"
+                    "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && BarrierSkip && ITEM_SLIDE"
                 }
             ]
         },
@@ -2942,7 +2942,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Thanatara Canyon - Heavens Valley West",
+                    "Exit": "Thanatara Canyon to Heavens Valley West",
                     "Method": ""
                 }
             ]
