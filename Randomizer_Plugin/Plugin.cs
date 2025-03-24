@@ -5,18 +5,13 @@ using BepInEx;
 using HarmonyLib;
 using EventMode;
 using Game;
-using TMPro;
 
 
-using UnityEngine.UI;
 using UnityEngine;
 using Bullet;
-using QFSW.QC;
-using TeviRandomizer;
 using Map;
 
 using Newtonsoft.Json;
-using Unity.Curl;
 using Character;
 using static Localize;
 
@@ -66,6 +61,8 @@ namespace TeviRandomizer
         RandomizedMusic = 8,
         RandomizedBG = 9,
     }
+
+
 
 
     [BepInPlugin("tevi.plugins.randomizer", "Randomizer", "1.2.2.2")]
@@ -932,6 +929,26 @@ namespace TeviRandomizer
         static void resetBonusDmg()
         {
             bonusDropKickDmg = 0;
+        }
+
+
+        [HarmonyPatch(typeof(WorldManager), "StartFadeFrontLayer")]
+        [HarmonyPrefix]
+        static void fade1(ref float target)
+        {
+            target = 0;
+        }
+        [HarmonyPatch(typeof(WorldManager), "SetFrontLayer")]
+        [HarmonyPrefix]
+        static void fade2(ref float target)
+        {
+            target = 0;
+        }
+        [HarmonyPatch(typeof(WorldManager), "Awake")]
+        [HarmonyPostfix]
+        static void fade0(ref float ___FrontFadeTarget)
+        {
+            ___FrontFadeTarget = 0;
         }
 
         //test Feature
