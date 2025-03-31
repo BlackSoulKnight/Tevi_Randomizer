@@ -28,7 +28,7 @@ namespace TeviRandomizer
 
                 if (ArchipelagoInterface.Instance.isConnected)
                 {
-                    if (data == ItemList.Type.I10 || data == ItemList.Type.I11)
+                    if (data == ArchipelagoInterface.remoteItem || data == ArchipelagoInterface.remoteItemProgressive)
                     {
 
                         string itemName = ArchipelagoInterface.Instance.getLocItemName(type, value);
@@ -329,7 +329,7 @@ namespace TeviRandomizer
             return false;
         }
 
-        static readonly ItemList.Type[] newPins = {ItemList.Type.I10, ItemList.Type.I11, ItemList.Type.I19, ItemList.Type.I20, ItemList.Type.STACKABLE_COG };
+        static readonly ItemList.Type[] newPins = {ArchipelagoInterface.remoteItemProgressive, ArchipelagoInterface.remoteItem, ItemList.Type.I19, ItemList.Type.I20, ItemList.Type.STACKABLE_COG };
 
         //autoPin Icons
         [HarmonyPatch(typeof(GemaItemExplorer),"StartMe")]

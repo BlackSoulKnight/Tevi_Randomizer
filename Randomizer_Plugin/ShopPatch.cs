@@ -627,7 +627,7 @@ namespace TeviRandomizer
                 texts[1].color = new Color32(152, 222, byte.MaxValue, byte.MaxValue);
                 texts[1].text = Localize.GetLocalizeTextWithKeyword("ITEMTYPE.Item", contains: false);
             }
-            if (ArchipelagoInterface.Instance.isConnected && (___itype == ItemList.Type.I10 || ___itype == ItemList.Type.I11))
+            if (ArchipelagoInterface.Instance.isConnected && (___itype == ArchipelagoInterface.remoteItem || ___itype == ArchipelagoInterface.remoteItemProgressive))
             {
                 string itemName = ArchipelagoInterface.Instance.getLocItemName(item, slot);
                 texts[0].text = itemName;
@@ -665,7 +665,7 @@ namespace TeviRandomizer
                     data = RandomizerPlugin.getRandomizedItem(item, 1);
                     ___item_desc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(data);
                 }
-                if (ArchipelagoInterface.Instance.isConnected && (data == ItemList.Type.I10 || data == ItemList.Type.I11))
+                if (ArchipelagoInterface.Instance.isConnected && (data == ArchipelagoInterface.remoteItem || data == ArchipelagoInterface.remoteItemProgressive))
                 {
                     string itemName = ArchipelagoInterface.Instance.getLocItemName(item, slot);
                     string playerName = ArchipelagoInterface.Instance.getLocPlayerName(item, slot);
