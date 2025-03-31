@@ -15,7 +15,7 @@ namespace TeviRandomizer
         //Hotswap item recieved
         [HarmonyPatch(typeof(HUDObtainedItem), "GiveItem")]
         [HarmonyPrefix]
-        static bool ObtainItem(ref ItemList.Type type, ref byte value, ref bool doRandomBadge)
+        static bool ObtainItem(ref ItemList.Type type, ref byte value, ref bool doRandomBadge, ref (ItemList.Type, byte) __state)
         {
 
             if (!doRandomBadge)
@@ -30,10 +30,21 @@ namespace TeviRandomizer
                 {
                     if (data == ItemList.Type.I10 || data == ItemList.Type.I11)
                     {
+
                         string itemName = ArchipelagoInterface.Instance.getLocItemName(type, value);
                         string playerName = ArchipelagoInterface.Instance.getLocPlayerName(type, value);
-                        RandomizerPlugin.changeSystemText("ITEMNAME." + GemaItemManager.Instance.GetItemString(data), itemName);
                         string desc = $"You found {itemName} for {playerName}";
+                        __state = (type,value);
+
+                        ItemList.Type item;
+                        if (Enum.TryParse(itemName, out item))
+                        {
+                            itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + item.ToString(), true);
+
+                            desc = $"                                                                               FOOL!\n\n\n{itemName} was stolen by {playerName}";
+                        }
+
+                        RandomizerPlugin.changeSystemText("ITEMNAME." + GemaItemManager.Instance.GetItemString(data), itemName);
                         RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(data), desc);
                     }
                 }
@@ -51,6 +62,25 @@ namespace TeviRandomizer
             if (type.ToString().Contains("ITEM") || type.ToString().Contains("Useable"))
                 value = 255;
             return true;
+        }
+
+        [HarmonyPatch(typeof(HUDObtainedItem), "GiveItem")]
+        [HarmonyPostfix]
+        static void changeSpriteInUI(ref SpriteRenderer ___itemicon,ref (ItemList.Type, byte) __state,ref ItemList.Type type)
+        {
+
+            if (type == ArchipelagoInterface.remoteItem || type == ArchipelagoInterface.remoteItemProgressive)
+            {
+                if (ArchipelagoInterface.Instance.isConnected)
+                {
+                    string itemName = ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APLocationName[$"{__state.Item1} #{__state.Item2}"]);
+                    ItemList.Type item;
+                    if (Enum.TryParse(itemName, out item))
+                    {
+                        ___itemicon.sprite = CommonResource.Instance.GetItem((int)item);
+                    }
+                }
+            }
         }
 
         // Called everytime when an Item is obtained through any means

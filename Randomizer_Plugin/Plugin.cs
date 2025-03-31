@@ -18,8 +18,6 @@ using static Localize;
 
 
 
-
-
 namespace TeviRandomizer
 {
 
@@ -532,9 +530,21 @@ namespace TeviRandomizer
             if (__instance.itemid == ItemList.Type.ITEM_RapidShots) { ___slotid = 29; }
 
             ItemList.Type data = getRandomizedItem(__instance.itemid, ___slotid);
-            //Second Rapid shots location
 
             var spr = CommonResource.Instance.GetItem((int)data);
+
+            if (data == ArchipelagoInterface.remoteItem || data == ArchipelagoInterface.remoteItemProgressive)
+            {
+                if (ArchipelagoInterface.Instance.isConnected)
+                {
+                    string itemName = ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APLocationName[$"{__instance.itemid} #{___slotid}"]);
+                    ItemList.Type item;
+                    if (Enum.TryParse(itemName, out item))
+                    {
+                        spr = CommonResource.Instance.GetItem((int)item);
+                    }
+                }
+            }
 
             if (data >= ItemList.Type.BADGE_START && data <= ItemList.Type.BADGE_MAX)
             {
@@ -671,7 +681,6 @@ namespace TeviRandomizer
 
 
         }
-
         [HarmonyPatch(typeof(enemyController), "FreeRoamEnemyBoost")]
         [HarmonyPrefix]
         static bool FreeRoamEnemyBoost(ref int ___health, ref int ___atk, ref CharacterBase ___type)

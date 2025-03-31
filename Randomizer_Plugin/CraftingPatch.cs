@@ -140,15 +140,63 @@ namespace TeviRandomizer
                     ___selectedDesc.text = "<font-weight=200>" + Localize.GetLocalizeTextWithKeyword("ITEMDESC.ORBTYPESERIES", contains: false);
                     ___selectedDesc.text = Localize.AddColorToBadgeDesc(___selectedDesc.text);
                 }
-                else if (data == ItemList.Type.I10|| data == ItemList.Type.I11)
+                else if (data == ArchipelagoInterface.remoteItem|| data == ArchipelagoInterface.remoteItemProgressive)
                 {
                     if (ArchipelagoInterface.Instance.isConnected)
                     {
-                        if (data == ItemList.Type.I10 || data == ItemList.Type.I11)
-                        {
-                            string itemName = ArchipelagoInterface.Instance.getLocItemName(itemType, slot);
-                            string playerName = ArchipelagoInterface.Instance.getLocPlayerName(itemType, slot);
-                            ___selectedDesc.text = $"You found {itemName} for {playerName}";
+
+                        string itemName = ArchipelagoInterface.Instance.getLocItemName(itemType, slot);
+                        string playerName = ArchipelagoInterface.Instance.getLocPlayerName(itemType, slot);
+
+                        ___selectedDesc.text = $"You found {itemName} for {playerName}";
+
+                        ItemList.Type item;
+                        if (Enum.TryParse(itemName, out item))
+                            {
+                            ___selectedDesc.text = Localize.GetLocalizeTextWithKeyword("ITEMDESC." + item.ToString(), true);
+
+                            ___selectedDesc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(item);
+
+                            if (___selectedDesc.text.Contains("[c2]"))
+                            {
+                                if (___craftList[___selected].isUpgrade)
+                                {
+                                    //___selectedDesc.text = Localize.FilterLevelDescFromItem2(data.getItemTyp(), ___selectedDesc.text);
+                                    ___selectedDesc.text = Localize.FilterLevelDescFromItem2(item, ___selectedDesc.text);
+                                }
+                                else
+                                {
+                                    ___selectedDesc.text = Localize.FilterLevelDescFromItem(item, ___selectedDesc.text);
+                                }
+                            }
+                            if (item == ItemList.Type.Useable_WaffleWonderTemp)
+                            {
+                                int num = (int)(100f * (1f * (float)(int)SaveManager.Instance.GetMiniFlag(Mini.WaffleWonderCrafted) / 10f));
+                                if (num > 20)
+                                {
+                                    num += 5;
+                                }
+                                if (num >= 85)
+                                {
+                                    num += 5;
+                                }
+                                TextMeshProUGUI textMeshProUGUI = ___selectedDesc;
+                                textMeshProUGUI.text = textMeshProUGUI.text + "<br>" + Localize.GetLocalizeTextWithKeyword("ITEMDESC2.Useable_WaffleWonderTemp", contains: false) + " <color=#FFF>" + num + "%</color>";
+                            }
+                            if (item.ToString().Contains("Useable"))
+                            {
+                                TextMeshProUGUI textMeshProUGUI2 = ___selectedDesc;
+                                textMeshProUGUI2.text = textMeshProUGUI2.text + "<br>" + Localize.GetLocalizeTextWithKeyword("ITEMDESC.USEABLETIPS", contains: false);
+                            }
+                            if (item == ItemList.Type.ITEM_OrbAmulet && SaveManager.Instance.GetItem(ItemList.Type.ITEM_OrbAmulet) <= 0)
+                            {
+                                int num2 = ___selectedDesc.text.IndexOf("<br>");
+                                if (num2 >= 0)
+                                {
+                                    ___selectedDesc.text = ___selectedDesc.text.Substring(0, num2);
+                                }
+                            }
+
                         }
                     }
                 }
@@ -362,6 +410,7 @@ namespace TeviRandomizer
 
 
 
+            ItemList.Type item;
 
 
 
@@ -374,6 +423,22 @@ namespace TeviRandomizer
             {
                 b = 1;
                 __instance.UpdateIcon(data);
+                string itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + data.ToString(), true);
+
+                if (data == ArchipelagoInterface.remoteItem || data == ArchipelagoInterface.remoteItemProgressive)
+                {
+                    if (ArchipelagoInterface.Instance.isConnected)
+                    {
+                        itemName = ArchipelagoInterface.Instance.getLocItemName(itype, 1);
+
+                        if (Enum.TryParse(itemName, out item))
+                        {
+                            __instance.UpdateIcon(item);
+                            itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + item.ToString(), true);
+                        }
+                    }
+                }
+                ___nameText.text = Localize.GetLocalizeTextWithKeyword("CRAFT_CraftBadge", contains: false) + " <color=#FFF>" + itemName;
 
             }
             else if (itype.ToString().Contains("_OrbType") || itype.ToString().Contains("_OrbBoost"))
@@ -402,10 +467,14 @@ namespace TeviRandomizer
                     }
                 }
             }
-            if (ArchipelagoInterface.Instance.isConnected && itype.ToString().Contains("BADGE") && (data == ItemList.Type.I10 || data == ItemList.Type.I11))
+            if (ArchipelagoInterface.Instance.isConnected && (itype.ToString().Contains("BADGE")) && (data == ArchipelagoInterface.remoteItem || data == ArchipelagoInterface.remoteItemProgressive))
             {
                 string itemName = ArchipelagoInterface.Instance.getLocItemName(itype, 1);
-                ___nameText.text = Localize.GetLocalizeTextWithKeyword("CRAFT_CraftItem", contains: false) + " "+itemName;
+                if (Enum.TryParse(itemName, out item))
+                {
+                    itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + item.ToString(), true);
+                }
+                ___nameText.text = Localize.GetLocalizeTextWithKeyword("CRAFT_CraftBadge", contains: false) + " <color=#FFF>" + itemName;
             }
 
             int num = 0;
