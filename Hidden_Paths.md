@@ -26,7 +26,7 @@ Entrance from Maga Deapth
 Either enter the Main area of Sinner's Oath with charge shot,
 ![screenshot](./Randomizer_Plugin/resource/pngs/Sinner1.png)
 
-or trigger the Eventblock from the above Picture to enable this Path to Cyril fight and Illusion Palace
+or trigger the Eventblock from the above Picture, but the camera has to scroll up before triggering the event, to enable this Path to Cyril fight and Illusion Palace
 ![screenshot](./Randomizer_Plugin/resource/pngs/Sinner2.png)
 
 # Illusion Palace
