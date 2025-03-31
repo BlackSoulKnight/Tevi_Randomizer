@@ -5819,6 +5819,10 @@
                 "Difficulty": 0
             },
             {
+                "Method": "ITEM_LINEBOMB && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash && ITEM_HIJUMP",
+                "Difficulty": 0
+            },
+            {
                 "Method": "ITEM_LINEBOMB && ITEM_JETPACK 2 && ITEM_HIJUMP && SpinnerBash",
                 "Difficulty": 0
             }
