@@ -396,7 +396,7 @@ BADGE_Recover3@Gallery of Mirrors East@1@ITEM_LINEBOMB && ChargeShot,0@Gallery o
 ITEM_BombLengthExtend@Gallery of Mirrors East@1@ITEM_LINEBOMB && ChargeShot,0@Gallery of Mirrors East - Combustible
 STACKABLE_COG@Gallery of Mirrors East@47@ITEM_BombLengthExtend && ITEM_AntiDecay,0@Gallery of Mirrors East - Astral Gear
 EVENT_BOSS@Gallery of Mirrors East@47@ITEM_BombLengthExtend && ITEM_AntiDecay,0@Gallery of Mirrors East - Boss
-EVENT_Memloch@Gallery of Mirrors East@47@ITEM_BombLengthExtend,0@Gallery of Mirrors East - Memloch
+EVENT_Memloch@Gallery of Mirrors East@47@ITEM_BombLengthExtend && ITEM_AntiDecay,0@Gallery of Mirrors East - Memloch
 STACKABLE_HP@Gallery of Mirrors East@10@ITEM_SLIDE,0@Gallery of Mirrors East - Kiwi Bunny Potion
 BADGE_WeakGroundUpModCombo@Gallery of Mirrors East@1@ITEM_HIJUMP && ChargeShot,0;ITEM_DOUBLEJUMP && ChargeShot,0;ITEM_JETPACK && ChargeShot,0;ITEM_AirDash && ChargeShot,0;RabbitJump && ChargeShot,0@Gallery of Mirrors East - C. Count Frenzy: Uprise
 STACKABLE_EP@Gallery of Mirrors East@25@ITEM_Rotater && ITEM_JETPACK && ITEM_DOUBLEJUMP && ITEM_AirDash,0;ITEM_Rotater && ITEM_JETPACK && ITEM_AirDash,3;ITEM_Rotater && ITEM_JETPACK 2 && ITEM_AirDash,0;ITEM_Rotater && ITEM_DOUBLEJUMP && ITEM_JETPACK,0@Gallery of Mirrors East - Lemon Bunny Potion
@@ -441,7 +441,7 @@ EVENT_BOSS@Snowveil Ex@32@,0@Snowveil - Boss
 BADGE_ChargeHeal@Snowveil Ex@1@ITEM_Rotater,0@Snowveil - Life Steal
 ITEM_Rotater@Snowveil Ex@1@,0@Snowveil - Vortex Gloves
 STACKABLE_MATK@Snowveil Ex@22@ITEM_SLIDE && ITEM_JETPACK 2,0;ITEM_SLIDE && ITEM_JETPACK && ITEM_HIJUMP && SpinnerBash,0;ITEM_SLIDE && ITEM_DOUBLEJUMP && (ITEM_WALLJUMP || SpinnerBash || ITEM_JETPACK),0@Snowveil - Cherry Bunny Potion
-STACKABLE_EP@Snowveil above Verglas Village@24@ITEM_LINEBOMB && ITEM_JETPACK 2 && ITEM_DOUBLEJUMP,0;ITEM_LINEBOMB && ITEM_JETPACK 3,0;ITEM_LINEBOMB && ITEM_JETPACK 2 && ITEM_HIJUMP && SpinnerBash,0@Snowveil above Verglas Village - Lemon Bunny Potion
+STACKABLE_EP@Snowveil above Verglas Village@24@ITEM_LINEBOMB && ITEM_JETPACK 2 && ITEM_DOUBLEJUMP,0;ITEM_LINEBOMB && ITEM_JETPACK 3,0;ITEM_LINEBOMB && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash && ITEM_HIJUMP,0;ITEM_LINEBOMB && ITEM_JETPACK 2 && ITEM_HIJUMP && SpinnerBash,0@Snowveil above Verglas Village - Lemon Bunny Potion
 BADGE_JetpackMP@Snowveil Ex@1@ITEM_SLIDE && ITEM_DOUBLEJUMP && (ITEM_AirDash || ITEM_WALLJUMP) && ITEM_JETPACK,0;ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_JETPACK 3,0@Snowveil - Aerial Assist
 STACKABLE_HP@Snowveil Ex@22@ITEM_SLIDE && ITEM_JETPACK 3 && ITEM_AirDash,0;ITEM_SLIDE && BounceKick && ITEM_AirDash,0;ITEM_SLIDE && ITEM_JETPACK && ITEM_AirDash && ITEM_DOUBLEJUMP,0@Snowveil - Kiwi Bunny Potion
 STACKABLE_RATK@Snow City@21@ITEM_SLIDE && ITEM_LINEBOMB,0@Snow City - Grape Bunny Potion
@@ -515,7 +515,7 @@ STACKABLE_HP@Illusion Palace Entrance@29@ITEM_AirSlide && ITEM_SLIDE,0@Sinner's 
 ITEM_RapidShots@Sinner's Oath Entrance@29@ChargeShot,0@Sinner's Oath - Rapid Shots Modchip
 STACKABLE_COG@Illusion Palace Entrance@43@,0@Illusion Palace Entrance - Astral Gear
 EVENT_BOSS@Illusion Palace Entrance@43@,0@Illusion Palace Entrance - Boss
-STACKABLE_RATK@Sinner's Oath Entrance@29@ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_DOUBLEJUMP,0;ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_JETPACK,0;ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_WALLJUMP,0@Sinners Hell - Grape Bunny Potion
+STACKABLE_RATK@Sinner's Oath@29@ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_DOUBLEJUMP,0;ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_JETPACK,0;ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_WALLJUMP,0@Sinners Hell - Grape Bunny Potion
 STACKABLE_MATK@Sinner's Oath@29@ITEM_DOUBLEJUMP && ITEM_SLIDE,0;ITEM_JETPACK && ITEM_SLIDE,0;ITEM_AirDash && ITEM_SLIDE,0@Sinners Hell - Cherry Bunny Potion
 STACKABLE_MP@Sinner's Oath@29@ITEM_JETPACK && ITEM_DOUBLEJUMP && ITEM_Rotater,0;ITEM_JETPACK && ITEM_DOUBLEJUMP && ITEM_LINEBOMB,0@Sinner's Oath - Blueberry Bunny Potion
 STACKABLE_EP@Sinner's Oath@29@ITEM_JETPACK 3 && ITEM_AirDash && ITEM_Rotater && ITEM_SLIDE,0;ITEM_JETPACK && ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_Rotater && ITEM_SLIDE,0@Sinner's Oath - Lemon Bunny Potion

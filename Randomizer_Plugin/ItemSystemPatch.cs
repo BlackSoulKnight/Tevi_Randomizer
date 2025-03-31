@@ -41,7 +41,7 @@ namespace TeviRandomizer
                         {
                             itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + item.ToString(), true);
 
-                            desc = $"                                                                               FOOL!\n\n\n{itemName} was stolen by {playerName}";
+                            desc = "<color=\"red\">"+$"                                                                          <size=200%> FOOL!</color><size=100%>\n\n\n<font-weight=100>{itemName} was stolen by {playerName}";
                         }
 
                         RandomizerPlugin.changeSystemText("ITEMNAME." + GemaItemManager.Instance.GetItemString(data), itemName);

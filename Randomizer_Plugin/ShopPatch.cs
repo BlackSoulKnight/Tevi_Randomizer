@@ -2,6 +2,7 @@
 using Game;
 using HarmonyLib;
 using Map;
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -630,6 +631,23 @@ namespace TeviRandomizer
             if (ArchipelagoInterface.Instance.isConnected && (___itype == ArchipelagoInterface.remoteItem || ___itype == ArchipelagoInterface.remoteItemProgressive))
             {
                 string itemName = ArchipelagoInterface.Instance.getLocItemName(item, slot);
+                if (Enum.TryParse(itemName, out item))
+                {
+                    itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + item.ToString(), true) + "?";
+                    ___itemicon.sprite = CommonResource.Instance.GetItem((int)item);
+                    if (item >= ItemList.Type.BADGE_START && item <= ItemList.Type.BADGE_MAX)
+                    {
+                        texts[1].text = Localize.GetLocalizeTextWithKeyword("ITEMTYPE.Badge", contains: false);
+                        texts[1].color = new Color32(byte.MaxValue, 186, 95, byte.MaxValue);
+                        bgicon.enabled = true;
+                    }
+                    else
+                    {
+                        texts[1].color = new Color32(152, 222, byte.MaxValue, byte.MaxValue);
+                        texts[1].text = Localize.GetLocalizeTextWithKeyword("ITEMTYPE.Item", contains: false);
+                        bgicon.enabled = false;
+                    }
+                }
                 texts[0].text = itemName;
             }
             texts[2].text = _price.ToString();
@@ -669,7 +687,16 @@ namespace TeviRandomizer
                 {
                     string itemName = ArchipelagoInterface.Instance.getLocItemName(item, slot);
                     string playerName = ArchipelagoInterface.Instance.getLocPlayerName(item, slot);
+
                     ___item_desc.text = "<font-weight=200>" + $"You found {itemName} for {playerName}";
+                    if (Enum.TryParse(itemName, out item))
+                    {
+                        itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + item.ToString(), true);
+
+                        ___item_desc.text = Localize.GetLocalizeTextWithKeyword("ITEMDESC." + item.ToString(), true);
+                        ___item_desc.text = $"<font-weight=200>{playerName} will appreciate if you get this or not.\n\n" + Localize.AddColorToBadgeDesc(___item_desc.text);
+
+                    }
                 }
                 if (___item_desc.text.Contains("[c2]"))
                 {
