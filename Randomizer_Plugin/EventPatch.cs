@@ -429,7 +429,19 @@ namespace TeviRandomizer
 
 
         // Library Bosses
-        // may have to out source GiveItem function to have bosses with higher id than 255 
+        // may have to out source GiveItem function to have bosses with higher id than 255
+        // 
+
+        [HarmonyPatch(typeof(SettingManager), "GetAchievementUnlocked")]
+        [HarmonyPostfix]
+        static void bossrush(ref bool __result,ref Achievements achi)
+        {
+            if(achi == Achievements.ACHI_BOSSRUSH_FIRSTCLEAR)
+            {
+                __result = true;
+            }
+        }
+
         static Character.Type boss = Character.Type.NONE;
         [HarmonyPatch(typeof(END_BOOKMARK),"EVENT")]
         [HarmonyPrefix]
