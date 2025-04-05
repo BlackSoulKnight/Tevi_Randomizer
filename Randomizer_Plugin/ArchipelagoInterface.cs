@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using Archipelago.MultiClient.Net;
 using Archipelago.MultiClient.Net.BounceFeatures.DeathLink;
 using Archipelago.MultiClient.Net.Enums;
@@ -25,7 +27,7 @@ namespace TeviRandomizer
         public const ItemList.Type remoteItem = ItemList.Type.I10;
         public const ItemList.Type remoteItemProgressive = ItemList.Type.I11;
 
-        string AP_WORLD_VERSION = "0.4";
+        string AP_WORLD_VERSION = "0.4.1";
 
         private class LocationData
         {
@@ -47,7 +49,8 @@ namespace TeviRandomizer
         private DeathLinkService deathLink = null;
         private bool deathLinkTriggered = false;
         private bool lostConnection = false;
-
+        private JObject APNameToTevi;
+        private JObject TeviToAPName;
         private const long baseID = 44966541000;
         private Dictionary<string, LocationData> locations = new Dictionary<string, LocationData>();
         private Dictionary<int, int> transitionData = new Dictionary<int, int>();
@@ -94,7 +97,7 @@ namespace TeviRandomizer
             if (success.SlotData.ContainsKey("version"))
             {
                 if((string)success.SlotData["version"] != AP_WORLD_VERSION)
-                    Debug.LogWarning($"AP World version: {(string)success.SlotData["version"]} does not match with Client");
+                    Debug.LogWarning($"AP World version: {(string)success.SlotData["version"]} does not match with Client \n Expected: {AP_WORLD_VERSION}");
             }
             else
             {
@@ -123,7 +126,6 @@ namespace TeviRandomizer
                 oldSlotData(success.SlotData);
             getOwnLocationData(success.SlotData["locationData"]);
             getOwnTransitionData(success.SlotData["transitionData"]);
-            storeData();
             return true;
         }
 
@@ -213,17 +215,29 @@ namespace TeviRandomizer
         {
             session.DataStorage[Scope.Slot, "currentMap"] = map;
         }
-        public void getOwnLocationData(object slotData) {
-            locations.Clear();
-            foreach (JObject item in (JArray)slotData) {
+        public async void getOwnLocationData(object slotData) {
+            long[] locs = session.Locations.AllLocations.ToArray();
+            var a = await session.Locations.ScoutLocationsAsync(locs);
+            foreach (long loc in locs)
+            {
+                if (!a.ContainsKey(loc))
+                {
+                    Debug.Log("==SAD==");
+                    continue;
+                }
                 LocationData locationData = new LocationData();
-                locationData.item = (string)item.GetValue("item");
-                locationData.player = (int)item.GetValue("player");
-                locationData.progressive = (int)item.GetValue("progressive") > 0;
-                locationData.id = session.Locations.GetLocationIdFromName("Tevi", (string)item.GetValue("location"));
-                
-                locations.Add((string)item.GetValue("location"),locationData);
+                if (APNameToTevi.ContainsKey(a[loc].ItemName))
+                {
+                    locationData.item = (string)APNameToTevi[a[loc].ItemName];
+                }
+                else
+                    locationData.item = a[loc].ItemName;
+                locationData.player = a[loc].Player;
+                locationData.progressive = (a[loc].Flags & ItemFlags.Advancement) != 0;
+                locationData.id = loc;
+                locations.Add(session.Locations.GetLocationNameFromId(loc,"Tevi"), locationData);
             }
+            storeData();
         }
         public void getOwnTransitionData(object slotData) {
             transitionData.Clear();
@@ -307,7 +321,17 @@ namespace TeviRandomizer
         public string getLocPlayerName(string Location) => PlayerNames[locations[Location].player];
         public string getLocPlayerName(ItemList.Type item, byte slot) => getLocPlayerName(LocationTracker.APLocationName[$"{item} #{slot}"]);
 
+        void Awake()
+        {
+            string path = RandomizerPlugin.pluginPath + "/resource/";
 
+            TeviToAPName = JObject.Parse(File.ReadAllText(path+ "ItemToReal.json"));
+            APNameToTevi = new JObject();
+            foreach (var item in TeviToAPName)
+            {
+                APNameToTevi.Add((string)item.Value, item.Key);
+            }
+        }
         void Update()
         {
             if (WorldManager.Instance != null && !EventManager.Instance.IsChangingMap() && WorldManager.Instance.MapInited && GemaUIPauseMenu.Instance.GetAllowPause() && !GameSystem.Instance.isAnyPause() && (EventManager.Instance.getMode() == EventMode.Mode.OFF || EventManager.Instance.EventTime > 300f))
