@@ -63,7 +63,7 @@ namespace TeviRandomizer
 
 
 
-    [BepInPlugin("tevi.plugins.randomizer", "Randomizer", "1.2.2.2")]
+    [BepInPlugin("tevi.plugins.randomizer", "Randomizer", "1.2.2.3")]
     [BepInProcess("TEVI.exe")]
     public class RandomizerPlugin : BaseUnityPlugin
     {
@@ -269,9 +269,16 @@ namespace TeviRandomizer
         {
 
             ItemList.Type data;
-            if (LocationTracker.APLocationName.ContainsKey($"{item} #{slot}") && (ArchipelagoInterface.Instance.isConnected && !ArchipelagoInterface.Instance.isItemNative(LocationTracker.APLocationName[$"{item} #{slot}"]) || item == "Remote"))
+            if (LocationTracker.APLocationName.ContainsKey($"{item} #{slot}") && ArchipelagoInterface.Instance.isConnected)
             {
-                data = ArchipelagoInterface.Instance.isItemProgessive(LocationTracker.APLocationName[$"{item} #{slot}"]) ? ArchipelagoInterface.remoteItemProgressive : ArchipelagoInterface.remoteItem;
+                if(!ArchipelagoInterface.Instance.isItemNative(LocationTracker.APLocationName[$"{item} #{slot}"]) || item == "Remote")
+                    data = ArchipelagoInterface.Instance.isItemProgessive(LocationTracker.APLocationName[$"{item} #{slot}"]) ? ArchipelagoInterface.remoteItemProgressive : ArchipelagoInterface.remoteItem;
+                else
+                    if (!Enum.TryParse(ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APLocationName[$"{item} #{slot}"]),out data))
+                    {
+                        //Debug.LogWarning($"Could not find {itemid.ToString()} {slotid}");
+                        data = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), item);
+                    }
             }
             else
             {
@@ -373,7 +380,7 @@ namespace TeviRandomizer
             {
                 if (!EventManager.Instance.isBossMode() && EventManager.Instance.getMode() == Mode.OFF && (EventManager.Instance.getSubMode() == Mode.OFF || EventManager.Instance.getSubMode() == Mode.Chap7WarpToQueensGarden))
                 {
-                    if (GemaMissionMode.Instance.isInMission() || WorldManager.Instance.Area == 30 || (EventManager.Instance.GetCurrentEventBattle() != Mode.Chap7StartRibauldChase && EventManager.Instance.GetCurrentEventBattle() != 0) || EventManager.Instance.isBossMode())
+                    if (WorldManager.Instance.Area == 30 || (EventManager.Instance.GetCurrentEventBattle() != Mode.Chap7StartRibauldChase && EventManager.Instance.GetCurrentEventBattle() != 0) || EventManager.Instance.isBossMode())
                     {
                         __instance.PlaySound(AllSound.SEList.MENUFAIL);
                         __instance.ChangeLogicStatus(Character.PlayerLogicState.NORMAL);
@@ -383,9 +390,11 @@ namespace TeviRandomizer
 
 
                     int num5 = (int)___phy_perfer.GetCounter(4);
+                    if(GemaMissionMode.Instance.isInMission())
+                        EventManager.Instance.StartWarp(1, 1, 1, 1);
+                    else
+                        GemaUIPauseMenu.Instance.OpenPauseMenu(true);
 
-                    //EventManager.Instance.StartWarp(1, 1, 1, 1);
-                    GemaUIPauseMenu.Instance.OpenPauseMenu(true);
                     SaveManager.Instance.RemoveItemFromBagSlot(num5);
                     HUDResourceGotPopup.Instance.AddPopup(item, useTop: true, forcepop: true);
                     if (SaveManager.Instance.GetBadgeEquipped(ItemList.Type.BADGE_ConsumeableCharge))
