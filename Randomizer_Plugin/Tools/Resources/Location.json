@@ -4369,7 +4369,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_AirDash && ITEM_WALLJUMP",
+                "Method": "ITEM_AirDash && ITEM_WALLJUMP && ItemUse",
                 "Difficulty": 0
             },
             {
