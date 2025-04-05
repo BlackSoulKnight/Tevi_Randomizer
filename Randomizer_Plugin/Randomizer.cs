@@ -12,6 +12,7 @@ using Steamworks.Data;
 using SystemVar;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
+using Newtonsoft.Json.Linq;
 
 
 namespace TeviRandomizer
@@ -107,7 +108,8 @@ namespace TeviRandomizer
                             break;
                         case "AllMemine":
                             Debug.LogError("Memine should not be used as Logic");
-                            flag = memineCount > 5;
+                            if (itemList.ContainsKey("EVENT_Memine"))
+                                flag = itemList["EVENT_Memine"] > 5;
                             break;
                         case "Memine":
                             Debug.LogError("Memine should not be used as Logic");
@@ -135,7 +137,8 @@ namespace TeviRandomizer
                             }
                             break;
                         case "RainbowCheck":
-                            flag = memineCount > 2;
+                            if(itemList.ContainsKey("EVENT_Memine"))
+                                flag = itemList["EVENT_Memine"] > 2;
                             break;
                         case "Goal":
                             if (!itemList.ContainsKey("STACKABLE_COG"))
@@ -256,7 +259,7 @@ namespace TeviRandomizer
             public int newItem;
             public int newSlotId;
             public List<Requirement> Requirement;
-            public Location(int itemId, string loaction,string locationName, int slotId, string requirements, string itemname = "")
+            public Location(int itemId, string loaction,string locationName, int slotId, string itemname = "")
             {
                 Itemname = itemname;
                 Loaction = loaction;
@@ -266,10 +269,6 @@ namespace TeviRandomizer
                 this.Requirement = new List<Requirement>();
                 this.newItem = 0;
                 this.newSlotId = 0;
-                foreach (string method in requirements.Split(';'))
-                {
-                    Requirement.Add(new Requirement(method));
-                }
             }
              public bool isReachAble(Dictionary<string,int> itemList)
             {
@@ -288,6 +287,10 @@ namespace TeviRandomizer
             {
                 newItem = item;
                 newSlotId = slot;
+            }
+            public void addMethod(string method)
+            {
+                Requirement.Add(new Requirement(method));
             }
             public bool debugIsReachAble(Dictionary<string, int> itemList)
             {
@@ -312,7 +315,6 @@ namespace TeviRandomizer
                 return false;
             }
         }
-
         private class Area
         {
             public string Name;
@@ -332,13 +334,11 @@ namespace TeviRandomizer
 
 
         }
-
         private class Money
         {
             public string Method;
             public int Amount;
         }
-
         private class Entrance
         {
             Area from;
@@ -370,7 +370,6 @@ namespace TeviRandomizer
         private Dictionary<string, Location> locationString;
         private List<Area> areas;
         private static int bossCount = 0;
-        private static int memineCount = 0;
         private List<Area> transitions = new List<Area>();
         private static Dictionary<int, string> transitionIdToName;
         private List<string> ignoreLocationList = new List<string>();
@@ -386,17 +385,33 @@ namespace TeviRandomizer
                 itemPool.Add(new Item(para[0], para[1]));
             }*/
             areas = new List<Area>();
-
-            foreach (string lin in File.ReadLines(path + "Area.txt"))
+            JObject areaJson = JObject.Parse(File.ReadAllText(path + "Area.json"));
+            foreach(var map in areaJson)
             {
-                Area newArea = new Area(lin);
-                areas.Add(newArea);
-                int _;
-                if (int.TryParse(lin, out _))
+                foreach(var area in (JArray)map.Value)
                 {
-                    transitions.Add(newArea);
-                }
+                    Area newArea = new Area((string)area["Name"]);
+                    int _;
+                    if (int.TryParse((string)area["Name"],out _))
+                    {
+                        transitions.Add(newArea);
+                    }
+                    foreach (var con in area["Connections"])
+                    {
+                    }
 
+                    areas.Add(newArea);
+                }
+            }
+            foreach(var map in areaJson)
+            {
+                foreach (var  area in (JArray)map.Value)
+                {
+                    foreach(var con in area["Connections"])
+                    {
+                        areas.Find(x => x.Name == (string)area["Name"]).addConnection(areas.Find(x => x.Name == (string)con["Exit"]), (string)con["Method"]);
+                    }
+                }
             }
             transitionIdToName = new Dictionary<int, string>();
             foreach (string line in File.ReadLines(path + "TransitionId.txt"))
@@ -406,38 +421,35 @@ namespace TeviRandomizer
                     transitionIdToName.Add(int.Parse(para[0]), para[1]);
             }
 
-            foreach (string line in File.ReadLines(path + "Connection.txt"))
-            {
-                string[] para = line.Split(':');
-                areas.Find(x => x.Name == para[0]).addConnection(areas.Find(x => x.Name == para[1]), para[2]);
-            }
             locations = new List<Location>();
             locationString = new Dictionary<string, Location>();
-            foreach (string line in File.ReadLines(path + "Location.txt"))
+
+            JArray locationJson = JArray.Parse(File.ReadAllText(path + "Location.json"));
+            foreach(var location in locationJson)
             {
-                string[] para = line.Split('@');
-                Location newloc;
-                if (!para[0].Contains("EVENT"))
-                {
-                    itemPool.Add(((int)Enum.Parse(typeof(ItemList.Type), para[0]), int.Parse(para[2])));
-                     newloc= new Location((int)Enum.Parse(typeof(ItemList.Type), para[0]), para[1], para[4], int.Parse(para[2]), para[3], para[0]);
+                Location newloc = new Location(0, location["Location"].ToString(), location["LocationName"].ToString(), (int)location["slotId"], location["Itemname"].ToString());
+                ItemList.Type item;
+                if(Enum.TryParse(location["Itemname"].ToString(),out item)){
+                    itemPool.Add(((int)item, (int)location["slotId"]));
+                    newloc.itemId = (int)item;
                 }
-                else
-                    newloc = new Location(0, para[1], para[4], int.Parse(para[2]), para[3], para[0]);
-
-                locationString.Add($"{para[0] + para[2]}", newloc);
+                foreach(var method in location["Requirement"])
+                {
+                    newloc.addMethod(method["Method"].ToString());
+                }
+                locationString.Add($"{newloc.Itemname + newloc.slotId}",newloc);
                 locations.Add(newloc);
-
-                Area se = areas.Find(x => x.Name == para[1]);
+                Area se = areas.Find(x => x.Name == newloc.Loaction);
                 if (se != null)
                 {
                     se.Locations.Add(newloc);
                 }
                 else
                 {
-                    Debug.LogWarning($"Could not find {para[1]} to place {para[0]}");
+                    Debug.LogWarning($"Could not find {newloc.Loaction} to place {newloc.Itemname}");
                 }
             }
+
             extraItemPool = new List<(int, int)>();
             for (int i = 63; i > 35; i--)
             {
@@ -654,7 +666,6 @@ namespace TeviRandomizer
                     locationPool.RemoveAll(x => x.Itemname.Contains("EVENT"));
 
                     bossCount = 0;
-                    memineCount = 0;
                     tmpItemPool.Clear();
                     tmpItemPool.CopyFrom(itemPool);
 
@@ -762,7 +773,6 @@ namespace TeviRandomizer
                 locationPool.RemoveAll(x => x.Itemname.Contains("EVENT"));
 
                 bossCount = 0;
-                memineCount = 0;
                 placeditems.Clear();
                 placeditems.CopyFrom(itemPool);
 
@@ -899,6 +909,7 @@ namespace TeviRandomizer
                             {
                                 itemList[loc.Itemname] += 1;
                             }
+                            checkedLocation.Add(loc);
                             continue;
                         }
 
