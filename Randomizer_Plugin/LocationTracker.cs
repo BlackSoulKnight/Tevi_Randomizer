@@ -1,10 +1,8 @@
 
-using System;
+using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using static ES3;
-using static UnityEngine.UIElements.UIR.Allocator2D;
 
 namespace TeviRandomizer
 {
@@ -17,10 +15,10 @@ namespace TeviRandomizer
         static private Dictionary<string, string> loadLocationNameList() {
             string path = RandomizerPlugin.pluginPath + "/resource/";
             Dictionary<string,string> dict = new Dictionary<string,string>();
-            foreach (string line in File.ReadLines(path + "Location.txt"))
+            JArray locations = JArray.Parse(File.ReadAllText(path+ "Location.json"));
+            foreach(var loc in locations)
             {
-                string[] para = line.Split('@');
-                dict.Add($"{para[0]} #{para[2]}", para[4]);
+                dict.Add($"{loc["Itemname"]} #{loc["slotId"]}", loc["LocationName"].ToString());
             }
             return dict;
         }
