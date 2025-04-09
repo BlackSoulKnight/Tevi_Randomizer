@@ -581,6 +581,14 @@
             {
                 "Method": "ITEM_JETPACK && ITEM_AirDash && ITEM_WALLJUMP",
                 "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_JETPACK && ITEM_HIJUMP",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_DOUBLEJUMP && ITEM_AirDash && ITEM_HIJUMP",
+                "Difficulty": 0
             }
         ]
     },
