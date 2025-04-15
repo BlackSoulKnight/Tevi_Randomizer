@@ -26,7 +26,7 @@
                 },
                 {
                     "Exit": "Desert Base Main",
-                    "Method": "ChargeShot || ITEM_JETPACK || ITEM_AirDash || ITEM_JETPACK || ITEM_DOUBLEJUMP || ITEM_HIJUMP || (ITEM_LINEBOMB && ITEM_AREABOMB) || RabbitJump || (BackFlip && ITEM_SPEEDUP)"
+                    "Method": "ChargeShot || ITEM_JETPACK || ITEM_AirDash || ITEM_JETPACK || ITEM_DOUBLEJUMP || ITEM_HIJUMP || (ITEM_LINEBOMB || ITEM_AREABOMB) || RabbitJump || (BackFlip && ITEM_SPEEDUP)"
                 },
                 {
                     "Exit": "Desert Base Main",
@@ -34,7 +34,7 @@
                 },
                 {
                     "Exit": "Desert Base Upper Half",
-                    "Method": "(BackFlip || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash) && ITEM_SLIDE && ITEM_LINEBOMB && ITEM_KNIFE"
+                    "Method": "(BackFlip || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash) && ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_KNIFE"
                 }
             ]
         },
@@ -62,7 +62,7 @@
                 },
                 {
                     "Exit": "Thanatara Canyon to Heavens Valley West",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "Morose City",
@@ -95,7 +95,7 @@
                 },
                 {
                     "Exit": "Gurun Desert",
-                    "Method": "ITEM_LINEBOMB || OpenMorose"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) || OpenMorose"
                 },
                 {
                     "Exit": "0100",
@@ -103,7 +103,7 @@
                 },
                 {
                     "Exit": "Thanatara Canyon",
-                    "Method": "ITEM_LINEBOMB || ITEM_SLIDE"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) || ITEM_SLIDE"
                 }
             ]
         },
@@ -116,7 +116,7 @@
                 },
                 {
                     "Exit": "Thanatara Canyon",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 }
             ]
         },
@@ -246,7 +246,7 @@
                 },
                 {
                     "Exit": "Forest Maze boss",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 }
             ]
         },
@@ -287,11 +287,11 @@
                 },
                 {
                     "Exit": "Travoll Mines",
-                    "Method": "ITEM_LINEBOMB && ITEM_BOMBFUEL"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_BOMBFUEL"
                 },
                 {
                     "Exit": "Travoll Mines to Thanatara Canyon",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 }
             ]
         },
@@ -321,7 +321,7 @@
                 },
                 {
                     "Exit": "Travoll Mines to Forest",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "0500",
@@ -338,7 +338,7 @@
             "Connections": [
                 {
                     "Exit": "Travoll Mines",
-                    "Method": "ITEM_LINEBOMB && (ITEM_KNIFE || EVENT_FreeStrongAttack)"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && (ITEM_KNIFE || EVENT_FreeStrongAttack)"
                 },
                 {
                     "Exit": "0509",
@@ -366,7 +366,7 @@
             "Connections": [
                 {
                     "Exit": "Travoll Industrie to CopperWood",
-                    "Method": "ITEM_LINEBOMB || ITEM_SLIDE"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) || ITEM_SLIDE"
                 },
                 {
                     "Exit": "0603",
@@ -387,7 +387,7 @@
                 },
                 {
                     "Exit": "Travoll Industrie",
-                    "Method": "ITEM_LINEBOMB || ITEM_SLIDE"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) || ITEM_SLIDE"
                 }
             ]
         }
@@ -398,11 +398,11 @@
             "Connections": [
                 {
                     "Exit": "CopperWood",
-                    "Method": "ITEM_LINEBOMB || ITEM_SLIDE"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) || ITEM_SLIDE"
                 },
                 {
                     "Exit": "CopperWood EP Pot",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "0705",
@@ -440,7 +440,7 @@
                 },
                 {
                     "Exit": "0700",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": ""
                 }
             ]
         }
@@ -451,7 +451,7 @@
             "Connections": [
                 {
                     "Exit": "Ana Thema to Gallery",
-                    "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
+                    "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "Vena Shop",
@@ -476,7 +476,7 @@
             "Connections": [
                 {
                     "Exit": "Ana Thema",
-                    "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
+                    "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "0806",
@@ -517,7 +517,7 @@
                 },
                 {
                     "Exit": "Gloamwood Middle",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 }
             ]
         },
@@ -556,7 +556,7 @@
                 },
                 {
                     "Exit": "Gloamwood Middle",
-                    "Method": "ITEM_DOUBLEJUMP || ITEM_LINEBOMB || ITEM_JETPACK || ITEM_AirDash"
+                    "Method": "ITEM_DOUBLEJUMP || (ITEM_LINEBOMB || ITEM_AREABOMB) || ITEM_JETPACK || ITEM_AirDash"
                 },
                 {
                     "Exit": "Gloamwood Middle",
@@ -573,11 +573,11 @@
             "Connections": [
                 {
                     "Exit": "Gloamwood Copperwood to CopperWood",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "Gloamwood to Relicts",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "Gloamwood to Ulvosa",
@@ -645,7 +645,7 @@
                 },
                 {
                     "Exit": "Ulskan Village Area",
-                    "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
+                    "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)"
                 }
             ]
         }
@@ -660,7 +660,7 @@
                 },
                 {
                     "Exit": "Plague Forest to Ulskan",
-                    "Method": "ITEM_LINEBOMB && ITEM_SLIDE && ITEM_MASK"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_SLIDE && ITEM_MASK"
                 }
             ]
         },
@@ -680,7 +680,7 @@
             "Connections": [
                 {
                     "Exit": "Ulvosa",
-                    "Method": "ITEM_LINEBOMB && ChargeShot && (HiddenP || ITEM_SLIDE)"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ChargeShot && (HiddenP || ITEM_SLIDE)"
                 },
                 {
                     "Exit": "1102",
@@ -707,7 +707,7 @@
                 },
                 {
                     "Exit": "Snowveil",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "1202",
@@ -724,7 +724,7 @@
                 },
                 {
                     "Exit": "Snowveil Ex",
-                    "Method": "( ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK ) && ITEM_LINEBOMB"
+                    "Method": "( ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK ) && (ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "Snowveil Entrance",
@@ -770,7 +770,7 @@
                 },
                 {
                     "Exit": "Snowveil Ex",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 }
             ]
         }
@@ -781,7 +781,7 @@
             "Connections": [
                 {
                     "Exit": "Verdazure Sea to Forgotten city",
-                    "Method": "ITEM_WATERMOVEMENT && ITEM_LINEBOMB"
+                    "Method": "ITEM_WATERMOVEMENT && (ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "Verdazure Sea to Forest",
@@ -823,7 +823,7 @@
                 },
                 {
                     "Exit": "Verdazure Sea West",
-                    "Method": "ITEM_LINEBOMB || ITEM_WATERMOVEMENT"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) || ITEM_WATERMOVEMENT"
                 }
             ]
         },
@@ -864,7 +864,7 @@
                 },
                 {
                     "Exit": "Verdazure Swamp",
-                    "Method": "ITEM_LINEBOMB && ITEM_SLIDE"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_SLIDE"
                 },
                 {
                     "Exit": "Forgotten City Upper Exit",
@@ -881,7 +881,7 @@
                 },
                 {
                     "Exit": "Verdazure Ocean",
-                    "Method": "ITEM_SLIDE && ITEM_LINEBOMB && (ITEM_HIJUMP || ITEM_DOUBLEJUMP || ITEM_JETPACK)"
+                    "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB) && (ITEM_HIJUMP || ITEM_DOUBLEJUMP || ITEM_JETPACK)"
                 }
             ]
         },
@@ -912,7 +912,7 @@
             "Connections": [
                 {
                     "Exit": "Forgotten City",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "1403",
@@ -925,7 +925,7 @@
             "Connections": [
                 {
                     "Exit": "Forgotten City Entrance",
-                    "Method": "ITEM_LINEBOMB && (ITEM_SLIDE || ITEM_WATERMOVEMENT)"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && (ITEM_SLIDE || ITEM_WATERMOVEMENT)"
                 },
                 {
                     "Method": "ChargeShot",
@@ -960,7 +960,7 @@
                 },
                 {
                     "Exit": "Tartarus Catacombs",
-                    "Method": "ITEM_SLIDE || ITEM_LINEBOMB"
+                    "Method": "ITEM_SLIDE || (ITEM_LINEBOMB || ITEM_AREABOMB)"
                 }
             ]
         },
@@ -969,7 +969,7 @@
             "Connections": [
                 {
                     "Exit": "Tartarus",
-                    "Method": "ITEM_SLIDE || ITEM_LINEBOMB"
+                    "Method": "ITEM_SLIDE || (ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "1503",
@@ -1013,7 +1013,7 @@
                 },
                 {
                     "Exit": "Snow City",
-                    "Method": "ITEM_LINEBOMB && ITEM_AREABOMB"
+                    "Method": "ITEM_LINEBOMB || ITEM_AREABOMB"
                 }
             ]
         },
@@ -1022,7 +1022,7 @@
             "Connections": [
                 {
                     "Exit": "Golden Hands HQ Sewer",
-                    "Method": "ITEM_LINEBOMB && ChargeShot"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ChargeShot"
                 }
             ]
         },
@@ -1055,15 +1055,15 @@
             "Connections": [
                 {
                     "Exit": "Magma Pits",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "Pre Swamp",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "1700",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": ""
                 }
             ]
         },
@@ -1072,11 +1072,11 @@
             "Connections": [
                 {
                     "Exit": "Pre Swamp",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "Swamp",
-                    "Method": "ChargeShot && ITEM_LINEBOMB"
+                    "Method": "ChargeShot && (ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "Magma Depths O",
@@ -1166,7 +1166,7 @@
                 },
                 {
                     "Exit": "Swamp",
-                    "Method": "ITEM_LINEBOMB && ITEM_AREABOMB"
+                    "Method": "ITEM_AREABOMB"
                 }
             ]
         },
@@ -1183,7 +1183,7 @@
                 },
                 {
                     "Exit": "Magma Depths",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 }
             ]
         },
@@ -1191,7 +1191,7 @@
             "Name": "Swamp to Tartarus",
             "Connections": [
                 {
-                    "Method": "ITEM_SLIDE && (HiddenP || ITEM_LINEBOMB) && (ITEM_JETPACK 2 || (ITEM_JETPACK && (ITEM_DOUBLEJUMP || ITEM_AirDash)) || (ITEM_AirDash && ITEM_DOUBLEJUMP))",
+                    "Method": "ITEM_SLIDE && (HiddenP || (ITEM_LINEBOMB || ITEM_AREABOMB)) && (ITEM_JETPACK 2 || (ITEM_JETPACK && (ITEM_DOUBLEJUMP || ITEM_AirDash)) || (ITEM_AirDash && ITEM_DOUBLEJUMP))",
                     "Exit": "Swamp"
                 },
                 {
@@ -1207,11 +1207,11 @@
             "Connections": [
                 {
                     "Exit": "DreamKeeper Outside Left",
-                    "Method": "ChargeShot && ITEM_SLIDE && ITEM_LINEBOMB"
+                    "Method": "ChargeShot && ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "DreamKeeper",
-                    "Method": "ITEM_Rotater && (ChargeShot || ITEM_SLIDE) && ITEM_LINEBOMB && ITEM_SLIDE && (EVENT_SnowMechanic 2 || EarlyDream)"
+                    "Method": "ITEM_Rotater && (ChargeShot || ITEM_SLIDE) && (ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_SLIDE && (EVENT_SnowMechanic 2 || EarlyDream)"
                 },
                 {
                     "Exit": "1800",
@@ -1232,7 +1232,7 @@
                 },
                 {
                     "Exit": "DreamKeeper Outside Left Snow To Snowveil",
-                    "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
+                    "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)"
                 }
             ]
         },
@@ -1254,11 +1254,11 @@
             "Connections": [
                 {
                     "Exit": "Dreamless Depths",
-                    "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
+                    "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "DreamKeeper Outside Right",
-                    "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
+                    "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)"
                 }
             ]
         },
@@ -1317,11 +1317,11 @@
                 },
                 {
                     "Exit": "Heavens Valley Snow Route Low",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "Heavens Valley Snow Route Upper",
-                    "Method": "ITEM_LINEBOMB && ITEM_SLIDE"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_SLIDE"
                 }
             ]
         },
@@ -1345,7 +1345,7 @@
             "Connections": [
                 {
                     "Exit": "2008",
-                    "Method": "ITEM_SLIDE && ITEM_LINEBOMB"
+                    "Method": ""
                 },
                 {
                     "Exit": "2003",
@@ -1368,7 +1368,7 @@
             "Connections": [
                 {
                     "Exit": "Heavens Valley West",
-                    "Method": "ITEM_LINEBOMB && (CKick || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash)"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || HddenP) && (CKick || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash)"
                 },
                 {
                     "Exit": "2101",
@@ -1437,7 +1437,7 @@
             "Connections": [
                 {
                     "Exit": "Solennian Ruins",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "2206",
@@ -1449,7 +1449,7 @@
             "Name": "Solennian Ruins",
             "Connections": [
                 {
-                    "Exit": "",
+                    "Exit": "Solennian Ruins Entrance",
                     "Method": ""
                 }
             ]
@@ -1461,7 +1461,7 @@
             "Connections": [
                 {
                     "Exit": "Sinner's Oath",
-                    "Method": "ChargeShot && ITEM_LINEBOMB && (HiddenP || (ITEM_SLIDE && ITEM_Rotater && (ITEM_AirDash || ITEM_JETPACK || ITEM_DOUBLEJUMP)))"
+                    "Method": "ChargeShot && (ITEM_LINEBOMB || ITEM_AREABOMB) && (HiddenP || (ITEM_SLIDE && ITEM_Rotater && (ITEM_AirDash || ITEM_JETPACK || ITEM_DOUBLEJUMP)))"
                 },
                 {
                     "Exit": "2301",
@@ -1469,7 +1469,7 @@
                 },
                 {
                     "Exit": "Illusion Palace Entrance",
-                    "Method": "ITEM_LINEBOMB && HiddenP"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && HiddenP"
                 }
             ]
         },
@@ -1506,7 +1506,7 @@
                 },
                 {
                     "Exit": "Relicts to Gloamwood",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 }
             ]
         },
@@ -1515,11 +1515,11 @@
             "Connections": [
                 {
                     "Exit": "Relicts",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "2406",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": ""
                 }
             ]
         }
@@ -1543,7 +1543,7 @@
             "Connections": [
                 {
                     "Exit": "Catacombs Entrance",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "Catacombs Inner",
@@ -1708,7 +1708,7 @@
             "Connections": [
                 {
                     "Exit": "Gallery of Souls",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 }
             ]
         },
@@ -1729,7 +1729,7 @@
                 },
                 {
                     "Exit": "Gallery of Souls Boss Area",
-                    "Method": "ITEM_LINEBOMB && ChargeShot"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ChargeShot"
                 }
             ]
         },
@@ -1738,19 +1738,19 @@
             "Connections": [
                 {
                     "Exit": "Gallery of Souls to Sea",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "Gallery of Souls",
-                    "Method": "ITEM_JETPACK 2 && ITEM_LINEBOMB && BarrierSkip && ITEM_SLIDE"
+                    "Method": "ITEM_JETPACK 2 && (ITEM_LINEBOMB || ITEM_AREABOMB) && BarrierSkip && ITEM_SLIDE"
                 },
                 {
                     "Exit": "Gallery of Souls",
-                    "Method": "ITEM_WALLJUMP && ITEM_LINEBOMB && BarrierSkip && ITEM_SLIDE"
+                    "Method": "ITEM_WALLJUMP && (ITEM_LINEBOMB || ITEM_AREABOMB) && BarrierSkip && ITEM_SLIDE"
                 },
                 {
                     "Exit": "Gallery of Souls",
-                    "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && BarrierSkip && ITEM_SLIDE"
+                    "Method": "ITEM_DOUBLEJUMP && (ITEM_LINEBOMB || ITEM_AREABOMB) && BarrierSkip && ITEM_SLIDE"
                 }
             ]
         },
@@ -1826,7 +1826,7 @@
                 },
                 {
                     "Exit": "EverGarden To Valhalla",
-                    "Method": "ITEM_LINEBOMB && (HiddenP || ITEM_JETPACK || ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_SPEEDUP 3)"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && (HiddenP || ITEM_JETPACK || ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_SPEEDUP 3)"
                 }
             ]
         },
@@ -1848,7 +1848,7 @@
             "Connections": [
                 {
                     "Exit": "EverGarden",
-                    "Method": "ITEM_LINEBOMB"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "2902",
