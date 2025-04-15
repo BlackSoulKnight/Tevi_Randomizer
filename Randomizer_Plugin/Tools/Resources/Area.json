@@ -2,16 +2,6 @@
     "Map00": [
         {
             "Name": "Desert Base Main",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 2500
-                },
-                {
-                    "Method": "Boss",
-                    "Amount": 1000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Desert Base Upper Half",
@@ -29,16 +19,6 @@
         },
         {
             "Name": "Desert Base Entrance",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 2500
-                },
-                {
-                    "Method": "Boss",
-                    "Amount": 1000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "0000",
@@ -60,12 +40,6 @@
         },
         {
             "Name": "Desert Base Upper Half",
-            "Money": [
-                {
-                    "Method": "ITEM_SLIDE",
-                    "Amount": 1000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Desert Base Main",
@@ -77,20 +51,6 @@
     "Map01": [
         {
             "Name": "Thanatara Canyon",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 3500
-                },
-                {
-                    "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK",
-                    "Amount": 2000
-                },
-                {
-                    "Method": "ITEM_SLIDE || ITEM_WALLJUMP 3",
-                    "Amount": 1500
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "0101",
@@ -124,20 +84,6 @@
         },
         {
             "Name": "Thanatara Canyon Lower",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 3500
-                },
-                {
-                    "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK",
-                    "Amount": 2000
-                },
-                {
-                    "Method": "ITEM_SLIDE || ITEM_WALLJUMP 3",
-                    "Amount": 1500
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "0106",
@@ -163,12 +109,6 @@
         },
         {
             "Name": "Thanatara Canyon to Heavens Valley West",
-            "Money": [
-                {
-                    "Method": "",
-                    "Amount": 0
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "0105",
@@ -182,12 +122,6 @@
         },
         {
             "Name": "Memine All",
-            "Money": [
-                {
-                    "Method": "",
-                    "Amount": 0
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "",
@@ -197,12 +131,6 @@
         },
         {
             "Name": "Crafting",
-            "Money": [
-                {
-                    "Method": "",
-                    "Amount": 0
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "",
@@ -212,12 +140,6 @@
         },
         {
             "Name": "Item Upgrade",
-            "Money": [
-                {
-                    "Method": "",
-                    "Amount": 0
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "",
@@ -227,16 +149,6 @@
         },
         {
             "Name": "Gurun Desert",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 2500
-                },
-                {
-                    "Method": " ITEM_WALLJUMP",
-                    "Amount": 2000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "0102",
@@ -256,20 +168,6 @@
     "Map02": [
         {
             "Name": "Oasis",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 4500
-                },
-                {
-                    "Method": "ITEM_OrbTypeS3 || ITEM_OrbTypeS2 || ITEM_OrbTypeC3",
-                    "Amount": 2500
-                },
-                {
-                    "Method": "Boss",
-                    "Amount": 1000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "0201",
@@ -281,16 +179,6 @@
     "Map03": [
         {
             "Name": "Morose City",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 2500
-                },
-                {
-                    "Method": "Boss",
-                    "Amount": 1000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "0302",
@@ -322,20 +210,6 @@
     "Map04": [
         {
             "Name": "Forest",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 8000
-                },
-                {
-                    "Method": "ITEM_AREABOMB || ITEM_SLIDE",
-                    "Amount": 1000
-                },
-                {
-                    "Method": "Boss",
-                    "Amount": 1000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "0400",
@@ -365,12 +239,6 @@
         },
         {
             "Name": "Forest Maze",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 4000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Forest",
@@ -384,12 +252,6 @@
         },
         {
             "Name": "Forest Maze boss",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 4000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Forest Maze extended",
@@ -407,12 +269,6 @@
         },
         {
             "Name": "Forest Maze extended",
-            "Money": [
-                {
-                    "Method": "",
-                    "Amount": 0
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "",
@@ -424,7 +280,6 @@
     "Map05": [
         {
             "Name": "Travoll Mines to Morose City",
-            "Money": [],
             "Connections": [
                 {
                     "Exit": "0501",
@@ -442,7 +297,6 @@
         },
         {
             "Name": "Travoll Mines to Thanatara Canyon",
-            "Money": [],
             "Connections": [
                 {
                     "Exit": "0507",
@@ -460,16 +314,6 @@
         },
         {
             "Name": "Travoll Mines",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 2500
-                },
-                {
-                    "Method": "ITEM_BOMBFUEL",
-                    "Amount": 1000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Travoll Mines to Morose City",
@@ -491,16 +335,6 @@
         },
         {
             "Name": "Travoll Mines to Forest",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 7500
-                },
-                {
-                    "Method": "Boss",
-                    "Amount": 1000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Travoll Mines",
@@ -514,16 +348,6 @@
         },
         {
             "Name": "Travoll Mines to Swamp",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 7500
-                },
-                {
-                    "Method": "Boss",
-                    "Amount": 1000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Travoll Mines",
@@ -539,16 +363,6 @@
     "Map06": [
         {
             "Name": "Travoll Industrie",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 1000
-                },
-                {
-                    "Method": "ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK",
-                    "Amount": 1000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Travoll Industrie to CopperWood",
@@ -566,16 +380,6 @@
         },
         {
             "Name": "Travoll Industrie to CopperWood",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 1000
-                },
-                {
-                    "Method": "ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK",
-                    "Amount": 1000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "0605",
@@ -591,16 +395,6 @@
     "Map07": [
         {
             "Name": "CopperWood Industry to Travoll Industrie",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 2500
-                },
-                {
-                    "Method": "((ITEM_JETPACK 3 || (ITEM_JETPACK&& ITEM_AirDash)) && ITEM_WALLJUMP && ITEM_DOUBLEJUMP)",
-                    "Amount": 2500
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "CopperWood",
@@ -618,7 +412,6 @@
         },
         {
             "Name": "CopperWood EP Pot",
-            "Money": [],
             "Connections": [
                 {
                     "Exit": "CopperWood",
@@ -632,16 +425,6 @@
         },
         {
             "Name": "CopperWood",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 2500
-                },
-                {
-                    "Method": "((ITEM_JETPACK 3 || (ITEM_JETPACK&& ITEM_AirDash)) && ITEM_WALLJUMP && ITEM_DOUBLEJUMP)",
-                    "Amount": 2500
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "0701",
@@ -665,12 +448,6 @@
     "Map08": [
         {
             "Name": "Ana Thema",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 5000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Ana Thema to Gallery",
@@ -696,12 +473,6 @@
         },
         {
             "Name": "Ana Thema to Gallery",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 5000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Ana Thema",
@@ -715,12 +486,6 @@
         },
         {
             "Name": "Vena Shop",
-            "Money": [
-                {
-                    "Method": "",
-                    "Amount": 0
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "",
@@ -732,7 +497,6 @@
     "Map09": [
         {
             "Name": "Gloamwood to Forest",
-            "Money": [],
             "Connections": [
                 {
                     "Exit": "0908",
@@ -746,7 +510,6 @@
         },
         {
             "Name": "Gloamwood Copperwood to CopperWood",
-            "Money": [],
             "Connections": [
                 {
                     "Exit": "0900",
@@ -760,7 +523,6 @@
         },
         {
             "Name": "Gloamwood to Relicts",
-            "Money": [],
             "Connections": [
                 {
                     "Exit": "0906",
@@ -774,7 +536,6 @@
         },
         {
             "Name": "Gloamwood to Blushwood",
-            "Money": [],
             "Connections": [
                 {
                     "Exit": "0903",
@@ -788,20 +549,6 @@
         },
         {
             "Name": "Gloamwood Bottom",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 4000
-                },
-                {
-                    "Method": "ITEM_SLIDE",
-                    "Amount": 1000
-                },
-                {
-                    "Method": "ITEM_BombLengthExtend",
-                    "Amount": 500
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Gloamwood to Forest",
@@ -823,20 +570,6 @@
         },
         {
             "Name": "Gloamwood Middle",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 4000
-                },
-                {
-                    "Method": "ITEM_SLIDE",
-                    "Amount": 1000
-                },
-                {
-                    "Method": "ITEM_BombLengthExtend",
-                    "Amount": 500
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Gloamwood Copperwood to CopperWood",
@@ -862,12 +595,6 @@
         },
         {
             "Name": "Gloamwood to Ulvosa",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 2000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Gloamwood Middle",
@@ -881,16 +608,6 @@
         },
         {
             "Name": "Gloamwood Right",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 3000
-                },
-                {
-                    "Method": "ITEM_SLIDE && (ITEM_AREABOMB ||  ITEM_LINEBOMB) && (ITEM_DOUBLEJUMP||ITEM_JETPACK||(ITEM_HIJUMP && ITEM_WALLJUMP))",
-                    "Amount": 1500
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Gloamwood Middle",
@@ -908,7 +625,6 @@
         },
         {
             "Name": "Ulskan Village Area",
-            "Money": [],
             "Connections": [
                 {
                     "Exit": "Gloamwood Middle",
@@ -922,7 +638,6 @@
         },
         {
             "Name": "Ulskan To Plague Forest",
-            "Money": [],
             "Connections": [
                 {
                     "Exit": "0904",
@@ -938,12 +653,6 @@
     "Map10": [
         {
             "Name": "Plague Forest",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 13000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "1001",
@@ -951,18 +660,12 @@
                 },
                 {
                     "Exit": "Plague Forest to Ulskan",
-                    "Method": "ITEM_LINEBOMB && ITEM_SLIDE"
+                    "Method": "ITEM_LINEBOMB && ITEM_SLIDE && ITEM_MASK"
                 }
             ]
         },
         {
             "Name": "Plague Forest to Ulskan",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 13000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "1004",
@@ -974,7 +677,6 @@
     "Map11": [
         {
             "Name": "Ulvosa to Gloamwood",
-            "Money": [],
             "Connections": [
                 {
                     "Exit": "Ulvosa",
@@ -988,28 +690,12 @@
         },
         {
             "Name": "Ulvosa",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 8000
-                },
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 2000
-                }
-            ],
             "Connections": []
         }
     ],
     "Map12": [
         {
             "Name": "Snowveil Entrance",
-            "Money": [
-                {
-                    "Method": "",
-                    "Amount": 0
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Snowveil",
@@ -1031,12 +717,6 @@
         },
         {
             "Name": "Snowveil",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 2000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "1204",
@@ -1054,12 +734,6 @@
         },
         {
             "Name": "Snowveil Ex",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 2000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Snowveil",
@@ -1089,12 +763,6 @@
         },
         {
             "Name": "Snowveil above Verglas Village",
-            "Money": [
-                {
-                    "Method": "ITEM_AREABOMB",
-                    "Amount": 2200
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "1205",
@@ -1110,20 +778,6 @@
     "Map13": [
         {
             "Name": "Verdazure Sea West",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 5000
-                },
-                {
-                    "Method": "ITEM_WATERMOVEMENT && ITEM_LINEBOMB",
-                    "Amount": 1000
-                },
-                {
-                    "Method": "ITEM_SLIDE && (ITEM_WALLJUMP || ITEM_HIJUMP || ITEM_JETPACK || ITEM_DOUBLEJUMP)",
-                    "Amount": 1500
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Verdazure Sea to Forgotten city",
@@ -1145,7 +799,6 @@
         },
         {
             "Name": "Verdazure Sea East",
-            "Money": [],
             "Connections": [
                 {
                     "Exit": "1301",
@@ -1163,7 +816,6 @@
         },
         {
             "Name": "Verdazure Sea to Forest",
-            "Money": [],
             "Connections": [
                 {
                     "Exit": "1304",
@@ -1177,7 +829,6 @@
         },
         {
             "Name": "Verdazure Sea to Forgotten city",
-            "Money": [],
             "Connections": [
                 {
                     "Exit": "1303",
@@ -1189,7 +840,6 @@
     "Map14": [
         {
             "Name": "Verdazure Ocean To Sea",
-            "Money": [],
             "Connections": [
                 {
                     "Exit": "Verdazure Ocean",
@@ -1203,20 +853,6 @@
         },
         {
             "Name": "Verdazure Ocean",
-            "Money": [
-                {
-                    "Method": "ITEM_SLIDE",
-                    "Amount": 2500
-                },
-                {
-                    "Method": "(ITEM_WALLJUMP 2 && (ITEM_DOUBLEJUMP || ITEM_JETPACK)) || ITEM_WALLJUMP 3",
-                    "Amount": 3000
-                },
-                {
-                    "Method": "ITEM_BombLengthExtend && ITEM_LINEBOMB",
-                    "Amount": 2000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Verdazure Ocean To Sea",
@@ -1238,16 +874,6 @@
         },
         {
             "Name": "Verdazure Swamp",
-            "Money": [
-                {
-                    "Method": "ITEM_JETPACK 3 || ITEM_AirDash &&(ITEM_JETPACK || ITEM_DOUBLEJUMP) || ITEM_JETPACK && ITEM_DOUBLEJUMP",
-                    "Amount": 1500
-                },
-                {
-                    "Method": "ITEM_JETPACK || ITEM_DOUBLEJUMP ",
-                    "Amount": 1000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Verdazure Swamp to Lab",
@@ -1261,16 +887,6 @@
         },
         {
             "Name": "Verdazure Swamp to Lab",
-            "Money": [
-                {
-                    "Method": "ITEM_JETPACK 3 || ITEM_AirDash &&(ITEM_JETPACK || ITEM_DOUBLEJUMP) || ITEM_JETPACK && ITEM_DOUBLEJUMP",
-                    "Amount": 1500
-                },
-                {
-                    "Method": "ITEM_JETPACK || ITEM_DOUBLEJUMP ",
-                    "Amount": 1000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Verdazure Swamp",
@@ -1284,12 +900,6 @@
         },
         {
             "Name": "Forgotten City Upper Exit",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 4000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Verdazure Ocean",
@@ -1299,16 +909,6 @@
         },
         {
             "Name": "Forgotten City Entrance",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 6000
-                },
-                {
-                    "Method": "ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_WALLJUMP",
-                    "Amount": 5000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Forgotten City",
@@ -1322,16 +922,6 @@
         },
         {
             "Name": "Forgotten City",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 6000
-                },
-                {
-                    "Method": "ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_WALLJUMP",
-                    "Amount": 5000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Forgotten City Entrance",
@@ -1359,16 +949,6 @@
     "Map15": [
         {
             "Name": "Tartarus",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 2000
-                },
-                {
-                    "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
-                    "Amount": 1500
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Vena Shop",
@@ -1386,16 +966,6 @@
         },
         {
             "Name": "Tartarus Catacombs",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 2000
-                },
-                {
-                    "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
-                    "Amount": 1500
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Tartarus",
@@ -1411,12 +981,6 @@
     "Map16": [
         {
             "Name": "Snow City",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 1500
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "1604",
@@ -1442,20 +1006,6 @@
         },
         {
             "Name": "Snowveil Above HQ",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 3000
-                },
-                {
-                    "Method": "ITEM_AREABOMB",
-                    "Amount": 2000
-                },
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 500
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "1600",
@@ -1469,28 +1019,6 @@
         },
         {
             "Name": "Golden Hands HQ",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 3000
-                },
-                {
-                    "Method": "ITEM_BombLengthExtend && ITEM_LINEBOMB",
-                    "Amount": 1500
-                },
-                {
-                    "Method": "ITEM_AirSlide && ITEM_SLIDE || ITEM_Rotater",
-                    "Amount": 2000
-                },
-                {
-                    "Method": "ITEM_Rotater",
-                    "Amount": 2000
-                },
-                {
-                    "Method": "ITEM_SLIDE",
-                    "Amount": 2000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Golden Hands HQ Sewer",
@@ -1500,12 +1028,6 @@
         },
         {
             "Name": "Golden Hands HQ Sewer",
-            "Money": [
-                {
-                    "Method": "Boss",
-                    "Amount": 1000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Snow City",
@@ -1519,12 +1041,6 @@
         },
         {
             "Name": "Golden Hands HQ Extra",
-            "Money": [
-                {
-                    "Method": "Boss",
-                    "Amount": 1000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Snow City",
@@ -1536,12 +1052,6 @@
     "Map17": [
         {
             "Name": "Magma Pits Entrance",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 5500
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Magma Pits",
@@ -1559,12 +1069,6 @@
         },
         {
             "Name": "Magma Pits",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 5500
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Pre Swamp",
@@ -1598,20 +1102,6 @@
         },
         {
             "Name": "Magma Depths O",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 1500
-                },
-                {
-                    "Method": "ITEM_SLIDE",
-                    "Amount": 2000
-                },
-                {
-                    "Method": "ITEM_AirSlide && ITEM_SLIDE",
-                    "Amount": 2000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Magma Depths",
@@ -1621,20 +1111,6 @@
         },
         {
             "Name": "Magma Depths",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 1500
-                },
-                {
-                    "Method": "ITEM_SLIDE",
-                    "Amount": 2000
-                },
-                {
-                    "Method": "ITEM_AirSlide && ITEM_SLIDE",
-                    "Amount": 2000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Magma Depths to Sinner",
@@ -1645,20 +1121,6 @@
         },
         {
             "Name": "Magma Depths to Sinner",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 1500
-                },
-                {
-                    "Method": "ITEM_SLIDE",
-                    "Amount": 2000
-                },
-                {
-                    "Method": "ITEM_AirSlide && ITEM_SLIDE",
-                    "Amount": 2000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "1701",
@@ -1668,12 +1130,6 @@
         },
         {
             "Name": "Swamp Entrance",
-            "Money": [
-                {
-                    "Method": "Unknown see Swamp",
-                    "Amount": 0
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Magma Pits Entrance",
@@ -1691,7 +1147,6 @@
         },
         {
             "Name": "Pre Swamp",
-            "Money": [],
             "Connections": [
                 {
                     "Exit": "Swamp Entrance",
@@ -1717,24 +1172,6 @@
         },
         {
             "Name": "Swamp",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 3000
-                },
-                {
-                    "Method": "ITEM_AREABOMB || ITEM_SLIDE",
-                    "Amount": 1500
-                },
-                {
-                    "Method": "ITEM_JETPACK || (ITEM_DOUBLEJUMP && ITEM_AirDash)",
-                    "Amount": 3000
-                },
-                {
-                    "Method": "ITEM_SLIDE && && ITEM_LINEBOMB (ITEM_AREABOMB || ITEM_BombLengthExtend)",
-                    "Amount": 2000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Pre Swamp",
@@ -1752,7 +1189,6 @@
         },
         {
             "Name": "Swamp to Tartarus",
-            "Money": [],
             "Connections": [
                 {
                     "Method": "ITEM_SLIDE && (HiddenP || ITEM_LINEBOMB) && (ITEM_JETPACK 2 || (ITEM_JETPACK && (ITEM_DOUBLEJUMP || ITEM_AirDash)) || (ITEM_AirDash && ITEM_DOUBLEJUMP))",
@@ -1768,24 +1204,6 @@
     "Map18": [
         {
             "Name": "DreamKeeper Outside Right",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB && ITEM_SLIDE && (ITEM_JETPACK || ITEM_DOUBLEJUMP)",
-                    "Amount": 1000
-                },
-                {
-                    "Method": "ITEM_LINEBOMB && ITEM_AREABOMB || ITEM_BombLengthExtend 3",
-                    "Amount": 1500
-                },
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 2000
-                },
-                {
-                    "Method": "ITEM_AirSlide && ITEM_SLIDE",
-                    "Amount": 1500
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "DreamKeeper Outside Left",
@@ -1803,16 +1221,6 @@
         },
         {
             "Name": "DreamKeeper Outside Left",
-            "Money": [
-                {
-                    "Method": "ITEM_SLIDE",
-                    "Amount": 1500
-                },
-                {
-                    "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
-                    "Amount": 1500
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "DreamKeeper",
@@ -1830,7 +1238,6 @@
         },
         {
             "Name": "DreamKeeper Outside Left Snow To Snowveil",
-            "Money": [],
             "Connections": [
                 {
                     "Exit": "1805",
@@ -1844,16 +1251,6 @@
         },
         {
             "Name": "DreamKeeper",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 2500
-                },
-                {
-                    "Method": "ITEM_BombLengthExtend && ITEM_LINEBOMB",
-                    "Amount": 1500
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Dreamless Depths",
@@ -1867,20 +1264,6 @@
         },
         {
             "Name": "Dreamless Depths",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 500
-                },
-                {
-                    "Method": "ITEM_AirSlide && ITEM_SLIDE && ITEM_LINEBOMB",
-                    "Amount": 2500
-                },
-                {
-                    "Method": "TornadoSpin",
-                    "Amount": 2000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Dreamless Depths 2",
@@ -1903,12 +1286,6 @@
         {
             "Name": "Dreamless Depths 2",
             "Note": "Could be in Trasition Rando, isnt yet",
-            "Money": [
-                {
-                    "Method": "",
-                    "Amount": 0
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "",
@@ -1920,12 +1297,6 @@
     "Map19": [
         {
             "Name": "Heavens Valley Snow Route Low",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB && (ITEM_AREABOMB && ITEM_BombLengthExtend) || Tornado Spin",
-                    "Amount": 1500
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Heavens Valley Snow Route Middle",
@@ -1939,16 +1310,6 @@
         },
         {
             "Name": "Heavens Valley Snow Route Middle",
-            "Money": [
-                {
-                    "Method": "ITEM_HIJUMP || ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK",
-                    "Amount": 1500
-                },
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 1500
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Heavens Valley Snow Route Low",
@@ -1966,16 +1327,6 @@
         },
         {
             "Name": "Heavens Valley Snow Route Upper",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 3000
-                },
-                {
-                    "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
-                    "Amount": 2000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Heavens Valley Snow Route Middle",
@@ -1991,12 +1342,6 @@
     "Map20": [
         {
             "Name": "Valhalla City",
-            "Money": [
-                {
-                    "Method": "ITEM_AREABOMB && ITEM_LINEBOMB",
-                    "Amount": 1000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "2008",
@@ -2020,12 +1365,6 @@
     "Map21": [
         {
             "Name": "Valhalla Breath West",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 11000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Heavens Valley West",
@@ -2051,12 +1390,6 @@
         },
         {
             "Name": "Heavens Valley West",
-            "Money": [
-                {
-                    "Method": "",
-                    "Amount": 0
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Valhalla Breath West",
@@ -2090,16 +1423,6 @@
         },
         {
             "Name": "Valhalla Breath West Extended",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 1500
-                },
-                {
-                    "Method": "",
-                    "Amount": 2000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "",
@@ -2111,12 +1434,6 @@
     "Map22": [
         {
             "Name": "Solennian Ruins Entrance",
-            "Money": [
-                {
-                    "Method": "",
-                    "Amount": 0
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Solennian Ruins",
@@ -2130,16 +1447,6 @@
         },
         {
             "Name": "Solennian Ruins",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 8000
-                },
-                {
-                    "Method": "Boss",
-                    "Amount": 1000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "",
@@ -2151,12 +1458,6 @@
     "Map23": [
         {
             "Name": "Sinner's Oath Entrance",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 1500
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Sinner's Oath",
@@ -2174,12 +1475,6 @@
         },
         {
             "Name": "Sinner's Oath",
-            "Money": [
-                {
-                    "Method": "",
-                    "Amount": 0
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Illusion Palace Entrance",
@@ -2189,12 +1484,6 @@
         },
         {
             "Name": "Illusion Palace Entrance",
-            "Money": [
-                {
-                    "Method": "",
-                    "Amount": 0
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Illusion Palace",
@@ -2204,36 +1493,12 @@
         },
         {
             "Name": "Illusion Palace",
-            "Money": [
-                {
-                    "Method": "",
-                    "Amount": 0
-                }
-            ],
             "Connections": []
         }
     ],
     "Map24": [
         {
             "Name": "Relicts",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 2000
-                },
-                {
-                    "Method": "ITEM_AREABOMB && ITEM_LINEBOMB",
-                    "Amount": 1000
-                },
-                {
-                    "Method": "Boss",
-                    "Amount": 1000
-                },
-                {
-                    "Method": "ITEM_SLIDE",
-                    "Amount": 1000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "2404",
@@ -2247,7 +1512,6 @@
         },
         {
             "Name": "Relicts to Gloamwood",
-            "Money": [],
             "Connections": [
                 {
                     "Exit": "Relicts",
@@ -2263,12 +1527,6 @@
     "Map25": [
         {
             "Name": "Catacombs Entrance",
-            "Money": [
-                {
-                    "Method": "",
-                    "Amount": 0
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Catacombs Main",
@@ -2282,24 +1540,6 @@
         },
         {
             "Name": "Catacombs Main",
-            "Money": [
-                {
-                    "Method": "(ITEM_JETPACK||ITEM_DOUBLEJUMP) || ITEM_AirDash",
-                    "Amount": 1000
-                },
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 1500
-                },
-                {
-                    "Method": "ITEM_LINEBOMB && ITEM_BombLengthExtend || ITEM_AREABOMB",
-                    "Amount": 2000
-                },
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 1000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Catacombs Entrance",
@@ -2330,38 +1570,10 @@
         {
             "Note": "Need 1 verctical movement option",
             "Name": "Catacombs Inner",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 1000
-                },
-                {
-                    "Method": "ITEM_BombLengthExtend && ITEM_LINEBOMB",
-                    "Amount": 1000
-                },
-                {
-                    "Method": "Boss",
-                    "Amount": 1000
-                },
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 1000
-                }
-            ],
             "Connections": []
         },
         {
             "Name": "Pre Lab",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 3500
-                },
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 2000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Lab Entrance",
@@ -2375,16 +1587,6 @@
         },
         {
             "Name": "Lab Entrance",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 3500
-                },
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 2000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Lab Hub",
@@ -2394,16 +1596,6 @@
         },
         {
             "Name": "Lab Hub",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 3500
-                },
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 2000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Lab Entrance",
@@ -2417,16 +1609,6 @@
         },
         {
             "Name": "Lab Left",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 3500
-                },
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 2000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Lab Hub",
@@ -2440,16 +1622,6 @@
         },
         {
             "Name": "Lab",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 3500
-                },
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 2000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Lab Hub",
@@ -2463,12 +1635,6 @@
         },
         {
             "Name": "Lab to Verdazure Swamp Connection",
-            "Money": [
-                {
-                    "Method": "(ITEM_JETPACK||ITEM_DOUBLEJUMP) || ITEM_AirDash",
-                    "Amount": 1000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Lab",
@@ -2484,20 +1650,6 @@
     "Map26": [
         {
             "Name": "Cloister Entrance",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 6000
-                },
-                {
-                    "Method": "ITEM_JETPACK 2 || ITEM_DOUBLEJUMP || (ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash)",
-                    "Amount": 1000
-                },
-                {
-                    "Method": "ITEM_BombLengthExtend && ITEM_LINEBOMB",
-                    "Amount": 3000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "2608",
@@ -2511,12 +1663,6 @@
         },
         {
             "Name": "Cloister",
-            "Money": [
-                {
-                    "Method": "",
-                    "Amount": 0
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Cloister Pre Boss",
@@ -2526,12 +1672,6 @@
         },
         {
             "Name": "Cloister Pre Boss",
-            "Money": [
-                {
-                    "Method": "",
-                    "Amount": 0
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "",
@@ -2543,12 +1683,6 @@
     "Map27": [
         {
             "Name": "Gallery of Mirrors West",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 7000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Gallery of Mirrors East",
@@ -2562,12 +1696,6 @@
         },
         {
             "Name": "Gallery of Mirrors East",
-            "Money": [
-                {
-                    "Method": "Needs to be Recalculated",
-                    "Amount": 0
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Gallery of Souls Entrance",
@@ -2577,7 +1705,6 @@
         },
         {
             "Name": "Gallery of Souls Entrance",
-            "Money": [],
             "Connections": [
                 {
                     "Exit": "Gallery of Souls",
@@ -2587,12 +1714,6 @@
         },
         {
             "Name": "Gallery of Souls",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 2000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Gallery of Souls Boss Area",
@@ -2614,16 +1735,6 @@
         },
         {
             "Name": "Gallery of Souls Boss Area",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 8000
-                },
-                {
-                    "Method": "Boss",
-                    "Amount": 1000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Gallery of Souls to Sea",
@@ -2645,7 +1756,6 @@
         },
         {
             "Name": "Gallery of Souls to Sea",
-            "Money": [],
             "Connections": [
                 {
                     "Exit": "2707",
@@ -2661,16 +1771,6 @@
     "Map28": [
         {
             "Name": "Blushwood",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 2000
-                },
-                {
-                    "Method": "ITEM_SLIDE",
-                    "Amount": 1500
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "Blushwood Sliding",
@@ -2692,12 +1792,6 @@
         },
         {
             "Name": "Blushwood Sliding",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 1500
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "",
@@ -2709,12 +1803,6 @@
     "Map29": [
         {
             "Name": "EverGarden",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 4000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "EverGarden BossPath",
@@ -2744,7 +1832,6 @@
         },
         {
             "Name": "EverGarden To Valley",
-            "Money": [],
             "Connections": [
                 {
                     "Exit": "EverGarden",
@@ -2758,7 +1845,6 @@
         },
         {
             "Name": "EverGarden To Valhalla",
-            "Money": [],
             "Connections": [
                 {
                     "Exit": "EverGarden",
@@ -2772,16 +1858,6 @@
         },
         {
             "Name": "EverGarden BossPath",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 1500
-                },
-                {
-                    "Method": "ITEM_JETPACK 3 || ITEM_DOUBLEJUMP && (ITEM_JETPACK || ITEM_AirDash)",
-                    "Amount": 1500
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "EverGarden Boss Area",
@@ -2807,16 +1883,6 @@
         },
         {
             "Name": "EverGarden Boss Area",
-            "Money": [
-                {
-                    "Method": "ITEM_LINEBOMB",
-                    "Amount": 3000
-                },
-                {
-                    "Method": "Boss",
-                    "Amount": 1000
-                }
-            ],
             "Connections": [
                 {
                     "Exit": "EverGarden BossPath",
