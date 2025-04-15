@@ -119,7 +119,6 @@ namespace TeviRandomizer
                             flag = RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart];
                             if (itemList.ContainsKey("ITEM_ORB"))
                                 flag = itemList["ITEM_ORB"] >= 1;
-                                
                             break;
                         case "Upgrade":
                             bool option = ((UnityEngine.UI.Toggle)settings["Toggle NormalItemCraft"]).isOn;
@@ -159,30 +158,28 @@ namespace TeviRandomizer
                         default:
                             if (itemList.ContainsKey(split[0]))
                             {
+                                flag = true;
                                 switch (split[0])
                                 {
                                     case "ITEM_BOMBFUEL":
+                                        flag = itemList.ContainsKey("ITEM_LINEBOMB") | itemList.ContainsKey("ITEM_AREABOMB");
+                                        break;
                                     case "ITEM_BombLengthExtend":
-                                    case "ITEM_AREABOMB":
-                                        itemList.ContainsKey("ITEM_LINEBOMB");
+                                        flag = itemList.ContainsKey("ITEM_LINEBOMB");
                                         break;
                                     case "ITEM_AirSlide":
-                                        itemList.ContainsKey("ITEM_SLIDE");
+                                        flag = itemList.ContainsKey("ITEM_SLIDE");
                                         break;
                                     case "ITEM_Rotater":
-                                        itemList.ContainsKey("ITEM_KNIFE");
+                                        flag = itemList.ContainsKey("ITEM_KNIFE");
                                         break;
                                 }
-                                if (split.Length > 1)
+                                if (split.Length > 1 && flag)
                                 {
                                     if (int.Parse(split[1]) <= itemList[split[0]])
                                         flag = true;
                                     else
                                         flag = false;
-                                }
-                                else
-                                {
-                                    flag = true;
                                 }
                             }
                             else
