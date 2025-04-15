@@ -41,6 +41,7 @@ namespace TeviRandomizer
             ResourceScene = SceneManager.CreateScene("AllResource");
             GameObject newObj = new GameObject("Resource");
             AreaResource = newObj.AddComponent<AreaResource>();
+            //newObj.AddComponent<Resources>();
             SceneManager.MoveGameObjectToScene(newObj, ResourceScene);
 
             List<AsyncOperationHandle<SceneInstance>> sceneHandle = new List<AsyncOperationHandle<SceneInstance>>();
@@ -55,7 +56,7 @@ namespace TeviRandomizer
 
             }
             List<GameObject> rootScene = new List<GameObject>();
-
+            //Object.DontDestroyOnLoad(newObj);
             foreach(AsyncOperationHandle<SceneInstance> SceneInstance in sceneHandle)
             {
                 while (!SceneInstance.IsDone)
@@ -118,7 +119,11 @@ namespace TeviRandomizer
                 }
             }
             resources = rootScene.ToArray();
-
+            //foreach(GameObject a in resources)
+            //{
+            //    Object.DontDestroyOnLoad(a);
+            //}
+            //Resources.resources = resources;
         }
 
 

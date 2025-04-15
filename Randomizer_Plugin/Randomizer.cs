@@ -378,12 +378,6 @@ namespace TeviRandomizer
             string path = RandomizerPlugin.pluginPath + "/resource/";
 
             itemPool = new List<(int, int)>();
-            /*
-            foreach (string line in File.ReadLines(path + "Item.txt"))
-            {
-                string[] para = line.Split(':');
-                itemPool.Add(new Item(para[0], para[1]));
-            }*/
             areas = new List<Area>();
             JObject areaJson = JObject.Parse(File.ReadAllText(path + "Area.json"));
             foreach(var map in areaJson)

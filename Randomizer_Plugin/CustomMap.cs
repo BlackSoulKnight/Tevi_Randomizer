@@ -1697,6 +1697,7 @@ namespace TeviRandomizer
             //Delete old Map info
             Debug.Log("[Randomizer] Deleting Custom Map Tile/Items");
             Traverse.Create(__instance).Method("DeleteMap").GetValue();
+
             //__instance.Invoke("DeleteMap", 0f);
         }
 
@@ -1705,19 +1706,17 @@ namespace TeviRandomizer
         static void AdditionalChanges(ref WorldManager __instance)
         {
             loadMap();
+            Traverse t = Traverse.Create(__instance);
             if (WorldManager.Instance.Area == 8)
             {
-                Traverse t = Traverse.Create(__instance);
                 createItemTile(334, 205, 20, false, false);
-                for (int i = 0; i < 3; i++)
-                {
-                    //createNormalTile(296, 177-i, 109, false, false);
-                }
             }
+            t.Field("breakingtile").Method("Clear").GetValue();
             if(ArchipelagoInterface.Instance.isConnected)
             {
                 ArchipelagoInterface.Instance.updateCurretMap(__instance.Area);
             }
+
             //Send AP World Transition Data and change CurrentMap Value
         }
 

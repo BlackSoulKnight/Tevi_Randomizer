@@ -325,7 +325,7 @@ namespace TeviRandomizer
             switch (RandomizerPlugin.goalType)
             {
                 case RandomizerPlugin.GoalType.BossDefeat:
-                    if(SaveManager.Instance.GetCurrentBossBeaten() > 20)
+                    if(SaveManager.Instance.GetCurrentBossBeaten() >= 21)
                     {
                         __result = true;
                     }

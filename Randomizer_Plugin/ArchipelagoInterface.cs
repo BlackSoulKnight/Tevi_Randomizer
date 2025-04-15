@@ -27,7 +27,7 @@ namespace TeviRandomizer
         public const ItemList.Type remoteItem = ItemList.Type.I10;
         public const ItemList.Type remoteItemProgressive = ItemList.Type.I11;
 
-        string AP_WORLD_VERSION = "0.4.1";
+        string AP_WORLD_VERSION = "0.4.3";
 
         private class LocationData
         {
@@ -124,7 +124,7 @@ namespace TeviRandomizer
                 setCustomFlags((JObject)success.SlotData["options"]);
             else
                 oldSlotData(success.SlotData);
-            getOwnLocationData(success.SlotData["locationData"]);
+            getOwnLocationData();
             getOwnTransitionData(success.SlotData["transitionData"]);
             return true;
         }
@@ -215,7 +215,7 @@ namespace TeviRandomizer
         {
             session.DataStorage[Scope.Slot, "currentMap"] = map;
         }
-        public async void getOwnLocationData(object slotData) {
+        public async void getOwnLocationData() {
             long[] locs = session.Locations.AllLocations.ToArray();
             var a = await session.Locations.ScoutLocationsAsync(locs);
             foreach (long loc in locs)
