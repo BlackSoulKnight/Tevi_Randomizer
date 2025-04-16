@@ -255,15 +255,15 @@
             "Connections": [
                 {
                     "Exit": "Forest Maze extended",
-                    "Method": "ITEM_JETPACK"
+                    "Method": "ITEM_JETPACK && ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Forest Maze extended",
-                    "Method": "ITEM_DOUBLEJUMP"
+                    "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB"
                 },
                 {
                     "Exit": "Forest Maze extended",
-                    "Method": "ITEM_AirDash"
+                    "Method": "ITEM_AirDash && ITEM_LINEBOMB"
                 }
             ]
         },
@@ -1368,7 +1368,7 @@
             "Connections": [
                 {
                     "Exit": "Heavens Valley West",
-                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || HddenP) && (CKick || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash)"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || HiddenP) && (CKick || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash)"
                 },
                 {
                     "Exit": "2101",

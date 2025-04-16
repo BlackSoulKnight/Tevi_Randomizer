@@ -101,7 +101,7 @@ namespace TeviRandomizer
                             break;
                         case "Chapter":
                             if (split[0] == "Chapter" && itemList.ContainsKey("EVENT_BOSS"))
-                                if (has_chapter_reached(int.Parse(split[1]),itemList["EVENT_BOSS"]))
+                                if (has_chapter_reached(int.Parse(split[1]), itemList["EVENT_BOSS"]))
                                     flag = true;
                                 else
                                     flag = false;
@@ -122,7 +122,7 @@ namespace TeviRandomizer
                             break;
                         case "Upgrade":
                             bool option = ((UnityEngine.UI.Toggle)settings["Toggle NormalItemCraft"]).isOn;
-                            flag = (option || checkMovementItems(itemList))&&itemList.ContainsKey("ITEM_LINEBOMB");
+                            flag = (option || checkMovementItems(itemList)) && itemList.ContainsKey("ITEM_LINEBOMB");
                             break;
                         case "Core":
                             flag = checkMovementItems(itemList) && itemList.ContainsKey("ITEM_LINEBOMB") && itemList.ContainsKey("ITEM_AREABOMB") && itemList.ContainsKey("ITEM_BombLengthExtend");
@@ -136,13 +136,25 @@ namespace TeviRandomizer
                             }
                             break;
                         case "RainbowCheck":
-                            if(itemList.ContainsKey("EVENT_Memine"))
+                            if (itemList.ContainsKey("EVENT_Memine"))
                                 flag = itemList["EVENT_Memine"] > 2;
                             break;
                         case "Goal":
-                            if (!itemList.ContainsKey("STACKABLE_COG"))
-                                break;
-                            flag = itemList["STACKABLE_COG"] >= RandomizerPlugin.GoMode;
+                            switch (RandomizerPlugin.goalType)
+                            {
+                                case RandomizerPlugin.GoalType.BossDefeat:
+                                    if (itemList.ContainsKey("EVENT_BOSS"))
+                                        flag = itemList["EVENT_BOSS"] >= 21;
+                                    break;
+                                case RandomizerPlugin.GoalType.AstralGear:
+                                    if (itemList.ContainsKey("STACKABLE_COG"))
+                                        flag = itemList["STACKABLE_COG"] >= RandomizerPlugin.GoMode;
+                                    break;
+                                default:
+                                    if (itemList.ContainsKey("STACKABLE_COG"))
+                                        flag = itemList["STACKABLE_COG"] >= RandomizerPlugin.GoMode;
+                                    break;
+                            }
                             break;
                         case "SpinnerBash":
                             if (!itemList.ContainsKey("ITEM_KNIFE"))
