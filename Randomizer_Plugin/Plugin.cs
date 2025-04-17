@@ -58,6 +58,7 @@ namespace TeviRandomizer
         SuperBosses = 6,
         RandomizedMusic = 8,
         RandomizedBG = 9,
+        RevealPaths = 10,
     }
 
 
@@ -241,7 +242,15 @@ namespace TeviRandomizer
         {
             if (keyword == "Todo.GoalTipFreeRoam")
             {
-                __result = __result.Replace("16", GoMode.ToString());
+                switch (goalType) {
+                    case GoalType.BossDefeat:
+                        __result = __result.Replace("16 Astral Gear", "23 Boss Kills");
+                        break;
+                    case GoalType.AstralGear:
+                    default:
+                        __result = __result.Replace("16", GoMode.ToString());
+                        break;
+            }
             }
             if (ArchipelagoInterface.Instance != null && ArchipelagoInterface.Instance.isConnected)
             {
@@ -954,19 +963,23 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static void fade1(ref float target)
         {
-            target = 0;
+            if (RandomizerPlugin.customFlags[(int)CustomFlags.RevealPaths])
+                target = 0;
         }
         [HarmonyPatch(typeof(WorldManager), "SetFrontLayer")]
         [HarmonyPrefix]
         static void fade2(ref float target)
         {
-            target = 0;
+            if (RandomizerPlugin.customFlags[(int)CustomFlags.RevealPaths])
+
+                target = 0;
         }
         [HarmonyPatch(typeof(WorldManager), "Awake")]
         [HarmonyPostfix]
         static void fade0(ref float ___FrontFadeTarget)
         {
-            ___FrontFadeTarget = 0;
+            if (RandomizerPlugin.customFlags[(int)CustomFlags.RevealPaths])
+                ___FrontFadeTarget = 0;
         }
 
         //test Feature

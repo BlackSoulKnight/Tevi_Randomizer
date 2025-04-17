@@ -563,6 +563,12 @@ namespace TeviRandomizer
                                 RandomizerPlugin.customFlags[(int)CustomFlags.SuperBosses] = ((UnityEngine.UI.Toggle)option.Value).isOn;
 
                                 break;
+                            case "BossMode":
+                                if (((UnityEngine.UI.Toggle)option.Value).isOn)
+                                    RandomizerPlugin.goalType = RandomizerPlugin.GoalType.BossDefeat;
+                                else
+                                    RandomizerPlugin.goalType = RandomizerPlugin.GoalType.AstralGear;
+                                break;
                             default: break;
                         }
                         break;

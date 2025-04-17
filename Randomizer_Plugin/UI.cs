@@ -203,6 +203,7 @@ namespace TeviRandomizer
             {
                 Extras.RandomizeExtra.randomMusic();
             }
+            RandomizerPlugin.customFlags[(int)CustomFlags.RevealPaths] = ((UnityEngine.UI.Toggle)UI.settings["Toggle HIddenPaths"]).isOn;
         }
 
         void OnDisable()

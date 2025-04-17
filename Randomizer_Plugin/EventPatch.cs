@@ -325,7 +325,7 @@ namespace TeviRandomizer
             switch (RandomizerPlugin.goalType)
             {
                 case RandomizerPlugin.GoalType.BossDefeat:
-                    if(SaveManager.Instance.GetCurrentBossBeaten() >= 21)
+                    if(SaveManager.Instance.GetCurrentBossBeaten() >= 23)
                     {
                         __result = true;
                     }
@@ -358,8 +358,19 @@ namespace TeviRandomizer
                     em.StopEvent();
                     if (!HUDPopupMessage.Instance.gameObject.activeInHierarchy)
                     {
-                        string msg = Localize.GetLocalizeTextWithKeyword("FreeRoamNotEnoughCog", contains: false).Replace("16", RandomizerPlugin.GoMode.ToString());
+                        string msg;
+                        switch (RandomizerPlugin.goalType)
+                        {
+                            case RandomizerPlugin.GoalType .BossDefeat:
+                                msg = Localize.GetLocalizeTextWithKeyword("FreeRoamNotEnoughCog", contains: false).Replace("16 Astral Gears", "23 Boss Kills");
+                                break;
+                            default:
+                            case RandomizerPlugin.GoalType.AstralGear:
+                                msg = Localize.GetLocalizeTextWithKeyword("FreeRoamNotEnoughCog", contains: false).Replace("16", RandomizerPlugin.GoMode.ToString());
+                                break;
+                        }
                         HUDPopupMessage.Instance.AddMessage(Localize.GetLocalizeTextWithKeyword("POPUP_INFORMATION", contains: false), msg, null, 0);
+
                     }
                     em.AllowSkip = true;
                 }

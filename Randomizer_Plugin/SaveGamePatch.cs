@@ -77,6 +77,10 @@ namespace TeviRandomizer
                 {
                     RandomizerPlugin.GoMode = eS3File.Load<int>("GoMode");
                 }
+                if (eS3File.KeyExists("GoalType"))
+                {
+                    RandomizerPlugin.goalType = (RandomizerPlugin.GoalType)eS3File.Load<int>("GoalType");
+                }
                 if (eS3File.KeyExists("SuperBosses"))
                 {
                     RandomizerPlugin.customFlags[(int)CustomFlags.SuperBosses] = eS3File.Load<bool>("SuperBosses");
@@ -188,7 +192,7 @@ namespace TeviRandomizer
             eS3File.Save("randomizedMusic", Extras.RandomizeExtra.randomizedMusic);
             eS3File.Save("randomizedBG", Extras.RandomizeExtra.randomizedBG);
             eS3File.Save("SuperBosses", RandomizerPlugin.customFlags[(int)CustomFlags.SuperBosses]);
-
+            eS3File.Save("GoalType", (int)RandomizerPlugin.goalType);
             eS3File.Save("Seed", RandomizerPlugin.seed);
             eS3File.Save("HintList", HintSystem.hintList);
             eS3File.Save("GoMode", RandomizerPlugin.GoMode);

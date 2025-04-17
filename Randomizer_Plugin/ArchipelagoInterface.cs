@@ -139,8 +139,21 @@ namespace TeviRandomizer
             RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart] = (bool)optionData.GetValue("celia_sable");
             RandomizerPlugin.customFlags[(int)CustomFlags.SuperBosses] = (bool)optionData.GetValue("superBosses");
             RandomizerPlugin.GoMode = (int)(long)optionData.GetValue("goal_count");
-
-
+            if (optionData.ContainsKey("goal_type"))
+            {
+                switch ((int)optionData.GetValue("goal_type"))
+                {
+                    case 1:
+                        RandomizerPlugin.goalType = RandomizerPlugin.GoalType.BossDefeat;
+                        break;
+                    case 0:
+                    default:
+                        RandomizerPlugin.goalType = RandomizerPlugin.GoalType.AstralGear;
+                        break;
+                }
+            }
+            else
+                RandomizerPlugin.goalType = RandomizerPlugin.GoalType.AstralGear;
         }
         private void oldSlotData(Dictionary<string,object> SlotData)
         {
@@ -216,6 +229,7 @@ namespace TeviRandomizer
             session.DataStorage[Scope.Slot, "currentMap"] = map;
         }
         public async void getOwnLocationData() {
+            locations.Clear();
             long[] locs = session.Locations.AllLocations.ToArray();
             var a = await session.Locations.ScoutLocationsAsync(locs);
             foreach (long loc in locs)
