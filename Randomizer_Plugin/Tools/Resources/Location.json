@@ -4193,7 +4193,7 @@
         "slotId": 26,
         "Requirement": [
             {
-                "Method": "ITEM_LINEBOMB && ITEM_WATERMOVENT",
+                "Method": "ITEM_LINEBOMB && ITEM_WATERMOVEMENT",
                 "Difficulty": 0
             }
         ]
