@@ -325,7 +325,7 @@ namespace TeviRandomizer
             switch (RandomizerPlugin.goalType)
             {
                 case RandomizerPlugin.GoalType.BossDefeat:
-                    if(SaveManager.Instance.GetCurrentBossBeaten() >= 23)
+                    if(SaveManager.Instance.GetCurrentBossBeaten() >= 21)
                     {
                         __result = true;
                     }
@@ -362,7 +362,7 @@ namespace TeviRandomizer
                         switch (RandomizerPlugin.goalType)
                         {
                             case RandomizerPlugin.GoalType .BossDefeat:
-                                msg = Localize.GetLocalizeTextWithKeyword("FreeRoamNotEnoughCog", contains: false).Replace("16 Astral Gears", "23 Boss Kills");
+                                msg = Localize.GetLocalizeTextWithKeyword("FreeRoamNotEnoughCog", contains: false).Replace("16 Astral Gears", "21 Boss Kills");
                                 break;
                             default:
                             case RandomizerPlugin.GoalType.AstralGear:

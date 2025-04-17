@@ -244,7 +244,7 @@ namespace TeviRandomizer
             {
                 switch (goalType) {
                     case GoalType.BossDefeat:
-                        __result = __result.Replace("16 Astral Gear", "23 Boss Kills");
+                        __result = __result.Replace("16 Astral Gears", "21 Boss Kills");
                         break;
                     case GoalType.AstralGear:
                     default:
