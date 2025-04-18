@@ -122,12 +122,11 @@ namespace TeviRandomizer
                 {
                     LocationTracker.setCollectedLocationList([]);
                 }
+                if(eS3File.KeyExists("Archipelago_currItem"))
+                    ArchipelagoInterface.Instance.currentItemNR = eS3File.Load<int>("Archipelago_currItem");
                 if ( ArchipelagoInterface.Instance != null && ArchipelagoInterface.Instance.isConnected && eS3File.KeyExists("Archipelago_currItem"))
                 {
                     ArchipelagoInterface.Instance.storeData();
-                    int loadCurrItem = eS3File.Load<int>("Archipelago_currItem");
-                    //ArchipelagoInterface.Instance.refreshRecievedItems(loadCurrItem);
-                    ArchipelagoInterface.Instance.currentItemNR = loadCurrItem;
                 }
 
             }

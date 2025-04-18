@@ -3853,7 +3853,7 @@
         "slotId": 21,
         "Requirement": [
             {
-                "Method": "ITEM_AREABOMB ",
+                "Method": "ITEM_AREABOMB",
                 "Difficulty": 0
             }
         ]
@@ -4104,7 +4104,7 @@
     },
     {
         "Itemname": "ITEM_WATERMOVEMENT",
-        "Location": "Verdazure Sea West",
+        "Location": "Outer Moat",
         "LocationName": "Verdazure Sea - Hydrodynamo",
         "slotId": 1,
         "Requirement": [
@@ -4128,7 +4128,7 @@
     },
     {
         "Itemname": "STACKABLE_HP",
-        "Location": "Verdazure Sea West",
+        "Location": "Outer Moat",
         "LocationName": "Verdazure Sea - Kiwi Bunny Potion",
         "slotId": 4,
         "Requirement": [
@@ -4176,7 +4176,7 @@
     },
     {
         "Itemname": "BADGE_InvincibilityExtend",
-        "Location": "Verdazure Sea West",
+        "Location": "Outer Moat",
         "LocationName": "Verdazure Sea - Invictus",
         "slotId": 1,
         "Requirement": [
@@ -5366,7 +5366,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_AREABOMB  && ChargeShot",
+                "Method": "ITEM_AREABOMB && ChargeShot",
                 "Difficulty": 0
             }
         ]
@@ -5715,7 +5715,7 @@
         "slotId": 14,
         "Requirement": [
             {
-                "Method": "ITEM_AREABOMB  && ITEM_SLIDE",
+                "Method": "ITEM_AREABOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]
@@ -6532,7 +6532,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_AREABOMB ",
+                "Method": "ITEM_AREABOMB",
                 "Difficulty": 0
             }
         ]

@@ -255,15 +255,15 @@
             "Connections": [
                 {
                     "Exit": "Forest Maze extended",
-                    "Method": "ITEM_JETPACK && ITEM_LINEBOMB"
+                    "Method": "ITEM_JETPACK"
                 },
                 {
                     "Exit": "Forest Maze extended",
-                    "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB"
+                    "Method": "ITEM_DOUBLEJUMP"
                 },
                 {
                     "Exit": "Forest Maze extended",
-                    "Method": "ITEM_AirDash && ITEM_LINEBOMB"
+                    "Method": "ITEM_AirDash"
                 }
             ]
         },
@@ -788,7 +788,24 @@
                     "Method": ""
                 },
                 {
+                    "Exit": "Outer Moat",
+                    "Method": "ITEM_WALLJUMP || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || ItemUse || SpinnerBash"
+                },
+                {
                     "Exit": "Verdazure Sea East",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Outer Moat",
+            "Connections": [
+                {
+                    "Exit": "Verdazure Sea to Forest",
+                    "Method": "ITEM_LINEBOMB || ITEM_AREABOMB"
+                },
+                {
+                    "Exit": "Verdazure Sea West",
                     "Method": ""
                 },
                 {
@@ -822,8 +839,12 @@
                     "Method": ""
                 },
                 {
+                    "Exit": "Outer Moat",
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
+                },
+                {
                     "Exit": "Verdazure Sea West",
-                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) || ITEM_WATERMOVEMENT"
+                    "Method": "ITEM_WATERMOVEMENT"
                 }
             ]
         },
@@ -2710,7 +2731,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Verdazure Sea West",
+                    "Exit": "Outer Moat",
                     "Method": ""
                 }
             ]
