@@ -7129,7 +7129,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB) && (ITEM_JETPACK 3 || (ITEM_DOUBLEJUMP && (ITEM_SPEEDUP 3 || ITEM_JETPACK)))",
+                "Method": "ITEM_SLIDE && (ITEM_LINEBOMB) && (ITEM_JETPACK 3 || (ITEM_DOUBLEJUMP && (ITEM_SPEEDUP 3 || ITEM_JETPACK)))",
                 "Difficulty": 0
             }
         ]
@@ -7141,7 +7141,7 @@
         "slotId": 2,
         "Requirement": [
             {
-                "Method": "EVENT_Memine2 && (ITEM_LINEBOMB || ITEM_AREABOMB) && ((ITEM_WALLJUMP && (ITEM_HIJUMP || ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK)) || (ITEM_JETPACK && ITEM_DOUBLEJUMP) || ITEM_JETPACK 3)",
+                "Method": "EVENT_Memine2 && (ITEM_LINEBOMB) && ((ITEM_WALLJUMP && (ITEM_HIJUMP || ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK)) || (ITEM_JETPACK && ITEM_DOUBLEJUMP) || ITEM_JETPACK 3)",
                 "Difficulty": 0
             }
         ]
@@ -7153,7 +7153,7 @@
         "slotId": 2,
         "Requirement": [
             {
-                "Method": "EVENT_Memine2 &&  (ITEM_LINEBOMB || ITEM_AREABOMB) && ((ITEM_WALLJUMP && (ITEM_HIJUMP || ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK)) || (ITEM_JETPACK && ITEM_DOUBLEJUMP) || ITEM_JETPACK 3)",
+                "Method": "EVENT_Memine2 &&  (ITEM_LINEBOMB) && ((ITEM_WALLJUMP && (ITEM_HIJUMP || ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK)) || (ITEM_JETPACK && ITEM_DOUBLEJUMP) || ITEM_JETPACK 3)",
                 "Difficulty": 0
             }
         ]
