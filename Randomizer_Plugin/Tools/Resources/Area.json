@@ -26,7 +26,7 @@
                 },
                 {
                     "Exit": "Desert Base Main",
-                    "Method": "ChargeShot || ITEM_JETPACK || ITEM_AirDash || ITEM_JETPACK || ITEM_DOUBLEJUMP || ITEM_HIJUMP || (ITEM_LINEBOMB || ITEM_AREABOMB) || RabbitJump || (BackFlip && ITEM_SPEEDUP)"
+                    "Method": "ChargeShot || ITEM_JETPACK || ITEM_AirDash || ITEM_JETPACK || ITEM_DOUBLEJUMP || ITEM_HIJUMP || (ITEM_AREABOMB) || RabbitJump || (BackFlip && ITEM_SPEEDUP)"
                 },
                 {
                     "Exit": "Desert Base Main",
@@ -34,7 +34,7 @@
                 },
                 {
                     "Exit": "Desert Base Upper Half",
-                    "Method": "(BackFlip || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash) && ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_KNIFE"
+                    "Method": "(BackFlip || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash) && ITEM_SLIDE && (ITEM_AREABOMB) && ITEM_KNIFE"
                 }
             ]
         },
@@ -1034,7 +1034,7 @@
                 },
                 {
                     "Exit": "Snow City",
-                    "Method": "ITEM_LINEBOMB || ITEM_AREABOMB"
+                    "Method": "ITEM_AREABOMB"
                 }
             ]
         },
