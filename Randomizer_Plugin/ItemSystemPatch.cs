@@ -3,20 +3,25 @@ using HarmonyLib;
 using Map;
 using System;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Xml.Linq;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using static SaveManager;
 
 namespace TeviRandomizer
 {
     class ItemSystemPatch()
     {
+        // Items that need to be handled differently
+        static ItemList.Type[] itemExceptions = { ItemList.Type.I13 };
 
         //Hotswap item recieved
         [HarmonyPatch(typeof(HUDObtainedItem), "GiveItem")]
         [HarmonyPrefix]
         static bool ObtainItem(ref ItemList.Type type, ref byte value, ref bool doRandomBadge, ref (ItemList.Type, byte) __state)
         {
+            string itemName;
+            string desc;
 
             if (!doRandomBadge)
             {
@@ -31,9 +36,9 @@ namespace TeviRandomizer
                     if (data == ArchipelagoInterface.remoteItem || data == ArchipelagoInterface.remoteItemProgressive)
                     {
 
-                        string itemName = ArchipelagoInterface.Instance.getLocItemName(type, value);
+                        itemName = ArchipelagoInterface.Instance.getLocItemName(type, value);
                         string playerName = ArchipelagoInterface.Instance.getLocPlayerName(type, value);
-                        string desc = $"You found {itemName} for {playerName}";
+                        desc = $"You found {itemName} for {playerName}";
                         __state = (type,value);
 
                         ItemList.Type item;
@@ -57,6 +62,23 @@ namespace TeviRandomizer
                 //Archipelago implementation
 
             }
+
+
+            if (itemExceptions.Contains(type))
+            {
+                switch (type)
+                {
+                    case ItemList.Type.I13:
+                        itemName = "Teleporter Name";
+                        desc = "Description for the Teleporter";
+                        RandomizerPlugin.changeSystemText("ITEMNAME." + GemaItemManager.Instance.GetItemString(type), itemName);
+                        RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(type), desc);
+                        SaveManager.Instance.SetStackableItem(type, value, true); // do i need this?
+                        TeleporterRando.setTeleporterIcon(value);
+                        break;
+                }
+            }
+
             value = 1;
 
             if (type.ToString().Contains("ITEM") || type.ToString().Contains("Useable"))
@@ -163,6 +185,15 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static bool ItemChanges(ref ItemList.Type item, ref byte value, ref SaveManager __instance)
         {
+            if (itemExceptions.Contains(item))
+            {
+                switch (item)
+                {
+                    case ItemList.Type.I13:
+                        return false;
+                }
+            }
+
             if(ArchipelagoInterface.Instance.isConnected)
             {
                 if(item == ArchipelagoInterface.remoteItem || item == ArchipelagoInterface.remoteItemProgressive)
@@ -218,7 +249,11 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static bool StackableItemChanges(ref ItemList.Type item,ref byte id,ref SaveManager __instance,ref float ___renewTimer_Item)
         {
-
+            // execptions
+            if (itemExceptions.Contains(item))
+            {
+                return true;
+            }
             bool value = true;
             if (id == 0)
             {

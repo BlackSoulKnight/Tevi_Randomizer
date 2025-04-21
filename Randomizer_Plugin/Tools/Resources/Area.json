@@ -34,7 +34,7 @@
                 },
                 {
                     "Exit": "Desert Base Upper Half",
-                    "Method": "(BackFlip || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash) && ITEM_SLIDE && (ITEM_AREABOMB) && ITEM_KNIFE"
+                    "Method": "(BackFlip || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash) && ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_KNIFE"
                 }
             ]
         },

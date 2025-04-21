@@ -278,7 +278,7 @@ namespace TeviRandomizer
         {
 
             ItemList.Type data;
-            if (LocationTracker.APLocationName.ContainsKey($"{item} #{slot}") && ArchipelagoInterface.Instance.isConnected)
+            if (ArchipelagoInterface.Instance.isConnected && LocationTracker.APLocationName.ContainsKey($"{item} #{slot}"))
             {
                 if(!ArchipelagoInterface.Instance.isItemNative(LocationTracker.APLocationName[$"{item} #{slot}"]) || item == "Remote")
                     data = ArchipelagoInterface.Instance.isItemProgessive(LocationTracker.APLocationName[$"{item} #{slot}"]) ? ArchipelagoInterface.remoteItemProgressive : ArchipelagoInterface.remoteItem;

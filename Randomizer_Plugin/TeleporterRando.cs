@@ -1,6 +1,8 @@
-﻿using System;
+﻿using HarmonyLib;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using UnityEngine;
 
 namespace TeviRandomizer
 {
@@ -48,8 +50,9 @@ namespace TeviRandomizer
             Garden
 
         }
+
         // Enable Teleporter
-        static void setTeleporterIcon(TeleporterLoc teleporter)
+        public static void setTeleporterIcon(TeleporterLoc teleporter)
         {
             byte area;
             short x, y;
@@ -253,10 +256,11 @@ namespace TeviRandomizer
                 {
                     FullMap.Instance.roomtilelist[i].SetIcon(FullMap.Instance.GetRoomIcon(1));
                     FullMap.Instance.roomtilelist[i].SetVisible2(true);
+                    FullMap.Instance.roomtilelist[i].gameObject.SetActive(value: true);
                 }
             }
         }
-
+        public static void setTeleporterIcon(int teleporter) => setTeleporterIcon((TeleporterLoc)teleporter);
         static void setTeleporterIcon(byte area, short x, short y)
         {
             SaveManager.Instance.savedata.mapiconflag[area, x, y] = 4;
