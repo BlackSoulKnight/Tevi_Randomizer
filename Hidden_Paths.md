@@ -8,6 +8,8 @@
 # Snow Veil:
 ![screenshot](./Randomizer_Plugin/resource/pngs/Snowveil.png)
 
+# Blushwood
+![screenshot](./Randomizer_Plugin/resource/pngs/Blushwood.png)
 
 # Ulvosa
 ![screenshot](./Randomizer_Plugin/resource/pngs/Ulvosa1.png)
