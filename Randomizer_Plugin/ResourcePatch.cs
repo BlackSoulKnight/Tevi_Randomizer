@@ -22,8 +22,30 @@ namespace TeviRandomizer
         static public Scene ResourceScene;
         static public AreaResource AreaResource;
         static public GameObject[] resources = [];
-        static public bool AddressableResourceExists(string key)
+        static Harmony PatchResources = new Harmony("ResourcePatch");
+        static bool enabled = false;
 
+        static public void patchResources(bool enable = false)
+        {
+            if (enable)
+            {
+                if (!enabled)
+                {
+                    PatchResources.PatchAll(typeof(ResourcePatch));
+                    Debug.Log("Resource Patch Enabled");
+                    enabled = true;
+                }
+            }
+            else
+            {
+                PatchResources.UnpatchSelf();
+                Debug.Log("Resource Patch Disabled");
+                enabled = false;
+            }
+        }
+
+
+        static public bool AddressableResourceExists(string key)
         {
             foreach (var l in Addressables.ResourceLocators)
             {

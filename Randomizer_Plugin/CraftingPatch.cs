@@ -1,6 +1,7 @@
 ﻿using EventMode;
 using Game;
 using HarmonyLib;
+using Spine;
 using System;
 using TMPro;
 using UnityEngine;
@@ -129,6 +130,12 @@ namespace TeviRandomizer
                     ___selectedName.color = ___craftList[___selected].GetColor();
                     ___selectedName.text = ___craftList[___selected].GetText();
                 }
+                if(data == ItemList.Type.I13)
+                {
+                    ___selectedName.text = (string)ArchipelagoInterface.Instance.TeviToAPName[RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{itemType} #{slot}"]]];
+                    ___selectedDesc.text = $"Unlocks the {___selectedName.text}";
+
+                }
                 if (itemType.ToString().Contains("_OrbBoost"))
                 {
                     ___selectedDesc.text = "<font-weight=200>" + Localize.GetLocalizeTextWithKeyword("ITEMDESC.ORBBOOSTSERIES", contains: false);
@@ -195,6 +202,10 @@ namespace TeviRandomizer
                                 {
                                     ___selectedDesc.text = ___selectedDesc.text.Substring(0, num2);
                                 }
+                            }
+                            if (item == ItemList.Type.I13)
+                            {
+                                ___selectedDesc.text = "Unlock Teleporter";
                             }
 
                         }
@@ -438,6 +449,10 @@ namespace TeviRandomizer
                         }
                     }
                 }
+                if(data == ItemList.Type.I13)
+                {
+                    itemName = (string)ArchipelagoInterface.Instance.TeviToAPName[RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{itype} #{1}"]]];
+                }
                 ___nameText.text = Localize.GetLocalizeTextWithKeyword("CRAFT_CraftBadge", contains: false) + " <color=#FFF>" + itemName;
 
             }
@@ -472,7 +487,13 @@ namespace TeviRandomizer
                 string itemName = ArchipelagoInterface.Instance.getLocItemName(itype, 1);
                 if (Enum.TryParse(itemName, out item))
                 {
-                    itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + item.ToString(), true);
+                    if (item == ItemList.Type.I13)
+                    {
+                        itemName = (string)ArchipelagoInterface.Instance.TeviToAPName[RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{itype} #{1}"]]];
+                    }
+                    else
+                        itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + item.ToString(), true);
+
                 }
                 ___nameText.text = Localize.GetLocalizeTextWithKeyword("CRAFT_CraftBadge", contains: false) + " <color=#FFF>" + itemName;
             }

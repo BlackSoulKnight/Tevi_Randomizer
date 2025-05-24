@@ -86,7 +86,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "Oasis",
-        "LocationName": "Oasis - Astral Gear",
+        "LocationName": "Oasis - Lily Fight",
         "slotId": 22,
         "Requirement": [
             {
@@ -190,7 +190,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "Desert Base Entrance",
-        "LocationName": "Desert Base Entrance - Astral Gear",
+        "LocationName": "Desert Base Entrance - Ribauld Fight",
         "slotId": 20,
         "Requirement": [
             {
@@ -619,7 +619,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "Solennian Ruins",
-        "LocationName": "Solennian Ruins - Astral Gear",
+        "LocationName": "Solennian Ruins - Katu Fight",
         "slotId": 42,
         "Requirement": [
             {
@@ -987,7 +987,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "Morose City",
-        "LocationName": "Morose City - Astral Gear",
+        "LocationName": "Morose City - Vena Fight",
         "slotId": 23,
         "Requirement": [
             {
@@ -1468,7 +1468,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "Travoll Mines",
-        "LocationName": "Travoll Mines - Astral Gear",
+        "LocationName": "Travoll Mines - Barados Fight",
         "slotId": 25,
         "Requirement": [
             {
@@ -1672,7 +1672,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "Forest Maze boss",
-        "LocationName": "Forest - Astral Gear",
+        "LocationName": "Forest - Ribauld fight",
         "slotId": 24,
         "Requirement": [
             {
@@ -1707,7 +1707,7 @@
     },
     {
         "Itemname": "BADGE_AutoHealing",
-        "Location": "Forest Maze extended",
+        "Location": "Teleporter Forest Maze",
         "LocationName": "Forest Maze extended - Auto Heal",
         "slotId": 1,
         "Requirement": [
@@ -1719,7 +1719,7 @@
     },
     {
         "Itemname": "ITEM_GoldenHands",
-        "Location": "Forest Maze extended",
+        "Location": "Teleporter Forest Maze",
         "LocationName": "Forest Maze extended - Gilded Exultation",
         "slotId": 1,
         "Requirement": [
@@ -1731,7 +1731,7 @@
     },
     {
         "Itemname": "BADGE_HealCharge",
-        "Location": "Forest Maze extended",
+        "Location": "Teleporter Forest Maze",
         "LocationName": "Forest Maze extended - MP Surge: Recovery",
         "slotId": 1,
         "Requirement": [
@@ -1743,7 +1743,7 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "Forest Maze extended",
+        "Location": "Teleporter Forest Maze",
         "LocationName": "Forest Maze extended - Blueberry Bunny Potion",
         "slotId": 3,
         "Requirement": [
@@ -1772,7 +1772,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || RabbitWalljump",
                 "Difficulty": 0
             }
         ]
@@ -1924,6 +1924,10 @@
                 "Difficulty": 0
             },
             {
+                "Method": "ITEM_HIJUMP && (ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Difficulty": 0
+            },
+            {
                 "Method": "RabbitWalljump && (ITEM_LINEBOMB || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
@@ -1967,12 +1971,12 @@
     },
     {
         "Itemname": "BADGE_BattleStartCharger",
-        "Location": "Gloamwood Right",
+        "Location": "Teleporter Gloamwood",
         "LocationName": "Ulskan Village Area - MP Surge: Battle Start",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ChargeShot",
+                "Method": "ChargeShot || VenaBomb || ITEM_LINEBOMB || ITEM_AREABOMB",
                 "Difficulty": 0
             }
         ]
@@ -2114,7 +2118,7 @@
         ]
     },
     {
-        "Itemname": "STACKABLE_MP",
+        "Itemname": "Teleporter Plague Forest",
         "Location": "Plague Forest",
         "LocationName": "Plague Forest - Blueberry Bunny Potion",
         "slotId": 6,
@@ -2127,12 +2131,12 @@
     },
     {
         "Itemname": "ITEM_SLIDE",
-        "Location": "Plague Forest",
+        "Location": "Teleporter Plague Forest",
         "LocationName": "Plague Forest - Slick Boots",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -2192,7 +2196,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "Plague Forest",
-        "LocationName": "Plague Forest - Astral Gear",
+        "LocationName": "Plague Forest - Malphage fight",
         "slotId": 30,
         "Requirement": [
             {
@@ -2396,7 +2400,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "Ulvosa",
-        "LocationName": "Ulvosa - Astral Gear",
+        "LocationName": "Ulvosa - Eidolon fight",
         "slotId": 31,
         "Requirement": [
             {
@@ -2616,7 +2620,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "Relicts",
-        "LocationName": "Relicts - Astral Gear",
+        "LocationName": "Relicts - Caprice fight",
         "slotId": 44,
         "Requirement": [
             {
@@ -3913,7 +3917,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "Catacombs Inner",
-        "LocationName": "Catacombs Inner - Astral Gear",
+        "LocationName": "Catacombs Inner - Vassago fight",
         "slotId": 63,
         "Requirement": [
             {
@@ -4021,7 +4025,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "Lab",
-        "LocationName": "Lab - Astral Gear",
+        "LocationName": "Lab - Frey fight",
         "slotId": 45,
         "Requirement": [
             {
@@ -4802,7 +4806,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "EverGarden Boss Area",
-        "LocationName": "EverGarden Boss Area - Astral Gear",
+        "LocationName": "EverGarden Boss Area - Amaryllis fight",
         "slotId": 49,
         "Requirement": [
             {
@@ -4994,7 +4998,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "Cloister Pre Boss",
-        "LocationName": "Cloister Boss - Astral Gear",
+        "LocationName": "Cloister Boss - Tyberious fight",
         "slotId": 46,
         "Requirement": [
             {
@@ -5146,7 +5150,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "Gallery of Mirrors East",
-        "LocationName": "Gallery of Mirrors East - Astral Gear",
+        "LocationName": "Gallery of Mirrors East - Memloch fight",
         "slotId": 47,
         "Requirement": [
             {
@@ -5306,7 +5310,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "Gallery of Souls Boss Area",
-        "LocationName": "Gallery of Souls Boss Area - Astral Gear",
+        "LocationName": "Gallery of Souls Boss Area - Frankie fight",
         "slotId": 62,
         "Requirement": [
             {
@@ -5615,7 +5619,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "Forgotten City",
-        "LocationName": "Forgotten City - Astral Gear",
+        "LocationName": "Forgotten City - Thetis fight",
         "slotId": 34,
         "Requirement": [
             {
@@ -5747,7 +5751,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "Snowveil Ex",
-        "LocationName": "Snowveil - Astral Gear",
+        "LocationName": "Snowveil - Jethro fight",
         "slotId": 32,
         "Requirement": [
             {
@@ -6272,7 +6276,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "Golden Hands HQ Sewer",
-        "LocationName": "Golden Hands HQ Sewer - Astral Gear",
+        "LocationName": "Golden Hands HQ Sewer - Jezbell fight",
         "slotId": 36,
         "Requirement": [
             {
@@ -6408,7 +6412,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "DreamKeeper",
-        "LocationName": "DreamKeeper - Astral Gear #2",
+        "LocationName": "DreamKeeper - Alius fight",
         "slotId": 61,
         "Requirement": [
             {
@@ -6480,7 +6484,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "DreamKeeper",
-        "LocationName": "DreamKeeper - Astral Gear #1",
+        "LocationName": "DreamKeeper - Charon fight",
         "slotId": 60,
         "Requirement": [
             {
@@ -6801,7 +6805,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "Illusion Palace Entrance",
-        "LocationName": "Illusion Palace Entrance - Astral Gear",
+        "LocationName": "Illusion Palace Entrance - Cyril fight",
         "slotId": 43,
         "Requirement": [
             {
@@ -6828,6 +6832,10 @@
         "LocationName": "Sinners Hell - Grape Bunny Potion",
         "slotId": 29,
         "Requirement": [
+            {
+                "Method": "ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_DOUBLEJUMP && Hard",
+                "Difficulty": 0
+            },
             {
                 "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_DOUBLEJUMP",
                 "Difficulty": 0
@@ -8369,7 +8377,7 @@
     {
         "Itemname": "ITEM_OrbTypeS2",
         "Location": "Item Upgrade",
-        "LocationName": "Orb Type Upgrade - Red Module Typ B",
+        "LocationName": "Orb Type Upgrade - Red Module Type B",
         "slotId": 1,
         "Requirement": [
             {

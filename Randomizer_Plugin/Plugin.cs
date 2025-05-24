@@ -14,6 +14,7 @@ using Map;
 using Newtonsoft.Json;
 using Character;
 using static Localize;
+using Rewired.ComponentControls.Data;
 
 
 
@@ -59,6 +60,7 @@ namespace TeviRandomizer
         RandomizedMusic = 8,
         RandomizedBG = 9,
         RevealPaths = 10,
+        TeleporterRando = 11,
     }
 
 
@@ -138,7 +140,7 @@ namespace TeviRandomizer
                 harmonyPatchInstance.PatchAll(typeof(BonusFeaturePatch));
                 harmonyPatchInstance.PatchAll(typeof(HintSystem));
                 harmonyPatchInstance.PatchAll(typeof(CustomMap));
-                harmonyPatchInstance.PatchAll(typeof(ResourcePatch));
+                //harmonyPatchInstance.PatchAll(typeof(ResourcePatch));
                 harmonyPatchInstance.PatchAll(typeof(EnemyPatch));
                 harmonyPatchInstance.PatchAll(typeof(BossPatch));
                 harmonyPatchInstance.PatchAll(typeof(Story_Mode.StoryEventPatch));
@@ -285,7 +287,10 @@ namespace TeviRandomizer
                 else
                     if (!Enum.TryParse(ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APLocationName[$"{item} #{slot}"]),out data))
                     {
-                        //Debug.LogWarning($"Could not find {itemid.ToString()} {slotid}");
+                    //Debug.LogWarning($"Could not find {itemid.ToString()} {slotid}");
+                    if (ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APLocationName[$"{item} #{slot}"]).Contains("Teleporter"))
+                        data = ItemList.Type.I13;
+                    else
                         data = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), item);
                     }
             }
@@ -298,12 +303,14 @@ namespace TeviRandomizer
                 catch
                 {
                     //Debug.LogWarning($"Could not find {itemid.ToString()} {slotid}");
-                    data = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), item);
+                    if (LocationTracker.APLocationName.ContainsKey($"{item} #{slot}") && __itemData.ContainsKey(LocationTracker.APLocationName[$"{item} #{slot}"]) && __itemData[LocationTracker.APLocationName[$"{item} #{slot}"]].Contains("Teleporter"))
+                        data = ItemList.Type.I13;
+                    else
+                        data = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), item);
                 }
             }
             return data;
         }
-
 
 
 
@@ -399,7 +406,7 @@ namespace TeviRandomizer
 
 
                     int num5 = (int)___phy_perfer.GetCounter(4);
-                    if(GemaMissionMode.Instance.isInMission())
+                    if(GemaMissionMode.Instance.isInMission() && !customFlags[(short)CustomFlags.TeleporterRando])
                         EventManager.Instance.StartWarp(1, 1, 1, 1);
                     else
                         GemaUIPauseMenu.Instance.OpenPauseMenu(true);
@@ -681,6 +688,20 @@ namespace TeviRandomizer
             Sprite sprite = Sprite.Create(texture, new Rect(0, 0, 28, 28), new Vector2(0.5f, 0.5f), 28);
             return sprite;
         }
+        static Sprite createNewSprite(string file)
+        {
+            string path = pluginPath + "/resource/" + file;
+            Texture2D texture = new Texture2D(2, 2);
+            if (!File.Exists(path)) { return null; }
+            byte[] imageAsset = System.IO.File.ReadAllBytes(path);
+            ImageConversion.LoadImage(texture, imageAsset);
+            if(texture.height != 28 || texture.width != 28)
+            {
+                return null;
+            }
+            Sprite sprite = Sprite.Create(texture, new Rect(0, 0, 28, 28), new Vector2(0.5f, 0.5f), 28);
+            return sprite;
+        }
 
         [HarmonyPatch(typeof(CommonResource), "Awake")]
         [HarmonyPostfix]
@@ -691,6 +712,9 @@ namespace TeviRandomizer
 
                 ___items[10] = createNewArchipelagoSprite("nonProgression.png");
                 ___items[11] = createNewArchipelagoSprite("Progression.png");
+                ___items[13] = createNewSprite("Teleporter.png");
+                if (___items[13] == null)
+                    ___items[13] = ___items[0];
                 if (___items[10] == null)
                     ___items[10] = ___questitems[9];
                 if (___items[11] == null)

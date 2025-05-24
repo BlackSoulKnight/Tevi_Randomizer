@@ -15,16 +15,24 @@ namespace TeviRandomizer
 
 
         static Harmony WhiteFlashPatch = new Harmony("FlashPatch");
+        static bool enabled = false;
 
         static public void patchWhiteFlash(bool enable = false)
         {
             if (enable)
             {
-                WhiteFlashPatch.PatchAll(typeof(WhiteFlash));
+                if (!enabled)
+                {
+                    WhiteFlashPatch.PatchAll(typeof(WhiteFlash));
+                    Debug.Log("WhiteFlash Patch Enabled");
+                    enabled = true;
+                }
             }
             else
             {
                 WhiteFlashPatch.UnpatchSelf();
+                Debug.Log("WhiteFlash Patch Disabled");
+                enabled = false;
             }
         }
 

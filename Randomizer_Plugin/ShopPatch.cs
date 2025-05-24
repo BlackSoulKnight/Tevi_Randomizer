@@ -3,8 +3,10 @@ using Game;
 using HarmonyLib;
 using Map;
 using System;
+using System.Security.Cryptography;
 using TMPro;
 using UnityEngine;
+using static UnityEngine.UI.Image;
 
 namespace TeviRandomizer
 {
@@ -536,19 +538,28 @@ namespace TeviRandomizer
                         // SetItem does not have a function to add a Location check to the list
                         LocationTracker.addItemToList(___itemslots[___Selected].GetItem(), slot);
 
-                        if (data.ToString().Contains("STACKABLE"))
+                        if (data == ItemList.Type.I13)
                         {
-                            SaveManager.Instance.SetStackableItem(data, 1, value: true);
-                            if (data == ItemList.Type.STACKABLE_BAG)
-                            {
-                                SettingManager.Instance.SetAchievement(Achievements.ACHI_SHOP_BUYBAG);
-                            }
+                            string itemName = RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{___itemslots[___Selected].GetItem()} #{slot}"]];
+                            byte value = byte.Parse(itemName.Split(["Teleporter "], StringSplitOptions.RemoveEmptyEntries)[0]);
+                            SaveManager.Instance.SetStackableItem(data, value, true); // do i need this?
+                            TeleporterRando.setTeleporterIcon(value);
                         }
                         else
                         {
-                            SaveManager.Instance.SetItem(data, 1);
+                            if (data.ToString().Contains("STACKABLE"))
+                            {
+                                SaveManager.Instance.SetStackableItem(data, 1, value: true);
+                                if (data == ItemList.Type.STACKABLE_BAG)
+                                {
+                                    SettingManager.Instance.SetAchievement(Achievements.ACHI_SHOP_BUYBAG);
+                                }
+                            }
+                            else
+                            {
+                                SaveManager.Instance.SetItem(data, 1);
+                            }
                         }
-
 
                         if (___itemslots[___Selected].GetItem().ToString().Contains("BADGE_"))
                         {
@@ -650,6 +661,12 @@ namespace TeviRandomizer
                 }
                 texts[0].text = itemName;
             }
+            if (___itype == ItemList.Type.I13)
+            {
+                string itemName = (string)ArchipelagoInterface.Instance.TeviToAPName[RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{item} #{slot}"]]];
+                texts[0].text = itemName;
+            }
+
             texts[2].text = _price.ToString();
             ___itype = t;
             return false;

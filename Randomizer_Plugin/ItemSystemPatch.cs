@@ -1,6 +1,8 @@
 ﻿using EventMode;
 using HarmonyLib;
 using Map;
+using Spine;
+using Steamworks.Ugc;
 using System;
 using System.Linq;
 using System.Security.Cryptography;
@@ -22,7 +24,7 @@ namespace TeviRandomizer
         {
             string itemName;
             string desc;
-
+            ItemList.Type original = type;
             if (!doRandomBadge)
             {
                 if(RandomizerPlugin.checkItemGot(type,value))
@@ -56,10 +58,14 @@ namespace TeviRandomizer
 
                 type = data;
 
+                itemName = RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{original} #{value}"]];
+                value = byte.Parse(itemName.Split(["Teleporter "], StringSplitOptions.RemoveEmptyEntries)[0]);
+                itemName = (string)ArchipelagoInterface.Instance.TeviToAPName[itemName];
             }
             else
             {
                 //Archipelago implementation
+                itemName = (string)ArchipelagoInterface.Instance.TeviToAPName[$"Teleporter {value}"];
 
             }
 
@@ -69,13 +75,12 @@ namespace TeviRandomizer
                 switch (type)
                 {
                     case ItemList.Type.I13:
-                        itemName = "Teleporter Name";
-                        desc = "Description for the Teleporter";
+                        desc = $"{itemName} has been Unlocked.";
                         RandomizerPlugin.changeSystemText("ITEMNAME." + GemaItemManager.Instance.GetItemString(type), itemName);
                         RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(type), desc);
                         SaveManager.Instance.SetStackableItem(type, value, true); // do i need this?
                         TeleporterRando.setTeleporterIcon(value);
-                        break;
+                        return true;
                 }
             }
 

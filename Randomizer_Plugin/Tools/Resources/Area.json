@@ -8,12 +8,20 @@
                     "Method": "ITEM_HIJUMP && ITEM_DOUBLEJUMP && ITEM_WALLJUMP"
                 },
                 {
+                    "Exit": "Teleporter Desert Base",
+                    "Method": "ChargeShot"
+                },
+                {
                     "Exit": "Desert Base Upper Half",
                     "Method": "ITEM_JETPACK && ITEM_WALLJUMP"
                 },
                 {
                     "Exit": "Desert Base Upper Half",
-                    "Method": "ITEM_DOUBLEJUMP && ITEM_WALLJUMP 2"
+                    "Method": "ITEM_JETPACK && ITEM_WALLJUMP"
+                },
+                {
+                    "Exit": "Desert Base Entrance",
+                    "Method": "ITEM_SLIDE || ITEM_LINEBOMB || ITEM_AREABOMB"
                 }
             ]
         },
@@ -61,12 +69,16 @@
                     "Method": ""
                 },
                 {
+                    "Exit": "Teleporter Canyon",
+                    "Method": ""
+                },
+                {
                     "Exit": "Thanatara Canyon to Heavens Valley West",
                     "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
-                    "Exit": "Morose City",
-                    "Method": "OpenMorose"
+                    "Exit": "Teleporter Morose",
+                    "Method": ""
                 },
                 {
                     "Exit": "Crafting",
@@ -172,6 +184,10 @@
                 {
                     "Exit": "0201",
                     "Method": ""
+                },
+                {
+                    "Exit": "Teleporter Oasis",
+                    "Method": ""
                 }
             ]
         }
@@ -195,6 +211,10 @@
                 {
                     "Exit": "0300",
                     "Method": ""
+                },
+                {
+                    "Exit": "Teleporter Morose",
+                    "Method": "ITEM_LINEBOMB || ITEM_AREABOMB"
                 },
                 {
                     "Exit": "Valhalla City",
@@ -232,6 +252,10 @@
                     "Method": ""
                 },
                 {
+                    "Exit": "Teleporter Forest",
+                    "Method": ""
+                },
+                {
                     "Exit": "Forest Maze",
                     "Method": ""
                 }
@@ -255,15 +279,15 @@
             "Connections": [
                 {
                     "Exit": "Forest Maze extended",
-                    "Method": "ITEM_JETPACK"
+                    "Method": "ITEM_LINEBOMB && ITEM_JETPACK"
                 },
                 {
                     "Exit": "Forest Maze extended",
-                    "Method": "ITEM_DOUBLEJUMP"
+                    "Method": "ITEM_LINEBOMB && ITEM_DOUBLEJUMP"
                 },
                 {
                     "Exit": "Forest Maze extended",
-                    "Method": "ITEM_AirDash"
+                    "Method": "ITEM_LINEBOMB && ITEM_AirDash"
                 }
             ]
         },
@@ -271,8 +295,8 @@
             "Name": "Forest Maze extended",
             "Connections": [
                 {
-                    "Exit": "",
-                    "Method": ""
+                    "Exit": "Teleporter Forest Maze",
+                    "Method": "ITEM_LINEBOMB"
                 }
             ]
         }
@@ -328,6 +352,10 @@
                     "Method": ""
                 },
                 {
+                    "Exit": "Teleporter Mines",
+                    "Method": ""
+                },
+                {
                     "Exit": "Travoll Mines to Swamp",
                     "Method": "ITEM_SLIDE && ITEM_BOMBFUEL"
                 }
@@ -369,6 +397,10 @@
                     "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) || ITEM_SLIDE"
                 },
                 {
+                    "Exit": "Teleporter Industry",
+                    "Method": ""
+                },
+                {
                     "Exit": "0603",
                     "Method": ""
                 },
@@ -402,6 +434,10 @@
                 },
                 {
                     "Exit": "CopperWood EP Pot",
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
+                },
+                {
+                    "Exit": "Teleporter Copper Forest",
                     "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
@@ -455,6 +491,10 @@
                 },
                 {
                     "Exit": "Vena Shop",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Teleporter Ana thema",
                     "Method": ""
                 },
                 {
@@ -618,6 +658,10 @@
                     "Method": ""
                 },
                 {
+                    "Exit": "Teleporter Gloamwood",
+                    "Method": "ChargeShot"
+                },
+                {
                     "Exit": "Ulskan Village Area",
                     "Method": ""
                 }
@@ -629,6 +673,10 @@
                 {
                     "Exit": "Gloamwood Middle",
                     "Method": "ITEM_KNIFE || VenaBomb || ITEM_ORB"
+                },
+                {
+                    "Exit": "Ulskan To Plague Forest",
+                    "Method": "(ITEM_AREABOMB || (ITEM_LINEBOMB && ITEM_BombLengthExtend)) && (ITEM_JETPACK || ITEM_DOUBLEJUMP)"
                 },
                 {
                     "Exit": "0901",
@@ -657,6 +705,10 @@
                 {
                     "Exit": "1001",
                     "Method": ""
+                },
+                {
+                    "Exit": "Teleporter Plague Forest",
+                    "Method": "ITEM_LINEBOMB ||ITEM_AREABOMB"
                 },
                 {
                     "Exit": "Plague Forest to Ulskan",
@@ -740,6 +792,10 @@
                     "Method": ""
                 },
                 {
+                    "Exit": "Teleporter Verglas Village",
+                    "Method": ""
+                },
+                {
                     "Exit": "Snowveil above Verglas Village",
                     "Method": "ITEM_SLIDE"
                 },
@@ -786,6 +842,10 @@
                 {
                     "Exit": "Verdazure Sea to Forest",
                     "Method": ""
+                },
+                {
+                    "Exit": "Teleporter Verdazure Sea",
+                    "Method": "ITEM_LINEBOMB || ITEM_AREABOMB || ChargeShot"
                 },
                 {
                     "Exit": "Outer Moat",
@@ -880,6 +940,10 @@
                     "Method": "ITEM_SLIDE"
                 },
                 {
+                    "Exit": "Teleporter Snowdust Shores",
+                    "Method": ""
+                },
+                {
                     "Exit": "1402",
                     "Method": ""
                 },
@@ -936,6 +1000,10 @@
                     "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
+                    "Exit": "Teleporter Forgotten City",
+                    "Method": ""
+                },
+                {
                     "Exit": "1403",
                     "Method": ""
                 }
@@ -976,6 +1044,10 @@
                     "Method": ""
                 },
                 {
+                    "Exit": "Teleporter Tartarus",
+                    "Method": ""
+                },
+                {
                     "Exit": "1502",
                     "Method": ""
                 },
@@ -1006,6 +1078,10 @@
                 {
                     "Exit": "1604",
                     "Method": ""
+                },
+                {
+                    "Exit": "Teleporter Snow City",
+                    "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "Snowveil Above HQ",
@@ -1205,6 +1281,10 @@
                 {
                     "Exit": "Magma Depths",
                     "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
+                },
+                {
+                    "Exit": "Teleporter Lava Cave",
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 }
             ]
         },
@@ -1248,6 +1328,10 @@
                     "Method": "ITEM_Rotater && (ChargeShot || ITEM_SLIDE) && ITEM_SLIDE && (EVENT_SnowMechanic 2 || EarlyDream)"
                 },
                 {
+                    "Exit": "Teleporter DreamKeeper Outside",
+                    "Method": ""
+                },
+                {
                     "Exit": "1801",
                     "Method": ""
                 },
@@ -1275,6 +1359,10 @@
             "Connections": [
                 {
                     "Exit": "Dreamless Depths",
+                    "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)"
+                },
+                {
+                    "Exit": "Teleporter DreamKeeper Inside",
                     "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
@@ -1678,7 +1766,7 @@
                 },
                 {
                     "Exit": "Cloister",
-                    "Method": "ITEM_SLIDE"
+                    "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)"
                 }
             ]
         },
@@ -1721,6 +1809,10 @@
                 {
                     "Exit": "Gallery of Souls Entrance",
                     "Method": ""
+                },
+                {
+                    "Exit": "Gallery of Mirrors West",
+                    "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)"
                 }
             ]
         },
@@ -3032,6 +3124,496 @@
                 {
                     "Exit": "Cloister Entrance",
                     "Method": ""
+                }
+            ]
+        }
+    ],
+    "Teleporter": [
+        {
+            "Name": "Teleporter Desert Base",
+            "Connections": [
+                {
+                    "Exit": "Desert Base Main",
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ChargeShot)"
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Canyon",
+            "Connections": [
+                {
+                    "Exit": "Thanatara Canyon",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Oasis",
+            "Connections": [
+                {
+                    "Exit": "Oasis",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Morose",
+            "Connections": [
+                {
+                    "Exit": "Morose City",
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || OpenMorose)"
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Forest Maze",
+            "Connections": [
+                {
+                    "Exit": "Forest Maze extended",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Forest",
+            "Connections": [
+                {
+                    "Exit": "Forest",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Mines",
+            "Connections": [
+                {
+                    "Exit": "Travoll Mines",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Industry",
+            "Connections": [
+                {
+                    "Exit": "Travoll Industrie",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Copper Forest",
+            "Connections": [
+                {
+                    "Exit": "CopperWood Industry to Travoll Industrie",
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Ana thema",
+            "Connections": [
+                {
+                    "Exit": "Ana Thema",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Gloamwood",
+            "Connections": [
+                {
+                    "Exit": "Gloamwood Right",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Plague Forest",
+            "Connections": [
+                {
+                    "Exit": "Plague Forest",
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Ulvosa",
+            "Connections": [
+                {
+                    "Exit": "Ulvosa",
+                    "Method": "((ITEM_LINEBOMB || ITEM_AREABOMB) && ChargeShot && (HiddenP || ITEM_SLIDE))"
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Verglas Village",
+            "Connections": [
+                {
+                    "Exit": "Snowveil Ex",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Verdazure Sea",
+            "Connections": [
+                {
+                    "Exit": "Verdazure Sea West",
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ChargeShot)"
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Forgotten City",
+            "Connections": [
+                {
+                    "Exit": "Forgotten City Entrance",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Snowdust Shores",
+            "Connections": [
+                {
+                    "Exit": "Verdazure Ocean",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Tartarus",
+            "Connections": [
+                {
+                    "Exit": "Tartarus",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Snow City",
+            "Connections": [
+                {
+                    "Exit": "Snow City",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Lava Cave",
+            "Connections": [
+                {
+                    "Exit": "Swamp",
+                    "Method": "( ITEM_AREABOMB || ITEM_LINEBOMB )"
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter DreamKeeper Outside",
+            "Connections": [
+                {
+                    "Exit": "DreamKeeper Outside Left",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter DreamKeeper Inside",
+            "Connections": [
+                {
+                    "Exit": "DreamKeeper",
+                    "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)"
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Deep Dream",
+            "Connections": [
+                {
+                    "Exit": "Dreamless Depths",
+                    "Method": "ITEM_SLIDE"
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Heaven Valley East",
+            "Connections": [
+                {
+                    "Exit": "Heavens Valley Snow Route Low",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Valhalla City",
+            "Connections": [
+                {
+                    "Exit": "Valhalla City",
+                    "Method": "(ChargeShot || (ITEM_SLIDE && (ITEM_AREABOMB || ITEM_LINEBOMB)))"
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Heaven Valley West",
+            "Connections": [
+                {
+                    "Exit": "Heavens Valley West",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Valhalla Breath West",
+            "Connections": [
+                {
+                    "Exit": "Valhalla Breath West",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Ruins",
+            "Connections": [
+                {
+                    "Exit": "Solennian Ruins",
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Sinner's Oath",
+            "Connections": [
+                {
+                    "Exit": "Sinner's Oath Entrance",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Relicts",
+            "Connections": [
+                {
+                    "Exit": "Relicts to Gloamwood",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Catacombs",
+            "Connections": [
+                {
+                    "Exit": "Catacombs Entrance",
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Lab",
+            "Connections": [
+                {
+                    "Exit": "Lab",
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_SLIDE"
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Cloister",
+            "Connections": [
+                {
+                    "Exit": "Cloister Entrance",
+                    "Method": "ChargeShot"
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Gallery East",
+            "Connections": [
+                {
+                    "Exit": "Gallery of Mirrors East",
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Frank Boss",
+            "Connections": [
+                {
+                    "Exit": "Gallery of Souls Boss Area",
+                    "Method": "(ITEM_AREABOMB || (ITEM_LINEBOMB && ITEM_BombLengthExtend 3)) && ITEM_SLIDE"
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter BlushWood",
+            "Connections": [
+                {
+                    "Exit": "Blushwood",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Teleporter Evernight Garden",
+            "Connections": [
+                {
+                    "Exit": "EverGarden",
+                    "Method": ""
+                }
+            ]
+        }
+    ],
+    "TeleporterHub": [
+        {
+            "Name": "TeleportHub",
+            "Connections": [
+                {
+                    "Exit": "Teleporter Desert Base",
+                    "Method": "Teleporter 0"
+                },
+                {
+                    "Exit": "Teleporter Canyon",
+                    "Method": "Teleporter 1"
+                },
+                {
+                    "Exit": "Teleporter Oasis",
+                    "Method": "Teleporter 2"
+                },
+                {
+                    "Exit": "Teleporter Morose",
+                    "Method": "Teleporter 3"
+                },
+                {
+                    "Exit": "Teleporter Forest Maze",
+                    "Method": "Teleporter 4"
+                },
+                {
+                    "Exit": "Teleporter Forest",
+                    "Method": "Teleporter 5"
+                },
+                {
+                    "Exit": "Teleporter Mines",
+                    "Method": "Teleporter 6"
+                },
+                {
+                    "Exit": "Teleporter Industry",
+                    "Method": "Teleporter 7"
+                },
+                {
+                    "Exit": "Teleporter Copper Forest",
+                    "Method": "Teleporter 8"
+                },
+                {
+                    "Exit": "Teleporter Ana thema",
+                    "Method": "Teleporter 9"
+                },
+                {
+                    "Exit": "Teleporter Gloamwood",
+                    "Method": "Teleporter 10"
+                },
+                {
+                    "Exit": "Teleporter Plague Forest",
+                    "Method": "Teleporter 11"
+                },
+                {
+                    "Exit": "Teleporter Ulvosa",
+                    "Method": "Teleporter 12"
+                },
+                {
+                    "Exit": "Teleporter Verglas Village",
+                    "Method": "Teleporter 13"
+                },
+                {
+                    "Exit": "Teleporter Verdazure Sea",
+                    "Method": "Teleporter 14"
+                },
+                {
+                    "Exit": "Teleporter Forgotten City",
+                    "Method": "Teleporter 15"
+                },
+                {
+                    "Exit": "Teleporter Snowdust Shores",
+                    "Method": "Teleporter 16"
+                },
+                {
+                    "Exit": "Teleporter Tartarus",
+                    "Method": "Teleporter 17"
+                },
+                {
+                    "Exit": "Teleporter Snow City",
+                    "Method": "Teleporter 18"
+                },
+                {
+                    "Exit": "Teleporter Lava Cave",
+                    "Method": "Teleporter 19"
+                },
+                {
+                    "Exit": "Teleporter DreamKeeper Outside",
+                    "Method": "Teleporter 20"
+                },
+                {
+                    "Exit": "Teleporter DreamKeeper Inside",
+                    "Method": "Teleporter 21"
+                },
+                {
+                    "Exit": "Teleporter Deep Dream",
+                    "Method": "Teleporter 22"
+                },
+                {
+                    "Exit": "Teleporter Heaven Valley East",
+                    "Method": "Teleporter 23"
+                },
+                {
+                    "Exit": "Teleporter Valhalla City",
+                    "Method": "Teleporter 24"
+                },
+                {
+                    "Exit": "Teleporter Heaven Valley West",
+                    "Method": "Teleporter 25"
+                },
+                {
+                    "Exit": "Teleporter Valhalla Breath West",
+                    "Method": "Teleporter 26"
+                },
+                {
+                    "Exit": "Teleporter Ruins",
+                    "Method": "Teleporter 27"
+                },
+                {
+                    "Exit": "Teleporter Sinner's Oath",
+                    "Method": "Teleporter 28"
+                },
+                {
+                    "Exit": "Teleporter Relicts",
+                    "Method": "Teleporter 29"
+                },
+                {
+                    "Exit": "Teleporter Catacombs",
+                    "Method": "Teleporter 30"
+                },
+                {
+                    "Exit": "Teleporter Lab",
+                    "Method": "Teleporter 31"
+                },
+                {
+                    "Exit": "Teleporter Cloister",
+                    "Method": "Teleporter 32"
+                },
+                {
+                    "Exit": "Teleporter Gallery East",
+                    "Method": "Teleporter 33"
+                },
+                {
+                    "Exit": "Teleporter Frank Boss",
+                    "Method": "Teleporter 34"
+                },
+                {
+                    "Exit": "Teleporter BlushWood",
+                    "Method": "Teleporter 35"
+                },
+                {
+                    "Exit": "Teleporter Evernight Garden",
+                    "Method": "Teleporter 36"
                 }
             ]
         }

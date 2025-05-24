@@ -75,6 +75,9 @@ namespace TeviRandomizer
                         case "True":
                             flag = true;
                             break;
+                        case "Teleporter":
+                            flag = false;
+                            break;
                         case "LibraryExtra":
                             flag = RandomizerPlugin.customFlags[(int)CustomFlags.SuperBosses];
                             break;

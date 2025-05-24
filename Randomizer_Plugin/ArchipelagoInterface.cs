@@ -27,7 +27,7 @@ namespace TeviRandomizer
         public const ItemList.Type remoteItem = ItemList.Type.I10;
         public const ItemList.Type remoteItemProgressive = ItemList.Type.I11;
 
-        string AP_WORLD_VERSION = "0.4.3";
+        string AP_WORLD_VERSION = "0.4.4";
 
         private class LocationData
         {
@@ -50,7 +50,7 @@ namespace TeviRandomizer
         private bool deathLinkTriggered = false;
         private bool lostConnection = false;
         private JObject APNameToTevi;
-        private JObject TeviToAPName;
+        public JObject TeviToAPName;
         private const long baseID = 44966541000;
         private Dictionary<string, LocationData> locations = new Dictionary<string, LocationData>();
         private Dictionary<int, int> transitionData = new Dictionary<int, int>();
@@ -129,6 +129,7 @@ namespace TeviRandomizer
             return true;
         }
 
+
         private void setCustomFlags(JObject optionData)
         {
             Debug.Log(optionData);
@@ -139,6 +140,8 @@ namespace TeviRandomizer
             RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart] = (bool)optionData.GetValue("celia_sable");
             RandomizerPlugin.customFlags[(int)CustomFlags.SuperBosses] = (bool)optionData.GetValue("superBosses");
             RandomizerPlugin.GoMode = (int)(long)optionData.GetValue("goal_count");
+            if(optionData.ContainsKey("teleporter_mode"))
+                RandomizerPlugin.customFlags[(int)(CustomFlags.TeleporterRando)] = (bool)optionData.GetValue("teleporter_mode");
             if (optionData.ContainsKey("goal_type"))
             {
                 switch ((int)optionData.GetValue("goal_type"))
@@ -295,7 +298,8 @@ namespace TeviRandomizer
             foreach (var entry in locations)
             {
                 string item = entry.Value.item;
-                if (!Enum.IsDefined(typeof(ItemList.Type), item))
+                
+                if (entry.Value.player != player)
                 {
                     item = "Remote";
                 }
@@ -378,9 +382,15 @@ namespace TeviRandomizer
                 if(currentItemNR < session.Items.AllItemsReceived.Count)
                 {
                     ItemInfo item = session.Items.AllItemsReceived[currentItemNR];
+                    byte value = 1;
                     int itemID = (int)(item.ItemId - baseID);
+                    if(itemID >= 500 && itemID <= 536)
+                    {
+                        value = (byte)(itemID - 500);
+                        itemID = (byte)ItemList.Type.I13;
+                    }
                     teviItem = (ItemList.Type)itemID;
-                    HUDObtainedItem.Instance.GiveItem(teviItem,1, true);
+                    HUDObtainedItem.Instance.GiveItem(teviItem,value, true);
                     currentItemNR++;
                 }
 

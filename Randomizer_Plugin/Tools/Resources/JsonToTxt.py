@@ -766,8 +766,6 @@ def convertLocationJsonToTxt():
         d.write(l+"\n")
     d.close()
 
-convertAreaJsonToTxt()
-convertLocationJsonToTxt()
 
 
 def generateSeed():
@@ -816,3 +814,19 @@ def generateSeed():
     print("Generating the Seed has finished")
     input()
 
+def teleporterHub():
+    s = open(Path+"/Area.json",'r')
+    s = json.load(s)
+    a = 0
+    s["TeleporterHub"] = [{"Name":f"TeleportHub","Connections":[]}]
+    for k in s["Teleporter"]:
+        data = {"Exit":k["Name"],"Method":f"Teleporter {a}"}
+        s["TeleporterHub"][0]["Connections"].append(data)
+        a+=1
+    d = open(Path+"Test.json",'w+')
+    d.write(json.dumps(s))
+    d.close
+
+teleporterHub()
+#convertAreaJsonToTxt()
+#convertLocationJsonToTxt()

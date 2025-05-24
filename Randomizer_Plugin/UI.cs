@@ -187,18 +187,21 @@ namespace TeviRandomizer
         void patchExtraFeatures()
         {
             Extras.patchWhiteFlash(((UnityEngine.UI.Toggle)UI.settings["Toggle AntiFlash"]).isOn);
-            if (((UnityEngine.UI.Toggle)UI.settings["Toggle RandomEnemies"]).isOn || ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn) 
-                Extras.RandomizeExtra.randomEnemies();
-            if (((UnityEngine.UI.Toggle)UI.settings["Toggle RandomBoss"]).isOn) 
-                Extras.RandomizeExtra.randomBoss();
             RandomizerPlugin.customFlags[(int)CustomFlags.AlwaysRandomizeEnemy] = ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn;
             RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss] = ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomBoss"]).isOn;
             RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedEnemy] = ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn || ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomEnemies"]).isOn;
             RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBG] = ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomBG"]).isOn;
-            if (RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBG]){
+            RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedMusic] = ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomMusic"]).isOn;
+            ResourcePatch.patchResources(RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss] || RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedEnemy] || RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBG] || RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedMusic]);
+            if (((UnityEngine.UI.Toggle)UI.settings["Toggle RandomEnemies"]).isOn || ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn) 
+                Extras.RandomizeExtra.randomEnemies();
+            if (((UnityEngine.UI.Toggle)UI.settings["Toggle RandomBoss"]).isOn) 
+                Extras.RandomizeExtra.randomBoss();
+
+            if (RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBG])
+            {
                 Extras.RandomizeExtra.randomBG();
             }
-            RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedMusic] = ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomMusic"]).isOn;
             if (RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedMusic])
             {
                 Extras.RandomizeExtra.randomMusic();
