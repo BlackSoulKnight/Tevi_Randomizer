@@ -338,7 +338,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "(ITEM_DOUBLEJUMP && (ITEM_JETPACK || ITEM_HIJUMP)) || ITEM_JETPACK 2 || ITEM_WALLJUMP || (ITEM_JETPACK && ITEM_HIJUMP) || (ITEM_AirDash && ITEM_SPEEDUP)",
                 "Difficulty": 0
             }
         ]
@@ -6411,12 +6411,12 @@
     },
     {
         "Itemname": "STACKABLE_COG",
-        "Location": "DreamKeeper",
+        "Location": "Teleporter DreamKeeper Inside",
         "LocationName": "DreamKeeper - Alius fight",
         "slotId": 61,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
         ]
@@ -6435,12 +6435,12 @@
     },
     {
         "Itemname": "ITEM_AntiIce",
-        "Location": "DreamKeeper",
+        "Location": "Teleporter DreamKeeper Inside",
         "LocationName": "DreamKeeper - Grip Sole Boots",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
         ]
@@ -6459,7 +6459,7 @@
     },
     {
         "Itemname": "STACKABLE_MP",
-        "Location": "DreamKeeper",
+        "Location": "Teleporter DreamKeeper Inside",
         "LocationName": "DreamKeeper - Blueberry Bunny Potion",
         "slotId": 28,
         "Requirement": [
@@ -6519,7 +6519,7 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "DreamKeeper",
+        "Location": "Teleporter DreamKeeper Inside",
         "LocationName": "DreamKeeper - Lemon Bunny Potion",
         "slotId": 28,
         "Requirement": [

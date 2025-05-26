@@ -22,7 +22,7 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static bool ObtainItem(ref ItemList.Type type, ref byte value, ref bool doRandomBadge, ref (ItemList.Type, byte) __state)
         {
-            string itemName;
+            string itemName = "";
             string desc;
             ItemList.Type original = type;
             if (!doRandomBadge)
@@ -57,10 +57,13 @@ namespace TeviRandomizer
                 }
 
                 type = data;
-
                 itemName = RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{original} #{value}"]];
-                value = byte.Parse(itemName.Split(["Teleporter "], StringSplitOptions.RemoveEmptyEntries)[0]);
-                itemName = (string)ArchipelagoInterface.Instance.TeviToAPName[itemName];
+
+                if (type == ItemList.Type.I13)
+                {
+                    value = byte.Parse(itemName.Split(["Teleporter "], StringSplitOptions.RemoveEmptyEntries)[0]);
+                    itemName = (string)ArchipelagoInterface.Instance.TeviToAPName[itemName];
+                }
             }
             else
             {

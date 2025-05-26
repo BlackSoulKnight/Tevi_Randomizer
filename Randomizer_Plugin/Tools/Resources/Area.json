@@ -3170,7 +3170,7 @@
             "Connections": [
                 {
                     "Exit": "Forest Maze extended",
-                    "Method": ""
+                    "Method": "(ITEM_LINEBOMB) && (ITEM_DOUBLEJUMP || ITEM_JETPACK)"
                 }
             ]
         },
@@ -3528,11 +3528,11 @@
                     "Method": "Teleporter 14"
                 },
                 {
-                    "Exit": "Teleporter Forgotten City",
+                    "Exit": "Teleporter Snowdust Shores",
                     "Method": "Teleporter 15"
                 },
                 {
-                    "Exit": "Teleporter Snowdust Shores",
+                    "Exit": "Teleporter Forgotten City",
                     "Method": "Teleporter 16"
                 },
                 {
