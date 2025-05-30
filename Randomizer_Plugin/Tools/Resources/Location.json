@@ -2118,8 +2118,8 @@
         ]
     },
     {
-        "Itemname": "Teleporter Plague Forest",
-        "Location": "Plague Forest",
+        "Itemname": "STACKABLE_MP",
+        "Location": "Teleporter Plague Forest",
         "LocationName": "Plague Forest - Blueberry Bunny Potion",
         "slotId": 6,
         "Requirement": [
@@ -4446,7 +4446,7 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_BombLengthExtend 3",
+                "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ]

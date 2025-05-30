@@ -789,7 +789,7 @@
             "Connections": [
                 {
                     "Exit": "Snowveil",
-                    "Method": ""
+                    "Method": "ITEM_AREABOMB"
                 },
                 {
                     "Exit": "Teleporter Verglas Village",
