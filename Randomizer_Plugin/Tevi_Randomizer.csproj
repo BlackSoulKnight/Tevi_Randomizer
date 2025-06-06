@@ -16,6 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Archipelago.MultiClient.Net" Version="6.6.0" />
     <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
     <PackageReference Include="BepInEx.Core" Version="5.*" />
     <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" />
@@ -36,10 +37,6 @@
 
 	<Reference Include="Rewired_Core">
     <HintPath>Rewired_Core.dll</HintPath>
-  </Reference>	
-
-	<Reference Include="Archipelago MultiClient">
-    <HintPath>Archipelago.MultiClient.Net.dll</HintPath>
   </Reference>	
   
   <Reference Include="Rewired_Windows_Functions">
