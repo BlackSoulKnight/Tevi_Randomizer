@@ -121,7 +121,10 @@ namespace TeviRandomizer
                         case "ChargeShot":
                             flag = RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart];
                             if (itemList.ContainsKey("ITEM_ORB"))
-                                flag = itemList["ITEM_ORB"] >= 1;
+                                if(flag)
+                                    flag = itemList["ITEM_ORB"] >= 1;
+                                else
+                                    flag = itemList["ITEM_ORB"] > 1;
                             break;
                         case "Upgrade":
                             bool option = ((UnityEngine.UI.Toggle)settings["Toggle NormalItemCraft"]).isOn;
