@@ -2028,7 +2028,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
+                "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
         ]
@@ -5755,7 +5755,7 @@
         "slotId": 32,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB || ITEM_AREABOMB",
                 "Difficulty": 0
             }
         ]
@@ -5779,7 +5779,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_Rotater",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_Rotater",
                 "Difficulty": 0
             }
         ]
@@ -5791,7 +5791,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB || ITEM_AREABOMB",
                 "Difficulty": 0
             }
         ]
@@ -5878,7 +5878,7 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Snow City",
+        "Location": "Teleporter Snow City",
         "LocationName": "Snow City - Grape Bunny Potion",
         "slotId": 21,
         "Requirement": [
@@ -6877,11 +6877,11 @@
         "slotId": 29,
         "Requirement": [
             {
-                "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP && ITEM_Rotater",
+                "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP && ITEM_Rotater && ITEM_SLIDE",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP && ITEM_LINEBOMB",
+                "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ]

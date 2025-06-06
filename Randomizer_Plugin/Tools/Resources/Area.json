@@ -676,7 +676,7 @@
                 },
                 {
                     "Exit": "Ulskan To Plague Forest",
-                    "Method": "(ITEM_AREABOMB || (ITEM_LINEBOMB && ITEM_BombLengthExtend)) && (ITEM_JETPACK || ITEM_DOUBLEJUMP)"
+                    "Method": "(ITEM_AREABOMB || (ITEM_LINEBOMB && ITEM_BombLengthExtend)) && (ITEM_JETPACK || ITEM_DOUBLEJUMP) && VenaBomb"
                 },
                 {
                     "Exit": "0901",
@@ -3440,7 +3440,7 @@
             "Connections": [
                 {
                     "Exit": "Gallery of Souls Boss Area",
-                    "Method": "(ITEM_AREABOMB || (ITEM_LINEBOMB && ITEM_BombLengthExtend 3)) && ITEM_SLIDE"
+                    "Method": "(ITEM_AREABOMB || (ITEM_LINEBOMB && ITEM_BombLengthExtend 3)) && ITEM_SLIDE && ( ITEM_AntiDecay || ITEM_ZCrystal)"
                 }
             ]
         },
