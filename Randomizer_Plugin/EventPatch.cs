@@ -146,6 +146,15 @@ namespace TeviRandomizer
             }
         }
 
+        [HarmonyPatch(typeof(GemaNewGame),"OnEnable")]
+        [HarmonyPrefix]
+        static void forceFreeRoam()
+        {
+            MainVar.instance.NewCustomGame[0] = true;
+            MainVar.instance.NewCustomGame[1] = true;
+        }
+
+
         [HarmonyPatch(typeof(AfterMemineChallenge), "EVENT")]
         [HarmonyPrefix]
         static void MemineAllChallangesChecl(ref CharacterBase ___m)
