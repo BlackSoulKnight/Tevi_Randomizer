@@ -144,6 +144,7 @@ namespace TeviRandomizer
                 harmonyPatchInstance.PatchAll(typeof(EnemyPatch));
                 harmonyPatchInstance.PatchAll(typeof(BossPatch));
                 harmonyPatchInstance.PatchAll(typeof(Story_Mode.StoryEventPatch));
+                harmonyPatchInstance.PatchAll(typeof(BaseGameFixes));
                 randomizerEnabled = true;
                 return true;
             }
