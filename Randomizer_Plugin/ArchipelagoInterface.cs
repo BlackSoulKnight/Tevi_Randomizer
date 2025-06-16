@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using Archipelago.MultiClient.Net;
 using Archipelago.MultiClient.Net.BounceFeatures.DeathLink;
 using Archipelago.MultiClient.Net.Enums;
@@ -124,8 +125,9 @@ namespace TeviRandomizer
                 setCustomFlags((JObject)success.SlotData["options"]);
             else
                 oldSlotData(success.SlotData);
-            getOwnLocationData();
+            getOwnLocationData().Wait();
             getOwnTransitionData(success.SlotData["transitionData"]);
+            UI.checkApWorldLocationCheck = true;
             return true;
         }
 
@@ -231,10 +233,10 @@ namespace TeviRandomizer
         {
             session.DataStorage[Scope.Slot, "currentMap"] = map;
         }
-        public async void getOwnLocationData() {
+        public async Task getOwnLocationData() {
             locations.Clear();
             long[] locs = session.Locations.AllLocations.ToArray();
-            var a = await session.Locations.ScoutLocationsAsync(locs);
+            var a = session.Locations.ScoutLocationsAsync(locs).Result;
             foreach (long loc in locs)
             {
                 if (!a.ContainsKey(loc))
@@ -263,7 +265,10 @@ namespace TeviRandomizer
             }
         }
 
-
+        public string[] getApLocationNames()
+        {
+            return locations.Keys.ToArray();
+        }
         public void checkoutLocation(string location)
         {
             if (this.isConnected)
