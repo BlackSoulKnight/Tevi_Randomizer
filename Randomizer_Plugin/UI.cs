@@ -80,6 +80,61 @@ namespace TeviRandomizer
 
         }
 
+        public static bool checkApWorldLocationCheck = false;
+        [HarmonyPatch(typeof(GemaTitleScreenManager), "MainTitleScreen")]
+        [HarmonyPrefix]
+        static void showAPLocationErrorText()
+        {
+            if (checkApWorldLocationCheck) {
+                GameObject textField = GameObject.Find("LocationCheck");
+                if (!textField)
+                {
+                    textField = new GameObject();
+                    textField.name = "LocationCheck";
+                    textField.transform.parent = GameObject.Find("Titile Screen Manager").transform;
+                    TextMeshProUGUI text = textField.AddComponent<TMPro.TextMeshProUGUI>();
+                    textField.AddComponent<CanvasGroup>();
+                    textField.transform.position = new Vector3(-4.5295f, 4.3716f, 1);
+                    textField.transform.localScale = Vector3.one;
+                    text.color = Color.red;
+                    textField.GetComponent<RectTransform>().sizeDelta = new Vector2(500, 100);
+                    text.fontSize = 16;
+                    text.fontSizeMax = 16;
+                    
+                }
+                TextMeshProUGUI text2 = textField.GetComponent<TMPro.TextMeshProUGUI>();
+                text2.color = Color.red;
+                
+                text2.text = "TEST";
+                List<string> list = new List<string>();
+                string[] aplocation = ArchipelagoInterface.Instance.getApLocationNames();
+                foreach (string location in aplocation)
+                {
+                    if(!LocationTracker.APLocationName.ContainsValue(location)) {
+                        list.Add(location);
+                    }
+                }
+                if (list.Count > 0)
+                {
+                    if (!Directory.Exists(RandomizerPlugin.pluginPath + "/Data")) Directory.CreateDirectory(RandomizerPlugin.pluginPath + "/Data");
+                    StreamWriter errorLog = File.CreateText(RandomizerPlugin.pluginPath + "/Data/" + $"ApLocationMatchError.txt");
+                    foreach(string location in list)
+                    {
+                        errorLog.WriteLine(location);
+                    }
+                    errorLog.Close();
+                    text2.color = Color.red;
+
+                    text2.text = "Ap Server Locations missmatch";
+                }
+                else
+                {
+                    text2.color = Color.green;
+                    text2.text = "Ap Server Connected";
+                }
+                checkApWorldLocationCheck = false;
+            }
+        }
         [HarmonyPatch(typeof(GemaMainMenuSelectionSlot),"UpdateFont")]
         [HarmonyPostfix]
         static void fixText(ref TextMeshProUGUI ___text,ref bool ___isNewGameSelect,ref int ID)
@@ -89,7 +144,6 @@ namespace TeviRandomizer
                 ___text.text = "Randomizer";
             }
         }
-
         [HarmonyPatch(typeof(GemaTitleScreenManager),"InTitleScreen")]
         [HarmonyPrefix]
         static bool mep(ref bool __result)
