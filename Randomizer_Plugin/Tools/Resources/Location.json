@@ -2200,7 +2200,7 @@
         "slotId": 30,
         "Requirement": [
             {
-                "Method": "ITEM_MASK",
+                "Method": "ITEM_MASK || ITEM_AntiDecay",
                 "Difficulty": 0
             }
         ]
@@ -2212,7 +2212,7 @@
         "slotId": 30,
         "Requirement": [
             {
-                "Method": "ITEM_MASK",
+                "Method": "ITEM_MASK || ITEM_AntiDecay",
                 "Difficulty": 0
             }
         ]
@@ -2224,7 +2224,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && ITEM_MASK",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && (ITEM_MASK || ITEM_AntiDecay)",
                 "Difficulty": 0
             }
         ]
@@ -2236,7 +2236,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_AirSlide && ITEM_SLIDE && ITEM_LINEBOMB",
+                "Method": "ITEM_AirSlide && ITEM_SLIDE && ITEM_LINEBOMB && (ITEM_MASK || ITEM_AntiDecay)",
                 "Difficulty": 0
             }
         ]
@@ -3425,19 +3425,19 @@
         "slotId": 12,
         "Requirement": [
             {
-                "Method": "ITEM_JETPACK 2",
+                "Method": "ITEM_JETPACK 2 && (HiddenP || ITEM_AREABOMB)",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP",
+                "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP && (HiddenP || ITEM_AREABOMB)",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_JETPACK && ITEM_AirDash",
+                "Method": "ITEM_JETPACK && ITEM_AirDash && (HiddenP || ITEM_AREABOMB)",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP",
+                "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP && (HiddenP || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
         ]
@@ -3449,7 +3449,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB) && (HiddenP || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
         ]
