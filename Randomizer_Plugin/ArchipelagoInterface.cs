@@ -28,7 +28,7 @@ namespace TeviRandomizer
         public const ItemList.Type remoteItem = ItemList.Type.I10;
         public const ItemList.Type remoteItemProgressive = ItemList.Type.I11;
 
-        string AP_WORLD_VERSION = "0.6.0";
+        string AP_WORLD_VERSION = "0.6.1";
 
         private class LocationData
         {
@@ -142,6 +142,12 @@ namespace TeviRandomizer
             RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart] = (bool)optionData.GetValue("celia_sable");
             RandomizerPlugin.customFlags[(int)CustomFlags.SuperBosses] = (bool)optionData.GetValue("superBosses");
             RandomizerPlugin.GoMode = (int)(long)optionData.GetValue("goal_count");
+            if (optionData.ContainsKey("traverse_mode"))
+            {
+                RandomizerPlugin.customFlags[(int)(CustomFlags.TeleporterRando)] = (int)optionData.GetValue("traverse_mode") == 2;
+
+            }
+            //depcriated
             if(optionData.ContainsKey("teleporter_mode"))
                 RandomizerPlugin.customFlags[(int)(CustomFlags.TeleporterRando)] = (bool)optionData.GetValue("teleporter_mode");
             if (optionData.ContainsKey("goal_type"))
