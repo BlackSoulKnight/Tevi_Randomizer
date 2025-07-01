@@ -7,14 +7,13 @@
   + To do a wall kick, do the wall jump then quick drop into another wall
   + [Hidden Paths](Hidden_Paths.md) are spread around the Game World
 + You may need to lure an enemy then quick drop on them to get additional height for some jumps/ledges
-+ If you don't start with the knife, you can still use cross bombs/tornado slash/spanner bash
-  + For cross bombs, use the cross bomb shortcut
++ If you don't start with the knife, you can still use (cross / cluster) bombs/tornado slash/spanner bash
+  + For cross or cluster bombs, use the cross bomb shortcut
   + For tornado slash/spanner bash, the same inputs still work, you just need to unlock the moves first
     note: the rando doesn't require these moves and doesn't check for them when placing items
 + Charge shots now require level 2 orbitars
 + Sable / Celia require level 2 orbitars
 + If you don't start with Sable/Celia, the core expansion is not usable until one of them is found. And you're locked to that one character until the other is found
-+ Cluster bomb is not usable without Cross bombs
 + The left/right golden hands and the complete golden hands are all separate items which can be found. You can still turn in the left/right hands even if you've found the complete hands for example
 + There will always be atleast one of each progression item on the field or in crafting, so even if you randomize upgrades you don't need to worry about being softlocked by purple crystals
 + Defeating bosses progresses the internal chapter count which in turn unlocks crafting options and options for Vena's shop
