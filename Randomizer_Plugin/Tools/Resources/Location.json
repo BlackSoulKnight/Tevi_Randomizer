@@ -3425,19 +3425,7 @@
         "slotId": 12,
         "Requirement": [
             {
-                "Method": "ITEM_JETPACK 2 && (HiddenP || ITEM_AREABOMB)",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_JETPACK && ITEM_DOUBLEJUMP && (HiddenP || ITEM_AREABOMB)",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_JETPACK && ITEM_AirDash && (HiddenP || ITEM_AREABOMB)",
-                "Difficulty": 0
-            },
-            {
-                "Method": "ITEM_AirDash && ITEM_DOUBLEJUMP && (HiddenP || ITEM_AREABOMB)",
+                "Method": "(ITEM_AirDash || ITEM_JETPACK || ITEM_DOUBLEJUMP) && (HiddenP || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
         ]
@@ -4681,7 +4669,7 @@
     },
     {
         "Itemname": "BADGE_CrystalAbsorberC",
-        "Location": "EverGarden",
+        "Location": "EverGarden To Valhalla",
         "LocationName": "EverGarden - Crystalline Cyan",
         "slotId": 1,
         "Requirement": [
@@ -6536,7 +6524,11 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_AREABOMB",
+                "Method": "ITEM_AREABOMB && ITEM_SLIDE && Hard",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_AREABOMB && ITEM_Rotater",
                 "Difficulty": 0
             }
         ]
