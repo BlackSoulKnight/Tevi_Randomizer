@@ -1830,19 +1830,19 @@
             "Connections": [
                 {
                     "Exit": "Gallery of Souls Boss Area",
-                    "Method": "ITEM_JETPACK 2 && ChargeShot"
+                    "Method": "ITEM_JETPACK 2 && ChargeShot && ITEM_SLIDE"
                 },
                 {
                     "Exit": "Gallery of Souls Boss Area",
-                    "Method": "ITEM_WALLJUMP && ChargeShot"
+                    "Method": "ITEM_WALLJUMP && ChargeShot && ITEM_SLIDE"
                 },
                 {
                     "Exit": "Gallery of Souls Boss Area",
-                    "Method": "ITEM_DOUBLEJUMP && ChargeShot"
+                    "Method": "ITEM_DOUBLEJUMP && ChargeShot && ITEM_SLIDE"
                 },
                 {
                     "Exit": "Gallery of Souls Boss Area",
-                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ChargeShot"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ChargeShot && ITEM_SLIDE"
                 }
             ]
         },
