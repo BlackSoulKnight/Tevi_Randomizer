@@ -1264,6 +1264,10 @@
                 {
                     "Exit": "Swamp",
                     "Method": "ITEM_AREABOMB"
+                },
+                {
+                    "Exit": "Magma Pits Entrance",
+                    "Method": "ITEM_BombLengthExtend && ITEM_LINEBOMB && ITEM_SLIDE"
                 }
             ]
         },
