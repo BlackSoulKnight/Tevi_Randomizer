@@ -1283,6 +1283,10 @@
                     "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
+                    "Exit": "Magma Pits",
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_SLIDE && ChargeShot && ITEM_KNIFE"
+                },
+                {
                     "Exit": "Teleporter Lava Cave",
                     "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 }
