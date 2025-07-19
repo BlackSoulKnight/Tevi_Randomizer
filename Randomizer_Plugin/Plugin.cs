@@ -1,20 +1,17 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using BepInEx;
-using HarmonyLib;
+﻿using BepInEx;
+using Bullet;
+using Character;
 using EventMode;
 using Game;
-
-
-using UnityEngine;
-using Bullet;
+using HarmonyLib;
 using Map;
-
 using Newtonsoft.Json;
-using Character;
-using static Localize;
+using QFSW.QC;
 using Rewired.ComponentControls.Data;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using UnityEngine;
 
 
 
@@ -116,6 +113,18 @@ namespace TeviRandomizer
 
         }
 
+        [Command("sendLocation", QFSW.QC.Platform.AllPlatforms, MonoTargetType.Single)]
+        private void SendLocation(string location)
+        {
+            if (!ArchipelagoInterface.Instance.isConnected)
+            {
+                Debug.Log("Not Connected to a Archipelago Server");
+                return;
+            }
+            if(ArchipelagoInterface.Instance.checkoutLocation(location));
+                ArchipelagoInterface.Instance.sendMessage("[Debug] Location send via Console");
+
+        }
 
         static public bool toggleRandomizerPlugin()
         {

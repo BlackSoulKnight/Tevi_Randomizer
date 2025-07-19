@@ -270,12 +270,18 @@ namespace TeviRandomizer
                 transitionData.Add((int)item.GetValue("from"), (int)item.GetValue("to"));
             }
         }
-
+        public void sendMessage(string msg)
+        {
+            if (isConnected)
+            {
+                session.Say(msg);
+            }
+        }
         public string[] getApLocationNames()
         {
             return locations.Keys.ToArray();
         }
-        public void checkoutLocation(string location)
+        public bool checkoutLocation(string location)
         {
             if (this.isConnected)
             {
@@ -288,9 +294,11 @@ namespace TeviRandomizer
                 catch
                 {
                     Debug.LogError("location not found in Location Dictionary");
-                    return;
+                    return false;
                 }
+                return true;
             }
+            return false;
         }
 
         public void sendGOAL()
