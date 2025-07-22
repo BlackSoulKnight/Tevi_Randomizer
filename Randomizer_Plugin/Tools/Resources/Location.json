@@ -4710,7 +4710,15 @@
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_LINEBOMB && ITEM_WALLJUMP && ITEM_AirDash",
+                "Method": "ITEM_LINEBOMB && ITEM_WALLJUMP && ITEM_AirDash && ITEM_HIJUMP",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_LINEBOMB && ITEM_WALLJUMP && RabbitWalljump",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_LINEBOMB && ITEM_WALLJUMP && ITEM_AirDash && Rabbitjump",
                 "Difficulty": 0
             }
         ]
