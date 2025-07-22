@@ -8,6 +8,7 @@ using Map;
 using Newtonsoft.Json;
 using QFSW.QC;
 using Rewired.ComponentControls.Data;
+using Steamworks;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -180,7 +181,7 @@ namespace TeviRandomizer
         static public void changeSystemText(string keyword, string text)
         {
             var t = new Traverse(typeof(Localize));
-            var library = t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, SystemText>>();
+            var library = t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>();
             if (library != null)
             {
                 if (!library.ContainsKey(keyword))
@@ -649,7 +650,8 @@ namespace TeviRandomizer
         public static void addOrbStatus(int amount = 0)
         {
             if (SaveManager.Instance.GetOrb() < 3)
-                SaveManager.Instance.SetOrb((byte)(SaveManager.Instance.GetOrb() + amount));
+                //SaveManager.Instance.SetOrb((byte)(SaveManager.Instance.GetOrb() + amount));
+                SaveManager.Instance.SetOrb(3);
 
             if (SaveManager.Instance.GetOrb() >= 3)
             {
@@ -1016,7 +1018,8 @@ namespace TeviRandomizer
                 ___FrontFadeTarget = 0;
         }
 
-        //test Feature
+        //test Features
+        //Throw Clusterbomb without Crossbombs
         [HarmonyPatch(typeof(ObjectPhy), "UseBomb")]
         [HarmonyPostfix]
         static void useAreaBomb(ref ObjectPhy __instance, ref CharacterBase ___cb_perfer,ref bool __result)
@@ -1026,7 +1029,7 @@ namespace TeviRandomizer
 
                 ___cb_perfer.playerc_perfer.meter_bomb.EnableMe(0f);
                 __instance.SetCounter(0, 1f);
-                __instance.SetCounter(1, 0.475f);
+                __instance.SetCounter(1, 0.48f);
                 __instance.SetCounter(5, 0f);
                 __instance.SetCounter(18, 0f);
                 ___cb_perfer.spranim_prefer.ToggleOther(0);
@@ -1035,6 +1038,42 @@ namespace TeviRandomizer
                 __result = true;
             }
         }
+
+        //Use Sable and Celia without chargeshots
+        [HarmonyPatch(typeof(CharacterPhy), "GetRangedControls")]
+        [HarmonyPostfix]
+        static void disableChargeShots(ref bool ___mustNormal,ref CharacterPhy __instance)
+        {
+            
+            if(SaveManager.Instance.GetItem(ItemList.Type.ITEM_ORB) < (RandomizerPlugin.customFlags[(short)CustomFlags.CebleStart]? 1:2))
+                ___mustNormal = true;
+
+        }
+
+        [HarmonyPatch(typeof(OrbBall),"NormalShot")]
+        [HarmonyPostfix]
+        static void reduceChargeHeld(ref bool __result,ref CharacterPhy ___owner_phy)
+        {
+            if (__result)
+            {
+                float num10 = 9f;
+                if (SaveManager.Instance.GetBadgeEquipped(ItemList.Type.BADGE_NormalShotReducerA))
+                {
+                    num10 -= 3.15f;
+                }
+                if (SaveManager.Instance.GetBadgeEquipped(ItemList.Type.BADGE_NormalShotReducerB))
+                {
+                    num10 -= 4.05f;
+                }
+                if (___owner_phy.charge - num10 <= 0 && ___owner_phy.chargeheld > 0)
+                {
+                    ___owner_phy.charge += 100;
+                    ___owner_phy.chargeheld--;
+                }
+            }
+        }
+
+
 
         [HarmonyPatch(typeof(CharacterBase), "BulletHurtPlayer")]
         [HarmonyPostfix]
