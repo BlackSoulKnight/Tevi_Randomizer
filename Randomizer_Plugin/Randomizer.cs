@@ -70,6 +70,7 @@ namespace TeviRandomizer
                         case "BarrierSkip":
                             break;
                         case "ItemUse":
+                        case "NotTeleporter":
                         case "Boss":
                         case "":
                         case "True":
