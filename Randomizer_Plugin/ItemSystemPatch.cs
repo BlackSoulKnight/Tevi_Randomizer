@@ -83,6 +83,7 @@ namespace TeviRandomizer
                         RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(type), desc);
                         SaveManager.Instance.SetStackableItem(type, value, true); // do i need this?
                         TeleporterRando.setTeleporterIcon(value);
+                        value = 255;
                         return true;
                 }
             }
