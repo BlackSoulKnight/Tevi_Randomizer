@@ -1508,7 +1508,7 @@
         "slotId": 0,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) || CKick",
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -6324,19 +6324,19 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_HIJUMP",
+                "Method": "ITEM_HIJUMP && ITEM_Rotater",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_JETPACK",
+                "Method": "ITEM_JETPACK && ITEM_Rotater",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_DOUBLEJUMP",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_Rotater",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_AirDash && ITEM_WALLJUMP",
+                "Method": "ITEM_AirDash && ITEM_WALLJUMP && ITEM_Rotater",
                 "Difficulty": 0
             }
         ]
