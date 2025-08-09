@@ -3521,11 +3521,11 @@
                 },
                 {
                     "Exit": "Teleporter Plague Forest",
-                    "Method": "Teleporter 11"
+                    "Method": "Teleporter 11 && (ITEM_AntiDecay || ITEM_ZCrystal || ITEM_MASK)"
                 },
                 {
                     "Exit": "Teleporter Ulvosa",
-                    "Method": "Teleporter 12"
+                    "Method": "Teleporter 12 && (ITEM_AntiDecay || ITEM_ZCrystal || ITEM_MASK)"
                 },
                 {
                     "Exit": "Teleporter Verglas Village",
@@ -3553,7 +3553,7 @@
                 },
                 {
                     "Exit": "Teleporter Lava Cave",
-                    "Method": "Teleporter 19"
+                    "Method": "Teleporter 19 && ITEM_TempRing"
                 },
                 {
                     "Exit": "Teleporter DreamKeeper Outside",
@@ -3589,7 +3589,7 @@
                 },
                 {
                     "Exit": "Teleporter Sinner's Oath",
-                    "Method": "Teleporter 28"
+                    "Method": "Teleporter 28 && ITEM_TempRing"
                 },
                 {
                     "Exit": "Teleporter Relicts",
@@ -3609,11 +3609,11 @@
                 },
                 {
                     "Exit": "Teleporter Gallery East",
-                    "Method": "Teleporter 33"
+                    "Method": "Teleporter 33 && (ITEM_AntiDecay || ITEM_ZCrystal)"
                 },
                 {
                     "Exit": "Teleporter Frank Boss",
-                    "Method": "Teleporter 34"
+                    "Method": "Teleporter 34 && (ITEM_AntiDecay || ITEM_ZCrystal)"
                 },
                 {
                     "Exit": "Teleporter BlushWood",
