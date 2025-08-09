@@ -389,6 +389,14 @@ namespace TeviRandomizer
             }
         }
 
+        //Unlock all custome modes
+        [HarmonyPatch(typeof(SettingManager), "GetAchievementUnlockedCount")]
+        [HarmonyPostfix]
+        static void removeCounter(ref int __result)
+        {
+            __result = 9999999;
+        }
+
         //Increase Memine Race Timer
         [HarmonyPatch(typeof(GemaMissionMode),"StartMission")]
         [HarmonyPostfix]
