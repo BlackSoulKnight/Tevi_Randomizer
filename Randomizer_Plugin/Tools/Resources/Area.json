@@ -1383,20 +1383,8 @@
             "Name": "Dreamless Depths",
             "Connections": [
                 {
-                    "Exit": "Dreamless Depths 2",
-                    "Method": "ITEM_HIJUMP && ITEM_KNIFE"
-                },
-                {
-                    "Exit": "Dreamless Depths 2",
-                    "Method": "ITEM_WALLJUMP"
-                },
-                {
-                    "Exit": "Dreamless Depths 2",
-                    "Method": "ITEM_JETPACK && ITEM_KNIFE"
-                },
-                {
-                    "Exit": "Dreamless Depths 2",
-                    "Method": "ITEM_DOUBLEJUMP && ITEM_KNIFE"
+                    "Exit": "Teleporter Deep Dream",
+                    "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)"
                 }
             ]
         },
@@ -3339,8 +3327,20 @@
             "Name": "Teleporter Deep Dream",
             "Connections": [
                 {
-                    "Exit": "Dreamless Depths",
-                    "Method": "ITEM_SLIDE"
+                    "Exit": "Dreamless Depths 2",
+                    "Method": "ITEM_HIJUMP && ITEM_KNIFE && ITEM_SLIDE"
+                },
+                {
+                    "Exit": "Dreamless Depths 2",
+                    "Method": "ITEM_WALLJUMP && ITEM_SLIDE"
+                },
+                {
+                    "Exit": "Dreamless Depths 2",
+                    "Method": "ITEM_JETPACK && ITEM_KNIFE && ITEM_SLIDE"
+                },
+                {
+                    "Exit": "Dreamless Depths 2",
+                    "Method": "ITEM_DOUBLEJUMP && ITEM_KNIFE && ITEM_SLIDE"
                 }
             ]
         },

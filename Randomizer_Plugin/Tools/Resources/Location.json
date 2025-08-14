@@ -677,6 +677,10 @@
             {
                 "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK 2",
                 "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_HIJUMP && ITEM_JETPACK 3",
+                "Difficulty": 0
             }
         ]
     },
@@ -5879,7 +5883,7 @@
         "slotId": 21,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Method": "",
                 "Difficulty": 0
             }
         ]
@@ -6586,6 +6590,10 @@
             },
             {
                 "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash && (ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Difficulty": 0
+            },
+                        {
+                "Method": "ITEM_DOUBLEJUMP && ITEM_JETPACK 2 && ITEM_AirDash && (ITEM_LINEBOMB || ITEM_AREABOMB)",
                 "Difficulty": 0
             },
             {

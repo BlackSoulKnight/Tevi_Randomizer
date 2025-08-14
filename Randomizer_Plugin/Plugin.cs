@@ -914,11 +914,11 @@ namespace TeviRandomizer
             }
             else if (__instance.orbUsing == Character.OrbType.BLACK && SaveManager.Instance.GetItem(ItemList.Type.I19) == 0)
             {
-                return false;
+                //return false;
             }
             else if (__instance.orbUsing == Character.OrbType.WHITE && SaveManager.Instance.GetItem(ItemList.Type.I20) == 0)
             {
-                return false;
+                //return false;
             }
             return true;
         }
