@@ -1,27 +1,25 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using BepInEx;
-using HarmonyLib;
-using TMPro;
-using Game;
-using Rewired;
-
-using UnityEngine;
-
+﻿using BepInEx;
 using Bullet;
-using QFSW.QC;
-using UnityEngine.UIElements;
+using Game;
+using HarmonyLib;
 using JetBrains.Annotations;
-using UnityEngine.EventSystems;
+using QFSW.QC;
+using Rewired;
 using RewiredConsts;
+using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Net;
-using UnityEngine.UI;
+using TMPro;
+using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SocialPlatforms;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 
 
-namespace TeviRandomizer
+namespace TeviRandomizer.UI
 {
 
 
@@ -62,7 +60,7 @@ namespace TeviRandomizer
             //newSelection.AddComponent<GemaMainMenuSelectionSlot>();
             //var prefab = AssetBundle.LoadFromFile(path).LoadAsset<GameObject>("Select Slot");
 
-            GameObject newSelection = MonoBehaviour.Instantiate(GameObject.Find("Select Slot"), GameObject.Find("Selections").transform);
+            GameObject newSelection = UnityEngine.Object.Instantiate(GameObject.Find("Select Slot"), GameObject.Find("Selections").transform);
             newSelection.GetComponentInChildren<TextMeshProUGUI>().text = "Randomizer";
 
             GemaMainMenuSelectionSlot[] s = new GemaMainMenuSelectionSlot[___selections.Length +1];
@@ -72,7 +70,7 @@ namespace TeviRandomizer
             menuSlot = (byte)(s.Length - 1);
 
 
-            randoSetting = MonoBehaviour.Instantiate(RandoUIPrefab, GameObject.Find("Titile Screen Manager").transform);
+            randoSetting = UnityEngine.Object.Instantiate(RandoUIPrefab, GameObject.Find("Titile Screen Manager").transform);
             randoSetting.AddComponent<RandomizerUI>();
             randoSetting.SetActive(false);
 
@@ -92,7 +90,7 @@ namespace TeviRandomizer
                     textField = new GameObject();
                     textField.name = "LocationCheck";
                     textField.transform.parent = GameObject.Find("Titile Screen Manager").transform;
-                    TextMeshProUGUI text = textField.AddComponent<TMPro.TextMeshProUGUI>();
+                    TextMeshProUGUI text = textField.AddComponent<TextMeshProUGUI>();
                     textField.AddComponent<CanvasGroup>();
                     textField.transform.position = new Vector3(-4.5295f, 4.3716f, 1);
                     textField.transform.localScale = Vector3.one;
@@ -102,7 +100,7 @@ namespace TeviRandomizer
                     text.fontSizeMax = 16;
                     
                 }
-                TextMeshProUGUI text2 = textField.GetComponent<TMPro.TextMeshProUGUI>();
+                TextMeshProUGUI text2 = textField.GetComponent<TextMeshProUGUI>();
                 text2.color = Color.red;
                 
                 text2.text = "TEST";
@@ -200,7 +198,7 @@ namespace TeviRandomizer
                 }
                 else
                 {
-                    text = ((Difficulty)(slider.GetComponent<UnityEngine.UI.Slider>().value)).ToString(); ;
+                    text = ((Difficulty)slider.GetComponent<UnityEngine.UI.Slider>().value).ToString(); ;
                 }
 
                 sliderNumber.GetComponent<TextMeshProUGUI>().text = text;
@@ -228,7 +226,7 @@ namespace TeviRandomizer
         {
             
             player = ReInput.players.GetPlayer(0);
-            addAllOptions(this.gameObject);
+            addAllOptions(gameObject);
             Gears = new Transform[2];
             Gears[0]=gameObject.transform.Find("Gear 1");
             Gears[1]=gameObject.transform.Find("Gear 2");
@@ -295,7 +293,6 @@ namespace TeviRandomizer
                     case "TextInput":
                         eS3File.Save(entry.Key, ((TMP_InputField)entry.Value).text);
                         break;
-
                 }
 
             }
@@ -323,7 +320,6 @@ namespace TeviRandomizer
                         case "TextInput":
                             ((TMP_InputField)entry.Value).text = eS3File.Load<string>(entry.Key);
                             break;
-
                     }
 
                 }
@@ -370,8 +366,14 @@ namespace TeviRandomizer
                     });
                     UI.settings.Add(t.name, slider);
                 }
-                
-                else if(t.name.Contains("TextInput")){
+                else if (t.name.Contains("Selector"))
+                {
+                    UI.settings.Add(t.name, ("option name",0, (int)t.transform.GetChild(3).transform.childCount));
+                    t.transform.GetChild(2).GetChild(1).GetChild(1).GetChild(0).GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate { moveSelector(-1, t);});
+                    t.transform.GetChild(2).GetChild(1).GetChild(1).GetChild(1).GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate { moveSelector(1, t);});
+
+                }
+                else if (t.name.Contains("TextInput")) {
                     TMP_InputField inputField = t.GetComponentInChildren<TMP_InputField>();
                     inputField.onSubmit.AddListener(delegate
                     {
@@ -414,7 +416,7 @@ namespace TeviRandomizer
 
             GameObject s,r,g;
             s = gameObject.transform.Find("Seed").gameObject;
-            UI.settings.Add("Seed", s.GetComponentInChildren<TMPro.TMP_InputField>());
+            UI.settings.Add("Seed", s.GetComponentInChildren<TMP_InputField>());
 
 
             s.GetComponentInChildren<TMP_InputField>().onSubmit.AddListener(delegate
@@ -450,7 +452,7 @@ namespace TeviRandomizer
             {
                 var child = tabs.GetChild(i);
                 child.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate {
-                    this.swtichTab(int.Parse(child.name));
+                    switchTab(int.Parse(child.name));
                 });
             }
 
@@ -545,11 +547,28 @@ namespace TeviRandomizer
 
         }
 
+        private void moveSelector(int directionRight,GameObject obj)
+        {
+            Debug.Log(obj.name);
+            (string, int, int) values = ((string, int, int))UI.settings[obj.name];
+            obj.transform.GetChild(3).GetChild(values.Item2).gameObject.SetActive(false);
+            if (values.Item2 == 0 && directionRight < 0)
+                values.Item2 = values.Item3 - 1;
+            else if (values.Item2 == values.Item3 - 1 && directionRight > 0)
+                values.Item2 = 0;
+            else
+                values.Item2 += directionRight;
+            obj.transform.GetChild(3).GetChild(values.Item2).gameObject.SetActive(true);
+
+            values.Item1 = obj.transform.GetChild(3).GetChild(values.Item2).name;
+            UI.settings[obj.name] = values;
+        }
+
         private void setVisibleTab(int tab,bool state = true)
         {
             gameObject.transform.GetChild(4).GetChild(tab).gameObject.SetActive(state);
         }
-        public void swtichTab(int tab)
+        public void switchTab(int tab)
         {
             tab -= 1;
             if (tab >= gameObject.transform.GetChild(4).childCount || tab <0) return;
@@ -604,7 +623,7 @@ namespace TeviRandomizer
             {
                 if (Gears[i] != null)
                 {
-                    Gears[i].Rotate(0, 0, 0.01f*((float)Math.Pow(-1,i%2)));
+                    Gears[i].Rotate(0, 0, 0.01f*(float)Math.Pow(-1,i%2));
                 }
             }
             if(isEditing)
@@ -619,7 +638,7 @@ namespace TeviRandomizer
                     if (slide != null)
                     {
                         float val = InputAxisManager.Instance.GetXAxisRepeat();
-                        if (slide.value == 0 && val < 0)
+                        if (slide.minValue == slide.value && val < 0)
                             slide.value = slide.maxValue;
                         else if (slide.value == slide.maxValue && val > 0)
                             slide.value = 0;
@@ -635,7 +654,32 @@ namespace TeviRandomizer
 
                     }
                 }
-                if(finishEditing)
+                if (options[tab][side][selected].name.Contains("Selector"))
+                {
+                    
+
+                    float val = InputAxisManager.Instance.GetXAxisRepeat();
+                    (string,int,int) values = ((string, int, int))UI.settings[options[tab][side][selected].name];
+                    options[tab][side][selected].transform.GetChild(3).GetChild(values.Item2).gameObject.SetActive(false);
+                    if (values.Item2 == 0 && val < 0)
+                        values.Item2 = values.Item3-1;
+                    else if (values.Item2 == values.Item3-1 && val > 0)
+                        values.Item2 = 0;
+                    else
+                        values.Item2 += (int)val;
+                    options[tab][side][selected].transform.GetChild(3).GetChild(values.Item2).gameObject.SetActive(true);
+
+                    values.Item1 = options[tab][side][selected].transform.GetChild(3).GetChild(values.Item2).name;
+                    UI.settings[options[tab][side][selected].name] = values;
+                    if (InputButtonManager.Instance.GetButton(13))
+                    {
+                        isEditing = false;
+                        options[tab][side][selected].transform.GetChild(2).GetChild(1).GetChild(1).gameObject.SetActive(true);
+                        options[tab][side][selected].transform.GetChild(2).GetChild(1).GetChild(2).gameObject.SetActive(false);
+                        GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce(text[0]);
+                    }
+                }
+                if (finishEditing)
                 {
                     isEditing = false;
                     GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce(text[0]);
@@ -662,11 +706,11 @@ namespace TeviRandomizer
             }
             if (InputButtonManager.Instance.GetButtonDown(3)) //LT
             {
-                swtichTab(tab);
+                switchTab(tab);
             }
             if (InputButtonManager.Instance.GetButtonDown(4)) //LT
             {
-                swtichTab(tab + 2);
+                switchTab(tab + 2);
             }
             if (InputButtonManager.Instance.GetButtonDown(13))
             {
@@ -681,7 +725,7 @@ namespace TeviRandomizer
                 }
                 if (options[tab][side][selected].name.Contains("Seed"))
                 {
-                    TMPro.TMP_InputField input = options[tab][side][selected].GetComponentInChildren<TMP_InputField>();
+                    TMP_InputField input = options[tab][side][selected].GetComponentInChildren<TMP_InputField>();
                     if (input != null)
                     {
                         input.ActivateInputField();
@@ -691,7 +735,7 @@ namespace TeviRandomizer
                     //(Steamworks.SteamUtils.ShowGamepadTextInput(Steamworks.GamepadTextInputMode.Normal, Steamworks.GamepadTextInputLineMode.SingleLine, "Enter Seed", 16, ""))                    
                     return;
                 }
-                if (options[tab][side][selected].name.Contains("Slider"))
+                if (options[tab][side][selected].name.Contains("Slider") || options[tab][side][selected].name.Contains("Selector"))
                 {
                     isEditing = true;
                     options[tab][side][selected].transform.GetChild(2).GetChild(1).GetChild(1).gameObject.SetActive(false);

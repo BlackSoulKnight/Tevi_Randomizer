@@ -127,7 +127,7 @@ namespace TeviRandomizer
                 oldSlotData(success.SlotData);
             getOwnLocationData().Wait();
             getOwnTransitionData(success.SlotData["transitionData"]);
-            UI.checkApWorldLocationCheck = true;
+            UI.UI.checkApWorldLocationCheck = true;
             return true;
         }
 

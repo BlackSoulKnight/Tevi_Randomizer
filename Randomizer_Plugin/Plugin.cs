@@ -106,7 +106,7 @@ namespace TeviRandomizer
             Localize.GetLocalizeTextWithKeyword("", false);
             randomizer = Randomizer.Instance;
 
-            harmonyPatchInstance.PatchAll(typeof(UI));
+            harmonyPatchInstance.PatchAll(typeof(UI.UI));
             toggleRandomizerPlugin();
 
 
@@ -132,7 +132,7 @@ namespace TeviRandomizer
             if (randomizerEnabled)
             {
                 harmonyPatchInstance.UnpatchSelf();
-                harmonyPatchInstance.PatchAll(typeof(UI));
+                harmonyPatchInstance.PatchAll(typeof(UI.UI));
                 randomizerEnabled = false;
                 return false;
             }
@@ -282,6 +282,7 @@ namespace TeviRandomizer
             rando = new System.Random(seed.GetHashCode());
 
             randomizer.createSeed(rando);
+            //randomizer.createSeed(rando);
         }
 
 
