@@ -72,6 +72,7 @@ namespace TeviRandomizer
     {
 
         public const ItemList.Type PortalItem = ItemList.Type.I13;
+
         public enum EventID
         {
             IllusionPalace = 9999

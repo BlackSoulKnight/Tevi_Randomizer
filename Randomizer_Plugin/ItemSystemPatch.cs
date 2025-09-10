@@ -1,7 +1,9 @@
 ﻿using EventMode;
 using HarmonyLib;
 using Map;
+using Rewired.ComponentControls.Data;
 using Spine;
+using Steamworks;
 using Steamworks.Ugc;
 using System;
 using System.Linq;
@@ -318,11 +320,25 @@ namespace TeviRandomizer
             __instance.GetRoomWithPosition(data2.transform.position.x, data2.transform.position.y, out atRoomX, out atRoomY);
             Debug.Log("Collecting : X = " + atRoomX + " , Y = " + atRoomY + " , Type : " + itemid);
 
-                HUDObtainedItem.Instance.GiveItem(itemid, data2.GetSlotID());
-                itemid = RandomizerPlugin.getRandomizedItem(data2.itemid, data2.GetSlotID());
+            HUDObtainedItem.Instance.GiveItem(itemid, data2.GetSlotID());
+            itemid = RandomizerPlugin.getRandomizedItem(data2.itemid, data2.GetSlotID());
 
 
-            if (itemid == ItemList.Type.STACKABLE_COG)
+			if (ArchipelagoInterface.Instance.isConnected && (itemid == ArchipelagoInterface.remoteItem || itemid == ArchipelagoInterface.remoteItemProgressive))
+			{
+                string itemName = ArchipelagoInterface.Instance.getLocItemName(data2.itemid, data2.GetSlotID());
+                ItemList.Type item;
+				if (Enum.TryParse(itemName, out item)) {
+                    itemid = item;
+                }
+                else
+                {
+                    FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.ITEM);
+                    data2.DisableMe();
+                    return false;
+                }
+			}
+			if (itemid == ItemList.Type.STACKABLE_COG)
             {
                 FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.ITEM);
 
@@ -359,10 +375,6 @@ namespace TeviRandomizer
             {
                 FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.ITEM);
             }
-            else if (ArchipelagoInterface.Instance.isConnected && (itemid == ArchipelagoInterface.remoteItem || itemid == ArchipelagoInterface.remoteItemProgressive))
-            {
-                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.ITEM);
-            }
             else
             {
                 Debug.LogWarning("[EventDetect] Invalid Item obtained!");
@@ -373,7 +385,7 @@ namespace TeviRandomizer
             return false;
         }
 
-        static readonly ItemList.Type[] newPins = {ArchipelagoInterface.remoteItemProgressive, ArchipelagoInterface.remoteItem, ItemList.Type.I19, ItemList.Type.I20, ItemList.Type.STACKABLE_COG };
+        static readonly ItemList.Type[] newPins = {ArchipelagoInterface.remoteItemProgressive, ArchipelagoInterface.remoteItem, ItemList.Type.I19,RandomizerPlugin.PortalItem, ItemList.Type.I20, ItemList.Type.STACKABLE_COG };
 
         //autoPin Icons
         [HarmonyPatch(typeof(GemaItemExplorer),"StartMe")]
@@ -394,11 +406,75 @@ namespace TeviRandomizer
                 {
                     return;
                 }
-                if (newPins.Contains(nearestType))
+                nearestType = RandomizerPlugin.getRandomizedItem(tile.itemid, tile.GetSlotID());
+				if (ArchipelagoInterface.Instance.isConnected && (nearestType == ArchipelagoInterface.remoteItem || nearestType == ArchipelagoInterface.remoteItemProgressive))
+				{
+					Icon icon = Icon.PIN9;
+					string itemName = ArchipelagoInterface.Instance.getLocItemName(tile.itemid, tile.GetSlotID());
+					ItemList.Type item;
+					if (Enum.TryParse(itemName, out item))
+					{
+						nearestType = item;
+						if (nearestType.ToString().Contains("STACKABLE"))
+						{
+							icon = Icon.PIN2;
+							if (WorldManager.Instance.CurrentRoomArea == AreaType.SNOWCAVE)
+							{
+								if (nearestType == ItemList.Type.STACKABLE_EP && WorldManager.Instance.CurrentRoomX == 20 && WorldManager.Instance.CurrentRoomY == 13)
+								{
+									icon = Icon.OFF;
+								}
+								if (nearestType == ItemList.Type.STACKABLE_EP && WorldManager.Instance.CurrentRoomX == 20 && WorldManager.Instance.CurrentRoomY == 14)
+								{
+									icon = Icon.OFF;
+								}
+							}
+							if (WorldManager.Instance.CurrentRoomArea == AreaType.CLIFF && nearestType == ItemList.Type.STACKABLE_MP && (WorldManager.Instance.CurrentRoomType == RoomType.YONLY || WorldManager.Instance.CurrentRoomType == RoomType.YONLY2))
+							{
+								icon = Icon.OFF;
+							}
+						}
+						else if (nearestType.ToString().Contains("BADGE"))
+						{
+							icon = Icon.PIN1;
+							if (WorldManager.Instance.CurrentRoomArea == AreaType.BLUSHFOREST)
+							{
+								if (WorldManager.Instance.CurrentRoomX == 12 && WorldManager.Instance.CurrentRoomY == 13)
+								{
+									icon = Icon.OFF;
+								}
+								if (WorldManager.Instance.CurrentRoomX == 12 && WorldManager.Instance.CurrentRoomY == 14)
+								{
+									icon = Icon.OFF;
+								}
+							}
+							if (WorldManager.Instance.CurrentRoomArea == AreaType.A_GALLERY)
+							{
+								if (WorldManager.Instance.CurrentRoomX == 28 && WorldManager.Instance.CurrentRoomY == 5)
+								{
+									icon = Icon.OFF;
+								}
+								if (WorldManager.Instance.CurrentRoomX == 28 && WorldManager.Instance.CurrentRoomY == 6)
+								{
+									icon = Icon.OFF;
+								}
+							}
+						}
+						else if (nearestType.ToString().Contains("ITEM") || nearestType.ToString().Contains("QUEST") || nearestType == ItemList.Type.STACKABLE_BAG || nearestType.ToString().Contains("Useable"))
+						{
+							icon = Icon.PIN9;
+						}
+
+					}
+					FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, WorldManager.Instance.CurrentRoomX, WorldManager.Instance.CurrentRoomY, icon);
+
+				}
+				else if (newPins.Contains(nearestType))
                 {
                     Debug.Log("[GemaItemExplorer] Change icon to item : " + Icon.PIN9);
                     FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, WorldManager.Instance.CurrentRoomX, WorldManager.Instance.CurrentRoomY, Icon.PIN9);
                 }
+
             }
             return;
         }
