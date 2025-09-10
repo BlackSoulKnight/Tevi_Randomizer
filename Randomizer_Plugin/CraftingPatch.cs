@@ -130,7 +130,7 @@ namespace TeviRandomizer
                     ___selectedName.color = ___craftList[___selected].GetColor();
                     ___selectedName.text = ___craftList[___selected].GetText();
                 }
-                if(data == ItemList.Type.I13)
+                if(data == RandomizerPlugin.PortalItem)
                 {
                     ___selectedName.text = (string)ArchipelagoInterface.Instance.TeviToAPName[RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{itemType} #{slot}"]]];
                     ___selectedDesc.text = $"Unlocks the {___selectedName.text}";
@@ -203,7 +203,7 @@ namespace TeviRandomizer
                                     ___selectedDesc.text = ___selectedDesc.text.Substring(0, num2);
                                 }
                             }
-                            if (item == ItemList.Type.I13)
+                            if (item == RandomizerPlugin.PortalItem)
                             {
                                 ___selectedDesc.text = "Unlock Teleporter";
                             }
@@ -449,7 +449,7 @@ namespace TeviRandomizer
                         }
                     }
                 }
-                if(data == ItemList.Type.I13)
+                if(data == RandomizerPlugin.PortalItem)
                 {
                     itemName = (string)ArchipelagoInterface.Instance.TeviToAPName[RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{itype} #{1}"]]];
                 }
@@ -487,7 +487,7 @@ namespace TeviRandomizer
                 string itemName = ArchipelagoInterface.Instance.getLocItemName(itype, 1);
                 if (Enum.TryParse(itemName, out item))
                 {
-                    if (item == ItemList.Type.I13)
+                    if (item == RandomizerPlugin.PortalItem)
                     {
                         itemName = (string)ArchipelagoInterface.Instance.TeviToAPName[RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{itype} #{1}"]]];
                     }

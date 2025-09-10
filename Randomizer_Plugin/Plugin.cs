@@ -20,6 +20,8 @@ using UnityEngine;
 namespace TeviRandomizer
 {
 
+    
+
     public enum Upgradable
     {
         ITEM_KNIFE = 10,
@@ -69,7 +71,7 @@ namespace TeviRandomizer
     public class RandomizerPlugin : BaseUnityPlugin
     {
 
-
+        public const ItemList.Type PortalItem = ItemList.Type.I13;
         public enum EventID
         {
             IllusionPalace = 9999
@@ -301,7 +303,7 @@ namespace TeviRandomizer
                     {
                     //Debug.LogWarning($"Could not find {itemid.ToString()} {slotid}");
                     if (ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APLocationName[$"{item} #{slot}"]).Contains("Teleporter"))
-                        data = ItemList.Type.I13;
+                        data = PortalItem;
                     else
                         data = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), item);
                     }
@@ -316,7 +318,7 @@ namespace TeviRandomizer
                 {
                     //Debug.LogWarning($"Could not find {itemid.ToString()} {slotid}");
                     if (LocationTracker.APLocationName.ContainsKey($"{item} #{slot}") && __itemData.ContainsKey(LocationTracker.APLocationName[$"{item} #{slot}"]) && __itemData[LocationTracker.APLocationName[$"{item} #{slot}"]].Contains("Teleporter"))
-                        data = ItemList.Type.I13;
+                        data = PortalItem;
                     else
                         data = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), item);
                 }

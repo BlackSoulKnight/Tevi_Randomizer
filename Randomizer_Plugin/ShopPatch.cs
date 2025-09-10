@@ -538,7 +538,7 @@ namespace TeviRandomizer
                         // SetItem does not have a function to add a Location check to the list
                         LocationTracker.addItemToList(___itemslots[___Selected].GetItem(), slot);
 
-                        if (data == ItemList.Type.I13)
+                        if (data == RandomizerPlugin.PortalItem)
                         {
                             string itemName = RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{___itemslots[___Selected].GetItem()} #{slot}"]];
                             byte value = byte.Parse(itemName.Split(["Teleporter "], StringSplitOptions.RemoveEmptyEntries)[0]);
@@ -661,7 +661,7 @@ namespace TeviRandomizer
                 }
                 texts[0].text = itemName;
             }
-            if (___itype == ItemList.Type.I13)
+            if (___itype == RandomizerPlugin.PortalItem)
             {
                 string itemName = (string)ArchipelagoInterface.Instance.TeviToAPName[RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{item} #{slot}"]]];
                 texts[0].text = itemName;

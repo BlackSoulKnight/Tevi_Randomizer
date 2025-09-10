@@ -15,7 +15,7 @@ namespace TeviRandomizer
     class ItemSystemPatch()
     {
         // Items that need to be handled differently
-        static ItemList.Type[] itemExceptions = { ItemList.Type.I13 };
+        static ItemList.Type[] itemExceptions = { RandomizerPlugin.PortalItem };
 
         //Hotswap item recieved
         [HarmonyPatch(typeof(HUDObtainedItem), "GiveItem")]
@@ -59,7 +59,7 @@ namespace TeviRandomizer
                 type = data;
                 itemName = RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{original} #{value}"]];
 
-                if (type == ItemList.Type.I13)
+                if (type == RandomizerPlugin.PortalItem)
                 {
                     value = byte.Parse(itemName.Split(["Teleporter "], StringSplitOptions.RemoveEmptyEntries)[0]);
                     itemName = (string)ArchipelagoInterface.Instance.TeviToAPName[itemName];
@@ -77,7 +77,7 @@ namespace TeviRandomizer
             {
                 switch (type)
                 {
-                    case ItemList.Type.I13:
+                    case RandomizerPlugin.PortalItem:
                         desc = $"{itemName} has been Unlocked.";
                         RandomizerPlugin.changeSystemText("ITEMNAME." + GemaItemManager.Instance.GetItemString(type), itemName);
                         RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(type), desc);
@@ -198,7 +198,7 @@ namespace TeviRandomizer
             {
                 switch (item)
                 {
-                    case ItemList.Type.I13:
+                    case RandomizerPlugin.PortalItem:
                         return false;
                 }
             }

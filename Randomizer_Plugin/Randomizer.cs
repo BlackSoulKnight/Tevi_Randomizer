@@ -26,7 +26,7 @@ namespace TeviRandomizer
 
         public enum Progression_Items : int
         {
-            I13 = ItemList.Type.I13,
+            I13 = RandomizerPlugin.PortalItem,
             I19 = ItemList.Type.I19,
             I20 = ItemList.Type.I20,
             ITEM_KNIFE = ItemList.Type.ITEM_KNIFE,
@@ -799,7 +799,7 @@ namespace TeviRandomizer
 
                     if (item.Contains("Teleporter"))
                     {
-                        itemId = (int)ItemList.Type.I13;
+                        itemId = (int)RandomizerPlugin.PortalItem;
 
                         slotId = int.Parse(item.Split(' ')[1]);
 
@@ -978,7 +978,7 @@ namespace TeviRandomizer
 
                     if (item.Contains("Teleporter"))
                     {
-                        itemId = (int)ItemList.Type.I13;
+                        itemId = (int)RandomizerPlugin.PortalItem;
                         
                          slotId = int.Parse(item.Split(' ')[1]);
 
@@ -1228,7 +1228,7 @@ namespace TeviRandomizer
                         string item;
                         if (loc.newItem > 0)
                         {
-                            if (((ItemList.Type)loc.newItem) == ItemList.Type.I13)
+                            if (((ItemList.Type)loc.newItem) == RandomizerPlugin.PortalItem)
                             {
                                 item = $"Teleporter {loc.newSlotId}";
                             }
@@ -1451,7 +1451,7 @@ namespace TeviRandomizer
                 string item2 = ((ItemList.Type)loc.newItem).ToString();
                 try
                 {
-                    if (item2 == ItemList.Type.I13.ToString())
+                    if (item2 == RandomizerPlugin.PortalItem.ToString())
                     {
                         data.Add(item1, $"Teleporter {loc.newSlotId}");
                     }

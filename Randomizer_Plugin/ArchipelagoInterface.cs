@@ -406,7 +406,7 @@ namespace TeviRandomizer
                     if(itemID >= 500 && itemID <= 536)
                     {
                         value = (byte)(itemID - 500);
-                        itemID = (byte)ItemList.Type.I13;
+                        itemID = (byte)RandomizerPlugin.PortalItem;
                     }
                     teviItem = (ItemList.Type)itemID;
                     HUDObtainedItem.Instance.GiveItem(teviItem,value, true);
