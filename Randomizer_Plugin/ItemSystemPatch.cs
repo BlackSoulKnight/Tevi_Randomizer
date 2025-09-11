@@ -1,16 +1,10 @@
 ﻿using EventMode;
 using HarmonyLib;
 using Map;
-using Rewired.ComponentControls.Data;
-using Spine;
-using Steamworks;
-using Steamworks.Ugc;
 using System;
 using System.Linq;
-using System.Security.Cryptography;
-using System.Xml.Linq;
 using UnityEngine;
-using UnityEngine.Tilemaps;
+
 
 namespace TeviRandomizer
 {
@@ -477,6 +471,66 @@ namespace TeviRandomizer
 
             }
             return;
+        }
+
+
+        //ResourceCollection
+
+        private enum collectResourceType
+        {
+            NONE = 0,
+            BLOCK = 1,
+            ENEMY = 2,
+            EVENT = 3,
+        }
+        private static collectResourceType collectType;
+
+        [HarmonyPatch(typeof(WorldManager), "DestroyTileInArea")]
+        [HarmonyPrefix]
+        static void checkDestroyedBlock() => collectType = collectResourceType.BLOCK;
+        [HarmonyPatch(typeof(WorldManager), "DestroyTileInArea")]
+        [HarmonyPostfix]
+        static void uncheckDestroyedBlock() => collectType = collectResourceType.NONE;
+
+        [HarmonyPatch(typeof(enemyController), "DeafeatEnemy")]
+        [HarmonyPostfix]
+        static void checkKilledEnemy() => collectType = collectResourceType.ENEMY;
+
+        [HarmonyPatch(typeof(enemyController), "DeafeatEnemy")]
+        [HarmonyPostfix]
+        static void uncheckKilledEnemy() => collectType = collectResourceType.NONE;
+
+        [HarmonyPatch(typeof(CollectManager),"CreateCollect")]
+        [HarmonyPrefix]
+        static bool collectBlock(ref Vector3 position,ref ItemList.Resource resource)
+        {
+            switch (collectType)
+            {
+                case collectResourceType.BLOCK:
+                    int blockPos = Utility.PosToTileX(position.x) * 1000 + Utility.PosToTileY(position.y) * -1;
+                    Debug.Log($"Block Destroyed at {blockPos}");
+                    if (resource == ItemList.Resource.UPGRADE)
+                        return false;
+                    return true;
+                case collectResourceType.ENEMY:
+                    Debug.Log($"Upgrade collected from killing mobs at Area:{WorldManager.Instance.Area}");
+                    break;
+                case collectResourceType.EVENT:
+                case collectResourceType.NONE:
+                default:
+                    return true;
+            }
+            return false;
+        }
+        [HarmonyPatch(typeof(SaveManager), "SetEnemyDefeatedArea")]
+        [HarmonyPrefix]
+        static void killEnemy(ref byte value)
+        {
+            
+            //magic number copied from base game @enemyController -> SaveManager.Instance.SetEnemyDefeatedArea(WorldManager.Instance.Area, 200);
+            if (value == 200)
+            {
+            }
         }
     }
 
