@@ -744,6 +744,7 @@ namespace TeviRandomizer
             }
             if (traverseMode == "Teleporter")
             {
+                RandomizerPlugin.customFlags[(int)(CustomFlags.TeleporterRando)] = true;
                 startarea.addConnection(areas.Find(x => x.Name == "TeleportHub"), "");
                 foreach (Area area in transitions)
                 {
@@ -923,6 +924,7 @@ namespace TeviRandomizer
             }
             if (traverseMode == "Teleporter")
             {
+                    RandomizerPlugin.customFlags[(int)(CustomFlags.TeleporterRando)] = true;
                 startarea.addConnection(areas.Find(x => x.Name == "TeleportHub"), "");
                 foreach (Area area in transitions)
                 {
