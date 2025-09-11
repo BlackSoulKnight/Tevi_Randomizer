@@ -1,0 +1,63 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "Desert Base Entrance",
+        "LocationName": "Desert Base - Money Room X: 18 Y: 13 #0",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_DAGGER",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Desert Base Entrance",
+        "LocationName": "Desert Base - Money Room X: 18 Y: 13 #1",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_DAGGER",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Desert Base Entrance",
+        "LocationName": "Desert Base - Money Room X: 14 Y: 11 #0",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_DAGGER",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Desert Base Entrance",
+        "LocationName": "Desert Base - Money Room X: 14 Y: 11 #1",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_DAGGER",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Desert Base",
+        "LocationName": "Desert Base - Room X: Y: #1",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB || ITEM_AREABOMB",
+                "Difficulty": 0
+            }
+        ]
+    }
+
+]
