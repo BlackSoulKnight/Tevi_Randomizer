@@ -158,6 +158,7 @@ namespace TeviRandomizer
                 harmonyPatchInstance.PatchAll(typeof(BossPatch));
                 harmonyPatchInstance.PatchAll(typeof(Story_Mode.StoryEventPatch));
                 harmonyPatchInstance.PatchAll(typeof(BaseGameFixes));
+                harmonyPatchInstance.PatchAll(typeof(PlayerCharacterPatch));
                 randomizerEnabled = true;
                 return true;
             }
@@ -389,7 +390,7 @@ namespace TeviRandomizer
         {
             if (ArchipelagoInterface.Instance.isConnected)
             {
-                ArchipelagoInterface.Instance.deathLinkTrigger();
+                ArchipelagoInterface.Instance.triggerDeathLink();
             }
         }
 

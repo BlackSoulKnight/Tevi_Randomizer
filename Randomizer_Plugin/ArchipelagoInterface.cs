@@ -220,7 +220,7 @@ namespace TeviRandomizer
         }
 
         public string causeOfDeath = "Rabbit Sleepy";
-        public void deathLinkTrigger()
+        public void triggerDeathLink()
         {
             if (deathLink == null) return;
             if (!deathLinkTriggered)
@@ -229,6 +229,10 @@ namespace TeviRandomizer
                 causeOfDeath = "Rabbit Sleepy";
             }
             deathLinkTriggered = false;
+        }
+        public bool isDeathLinkTriggered()
+        {
+            return deathLinkTriggered;
         }
 
         public void updateTransitionVisited(int[] transitionList)
