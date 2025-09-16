@@ -41,8 +41,8 @@
                     "Method": "BackFlip && Hard"
                 },
                 {
-                    "Exit": "Desert Base Upper Half",
-                    "Method": "(BackFlip || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash) && ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_KNIFE"
+                    "Exit": "Desert Base UnderScore",
+                    "Method": "(BackFlip || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash) && ITEM_KNIFE"
                 }
             ]
         },
@@ -52,6 +52,23 @@
                 {
                     "Exit": "Desert Base Main",
                     "Method": ""
+                },
+                {
+                    "Exit": "Desert Base UnderScore",
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_SLIDE"
+                }
+            ]
+        },
+        {
+            "Name": "Desert Base UnderScore",
+            "Connections": [
+                {
+                    "Exit": "Desert Base Entrance",
+                    "Method": "(ITEM_KNIFE && ITEM_SLIDE) || ITEM_LINEBOMB || ITEM_AREABOMB"
+                },
+                {
+                    "Exit": "Desert Base Upper Half",
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_SLIDE"
                 }
             ]
         }
@@ -1234,7 +1251,7 @@
                 },
                 {
                     "Exit": "Pre Swamp",
-                    "Method": "ITEM_SLIDE"
+                    "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "1703",
@@ -1686,7 +1703,7 @@
                 },
                 {
                     "Exit": "Catacombs Main",
-                    "Method": "(ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_SLIDE && (ITEM_JETPACK || ITEM_AirDash || ITEM_DOUBLEJUMP)"
+                    "Method": "(ITEM_LINEBOMB || ITEM_KNIFE) && (ITEM_JETPACK || ITEM_DOUBLEJUMP)"
                 }
             ]
         },
