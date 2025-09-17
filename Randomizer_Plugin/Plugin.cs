@@ -10,6 +10,7 @@ using QFSW.QC;
 using Rewired.ComponentControls.Data;
 using Steamworks;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -101,6 +102,26 @@ namespace TeviRandomizer
         static public Randomizer randomizer;
         static private bool randomizerEnabled = false;
         static private Harmony harmonyPatchInstance = new Harmony("Randomizer");
+
+        public IEnumerator screenshot(int seconds)
+        {
+            yield return new WaitForSeconds(seconds);
+            yield return new WaitForEndOfFrame();
+            Traverse t = Traverse.Create(GemaSuperSample.Instance);
+            var h = t.Field<RenderTexture>("rt").Value.height;
+            var w = t.Field<RenderTexture>("rt").Value.width;
+            Texture2D s = new Texture2D(w, h, UnityEngine.TextureFormat.ARGB32, false);
+            Rect r = new Rect(0, 0, w, h);
+            s.ReadPixels(r, 0, 0);
+            s.Apply();
+            byte[] b = s.EncodeToPNG();
+            Debug.Log(b.Length);
+            System.IO.File.WriteAllBytes(UnityEngine.Application.dataPath + "/test.png", b);
+        }
+        public void takeScreenshot(int seconds)
+        {
+            StartCoroutine(screenshot(seconds));
+        }
 
         private void Awake()
         {

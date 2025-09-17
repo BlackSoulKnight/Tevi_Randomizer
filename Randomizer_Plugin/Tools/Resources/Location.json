@@ -2590,7 +2590,7 @@
     {
         "Itemname": "STACKABLE_COG",
         "Location": "Forest Maze boss",
-        "LocationName": "Forest - Ribauld fight",
+        "LocationName": "Forest - Roleo fight",
         "slotId": 24,
         "Requirement": [
             {
@@ -6700,7 +6700,7 @@
             {
                 "Area": 28,
                 "X": 8,
-                "Y": 9
+                "Y": 8
             }
         ]
     },
@@ -7823,7 +7823,7 @@
             {
                 "Area": 26,
                 "X": 26,
-                "Y": 16
+                "Y": 10
             }
         ]
     },
@@ -10393,7 +10393,7 @@
         "LocationRegion": [
             {
                 "Area": 19,
-                "X": 7,
+                "X": 8,
                 "Y": 9
             }
         ]
@@ -10956,8 +10956,8 @@
     },
     {
         "Itemname": "BADGE_DoubleAirDash",
-        "Location": "Memine All",
-        "LocationName": "Memine All - Electric Wind",
+        "Location": "Thanatara Canyon",
+        "LocationName": "Memine Completion - Electric Wind",
         "slotId": 1,
         "Requirement": [
             {

@@ -492,24 +492,24 @@ namespace TeviRandomizer
         [HarmonyPostfix]
         static void uncheckDestroyedBlock() => collectType = collectResourceType.NONE;
 
-        [HarmonyPatch(typeof(enemyController), "DeafeatEnemy")]
+        [HarmonyPatch(typeof(enemyController), "DefeatEnemy")]
         [HarmonyPostfix]
         static void checkKilledEnemy() => collectType = collectResourceType.ENEMY;
 
-        [HarmonyPatch(typeof(enemyController), "DeafeatEnemy")]
+        [HarmonyPatch(typeof(enemyController), "DefeatEnemy")]
         [HarmonyPostfix]
         static void uncheckKilledEnemy() => collectType = collectResourceType.NONE;
 
         [HarmonyPatch(typeof(CollectManager),"CreateCollect")]
         [HarmonyPrefix]
-        static bool collectBlock(ref Vector3 position,ref ItemList.Resource resource)
+        static bool collectBlock(ref Vector3 position,ref ItemList.Resource r)
         {
             switch (collectType)
             {
                 case collectResourceType.BLOCK:
                     int blockPos = Utility.PosToTileX(position.x) * 1000 + Utility.PosToTileY(position.y) * -1;
                     Debug.Log($"Block Destroyed at {blockPos}");
-                    if (resource == ItemList.Resource.UPGRADE)
+                    if (r == ItemList.Resource.UPGRADE)
                         return false;
                     return true;
                 case collectResourceType.ENEMY:
