@@ -23,12 +23,12 @@ namespace TeviRandomizer
 {
 
 
-    class ArchipelagoInterface : MonoBehaviour
+    public class ArchipelagoInterface : MonoBehaviour
     {
         public const ItemList.Type remoteItem = ItemList.Type.I10;
         public const ItemList.Type remoteItemProgressive = ItemList.Type.I11;
 
-        string AP_WORLD_VERSION = "0.6.2";
+        public static string AP_WORLD_VERSION = "0.6.2";
 
         private class LocationData
         {
@@ -39,7 +39,7 @@ namespace TeviRandomizer
         }
 
         public static ArchipelagoInterface Instance = null;
-
+        public string connectVersion;
         private ArchipelagoSession session = null;
         private string uri, user, password;
         private int port;
@@ -125,6 +125,8 @@ namespace TeviRandomizer
                 setCustomFlags((JObject)success.SlotData["options"]);
             else
                 oldSlotData(success.SlotData);
+            if(success.SlotData.ContainsKey("version"))
+                connectVersion = (string)success.SlotData["version"];
             getOwnLocationData().Wait();
             getOwnTransitionData(success.SlotData["transitionData"]);
             UI.UI.checkApWorldLocationCheck = true;
