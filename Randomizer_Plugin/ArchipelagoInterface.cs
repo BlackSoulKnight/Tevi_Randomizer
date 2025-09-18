@@ -237,11 +237,17 @@ namespace TeviRandomizer
 
         public void updateTransitionVisited(int[] transitionList)
         {
-            session.DataStorage[Scope.Slot,"transitionVisited"] = transitionList;
+            if (isConnected)
+            {
+                session.DataStorage[Scope.Slot, "transitionVisited"] = transitionList;
+            }
         }
         public void updateCurretMap(int map)
         {
-            session.DataStorage[Scope.Slot, "currentMap"] = map;
+            if (isConnected)
+            {
+                session.DataStorage[Scope.Slot, "currentMap"] = map;
+            }
         }
         public async Task getOwnLocationData() {
             locations.Clear();

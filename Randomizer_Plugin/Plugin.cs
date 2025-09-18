@@ -770,7 +770,21 @@ namespace TeviRandomizer
             }
             return false;
         }
-         
+
+        [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid),"OnEnable")]
+        [HarmonyPrefix]
+        static void changeToCraftingMap()
+        {
+            ArchipelagoInterface.Instance.updateCurretMap(99);
+        }
+
+        [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid),"OnDisable")]
+        [HarmonyPrefix]
+        static void returnFromCraftingMap()
+        {
+            ArchipelagoInterface.Instance.updateCurretMap(WorldManager.Instance.Area);
+        }
+
     }
 
 
