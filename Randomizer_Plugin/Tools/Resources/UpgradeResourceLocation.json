@@ -6,6 +6,13 @@
         "blockId": 378157,
         "area": 0,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 0,
+                "X": 15,
+                "Y": 11
+            }
+        ],
         "Requirement": [
             {
                 "Method": "ITEM_LINEBOMB || ITEM_AREABOMB",
@@ -20,6 +27,13 @@
         "blockId": 313174,
         "area": 1,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 13,
+                "Y": 12
+            }
+        ],
         "Requirement": [
             {
                 "Method": "ITEM_LINEBOMB && ITEM_SLIDE",
@@ -34,6 +48,13 @@
         "blockId": 328178,
         "area": 2,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 2,
+                "X": 13,
+                "Y": 12
+            }
+        ],
         "Requirement": [
             {
                 "Method": "ITEM_LINEBOMB || ITEM_AREABOMB",
@@ -48,6 +69,13 @@
         "blockId": 416158,
         "area": 3,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 3,
+                "X": 17,
+                "Y": 11
+            }
+        ],
         "Requirement": [
             {
                 "Method": "ITEM_LINEBOMB || ITEM_AREABOMB",
@@ -58,10 +86,17 @@
     {
         "Itemname": "I15",
         "Location": "Teleporter Forest Maze",
-        "LocationName": "Teleporter Forest Maze - Room X: 17 Y: 11",
+        "LocationName": "Teleporter Forest Maze - Room X: 4 Y: 21",
         "blockId": 101301,
         "area": 4,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 4,
+                "Y": 21
+            }
+        ],
         "Requirement": [
             {
                 "Method": "ITEM_LINEBOMB || ITEM_AREABOMB",
@@ -76,6 +111,13 @@
         "blockId": 267177,
         "area": 5,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 5,
+                "X": 11,
+                "Y": 12
+            }
+        ],
         "Requirement": [
             {
                 "Method": "(ITEM_LINEBOMB && ((ITEM_BombLengthExtend && ITEM_SLIDE) || ITEM_BombLengthExtend 3))|| (ITEM_AREABOMB && ITEM_SLIDE)",
@@ -90,6 +132,13 @@
         "blockId": 259206,
         "area": 6,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 6,
+                "X": 10,
+                "Y": 14
+            }
+        ],
         "Requirement": [
             {
                 "Method": "ITEM_LINEBOMB || ITEM_AREABOMB",
@@ -104,6 +153,13 @@
         "blockId": 77227,
         "area": 7,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 7,
+                "X": 3,
+                "Y": 16
+            }
+        ],
         "Requirement": [
             {
                 "Method": "ITEM_AREABOMB",
@@ -118,6 +174,13 @@
         "blockId": 336163,
         "area": 8,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 8,
+                "X": 14,
+                "Y": 11
+            }
+        ],
         "Requirement": [
             {
                 "Method": "ITEM_LINEBOMB || ITEM_AREABOMB",
@@ -132,6 +195,13 @@
         "blockId": 422212,
         "area": 9,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 17,
+                "Y": 15
+            }
+        ],
         "Requirement": [
             {
                 "Method": "ITEM_LINEBOMB || ITEM_AREABOMB",
@@ -146,6 +216,13 @@
         "blockId": 316212,
         "area": 10,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 13,
+                "Y": 15
+            }
+        ],
         "Requirement": [
             {
                 "Method": "ITEM_KNIFE && (ITEM_LINEBOMB || ITEM_AREABOMB)",
@@ -160,6 +237,13 @@
         "blockId": 131113,
         "area": 11,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 11,
+                "X": 5,
+                "Y": 8
+            }
+        ],
         "Requirement": [
             {
                 "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)",
@@ -170,10 +254,17 @@
     {
         "Itemname": "I15",
         "Location": "Snowveil Entrance",
-        "LocationName": "Snowveil - Room X: 21 Y: 4",
+        "LocationName": "Snowveil - Room X: 21 Y: 14",
         "blockId": 520195,
         "area": 12,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 12,
+                "X": 21,
+                "Y": 14
+            }
+        ],
         "Requirement": [
             {
                 "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)",
@@ -188,6 +279,13 @@
         "blockId": 386175,
         "area": 13,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 13,
+                "X": 16,
+                "Y": 12
+            }
+        ],
         "Requirement": [
             {
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
@@ -202,6 +300,13 @@
         "blockId": 419290,
         "area": 14,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 17,
+                "Y": 20
+            }
+        ],
         "Requirement": [
             {
                 "Method": "(ITEM_LINEBOMB)",
@@ -212,10 +317,17 @@
     {
         "Itemname": "I15",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Room X: 17 Y: 20",
+        "LocationName": "Tartarus - Room X: 19 Y: 11",
         "blockId": 475163,
         "area": 15,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 15,
+                "X": 19,
+                "Y": 11
+            }
+        ],
         "Requirement": [
             {
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
@@ -230,6 +342,13 @@
         "blockId": 288102,
         "area": 16,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 12,
+                "Y": 7
+            }
+        ],
         "Requirement": [
             {
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
@@ -244,6 +363,13 @@
         "blockId": 471076,
         "area": 17,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 19,
+                "Y": 5
+            }
+        ],
         "Requirement": [
             {
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_SLIDE && (ITEM_AirDash || ITEM_JETPACK || ITEM_AirSlide || ITEM_DOUBLEJUMP)",
@@ -258,9 +384,16 @@
         "blockId": 359148,
         "area": 18,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 15,
+                "Y": 10
+            }
+        ],
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ((ITEM_AirDash && (ITEM_JEPACK || ITEM_SPEEDUP 2)) || ITEM_JETPACK 2 || ITEM_DOUBLEJUMP || (ITEM_JEPACK && ITEM_SPEEDUP))",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ((ITEM_AirDash && (ITEM_JETPACK || ITEM_SPEEDUP 2)) || ITEM_JETPACK 2 || ITEM_DOUBLEJUMP || (ITEM_JETPACK && ITEM_SPEEDUP))",
                 "Difficulty": 0
             }
         ]
@@ -272,6 +405,13 @@
         "blockId": 101073,
         "area": 19,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 19,
+                "X": 4,
+                "Y": 5
+            }
+        ],
         "Requirement": [
             {
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ((ITEM_DOUBLEJUMP && (ITEM_JETPACK || ITEM_AirDash)) || (ITEM_DOUBLEJUMP && ITEM_AirDash))",
@@ -282,10 +422,17 @@
     {
         "Itemname": "I15",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - Room X: 28 Y:7",
+        "LocationName": "Valhalla City - Room X: 28 Y:9",
         "blockId": 690135,
         "area": 20,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 20,
+                "X": 28,
+                "Y": 9
+            }
+        ],
         "Requirement": [
             {
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
@@ -300,6 +447,13 @@
         "blockId": 84239,
         "area": 21,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 3,
+                "Y": 17
+            }
+        ],
         "Requirement": [
             {
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ((ITEM_JETPACK && (ITEM_DOUBLEJUMP || ITEM_AirDash)) || (ITEM_DOUBLEJUMP && ITEM_AirDash))",
@@ -310,10 +464,17 @@
     {
         "Itemname": "I15",
         "Location": "Solennian Ruins",
-        "LocationName": "Solennian Ruins - Room X: 28 Y:7",
+        "LocationName": "Solennian Ruins - Room X: 14 Y:14",
         "blockId": 339197,
         "area": 22,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 22,
+                "X": 14,
+                "Y": 14
+            }
+        ],
         "Requirement": [
             {
                 "Method": "((ITEM_LINEBOMB && ITEM_KNIFE)|| ITEM_AREABOMB) && (ITEM_WALLJUMP || (ITEM_DOUBLEJUMP && (ITEM_HIJUMP || ITEM_JETPACK)))",
@@ -328,6 +489,13 @@
         "blockId": 296045,
         "area": 23,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 23,
+                "X": 12,
+                "Y": 3
+            }
+        ],
         "Requirement": [
             {
                 "Method": "",
@@ -342,76 +510,123 @@
         "blockId": 302102,
         "area": 24,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 24,
+                "X": 12,
+                "Y": 7
+            }
+        ],
         "Requirement": [
             {
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
         ]
-    },    {
+    },
+    {
         "Itemname": "I15",
         "Location": "Teleporter Catacombs",
-        "LocationName": "Catacombs - Room X: 15 Y:8",
+        "LocationName": "Catacombs - Room X: 16 Y:7",
         "blockId": 390106,
         "area": 25,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 25,
+                "X": 16,
+                "Y": 7
+            }
+        ],
         "Requirement": [
             {
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
         ]
-    },    {
+    },
+    {
         "Itemname": "I15",
         "Location": "Cloister Pre Boss",
         "LocationName": "Cloister - Room X: 20 Y:12",
         "blockId": 498172,
         "area": 26,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 26,
+                "X": 20,
+                "Y": 12
+            }
+        ],
         "Requirement": [
             {
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && (ITEM_HIJUMP || ITEM_JETPACK || ITEM_DOUBLEJUMP)",
                 "Difficulty": 0
             }
         ]
-    },   {
+    },
+    {
         "Itemname": "I15",
         "Location": "Gallery of Mirrors West",
         "LocationName": "Gallery of Mirrors - Room X: 12 Y:7",
         "blockId": 288102,
         "area": 27,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 12,
+                "Y": 7
+            }
+        ],
         "Requirement": [
             {
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
         ]
-    },  {
+    },
+    {
         "Itemname": "I15",
         "Location": "Blushwood",
-        "LocationName": "Blushwood - Room X: 7 Y:17",
+        "LocationName": "Blushwood - Room X: 7 Y:18",
         "blockId": 169253,
         "area": 28,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 28,
+                "X": 7,
+                "Y": 18
+            }
+        ],
         "Requirement": [
             {
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
         ]
-    }, {
+    },
+    {
         "Itemname": "I15",
         "Location": "EverGarden To Valhalla",
         "LocationName": "EverGarden - Room X: 12 Y:12",
         "blockId": 307177,
         "area": 29,
         "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 12,
+                "Y": 12
+            }
+        ],
         "Requirement": [
             {
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && (ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash)",
                 "Difficulty": 0
             }
         ]
-    },
+    }
 ]
