@@ -948,7 +948,7 @@ namespace TeviRandomizer
         {
             if (__result)
             {
-                if (SaveManager.Instance.GetItem(ItemList.Type.I19) < 1 ^ SaveManager.Instance.GetItem(ItemList.Type.I20) < 1)
+                if ((SaveManager.Instance.GetItem(ItemList.Type.I19) < 1 && __instance.orbUsing == OrbType.BLACK) ||  (SaveManager.Instance.GetItem(ItemList.Type.I20) < 1) && __instance.orbUsing == OrbType.WHITE)
                 {
                     __instance.PrepareSwitchOrb(false, true, (Character.OrbType)((int)__instance.orbUsing ^ 1));
                     //__instance.orbUsing = (OrbType)((int)__instance.orbUsing ^ 1);
