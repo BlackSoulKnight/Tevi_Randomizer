@@ -28,7 +28,7 @@ namespace TeviRandomizer
         public const ItemList.Type remoteItem = ItemList.Type.I10;
         public const ItemList.Type remoteItemProgressive = ItemList.Type.I11;
 
-        public static string AP_WORLD_VERSION = "0.6.2";
+        string AP_WORLD_VERSION = "0.6.3";
 
         private class LocationData
         {
@@ -239,11 +239,17 @@ namespace TeviRandomizer
 
         public void updateTransitionVisited(int[] transitionList)
         {
-            session.DataStorage[Scope.Slot,"transitionVisited"] = transitionList;
+            if (isConnected)
+            {
+                session.DataStorage[Scope.Slot, "transitionVisited"] = transitionList;
+            }
         }
         public void updateCurretMap(int map)
         {
-            session.DataStorage[Scope.Slot, "currentMap"] = map;
+            if (isConnected)
+            {
+                session.DataStorage[Scope.Slot, "currentMap"] = map;
+            }
         }
         public async Task getOwnLocationData() {
             locations.Clear();

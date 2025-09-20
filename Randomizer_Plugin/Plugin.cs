@@ -67,7 +67,7 @@ namespace TeviRandomizer
 
 
 
-    [BepInPlugin("tevi.plugins.randomizer", "Randomizer", "1.4")]
+    [BepInPlugin("tevi.plugins.randomizer", "Randomizer", "1.4.1")]
     [BepInProcess("TEVI.exe")]
     public class RandomizerPlugin : BaseUnityPlugin
     {
@@ -791,7 +791,21 @@ namespace TeviRandomizer
             }
             return false;
         }
-         
+
+        [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid),"OnEnable")]
+        [HarmonyPrefix]
+        static void changeToCraftingMap()
+        {
+            ArchipelagoInterface.Instance.updateCurretMap(99);
+        }
+
+        [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid),"OnDisable")]
+        [HarmonyPrefix]
+        static void returnFromCraftingMap()
+        {
+            ArchipelagoInterface.Instance.updateCurretMap(WorldManager.Instance.Area);
+        }
+
     }
 
 
@@ -955,7 +969,7 @@ namespace TeviRandomizer
         {
             if (__result)
             {
-                if (SaveManager.Instance.GetItem(ItemList.Type.I19) < 1 ^ SaveManager.Instance.GetItem(ItemList.Type.I20) < 1)
+                if ((SaveManager.Instance.GetItem(ItemList.Type.I19) < 1 && __instance.orbUsing == OrbType.BLACK) ||  (SaveManager.Instance.GetItem(ItemList.Type.I20) < 1) && __instance.orbUsing == OrbType.WHITE)
                 {
                     __instance.PrepareSwitchOrb(false, true, (Character.OrbType)((int)__instance.orbUsing ^ 1));
                     //__instance.orbUsing = (OrbType)((int)__instance.orbUsing ^ 1);
