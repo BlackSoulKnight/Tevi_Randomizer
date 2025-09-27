@@ -1,6 +1,6 @@
 [
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Desert Base UnderScore",
         "LocationName": "Desert Base - Room X: 15 Y: 11",
         "blockId": 378157,
@@ -21,7 +21,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Thanatara Canyon Lower",
         "LocationName": "Thanatara Canyon - Room X: 13 Y: 12",
         "blockId": 313174,
@@ -42,7 +42,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Oasis",
         "LocationName": "Oasis - Room X: 13 Y: 12",
         "blockId": 328178,
@@ -63,7 +63,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Morose City",
         "LocationName": "Morose City - Room X: 17 Y: 11",
         "blockId": 416158,
@@ -84,7 +84,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Teleporter Forest Maze",
         "LocationName": "Teleporter Forest Maze - Room X: 4 Y: 21",
         "blockId": 101301,
@@ -105,7 +105,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Travoll Mines",
         "LocationName": "Travoll Mines - Room X: 11 Y: 12",
         "blockId": 267177,
@@ -126,7 +126,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Travoll Industrie",
         "LocationName": "Travoll Industrie - Room X: 10 Y: 14",
         "blockId": 259206,
@@ -147,7 +147,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "CopperWood Industry to Travoll Industrie",
         "LocationName": "Copper Wood - Room X: 3 Y: 16",
         "blockId": 77227,
@@ -168,7 +168,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Ana Thema",
         "LocationName": "Ana Thema - Room X: 14 Y: 11",
         "blockId": 336163,
@@ -189,7 +189,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Gloamwood Right",
         "LocationName": "Gloamwood Right - Room X: 17 Y: 15",
         "blockId": 422212,
@@ -210,7 +210,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Plague Forest",
         "LocationName": "Gloamwood Right - Room X: 13 Y: 15",
         "blockId": 316212,
@@ -231,7 +231,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Ulvosa to Gloamwood",
         "LocationName": "Ulvosa - Room X: 5 Y: 8",
         "blockId": 131113,
@@ -252,7 +252,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Snowveil Entrance",
         "LocationName": "Snowveil - Room X: 21 Y: 14",
         "blockId": 520195,
@@ -273,7 +273,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Outer Moat",
         "LocationName": "Outer Moat - Room X: 16 Y: 12",
         "blockId": 386175,
@@ -294,7 +294,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Forgotten City",
         "LocationName": "Forgotten City - Room X: 17 Y: 20",
         "blockId": 419290,
@@ -315,7 +315,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Tartarus",
         "LocationName": "Tartarus - Room X: 19 Y: 11",
         "blockId": 475163,
@@ -336,7 +336,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Snowveil Above HQ",
         "LocationName": "Snowveil Above HQ - Room X: 12 Y: 7",
         "blockId": 288102,
@@ -357,7 +357,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Pre Swamp",
         "LocationName": "Swamp- Room X: 19 Y: 5",
         "blockId": 471076,
@@ -378,7 +378,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "DreamKeeper Outside Left Snow To Snowveil",
         "LocationName": "DreamKeeper Outside - Room X: 15 Y: 10 ",
         "blockId": 359148,
@@ -399,7 +399,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Heavens Valley Snow Route Middle",
         "LocationName": "Valhalla`s Breath East - Room X: 4 Y: 5",
         "blockId": 101073,
@@ -420,7 +420,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Valhalla City",
         "LocationName": "Valhalla City - Room X: 28 Y:9",
         "blockId": 690135,
@@ -441,7 +441,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Heavens Valley West",
         "LocationName": "Heavens Valley West - Room X: 3 Y:17",
         "blockId": 84239,
@@ -462,7 +462,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Solennian Ruins",
         "LocationName": "Solennian Ruins - Room X: 14 Y:14",
         "blockId": 339197,
@@ -483,7 +483,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Sinner's Oath",
         "LocationName": "Sinner's Oath - Room X: 12 Y:3",
         "blockId": 296045,
@@ -504,7 +504,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Relicts to Gloamwood",
         "LocationName": "Relicts to Gloamwood - Room X: 12 Y:7",
         "blockId": 302102,
@@ -525,7 +525,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Teleporter Catacombs",
         "LocationName": "Catacombs - Room X: 16 Y:7",
         "blockId": 390106,
@@ -546,7 +546,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Cloister Pre Boss",
         "LocationName": "Cloister - Room X: 20 Y:12",
         "blockId": 498172,
@@ -567,7 +567,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Gallery of Mirrors West",
         "LocationName": "Gallery of Mirrors - Room X: 12 Y:7",
         "blockId": 288102,
@@ -588,7 +588,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "Blushwood",
         "LocationName": "Blushwood - Room X: 7 Y:18",
         "blockId": 169253,
@@ -609,7 +609,7 @@
         ]
     },
     {
-        "Itemname": "I15",
+        "Itemname": "I16",
         "Location": "EverGarden To Valhalla",
         "LocationName": "EverGarden - Room X: 12 Y:12",
         "blockId": 307177,
@@ -625,6 +625,573 @@
         "Requirement": [
             {
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && (ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash)",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "Desert Base Enemy",
+        "LocationName": "Desert Base - Kill Enemies",
+        "blockId": 0,
+        "area": 0,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 0,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "Thanatara Canyon",
+        "LocationName": "Thanatara Canyon - Kill Enemies",
+        "blockId": 0,
+        "area": 1,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 1,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "Oasis",
+        "LocationName": "Oasis - Kill Enemies",
+        "blockId": 0,
+        "area": 2,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 2,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "Forest Enemies",
+        "LocationName": "Forest - Kill Enemies",
+        "blockId": 0,
+        "area": 4,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "Travoll Mines",
+        "LocationName": "Travoll Mines - Kill Enemies",
+        "blockId": 0,
+        "area": 5,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 5,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "Travoll Industrie",
+        "LocationName": "Travoll Industrie - Kill Enemies",
+        "blockId": 0,
+        "area": 6,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 6,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "CopperWood",
+        "LocationName": "CopperWood - Kill Enemies",
+        "blockId": 0,
+        "area": 7,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 7,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "Gloamwood Middle",
+        "LocationName": "Gloamwood Middle - Kill Enemies",
+        "blockId": 0,
+        "area": 9,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "Plague Forest Enemies",
+        "LocationName": "Plague Forest - Kill Enemies",
+        "blockId": 0,
+        "area": 10,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "Ulvosa",
+        "LocationName": "Ulvosa - Kill Enemies",
+        "blockId": 0,
+        "area": 11,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 11,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "Snowveil Enemies",
+        "LocationName": "Snowveil - Kill Enemies",
+        "blockId": 0,
+        "area": 12,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 12,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "Verdazure Sea West",
+        "LocationName": "Verdazure Sea West - Kill Enemies",
+        "blockId": 0,
+        "area": 13,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 13,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "Forgotten Enemies",
+        "LocationName": "Forgotten Ocean - Kill Enemies",
+        "blockId": 0,
+        "area": 14,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "Golden Hands HQ",
+        "LocationName": "Golden Hands HQ - Kill Enemies",
+        "blockId": 0,
+        "area": 16,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "Magma Swamp Enemies",
+        "LocationName": "Magma Swamp - Kill Enemies",
+        "blockId": 0,
+        "area": 17,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "Dream Enemies",
+        "LocationName": "DreamKeeper - Kill Enemies",
+        "blockId": 0,
+        "area": 18,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "Valley East Enemies",
+        "LocationName": "Valhalla`s Breath East: Kill Enemies",
+        "blockId": 0,
+        "area": 19,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 19,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "West Breath Enemies",
+        "LocationName": "Valhalla`s Breath West: Kill Enemies",
+        "blockId": 0,
+        "area": 21,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "Solennian Ruins",
+        "LocationName": "Solennian Ruins - Kill Enemies",
+        "blockId": 0,
+        "area": 22,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 22,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "Sinner's Oath",
+        "LocationName": "Sinner's Oath - Kill Enemies",
+        "blockId": 0,
+        "area": 23,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 23,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "Relicts",
+        "LocationName": "Relicts - Kill Enemies",
+        "blockId": 0,
+        "area": 24,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 24,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "Catalab Enemies",
+        "LocationName": "Catacombs and Labs - Kill Enemies",
+        "blockId": 0,
+        "area": 25,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 25,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "Cloister",
+        "LocationName": "Cloister - Kill Enemies",
+        "blockId": 0,
+        "area": 26,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "Gallery of Enemies",
+        "LocationName": "Gallery - Kill Enemies",
+        "blockId": 0,
+        "area": 27,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 28,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "Blushwood",
+        "LocationName": "Blushwood - Kill Enemies",
+        "blockId": 0,
+        "area": 28,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I16",
+        "Location": "EverGarden",
+        "LocationName": "EverGarden - Kill Enemies",
+        "blockId": 0,
+        "area": 29,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ]
+    },
+    {
+        "Itemname": "I15",
+        "Location": "EverGarden",
+        "LocationName": "CC Shop bonus Reward #1",
+        "blockId": -1,
+        "area": 3,
+        "slotId": 1,
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 0,
+                "Y": 0
+            }
+        ],
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ]
