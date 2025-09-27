@@ -313,6 +313,42 @@ namespace TeviRandomizer
 
         static public ItemList.Type getRandomizedItem(ItemList.Type itemid, byte slotid) => getRandomizedItem(itemid.ToString(), slotid);
 
+        static public ItemList.Type getRandomizedResource(ItemList.Resource item, byte area, int blockID)
+        {
+
+            ItemList.Type data;
+            if (ArchipelagoInterface.Instance.isConnected && LocationTracker.APResoucreLocationame.ContainsKey($"{area} #{blockID}"))
+            {
+                if(!ArchipelagoInterface.Instance.isItemNative(LocationTracker.APResoucreLocationame[$"{area} #{blockID}"]))
+                    data = ArchipelagoInterface.Instance.isItemProgessive(LocationTracker.APResoucreLocationame[$"{area} #{blockID}"]) ? ArchipelagoInterface.remoteItemProgressive : ArchipelagoInterface.remoteItem;
+                else
+                // Try to Parse string into Item Type, if failed check for teleporter in string else give item back
+                if (!Enum.TryParse(ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APResoucreLocationame[$"{area} #{blockID}"]),out data))
+                    {
+                    //Debug.LogWarning($"Could not find {itemid.ToString()} {slotid}");
+                    if (ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APResoucreLocationame[$"{area} #{blockID}"]).Contains("Teleporter"))
+                        data = PortalItem;
+                    else
+                        data = (ItemList.Type)((int)item + (int)ItemList.Type.I14);
+                    }
+            }
+            else
+            {
+                try
+                {
+                    data = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), __itemData[LocationTracker.APResoucreLocationame[$"{area} #{blockID}"]]);
+                }
+                catch  (Exception e)
+                {
+                    Debug.LogWarning($"{e}");
+                    if (LocationTracker.APResoucreLocationame.ContainsKey($"{area} #{blockID}") && __itemData.ContainsKey(LocationTracker.APResoucreLocationame[$"{area} #{blockID}"]) && __itemData[LocationTracker.APResoucreLocationame[$"{area} #{blockID}"]].Contains("Teleporter"))
+                        data = PortalItem;
+                    else
+                        data = (ItemList.Type)((int)item + (int)ItemList.Type.I14);
+                }
+            }
+            return data;
+        }
         static public ItemList.Type getRandomizedItem(string item, byte slot)
         {
 
@@ -796,7 +832,7 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static void changeToCraftingMap()
         {
-            ArchipelagoInterface.Instance.updateCurretMap(99);
+            ArchipelagoInterface.Instance.updateCurretMap(30);
         }
 
         [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid),"OnDisable")]

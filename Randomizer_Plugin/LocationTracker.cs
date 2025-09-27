@@ -11,6 +11,7 @@ namespace TeviRandomizer
         public static bool active = true;
         static List<string> collectedLocationList = new List<string>();
         static public Dictionary<string,string> APLocationName = loadLocationNameList();
+        static public Dictionary<string,string> APResoucreLocationame = loadUpgradeResourceLocationList();
 
         static private Dictionary<string, string> loadLocationNameList() {
             string path = RandomizerPlugin.pluginPath + "/resource/";
@@ -21,6 +22,18 @@ namespace TeviRandomizer
                 dict.Add($"{loc["Itemname"]} #{loc["slotId"]}", loc["LocationName"].ToString());
             }
             return dict;
+        }
+
+        static private Dictionary<string, string> loadUpgradeResourceLocationList()
+        {
+            Dictionary<string,string> keyValuePairs = new Dictionary<string,string>();
+            string path = RandomizerPlugin.pluginPath + "/resource/";
+            JArray locations = JArray.Parse(File.ReadAllText(path + "UpgradeResourceLocation.json"));
+            foreach(var loc in locations)
+            {
+                keyValuePairs.Add($"{loc["area"]} #{loc["blockId"]}", loc["LocationName"].ToString());
+            }
+            return keyValuePairs;
         }
 
         public static void setCollectedLocationList(string[] list)
@@ -39,22 +52,44 @@ namespace TeviRandomizer
             else
                 return collectedLocationList.Contains($"{item} #{slot}");
         }
+        public static bool hasResource(byte area,int blockId)
+        {
+            if (APResoucreLocationame.ContainsKey($"{area} #{blockId}"))
+                return collectedLocationList.Contains(APResoucreLocationame[$"{area} #{blockId}"]);
+            else
+                return collectedLocationList.Contains($"{area} #{blockId}");
+        }
+
+
         public static bool checkLocation(string location)
         {
             return collectedLocationList.Contains(location);
         }
+
         public static void clearItemList() => collectedLocationList.Clear();
         public static void addItemToList(ItemList.Type item, byte slot)
         {
             if (APLocationName.ContainsKey($"{item} #{slot}"))
-                addItemToList(APLocationName[$"{item} #{slot}"]);
+                addLocationToList(APLocationName[$"{item} #{slot}"]);
             else
             {
-                addItemToList($"{item} #{slot}");
+                addLocationToList($"{item} #{slot}");
                 return;
             }
         }
-        public static void addItemToList(string location)
+        public static void addResourceToList(byte area, int blockId)
+        {
+            if (APResoucreLocationame.ContainsKey($"{area} #{blockId}"))
+                addLocationToList(APResoucreLocationame[$"{area} #{blockId}"]);
+            else
+            {
+                addLocationToList($"{area} #{blockId}");
+                return;
+            }
+        }
+        
+
+        public static void addLocationToList(string location)
         {
             collectedLocationList.Add(location);
             if (ArchipelagoInterface.Instance.isConnected)

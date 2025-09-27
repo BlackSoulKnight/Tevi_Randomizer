@@ -2,8 +2,10 @@
 using HarmonyLib;
 using Map;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 
 namespace TeviRandomizer
@@ -53,7 +55,8 @@ namespace TeviRandomizer
                 }
 
                 type = data;
-                itemName = RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{original} #{value}"]];
+                if(RandomizerPlugin.__itemData.ContainsKey(LocationTracker.APLocationName[$"{original} #{value}"]))
+                    itemName = RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{original} #{value}"]];
 
                 if (type == RandomizerPlugin.PortalItem)
                 {
@@ -493,45 +496,127 @@ namespace TeviRandomizer
         static void uncheckDestroyedBlock() => collectType = collectResourceType.NONE;
 
         [HarmonyPatch(typeof(enemyController), "DefeatEnemy")]
-        [HarmonyPostfix]
+        [HarmonyPrefix]
         static void checkKilledEnemy() => collectType = collectResourceType.ENEMY;
 
         [HarmonyPatch(typeof(enemyController), "DefeatEnemy")]
         [HarmonyPostfix]
         static void uncheckKilledEnemy() => collectType = collectResourceType.NONE;
 
+        [HarmonyPatch(typeof(enemyController), "AreaDefeatUpgradeRequirement")]
+        [HarmonyPostfix]
+        static void reduceMinRewuirement(ref int __result) => __result = 0;
+
         [HarmonyPatch(typeof(CollectManager),"CreateCollect")]
         [HarmonyPrefix]
         static bool collectBlock(ref Vector3 position,ref ItemList.Resource r)
         {
+            int blockPos = 0;
             switch (collectType)
             {
                 case collectResourceType.BLOCK:
-                    int blockPos = Utility.PosToTileX(position.x) * 1000 + Utility.PosToTileY(position.y) * -1;
-                    Debug.Log($"Block Destroyed at {blockPos}");
-                    if (r == ItemList.Resource.UPGRADE)
-                        return false;
-                    return true;
+                    blockPos = Utility.PosToTileX(position.x) * 1000 + Utility.PosToTileY(position.y) * -1;
+                    Debug.LogWarning($"Block Destroyed at {blockPos}, Type: {r.ToString()}");
+                    break;
                 case collectResourceType.ENEMY:
-                    Debug.Log($"Upgrade collected from killing mobs at Area:{WorldManager.Instance.Area}");
+                    Debug.LogWarning($"Upgrade collected from killing mobs at Area:{WorldManager.Instance.Area}");
                     break;
                 case collectResourceType.EVENT:
                 case collectResourceType.NONE:
                 default:
                     return true;
             }
+            if (!LocationTracker.hasResource(WorldManager.Instance.Area, blockPos))
+            {
+                LocationTracker.addResourceToList(WorldManager.Instance.Area, blockPos);
+                ItemList.Type item = RandomizerPlugin.getRandomizedResource(r,WorldManager.Instance.Area, blockPos);
+                if (item == ItemList.Type.OFF || item == ItemList.Type.I14 || item == ItemList.Type.I15 || item == ItemList.Type.I16)
+                    return true;
+                HUDObtainedItem.Instance.GiveItem(item, 1, true);
+                return false;
+            }
             return false;
         }
-        [HarmonyPatch(typeof(SaveManager), "SetEnemyDefeatedArea")]
+
+        static List<ItemList.Type> itemQueue;
+        [HarmonyPatch(typeof(ShopBonus),"EVENT")]
         [HarmonyPrefix]
-        static void killEnemy(ref byte value)
+        static void shopBoni()
         {
-            
-            //magic number copied from base game @enemyController -> SaveManager.Instance.SetEnemyDefeatedArea(WorldManager.Instance.Area, 200);
-            if (value == 200)
+            EventManager em = EventManager.Instance;
+            if(em.EventStage == 10)
+                    em.NextStage();
+            if(em.EventStage == 20)
             {
+                if (!(em.EventTime >= 0.25f))
+                {
+                    return;
+                }
+                itemQueue = new List<ItemList.Type>();
+                if (em.GetCounter(3) == 0f)
+                {
+                    int num = 0;
+                    while (SaveManager.Instance.savedata.coinUsedIan >= 3000 + 7000 * SaveManager.Instance.GetMiniFlag(Mini.ShopBonusIan))
+                    {
+                        SaveManager.Instance.SetMiniFlag(Mini.ShopBonusIan, (byte)(SaveManager.Instance.GetMiniFlag(Mini.ShopBonusIan) + 1));
+                        if (!LocationTracker.hasResource(3, -1000 * SaveManager.Instance.GetMiniFlag(Mini.ShopBonusIan)))
+                        {
+                            LocationTracker.addResourceToList(3, -1000 * SaveManager.Instance.GetMiniFlag(Mini.ShopBonusIan));
+                            itemQueue.Add(RandomizerPlugin.getRandomizedResource(ItemList.Resource.CORE, 3, -1000 * SaveManager.Instance.GetMiniFlag(Mini.ShopBonusIan)));
+                        }
+                    }
+                }
+                if (em.GetCounter(3) == 1f)
+                {
+                    int num2 = 0;
+                    while (SaveManager.Instance.savedata.coinUsedCC >= 4000 + 7500 * SaveManager.Instance.GetMiniFlag(Mini.ShopBonusCC))
+                    {
+                        SaveManager.Instance.SetMiniFlag(Mini.ShopBonusCC, (byte)(SaveManager.Instance.GetMiniFlag(Mini.ShopBonusCC) + 1));
+                        if (!LocationTracker.hasResource(3, -1 * SaveManager.Instance.GetMiniFlag(Mini.ShopBonusCC)))
+                        {
+                            LocationTracker.addResourceToList(3, -1 * SaveManager.Instance.GetMiniFlag(Mini.ShopBonusCC));
+                            itemQueue.Add(RandomizerPlugin.getRandomizedResource(ItemList.Resource.CORE, 3, -1 * SaveManager.Instance.GetMiniFlag(Mini.ShopBonusCC)));
+                        }
+                    }
+                }
+                CameraScript.Instance.PlaySound(AllSound.SEList.Collect_Resource2);
+                em.NextStage();
             }
-        }
+            if(em.EventStage == 30)
+            {
+                if (em.EventTime > 0.75f && em.EventTime < 100f)
+                {
+                    if (itemQueue.Count > 0)
+                    {
+                        ItemList.Type item = itemQueue.ElementAt(0);
+                        itemQueue.RemoveAt(0);
+                        switch (item)
+                        {
+                            case ItemList.Type.I16:
+                                CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_UPGRADE, ItemList.Resource.UPGRADE);
+                                break;
+                            case ItemList.Type.I15:
+                                CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_RESOURCE, ItemList.Resource.CORE);
+                                break;
+                            case ItemList.Type.I14:
+                                CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_COIN, ItemList.Resource.COIN);
+                                break;
+                            default:
+                                HUDObtainedItem.Instance.GiveItem(item, 1, true);
+                                break;
+                        }
+                    }
+                    else
+                        em.StopEvent();
+                    em.EventTime = 100f;
+                }
+                if (em.EventTime >= 100.85f && !HUDObtainedItem.Instance.isDisplaying())
+                {
+                    em.EventTime = 0f;
+                }
+            }
+        }        
+
     }
 
 }
