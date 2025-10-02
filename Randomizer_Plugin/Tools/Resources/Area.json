@@ -1097,11 +1097,11 @@
                 },
                 {
                     "Exit": "Golden Hands HQ Sewer",
-                    "Method": "ITEM_SLIDE && NotTeleporter"
+                    "Method": "ITEM_SLIDE"
                 },
                 {
                     "Exit": "Golden Hands HQ Sewer",
-                    "Method": "ChargeShot && NotTeleporter"
+                    "Method": "ChargeShot"
                 }
             ]
         },
@@ -1602,7 +1602,12 @@
         },
         {
             "Name": "Illusion Palace",
-            "Connections": []
+            "Connections": [
+                {
+                    "Exit": "TeleportHub",
+                    "Method": "Goal"
+                }
+            ]
         }
     ],
     "Map24": [
@@ -1775,6 +1780,10 @@
             "Connections": [
                 {
                     "Exit": "Cloister Pre Boss",
+                    "Method": "ChargeShot"
+                },
+                {
+                    "Exit": "Teleporter Cloister",
                     "Method": "ChargeShot"
                 }
             ]
