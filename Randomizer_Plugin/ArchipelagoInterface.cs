@@ -385,8 +385,8 @@ namespace TeviRandomizer
 
                 if (lostConnection)
                 {
-                HintSystem.addNewChatLine("a", "Lost connection To the AP Server");
-                HintSystem.startChat();
+                ChatSystemPatch.addNewChatLine("a", "Lost connection To the AP Server");
+                ChatSystemPatch.startChat();
                 lostConnection = false;
                 }
 

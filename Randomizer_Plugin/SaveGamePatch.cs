@@ -87,7 +87,7 @@ namespace TeviRandomizer
                 }
                 if (eS3File.KeyExists("HintList"))
                 {
-                    HintSystem.hintList = eS3File.Load<(string, string, byte)[]>("HintList");
+                    ChatSystemPatch.hintList = eS3File.Load<(string, string, byte)[]>("HintList");
                 }
                 if (eS3File.KeyExists("EventReplace"))
                 {
@@ -193,7 +193,7 @@ namespace TeviRandomizer
             eS3File.Save("SuperBosses", RandomizerPlugin.customFlags[(int)CustomFlags.SuperBosses]);
             eS3File.Save("GoalType", (int)RandomizerPlugin.goalType);
             eS3File.Save("Seed", RandomizerPlugin.seed);
-            eS3File.Save("HintList", HintSystem.hintList);
+            eS3File.Save("HintList", ChatSystemPatch.hintList);
             eS3File.Save("GoMode", RandomizerPlugin.GoMode);
 
             if (MainVar.instance._isAutoSave)

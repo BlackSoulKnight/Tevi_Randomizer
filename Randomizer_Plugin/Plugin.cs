@@ -151,7 +151,7 @@ namespace TeviRandomizer
                 harmonyPatchInstance.PatchAll(typeof(OrbPatch));
                 harmonyPatchInstance.PatchAll(typeof(RabiSmashPatch));
                 harmonyPatchInstance.PatchAll(typeof(BonusFeaturePatch));
-                harmonyPatchInstance.PatchAll(typeof(HintSystem));
+                harmonyPatchInstance.PatchAll(typeof(ChatSystemPatch));
                 harmonyPatchInstance.PatchAll(typeof(CustomMap));
                 //harmonyPatchInstance.PatchAll(typeof(ResourcePatch));
                 harmonyPatchInstance.PatchAll(typeof(EnemyPatch));

@@ -1,0 +1,22 @@
+{
+    "chapterall_Sign_OASISHOME_0":[
+        {
+            "textId":1,
+            "text":"This is a Sign with text about the Randomizer",
+            "character":"Info",
+            "flag":"hidden",
+            "position":"",
+            "emotion":"",
+            "pose":""
+        },
+        {
+            "textId":2,
+            "text":"Another row of text",
+            "character":"Info",
+            "flag":"hidden",
+            "position":"",
+            "emotion":"",
+            "pose":""
+        }
+    ]
+}
