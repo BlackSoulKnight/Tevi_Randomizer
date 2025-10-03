@@ -66,13 +66,12 @@ namespace TeviRandomizer
 
 
 
-    [BepInPlugin("tevi.plugins.randomizer", "Randomizer", "1.4.1")]
+    [BepInPlugin("tevi.plugins.randomizer", "Randomizer", MyPluginInfo.PLUGIN_VERSION)]
     [BepInProcess("TEVI.exe")]
     public class RandomizerPlugin : BaseUnityPlugin
     {
 
         public const ItemList.Type PortalItem = ItemList.Type.I13;
-
         public enum EventID
         {
             IllusionPalace = 9999

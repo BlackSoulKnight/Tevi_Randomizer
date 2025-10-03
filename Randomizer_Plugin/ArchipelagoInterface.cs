@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Archipelago.MultiClient.Net;
 using Archipelago.MultiClient.Net.BounceFeatures.DeathLink;
@@ -27,9 +28,9 @@ namespace TeviRandomizer
     {
         public const ItemList.Type remoteItem = ItemList.Type.I10;
         public const ItemList.Type remoteItemProgressive = ItemList.Type.I11;
-
+        
         string AP_WORLD_VERSION = "0.6.3";
-
+        public string connectedVersion = "";
         private class LocationData
         {
             public string item { get; set; }
@@ -69,7 +70,7 @@ namespace TeviRandomizer
             session = ArchipelagoSessionFactory.CreateSession(uri, port);
             try
             {
-                loginResult = session.TryConnectAndLogin("Tevi", user, ItemsHandlingFlags.IncludeStartingInventory, version: Version.Parse("0.5.0"), password: password);
+                loginResult = session.TryConnectAndLogin("Tevi", user, ItemsHandlingFlags.IncludeStartingInventory, password: password);
             }
             catch (Exception e)
             {
@@ -127,6 +128,7 @@ namespace TeviRandomizer
                 oldSlotData(success.SlotData);
             getOwnLocationData().Wait();
             getOwnTransitionData(success.SlotData["transitionData"]);
+            connectedVersion = (string)success.SlotData["version"];
             UI.UI.checkApWorldLocationCheck = true;
             return true;
         }
@@ -168,7 +170,7 @@ namespace TeviRandomizer
         }
         private void oldSlotData(Dictionary<string,object> SlotData)
         {
-
+            
             long extraPotions = (long)SlotData["attackMode"];
             RandomizerPlugin.extraPotions = [(int)extraPotions, (int)extraPotions];
             RandomizerPlugin.customFlags[(int)CustomFlags.TempOption] = (long)SlotData["openMorose"] > 0;

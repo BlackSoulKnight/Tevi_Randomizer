@@ -98,7 +98,6 @@ namespace TeviRandomizer.UI
                     textField.GetComponent<RectTransform>().sizeDelta = new Vector2(500, 100);
                     text.fontSize = 16;
                     text.fontSizeMax = 16;
-                    
                 }
                 TextMeshProUGUI text2 = textField.GetComponent<TextMeshProUGUI>();
                 text2.color = Color.red;
@@ -123,7 +122,7 @@ namespace TeviRandomizer.UI
                     errorLog.Close();
                     text2.color = Color.red;
 
-                    text2.text = "Ap Server Locations missmatch";
+                    text2.text = $"Ap Server Locations missmatch\nApworld version:{ArchipelagoInterface.Instance.connectedVersion}";
                 }
                 else
                 {
@@ -131,6 +130,23 @@ namespace TeviRandomizer.UI
                     text2.text = "Ap Server Connected";
                 }
                 checkApWorldLocationCheck = false;
+            }
+
+            GameObject textField2 = GameObject.Find("RandomizerVersion");
+            if (!textField2)
+            {
+                textField2 = new GameObject();
+                textField2.name = "RandomizerVersion";
+                textField2.transform.parent = GameObject.Find("Titile Screen Manager").transform;
+                TextMeshProUGUI text = textField2.AddComponent<TextMeshProUGUI>();
+                textField2.AddComponent<CanvasGroup>();
+                textField2.transform.position = new Vector3(-5.2729f, -5.3701f, 1);
+                textField2.transform.localScale = Vector3.one;
+                text.color = Color.green;
+                text.text = $"Randomizer Version: {MyPluginInfo.PLUGIN_VERSION}";
+                textField2.GetComponent<RectTransform>().sizeDelta = new Vector2(500, 100);
+                text.fontSize = 16;
+                text.fontSizeMax = 16;
             }
         }
         [HarmonyPatch(typeof(GemaMainMenuSelectionSlot),"UpdateFont")]
