@@ -1,18 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.IO;
-using System.Linq;
-using System.Runtime.Serialization.Formatters.Binary;
-using Archipelago.MultiClient.Net.Packets;
+﻿using Archipelago.MultiClient.Net.Packets;
 using BepInEx;
 using EditorVar;
 using EventMode;
 using HarmonyLib;
 using Map;
+using Mono.Cecil;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.IO;
+using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.TextCore;
 using UnityEngine.UIElements;
+using static MonoMod.RuntimeDetour.DynamicHookGen;
 using static UnityEngine.UIElements.UIR.Allocator2D;
 
 
@@ -1691,6 +1693,35 @@ namespace TeviRandomizer
         }
 
 
+        private static void customRoom(WorldManager.MapData customroom)
+        {
+            WorldManager.MapData data = WorldManager.Instance.areadata.maplist.Find(room => room.y == customroom.y && room.x == customroom.x);
+            if (data == default)
+            {
+                Traverse traverse = new Traverse(WorldManager.Instance);
+                object[] array3 = new object[] { customroom.x, customroom.y, customroom.areatype, customroom.bgtype, customroom.waterlevel, customroom.suntype, customroom.camerafixTopY };
+                traverse.Method("CreateMapData", array3).GetValue();
+            }
+            data.y = customroom.y;
+            data.x = customroom.x;
+            data.roomtype = customroom.roomtype;
+            data.areatype = customroom.areatype;
+            data.waterlevel = customroom.waterlevel;
+            data.bgtype = customroom.bgtype;
+            data.suntype = customroom.suntype;
+            data.camerafixTopY = customroom.camerafixTopY;
+
+            var a = MainVar.instance.MAPSIZEX * MainVar.instance.MAPSIZEY * WorldManager.Instance.Area + customroom.y * MainVar.instance.MAPSIZEX + customroom.x;
+
+            Traverse fullMap = new Traverse(FullMap.Instance);
+            fullMap.Method("SetRoomData", (object[])[WorldManager.Instance.Area, customroom.x, customroom.y, customroom.roomtype, customroom.areatype]).GetValue();
+            var tile = fullMap.Method("CreateRoomTile", (object[])[a]).GetValue<FullMapTile>();
+            Color32 color = new Color32(255,255,255,255);
+            tile.SetColor(color);
+
+            WorldManager.Instance.ResetRoomListCache();
+            WorldManager.Instance.UpdateRoomListCache();
+        }
 
 
 
@@ -1799,6 +1830,7 @@ namespace TeviRandomizer
                 FileStream fileStream = File.Open(text, FileMode.Open);
                 List<WorldManager.TileData> tmpRemovedTile = (List<WorldManager.TileData>)binaryFormatter.Deserialize(fileStream);
                 List<WorldManager.TileData> tmpAddedTile = (List<WorldManager.TileData>)binaryFormatter.Deserialize(fileStream);
+                List<WorldManager.MapData> tmpRooms = (List<WorldManager.MapData>)binaryFormatter.Deserialize(fileStream);
                 float TILESIZE = MainVar.instance.TILESIZE;
                 foreach (WorldManager.TileData tileData in tmpRemovedTile)
                 {
@@ -1873,11 +1905,14 @@ namespace TeviRandomizer
 
                 }
                 Traverse t = new Traverse(WorldManager.Instance);
-
                 foreach (WorldManager.TileData tileData in tmpAddedTile)
                 {
                     object[] obj = [tileData.x, tileData.y, tileData.spriteID, tileData.flipH, tileData.flipV, tileData.layer];
                     t.Method("CreateTile", obj).GetValue();
+                }
+                foreach(WorldManager.MapData room in tmpRooms)
+                {
+                    customRoom(room);
                 }
                 fileStream.Close();
                 WorldManager.Instance.areadata.SetTilePixelLighting();
