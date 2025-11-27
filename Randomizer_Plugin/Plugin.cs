@@ -1375,7 +1375,6 @@ namespace TeviRandomizer
                     }
                     subBossBoost(ref __instance);
                     setMaxBossHealth(ref __instance);
-
                     __instance.SetBreakTime();
                     if (!GemaBossRushMode.Instance.isBossRush())
                     {
@@ -1386,11 +1385,11 @@ namespace TeviRandomizer
                             {
                                 num7 = 10;
                             }
-                            if (customAttack <= (short)Difficulty.D5 && num7 > 8)
+                            if (customAttack >= (short)Difficulty.D5 && num7 > 8)
                             {
                                 num7 = 8;
                             }
-                            if (customAttack <= (short)Difficulty.D7 && num7 > 2)
+                            if (customAttack >= (short)Difficulty.D7 && num7 > 2)
                             {
                                 num7 = 2;
                             }
@@ -1401,10 +1400,10 @@ namespace TeviRandomizer
                                 {
                                     atk = 1;
                                 }
-                                if (customAttack >= (short)Difficulty.D7)
+                                if (customAttack <= (short)Difficulty.D7)
                                 {
                                     float num8 = 1f - (float)num7 * 0.025f;
-                                    if (customAttack <= (short)Difficulty.D5)
+                                    if (customAttack >= (short)Difficulty.D5)
                                     {
                                         num8 = 1f - (float)num7 * 0.01f;
                                         num8 += 0.025f;
@@ -1417,7 +1416,7 @@ namespace TeviRandomizer
                                     {
                                         num8 = 1f;
                                     }
-                                    if (customAttack <= (short)Difficulty.D7 && num8 < 0.85f)
+                                    if (customAttack >= (short)Difficulty.D7 && num8 < 0.85f)
                                     {
                                         num8 = 0.85f;
                                     }
@@ -1691,6 +1690,7 @@ namespace TeviRandomizer
             float num = 0f;
             Difficulty difficultyName = (Difficulty)customHP;
             Difficulty difficultyNameATK = (Difficulty)customAttack;
+            
             if (difficultyName >= Difficulty.D6)
             {
                 float num2 = 0f;
