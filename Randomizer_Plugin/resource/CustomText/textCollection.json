@@ -17,6 +17,15 @@
             "position":"",
             "emotion":"",
             "pose":""
+        },
+        {
+            "textId":3,
+            "text":"If you wish to leave this Area use a Silver Bell.<br>You can craft them for free in the Crafting Menu.",
+            "character":"Info",
+            "flag":"hidden",
+            "position":"",
+            "emotion":"",
+            "pose":""
         }
     ]
 }

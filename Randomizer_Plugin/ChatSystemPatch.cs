@@ -213,8 +213,7 @@ namespace TeviRandomizer
         {
             if (!__result)
             {
-                customTexts.ContainsKey(section);
-                __result = false;
+                __result = customTexts.ContainsKey(section);
             }
         }
     }
