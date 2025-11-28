@@ -529,6 +529,9 @@ namespace TeviRandomizer
             if (!LocationTracker.hasResource(WorldManager.Instance.Area, blockPos))
             {
                 LocationTracker.addResourceToList(WorldManager.Instance.Area, blockPos);
+                //empty shell
+                return true;
+
                 ItemList.Type item = RandomizerPlugin.getRandomizedResource(r,WorldManager.Instance.Area, blockPos);
                 if (item == ItemList.Type.OFF || item == ItemList.Type.I14 || item == ItemList.Type.I15 || item == ItemList.Type.I16)
                     return true;
@@ -543,6 +546,9 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static void shopBoni()
         {
+            //empty shell
+            return;
+
             EventManager em = EventManager.Instance;
             if(em.EventStage == 10)
                     em.NextStage();

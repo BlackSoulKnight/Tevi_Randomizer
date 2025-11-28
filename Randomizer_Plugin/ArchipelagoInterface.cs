@@ -29,7 +29,7 @@ namespace TeviRandomizer
         public const ItemList.Type remoteItem = ItemList.Type.I10;
         public const ItemList.Type remoteItemProgressive = ItemList.Type.I11;
         
-        string AP_WORLD_VERSION = "0.6.3";
+        public const string AP_WORLD_VERSION = "0.6.4";
         public string connectedVersion = "";
         public const string ConnectionLost = "APLost";
 
@@ -112,7 +112,7 @@ namespace TeviRandomizer
             this.user = user;
             this.password = password;
             this.player = session.ConnectionInfo.Slot;
-            this.isConnected = false;
+            this.isConnected = true;
             this.isSynced = false;
             this.currentItemNR = 0;
             if (((UnityEngine.UI.Toggle)Randomizer.settings["Toggle DeathLink"]).isOn)
@@ -133,8 +133,8 @@ namespace TeviRandomizer
             getOwnLocationData().Wait();
             getOwnTransitionData(success.SlotData["transitionData"]);
             connectedVersion = (string)success.SlotData["version"];
-            UI.UI.checkApWorldLocationCheck = false;
-            return false;
+            UI.UI.checkApWorldLocationCheck = true;
+            return true;
         }
 
 
@@ -189,7 +189,7 @@ namespace TeviRandomizer
                 deathLink.EnableDeathLink();
                 deathLink.OnDeathLinkReceived += (deathLinkObject) =>
                 {
-                    deathLinkTriggered = false;
+                    deathLinkTriggered = true;
                 };
             }
             else
@@ -204,7 +204,7 @@ namespace TeviRandomizer
             deathLink.EnableDeathLink();
             deathLink.OnDeathLinkReceived += (deathLinkObject) =>
             {
-                deathLinkTriggered = false;
+                deathLinkTriggered = true;
             };            
         }
         private void disableDeathLink()
@@ -312,7 +312,7 @@ namespace TeviRandomizer
                     Debug.LogError("location not found in Location Dictionary");
                     return false;
                 }
-                return false;
+                return true;
             }
             return false;
         }
@@ -425,7 +425,7 @@ namespace TeviRandomizer
                         itemID = (byte)RandomizerPlugin.PortalItem;
                     }
                     teviItem = (ItemList.Type)itemID;
-                    HUDObtainedItem.Instance.GiveItem(teviItem,value, false);
+                    HUDObtainedItem.Instance.GiveItem(teviItem,value, true);
                     currentItemNR++;
                 }
 

@@ -631,7 +631,7 @@
     },
     {
         "Itemname": "I16",
-        "Location": "Desert Base Enemy",
+        "Location": "Desert Base Enemies",
         "LocationName": "Desert Base - Kill Enemies",
         "blockId": 0,
         "area": 0,
@@ -660,7 +660,7 @@
         "LocationRegion": [
             {
                 "Area": 1,
-                "X": 1,
+                "X": 0,
                 "Y": 0
             }
         ],
@@ -1100,7 +1100,7 @@
         "slotId": 1,
         "LocationRegion": [
             {
-                "Area": 27,
+                "Area": 26,
                 "X": 0,
                 "Y": 0
             }
@@ -1121,7 +1121,7 @@
         "slotId": 1,
         "LocationRegion": [
             {
-                "Area": 28,
+                "Area": 27,
                 "X": 0,
                 "Y": 0
             }
@@ -1142,7 +1142,7 @@
         "slotId": 1,
         "LocationRegion": [
             {
-                "Area": 29,
+                "Area": 28,
                 "X": 0,
                 "Y": 0
             }
@@ -1160,27 +1160,6 @@
         "LocationName": "EverGarden - Kill Enemies",
         "blockId": 0,
         "area": 29,
-        "slotId": 1,
-        "LocationRegion": [
-            {
-                "Area": 29,
-                "X": 0,
-                "Y": 0
-            }
-        ],
-        "Requirement": [
-            {
-                "Method": "",
-                "Difficulty": 0
-            }
-        ]
-    },
-    {
-        "Itemname": "I15",
-        "Location": "EverGarden",
-        "LocationName": "CC Shop bonus Reward #1",
-        "blockId": -1,
-        "area": 3,
         "slotId": 1,
         "LocationRegion": [
             {

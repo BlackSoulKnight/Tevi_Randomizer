@@ -778,7 +778,12 @@
         },
         {
             "Name": "Ulvosa",
-            "Connections": []
+            "Connections": [
+                {
+                    "Exit": "Ulvosa to Gloamwood",
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ChargeShot && ITEM_SLIDE"
+                }
+            ]
         }
     ],
     "Map12": [
@@ -3447,6 +3452,11 @@
                     "Method": "( ITEM_AREABOMB || ITEM_LINEBOMB )"
                 }
             ]
+        },        
+        {
+            "Name": "Magma Swamp Enemies",
+            "Connections": [
+            ]
         },
         {
             "Name": "Teleporter DreamKeeper Outside",
@@ -3469,10 +3479,6 @@
                     "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)"
                 }
             ]
-        },
-        {
-            "Name": "Dream Enemies",
-            "Connections": []
         },
         {
             "Name": "Teleporter Deep Dream",

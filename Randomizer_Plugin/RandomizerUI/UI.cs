@@ -107,7 +107,7 @@ namespace TeviRandomizer.UI
                 string[] aplocation = ArchipelagoInterface.Instance.getApLocationNames();
                 foreach (string location in aplocation)
                 {
-                    if(!LocationTracker.APLocationName.ContainsValue(location)) {
+                    if(!LocationTracker.APLocationName.ContainsValue(location) && !LocationTracker.APResoucreLocationame.ContainsValue(location)) {
                         list.Add(location);
                     }
                 }
@@ -122,7 +122,7 @@ namespace TeviRandomizer.UI
                     errorLog.Close();
                     text2.color = Color.red;
 
-                    text2.text = $"Ap Server Locations missmatch, AP World Version {ArchipelagoInterface.Instance.connectVersion} Expected:{ArchipelagoInterface.Instance.AP_WORLD_VERSION}";
+                    text2.text = $"Ap Server Locations missmatch, AP World Version {ArchipelagoInterface.Instance.connectVersion}\n Expected:{ArchipelagoInterface.AP_WORLD_VERSION}";
                 }
                 else
                 {
