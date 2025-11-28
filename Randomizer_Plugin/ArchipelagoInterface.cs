@@ -396,11 +396,11 @@ namespace TeviRandomizer
                 lostConnection = false;
                 }
 
-            if (session?.Socket?.Connected != false)
+            if (session?.Socket?.Connected != true)
             {
                 if (isConnected)
                 {
-                    lostConnection = false;
+                    lostConnection = true;
                 }
                 isConnected = false;
                 return;
@@ -410,7 +410,7 @@ namespace TeviRandomizer
             {
                 if (deathLinkTriggered)
                 {
-                    GameObject.FindGameObjectWithTag("MainCharacter")?.GetComponent<playerController>()?.ReduceHealth(int.MaxValue, false);
+                    GameObject.FindGameObjectWithTag("MainCharacter")?.GetComponent<playerController>()?.ReduceHealth(int.MaxValue, true);
                 }
 
                 ItemList.Type teviItem;
