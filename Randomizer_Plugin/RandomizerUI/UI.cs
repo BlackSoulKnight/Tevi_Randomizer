@@ -122,7 +122,7 @@ namespace TeviRandomizer.UI
                     errorLog.Close();
                     text2.color = Color.red;
 
-                    text2.text = $"Ap Server Locations missmatch\nApworld version:{ArchipelagoInterface.Instance.connectedVersion}";
+                    text2.text = $"Ap Server Locations missmatch, AP World Version {ArchipelagoInterface.Instance.connectVersion} Expected:{ArchipelagoInterface.Instance.AP_WORLD_VERSION}";
                 }
                 else
                 {

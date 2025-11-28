@@ -827,6 +827,16 @@ def teleporterHub():
     d.write(json.dumps(s))
     d.close
 
+def addLocationId():
+    s = open(Path+"/Location.json",'r')
+    s = json.load(s) 
+    for v in s:
+        v["LocationRegion"] = [{"Area":0,"X":0,"Y":0}]
+    d = open(Path+"/LocationUpdated.json",'w+')
+    d.write(json.dumps(s))
+    d.close
+
+#addLocationId()
 teleporterHub()
 #convertAreaJsonToTxt()
 #convertLocationJsonToTxt()

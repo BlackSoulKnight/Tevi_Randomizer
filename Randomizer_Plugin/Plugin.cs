@@ -10,6 +10,7 @@ using QFSW.QC;
 using Rewired.ComponentControls.Data;
 using Steamworks;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -100,6 +101,26 @@ namespace TeviRandomizer
         static public Randomizer randomizer;
         static private bool randomizerEnabled = false;
         static private Harmony harmonyPatchInstance = new Harmony("Randomizer");
+
+        public IEnumerator screenshot(int seconds)
+        {
+            yield return new WaitForSeconds(seconds);
+            yield return new WaitForEndOfFrame();
+            Traverse t = Traverse.Create(GemaSuperSample.Instance);
+            var h = t.Field<RenderTexture>("rt").Value.height;
+            var w = t.Field<RenderTexture>("rt").Value.width;
+            Texture2D s = new Texture2D(w, h, UnityEngine.TextureFormat.ARGB32, false);
+            Rect r = new Rect(0, 0, w, h);
+            s.ReadPixels(r, 0, 0);
+            s.Apply();
+            byte[] b = s.EncodeToPNG();
+            Debug.Log(b.Length);
+            System.IO.File.WriteAllBytes(UnityEngine.Application.dataPath + "/test.png", b);
+        }
+        public void takeScreenshot(int seconds)
+        {
+            StartCoroutine(screenshot(seconds));
+        }
 
         private void Awake()
         {
@@ -291,6 +312,42 @@ namespace TeviRandomizer
 
         static public ItemList.Type getRandomizedItem(ItemList.Type itemid, byte slotid) => getRandomizedItem(itemid.ToString(), slotid);
 
+        static public ItemList.Type getRandomizedResource(ItemList.Resource item, byte area, int blockID)
+        {
+
+            ItemList.Type data;
+            if (ArchipelagoInterface.Instance.isConnected && LocationTracker.APResoucreLocationame.ContainsKey($"{area} #{blockID}"))
+            {
+                if(!ArchipelagoInterface.Instance.isItemNative(LocationTracker.APResoucreLocationame[$"{area} #{blockID}"]))
+                    data = ArchipelagoInterface.Instance.isItemProgessive(LocationTracker.APResoucreLocationame[$"{area} #{blockID}"]) ? ArchipelagoInterface.remoteItemProgressive : ArchipelagoInterface.remoteItem;
+                else
+                // Try to Parse string into Item Type, if failed check for teleporter in string else give item back
+                if (!Enum.TryParse(ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APResoucreLocationame[$"{area} #{blockID}"]),out data))
+                    {
+                    //Debug.LogWarning($"Could not find {itemid.ToString()} {slotid}");
+                    if (ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APResoucreLocationame[$"{area} #{blockID}"]).Contains("Teleporter"))
+                        data = PortalItem;
+                    else
+                        data = (ItemList.Type)((int)item + (int)ItemList.Type.I14);
+                    }
+            }
+            else
+            {
+                try
+                {
+                    data = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), __itemData[LocationTracker.APResoucreLocationame[$"{area} #{blockID}"]]);
+                }
+                catch  (Exception e)
+                {
+                    Debug.LogWarning($"{e}");
+                    if (LocationTracker.APResoucreLocationame.ContainsKey($"{area} #{blockID}") && __itemData.ContainsKey(LocationTracker.APResoucreLocationame[$"{area} #{blockID}"]) && __itemData[LocationTracker.APResoucreLocationame[$"{area} #{blockID}"]].Contains("Teleporter"))
+                        data = PortalItem;
+                    else
+                        data = (ItemList.Type)((int)item + (int)ItemList.Type.I14);
+                }
+            }
+            return data;
+        }
         static public ItemList.Type getRandomizedItem(string item, byte slot)
         {
 
@@ -774,7 +831,7 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static void changeToCraftingMap()
         {
-            ArchipelagoInterface.Instance.updateCurretMap(99);
+            ArchipelagoInterface.Instance.updateCurretMap(30);
         }
 
         [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid),"OnDisable")]
