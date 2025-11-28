@@ -67,13 +67,12 @@ namespace TeviRandomizer
 
 
 
-    [BepInPlugin("tevi.plugins.randomizer", "Randomizer", "1.4.1")]
+    [BepInPlugin("tevi.plugins.randomizer", "Randomizer", MyPluginInfo.PLUGIN_VERSION)]
     [BepInProcess("TEVI.exe")]
     public class RandomizerPlugin : BaseUnityPlugin
     {
 
         public const ItemList.Type PortalItem = ItemList.Type.I13;
-
         public enum EventID
         {
             IllusionPalace = 9999
@@ -172,7 +171,7 @@ namespace TeviRandomizer
                 harmonyPatchInstance.PatchAll(typeof(OrbPatch));
                 harmonyPatchInstance.PatchAll(typeof(RabiSmashPatch));
                 harmonyPatchInstance.PatchAll(typeof(BonusFeaturePatch));
-                harmonyPatchInstance.PatchAll(typeof(HintSystem));
+                harmonyPatchInstance.PatchAll(typeof(ChatSystemPatch));
                 harmonyPatchInstance.PatchAll(typeof(CustomMap));
                 //harmonyPatchInstance.PatchAll(typeof(ResourcePatch));
                 harmonyPatchInstance.PatchAll(typeof(EnemyPatch));
@@ -1404,6 +1403,8 @@ namespace TeviRandomizer
                     if (!GemaBossRushMode.Instance.isBossRush() || (int)GemaBossRushMode.Instance.BossRushType >= 1)
                     {
                         float num5 = 1f + 0.008f * ((float)SaveManager.Instance.GetMainLevel() + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD) / 2f + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK) + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_RATK));
+                        //float num5 = 1f + 0.00f * (float)SaveManager.Instance.GetMainLevel();
+
                         if (SaveManager.Instance.GetCustomGame(CustomGame.HighBossScale) || GemaBossRushMode.Instance.isBossRushTypeEqualOrHigher(BossRushType.XTREME))
                         {
                             num5 += 0.000225f * (float)SaveManager.Instance.GetUsedCost(GetRemain: false);
@@ -1424,6 +1425,7 @@ namespace TeviRandomizer
                                 num6 = 0.008f;
                             }
                             num5 = 1f + num6 * ((float)SaveManager.Instance.GetMainLevel() + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD) / 4f + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK) / 3.5f + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_RATK) / 3.5f);
+                            //num5 = 1f + num6 * (float)SaveManager.Instance.GetMainLevel();
                             if (customHP >= (short)Difficulty.D6 && SaveManager.Instance.GetChapter() >= 4)
                             {
                                 num5 += 0.000125f * (float)SaveManager.Instance.GetUsedCost(GetRemain: false);
@@ -1433,7 +1435,6 @@ namespace TeviRandomizer
                     }
                     subBossBoost(ref __instance);
                     setMaxBossHealth(ref __instance);
-
                     __instance.SetBreakTime();
                     if (!GemaBossRushMode.Instance.isBossRush())
                     {
@@ -1444,11 +1445,11 @@ namespace TeviRandomizer
                             {
                                 num7 = 10;
                             }
-                            if (customAttack <= (short)Difficulty.D5 && num7 > 8)
+                            if (customAttack >= (short)Difficulty.D5 && num7 > 8)
                             {
                                 num7 = 8;
                             }
-                            if (customAttack <= (short)Difficulty.D7 && num7 > 2)
+                            if (customAttack >= (short)Difficulty.D7 && num7 > 2)
                             {
                                 num7 = 2;
                             }
@@ -1459,10 +1460,10 @@ namespace TeviRandomizer
                                 {
                                     atk = 1;
                                 }
-                                if (customAttack >= (short)Difficulty.D7)
+                                if (customAttack <= (short)Difficulty.D7)
                                 {
                                     float num8 = 1f - (float)num7 * 0.025f;
-                                    if (customAttack <= (short)Difficulty.D5)
+                                    if (customAttack >= (short)Difficulty.D5)
                                     {
                                         num8 = 1f - (float)num7 * 0.01f;
                                         num8 += 0.025f;
@@ -1475,7 +1476,7 @@ namespace TeviRandomizer
                                     {
                                         num8 = 1f;
                                     }
-                                    if (customAttack <= (short)Difficulty.D7 && num8 < 0.85f)
+                                    if (customAttack >= (short)Difficulty.D7 && num8 < 0.85f)
                                     {
                                         num8 = 0.85f;
                                     }
@@ -1533,8 +1534,9 @@ namespace TeviRandomizer
                     }
                 }
 
-
-
+                __instance.maxhealth = health;
+                __instance.health = health;
+                __instance.atk = atk;
 
                 if (customAttack <= (short)Difficulty.D0)
                 {
@@ -1633,6 +1635,9 @@ namespace TeviRandomizer
                     {
                         t.Method("FreeRoamEnemyBoost").GetValue();
                     }
+                    health = __instance.health;
+                    atk = __instance.atk;
+
                     if (__instance.type == Character.Type.GemaYue_B || __instance.type == Character.Type.EinLee_B || __instance.type == Character.Type.Waero_B)
                     {
                         health = (int)((float)health * 2.2f);
@@ -1749,6 +1754,7 @@ namespace TeviRandomizer
             float num = 0f;
             Difficulty difficultyName = (Difficulty)customHP;
             Difficulty difficultyNameATK = (Difficulty)customAttack;
+            
             if (difficultyName >= Difficulty.D6)
             {
                 float num2 = 0f;

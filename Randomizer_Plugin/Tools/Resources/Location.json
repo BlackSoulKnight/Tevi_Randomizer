@@ -7807,15 +7807,15 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_DOUBLEJUMP",
+                "Method": "ITEM_DOUBLEJUMP && ITEM_SLIDE",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_AirDash && ITEM_WALLJUMP",
+                "Method": "ITEM_AirDash && ITEM_WALLJUMP && ITEM_SLIDE",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_JETPACK",
+                "Method": "ITEM_JETPACK && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ],
@@ -11012,6 +11012,25 @@
         ]
     },
     {
+        "Itemname": "EVENT_Memine0_END",
+        "Location": "Gloamwood Middle",
+        "LocationName": "Memine Gloamwood - Memine Race End",
+        "slotId": 0,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 2,
+                "Y": 8
+            }
+        ]
+    },
+    {
         "Itemname": "EVENT_Memine0",
         "Location": "Gloamwood Bottom",
         "LocationName": "Gloamwood - Memine Race",
@@ -11057,6 +11076,25 @@
         "Requirement": [
             {
                 "Method": "EVENT_Memine1",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 18,
+                "Y": 6
+            }
+        ]
+    },
+        {
+        "Itemname": "EVENT_Memine1_END",
+        "Location": "Verdazure Ocean",
+        "LocationName": "Verdazure Ocean - Memine Race End",
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ],
@@ -11124,6 +11162,24 @@
                 "Y": 14
             }
         ]
+    },    {
+        "Itemname": "EVENT_Memine2_END",
+        "Location": "CopperWood Industry to Travoll Industrie",
+        "LocationName": "CopperWood - Memine Race End",
+        "slotId": 2,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 7,
+                "X": 11,
+                "Y": 14
+            }
+        ]
     },
     {
         "Itemname": "EVENT_Memine2",
@@ -11171,6 +11227,24 @@
         "Requirement": [
             {
                 "Method": "EVENT_Memine3",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 20,
+                "X": 22,
+                "Y": 7
+            }
+        ]
+    },    {
+        "Itemname": "EVENT_Memine3_END",
+        "Location": "Valhalla City",
+        "LocationName": "Valhalla City - Memine Race End",
+        "slotId": 3,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ],
@@ -11257,6 +11331,24 @@
                 "Y": 5
             }
         ]
+    },    {
+        "Itemname": "EVENT_Memine4_END",
+        "Location": "EverGarden BossPath",
+        "LocationName": "EverGarden - Memine Race End",
+        "slotId": 4,
+        "Requirement": [
+            {
+                "Method": "",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 18,
+                "Y": 5
+            }
+        ]
     },
     {
         "Itemname": "STACKABLE_SHARD",
@@ -11309,6 +11401,24 @@
             },
             {
                 "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && EVENT_Memine5",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 18,
+                "Y": 16
+            }
+        ]
+    },    {
+        "Itemname": "EVENT_Memine5_END",
+        "Location": "Forgotten City",
+        "LocationName": "Forgotten City - Memine Race End",
+        "slotId": 5,
+        "Requirement": [
+            {
+                "Method": "",
                 "Difficulty": 0
             }
         ],
@@ -11504,9 +11614,9 @@
         ],
         "LocationRegion": [
             {
-                "Area": 99,
-                "X": 8,
-                "Y": 0
+                "Area": 3,
+                "X": 16,
+                "Y": 13
             }
         ]
     },
@@ -11524,7 +11634,7 @@
         "LocationRegion": [
             {
                 "Area": 99,
-                "X": 9,
+                "X": 8,
                 "Y": 0
             }
         ]
@@ -11543,7 +11653,7 @@
         "LocationRegion": [
             {
                 "Area": 99,
-                "X": 10,
+                "X": 9,
                 "Y": 0
             }
         ]
@@ -11562,7 +11672,7 @@
         "LocationRegion": [
             {
                 "Area": 99,
-                "X": 11,
+                "X": 10,
                 "Y": 0
             }
         ]
@@ -11581,7 +11691,7 @@
         "LocationRegion": [
             {
                 "Area": 99,
-                "X": 12,
+                "X": 11,
                 "Y": 0
             }
         ]
@@ -11600,7 +11710,7 @@
         "LocationRegion": [
             {
                 "Area": 99,
-                "X": 13,
+                "X": 12,
                 "Y": 0
             }
         ]
@@ -11619,7 +11729,7 @@
         "LocationRegion": [
             {
                 "Area": 99,
-                "X": 14,
+                "X": 13,
                 "Y": 0
             }
         ]
@@ -11638,7 +11748,7 @@
         "LocationRegion": [
             {
                 "Area": 99,
-                "X": 15,
+                "X": 14,
                 "Y": 0
             }
         ]
@@ -12189,7 +12299,7 @@
         "LocationRegion": [
             {
                 "Area": 99,
-                "X": 16,
+                "X": 15,
                 "Y": 0
             }
         ]

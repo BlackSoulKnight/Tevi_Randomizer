@@ -1,18 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.IO;
-using System.Linq;
-using System.Runtime.Serialization.Formatters.Binary;
-using Archipelago.MultiClient.Net.Packets;
+﻿using Archipelago.MultiClient.Net.Packets;
 using BepInEx;
 using EditorVar;
 using EventMode;
 using HarmonyLib;
 using Map;
+using Mono.Cecil;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.IO;
+using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
+using TMPro;
 using UnityEngine;
 using UnityEngine.TextCore;
 using UnityEngine.UIElements;
+using static MonoMod.RuntimeDetour.DynamicHookGen;
 using static UnityEngine.UIElements.UIR.Allocator2D;
 
 
@@ -38,8 +41,9 @@ namespace TeviRandomizer
         {
             Traverse worldmng = Traverse.Create(WorldManager.Instance);
             GameObject gameObject = UnityEngine.Object.Instantiate(worldmng.Field("itemset_prefab").GetValue<GameObject>());                          //Create new Item
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
-           //gameObject.transform.SetParent(worldmng.Field("TileHolder").GetValue<GameObject>().transform);
+            //gameObject.transform.SetParent(worldmng.Field("TileHolder").GetValue<GameObject>().transform);
             Layer layer = Layer.ITEM;
             WorldManager.TileData tileData = setUpTileData(x, y, spriteID, flipH, flipV, layer);
 
@@ -69,7 +73,7 @@ namespace TeviRandomizer
             Layer layer = Layer.NORMAL;
             Traverse worldmng = Traverse.Create(WorldManager.Instance);
             GameObject gameObject = UnityEngine.Object.Instantiate(worldmng.Field("tileset_prefab").GetValue<GameObject>());                          //Create new Item
-            //gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
             BoxCollider2D boxCollider2D = gameObject.GetComponentInChildren<BoxCollider2D>();
             EdgeCollider2D edgeCollider2D = gameObject.GetComponent<EdgeCollider2D>();
@@ -276,7 +280,7 @@ namespace TeviRandomizer
             float num5 = (float)x * MainVar.instance.TILESIZE + MainVar.instance.TILESIZE / 2f;
             Vector3 localPosition = new Vector3(num5, (float)(-y) * MainVar.instance.TILESIZE + MainVar.instance.TILESIZE / 2f, 1f);
             gameObject.transform.localPosition = localPosition;
-
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
             TileLink component = gameObject.GetComponent<TileLink>();
             SpriteRenderer spriteRenderer = null;
@@ -343,6 +347,8 @@ namespace TeviRandomizer
 
                 spriteRenderer.sortingOrder = 1000;                                                                                                         //Normal Layer
 
+            spriteRenderer.enabled = false;
+            gameObject.GetComponent<TextMeshPro>().enabled = false;
 
 
             WorldManager.Instance.areadata.tilelist.Add(tileData);
@@ -374,6 +380,8 @@ namespace TeviRandomizer
             Traverse worldmng = Traverse.Create(WorldManager.Instance);
             GameObject gameObject = UnityEngine.Object.Instantiate(worldmng.Field("elementset_prefab").GetValue<GameObject>());                          //Create new Item
             //gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
             BoxCollider2D boxCollider2D = gameObject.GetComponentInChildren<BoxCollider2D>();
             EdgeCollider2D edgeCollider2D = gameObject.GetComponent<EdgeCollider2D>();
 
@@ -1413,7 +1421,11 @@ namespace TeviRandomizer
                     WorldManager.Instance.areadata.SetHitBox(x, y, byte.MaxValue);
                 }
             }
+            Color color = spriteRenderer.color;
 
+            color.a = 0f;
+            spriteRenderer.enabled = false;
+            gameObject.GetComponent<TextMeshPro>().enabled = false;
             WorldManager.Instance.areadata.tilelist.Add(tileData);
         }
 
@@ -1443,6 +1455,8 @@ namespace TeviRandomizer
             Traverse worldmng = Traverse.Create(WorldManager.Instance);
             GameObject gameObject = UnityEngine.Object.Instantiate(worldmng.Field("backdrop_prefab").GetValue<GameObject>());                          //Create new Item
             //gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
             BoxCollider2D boxCollider2D = gameObject.GetComponentInChildren<BoxCollider2D>();
             EdgeCollider2D edgeCollider2D = gameObject.GetComponent<EdgeCollider2D>();
 
@@ -1686,6 +1700,35 @@ namespace TeviRandomizer
         }
 
 
+        private static void customRoom(WorldManager.MapData customroom)
+        {
+            WorldManager.MapData data = WorldManager.Instance.areadata.maplist.Find(room => room.y == customroom.y && room.x == customroom.x);
+            if (data == default)
+            {
+                Traverse traverse = new Traverse(WorldManager.Instance);
+                object[] array3 = new object[] { customroom.x, customroom.y, customroom.areatype, customroom.bgtype, customroom.waterlevel, customroom.suntype, customroom.camerafixTopY };
+                traverse.Method("CreateMapData", array3).GetValue();
+            }
+            data.y = customroom.y;
+            data.x = customroom.x;
+            data.roomtype = customroom.roomtype;
+            data.areatype = customroom.areatype;
+            data.waterlevel = customroom.waterlevel;
+            data.bgtype = customroom.bgtype;
+            data.suntype = customroom.suntype;
+            data.camerafixTopY = customroom.camerafixTopY;
+
+            var a = MainVar.instance.MAPSIZEX * MainVar.instance.MAPSIZEY * WorldManager.Instance.Area + customroom.y * MainVar.instance.MAPSIZEX + customroom.x;
+
+            Traverse fullMap = new Traverse(FullMap.Instance);
+            fullMap.Method("SetRoomData", (object[])[WorldManager.Instance.Area, customroom.x, customroom.y, customroom.roomtype, customroom.areatype]).GetValue();
+            var tile = fullMap.Method("CreateRoomTile", (object[])[a]).GetValue<FullMapTile>();
+            Color32 color = new Color32(255,255,255,255);
+            tile.SetColor(color);
+
+            WorldManager.Instance.ResetRoomListCache();
+            WorldManager.Instance.UpdateRoomListCache();
+        }
 
 
 
@@ -1783,6 +1826,7 @@ namespace TeviRandomizer
                 }
             }
         }
+        static bool loadingCustomMap = false;
 
         public static void loadMap()
         {
@@ -1791,9 +1835,11 @@ namespace TeviRandomizer
             string text = $"{RandomizerPlugin.pluginPath}/CustomMaps/CustomMap{area}.dat";
             if (File.Exists(text))
             {
+                loadingCustomMap = true;
                 FileStream fileStream = File.Open(text, FileMode.Open);
                 List<WorldManager.TileData> tmpRemovedTile = (List<WorldManager.TileData>)binaryFormatter.Deserialize(fileStream);
                 List<WorldManager.TileData> tmpAddedTile = (List<WorldManager.TileData>)binaryFormatter.Deserialize(fileStream);
+                List<WorldManager.MapData> tmpRooms = (List<WorldManager.MapData>)binaryFormatter.Deserialize(fileStream);
                 float TILESIZE = MainVar.instance.TILESIZE;
                 foreach (WorldManager.TileData tileData in tmpRemovedTile)
                 {
@@ -1868,14 +1914,43 @@ namespace TeviRandomizer
 
                 }
                 Traverse t = new Traverse(WorldManager.Instance);
-
                 foreach (WorldManager.TileData tileData in tmpAddedTile)
                 {
                     object[] obj = [tileData.x, tileData.y, tileData.spriteID, tileData.flipH, tileData.flipV, tileData.layer];
+
                     t.Method("CreateTile", obj).GetValue();
+
+
+                }
+                foreach (WorldManager.MapData room in tmpRooms)
+                {
+                    customRoom(room);
                 }
                 fileStream.Close();
-                WorldManager.Instance.areadata.SetTilePixelLighting();
+                //WorldManager.Instance.areadata.SetTilePixelLighting();
+                //WorldManager.Instance.ToogleTileMode(true);
+                //WorldManager.Instance.ToogleTileMode(false);
+                loadingCustomMap = false;
+            }
+
+        }
+
+        [HarmonyPatch(typeof(WorldManager), "CreateTile")]
+        [HarmonyPostfix]
+        private static void fetchNewTile(ref GameObject ___TileHolder, ref bool __result)
+        {
+            if (__result && loadingCustomMap)
+            {
+                GameObject newObject = ___TileHolder.transform.GetChild(___TileHolder.transform.childCount-1).gameObject;
+                var renderer = newObject.GetComponent<SpriteRenderer>();
+                if (renderer != null)
+                    renderer.enabled = false;
+                TextMeshPro text = newObject.GetComponentInChildren<TextMeshPro>();
+                if (text != null)
+                {
+                    text.enabled = false;
+                }
+
             }
         }
 

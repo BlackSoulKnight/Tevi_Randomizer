@@ -1251,17 +1251,17 @@ namespace TeviRandomizer
 
 
                             //Add major Item to Hint List
-                            if (Enum.IsDefined(typeof(MajorItemFlag), item) && currHint < HintSystem.numberOfHints)
+                            if (Enum.IsDefined(typeof(MajorItemFlag), item) && currHint < ChatSystemPatch.numberOfHints)
                             {
-                                if (vanillaItemCraft && loc.Loaction.Contains("Upgrade") && currBackHint + currHint < HintSystem.numberOfHints)
+                                if (vanillaItemCraft && loc.Loaction.Contains("Upgrade") && currBackHint + currHint < ChatSystemPatch.numberOfHints)
                                 {
 
-                                    HintSystem.hintList[HintSystem.hintList.Length - currBackHint] = (loc.Locationname, item, (byte)loc.newSlotId);
+                                    ChatSystemPatch.hintList[ChatSystemPatch.hintList.Length - currBackHint] = (loc.Locationname, item, (byte)loc.newSlotId);
                                     currBackHint++;
                                 }
                                 else
                                 {
-                                    HintSystem.hintList[currHint] = (loc.Locationname, item, (byte)loc.newSlotId);
+                                    ChatSystemPatch.hintList[currHint] = (loc.Locationname, item, (byte)loc.newSlotId);
                                     currHint++;
                                 }
                             }
