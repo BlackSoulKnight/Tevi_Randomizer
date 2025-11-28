@@ -11,6 +11,7 @@ using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
+using TMPro;
 using UnityEngine;
 using UnityEngine.TextCore;
 using UnityEngine.UIElements;
@@ -346,6 +347,8 @@ namespace TeviRandomizer
 
                 spriteRenderer.sortingOrder = 1000;                                                                                                         //Normal Layer
 
+            spriteRenderer.enabled = false;
+            gameObject.GetComponent<TextMeshPro>().enabled = false;
 
 
             WorldManager.Instance.areadata.tilelist.Add(tileData);
@@ -1418,7 +1421,11 @@ namespace TeviRandomizer
                     WorldManager.Instance.areadata.SetHitBox(x, y, byte.MaxValue);
                 }
             }
+            Color color = spriteRenderer.color;
 
+            color.a = 0f;
+            spriteRenderer.enabled = false;
+            gameObject.GetComponent<TextMeshPro>().enabled = false;
             WorldManager.Instance.areadata.tilelist.Add(tileData);
         }
 
@@ -1819,6 +1826,7 @@ namespace TeviRandomizer
                 }
             }
         }
+        static bool loadingCustomMap = false;
 
         public static void loadMap()
         {
@@ -1827,6 +1835,7 @@ namespace TeviRandomizer
             string text = $"{RandomizerPlugin.pluginPath}/CustomMaps/CustomMap{area}.dat";
             if (File.Exists(text))
             {
+                loadingCustomMap = true;
                 FileStream fileStream = File.Open(text, FileMode.Open);
                 List<WorldManager.TileData> tmpRemovedTile = (List<WorldManager.TileData>)binaryFormatter.Deserialize(fileStream);
                 List<WorldManager.TileData> tmpAddedTile = (List<WorldManager.TileData>)binaryFormatter.Deserialize(fileStream);
@@ -1908,15 +1917,40 @@ namespace TeviRandomizer
                 foreach (WorldManager.TileData tileData in tmpAddedTile)
                 {
                     object[] obj = [tileData.x, tileData.y, tileData.spriteID, tileData.flipH, tileData.flipV, tileData.layer];
+
                     t.Method("CreateTile", obj).GetValue();
+
+
                 }
-                foreach(WorldManager.MapData room in tmpRooms)
+                foreach (WorldManager.MapData room in tmpRooms)
                 {
                     customRoom(room);
                 }
                 fileStream.Close();
-                WorldManager.Instance.areadata.SetTilePixelLighting();
-                WorldManager.Instance.ToogleTileMode(true);
+                //WorldManager.Instance.areadata.SetTilePixelLighting();
+                //WorldManager.Instance.ToogleTileMode(true);
+                //WorldManager.Instance.ToogleTileMode(false);
+                loadingCustomMap = false;
+            }
+
+        }
+
+        [HarmonyPatch(typeof(WorldManager), "CreateTile")]
+        [HarmonyPostfix]
+        private static void fetchNewTile(ref GameObject ___TileHolder, ref bool __result)
+        {
+            if (__result && loadingCustomMap)
+            {
+                GameObject newObject = ___TileHolder.transform.GetChild(___TileHolder.transform.childCount-1).gameObject;
+                var renderer = newObject.GetComponent<SpriteRenderer>();
+                if (renderer != null)
+                    renderer.enabled = false;
+                TextMeshPro text = newObject.GetComponentInChildren<TextMeshPro>();
+                if (text != null)
+                {
+                    text.enabled = false;
+                }
+
             }
         }
 
