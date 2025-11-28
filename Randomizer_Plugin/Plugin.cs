@@ -1346,6 +1346,8 @@ namespace TeviRandomizer
                     if (!GemaBossRushMode.Instance.isBossRush() || (int)GemaBossRushMode.Instance.BossRushType >= 1)
                     {
                         float num5 = 1f + 0.008f * ((float)SaveManager.Instance.GetMainLevel() + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD) / 2f + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK) + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_RATK));
+                        //float num5 = 1f + 0.00f * (float)SaveManager.Instance.GetMainLevel();
+
                         if (SaveManager.Instance.GetCustomGame(CustomGame.HighBossScale) || GemaBossRushMode.Instance.isBossRushTypeEqualOrHigher(BossRushType.XTREME))
                         {
                             num5 += 0.000225f * (float)SaveManager.Instance.GetUsedCost(GetRemain: false);
@@ -1366,6 +1368,7 @@ namespace TeviRandomizer
                                 num6 = 0.008f;
                             }
                             num5 = 1f + num6 * ((float)SaveManager.Instance.GetMainLevel() + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD) / 4f + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK) / 3.5f + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_RATK) / 3.5f);
+                            //num5 = 1f + num6 * (float)SaveManager.Instance.GetMainLevel();
                             if (customHP >= (short)Difficulty.D6 && SaveManager.Instance.GetChapter() >= 4)
                             {
                                 num5 += 0.000125f * (float)SaveManager.Instance.GetUsedCost(GetRemain: false);
@@ -1474,8 +1477,9 @@ namespace TeviRandomizer
                     }
                 }
 
-
-
+                __instance.maxhealth = health;
+                __instance.health = health;
+                __instance.atk = atk;
 
                 if (customAttack <= (short)Difficulty.D0)
                 {
@@ -1574,6 +1578,9 @@ namespace TeviRandomizer
                     {
                         t.Method("FreeRoamEnemyBoost").GetValue();
                     }
+                    health = __instance.health;
+                    atk = __instance.atk;
+
                     if (__instance.type == Character.Type.GemaYue_B || __instance.type == Character.Type.EinLee_B || __instance.type == Character.Type.Waero_B)
                     {
                         health = (int)((float)health * 2.2f);
