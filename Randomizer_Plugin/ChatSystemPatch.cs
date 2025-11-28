@@ -149,10 +149,10 @@ namespace TeviRandomizer
         {
             extraList.Add(createChatRow(section, text, character, flag, position, emotion, pose));
         }
-        static public void startChat()
+        static public void startChat(string section)
         {
             ChatSystem.Instance.setStatus(SystemVar.Status.OPEN);
-            ChatSystem.Instance.StartChat(1, "CustomChat");
+            ChatSystem.Instance.StartChat(1, "APLost");
         }
 
         [HarmonyPatch(typeof(ChatSystem),"StartChat")]
@@ -179,10 +179,19 @@ namespace TeviRandomizer
                 }
                 else
                 {
-                    Debug.LogWarning($"[CustomChat] Failed to load {section}");
-                    ___chatdb.Add(createChatRow("meh", $"Failed to load Chat {section}"));
+                    switch (section)
+                    {
+                        case ArchipelagoInterface.ConnectionLost:
+                        ___chatdb.CopyFrom(extraList);
+                            break;
+                        default:
+                            Debug.LogWarning($"[CustomChat] Failed to load {section}");
+                            ___chatdb.Add(createChatRow("meh", $"Failed to load Chat {section}"));
+                            break;
+                    }
                 }
             }
+            extraList.Clear();
         }
         [HarmonyPatch(typeof(CharacterVoiceManager), "ReleaseVoiceGroup")]
         [HarmonyPostfix]
@@ -205,7 +214,7 @@ namespace TeviRandomizer
             if (!__result)
             {
                 customTexts.ContainsKey(section);
-                __result = true;
+                __result = false;
             }
         }
     }

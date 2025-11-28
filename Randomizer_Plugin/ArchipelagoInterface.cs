@@ -31,6 +31,8 @@ namespace TeviRandomizer
         
         string AP_WORLD_VERSION = "0.6.3";
         public string connectedVersion = "";
+        public const string ConnectionLost = "APLost";
+
         private class LocationData
         {
             public string item { get; set; }
@@ -110,7 +112,7 @@ namespace TeviRandomizer
             this.user = user;
             this.password = password;
             this.player = session.ConnectionInfo.Slot;
-            this.isConnected = true;
+            this.isConnected = false;
             this.isSynced = false;
             this.currentItemNR = 0;
             if (((UnityEngine.UI.Toggle)Randomizer.settings["Toggle DeathLink"]).isOn)
@@ -129,8 +131,8 @@ namespace TeviRandomizer
             getOwnLocationData().Wait();
             getOwnTransitionData(success.SlotData["transitionData"]);
             connectedVersion = (string)success.SlotData["version"];
-            UI.UI.checkApWorldLocationCheck = true;
-            return true;
+            UI.UI.checkApWorldLocationCheck = false;
+            return false;
         }
 
 
@@ -185,7 +187,7 @@ namespace TeviRandomizer
                 deathLink.EnableDeathLink();
                 deathLink.OnDeathLinkReceived += (deathLinkObject) =>
                 {
-                    deathLinkTriggered = true;
+                    deathLinkTriggered = false;
                 };
             }
             else
@@ -200,7 +202,7 @@ namespace TeviRandomizer
             deathLink.EnableDeathLink();
             deathLink.OnDeathLinkReceived += (deathLinkObject) =>
             {
-                deathLinkTriggered = true;
+                deathLinkTriggered = false;
             };            
         }
         private void disableDeathLink()
@@ -308,7 +310,7 @@ namespace TeviRandomizer
                     Debug.LogError("location not found in Location Dictionary");
                     return false;
                 }
-                return true;
+                return false;
             }
             return false;
         }
@@ -344,7 +346,7 @@ namespace TeviRandomizer
         {
             if(locations.ContainsKey(Location))
                 return locations[Location].player == this.player;
-            return true;
+            return false;
         }
         public bool isItemNative(ItemList.Type item,byte slot) => isItemNative(LocationTracker.APLocationName[$"{item} #{slot}"]);
 
@@ -388,15 +390,15 @@ namespace TeviRandomizer
                 if (lostConnection)
                 {
                 ChatSystemPatch.addNewChatLine("a", "Lost connection To the AP Server");
-                ChatSystemPatch.startChat();
+                ChatSystemPatch.startChat(ConnectionLost);
                 lostConnection = false;
                 }
 
-            if (session?.Socket?.Connected != true)
+            if (session?.Socket?.Connected != false)
             {
                 if (isConnected)
                 {
-                    lostConnection = true;
+                    lostConnection = false;
                 }
                 isConnected = false;
                 return;
@@ -406,7 +408,7 @@ namespace TeviRandomizer
             {
                 if (deathLinkTriggered)
                 {
-                    GameObject.FindGameObjectWithTag("MainCharacter")?.GetComponent<playerController>()?.ReduceHealth(int.MaxValue, true);
+                    GameObject.FindGameObjectWithTag("MainCharacter")?.GetComponent<playerController>()?.ReduceHealth(int.MaxValue, false);
                 }
 
                 ItemList.Type teviItem;
@@ -421,7 +423,7 @@ namespace TeviRandomizer
                         itemID = (byte)RandomizerPlugin.PortalItem;
                     }
                     teviItem = (ItemList.Type)itemID;
-                    HUDObtainedItem.Instance.GiveItem(teviItem,value, true);
+                    HUDObtainedItem.Instance.GiveItem(teviItem,value, false);
                     currentItemNR++;
                 }
 

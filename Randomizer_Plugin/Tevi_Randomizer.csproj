@@ -25,57 +25,70 @@
 	
 	<Reference Include="Assembly-CSharp">
     <HintPath>Assembly-CSharp.dll</HintPath>
+    <Private>false</Private>
   </Reference>
 	
 	<Reference Include="Assembly-CSharp-firstpass">
     <HintPath>Assembly-CSharp-firstpass.dll</HintPath>
+    <Private>false</Private>
   </Reference>
 
 	<Reference Include="Newtonsoft.Json">
     <HintPath>Newtonsoft.Json.dll</HintPath>
+    <Private>false</Private>
   </Reference>
 
 	<Reference Include="Rewired_Core">
     <HintPath>Rewired_Core.dll</HintPath>
+    <Private>false</Private>
   </Reference>	
   
   <Reference Include="Rewired_Windows_Functions">
     <HintPath>Rewired_Windows_Functions.dll</HintPath>
+    <Private>false</Private>
   </Reference>  
   
   <Reference Include="Rewired.Windows">
     <HintPath>Rewired_Windows.dll</HintPath>
+    <Private>false</Private>
   </Reference>
 
   <Reference Include="Facepunch.Steamworks.Win64">
     <HintPath>Facepunch.Steamworks.Win64.dll</HintPath>
+    <Private>false</Private>
   </Reference>
   
   <Reference Include="Unity.TextMeshPro">
     <HintPath>Unity.TextMeshPro.dll</HintPath>
+    <Private>false</Private>
   </Reference>  
   
   <Reference Include="Unity.Addressables">
     <HintPath>Unity.Addressables.dll</HintPath>
+    <Private>false</Private>
   </Reference>  
   
   <Reference Include="spine-unity">
     <HintPath>spine-unity.dll</HintPath>
+    <Private>false</Private>
   </Reference>
 
   <Reference Include="Unity.ResourceManager">
     <HintPath>Unity.ResourceManager.dll</HintPath>
+    <Private>false</Private>
   </Reference>
 
   <Reference Include="QFSW.QC">
     <HintPath>QFSW.QC.dll</HintPath>
+    <Private>false</Private>
   </Reference>
   
     <Reference Include="UnityEngine.UI">
     <HintPath>UnityEngine.UI.dll</HintPath>
-  </Reference>
-  
-  
+      <Private>false</Private>
+    </Reference>
+
+
   </ItemGroup>
   
   <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
