@@ -292,6 +292,7 @@ namespace TeviRandomizer
                 SaveManager.Instance.SetEventFlag(Mode.Chap0CombatTut7x7, 1);
                 SaveManager.Instance.SetEventFlag(Mode.Chap3ComboRank, 1);
                 SaveManager.Instance.SetEventFlag(Mode.Chap1PinTool9x9, 1);
+                SaveManager.Instance.SetEventFlag(Mode.Chap1Start, 1);
                 SaveManager.Instance.SetEventFlag(Mode.Chap0UnlockFirstVent, 1, force: true);
                 SaveManager.Instance.SetMiniFlag(Mini.UnlockedCraft, 1);
                 EventManager.Instance.TryStartEvent(Mode.Chap0GetKnife, force: true);

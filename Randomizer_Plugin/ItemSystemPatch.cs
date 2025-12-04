@@ -495,7 +495,7 @@ namespace TeviRandomizer
         [HarmonyPostfix]
         static void uncheckDestroyedBlock() => collectType = collectResourceType.NONE;
 
-        [HarmonyPatch(typeof(enemyController), "DefeatEnemy")]
+        [HarmonyPatch(typeof(enemyController), "AreaDefeatUpgradeRequirement")]
         [HarmonyPrefix]
         static void checkKilledEnemy() => collectType = collectResourceType.ENEMY;
 
@@ -519,6 +519,9 @@ namespace TeviRandomizer
                     Debug.LogWarning($"Block Destroyed at {blockPos}, Type: {r.ToString()}");
                     break;
                 case collectResourceType.ENEMY:
+                    //place a switch for different resources gained
+                    if (r != ItemList.Resource.UPGRADE)
+                        return true;
                     Debug.LogWarning($"Upgrade collected from killing mobs at Area:{WorldManager.Instance.Area}");
                     break;
                 case collectResourceType.EVENT:
@@ -526,6 +529,7 @@ namespace TeviRandomizer
                 default:
                     return true;
             }
+            collectType = collectResourceType.NONE;
             if (!LocationTracker.hasResource(WorldManager.Instance.Area, blockPos))
             {
                 LocationTracker.addResourceToList(WorldManager.Instance.Area, blockPos);
@@ -538,7 +542,7 @@ namespace TeviRandomizer
                 HUDObtainedItem.Instance.GiveItem(item, 1, true);
                 return false;
             }
-            return false;
+            return true;
         }
 
         static List<ItemList.Type> itemQueue;
