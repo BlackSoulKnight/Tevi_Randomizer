@@ -1403,8 +1403,9 @@ namespace TeviRandomizer
                 {
                     if (!GemaBossRushMode.Instance.isBossRush() || (int)GemaBossRushMode.Instance.BossRushType >= 1)
                     {
-                        //float num5 = 1f + 0.008f * ((float)SaveManager.Instance.GetMainLevel() + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD) / 2f + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK) + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_RATK));
-                        float num5 = 1f + 0.00f * (float)SaveManager.Instance.GetMainLevel();
+                        //potion scaling
+                        float num5 = 1f + 0.008f * ((float)SaveManager.Instance.GetMainLevel() + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD) / 2f + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK) + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_RATK));
+                        //float num5 = 1f + 0.00f * (float)SaveManager.Instance.GetMainLevel();
 
                         if (SaveManager.Instance.GetCustomGame(CustomGame.HighBossScale) || GemaBossRushMode.Instance.isBossRushTypeEqualOrHigher(BossRushType.XTREME))
                         {
@@ -1425,8 +1426,8 @@ namespace TeviRandomizer
                             {
                                 num6 = 0.008f;
                             }
-                            //num5 = 1f + num6 * ((float)SaveManager.Instance.GetMainLevel() + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD) / 4f + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK) / 3.5f + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_RATK) / 3.5f);
-                            num5 = 1f + num6 * (float)SaveManager.Instance.GetMainLevel();
+                            num5 = 1f + num6 * ((float)SaveManager.Instance.GetMainLevel() + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_SHARD) / 4f + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_MATK) / 3.5f + (float)(int)SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_RATK) / 3.5f);
+                            //num5 = 1f + num6 * (float)SaveManager.Instance.GetMainLevel();
                             if (customHP >= (short)Difficulty.D6 && SaveManager.Instance.GetChapter() >= 4)
                             {
                                 num5 += 0.000125f * (float)SaveManager.Instance.GetUsedCost(GetRemain: false);

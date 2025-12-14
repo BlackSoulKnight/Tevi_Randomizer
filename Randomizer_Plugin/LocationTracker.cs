@@ -1,5 +1,6 @@
 
 using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -31,7 +32,7 @@ namespace TeviRandomizer
             JArray locations = JArray.Parse(File.ReadAllText(path + "UpgradeResourceLocation.json"));
             foreach(var loc in locations)
             {
-                keyValuePairs.Add($"{loc["area"]} #{loc["blockId"]}", loc["LocationName"].ToString());
+                keyValuePairs.Add($"{loc["area"]} #{(int)loc["blockId"]}", loc["LocationName"].ToString());
             }
             return keyValuePairs;
         }

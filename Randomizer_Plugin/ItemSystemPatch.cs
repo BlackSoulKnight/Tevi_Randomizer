@@ -525,33 +525,37 @@ namespace TeviRandomizer
                     Debug.LogWarning($"Upgrade collected from killing mobs at Area:{WorldManager.Instance.Area}");
                     break;
                 case collectResourceType.EVENT:
-                case collectResourceType.NONE:
-                default:
+                    var eventmode = EventManager.Instance.GetCurrentEvent();
+                    Debug.Log($"[TeviRandomizer] Collecting Resource from: {EventManager.Instance.GetCurrentEvent().ToString()}");
+                    switch (eventmode)
+                    {
+                        default:break;
+                    }
                     return true;
-            }
+                case collectResourceType.NONE:
+                    default:
+                        return true;
+                    }
             collectType = collectResourceType.NONE;
             if (!LocationTracker.hasResource(WorldManager.Instance.Area, blockPos))
             {
                 LocationTracker.addResourceToList(WorldManager.Instance.Area, blockPos);
-                //empty shell
-                return true;
-
                 ItemList.Type item = RandomizerPlugin.getRandomizedResource(r,WorldManager.Instance.Area, blockPos);
-                if (item == ItemList.Type.OFF || item == ItemList.Type.I14 || item == ItemList.Type.I15 || item == ItemList.Type.I16)
-                    return true;
-                HUDObtainedItem.Instance.GiveItem(item, 1, true);
-                return false;
+                if (!(item == ItemList.Type.OFF || item == ItemList.Type.I14 || item == ItemList.Type.I15 || item == ItemList.Type.I16))
+                {
+                    HUDObtainedItem.Instance.GiveItem(item, 1, true);
+                    return false;
+                }
             }
             return true;
         }
 
+        const int ShopBonusOffset = -100;
         static List<ItemList.Type> itemQueue;
         [HarmonyPatch(typeof(ShopBonus),"EVENT")]
         [HarmonyPrefix]
         static void shopBoni()
         {
-            //empty shell
-            return;
 
             EventManager em = EventManager.Instance;
             if(em.EventStage == 10)
@@ -569,10 +573,10 @@ namespace TeviRandomizer
                     while (SaveManager.Instance.savedata.coinUsedIan >= 3000 + 7000 * SaveManager.Instance.GetMiniFlag(Mini.ShopBonusIan))
                     {
                         SaveManager.Instance.SetMiniFlag(Mini.ShopBonusIan, (byte)(SaveManager.Instance.GetMiniFlag(Mini.ShopBonusIan) + 1));
-                        if (!LocationTracker.hasResource(3, -1000 * SaveManager.Instance.GetMiniFlag(Mini.ShopBonusIan)))
+                        if (!LocationTracker.hasResource(3, ShopBonusOffset + SaveManager.Instance.GetMiniFlag(Mini.ShopBonusIan)))
                         {
-                            LocationTracker.addResourceToList(3, -1000 * SaveManager.Instance.GetMiniFlag(Mini.ShopBonusIan));
-                            itemQueue.Add(RandomizerPlugin.getRandomizedResource(ItemList.Resource.CORE, 3, -1000 * SaveManager.Instance.GetMiniFlag(Mini.ShopBonusIan)));
+                            LocationTracker.addResourceToList(3, ShopBonusOffset + SaveManager.Instance.GetMiniFlag(Mini.ShopBonusIan));
+                            itemQueue.Add(RandomizerPlugin.getRandomizedResource(ItemList.Resource.CORE, 3,ShopBonusOffset+ SaveManager.Instance.GetMiniFlag(Mini.ShopBonusIan)));
                         }
                     }
                 }
@@ -582,10 +586,10 @@ namespace TeviRandomizer
                     while (SaveManager.Instance.savedata.coinUsedCC >= 4000 + 7500 * SaveManager.Instance.GetMiniFlag(Mini.ShopBonusCC))
                     {
                         SaveManager.Instance.SetMiniFlag(Mini.ShopBonusCC, (byte)(SaveManager.Instance.GetMiniFlag(Mini.ShopBonusCC) + 1));
-                        if (!LocationTracker.hasResource(3, -1 * SaveManager.Instance.GetMiniFlag(Mini.ShopBonusCC)))
+                        if (!LocationTracker.hasResource(3, ShopBonusOffset - SaveManager.Instance.GetMiniFlag(Mini.ShopBonusCC)))
                         {
-                            LocationTracker.addResourceToList(3, -1 * SaveManager.Instance.GetMiniFlag(Mini.ShopBonusCC));
-                            itemQueue.Add(RandomizerPlugin.getRandomizedResource(ItemList.Resource.CORE, 3, -1 * SaveManager.Instance.GetMiniFlag(Mini.ShopBonusCC)));
+                            LocationTracker.addResourceToList(3, ShopBonusOffset - SaveManager.Instance.GetMiniFlag(Mini.ShopBonusCC));
+                            itemQueue.Add(RandomizerPlugin.getRandomizedResource(ItemList.Resource.CORE, 3, ShopBonusOffset - SaveManager.Instance.GetMiniFlag(Mini.ShopBonusCC)));
                         }
                     }
                 }
