@@ -11,6 +11,13 @@
                 "Method": "ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE",
                 "Difficulty": 0
             }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 0,
+                "X": 18,
+                "Y": 13
+            }
         ]
     },
     {
@@ -24,6 +31,13 @@
             {
                 "Method": "ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE",
                 "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 0,
+                "X": 18,
+                "Y": 13
             }
         ]
     },
@@ -39,6 +53,13 @@
                 "Method": "ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE",
                 "Difficulty": 0
             }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 0,
+                "X": 14,
+                "Y": 11
+            }
         ]
     },
     {
@@ -52,6 +73,13 @@
             {
                 "Method": "ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE",
                 "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 0,
+                "X": 14,
+                "Y": 11
             }
         ]
     },
@@ -68,6 +96,13 @@
                 "Method": "ITEM_LINEBOMB || ITEM_KNIFE",
                 "Difficulty": 0
             }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 0,
+                "X": 9,
+                "Y": 16
+            }
         ]
     },
     {
@@ -81,6 +116,13 @@
             {
                 "Method": "ITEM_LINEBOMB || ITEM_KNIFE",
                 "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 0,
+                "X": 9,
+                "Y": 16
             }
         ]
     },
@@ -96,6 +138,13 @@
                 "Method": "ITEM_LINEBOMB || ITEM_KNIFE",
                 "Difficulty": 0
             }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 0,
+                "X": 9,
+                "Y": 16
+            }
         ]
     },
     {
@@ -109,6 +158,13 @@
             {
                 "Method": "ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE",
                 "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 7,
+                "Y": 10
             }
         ]
     },
@@ -124,6 +180,13 @@
                 "Method": "ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE",
                 "Difficulty": 0
             }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 7,
+                "Y": 10
+            }
         ]
     },
     {
@@ -137,6 +200,13 @@
             {
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_DOUBLEJUMP || ITEM_HIJUMP || ITEM_JETPACK || ITEM_AirDash)",
                 "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 6,
+                "Y": 10
             }
         ]
     },
@@ -152,6 +222,13 @@
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_DOUBLEJUMP || ITEM_HIJUMP || ITEM_JETPACK || ITEM_AirDash)",
                 "Difficulty": 0
             }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 6,
+                "Y": 10
+            }
         ]
     },
     {
@@ -165,6 +242,13 @@
             {
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_DOUBLEJUMP || ITEM_HIJUMP || ITEM_JETPACK || ITEM_AirDash)",
                 "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 6,
+                "Y": 10
             }
         ]
     },
@@ -180,6 +264,13 @@
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_DOUBLEJUMP || ITEM_HIJUMP || ITEM_JETPACK || ITEM_AirDash)",
                 "Difficulty": 0
             }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 6,
+                "Y": 10
+            }
         ]
     },
     {
@@ -193,6 +284,13 @@
             {
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
                 "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 11,
+                "Y": 8
             }
         ]
     },
@@ -208,12 +306,19 @@
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
                 "Difficulty": 0
             }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 11,
+                "Y": 8
+            }
         ]
     },
     {
         "Itemname": "I14",
         "Location": "Thanatara Canyon",
-        "LocationName": "Thanatara Canyon - Money Room X: 11 Y: 8 #1",
+        "LocationName": "Thanatara Canyon - Money Room X: 11 Y: 8 #2",
         "blockId": 269111,
         "area": 1,
         "slotId": 1,
@@ -222,12 +327,19 @@
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
                 "Difficulty": 0
             }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 11,
+                "Y": 8
+            }
         ]
     },
     {
         "Itemname": "I14",
         "Location": "Thanatara Canyon",
-        "LocationName": "Thanatara Canyon - Money Room X: 11 Y: 8 #1",
+        "LocationName": "Thanatara Canyon - Money Room X: 11 Y: 8 #3",
         "blockId": 271111,
         "area": 1,
         "slotId": 1,
@@ -235,6 +347,13 @@
             {
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
                 "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 11,
+                "Y": 8
             }
         ]
     },
@@ -250,12 +369,19 @@
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
                 "Difficulty": 0
             }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 9,
+                "Y": 9
+            }
         ]
     },
     {
         "Itemname": "I14",
         "Location": "Thanatara Canyon",
-        "LocationName": "Thanatara Canyon - Money Room X: 0 Y: 0 #1",
+        "LocationName": "Thanatara Canyon - Money Room X: 2 Y: 6 #1",
         "blockId": 70093,
         "area": 1,
         "slotId": 1,
@@ -264,12 +390,19 @@
                 "Method": "ITEM_SLIDE && (ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || ( ITEM_WALLJUMP && CKick )) && (((ITEM_HIJUMP || ITEM_AirDash) && (ITEM_DOUBLEJUMP || ITEM_JETPACK))||(ITEM_JETPACK && ITEM_DOUBLEJUMP)) && ChargeShot && (ITEM_AREABOMB || ITEM_KNIFE)",
                 "Difficulty": 0
             }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 2,
+                "Y": 6
+            }
         ]
     },
     {
         "Itemname": "I14",
         "Location": "Thanatara Canyon",
-        "LocationName": "Thanatara Canyon - Money Room X: 2 Y: 6 #1",
+        "LocationName": "Thanatara Canyon - Money Room X: 2 Y: 6 #2",
         "blockId": 70092,
         "area": 1,
         "slotId": 1,
@@ -278,12 +411,19 @@
                 "Method": "ITEM_SLIDE && (ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || ( ITEM_WALLJUMP && CKick )) && (((ITEM_HIJUMP || ITEM_AirDash) && (ITEM_DOUBLEJUMP || ITEM_JETPACK))||(ITEM_JETPACK && ITEM_DOUBLEJUMP)) && ChargeShot && (ITEM_AREABOMB || ITEM_KNIFE)",
                 "Difficulty": 0
             }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 2,
+                "Y": 6
+            }
         ]
     },
     {
         "Itemname": "I14",
         "Location": "Thanatara Canyon",
-        "LocationName": "Thanatara Canyon - Money Room X: 2 Y: 6 #1",
+        "LocationName": "Thanatara Canyon - Money Room X: 2 Y: 6 #3",
         "blockId": 70091,
         "area": 1,
         "slotId": 1,
@@ -292,12 +432,19 @@
                 "Method": "ITEM_SLIDE && (ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || ( ITEM_WALLJUMP && CKick )) && (((ITEM_HIJUMP || ITEM_AirDash) && (ITEM_DOUBLEJUMP || ITEM_JETPACK))||(ITEM_JETPACK && ITEM_DOUBLEJUMP)) && ChargeShot && (ITEM_AREABOMB || ITEM_KNIFE)",
                 "Difficulty": 0
             }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 2,
+                "Y": 6
+            }
         ]
     },
     {
         "Itemname": "I14",
         "Location": "Thanatara Canyon",
-        "LocationName": "Thanatara Canyon - Money Room X: 2 Y: 6 #1",
+        "LocationName": "Thanatara Canyon - Money Room X: 2 Y: 6 #4",
         "blockId": 69091,
         "area": 1,
         "slotId": 1,
@@ -306,12 +453,19 @@
                 "Method": "ITEM_SLIDE && (ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || ( ITEM_WALLJUMP && CKick )) && (((ITEM_HIJUMP || ITEM_AirDash) && (ITEM_DOUBLEJUMP || ITEM_JETPACK))||(ITEM_JETPACK && ITEM_DOUBLEJUMP)) && ChargeShot && (ITEM_AREABOMB || ITEM_KNIFE)",
                 "Difficulty": 0
             }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 2,
+                "Y": 6
+            }
         ]
     },
     {
         "Itemname": "I14",
         "Location": "Thanatara Canyon",
-        "LocationName": "Thanatara Canyon - Money Room X: 2 Y: 6 #1",
+        "LocationName": "Thanatara Canyon - Money Room X: 2 Y: 6 #5",
         "blockId": 69090,
         "area": 1,
         "slotId": 1,
@@ -320,12 +474,292 @@
                 "Method": "ITEM_SLIDE && (ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || ( ITEM_WALLJUMP && CKick )) && (((ITEM_HIJUMP || ITEM_AirDash) && (ITEM_DOUBLEJUMP || ITEM_JETPACK))||(ITEM_JETPACK && ITEM_DOUBLEJUMP)) && ChargeShot && (ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
                 "Difficulty": 0
             }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 2,
+                "Y": 6
+            }
         ]
     },
     {
         "Itemname": "I14",
-        "Location": "Thanatara Canyon",
-        "LocationName": "Thanatara Canyon - Money Room X: 0 Y: 0 #1",
+        "Location": "Thanatara Canyon Lower",
+        "LocationName": "Thanatara Canyon - Money Room X: 10 Y: 12 #1",
+        "blockId": 255178,
+        "area": 1,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_SLIDE || (ITEM_WALLJUMP && (ITEM_JETPACK || ITEM_DOUBLEJUMP || ITEM_HIJUMP)) || ITEM_WALLJUMP 2)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 10,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Thanatara Canyon Lower",
+        "LocationName": "Thanatara Canyon - Money Room X: 10 Y: 12 #2",
+        "blockId": 255177,
+        "area": 1,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_SLIDE || (ITEM_WALLJUMP && (ITEM_JETPACK || ITEM_DOUBLEJUMP || ITEM_HIJUMP)) || ITEM_WALLJUMP 2)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 10,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Thanatara Canyon Lower",
+        "LocationName": "Thanatara Canyon - Money Room X: 10 Y: 12 #3",
+        "blockId": 255176,
+        "area": 1,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_SLIDE || (ITEM_WALLJUMP && (ITEM_JETPACK || ITEM_DOUBLEJUMP || ITEM_HIJUMP)) || ITEM_WALLJUMP 2)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 10,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Thanatara Canyon Lower",
+        "LocationName": "Thanatara Canyon - Money Room X: 14 Y: 12 #1",
+        "blockId": 354174,
+        "area": 1,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) || ",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 14,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gurun Desert",
+        "LocationName": "Gurun Desert - Money Room X: 14 Y: 12 #1",
+        "blockId": 354174,
+        "area": 1,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_WALLJUMP || (ITEM_DOUBLEJUMP && ITEM_JETPACK) || (ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_HIJUMP))",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 14,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gurun Desert",
+        "LocationName": "Gurun Desert - Money Room X: 14 Y: 12 #2",
+        "blockId": 354175,
+        "area": 1,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)  && (ITEM_WALLJUMP || (ITEM_DOUBLEJUMP && ITEM_JETPACK) || (ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_HIJUMP))",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 14,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gurun Desert",
+        "LocationName": "Gurun Desert - Money Room X: 14 Y: 12 #3",
+        "blockId": 355174,
+        "area": 1,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)  && (ITEM_WALLJUMP || (ITEM_DOUBLEJUMP && ITEM_JETPACK) || (ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_HIJUMP)) ",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 14,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gurun Desert",
+        "LocationName": "Gurun Desert - Money Room X: 14 Y: 12 #4",
+        "blockId": 355175,
+        "area": 1,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)  && (ITEM_WALLJUMP || (ITEM_DOUBLEJUMP && ITEM_JETPACK) || (ITEM_AirDash && ITEM_DOUBLEJUMP && ITEM_HIJUMP)) ",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 14,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gurun Desert",
+        "LocationName": "Gurun Desert - Money Room X: 19 Y: 3 #1",
+        "blockId": 457190,
+        "area": 1,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 19,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gurun Desert",
+        "LocationName": "Gurun Desert - Money Room X: 19 Y: 3 #2",
+        "blockId": 458190,
+        "area": 1,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 19,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gurun Desert",
+        "LocationName": "Gurun Desert - Money Room X: 19 Y: 3 #3",
+        "blockId": 456190,
+        "area": 1,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 19,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gurun Desert",
+        "LocationName": "Gurun Desert - Money Room X: 25 Y: 10 #1",
+        "blockId": 598151,
+        "area": 1,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 25,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gurun Desert",
+        "LocationName": "Gurun Desert - Money Room X: 25 Y: 10 #1",
+        "blockId": 597151,
+        "area": 1,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": 25,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gurun Desert",
+        "LocationName": "Gurun Desert - Money Room X: 0 Y: 0 #1",
         "blockId": ,
         "area": 1,
         "slotId": 1,
@@ -333,6 +767,13 @@
             {
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
                 "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 1,
+                "X": ,
+                "Y": 
             }
         ]
     },
