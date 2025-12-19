@@ -1,0 +1,317 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "Oasis",
+        "LocationName": "Oasis - Money Room X: 13 Y: 13 #1",
+        "blockId": 331190,
+        "area": 2,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 2,
+                "X": 13,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Oasis",
+        "LocationName": "Oasis - Money Room X: 13 Y: 13 #2",
+        "blockId": 332190,
+        "area": 2,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 2,
+                "X": 13,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Oasis",
+        "LocationName": "Oasis - Money Room X: 13 Y: 13 #3",
+        "blockId": 330190,
+        "area": 2,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 2,
+                "X": 13,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Oasis",
+        "LocationName": "Oasis - Money Room X: 13 Y: 13 #4",
+        "blockId": 332191,
+        "area": 2,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 2,
+                "X": 13,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Oasis",
+        "LocationName": "Oasis - Money Room X: 13 Y: 13 #5",
+        "blockId": 330191,
+        "area": 2,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 2,
+                "X": 13,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Oasis",
+        "LocationName": "Oasis - Money Room X: 18 Y: 13 #1",
+        "blockId": 451190,
+        "area": 2,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 2,
+                "X": 18,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Oasis",
+        "LocationName": "Oasis - Money Room X: 18 Y: 13 #2",
+        "blockId": 450189,
+        "area": 2,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 2,
+                "X": 18,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Oasis",
+        "LocationName": "Oasis - Money Room X: 18 Y: 13 #3",
+        "blockId": 451189,
+        "area": 2,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 2,
+                "X": 18,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Oasis",
+        "LocationName": "Oasis - Money Room X: 19 Y: 14 #1",
+        "blockId": ,
+        "area": 2,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ChargeShot && (ITEM_OrbTypeS3 || ITEM_OrbTypeS2 || ITEM_OrbTypeC3))",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 2,
+                "X": ,
+                "Y": 
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Oasis",
+        "LocationName": "Oasis - Money Room X: 19 Y: 14 #5",
+        "blockId": 474202,
+        "area": 2,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ChargeShot && (ITEM_OrbTypeS3 || ITEM_OrbTypeS2 || ITEM_OrbTypeC3))",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 2,
+                "X": 19,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Oasis",
+        "LocationName": "Oasis - Money Room X: 19 Y: 14 #1",
+        "blockId": 472203,
+        "area": 2,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ChargeShot && (ITEM_OrbTypeS3 || ITEM_OrbTypeS2 || ITEM_OrbTypeC3))",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 2,
+                "X": 19,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Oasis",
+        "LocationName": "Oasis - Money Room X: 19 Y: 14 #2",
+        "blockId": 473203,
+        "area": 2,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ChargeShot && (ITEM_OrbTypeS3 || ITEM_OrbTypeS2 || ITEM_OrbTypeC3))",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 2,
+                "X": 19,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Oasis",
+        "LocationName": "Oasis - Money Room X: 19 Y: 14 #3",
+        "blockId": 474203,
+        "area": 2,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ChargeShot && (ITEM_OrbTypeS3 || ITEM_OrbTypeS2 || ITEM_OrbTypeC3))",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 2,
+                "X": 19,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Oasis",
+        "LocationName": "Oasis - Money Room X: 19 Y: 14 #4",
+        "blockId": 473202,
+        "area": 2,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ChargeShot && (ITEM_OrbTypeS3 || ITEM_OrbTypeS2 || ITEM_OrbTypeC3))",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 2,
+                "X": 19,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Oasis",
+        "LocationName": "Oasis - Money Room X: 10 Y: 14 #1",
+        "blockId": 252203,
+        "area": 2,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 2,
+                "X": 10,
+                "Y": 14
+            }
+        ]
+    }
+]

@@ -755,26 +755,5 @@
                 "Y": 10
             }
         ]
-    },
-    {
-        "Itemname": "I14",
-        "Location": "Gurun Desert",
-        "LocationName": "Gurun Desert - Money Room X: 0 Y: 0 #1",
-        "blockId": ,
-        "area": 1,
-        "slotId": 1,
-        "Requirement": [
-            {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
-                "Difficulty": 0
-            }
-        ],
-        "LocationRegion": [
-            {
-                "Area": 1,
-                "X": ,
-                "Y": 
-            }
-        ]
-    },
+    }
 ]
