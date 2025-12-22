@@ -1,0 +1,275 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil above Verglas Village",
+        "LocationName": "Snowveil - Money Room",
+        "blockId": 474086,
+        "Area": 12,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 12,
+                "X": 19,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil above Verglas Village",
+        "LocationName": "Snowveil - Money Room",
+        "blockId": 473086,
+        "Area": 12,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 12,
+                "X": 19,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil above Verglas Village",
+        "LocationName": "Snowveil - Money Room",
+        "blockId": 475086,
+        "Area": 12,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 12,
+                "X": 19,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil above Verglas Village",
+        "LocationName": "Snowveil - Money Room",
+        "blockId": 474087,
+        "Area": 12,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 12,
+                "X": 19,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil above Verglas Village",
+        "LocationName": "Snowveil - Money Room",
+        "blockId": 473087,
+        "Area": 12,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 12,
+                "X": 19,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil above Verglas Village",
+        "LocationName": "Snowveil - Money Room",
+        "blockId": 475087,
+        "Area": 12,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 12,
+                "X": 19,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil above Verglas Village",
+        "LocationName": "Snowveil - Money Room",
+        "blockId": 474088,
+        "Area": 12,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 12,
+                "X": 19,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil above Verglas Village",
+        "LocationName": "Snowveil - Money Room",
+        "blockId": 473088,
+        "Area": 12,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 12,
+                "X": 19,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil above Verglas Village",
+        "LocationName": "Snowveil - Money Room",
+        "blockId": 475088,
+        "Area": 12,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 12,
+                "X": 19,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil",
+        "LocationName": "Snowveil - Money Room",
+        "blockId": 607174,
+        "Area": 12,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 12,
+                "X": 25,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil",
+        "LocationName": "Snowveil - Money Room",
+        "blockId": 607173,
+        "Area": 12,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 12,
+                "X": 25,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil",
+        "LocationName": "Snowveil - Money Room",
+        "blockId": 607172,
+        "Area": 12,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 12,
+                "X": 25,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil",
+        "LocationName": "Snowveil - Money Room",
+        "blockId": 607171,
+        "Area": 12,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 12,
+                "X": 25,
+                "Y": 12
+            }
+        ]
+    }
+]

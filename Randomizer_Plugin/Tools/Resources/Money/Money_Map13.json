@@ -1,0 +1,317 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "Outer Moat",
+        "LocationName": "Verdazure Sea West- Money Room",
+        "blockId": 221177,
+        "Area": 13,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 13,
+                "X": 9,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Outer Moat",
+        "LocationName": "Verdazure Sea West- Money Room",
+        "blockId": 220177,
+        "Area": 13,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 13,
+                "X": 9,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Outer Moat",
+        "LocationName": "Verdazure Sea West- Money Room",
+        "blockId": 449175,
+        "Area": 13,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 13,
+                "X": 18,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Outer Moat",
+        "LocationName": "Verdazure Sea West- Money Room",
+        "blockId": 450175,
+        "Area": 13,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 13,
+                "X": 18,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Sea West",
+        "LocationName": "Verdazure Sea West- Money Room",
+        "blockId": 126214,
+        "Area": 13,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 13,
+                "X": 5,
+                "Y": 15
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Sea West",
+        "LocationName": "Verdazure Sea West- Money Room",
+        "blockId": 126213,
+        "Area": 13,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 13,
+                "X": 5,
+                "Y": 15
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Outer Moat",
+        "LocationName": "Verdazure Sea West- Money Room",
+        "blockId": 373201,
+        "Area": 13,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_WALLJUMP)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 13,
+                "X": 15,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Outer Moat",
+        "LocationName": "Verdazure Sea West- Money Room",
+        "blockId": 373200,
+        "Area": 13,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_WALLJUMP)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 13,
+                "X": 15,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Outer Moat",
+        "LocationName": "Verdazure Sea West- Money Room",
+        "blockId": 373199,
+        "Area": 13,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_WALLJUMP)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 13,
+                "X": 15,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Sea to Forgotten city",
+        "LocationName": "Verdazure Sea West- Money Room",
+        "blockId": 415271,
+        "Area": 13,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_WATERMOVEMENT",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 13,
+                "X": 17,
+                "Y": 19
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Sea to Forgotten city",
+        "LocationName": "Verdazure Sea West- Money Room",
+        "blockId": 415270,
+        "Area": 13,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_WATERMOVEMENT",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 13,
+                "X": 17,
+                "Y": 19
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Outer Moat",
+        "LocationName": "Verdazure Sea West- Money Room",
+        "blockId": 413202,
+        "Area": 13,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 13,
+                "X": 17,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Sea East",
+        "LocationName": "Verdazure Sea West- Money Room",
+        "blockId": 619212,
+        "Area": 13,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 13,
+                "X": 25,
+                "Y": 15
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Sea East",
+        "LocationName": "Verdazure Sea West- Money Room",
+        "blockId": 619213,
+        "Area": 13,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 13,
+                "X": 25,
+                "Y": 15
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Sea East",
+        "LocationName": "Verdazure Sea West- Money Room",
+        "blockId": 618213,
+        "Area": 13,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || (ITEM_KNIFE && ITEM_SLIDE)) && ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 13,
+                "X": 25,
+                "Y": 15
+            }
+        ]
+    }
+]

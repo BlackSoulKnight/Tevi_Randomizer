@@ -1,0 +1,380 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "Ulvosa to Gloamwood",
+        "LocationName": "Ulvosa - Money Room",
+        "blockId": 185119,
+        "Area": 11,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 11,
+                "X": 7,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ulvosa to Gloamwood",
+        "LocationName": "Ulvosa - Money Room",
+        "blockId": 185118,
+        "Area": 11,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 11,
+                "X": 7,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ulvosa to Gloamwood",
+        "LocationName": "Ulvosa - Money Room",
+        "blockId": 187119,
+        "Area": 11,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 11,
+                "X": 7,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ulvosa",
+        "LocationName": "Ulvosa - Money Room",
+        "blockId": 375164,
+        "Area": 11,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 11,
+                "X": 15,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ulvosa",
+        "LocationName": "Ulvosa - Money Room",
+        "blockId": 375165,
+        "Area": 11,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 11,
+                "X": 15,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ulvosa",
+        "LocationName": "Ulvosa - Money Room",
+        "blockId": 291175,
+        "Area": 11,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 11,
+                "X": 12,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ulvosa",
+        "LocationName": "Ulvosa - Money Room",
+        "blockId": 291174,
+        "Area": 11,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 11,
+                "X": 12,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ulvosa",
+        "LocationName": "Ulvosa - Money Room",
+        "blockId": 291173,
+        "Area": 11,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 11,
+                "X": 12,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ulvosa",
+        "LocationName": "Ulvosa - Money Room",
+        "blockId": 291172,
+        "Area": 11,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 11,
+                "X": 12,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ulvosa",
+        "LocationName": "Ulvosa - Money Room",
+        "blockId": 291171,
+        "Area": 11,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 11,
+                "X": 12,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ulvosa",
+        "LocationName": "Ulvosa - Money Room",
+        "blockId": 503138,
+        "Area": 11,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB && ITEM_SLIDE) || ITEM_AREABOMB",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 11,
+                "X": 21,
+                "Y": 9
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ulvosa",
+        "LocationName": "Ulvosa - Money Room",
+        "blockId": 503139,
+        "Area": 11,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB && ITEM_SLIDE) || ITEM_AREABOMB",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 11,
+                "X": 21,
+                "Y": 9
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ulvosa",
+        "LocationName": "Ulvosa - Money Room",
+        "blockId": 411176,
+        "Area": 11,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 11,
+                "X": 17,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ulvosa",
+        "LocationName": "Ulvosa - Money Room",
+        "blockId": 411177,
+        "Area": 11,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 11,
+                "X": 17,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ulvosa",
+        "LocationName": "Ulvosa - Money Room",
+        "blockId": 194206,
+        "Area": 11,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 11,
+                "X": 8,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ulvosa",
+        "LocationName": "Ulvosa - Money Room",
+        "blockId": 194205,
+        "Area": 11,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 11,
+                "X": 8,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ulvosa",
+        "LocationName": "Ulvosa - Money Room",
+        "blockId": 193205,
+        "Area": 11,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 11,
+                "X": 8,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ulvosa",
+        "LocationName": "Ulvosa - Money Room",
+        "blockId": 193206,
+        "Area": 11,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 11,
+                "X": 8,
+                "Y": 14
+            }
+        ]
+    }
+]
