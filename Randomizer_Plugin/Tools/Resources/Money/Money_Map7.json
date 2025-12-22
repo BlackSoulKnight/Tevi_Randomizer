@@ -1,0 +1,212 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "CopperWood",
+        "LocationName": "Copper Wood - Money Room X: 14 Y: 20 #1",
+        "blockId": 344284,
+        "area": 7,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 7,
+                "X": 14,
+                "Y": 20 
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "CopperWood",
+        "LocationName": "Copper Wood - Money Room X: 14 Y: 20 #2",
+        "blockId": 344283,
+        "area": 7,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 7,
+                "X": 14,
+                "Y": 20 
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "CopperWood",
+        "LocationName": "Copper Wood - Money Room X: 14 Y: 20 #3",
+        "blockId": 344285,
+        "area": 7,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 7,
+                "X": 14,
+                "Y": 20 
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "CopperWood",
+        "LocationName": "Copper Wood - Money Room X: 11 Y: 20 #1",
+        "blockId": 279288,
+        "area": 7,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 7,
+                "X": 11,
+                "Y": 20
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "CopperWood",
+        "LocationName": "Copper Wood - Money Room X: 11 Y: 20 #1",
+        "blockId": 277288,
+        "area": 7,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 7,
+                "X": 11,
+                "Y": 20
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "CopperWood Industry to Travoll Industrie",
+        "LocationName": "Copper Wood - Money Room X: 6 Y: 17 #1",
+        "blockId": 162241,
+        "area": 7,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_AirDash && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_DOUBLEJUMP",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 7,
+                "X": 6,
+                "Y": 17
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "CopperWood Industry to Travoll Industrie",
+        "LocationName": "Copper Wood - Money Room X: 6 Y: 17 #2",
+        "blockId": 164240,
+        "area": 7,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_AirDash && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_DOUBLEJUMP",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 7,
+                "X": 6,
+                "Y": 17
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "CopperWood Industry to Travoll Industrie",
+        "LocationName": "Copper Wood - Money Room X: 6 Y: 17 #3",
+        "blockId": 163241,
+        "area": 7,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_AirDash && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_DOUBLEJUMP",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 7,
+                "X": 6,
+                "Y": 17
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "CopperWood Industry to Travoll Industrie",
+        "LocationName": "Copper Wood - Money Room X: 6 Y: 17 #4",
+        "blockId": 164239,
+        "area": 7,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_AirDash && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_DOUBLEJUMP",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 7,
+                "X": 6,
+                "Y": 17
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "CopperWood Industry to Travoll Industrie",
+        "LocationName": "Copper Wood - Money Room X: 6 Y: 17 #5",
+        "blockId": 164241,
+        "area": 7,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_AirDash && ITEM_JETPACK && ITEM_WALLJUMP && ITEM_DOUBLEJUMP",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 7,
+                "X": 6,
+                "Y": 17
+            }
+        ]
+    }
+]

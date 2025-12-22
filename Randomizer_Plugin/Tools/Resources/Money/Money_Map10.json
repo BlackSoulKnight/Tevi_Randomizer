@@ -1,0 +1,569 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 484232,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 20,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 484233,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 20,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 483233,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 20,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 522199,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_KNIFE) && (ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || ChargeShot)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 21,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 522198,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_KNIFE) && (ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || ChargeShot)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 21,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 522197,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_KNIFE) && (ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || ChargeShot)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 21,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 522196,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_KNIFE) && (ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || ChargeShot)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 21,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 306226,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 12,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 306227,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 12,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 306228,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 12,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 281214,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 11,
+                "Y": 15
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 281215,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 11,
+                "Y": 15
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 280215,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 11,
+                "Y": 15
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 279215,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 11,
+                "Y": 15
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Teleporter Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 265198,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 11,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Teleporter Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 264197,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 11,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Teleporter Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 361212,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 15,
+                "Y": 15
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Teleporter Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 361211,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 15,
+                "Y": 15
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Teleporter Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 465206,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 19,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Teleporter Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 464205,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 19,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Teleporter Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 346196,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 14,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Teleporter Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 324104,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 13,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Teleporter Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 324105,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 13,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Teleporter Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 324106,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 13,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Teleporter Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 324107,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 13,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Teleporter Plague Forest",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 324108,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 13,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Plague Forest to Ulskan",
+        "LocationName": "Plague Forest - Money Room",
+        "blockId": 550216,
+        "Area": 10,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 10,
+                "X": 23,
+                "Y": 15
+            }
+        ]
+    }
+]

@@ -1,0 +1,86 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "Travoll Industrie",
+        "LocationName": "Travoll Industrie - Money Room X: 15 Y: 14 #1",
+        "blockId": 356206,
+        "area": 6,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 6,
+                "X": 15,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Travoll Industrie",
+        "LocationName": "Travoll Industrie - Money Room X: 15 Y: 14 #2",
+        "blockId": 355206,
+        "area": 6,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 6,
+                "X": 15,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Travoll Industrie to CopperWood",
+        "LocationName": "Travoll Industrie - Money Room X: 14 Y: 19 #1",
+        "blockId": 338275,
+        "area": 6,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 6,
+                "X": 14,
+                "Y": 19
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Travoll Industrie to CopperWood",
+        "LocationName": "Travoll Industrie - Money Room X: 14 Y: 19 #2",
+        "blockId": 338274,
+        "area": 6,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 6,
+                "X": 14,
+                "Y": 19
+            }
+        ]
+    }
+]

@@ -1,0 +1,506 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "Gloamwood Right",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 369233,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_JETPACK || ITEM_DOUBLEJUMP || ITEM_AirDash || ChargeShot)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 15,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gloamwood Right",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 370233,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_JETPACK || ITEM_DOUBLEJUMP || ITEM_AirDash || ChargeShot)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 15,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gloamwood Right",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 369232,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_JETPACK || ITEM_DOUBLEJUMP || ITEM_AirDash || ChargeShot)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 15,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gloamwood Right",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 370232,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_JETPACK || ITEM_DOUBLEJUMP || ITEM_AirDash || ChargeShot)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 15,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ulskan Village Area",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 551216,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 23,
+                "Y": 15
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ulskan Village Area",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 551217,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 23,
+                "Y": 15
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ulskan To Plague Forest",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 631186,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 26,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ulskan To Plague Forest",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 632186,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 26,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ulskan To Plague Forest",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 633186,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 26,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gloamwood to Forest",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 148279,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 6,
+                "Y": 20
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gloamwood Middle",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 150227,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 6,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gloamwood Middle",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 149228,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 6,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gloamwood Middle",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 150228,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 6,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gloamwood Middle",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 149173,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 6,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gloamwood Middle",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 150173,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 6,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gloamwood Middle",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 234177,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 9,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gloamwood Middle",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 234178,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 9,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gloamwood to Relicts",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 83148,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 3,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gloamwood to Relicts",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 82149,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 3,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gloamwood to Relicts",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 83149,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 3,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gloamwood to Ulvosa",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 124074,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 5,
+                "Y": 5
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gloamwood to Ulvosa",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 125074,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 5,
+                "Y": 5
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gloamwood to Ulvosa",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 124073,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 5,
+                "Y": 5
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gloamwood to Ulvosa",
+        "LocationName": "Gloamwood - Money Room",
+        "blockId": 125073,
+        "Area": 9,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 9,
+                "X": 5,
+                "Y": 5
+            }
+        ]
+    }
+]

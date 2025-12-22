@@ -1,0 +1,212 @@
+[
+        {
+        "Itemname": "I14",
+        "Location": "Ana Thema",
+        "LocationName": "Ana Thema - Money Room",
+        "blockId": 408169,
+        "area": 8,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 8,
+                "X": 17,
+                "Y": 12
+            }
+        ]
+    },
+        {
+        "Itemname": "I14",
+        "Location": "Ana Thema",
+        "LocationName": "Ana Thema - Money Room",
+        "blockId": 408170,
+        "area": 8,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 8,
+                "X": 17,
+                "Y": 12
+            }
+        ]
+    },
+        {
+        "Itemname": "I14",
+        "Location": "Ana Thema",
+        "LocationName": "Ana Thema - Money Room",
+        "blockId": 409169,
+        "area": 8,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 8,
+                "X": 17,
+                "Y": 12
+            }
+        ]
+    },
+        {
+        "Itemname": "I14",
+        "Location": "Ana Thema",
+        "LocationName": "Ana Thema - Money Room",
+        "blockId": 409170,
+        "area": 8,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 8,
+                "X": 17,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ana Thema",
+        "LocationName": "Ana Thema - Money Room",
+        "blockId": 313198,
+        "area": 8,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 8,
+                "X": 13,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ana Thema",
+        "LocationName": "Ana Thema - Money Room",
+        "blockId": 313199,
+        "area": 8,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 8,
+                "X": 13,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ana Thema",
+        "LocationName": "Ana Thema - Money Room",
+        "blockId": 313200,
+        "area": 8,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 8,
+                "X": 13,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ana Thema",
+        "LocationName": "Ana Thema - Money Room",
+        "blockId": 354198,
+        "area": 8,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 8,
+                "X": 14,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ana Thema",
+        "LocationName": "Ana Thema - Money Room",
+        "blockId": 354199,
+        "area": 8,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 8,
+                "X": 14,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Ana Thema",
+        "LocationName": "Ana Thema - Money Room",
+        "blockId": 354200,
+        "area": 8,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 8,
+                "X": 14,
+                "Y": 14
+            }
+        ]
+    }
+]
