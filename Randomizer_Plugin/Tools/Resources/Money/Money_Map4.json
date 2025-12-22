@@ -1,0 +1,548 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "Forest",
+        "LocationName": "Forest - Money Room X: 9 Y: 13 #1",
+        "blockId": 196191,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_AREABOMB || ((ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_SLIDE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 9,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forest",
+        "LocationName": "Forest - Money Room X: 9 Y: 13 #2",
+        "blockId": 196192,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_AREABOMB || ((ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_SLIDE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 9,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forest",
+        "LocationName": "Forest - Money Room X: 9 Y: 10 #1",
+        "blockId": 221148,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 9,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forest",
+        "LocationName": "Forest - Money Room X: 9 Y: 10 #2",
+        "blockId": 220148,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 9,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forest",
+        "LocationName": "Forest - Money Room X: 9 Y: 10 #3",
+        "blockId": 219148,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 9,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forest",
+        "LocationName": "Forest - Money Room X: 9 Y: 10 #4",
+        "blockId": 219147,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 9,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forest",
+        "LocationName": "Forest - Money Room X: 9 Y: 8 #1",
+        "blockId": 217122,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 9,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forest",
+        "LocationName": "Forest - Money Room X: 9 Y: 8 #2",
+        "blockId": 217123,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 9,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forest",
+        "LocationName": "Forest - Money Room X: 22 Y: 14 #1",
+        "blockId": 546201,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 22,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forest",
+        "LocationName": "Forest - Money Room X: 22 Y: 14 #2",
+        "blockId": 546202,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 22,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forest Maze",
+        "LocationName": "Forest Maze - Money Room X: 11 Y: 28 #1",
+        "blockId": 283240,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 11,
+                "Y": 28
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forest Maze",
+        "LocationName": "Forest Maze - Money Room X: 11 Y: 28 #2",
+        "blockId": 283241,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 11,
+                "Y": 28
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forest Maze",
+        "LocationName": "Forest Maze - Money Room X: 13 Y: 16 #1",
+        "blockId": 322224,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 13,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forest Maze",
+        "LocationName": "Forest Maze - Money Room X: 13 Y: 16 #2",
+        "blockId": 321225,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 13,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forest Maze",
+        "LocationName": "Forest Maze - Money Room X: 13 Y: 16 #3",
+        "blockId": 322225,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 13,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Teleporter Forest Maze",
+        "LocationName": "Forest Maze - Money Room X: 10 Y: 21 #1",
+        "blockId": 258297,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 10,
+                "Y": 21
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Teleporter Forest Maze",
+        "LocationName": "Forest Maze - Money Room X: 10 Y: 21 #2",
+        "blockId": 258296,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 10,
+                "Y": 21
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Teleporter Forest Maze",
+        "LocationName": "Forest Maze - Money Room X: 10 Y: 21 #3",
+        "blockId": 258295,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 10,
+                "Y": 21
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forest Maze extended",
+        "LocationName": "Forest Maze - Money Room X: 8 Y: 19 #1",
+        "blockId": 212275,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 8,
+                "Y": 19
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forest Maze extended",
+        "LocationName": "Forest Maze - Money Room X: 8 Y: 19 #2",
+        "blockId": 212273,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 8,
+                "Y": 19
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forest Maze extended",
+        "LocationName": "Forest Maze - Money Room X: 8 Y: 19 #3",
+        "blockId": 212271,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 8,
+                "Y": 19
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forest Maze extended",
+        "LocationName": "Forest Maze - Money Room X: 8 Y: 16 #1",
+        "blockId": 194231,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 8,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forest Maze extended",
+        "LocationName": "Forest Maze - Money Room X: 8 Y: 16 #2",
+        "blockId": 193231,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 8,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forest Maze extended",
+        "LocationName": "Forest Maze - Money Room X: 12 Y: 17 #1",
+        "blockId": 307246,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 12,
+                "Y": 17
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forest Maze extended",
+        "LocationName": "Forest Maze - Money Room X: 12 Y: 17 #2",
+        "blockId": 307245,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 12,
+                "Y": 17
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forest Maze extended",
+        "LocationName": "Forest Maze - Money Room X: 12 Y: 17 #3",
+        "blockId": 307244,
+        "area": 4,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 4,
+                "X": 12,
+                "Y": 17
+            }
+        ]
+    }
+]

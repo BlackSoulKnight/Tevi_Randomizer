@@ -1,0 +1,107 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "Morose City",
+        "LocationName": "Morose - Money Room X: 11 Y: 11 #1",
+        "blockId": 266158,
+        "area": 3,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 3,
+                "X": 11,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Morose City",
+        "LocationName": "Morose - Money Room X: 11 Y: 11 #2",
+        "blockId": 267157,
+        "area": 3,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 3,
+                "X": 11,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Morose City",
+        "LocationName": "Morose - Money Room X: 11 Y: 11 #3",
+        "blockId": 266157,
+        "area": 3,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 3,
+                "X": 11,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Morose City",
+        "LocationName": "Morose - Money Room X: 13 Y: 10 #1",
+        "blockId": 328150,
+        "area": 3,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 3,
+                "X": 13,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Morose City",
+        "LocationName": "Morose - Money Room X: 13 Y: 10 #1",
+        "blockId": 328149,
+        "area": 3,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 3,
+                "X": 13,
+                "Y": 10
+            }
+        ]
+    }
+]

@@ -170,27 +170,6 @@
     {
         "Itemname": "I14",
         "Location": "Oasis",
-        "LocationName": "Oasis - Money Room X: 19 Y: 14 #1",
-        "blockId": ,
-        "area": 2,
-        "slotId": 1,
-        "Requirement": [
-            {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ChargeShot && (ITEM_OrbTypeS3 || ITEM_OrbTypeS2 || ITEM_OrbTypeC3))",
-                "Difficulty": 0
-            }
-        ],
-        "LocationRegion": [
-            {
-                "Area": 2,
-                "X": ,
-                "Y": 
-            }
-        ]
-    },
-    {
-        "Itemname": "I14",
-        "Location": "Oasis",
         "LocationName": "Oasis - Money Room X: 19 Y: 14 #5",
         "blockId": 474202,
         "area": 2,
