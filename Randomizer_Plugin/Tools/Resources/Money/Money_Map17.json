@@ -1,0 +1,842 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "Magma Pits Entrance",
+        "LocationName": "Magma Pits - Money Room",
+        "blockId": 325075,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 13,
+                "Y": 5
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Magma Pits Entrance",
+        "LocationName": "Magma Pits - Money Room",
+        "blockId": 325076,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 13,
+                "Y": 5
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Magma Pits Entrance",
+        "LocationName": "Magma Pits - Money Room",
+        "blockId": 325077,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 13,
+                "Y": 5
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Magma Pits",
+        "LocationName": "Magma Pits - Money Room",
+        "blockId": 155120,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 6,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Magma Pits",
+        "LocationName": "Magma Pits - Money Room",
+        "blockId": 153120,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 6,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Magma Pits",
+        "LocationName": "Magma Pits - Money Room",
+        "blockId": 154119,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 6,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Magma Pits",
+        "LocationName": "Magma Pits - Money Room",
+        "blockId": 155118,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 6,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Magma Pits",
+        "LocationName": "Magma Pits - Money Room",
+        "blockId": 153118,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 6,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Magma Pits",
+        "LocationName": "Magma Pits - Money Room",
+        "blockId": 1130,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 0,
+                "Y": 9
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Magma Pits",
+        "LocationName": "Magma Pits - Money Room",
+        "blockId": 1129,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 0,
+                "Y": 9
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Magma Pits",
+        "LocationName": "Magma Pits - Money Room",
+        "blockId": 1128,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 0,
+                "Y": 9
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Magma Depths O",
+        "LocationName": "Magma Pits - Money Room",
+        "blockId": 267130,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 11,
+                "Y": 9
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Magma Depths O",
+        "LocationName": "Magma Pits - Money Room",
+        "blockId": 267131,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 11,
+                "Y": 9
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Magma Depths O",
+        "LocationName": "Magma Pits - Money Room",
+        "blockId": 267132,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 11,
+                "Y": 9
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Magma Depths O",
+        "LocationName": "Magma Pits - Money Room",
+        "blockId": 267133,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 11,
+                "Y": 9
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Pre Swamp",
+        "LocationName": "Swamp - Money Room",
+        "blockId": 353060,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 14,
+                "Y": 4
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Pre Swamp",
+        "LocationName": "Swamp - Money Room",
+        "blockId": 354060,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 14,
+                "Y": 4
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Pre Swamp",
+        "LocationName": "Swamp - Money Room",
+        "blockId": 353061,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 14,
+                "Y": 4
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Swamp Entrance",
+        "LocationName": "Swamp - Money Room",
+        "blockId": 354061,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 14,
+                "Y": 4
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Swamp",
+        "LocationName": "Swamp - Money Room",
+        "blockId": 383087,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ((ITEM_DOUBLEJUMP && (ITEM_AirDash || ITEM_SPEEDUP 2`)) || ITEM_JETPACK)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 15,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Swamp",
+        "LocationName": "Swamp - Money Room",
+        "blockId": 384087,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ((ITEM_DOUBLEJUMP && (ITEM_AirDash || ITEM_SPEEDUP 2`)) || ITEM_JETPACK)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 15,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Swamp",
+        "LocationName": "Swamp - Money Room",
+        "blockId": 385087,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ((ITEM_DOUBLEJUMP && (ITEM_AirDash || ITEM_SPEEDUP 2`)) || ITEM_JETPACK)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 15,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Swamp",
+        "LocationName": "Swamp - Money Room",
+        "blockId": 383086,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ((ITEM_DOUBLEJUMP && (ITEM_AirDash || ITEM_SPEEDUP 2`)) || ITEM_JETPACK)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 15,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Swamp",
+        "LocationName": "Swamp - Money Room",
+        "blockId": 384086,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ((ITEM_DOUBLEJUMP && (ITEM_AirDash || ITEM_SPEEDUP 2`)) || ITEM_JETPACK)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 15,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Swamp",
+        "LocationName": "Swamp - Money Room",
+        "blockId": 385086,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ((ITEM_DOUBLEJUMP && (ITEM_AirDash || ITEM_SPEEDUP 2`)) || ITEM_JETPACK)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 15,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Pre Swamp",
+        "LocationName": "Swamp - Money Room",
+        "blockId": 458106,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_AREABOMB || ((ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_SLIDE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 19,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Pre Swamp",
+        "LocationName": "Swamp - Money Room",
+        "blockId": 457106,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_AREABOMB || ((ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_SLIDE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 19,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Pre Swamp",
+        "LocationName": "Swamp - Money Room",
+        "blockId": 458105,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_AREABOMB || ((ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_SLIDE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 19,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Pre Swamp",
+        "LocationName": "Swamp - Money Room",
+        "blockId": 513117,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 21,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Pre Swamp",
+        "LocationName": "Swamp - Money Room",
+        "blockId": 513118,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 21,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Swamp to Tartarus",
+        "LocationName": "Swamp - Money Room",
+        "blockId": 503134,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 21,
+                "Y": 9
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Swamp to Tartarus",
+        "LocationName": "Swamp - Money Room",
+        "blockId": 504133,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 21,
+                "Y": 9
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Swamp to Tartarus",
+        "LocationName": "Swamp - Money Room",
+        "blockId": 504134,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 21,
+                "Y": 9
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Magma Depths",
+        "LocationName": "Magma Depths - Money Room",
+        "blockId": 314177,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 13,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Magma Depths",
+        "LocationName": "Magma Depths - Money Room",
+        "blockId": 313177,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 13,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Magma Depths",
+        "LocationName": "Magma Depths - Money Room",
+        "blockId": 313178,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 13,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Magma Depths",
+        "LocationName": "Magma Depths - Money Room",
+        "blockId": 228176,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_BombLengthExtend && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 9,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Magma Depths",
+        "LocationName": "Magma Depths - Money Room",
+        "blockId": 228177,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_BombLengthExtend && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 9,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Magma Depths",
+        "LocationName": "Magma Depths - Money Room",
+        "blockId": 227176,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_BombLengthExtend && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 9,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Magma Depths",
+        "LocationName": "Magma Depths - Money Room",
+        "blockId": 227177,
+        "Area": 17,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_BombLengthExtend && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 17,
+                "X": 9,
+                "Y": 12
+            }
+        ]
+    }
+]

@@ -1,0 +1,401 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley Snow Route Low",
+        "LocationName": "Heavens Valley East - Money Room",
+        "blockId": 295224,
+        "Area": 19,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB && ITEM_AREABOMB && ITEM_BombLengthExtend)  || ITEM_KNIFE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 19,
+                "X": 12,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley Snow Route Low",
+        "LocationName": "Heavens Valley East - Money Room",
+        "blockId": 296224,
+        "Area": 19,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB && ITEM_AREABOMB && ITEM_BombLengthExtend)  || ITEM_KNIFE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 19,
+                "X": 12,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley Snow Route Low",
+        "LocationName": "Heavens Valley East - Money Room",
+        "blockId": 297224,
+        "Area": 19,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB && ITEM_AREABOMB && ITEM_BombLengthExtend)  || ITEM_KNIFE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 19,
+                "X": 12,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley Snow Route Middle",
+        "LocationName": "Heavens Valley East - Money Room",
+        "blockId": 301190,
+        "Area": 19,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)&& ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 19,
+                "X": 12,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley Snow Route Middle",
+        "LocationName": "Heavens Valley East - Money Room",
+        "blockId": 301189,
+        "Area": 19,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)&& ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 19,
+                "X": 12,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley Snow Route Middle",
+        "LocationName": "Heavens Valley East - Money Room",
+        "blockId": 301188,
+        "Area": 19,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)&& ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 19,
+                "X": 12,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley Snow Route Middle",
+        "LocationName": "Heavens Valley East - Money Room",
+        "blockId": 282163,
+        "Area": 19,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 19,
+                "X": 11,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley Snow Route Middle",
+        "LocationName": "Heavens Valley East - Money Room",
+        "blockId": 281163,
+        "Area": 19,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 19,
+                "X": 11,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley Snow Route Middle",
+        "LocationName": "Heavens Valley East - Money Room",
+        "blockId": 281162,
+        "Area": 19,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 19,
+                "X": 11,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley Snow Route Middle",
+        "LocationName": "Heavens Valley East - Money Room",
+        "blockId": 325094,
+        "Area": 19,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_BombLengthExtend 3",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 19,
+                "X": 13,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley Snow Route Middle",
+        "LocationName": "Heavens Valley East - Money Room",
+        "blockId": 326094,
+        "Area": 19,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_BombLengthExtend 3",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 19,
+                "X": 13,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley Snow Route Middle",
+        "LocationName": "Heavens Valley East - Money Room",
+        "blockId": 327094,
+        "Area": 19,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_BombLengthExtend 3",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 19,
+                "X": 13,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley Snow Route Middle",
+        "LocationName": "Heavens Valley East - Money Room",
+        "blockId": 326093,
+        "Area": 19,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_BombLengthExtend 3",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 19,
+                "X": 13,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley Snow Route Middle",
+        "LocationName": "Heavens Valley East - Money Room",
+        "blockId": 216107,
+        "Area": 19,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 19,
+                "X": 9,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley Snow Route Middle",
+        "LocationName": "Heavens Valley East - Money Room",
+        "blockId": 216108,
+        "Area": 19,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 19,
+                "X": 9,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley Snow Route Middle",
+        "LocationName": "Heavens Valley East - Money Room",
+        "blockId": 215107,
+        "Area": 19,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 19,
+                "X": 9,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley Snow Route Middle",
+        "LocationName": "Heavens Valley East - Money Room",
+        "blockId": 215108,
+        "Area": 19,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 19,
+                "X": 9,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley Snow Route Middle",
+        "LocationName": "Heavens Valley East - Money Room",
+        "blockId": 208046,
+        "Area": 19,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 19,
+                "X": 8,
+                "Y": 3
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley Snow Route Middle",
+        "LocationName": "Heavens Valley East - Money Room",
+        "blockId": 208047,
+        "Area": 19,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 19,
+                "X": 8,
+                "Y": 3
+            }
+        ]
+    }
+]

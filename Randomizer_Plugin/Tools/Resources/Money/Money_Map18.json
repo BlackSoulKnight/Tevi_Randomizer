@@ -1,0 +1,758 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper Outside Left Snow To Snowveil",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 393184,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "((ITEM_LINEBOMB && ITEM_BombLengthExtend 3) || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 16,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper Outside Left Snow To Snowveil",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 393183,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "((ITEM_LINEBOMB && ITEM_BombLengthExtend 3) || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 16,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper Outside Left Snow To Snowveil",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 393182,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "((ITEM_LINEBOMB && ITEM_BombLengthExtend 3) || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 16,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper Outside Left",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 415124,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 17,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper Outside Left",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 416124,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 17,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper Outside Left",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 417124,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 17,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper Outside Left",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 493086,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_HIJUMP || ITEM_JETPACK || ITEM_DOUBLEJUMP || ITEM_WALLJUMP) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 20,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper Outside Right",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 600183,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 25,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper Outside Right",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 599183,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 25,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper Outside Right",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 601160,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_AREABOMB",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 25,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper Outside Right",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 601159,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_AREABOMB",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 25,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper Outside Right",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 602158,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_AREABOMB",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 25,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper Outside Right",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 594120,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE && ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 24,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper Outside Right",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 594119,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE && ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 24,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper Outside Right",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 594121,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE && ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 24,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper Outside Right",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 582094,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE && ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 24,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper Outside Right",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 581094,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE && ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 24,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper Outside Right",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 583094,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE && ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 24,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 590164,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 24,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 591164,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 24,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 590163,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 24,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 591163,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 24,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 591162,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 24,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 502198,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB && ITEM_BombLengthExtend) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 21,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 502197,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB && ITEM_BombLengthExtend) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 21,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "DreamKeeper",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 502196,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB && ITEM_BombLengthExtend) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 21,
+                "Y": 14
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Dreamless Depths",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 660299,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 27,
+                "Y": 21
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Dreamless Depths",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 572295,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE && ITEM_AirSlide",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 24,
+                "Y": 21
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Dreamless Depths",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 572294,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE && ITEM_AirSlide",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 24,
+                "Y": 21
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Dreamless Depths",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 572293,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE && ITEM_AirSlide",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 24,
+                "Y": 21
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Dreamless Depths",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 571293,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE && ITEM_AirSlide",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 24,
+                "Y": 21
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Dreamless Depths",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 570293,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE && ITEM_AirSlide",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 24,
+                "Y": 21
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Dreamless Depths",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 469289,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 19,
+                "Y": 21
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Dreamless Depths",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 469290,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 19,
+                "Y": 21
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Dreamless Depths",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 469291,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 19,
+                "Y": 21
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Dreamless Depths",
+        "LocationName": "DreamKeeper - Money Room",
+        "blockId": 470290,
+        "Area": 18,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 18,
+                "X": 19,
+                "Y": 21
+            }
+        ]
+    }
+]
