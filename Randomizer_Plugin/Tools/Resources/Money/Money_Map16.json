@@ -1,0 +1,653 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "Snow City",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 282163,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 11,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snow City",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 283163,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 11,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snow City",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 283162,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 11,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil Above HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 303127,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 12,
+                "Y": 9
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil Above HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 304127,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 12,
+                "Y": 9
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil Above HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 343086,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 14,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil Above HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 342086,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 14,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil Above HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 343087,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 14,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil Above HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 341086,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 14,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil Above HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 341087,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 14,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil Above HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 288076,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 12,
+                "Y": 5
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil Above HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 289076,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 12,
+                "Y": 5
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil Above HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 289075,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 12,
+                "Y": 5
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Snowveil Above HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 391088,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 16,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Golden Hands HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 541172,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 22,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Golden Hands HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 540172,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 22,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Golden Hands HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 539172,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 22,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Golden Hands HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 538172,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 22,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Golden Hands HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 386173,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 16,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Golden Hands HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 386172,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 16,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Golden Hands HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 386171,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 16,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Golden Hands HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 386170,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 16,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Golden Hands HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 616192,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ChargeShot && ITEM_BombLengthExtend",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 25,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Golden Hands HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 617192,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ChargeShot && ITEM_BombLengthExtend",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 25,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Golden Hands HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 615192,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ChargeShot && ITEM_BombLengthExtend",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 25,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Golden Hands HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 553231,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ChargeShot && ITEM_Rotater && ITEM_KNIFE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 23,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Golden Hands HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 553230,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ChargeShot && ITEM_Rotater && ITEM_KNIFE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 23,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Golden Hands HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 554231,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ChargeShot && ITEM_Rotater && ITEM_KNIFE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 23,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Golden Hands HQ",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 554230,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ChargeShot && ITEM_Rotater && ITEM_KNIFE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 23,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Golden Hands HQ Sewer",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 505247,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 21,
+                "Y": 17
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Golden Hands HQ Sewer",
+        "LocationName": "Snow City - Money Room",
+        "blockId": 505248,
+        "Area": 16,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 16,
+                "X": 21,
+                "Y": 17
+            }
+        ]
+    }
+]

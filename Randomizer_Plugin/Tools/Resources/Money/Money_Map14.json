@@ -1,0 +1,890 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Ocean",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 352102,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_WALLJUMP 3",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 14,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Ocean",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 354102,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_WALLJUMP 3",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 14,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Ocean",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 353101,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_WALLJUMP 3",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 14,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Ocean",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 355101,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_WALLJUMP 3",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 14,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Ocean",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 354100,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_WALLJUMP 3",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 14,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Ocean",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 355099,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_WALLJUMP 3",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 14,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Ocean",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 431127,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB && ITEM_SLIDE && ITEM_BombLengthExtend",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 18,
+                "Y": 9
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Ocean",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 432127,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB && ITEM_SLIDE && ITEM_BombLengthExtend",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 18,
+                "Y": 9
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Ocean",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 431128,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB && ITEM_SLIDE && ITEM_BombLengthExtend",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 18,
+                "Y": 9
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Ocean",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 432128,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB && ITEM_SLIDE && ITEM_BombLengthExtend",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 18,
+                "Y": 9
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Ocean",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 588076,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "((ITEM_LINEBOMB && ITEM_SLIDE) || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 24,
+                "Y": 5
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Ocean",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 588077,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "((ITEM_LINEBOMB && ITEM_SLIDE) || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 24,
+                "Y": 5
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Ocean",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 587077,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "((ITEM_LINEBOMB && ITEM_SLIDE) || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 24,
+                "Y": 5
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Ocean",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 588078,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "((ITEM_LINEBOMB && ITEM_SLIDE) || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 24,
+                "Y": 5
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Ocean",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 587078,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "((ITEM_LINEBOMB && ITEM_SLIDE) || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 24,
+                "Y": 5
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Swamp",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 713179,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ((ITEM_WALLJUMP && ITEM_AirDash && CKick) || ITEM_DOUBLEJUMP || ITEM_JETPACK)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 29,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Swamp",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 713178,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ((ITEM_WALLJUMP && ITEM_AirDash && CKick) || ITEM_DOUBLEJUMP || ITEM_JETPACK)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 29,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Swamp",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 713177,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ((ITEM_WALLJUMP && ITEM_AirDash && CKick) || ITEM_DOUBLEJUMP || ITEM_JETPACK)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 29,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Verdazure Swamp",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 705213,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "((ITEM_LINEBOMB || ITEM_KNIFE) && (ITEM_JETPACK || ITEM_DOUBLEJUMP)) || (ITEM_AREABOMB && ITEM_AirDash)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 29,
+                "Y": 15
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forgotten City",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 353187,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+                {
+                    "Method": "ChargeShot && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                    "Difficulty": 0
+                },
+                {
+                    "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                    "Difficulty": 0
+                },
+                {
+                    "Method": "ITEM_WALLJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                    "Difficulty": 0
+                },
+                {
+                    "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                    "Difficulty": 0
+                }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 14,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forgotten City",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 353188,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+                {
+                    "Method": "ChargeShot && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                    "Difficulty": 0
+                },
+                {
+                    "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                    "Difficulty": 0
+                },
+                {
+                    "Method": "ITEM_WALLJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                    "Difficulty": 0
+                },
+                {
+                    "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                    "Difficulty": 0
+                }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 14,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forgotten City",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 352187,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+                {
+                    "Method": "ChargeShot && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                    "Difficulty": 0
+                },
+                {
+                    "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                    "Difficulty": 0
+                },
+                {
+                    "Method": "ITEM_WALLJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                    "Difficulty": 0
+                },
+                {
+                    "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                    "Difficulty": 0
+                }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 14,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forgotten City",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 352188,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+                {
+                    "Method": "ChargeShot && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                    "Difficulty": 0
+                },
+                {
+                    "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                    "Difficulty": 0
+                },
+                {
+                    "Method": "ITEM_WALLJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                    "Difficulty": 0
+                },
+                {
+                    "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                    "Difficulty": 0
+                }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 14,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forgotten City Upper Exit",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 337165,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_WATERMOVEMENT",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 14,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forgotten City Upper Exit",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 337164,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_WATERMOVEMENT",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 14,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forgotten City Upper Exit",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 337163,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_WATERMOVEMENT",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 14,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forgotten City Upper Exit",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 337162,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_WATERMOVEMENT",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 14,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Teleporter Forgotten City",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 326213,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_WALLJUMP || ITEM_DOUBLEJUMP || ITEM_JETPACK) ",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 13,
+                "Y": 15
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forgotten City Entrance",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 240247,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 10,
+                "Y": 17
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forgotten City Entrance",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 240246,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 10,
+                "Y": 17
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forgotten City",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 378254,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 15,
+                "Y": 18
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forgotten City",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 379253,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 15,
+                "Y": 18
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forgotten City",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 240289,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 10,
+                "Y": 20
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forgotten City",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 240287,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 10,
+                "Y": 20
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forgotten City",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 377298,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 15,
+                "Y": 21
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forgotten City",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 472231,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 19,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forgotten City",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 471232,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 19,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forgotten City",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 471233,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 19,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forgotten City",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 472232,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 19,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Forgotten City",
+        "LocationName": "Verdazure Ocean - Money Room",
+        "blockId": 472233,
+        "Area": 14,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ChargeShot",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 14,
+                "X": 19,
+                "Y": 16
+            }
+        ]
+    }
+]

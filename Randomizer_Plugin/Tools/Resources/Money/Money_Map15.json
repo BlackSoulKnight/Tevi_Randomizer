@@ -1,0 +1,149 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "Tartarus",
+        "LocationName": "Tartarus - Money Room",
+        "blockId": 496186,
+        "Area": 15,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 15,
+                "X": 20,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Tartarus",
+        "LocationName": "Tartarus - Money Room",
+        "blockId": 495187,
+        "Area": 15,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 15,
+                "X": 20,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Tartarus",
+        "LocationName": "Tartarus - Money Room",
+        "blockId": 496185,
+        "Area": 15,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 15,
+                "X": 20,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Tartarus",
+        "LocationName": "Tartarus - Money Room",
+        "blockId": 496187,
+        "Area": 15,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 15,
+                "X": 20,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Tartarus",
+        "LocationName": "Tartarus - Money Room",
+        "blockId": 400149,
+        "Area": 15,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_AREABOMB || ((ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_SLIDE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 15,
+                "X": 16,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Tartarus",
+        "LocationName": "Tartarus - Money Room",
+        "blockId": 400150,
+        "Area": 15,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_AREABOMB || ((ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_SLIDE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 15,
+                "X": 16,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Tartarus",
+        "LocationName": "Tartarus - Money Room",
+        "blockId": 399150,
+        "Area": 15,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_AREABOMB || ((ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_SLIDE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 15,
+                "X": 16,
+                "Y": 10
+            }
+        ]
+    }
+]
