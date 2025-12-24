@@ -2,7 +2,7 @@
     {
         "Itemname": "I14",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Money RoomX: 20 Y: 13 #1",
+        "LocationName": "Tartarus - Money Room X: 20 Y: 13 #1",
         "blockId": 496186,
         "area": 15,
         "slotId": 1,
@@ -23,7 +23,7 @@
     {
         "Itemname": "I14",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Money RoomX: 20 Y: 13 #2",
+        "LocationName": "Tartarus - Money Room X: 20 Y: 13 #2",
         "blockId": 495187,
         "area": 15,
         "slotId": 1,
@@ -44,7 +44,7 @@
     {
         "Itemname": "I14",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Money RoomX: 20 Y: 13 #3",
+        "LocationName": "Tartarus - Money Room X: 20 Y: 13 #3",
         "blockId": 496185,
         "area": 15,
         "slotId": 1,
@@ -65,7 +65,7 @@
     {
         "Itemname": "I14",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Money RoomX: 20 Y: 13 #4",
+        "LocationName": "Tartarus - Money Room X: 20 Y: 13 #4",
         "blockId": 496187,
         "area": 15,
         "slotId": 1,
@@ -86,7 +86,7 @@
     {
         "Itemname": "I14",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Money RoomX: 16 Y: 10 #1",
+        "LocationName": "Tartarus - Money Room X: 16 Y: 10 #1",
         "blockId": 400149,
         "area": 15,
         "slotId": 1,
@@ -107,7 +107,7 @@
     {
         "Itemname": "I14",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Money RoomX: 16 Y: 10 #2",
+        "LocationName": "Tartarus - Money Room X: 16 Y: 10 #2",
         "blockId": 400150,
         "area": 15,
         "slotId": 1,
@@ -128,7 +128,7 @@
     {
         "Itemname": "I14",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Money RoomX: 16 Y: 10 #3",
+        "LocationName": "Tartarus - Money Room X: 16 Y: 10 #3",
         "blockId": 399150,
         "area": 15,
         "slotId": 1,

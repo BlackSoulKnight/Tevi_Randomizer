@@ -20,7 +20,7 @@ for file in os.listdir(Path):
             singleLocationCount[position] += 1
         else:
             singleLocationCount[position] = 1
-        location["LocationName"] += f"X: {location["LocationRegion"][0]["X"]} Y: {location["LocationRegion"][0]["Y"]} #{singleLocationCount[position]}"
+        location["LocationName"] += f" X: {location["LocationRegion"][0]["X"]} Y: {location["LocationRegion"][0]["Y"]} #{singleLocationCount[position]}"
     writer = open(Path+file,'w+')
     writer.write(json.dumps(jsonFile,indent=4))
     writer.close()

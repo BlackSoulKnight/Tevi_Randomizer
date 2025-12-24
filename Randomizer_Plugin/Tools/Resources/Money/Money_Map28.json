@@ -2,7 +2,7 @@
     {
         "Itemname": "I14",
         "Location": "Blushwood",
-        "LocationName": "Blushwood - Money RoomX: 10 Y: 13 #1",
+        "LocationName": "Blushwood - Money Room X: 10 Y: 13 #1",
         "blockId": 254189,
         "area": 28,
         "slotId": 1,
@@ -23,7 +23,7 @@
     {
         "Itemname": "I14",
         "Location": "Blushwood",
-        "LocationName": "Blushwood - Money RoomX: 10 Y: 13 #2",
+        "LocationName": "Blushwood - Money Room X: 10 Y: 13 #2",
         "blockId": 254190,
         "area": 28,
         "slotId": 1,
@@ -44,7 +44,7 @@
     {
         "Itemname": "I14",
         "Location": "Blushwood",
-        "LocationName": "Blushwood - Money RoomX: 10 Y: 13 #3",
+        "LocationName": "Blushwood - Money Room X: 10 Y: 13 #3",
         "blockId": 254191,
         "area": 28,
         "slotId": 1,
@@ -65,7 +65,7 @@
     {
         "Itemname": "I14",
         "Location": "Blushwood",
-        "LocationName": "Blushwood - Money RoomX: 7 Y: 15 #1",
+        "LocationName": "Blushwood - Money Room X: 7 Y: 15 #1",
         "blockId": 171219,
         "area": 28,
         "slotId": 1,
@@ -86,7 +86,7 @@
     {
         "Itemname": "I14",
         "Location": "Blushwood",
-        "LocationName": "Blushwood - Money RoomX: 7 Y: 15 #2",
+        "LocationName": "Blushwood - Money Room X: 7 Y: 15 #2",
         "blockId": 170219,
         "area": 28,
         "slotId": 1,
@@ -107,7 +107,7 @@
     {
         "Itemname": "I14",
         "Location": "Blushwood",
-        "LocationName": "Blushwood - Money RoomX: 7 Y: 15 #3",
+        "LocationName": "Blushwood - Money Room X: 7 Y: 15 #3",
         "blockId": 170218,
         "area": 28,
         "slotId": 1,
@@ -128,7 +128,7 @@
     {
         "Itemname": "I14",
         "Location": "Blushwood",
-        "LocationName": "Blushwood - Money RoomX: 7 Y: 15 #4",
+        "LocationName": "Blushwood - Money Room X: 7 Y: 15 #4",
         "blockId": 170217,
         "area": 28,
         "slotId": 1,
@@ -149,7 +149,7 @@
     {
         "Itemname": "I14",
         "Location": "Blushwood Sliding",
-        "LocationName": "Blushwood - Money RoomX: 12 Y: 9 #1",
+        "LocationName": "Blushwood - Money Room X: 12 Y: 9 #1",
         "blockId": 307131,
         "area": 28,
         "slotId": 1,
@@ -170,7 +170,7 @@
     {
         "Itemname": "I14",
         "Location": "Blushwood Sliding",
-        "LocationName": "Blushwood - Money RoomX: 12 Y: 9 #2",
+        "LocationName": "Blushwood - Money Room X: 12 Y: 9 #2",
         "blockId": 307132,
         "area": 28,
         "slotId": 1,
@@ -191,7 +191,7 @@
     {
         "Itemname": "I14",
         "Location": "Blushwood Sliding",
-        "LocationName": "Blushwood - Money RoomX: 12 Y: 9 #3",
+        "LocationName": "Blushwood - Money Room X: 12 Y: 9 #3",
         "blockId": 307133,
         "area": 28,
         "slotId": 1,

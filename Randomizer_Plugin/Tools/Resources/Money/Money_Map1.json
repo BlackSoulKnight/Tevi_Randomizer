@@ -44,7 +44,7 @@
     {
         "Itemname": "I14",
         "Location": "Thanatara Canyon",
-        "LocationName": " - Money Room X: 6 Y: 10 #1",
+        "LocationName": "Thanatara Canyon - Money Room X: 6 Y: 10 #1",
         "blockId": 162143,
         "area": 1,
         "slotId": 16214301,
@@ -65,7 +65,7 @@
     {
         "Itemname": "I14",
         "Location": "Thanatara Canyon",
-        "LocationName": " - Money Room X: 6 Y: 10 #2",
+        "LocationName": "Thanatara Canyon - Money Room X: 6 Y: 10 #2",
         "blockId": 161143,
         "area": 1,
         "slotId": 161143,
@@ -86,7 +86,7 @@
     {
         "Itemname": "I14",
         "Location": "Thanatara Canyon",
-        "LocationName": " - Money Room X: 6 Y: 10 #3",
+        "LocationName": "Thanatara Canyon - Money Room X: 6 Y: 10 #3",
         "blockId": 162142,
         "area": 1,
         "slotId": 162142,
@@ -407,7 +407,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) || ",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
                 "Difficulty": 0
             }
         ],

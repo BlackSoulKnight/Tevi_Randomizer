@@ -2,7 +2,7 @@
     {
         "Itemname": "I14",
         "Location": "Relicts",
-        "LocationName": "Relicts - Money RoomX: 9 Y: 8 #1",
+        "LocationName": "Relicts - Money Room X: 9 Y: 8 #1",
         "blockId": 216123,
         "area": 24,
         "slotId": 1,
@@ -23,7 +23,7 @@
     {
         "Itemname": "I14",
         "Location": "Relicts",
-        "LocationName": "Relicts - Money RoomX: 9 Y: 8 #2",
+        "LocationName": "Relicts - Money Room X: 9 Y: 8 #2",
         "blockId": 216122,
         "area": 24,
         "slotId": 1,
@@ -44,7 +44,7 @@
     {
         "Itemname": "I14",
         "Location": "Relicts",
-        "LocationName": "Relicts - Money RoomX: 12 Y: 8 #1",
+        "LocationName": "Relicts - Money Room X: 12 Y: 8 #1",
         "blockId": 290115,
         "area": 24,
         "slotId": 1,
@@ -65,7 +65,7 @@
     {
         "Itemname": "I14",
         "Location": "Relicts",
-        "LocationName": "Relicts - Money RoomX: 12 Y: 8 #2",
+        "LocationName": "Relicts - Money Room X: 12 Y: 8 #2",
         "blockId": 289115,
         "area": 24,
         "slotId": 1,
@@ -86,7 +86,7 @@
     {
         "Itemname": "I14",
         "Location": "Relicts",
-        "LocationName": "Relicts - Money RoomX: 11 Y: 9 #1",
+        "LocationName": "Relicts - Money Room X: 11 Y: 9 #1",
         "blockId": 273130,
         "area": 24,
         "slotId": 1,
@@ -107,7 +107,7 @@
     {
         "Itemname": "I14",
         "Location": "Relicts",
-        "LocationName": "Relicts - Money RoomX: 5 Y: 6 #1",
+        "LocationName": "Relicts - Money Room X: 5 Y: 6 #1",
         "blockId": 121094,
         "area": 24,
         "slotId": 1,
@@ -128,7 +128,7 @@
     {
         "Itemname": "I14",
         "Location": "Relicts",
-        "LocationName": "Relicts - Money RoomX: 1 Y: 8 #1",
+        "LocationName": "Relicts - Money Room X: 1 Y: 8 #1",
         "blockId": 33120,
         "area": 24,
         "slotId": 1,
@@ -149,7 +149,7 @@
     {
         "Itemname": "I14",
         "Location": "Relicts",
-        "LocationName": "Relicts - Money RoomX: 2 Y: 4 #1",
+        "LocationName": "Relicts - Money Room X: 2 Y: 4 #1",
         "blockId": 54064,
         "area": 24,
         "slotId": 1,

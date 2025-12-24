@@ -2,7 +2,7 @@
     {
         "Itemname": "I14",
         "Location": "EverGarden To Valhalla",
-        "LocationName": "Evernight Garden - Money RoomX: 17 Y: 12 #1",
+        "LocationName": "Evernight Garden - Money Room X: 17 Y: 12 #1",
         "blockId": 417177,
         "area": 29,
         "slotId": 1,
@@ -23,7 +23,7 @@
     {
         "Itemname": "I14",
         "Location": "EverGarden To Valhalla",
-        "LocationName": "Evernight Garden - Money RoomX: 17 Y: 12 #2",
+        "LocationName": "Evernight Garden - Money Room X: 17 Y: 12 #2",
         "blockId": 416177,
         "area": 29,
         "slotId": 1,
@@ -44,7 +44,7 @@
     {
         "Itemname": "I14",
         "Location": "EverGarden To Valhalla",
-        "LocationName": "Evernight Garden - Money RoomX: 17 Y: 12 #3",
+        "LocationName": "Evernight Garden - Money Room X: 17 Y: 12 #3",
         "blockId": 417176,
         "area": 29,
         "slotId": 1,
@@ -65,7 +65,7 @@
     {
         "Itemname": "I14",
         "Location": "EverGarden To Valhalla",
-        "LocationName": "Evernight Garden - Money RoomX: 17 Y: 12 #4",
+        "LocationName": "Evernight Garden - Money Room X: 17 Y: 12 #4",
         "blockId": 416176,
         "area": 29,
         "slotId": 1,
@@ -86,7 +86,7 @@
     {
         "Itemname": "I14",
         "Location": "EverGarden",
-        "LocationName": "Evernight Garden - Money RoomX: 25 Y: 12 #1",
+        "LocationName": "Evernight Garden - Money Room X: 25 Y: 12 #1",
         "blockId": 599174,
         "area": 29,
         "slotId": 1,
@@ -107,7 +107,7 @@
     {
         "Itemname": "I14",
         "Location": "EverGarden",
-        "LocationName": "Evernight Garden - Money RoomX: 25 Y: 12 #2",
+        "LocationName": "Evernight Garden - Money Room X: 25 Y: 12 #2",
         "blockId": 599175,
         "area": 29,
         "slotId": 1,
@@ -128,7 +128,7 @@
     {
         "Itemname": "I14",
         "Location": "EverGarden",
-        "LocationName": "Evernight Garden - Money RoomX: 25 Y: 12 #3",
+        "LocationName": "Evernight Garden - Money Room X: 25 Y: 12 #3",
         "blockId": 598175,
         "area": 29,
         "slotId": 1,
@@ -149,7 +149,7 @@
     {
         "Itemname": "I14",
         "Location": "EverGarden",
-        "LocationName": "Evernight Garden - Money RoomX: 25 Y: 12 #4",
+        "LocationName": "Evernight Garden - Money Room X: 25 Y: 12 #4",
         "blockId": 598174,
         "area": 29,
         "slotId": 1,
@@ -170,7 +170,7 @@
     {
         "Itemname": "I14",
         "Location": "EverGarden BossPath",
-        "LocationName": "Evernight Garden - Money RoomX: 21 Y: 6 #1",
+        "LocationName": "Evernight Garden - Money Room X: 21 Y: 6 #1",
         "blockId": 519090,
         "area": 29,
         "slotId": 1,
@@ -191,7 +191,7 @@
     {
         "Itemname": "I14",
         "Location": "EverGarden BossPath",
-        "LocationName": "Evernight Garden - Money RoomX: 21 Y: 6 #2",
+        "LocationName": "Evernight Garden - Money Room X: 21 Y: 6 #2",
         "blockId": 520090,
         "area": 29,
         "slotId": 1,
@@ -212,7 +212,7 @@
     {
         "Itemname": "I14",
         "Location": "EverGarden BossPath",
-        "LocationName": "Evernight Garden - Money RoomX: 21 Y: 6 #3",
+        "LocationName": "Evernight Garden - Money Room X: 21 Y: 6 #3",
         "blockId": 520089,
         "area": 29,
         "slotId": 1,
@@ -233,7 +233,7 @@
     {
         "Itemname": "I14",
         "Location": "EverGarden BossPath",
-        "LocationName": "Evernight Garden - Money RoomX: 16 Y: 5 #1",
+        "LocationName": "Evernight Garden - Money Room X: 16 Y: 5 #1",
         "blockId": 405083,
         "area": 29,
         "slotId": 1,
@@ -254,7 +254,7 @@
     {
         "Itemname": "I14",
         "Location": "EverGarden BossPath",
-        "LocationName": "Evernight Garden - Money RoomX: 16 Y: 5 #2",
+        "LocationName": "Evernight Garden - Money Room X: 16 Y: 5 #2",
         "blockId": 404082,
         "area": 29,
         "slotId": 1,
@@ -275,7 +275,7 @@
     {
         "Itemname": "I14",
         "Location": "EverGarden BossPath",
-        "LocationName": "Evernight Garden - Money RoomX: 16 Y: 5 #3",
+        "LocationName": "Evernight Garden - Money Room X: 16 Y: 5 #3",
         "blockId": 404083,
         "area": 29,
         "slotId": 1,
@@ -296,7 +296,7 @@
     {
         "Itemname": "I14",
         "Location": "EverGarden Boss Area",
-        "LocationName": "Evernight Garden - Money RoomX: 14 Y: 7 #1",
+        "LocationName": "Evernight Garden - Money Room X: 14 Y: 7 #1",
         "blockId": 351107,
         "area": 29,
         "slotId": 1,
@@ -317,7 +317,7 @@
     {
         "Itemname": "I14",
         "Location": "EverGarden Boss Area",
-        "LocationName": "Evernight Garden - Money RoomX: 14 Y: 7 #2",
+        "LocationName": "Evernight Garden - Money Room X: 14 Y: 7 #2",
         "blockId": 351106,
         "area": 29,
         "slotId": 1,
@@ -338,7 +338,7 @@
     {
         "Itemname": "I14",
         "Location": "EverGarden Boss Area",
-        "LocationName": "Evernight Garden - Money RoomX: 14 Y: 7 #3",
+        "LocationName": "Evernight Garden - Money Room X: 14 Y: 7 #3",
         "blockId": 351105,
         "area": 29,
         "slotId": 1,
@@ -359,7 +359,7 @@
     {
         "Itemname": "I14",
         "Location": "EverGarden Boss Area",
-        "LocationName": "Evernight Garden - Money RoomX: 12 Y: 10 #1",
+        "LocationName": "Evernight Garden - Money Room X: 12 Y: 10 #1",
         "blockId": 289146,
         "area": 29,
         "slotId": 1,
@@ -380,7 +380,7 @@
     {
         "Itemname": "I14",
         "Location": "EverGarden Boss Area",
-        "LocationName": "Evernight Garden - Money RoomX: 12 Y: 10 #2",
+        "LocationName": "Evernight Garden - Money Room X: 12 Y: 10 #2",
         "blockId": 288146,
         "area": 29,
         "slotId": 1,
@@ -401,7 +401,7 @@
     {
         "Itemname": "I14",
         "Location": "EverGarden Boss Area",
-        "LocationName": "Evernight Garden - Money RoomX: 12 Y: 10 #3",
+        "LocationName": "Evernight Garden - Money Room X: 12 Y: 10 #3",
         "blockId": 288145,
         "area": 29,
         "slotId": 1,

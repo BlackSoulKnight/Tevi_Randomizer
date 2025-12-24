@@ -2,13 +2,13 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Main",
-        "LocationName": "Catacombs - Money RoomX: 4 Y: 7 #1",
+        "LocationName": "Catacombs - Money Room X: 4 Y: 7 #1",
         "blockId": 100107,
         "area": 25,
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_JETPACK || ITEM_AirDash || ITEM_DOUBLEJUM)",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_JETPACK || ITEM_AirDash || ITEM_DOUBLEJUMP)",
                 "Difficulty": 0
             }
         ],
@@ -23,13 +23,13 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Main",
-        "LocationName": "Catacombs - Money RoomX: 4 Y: 7 #2",
+        "LocationName": "Catacombs - Money Room X: 4 Y: 7 #2",
         "blockId": 100106,
         "area": 25,
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_JETPACK || ITEM_AirDash || ITEM_DOUBLEJUM)",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_JETPACK || ITEM_AirDash || ITEM_DOUBLEJUMP)",
                 "Difficulty": 0
             }
         ],
@@ -44,7 +44,7 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Main",
-        "LocationName": "Catacombs - Money RoomX: 8 Y: 12 #1",
+        "LocationName": "Catacombs - Money Room X: 8 Y: 12 #1",
         "blockId": 211172,
         "area": 25,
         "slotId": 1,
@@ -65,7 +65,7 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Main",
-        "LocationName": "Catacombs - Money RoomX: 8 Y: 12 #2",
+        "LocationName": "Catacombs - Money Room X: 8 Y: 12 #2",
         "blockId": 211171,
         "area": 25,
         "slotId": 1,
@@ -86,7 +86,7 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Main",
-        "LocationName": "Catacombs - Money RoomX: 8 Y: 10 #1",
+        "LocationName": "Catacombs - Money Room X: 8 Y: 10 #1",
         "blockId": 201152,
         "area": 25,
         "slotId": 1,
@@ -107,7 +107,7 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Main",
-        "LocationName": "Catacombs - Money RoomX: 8 Y: 10 #2",
+        "LocationName": "Catacombs - Money Room X: 8 Y: 10 #2",
         "blockId": 201151,
         "area": 25,
         "slotId": 1,
@@ -128,7 +128,7 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Main",
-        "LocationName": "Catacombs - Money RoomX: 4 Y: 10 #1",
+        "LocationName": "Catacombs - Money Room X: 4 Y: 10 #1",
         "blockId": 113142,
         "area": 25,
         "slotId": 1,
@@ -149,7 +149,7 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Main",
-        "LocationName": "Catacombs - Money RoomX: 4 Y: 10 #2",
+        "LocationName": "Catacombs - Money Room X: 4 Y: 10 #2",
         "blockId": 114142,
         "area": 25,
         "slotId": 1,
@@ -170,7 +170,7 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Inner",
-        "LocationName": "Catacombs - Money RoomX: 4 Y: 10 #3",
+        "LocationName": "Catacombs - Money Room X: 4 Y: 10 #3",
         "blockId": 114176,
         "area": 25,
         "slotId": 1,
@@ -191,7 +191,7 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Inner",
-        "LocationName": "Catacombs - Money RoomX: 4 Y: 10 #4",
+        "LocationName": "Catacombs - Money Room X: 4 Y: 10 #4",
         "blockId": 114177,
         "area": 25,
         "slotId": 1,
@@ -212,7 +212,7 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Inner",
-        "LocationName": "Catacombs - Money RoomX: 4 Y: 10 #5",
+        "LocationName": "Catacombs - Money Room X: 4 Y: 10 #5",
         "blockId": 114178,
         "area": 25,
         "slotId": 1,
@@ -233,7 +233,7 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Inner",
-        "LocationName": "Catacombs - Money RoomX: 1 Y: 14 #1",
+        "LocationName": "Catacombs - Money Room X: 1 Y: 14 #1",
         "blockId": 28199,
         "area": 25,
         "slotId": 1,
@@ -254,7 +254,7 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Inner",
-        "LocationName": "Catacombs - Money RoomX: 1 Y: 14 #2",
+        "LocationName": "Catacombs - Money Room X: 1 Y: 14 #2",
         "blockId": 29198,
         "area": 25,
         "slotId": 1,
@@ -275,7 +275,7 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Inner",
-        "LocationName": "Catacombs - Money RoomX: 1 Y: 14 #3",
+        "LocationName": "Catacombs - Money Room X: 1 Y: 14 #3",
         "blockId": 29199,
         "area": 25,
         "slotId": 1,
@@ -296,7 +296,7 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Inner",
-        "LocationName": "Catacombs - Money RoomX: 1 Y: 14 #4",
+        "LocationName": "Catacombs - Money Room X: 1 Y: 14 #4",
         "blockId": 29200,
         "area": 25,
         "slotId": 1,
@@ -317,7 +317,7 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Inner",
-        "LocationName": "Catacombs - Money RoomX: 1 Y: 14 #5",
+        "LocationName": "Catacombs - Money Room X: 1 Y: 14 #5",
         "blockId": 30199,
         "area": 25,
         "slotId": 1,
@@ -338,7 +338,7 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Catacombs",
-        "LocationName": "Catacombs - Money RoomX: 8 Y: 7 #1",
+        "LocationName": "Catacombs - Money Room X: 8 Y: 7 #1",
         "blockId": 202108,
         "area": 25,
         "slotId": 1,
@@ -359,7 +359,7 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Catacombs",
-        "LocationName": "Catacombs - Money RoomX: 8 Y: 7 #2",
+        "LocationName": "Catacombs - Money Room X: 8 Y: 7 #2",
         "blockId": 202109,
         "area": 25,
         "slotId": 1,
@@ -380,7 +380,7 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Catacombs",
-        "LocationName": "Catacombs - Money RoomX: 8 Y: 7 #3",
+        "LocationName": "Catacombs - Money Room X: 8 Y: 7 #3",
         "blockId": 201108,
         "area": 25,
         "slotId": 1,
@@ -401,7 +401,7 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Catacombs",
-        "LocationName": "Catacombs - Money RoomX: 8 Y: 7 #4",
+        "LocationName": "Catacombs - Money Room X: 8 Y: 7 #4",
         "blockId": 201109,
         "area": 25,
         "slotId": 1,
@@ -422,7 +422,7 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Catacombs",
-        "LocationName": "Catacombs - Money RoomX: 14 Y: 18 #1",
+        "LocationName": "Catacombs - Money Room X: 14 Y: 18 #1",
         "blockId": 343116,
         "area": 25,
         "slotId": 1,
@@ -443,7 +443,7 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Catacombs",
-        "LocationName": "Catacombs - Money RoomX: 14 Y: 18 #2",
+        "LocationName": "Catacombs - Money Room X: 14 Y: 18 #2",
         "blockId": 343115,
         "area": 25,
         "slotId": 1,
@@ -464,7 +464,7 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Catacombs",
-        "LocationName": "Catacombs - Money RoomX: 14 Y: 18 #3",
+        "LocationName": "Catacombs - Money Room X: 14 Y: 18 #3",
         "blockId": 343114,
         "area": 25,
         "slotId": 1,
@@ -485,7 +485,7 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Catacombs",
-        "LocationName": "Catacombs - Money RoomX: 16 Y: 9 #1",
+        "LocationName": "Catacombs - Money Room X: 16 Y: 9 #1",
         "blockId": 388127,
         "area": 25,
         "slotId": 1,
@@ -506,7 +506,7 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Catacombs",
-        "LocationName": "Catacombs - Money RoomX: 16 Y: 9 #2",
+        "LocationName": "Catacombs - Money Room X: 16 Y: 9 #2",
         "blockId": 387127,
         "area": 25,
         "slotId": 1,
@@ -527,7 +527,7 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Catacombs",
-        "LocationName": "Catacombs - Money RoomX: 16 Y: 9 #3",
+        "LocationName": "Catacombs - Money Room X: 16 Y: 9 #3",
         "blockId": 386127,
         "area": 25,
         "slotId": 1,
@@ -548,7 +548,7 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Catacombs",
-        "LocationName": "Catacombs - Money RoomX: 16 Y: 9 #4",
+        "LocationName": "Catacombs - Money Room X: 16 Y: 9 #4",
         "blockId": 385127,
         "area": 25,
         "slotId": 1,
@@ -569,7 +569,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab Left",
-        "LocationName": "Lab - Money RoomX: 13 Y: 12 #1",
+        "LocationName": "Lab - Money Room X: 13 Y: 12 #1",
         "blockId": 321176,
         "area": 25,
         "slotId": 1,
@@ -590,7 +590,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab Left",
-        "LocationName": "Lab - Money RoomX: 13 Y: 12 #2",
+        "LocationName": "Lab - Money Room X: 13 Y: 12 #2",
         "blockId": 320177,
         "area": 25,
         "slotId": 1,
@@ -611,7 +611,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab Left",
-        "LocationName": "Lab - Money RoomX: 13 Y: 12 #3",
+        "LocationName": "Lab - Money Room X: 13 Y: 12 #3",
         "blockId": 321177,
         "area": 25,
         "slotId": 1,
@@ -632,7 +632,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab Left",
-        "LocationName": "Lab - Money RoomX: 13 Y: 12 #4",
+        "LocationName": "Lab - Money Room X: 13 Y: 12 #4",
         "blockId": 320176,
         "area": 25,
         "slotId": 1,
@@ -653,7 +653,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab Left",
-        "LocationName": "Lab - Money RoomX: 15 Y: 14 #1",
+        "LocationName": "Lab - Money Room X: 15 Y: 14 #1",
         "blockId": 368198,
         "area": 25,
         "slotId": 1,
@@ -674,7 +674,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab Left",
-        "LocationName": "Lab - Money RoomX: 15 Y: 14 #2",
+        "LocationName": "Lab - Money Room X: 15 Y: 14 #2",
         "blockId": 367198,
         "area": 25,
         "slotId": 1,
@@ -695,7 +695,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab Left",
-        "LocationName": "Lab - Money RoomX: 15 Y: 14 #3",
+        "LocationName": "Lab - Money Room X: 15 Y: 14 #3",
         "blockId": 367197,
         "area": 25,
         "slotId": 1,
@@ -716,7 +716,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money RoomX: 17 Y: 13 #1",
+        "LocationName": "Lab - Money Room X: 17 Y: 13 #1",
         "blockId": 423191,
         "area": 25,
         "slotId": 1,
@@ -737,7 +737,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money RoomX: 17 Y: 13 #2",
+        "LocationName": "Lab - Money Room X: 17 Y: 13 #2",
         "blockId": 423190,
         "area": 25,
         "slotId": 1,
@@ -758,7 +758,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money RoomX: 17 Y: 13 #3",
+        "LocationName": "Lab - Money Room X: 17 Y: 13 #3",
         "blockId": 422191,
         "area": 25,
         "slotId": 1,
@@ -779,7 +779,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money RoomX: 17 Y: 13 #4",
+        "LocationName": "Lab - Money Room X: 17 Y: 13 #4",
         "blockId": 422190,
         "area": 25,
         "slotId": 1,
@@ -800,7 +800,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money RoomX: 18 Y: 10 #1",
+        "LocationName": "Lab - Money Room X: 18 Y: 10 #1",
         "blockId": 431143,
         "area": 25,
         "slotId": 1,
@@ -821,7 +821,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money RoomX: 18 Y: 10 #2",
+        "LocationName": "Lab - Money Room X: 18 Y: 10 #2",
         "blockId": 431142,
         "area": 25,
         "slotId": 1,
@@ -842,7 +842,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money RoomX: 25 Y: 12 #1",
+        "LocationName": "Lab - Money Room X: 25 Y: 12 #1",
         "blockId": 614178,
         "area": 25,
         "slotId": 1,
@@ -863,7 +863,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money RoomX: 25 Y: 12 #2",
+        "LocationName": "Lab - Money Room X: 25 Y: 12 #2",
         "blockId": 615178,
         "area": 25,
         "slotId": 1,
@@ -884,7 +884,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money RoomX: 25 Y: 12 #3",
+        "LocationName": "Lab - Money Room X: 25 Y: 12 #3",
         "blockId": 616178,
         "area": 25,
         "slotId": 1,
@@ -905,7 +905,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money RoomX: 25 Y: 12 #4",
+        "LocationName": "Lab - Money Room X: 25 Y: 12 #4",
         "blockId": 614177,
         "area": 25,
         "slotId": 1,
@@ -926,7 +926,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money RoomX: 25 Y: 12 #5",
+        "LocationName": "Lab - Money Room X: 25 Y: 12 #5",
         "blockId": 615177,
         "area": 25,
         "slotId": 1,
@@ -947,7 +947,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money RoomX: 25 Y: 12 #6",
+        "LocationName": "Lab - Money Room X: 25 Y: 12 #6",
         "blockId": 616177,
         "area": 25,
         "slotId": 1,

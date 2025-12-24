@@ -2,7 +2,7 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood Right",
-        "LocationName": "Gloamwood - Money RoomX: 15 Y: 16 #1",
+        "LocationName": "Gloamwood - Money Room X: 15 Y: 16 #1",
         "blockId": 369233,
         "area": 9,
         "slotId": 1,
@@ -23,7 +23,7 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood Right",
-        "LocationName": "Gloamwood - Money RoomX: 15 Y: 16 #2",
+        "LocationName": "Gloamwood - Money Room X: 15 Y: 16 #2",
         "blockId": 370233,
         "area": 9,
         "slotId": 1,
@@ -44,7 +44,7 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood Right",
-        "LocationName": "Gloamwood - Money RoomX: 15 Y: 16 #3",
+        "LocationName": "Gloamwood - Money Room X: 15 Y: 16 #3",
         "blockId": 369232,
         "area": 9,
         "slotId": 1,
@@ -65,7 +65,7 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood Right",
-        "LocationName": "Gloamwood - Money RoomX: 15 Y: 16 #4",
+        "LocationName": "Gloamwood - Money Room X: 15 Y: 16 #4",
         "blockId": 370232,
         "area": 9,
         "slotId": 1,
@@ -86,7 +86,7 @@
     {
         "Itemname": "I14",
         "Location": "Ulskan Village Area",
-        "LocationName": "Gloamwood - Money RoomX: 23 Y: 15 #1",
+        "LocationName": "Gloamwood - Money Room X: 23 Y: 15 #1",
         "blockId": 551216,
         "area": 9,
         "slotId": 1,
@@ -107,7 +107,7 @@
     {
         "Itemname": "I14",
         "Location": "Ulskan Village Area",
-        "LocationName": "Gloamwood - Money RoomX: 23 Y: 15 #2",
+        "LocationName": "Gloamwood - Money Room X: 23 Y: 15 #2",
         "blockId": 551217,
         "area": 9,
         "slotId": 1,
@@ -128,7 +128,7 @@
     {
         "Itemname": "I14",
         "Location": "Ulskan To Plague Forest",
-        "LocationName": "Gloamwood - Money RoomX: 26 Y: 13 #1",
+        "LocationName": "Gloamwood - Money Room X: 26 Y: 13 #1",
         "blockId": 631186,
         "area": 9,
         "slotId": 1,
@@ -149,7 +149,7 @@
     {
         "Itemname": "I14",
         "Location": "Ulskan To Plague Forest",
-        "LocationName": "Gloamwood - Money RoomX: 26 Y: 13 #2",
+        "LocationName": "Gloamwood - Money Room X: 26 Y: 13 #2",
         "blockId": 632186,
         "area": 9,
         "slotId": 1,
@@ -170,7 +170,7 @@
     {
         "Itemname": "I14",
         "Location": "Ulskan To Plague Forest",
-        "LocationName": "Gloamwood - Money RoomX: 26 Y: 13 #3",
+        "LocationName": "Gloamwood - Money Room X: 26 Y: 13 #3",
         "blockId": 633186,
         "area": 9,
         "slotId": 1,
@@ -191,7 +191,7 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood to Forest",
-        "LocationName": "Gloamwood - Money RoomX: 6 Y: 20 #1",
+        "LocationName": "Gloamwood - Money Room X: 6 Y: 20 #1",
         "blockId": 148279,
         "area": 9,
         "slotId": 1,
@@ -212,7 +212,7 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood Middle",
-        "LocationName": "Gloamwood - Money RoomX: 6 Y: 16 #1",
+        "LocationName": "Gloamwood - Money Room X: 6 Y: 16 #1",
         "blockId": 150227,
         "area": 9,
         "slotId": 1,
@@ -233,7 +233,7 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood Middle",
-        "LocationName": "Gloamwood - Money RoomX: 6 Y: 16 #2",
+        "LocationName": "Gloamwood - Money Room X: 6 Y: 16 #2",
         "blockId": 149228,
         "area": 9,
         "slotId": 1,
@@ -254,7 +254,7 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood Middle",
-        "LocationName": "Gloamwood - Money RoomX: 6 Y: 16 #3",
+        "LocationName": "Gloamwood - Money Room X: 6 Y: 16 #3",
         "blockId": 150228,
         "area": 9,
         "slotId": 1,
@@ -275,7 +275,7 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood Middle",
-        "LocationName": "Gloamwood - Money RoomX: 6 Y: 12 #1",
+        "LocationName": "Gloamwood - Money Room X: 6 Y: 12 #1",
         "blockId": 149173,
         "area": 9,
         "slotId": 1,
@@ -296,7 +296,7 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood Middle",
-        "LocationName": "Gloamwood - Money RoomX: 6 Y: 12 #2",
+        "LocationName": "Gloamwood - Money Room X: 6 Y: 12 #2",
         "blockId": 150173,
         "area": 9,
         "slotId": 1,
@@ -317,7 +317,7 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood Middle",
-        "LocationName": "Gloamwood - Money RoomX: 9 Y: 12 #1",
+        "LocationName": "Gloamwood - Money Room X: 9 Y: 12 #1",
         "blockId": 234177,
         "area": 9,
         "slotId": 1,
@@ -338,7 +338,7 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood Middle",
-        "LocationName": "Gloamwood - Money RoomX: 9 Y: 12 #2",
+        "LocationName": "Gloamwood - Money Room X: 9 Y: 12 #2",
         "blockId": 234178,
         "area": 9,
         "slotId": 1,
@@ -359,7 +359,7 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood to Relicts",
-        "LocationName": "Gloamwood - Money RoomX: 3 Y: 10 #1",
+        "LocationName": "Gloamwood - Money Room X: 3 Y: 10 #1",
         "blockId": 83148,
         "area": 9,
         "slotId": 1,
@@ -380,7 +380,7 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood to Relicts",
-        "LocationName": "Gloamwood - Money RoomX: 3 Y: 10 #2",
+        "LocationName": "Gloamwood - Money Room X: 3 Y: 10 #2",
         "blockId": 82149,
         "area": 9,
         "slotId": 1,
@@ -401,7 +401,7 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood to Relicts",
-        "LocationName": "Gloamwood - Money RoomX: 3 Y: 10 #3",
+        "LocationName": "Gloamwood - Money Room X: 3 Y: 10 #3",
         "blockId": 83149,
         "area": 9,
         "slotId": 1,
@@ -422,7 +422,7 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood to Ulvosa",
-        "LocationName": "Gloamwood - Money RoomX: 5 Y: 5 #1",
+        "LocationName": "Gloamwood - Money Room X: 5 Y: 5 #1",
         "blockId": 124074,
         "area": 9,
         "slotId": 1,
@@ -443,7 +443,7 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood to Ulvosa",
-        "LocationName": "Gloamwood - Money RoomX: 5 Y: 5 #2",
+        "LocationName": "Gloamwood - Money Room X: 5 Y: 5 #2",
         "blockId": 125074,
         "area": 9,
         "slotId": 1,
@@ -464,7 +464,7 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood to Ulvosa",
-        "LocationName": "Gloamwood - Money RoomX: 5 Y: 5 #3",
+        "LocationName": "Gloamwood - Money Room X: 5 Y: 5 #3",
         "blockId": 124073,
         "area": 9,
         "slotId": 1,
@@ -485,7 +485,7 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood to Ulvosa",
-        "LocationName": "Gloamwood - Money RoomX: 5 Y: 5 #4",
+        "LocationName": "Gloamwood - Money Room X: 5 Y: 5 #4",
         "blockId": 125073,
         "area": 9,
         "slotId": 1,
