@@ -70,6 +70,21 @@ namespace TeviRandomizer
                     SaveManager.Instance.AddBreakTile(3, 455, 189);
                     SaveManager.Instance.AddBreakTile(3, 455, 188);
                     SaveManager.Instance.AddBreakTile(3, 456, 188);
+                    // Snow City
+                    SaveManager.Instance.AddBreakTile(16, 355, 99);
+                    SaveManager.Instance.AddBreakTile(16, 356, 99);
+                    SaveManager.Instance.AddBreakTile(16, 357, 99);
+                    SaveManager.Instance.AddBreakTile(16, 355, 100);
+                    SaveManager.Instance.AddBreakTile(16, 356, 100);
+                    SaveManager.Instance.AddBreakTile(16, 357, 100);
+                    SaveManager.Instance.AddBreakTile(16, 425, 117);
+                    SaveManager.Instance.AddBreakTile(16, 426, 117);
+                    SaveManager.Instance.AddBreakTile(16, 425, 118);
+                    SaveManager.Instance.AddBreakTile(16, 426, 118);
+                    SaveManager.Instance.AddBreakTile(16, 338, 74);
+                    SaveManager.Instance.AddBreakTile(16, 338, 75);
+                    SaveManager.Instance.AddBreakTile(16, 337, 75);
+                    SaveManager.Instance.AddBreakTile(16, 336, 75);
                 }
 
             }
