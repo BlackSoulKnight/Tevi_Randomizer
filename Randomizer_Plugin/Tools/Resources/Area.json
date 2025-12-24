@@ -107,7 +107,7 @@
                 },
                 {
                     "Exit": "Teleporter Morose",
-                    "Method": ""
+                    "Method": "OpenMorose"
                 },
                 {
                     "Exit": "Crafting",
