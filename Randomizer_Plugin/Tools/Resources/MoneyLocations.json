@@ -296,7 +296,7 @@
     {
         "Itemname": "I14",
         "Location": "Thanatara Canyon",
-        "LocationName": "Thanatara Canyon - Money Room X: 11 Y: 8 #1",
+        "LocationName": "Thanatara Canyon - Money Room X: 11 Y: 8 #2",
         "blockId": 270112,
         "area": 1,
         "slotId": 1,
@@ -317,7 +317,7 @@
     {
         "Itemname": "I14",
         "Location": "Thanatara Canyon",
-        "LocationName": "Thanatara Canyon - Money Room X: 11 Y: 8 #2",
+        "LocationName": "Thanatara Canyon - Money Room X: 11 Y: 8 #3",
         "blockId": 269111,
         "area": 1,
         "slotId": 1,
@@ -338,7 +338,7 @@
     {
         "Itemname": "I14",
         "Location": "Thanatara Canyon",
-        "LocationName": "Thanatara Canyon - Money Room X: 11 Y: 8 #3",
+        "LocationName": "Thanatara Canyon - Money Room X: 11 Y: 8 #4",
         "blockId": 271111,
         "area": 1,
         "slotId": 1,
@@ -547,29 +547,8 @@
     },
     {
         "Itemname": "I14",
-        "Location": "Thanatara Canyon Lower",
-        "LocationName": "Thanatara Canyon - Money Room X: 14 Y: 12 #1",
-        "blockId": 354174,
-        "area": 1,
-        "slotId": 1,
-        "Requirement": [
-            {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
-                "Difficulty": 0
-            }
-        ],
-        "LocationRegion": [
-            {
-                "Area": 1,
-                "X": 14,
-                "Y": 12
-            }
-        ]
-    },
-    {
-        "Itemname": "I14",
         "Location": "Gurun Desert",
-        "LocationName": "Gurun Desert - Money Room X: 14 Y: 12 #1",
+        "LocationName": "Gurun Desert - Money Room X: 14 Y: 12 #2",
         "blockId": 354174,
         "area": 1,
         "slotId": 1,
@@ -590,7 +569,7 @@
     {
         "Itemname": "I14",
         "Location": "Gurun Desert",
-        "LocationName": "Gurun Desert - Money Room X: 14 Y: 12 #2",
+        "LocationName": "Gurun Desert - Money Room X: 14 Y: 12 #3",
         "blockId": 354175,
         "area": 1,
         "slotId": 1,
@@ -611,7 +590,7 @@
     {
         "Itemname": "I14",
         "Location": "Gurun Desert",
-        "LocationName": "Gurun Desert - Money Room X: 14 Y: 12 #3",
+        "LocationName": "Gurun Desert - Money Room X: 14 Y: 12 #4",
         "blockId": 355174,
         "area": 1,
         "slotId": 1,
@@ -632,7 +611,7 @@
     {
         "Itemname": "I14",
         "Location": "Gurun Desert",
-        "LocationName": "Gurun Desert - Money Room X: 14 Y: 12 #4",
+        "LocationName": "Gurun Desert - Money Room X: 14 Y: 12 #1",
         "blockId": 355175,
         "area": 1,
         "slotId": 1,
@@ -737,7 +716,7 @@
     {
         "Itemname": "I14",
         "Location": "Gurun Desert",
-        "LocationName": "Gurun Desert - Money Room X: 25 Y: 10 #1",
+        "LocationName": "Gurun Desert - Money Room X: 25 Y: 10 #2",
         "blockId": 597151,
         "area": 1,
         "slotId": 1,
@@ -7335,7 +7314,7 @@
     {
         "Itemname": "I14",
         "Location": "Sinner's Oath",
-        "LocationName": "Sinner's Oath - Money Room X: 6 Y: 4 #1",
+        "LocationName": "Sinner's Oath - Money Room X: 6 Y: 4 #3",
         "blockId": 155066,
         "area": 23,
         "slotId": 1,
@@ -8755,27 +8734,6 @@
         "Itemname": "I14",
         "Location": "Cloister Pre Boss",
         "LocationName": "Cloister - Money Room X: 31 Y: 12 #4",
-        "blockId": 758177,
-        "area": 26,
-        "slotId": 1,
-        "Requirement": [
-            {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
-                "Difficulty": 0
-            }
-        ],
-        "LocationRegion": [
-            {
-                "Area": 26,
-                "X": 31,
-                "Y": 12
-            }
-        ]
-    },
-    {
-        "Itemname": "I14",
-        "Location": "Cloister Pre Boss",
-        "LocationName": "Cloister - Money Room X: 31 Y: 12 #5",
         "blockId": 761177,
         "area": 26,
         "slotId": 1,
@@ -8796,7 +8754,7 @@
     {
         "Itemname": "I14",
         "Location": "Cloister Pre Boss",
-        "LocationName": "Cloister - Money Room X: 31 Y: 12 #6",
+        "LocationName": "Cloister - Money Room X: 31 Y: 12 #5",
         "blockId": 757177,
         "area": 26,
         "slotId": 1,
@@ -10308,7 +10266,7 @@
     {
         "Itemname": "I14",
         "Location": "Morose City",
-        "LocationName": "Morose - Money Room X: 13 Y: 10 #1",
+        "LocationName": "Morose - Money Room X: 13 Y: 10 #2",
         "blockId": 328149,
         "area": 3,
         "slotId": 1,
@@ -11589,7 +11547,7 @@
     {
         "Itemname": "I14",
         "Location": "CopperWood",
-        "LocationName": "Copper Wood - Money Room X: 11 Y: 20 #1",
+        "LocationName": "Copper Wood - Money Room X: 11 Y: 20 #2",
         "blockId": 277288,
         "area": 7,
         "slotId": 1,

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using UnityEngine;
 
 namespace TeviRandomizer
 {
@@ -30,9 +31,17 @@ namespace TeviRandomizer
             Dictionary<string,string> keyValuePairs = new Dictionary<string,string>();
             string path = RandomizerPlugin.pluginPath + "/resource/";
             JArray locations = JArray.Parse(File.ReadAllText(path + "UpgradeResourceLocation.json"));
-            foreach(var loc in locations)
+            foreach (var loc in locations)
             {
                 keyValuePairs.Add($"{loc["area"]} #{(int)loc["blockId"]}", loc["LocationName"].ToString());
+            }
+            locations = JArray.Parse(File.ReadAllText(path + "MoneyLocations.json"));
+            foreach (var loc in locations)
+            {
+                if (keyValuePairs.ContainsKey($"{loc["area"]} #{(int)loc["blockId"]}"))
+                    Debug.LogError($"KEY ALREADY EXISTS: {$"{loc["area"]} #{(int)loc["blockId"]}"}");
+                else
+                    keyValuePairs.Add($"{loc["area"]} #{(int)loc["blockId"]}", loc["LocationName"].ToString());
             }
             return keyValuePairs;
         }

@@ -33,3 +33,21 @@ writer.close()
 
 print(len(singleFile))
 print(totalAmount)
+
+print("upgrades things")
+
+Path = os.path.dirname(os.path.realpath(__file__))+"/UpgradeResourceLocation.json"
+jsonFileRead = open(Path,'r')
+jsonFile = json.load(jsonFileRead)
+jsonFileRead.close()
+core = 0
+upgrade = 0
+for a in jsonFile:
+    if a["Itemname"] == "I16":
+        upgrade += 1
+    if a["Itemname"] == "I15":
+        core +=1
+
+print("Core:"+core)
+print("upgrade:"+upgrade)
+

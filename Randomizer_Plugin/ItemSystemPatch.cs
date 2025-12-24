@@ -532,11 +532,13 @@ namespace TeviRandomizer
                         case Mode.AfterMission:
                             var submode = EventManager.Instance.getSubMode();
                             blockPos = submode == Mode.StartMission3A ? EliteMissionOffset : 0;
-                            blockPos = submode == Mode.StartMission3B ? EliteMissionOffset-1 : 0;
-                            blockPos = submode == Mode.StartMission3C ? EliteMissionOffset-2 : 0;
-                            blockPos = submode == Mode.StartMission8A ? EliteMissionOffset-3 : 0;
-                            blockPos = submode == Mode.StartMission15A ? EliteMissionOffset-4 : 0;
-                            blockPos = submode == Mode.StartMission20A ? EliteMissionOffset-5 : 0;
+                            blockPos = submode == Mode.StartMission3B ? EliteMissionOffset-1*2 : 0;
+                            blockPos = submode == Mode.StartMission3C ? EliteMissionOffset-2*2 : 0;
+                            blockPos = submode == Mode.StartMission8A ? EliteMissionOffset-3*2 : 0;
+                            blockPos = submode == Mode.StartMission15A ? EliteMissionOffset-4*2 : 0;
+                            blockPos = submode == Mode.StartMission20A ? EliteMissionOffset-5*2 : 0;
+                            if (r == ItemList.Resource.CORE)
+                                blockPos--;
                             break;
                         default:break;
                     }

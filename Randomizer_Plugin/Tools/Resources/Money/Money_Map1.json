@@ -149,7 +149,7 @@
     {
         "Itemname": "I14",
         "Location": "Thanatara Canyon",
-        "LocationName": "Thanatara Canyon - Money Room X: 11 Y: 8 #1",
+        "LocationName": "Thanatara Canyon - Money Room X: 11 Y: 8 #2",
         "blockId": 270112,
         "area": 1,
         "slotId": 1,
@@ -170,7 +170,7 @@
     {
         "Itemname": "I14",
         "Location": "Thanatara Canyon",
-        "LocationName": "Thanatara Canyon - Money Room X: 11 Y: 8 #2",
+        "LocationName": "Thanatara Canyon - Money Room X: 11 Y: 8 #3",
         "blockId": 269111,
         "area": 1,
         "slotId": 1,
@@ -191,7 +191,7 @@
     {
         "Itemname": "I14",
         "Location": "Thanatara Canyon",
-        "LocationName": "Thanatara Canyon - Money Room X: 11 Y: 8 #3",
+        "LocationName": "Thanatara Canyon - Money Room X: 11 Y: 8 #4",
         "blockId": 271111,
         "area": 1,
         "slotId": 1,
@@ -400,29 +400,8 @@
     },
     {
         "Itemname": "I14",
-        "Location": "Thanatara Canyon Lower",
-        "LocationName": "Thanatara Canyon - Money Room X: 14 Y: 12 #1",
-        "blockId": 354174,
-        "area": 1,
-        "slotId": 1,
-        "Requirement": [
-            {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
-                "Difficulty": 0
-            }
-        ],
-        "LocationRegion": [
-            {
-                "Area": 1,
-                "X": 14,
-                "Y": 12
-            }
-        ]
-    },
-    {
-        "Itemname": "I14",
         "Location": "Gurun Desert",
-        "LocationName": "Gurun Desert - Money Room X: 14 Y: 12 #1",
+        "LocationName": "Gurun Desert - Money Room X: 14 Y: 12 #2",
         "blockId": 354174,
         "area": 1,
         "slotId": 1,
@@ -443,7 +422,7 @@
     {
         "Itemname": "I14",
         "Location": "Gurun Desert",
-        "LocationName": "Gurun Desert - Money Room X: 14 Y: 12 #2",
+        "LocationName": "Gurun Desert - Money Room X: 14 Y: 12 #3",
         "blockId": 354175,
         "area": 1,
         "slotId": 1,
@@ -464,7 +443,7 @@
     {
         "Itemname": "I14",
         "Location": "Gurun Desert",
-        "LocationName": "Gurun Desert - Money Room X: 14 Y: 12 #3",
+        "LocationName": "Gurun Desert - Money Room X: 14 Y: 12 #4",
         "blockId": 355174,
         "area": 1,
         "slotId": 1,
@@ -485,7 +464,7 @@
     {
         "Itemname": "I14",
         "Location": "Gurun Desert",
-        "LocationName": "Gurun Desert - Money Room X: 14 Y: 12 #4",
+        "LocationName": "Gurun Desert - Money Room X: 14 Y: 12 #1",
         "blockId": 355175,
         "area": 1,
         "slotId": 1,
@@ -590,7 +569,7 @@
     {
         "Itemname": "I14",
         "Location": "Gurun Desert",
-        "LocationName": "Gurun Desert - Money Room X: 25 Y: 10 #1",
+        "LocationName": "Gurun Desert - Money Room X: 25 Y: 10 #2",
         "blockId": 597151,
         "area": 1,
         "slotId": 1,

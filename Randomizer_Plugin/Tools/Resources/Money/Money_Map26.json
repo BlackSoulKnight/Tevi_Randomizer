@@ -255,27 +255,6 @@
         "Itemname": "I14",
         "Location": "Cloister Pre Boss",
         "LocationName": "Cloister - Money Room X: 31 Y: 12 #4",
-        "blockId": 758177,
-        "area": 26,
-        "slotId": 1,
-        "Requirement": [
-            {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
-                "Difficulty": 0
-            }
-        ],
-        "LocationRegion": [
-            {
-                "Area": 26,
-                "X": 31,
-                "Y": 12
-            }
-        ]
-    },
-    {
-        "Itemname": "I14",
-        "Location": "Cloister Pre Boss",
-        "LocationName": "Cloister - Money Room X: 31 Y: 12 #5",
         "blockId": 761177,
         "area": 26,
         "slotId": 1,
@@ -296,7 +275,7 @@
     {
         "Itemname": "I14",
         "Location": "Cloister Pre Boss",
-        "LocationName": "Cloister - Money Room X: 31 Y: 12 #6",
+        "LocationName": "Cloister - Money Room X: 31 Y: 12 #5",
         "blockId": 757177,
         "area": 26,
         "slotId": 1,
