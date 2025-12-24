@@ -559,8 +559,19 @@ namespace TeviRandomizer
                     break;
             }
         }
+        [HarmonyPatch(typeof(Chap1WarpDevice), "EVENT")]
+        [HarmonyPrefix]
+        static void noPort()
+        {
+            if (!RandomizerPlugin.customFlags[(byte)CustomFlags.TempOption])
+            {
+                EventManager.Instance.SetStage(1);
+                FadeManager.Instance.SetTargetAlpha(0f);
+                EventManager.Instance.StopEvent();
+            }
+        }
+
+
     }
-
-
 
 }
