@@ -1,0 +1,422 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "EverGarden To Valhalla",
+        "LocationName": "Evernight Garden - Money Room",
+        "blockId": 417177,
+        "Area": 29,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 17,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "EverGarden To Valhalla",
+        "LocationName": "Evernight Garden - Money Room",
+        "blockId": 416177,
+        "Area": 29,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 17,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "EverGarden To Valhalla",
+        "LocationName": "Evernight Garden - Money Room",
+        "blockId": 417176,
+        "Area": 29,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 17,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "EverGarden To Valhalla",
+        "LocationName": "Evernight Garden - Money Room",
+        "blockId": 416176,
+        "Area": 29,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 17,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "EverGarden",
+        "LocationName": "Evernight Garden - Money Room",
+        "blockId": 599174,
+        "Area": 29,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 25,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "EverGarden",
+        "LocationName": "Evernight Garden - Money Room",
+        "blockId": 599175,
+        "Area": 29,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 25,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "EverGarden",
+        "LocationName": "Evernight Garden - Money Room",
+        "blockId": 598175,
+        "Area": 29,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 25,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "EverGarden",
+        "LocationName": "Evernight Garden - Money Room",
+        "blockId": 598174,
+        "Area": 29,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 25,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "EverGarden BossPath",
+        "LocationName": "Evernight Garden - Money Room",
+        "blockId": 519090,
+        "Area": 29,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 21,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "EverGarden BossPath",
+        "LocationName": "Evernight Garden - Money Room",
+        "blockId": 520090,
+        "Area": 29,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 21,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "EverGarden BossPath",
+        "LocationName": "Evernight Garden - Money Room",
+        "blockId": 520089,
+        "Area": 29,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 21,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "EverGarden BossPath",
+        "LocationName": "Evernight Garden - Money Room",
+        "blockId": 405083,
+        "Area": 29,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 16,
+                "Y": 5
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "EverGarden BossPath",
+        "LocationName": "Evernight Garden - Money Room",
+        "blockId": 404082,
+        "Area": 29,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 16,
+                "Y": 5
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "EverGarden BossPath",
+        "LocationName": "Evernight Garden - Money Room",
+        "blockId": 404083,
+        "Area": 29,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 16,
+                "Y": 5
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "EverGarden Boss Area",
+        "LocationName": "Evernight Garden - Money Room",
+        "blockId": 351107,
+        "Area": 29,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 14,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "EverGarden Boss Area",
+        "LocationName": "Evernight Garden - Money Room",
+        "blockId": 351106,
+        "Area": 29,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 14,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "EverGarden Boss Area",
+        "LocationName": "Evernight Garden - Money Room",
+        "blockId": 351105,
+        "Area": 29,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 14,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "EverGarden Boss Area",
+        "LocationName": "Evernight Garden - Money Room",
+        "blockId": 289146,
+        "Area": 29,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 12,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "EverGarden Boss Area",
+        "LocationName": "Evernight Garden - Money Room",
+        "blockId": 288146,
+        "Area": 29,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 12,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "EverGarden Boss Area",
+        "LocationName": "Evernight Garden - Money Room",
+        "blockId": 288145,
+        "Area": 29,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 29,
+                "X": 12,
+                "Y": 10
+            }
+        ]
+    }
+]

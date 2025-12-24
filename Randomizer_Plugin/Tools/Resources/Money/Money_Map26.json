@@ -1,0 +1,443 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "Cloister",
+        "LocationName": "Cloister - Money Room",
+        "blockId": 456149,
+        "Area": 26,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 26,
+                "X": 19,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Cloister",
+        "LocationName": "Cloister - Money Room",
+        "blockId": 457150,
+        "Area": 26,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 26,
+                "X": 19,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Cloister",
+        "LocationName": "Cloister - Money Room",
+        "blockId": 455150,
+        "Area": 26,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 26,
+                "X": 19,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Cloister",
+        "LocationName": "Cloister - Money Room",
+        "blockId": 734143,
+        "Area": 26,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_DOUBLEJUMP || ITEM_JETPACK)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 26,
+                "X": 30,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Cloister",
+        "LocationName": "Cloister - Money Room",
+        "blockId": 734142,
+        "Area": 26,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_DOUBLEJUMP || ITEM_JETPACK)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 26,
+                "X": 30,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Cloister Pre Boss",
+        "LocationName": "Cloister - Money Room",
+        "blockId": 654169,
+        "Area": 26,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 26,
+                "X": 27,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Cloister Pre Boss",
+        "LocationName": "Cloister - Money Room",
+        "blockId": 653169,
+        "Area": 26,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 26,
+                "X": 27,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Cloister Pre Boss",
+        "LocationName": "Cloister - Money Room",
+        "blockId": 654168,
+        "Area": 26,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 26,
+                "X": 27,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Cloister Pre Boss",
+        "LocationName": "Cloister - Money Room",
+        "blockId": 653168,
+        "Area": 26,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 26,
+                "X": 27,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Cloister Pre Boss",
+        "LocationName": "Cloister - Money Room",
+        "blockId": 759177,
+        "Area": 26,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 26,
+                "X": 31,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Cloister Pre Boss",
+        "LocationName": "Cloister - Money Room",
+        "blockId": 760177,
+        "Area": 26,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 26,
+                "X": 31,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Cloister Pre Boss",
+        "LocationName": "Cloister - Money Room",
+        "blockId": 758177,
+        "Area": 26,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 26,
+                "X": 31,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Cloister Pre Boss",
+        "LocationName": "Cloister - Money Room",
+        "blockId": 758177,
+        "Area": 26,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 26,
+                "X": 31,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Cloister Pre Boss",
+        "LocationName": "Cloister - Money Room",
+        "blockId": 761177,
+        "Area": 26,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 26,
+                "X": 31,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Cloister Pre Boss",
+        "LocationName": "Cloister - Money Room",
+        "blockId": 757177,
+        "Area": 26,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 26,
+                "X": 31,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Cloister Pre Boss",
+        "LocationName": "Cloister - Money Room",
+        "blockId": 481189,
+        "Area": 26,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB) && ITEM_BombLengthExtend",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 26,
+                "X": 20,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Cloister Pre Boss",
+        "LocationName": "Cloister - Money Room",
+        "blockId": 480189,
+        "Area": 26,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB) && ITEM_BombLengthExtend",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 26,
+                "X": 20,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Cloister Pre Boss",
+        "LocationName": "Cloister - Money Room",
+        "blockId": 481190,
+        "Area": 26,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB) && ITEM_BombLengthExtend",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 26,
+                "X": 20,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Cloister Pre Boss",
+        "LocationName": "Cloister - Money Room",
+        "blockId": 479189,
+        "Area": 26,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB) && ITEM_BombLengthExtend",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 26,
+                "X": 20,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Cloister Pre Boss",
+        "LocationName": "Cloister - Money Room",
+        "blockId": 480190,
+        "Area": 26,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB) && ITEM_BombLengthExtend",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 26,
+                "X": 20,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Cloister Pre Boss",
+        "LocationName": "Cloister - Money Room",
+        "blockId": 479190,
+        "Area": 26,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB) && ITEM_BombLengthExtend",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 26,
+                "X": 20,
+                "Y": 13
+            }
+        ]
+    }
+]

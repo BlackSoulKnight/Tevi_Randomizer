@@ -1,0 +1,653 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Mirrors West",
+        "LocationName": "Gallery of Mirrors - Money Room",
+        "blockId": 434122,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 18,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Mirrors West",
+        "LocationName": "Gallery of Mirrors - Money Room",
+        "blockId": 433122,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 18,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Mirrors West",
+        "LocationName": "Gallery of Mirrors - Money Room",
+        "blockId": 432122,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 18,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Mirrors West",
+        "LocationName": "Gallery of Mirrors - Money Room",
+        "blockId": 433121,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 18,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Mirrors West",
+        "LocationName": "Gallery of Mirrors - Money Room",
+        "blockId": 432121,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 18,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Mirrors East",
+        "LocationName": "Gallery of Mirrors - Money Room",
+        "blockId": 622120,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 26,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Mirrors East",
+        "LocationName": "Gallery of Mirrors - Money Room",
+        "blockId": 599107,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 25,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Mirrors East",
+        "LocationName": "Gallery of Mirrors - Money Room",
+        "blockId": 598106,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 25,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Mirrors East",
+        "LocationName": "Gallery of Mirrors - Money Room",
+        "blockId": 599108,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 25,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Mirrors East",
+        "LocationName": "Gallery of Mirrors - Money Room",
+        "blockId": 598107,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 25,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Mirrors East",
+        "LocationName": "Gallery of Mirrors - Money Room",
+        "blockId": 598108,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 25,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Mirrors East",
+        "LocationName": "Gallery of Mirrors - Money Room",
+        "blockId": 669136,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 28,
+                "Y": 9
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Mirrors East",
+        "LocationName": "Gallery of Mirrors - Money Room",
+        "blockId": 669135,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 28,
+                "Y": 9
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Mirrors East",
+        "LocationName": "Gallery of Mirrors - Money Room",
+        "blockId": 669134,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 28,
+                "Y": 9
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Souls",
+        "LocationName": "Gallery of Souls - Money Room",
+        "blockId": 761179,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 31,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Souls",
+        "LocationName": "Gallery of Souls - Money Room",
+        "blockId": 761178,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 31,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Souls",
+        "LocationName": "Gallery of Souls - Money Room",
+        "blockId": 761177,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 31,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Souls",
+        "LocationName": "Gallery of Souls - Money Room",
+        "blockId": 552165,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 23,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Souls",
+        "LocationName": "Gallery of Souls - Money Room",
+        "blockId": 551165,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 23,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Souls",
+        "LocationName": "Gallery of Souls - Money Room",
+        "blockId": 552164,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 23,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Souls",
+        "LocationName": "Gallery of Souls - Money Room",
+        "blockId": 551164,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 23,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Souls Boss Area",
+        "LocationName": "Gallery of Souls - Money Room",
+        "blockId": 531189,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 22,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Souls Boss Area",
+        "LocationName": "Gallery of Souls - Money Room",
+        "blockId": 531188,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 22,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Souls Boss Area",
+        "LocationName": "Gallery of Souls - Money Room",
+        "blockId": 531187,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 22,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Souls Boss Area",
+        "LocationName": "Gallery of Souls - Money Room",
+        "blockId": 513176,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 22,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Souls Boss Area",
+        "LocationName": "Gallery of Souls - Money Room",
+        "blockId": 514176,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 21,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Souls Boss Area",
+        "LocationName": "Gallery of Souls - Money Room",
+        "blockId": 513175,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 21,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Souls Boss Area",
+        "LocationName": "Gallery of Souls - Money Room",
+        "blockId": 514175,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 21,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Souls Boss Area",
+        "LocationName": "Gallery of Souls - Money Room",
+        "blockId": 514174,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 21,
+                "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Souls Boss Area",
+        "LocationName": "Gallery of Souls - Money Room",
+        "blockId": 385192,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 16,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Gallery of Souls Boss Area",
+        "LocationName": "Gallery of Souls - Money Room",
+        "blockId": 384192,
+        "Area": 27,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 27,
+                "X": 16,
+                "Y": 13
+            }
+        ]
+    }
+]

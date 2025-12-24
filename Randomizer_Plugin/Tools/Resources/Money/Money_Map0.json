@@ -1,0 +1,149 @@
+[    {
+        "Itemname": "I14",
+        "Location": "Desert Base Entrance",
+        "LocationName": "Desert Base - Money Room X: 18 Y: 13 #0",
+        "blockId": 433192,
+        "area": 0,
+        "slotId": 0,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 0,
+                "X": 18,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Desert Base Entrance",
+        "LocationName": "Desert Base - Money Room X: 18 Y: 13 #1",
+        "blockId": 433191,
+        "area": 0,
+        "slotId": 0,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 0,
+                "X": 18,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Desert Base UnderScore",
+        "LocationName": "Desert Base - Money Room X: 14 Y: 11 #0",
+        "blockId": 336161,
+        "area": 0,
+        "slotId": 0,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 0,
+                "X": 14,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Desert Base UnderScore",
+        "LocationName": "Desert Base - Money Room X: 14 Y: 11 #1",
+        "blockId": 336160,
+        "area": 0,
+        "slotId": 336160,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 0,
+                "X": 14,
+                "Y": 11
+            }
+        ]
+    },
+
+    {
+        "Itemname": "I14",
+        "Location": "Desert Base Main",
+        "LocationName": "Desert Base - Money Room X: 9 Y: 16 #0",
+        "blockId": 231225,
+        "area": 0,
+        "slotId": 231225,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB || ITEM_KNIFE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 0,
+                "X": 9,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Desert Base Main",
+        "LocationName": "Desert Base - Money Room X: 9 Y: 16 #1",
+        "blockId": 232225,
+        "area": 0,
+        "slotId": 232225,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB || ITEM_KNIFE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 0,
+                "X": 9,
+                "Y": 16
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Desert Base Main",
+        "LocationName": "Desert Base - Money Room X: 9 Y: 16 #2",
+        "blockId": 230225,
+        "area": 0,
+        "slotId": 230225,
+        "Requirement": [
+            {
+                "Method": "ITEM_LINEBOMB || ITEM_KNIFE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 0,
+                "X": 9,
+                "Y": 16
+            }
+        ]
+    }
+]
