@@ -1,0 +1,338 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "Solennian Ruins",
+        "LocationName": "Solennian Ruins - Money Room",
+        "blockId": 565105,
+        "Area": 22,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 22,
+                "X": 23,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Solennian Ruins",
+        "LocationName": "Solennian Ruins - Money Room",
+        "blockId": 566105,
+        "Area": 22,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 22,
+                "X": 23,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Solennian Ruins",
+        "LocationName": "Solennian Ruins - Money Room",
+        "blockId": 567105,
+        "Area": 22,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 22,
+                "X": 23,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Solennian Ruins",
+        "LocationName": "Solennian Ruins - Money Room",
+        "blockId": 580141,
+        "Area": 22,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 22,
+                "X": 24,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Solennian Ruins",
+        "LocationName": "Solennian Ruins - Money Room",
+        "blockId": 579141,
+        "Area": 22,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 22,
+                "X": 24,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Solennian Ruins",
+        "LocationName": "Solennian Ruins - Money Room",
+        "blockId": 339119,
+        "Area": 22,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 22,
+                "X": 14,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Solennian Ruins",
+        "LocationName": "Solennian Ruins - Money Room",
+        "blockId": 338119,
+        "Area": 22,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 22,
+                "X": 14,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Solennian Ruins",
+        "LocationName": "Solennian Ruins - Money Room",
+        "blockId": 339118,
+        "Area": 22,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 22,
+                "X": 14,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Solennian Ruins",
+        "LocationName": "Solennian Ruins - Money Room",
+        "blockId": 441219,
+        "Area": 22,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 22,
+                "X": 18,
+                "Y": 15
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Solennian Ruins",
+        "LocationName": "Solennian Ruins - Money Room",
+        "blockId": 442219,
+        "Area": 22,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 22,
+                "X": 18,
+                "Y": 15
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Solennian Ruins",
+        "LocationName": "Solennian Ruins - Money Room",
+        "blockId": 443219,
+        "Area": 22,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 22,
+                "X": 18,
+                "Y": 15
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Solennian Ruins",
+        "LocationName": "Solennian Ruins - Money Room",
+        "blockId": 442218,
+        "Area": 22,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 22,
+                "X": 18,
+                "Y": 15
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Solennian Ruins",
+        "LocationName": "Solennian Ruins - Money Room",
+        "blockId": 489190,
+        "Area": 22,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 22,
+                "X": 20,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Solennian Ruins",
+        "LocationName": "Solennian Ruins - Money Room",
+        "blockId": 488190,
+        "Area": 22,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 22,
+                "X": 20,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Solennian Ruins",
+        "LocationName": "Solennian Ruins - Money Room",
+        "blockId": 491190,
+        "Area": 22,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 22,
+                "X": 20,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Solennian Ruins",
+        "LocationName": "Solennian Ruins - Money Room",
+        "blockId": 486190,
+        "Area": 22,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 22,
+                "X": 20,
+                "Y": 13
+            }
+        ]
+    }
+]

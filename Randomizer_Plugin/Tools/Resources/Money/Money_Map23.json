@@ -1,0 +1,101 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "Sinner's Oath",
+        "LocationName": "Sinner's Oath - Money Room",
+        "blockId": 153066,
+        "Area": 23,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_DOUBLEJUMP && Hard",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_DOUBLEJUMP",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_JETPACK",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_WALLJUMP",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 23,
+                "X": 6,
+                "Y": 4
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Sinner's Oath",
+        "LocationName": "Sinner's Oath - Money Room",
+        "blockId": 154066,
+        "Area": 23,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_DOUBLEJUMP && Hard",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_DOUBLEJUMP",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_JETPACK",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_WALLJUMP",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 23,
+                "X": 6,
+                "Y": 4
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Sinner's Oath",
+        "LocationName": "Sinner's Oath - Money Room",
+        "blockId": 155066,
+        "Area": 23,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_AREABOMB && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_DOUBLEJUMP && Hard",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_DOUBLEJUMP",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_JETPACK",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_BombLengthExtend 3 && ITEM_LINEBOMB && ITEM_AirSlide && ITEM_SLIDE && ITEM_WALLJUMP",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 24,
+                "X": 6,
+                "Y": 4
+            }
+        ]
+    }
+]

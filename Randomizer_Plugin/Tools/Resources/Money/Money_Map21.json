@@ -1,0 +1,627 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley West",
+        "LocationName": "Heavens Valley West - Money Room",
+        "blockId": 338256,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 14,
+                "Y": 18
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley West",
+        "LocationName": "Heavens Valley West - Money Room",
+        "blockId": 242213,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 10,
+                "Y": 15
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley West",
+        "LocationName": "Heavens Valley West - Money Room",
+        "blockId": 242212,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 10,
+                "Y": 15
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley West",
+        "LocationName": "Heavens Valley West - Money Room",
+        "blockId": 242211,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 10,
+                "Y": 15
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley West",
+        "LocationName": "Heavens Valley West - Money Room",
+        "blockId": 21619,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 9,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley West",
+        "LocationName": "Heavens Valley West - Money Room",
+        "blockId": 216190,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 9,
+                "Y": 13
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley West",
+        "LocationName": "Heavens Valley West - Money Room",
+        "blockId": 260160,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 10,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley West",
+        "LocationName": "Heavens Valley West - Money Room",
+        "blockId": 260159,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 10,
+                "Y": 11
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley West",
+        "LocationName": "Heavens Valley West - Money Room",
+        "blockId": 184247,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 7,
+                "Y": 17
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley West",
+        "LocationName": "Heavens Valley West - Money Room",
+        "blockId": 183246,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 7,
+                "Y": 17
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley West",
+        "LocationName": "Heavens Valley West - Money Room",
+        "blockId": 183247,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 7,
+                "Y": 17
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Heavens Valley West",
+        "LocationName": "Heavens Valley West- Money Room",
+        "blockId": 182247,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 7,
+                "Y": 17
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Valhalla Breath West",
+        "LocationName": "Valhalla Breath West - Money Room",
+        "blockId": 468066,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 19,
+                "Y": 4
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Valhalla Breath West",
+        "LocationName": "Valhalla Breath West - Money Room",
+        "blockId": 468065,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 19,
+                "Y": 4
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Valhalla Breath West",
+        "LocationName": "Valhalla Breath West - Money Room",
+        "blockId": 468067,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 19,
+                "Y": 4
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Valhalla Breath West",
+        "LocationName": "Valhalla Breath West - Money Room",
+        "blockId": 467067,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 19,
+                "Y": 4
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Valhalla Breath West",
+        "LocationName": "Valhalla Breath West - Money Room",
+        "blockId": 578122,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 24,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Valhalla Breath West",
+        "LocationName": "Valhalla Breath West - Money Room",
+        "blockId": 578121,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 24,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Valhalla Breath West",
+        "LocationName": "Valhalla Breath West - Money Room",
+        "blockId": 627099,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 26,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Valhalla Breath West",
+        "LocationName": "Valhalla Breath West - Money Room",
+        "blockId": 627100,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 26,
+                "Y": 7
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Valhalla Breath West",
+        "LocationName": "Valhalla Breath West - Money Room",
+        "blockId": 531025,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 22,
+                "Y": 1
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Valhalla Breath West",
+        "LocationName": "Valhalla Breath West - Money Room",
+        "blockId": 531024,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 22,
+                "Y": 1
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Valhalla Breath West Extended",
+        "LocationName": "Valhalla Breath West - Money Room",
+        "blockId": 343020,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB && ITEM_BombLengthExtend) || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 14,
+                "Y": 1
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Valhalla Breath West Extended",
+        "LocationName": "Valhalla Breath West - Money Room",
+        "blockId": 342020,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB && ITEM_BombLengthExtend) || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 14,
+                "Y": 1
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Valhalla Breath West Extended",
+        "LocationName": "Valhalla Breath West - Money Room",
+        "blockId": 341020,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB && ITEM_BombLengthExtend) || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 14,
+                "Y": 1
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Valhalla Breath West Extended",
+        "LocationName": "Valhalla Breath West - Money Room",
+        "blockId": 218019,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_KNIFE",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_SLIDE && ITEM_JETPACK && ITEM_KNIFE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 9,
+                "Y": 1
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Valhalla Breath West Extended",
+        "LocationName": "Valhalla Breath West - Money Room",
+        "blockId": 218021,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_KNIFE",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_SLIDE && ITEM_JETPACK && ITEM_KNIFE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 9,
+                "Y": 1
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Valhalla Breath West Extended",
+        "LocationName": "Valhalla Breath West - Money Room",
+        "blockId": 218022,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_KNIFE",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_SLIDE && ITEM_JETPACK && ITEM_KNIFE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 9,
+                "Y": 1
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Valhalla Breath West Extended",
+        "LocationName": "Valhalla Breath West - Money Room",
+        "blockId": 218018,
+        "Area": 21,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_KNIFE",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_SLIDE && ITEM_JETPACK && ITEM_KNIFE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 21,
+                "X": 9,
+                "Y": 1
+            }
+        ]
+    }
+]

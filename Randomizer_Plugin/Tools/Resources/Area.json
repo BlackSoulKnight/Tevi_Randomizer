@@ -1808,6 +1808,10 @@
                 {
                     "Exit": "Pre Lab",
                     "Method": "ITEM_LINEBOMB && ITEM_SLIDE && (ITEM_DOUBLEJUMP || ITEM_JETPACK)"
+                },
+                {
+                    "Exit": "Teleporter Catacombs",
+                    "Method": "ITEM_LINEBOMB && ITEM_SLIDE && (ITEM_DOUBLEJUMP || ITEM_JETPACK)"
                 }
             ]
         },

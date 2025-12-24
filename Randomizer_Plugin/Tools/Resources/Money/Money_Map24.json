@@ -1,0 +1,170 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "Relicts",
+        "LocationName": "Relicts - Money Room",
+        "blockId": 216123,
+        "Area": 24,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 24,
+                "X": 9,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Relicts",
+        "LocationName": "Relicts - Money Room",
+        "blockId": 216122,
+        "Area": 24,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 24,
+                "X": 9,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Relicts",
+        "LocationName": "Relicts - Money Room",
+        "blockId": 290115,
+        "Area": 24,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 24,
+                "X": 12,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Relicts",
+        "LocationName": "Relicts - Money Room",
+        "blockId": 289115,
+        "Area": 24,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 24,
+                "X": 12,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Relicts",
+        "LocationName": "Relicts - Money Room",
+        "blockId": 273130,
+        "Area": 24,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 24,
+                "X": 11,
+                "Y": 9
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Relicts",
+        "LocationName": "Relicts - Money Room",
+        "blockId": 121094,
+        "Area": 24,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 24,
+                "X": 5,
+                "Y": 6
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Relicts",
+        "LocationName": "Relicts - Money Room",
+        "blockId": 33120,
+        "Area": 24,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 24,
+                "X": 1,
+                "Y": 8
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Relicts",
+        "LocationName": "Relicts - Money Room",
+        "blockId": 54064,
+        "Area": 24,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 24,
+                "X": 2,
+                "Y": 4
+            }
+        ]
+    }
+]
