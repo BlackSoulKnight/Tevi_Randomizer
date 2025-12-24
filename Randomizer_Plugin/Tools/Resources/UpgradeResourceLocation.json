@@ -2451,7 +2451,7 @@
         ],
         "Requirement": [
             {
-                "Method": "ITEM_DOUBLJUMP || ITEM_JETPACK || ITEM_AirDash",
+                "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash",
                 "Difficulty": 0
             }
         ]
@@ -2472,7 +2472,7 @@
         ],
         "Requirement": [
             {
-                "Method": "ITEM_DOUBLJUMP || ITEM_JETPACK || ITEM_AirDash",
+                "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash",
                 "Difficulty": 0
             }
         ]
@@ -2493,7 +2493,7 @@
         ],
         "Requirement": [
             {
-                "Method": "ITEM_DOUBLJUMP || ITEM_JETPACK || ITEM_AirDash",
+                "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash",
                 "Difficulty": 0
             }
         ]
@@ -2514,7 +2514,7 @@
         ],
         "Requirement": [
             {
-                "Method": "ITEM_DOUBLJUMP || ITEM_JETPACK || ITEM_AirDash",
+                "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash",
                 "Difficulty": 0
             }
         ]
