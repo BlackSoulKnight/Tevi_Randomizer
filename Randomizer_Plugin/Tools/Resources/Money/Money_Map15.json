@@ -2,9 +2,9 @@
     {
         "Itemname": "I14",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Money Room",
+        "LocationName": "Tartarus - Money RoomX: 20 Y: 13 #1",
         "blockId": 496186,
-        "Area": 15,
+        "area": 15,
         "slotId": 1,
         "Requirement": [
             {
@@ -23,9 +23,9 @@
     {
         "Itemname": "I14",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Money Room",
+        "LocationName": "Tartarus - Money RoomX: 20 Y: 13 #2",
         "blockId": 495187,
-        "Area": 15,
+        "area": 15,
         "slotId": 1,
         "Requirement": [
             {
@@ -44,9 +44,9 @@
     {
         "Itemname": "I14",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Money Room",
+        "LocationName": "Tartarus - Money RoomX: 20 Y: 13 #3",
         "blockId": 496185,
-        "Area": 15,
+        "area": 15,
         "slotId": 1,
         "Requirement": [
             {
@@ -65,9 +65,9 @@
     {
         "Itemname": "I14",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Money Room",
+        "LocationName": "Tartarus - Money RoomX: 20 Y: 13 #4",
         "blockId": 496187,
-        "Area": 15,
+        "area": 15,
         "slotId": 1,
         "Requirement": [
             {
@@ -86,9 +86,9 @@
     {
         "Itemname": "I14",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Money Room",
+        "LocationName": "Tartarus - Money RoomX: 16 Y: 10 #1",
         "blockId": 400149,
-        "Area": 15,
+        "area": 15,
         "slotId": 1,
         "Requirement": [
             {
@@ -107,9 +107,9 @@
     {
         "Itemname": "I14",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Money Room",
+        "LocationName": "Tartarus - Money RoomX: 16 Y: 10 #2",
         "blockId": 400150,
-        "Area": 15,
+        "area": 15,
         "slotId": 1,
         "Requirement": [
             {
@@ -128,9 +128,9 @@
     {
         "Itemname": "I14",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Money Room",
+        "LocationName": "Tartarus - Money RoomX: 16 Y: 10 #3",
         "blockId": 399150,
-        "Area": 15,
+        "area": 15,
         "slotId": 1,
         "Requirement": [
             {

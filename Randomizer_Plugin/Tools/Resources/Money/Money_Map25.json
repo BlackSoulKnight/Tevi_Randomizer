@@ -2,9 +2,9 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Main",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 4 Y: 7 #1",
         "blockId": 100107,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -23,9 +23,9 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Main",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 4 Y: 7 #2",
         "blockId": 100106,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -44,9 +44,9 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Main",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 8 Y: 12 #1",
         "blockId": 211172,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -65,9 +65,9 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Main",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 8 Y: 12 #2",
         "blockId": 211171,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -86,9 +86,9 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Main",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 8 Y: 10 #1",
         "blockId": 201152,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -107,9 +107,9 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Main",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 8 Y: 10 #2",
         "blockId": 201151,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -128,9 +128,9 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Main",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 4 Y: 10 #1",
         "blockId": 113142,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -149,9 +149,9 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Main",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 4 Y: 10 #2",
         "blockId": 114142,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -170,9 +170,9 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Inner",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 4 Y: 10 #3",
         "blockId": 114176,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -191,9 +191,9 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Inner",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 4 Y: 10 #4",
         "blockId": 114177,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -212,9 +212,9 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Inner",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 4 Y: 10 #5",
         "blockId": 114178,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -233,9 +233,9 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Inner",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 1 Y: 14 #1",
         "blockId": 28199,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -254,9 +254,9 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Inner",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 1 Y: 14 #2",
         "blockId": 29198,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -275,9 +275,9 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Inner",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 1 Y: 14 #3",
         "blockId": 29199,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -296,9 +296,9 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Inner",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 1 Y: 14 #4",
         "blockId": 29200,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -317,9 +317,9 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Inner",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 1 Y: 14 #5",
         "blockId": 30199,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -338,9 +338,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Catacombs",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 8 Y: 7 #1",
         "blockId": 202108,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -359,9 +359,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Catacombs",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 8 Y: 7 #2",
         "blockId": 202109,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -380,9 +380,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Catacombs",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 8 Y: 7 #3",
         "blockId": 201108,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -401,9 +401,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Catacombs",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 8 Y: 7 #4",
         "blockId": 201109,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -422,9 +422,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Catacombs",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 14 Y: 18 #1",
         "blockId": 343116,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -443,9 +443,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Catacombs",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 14 Y: 18 #2",
         "blockId": 343115,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -464,9 +464,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Catacombs",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 14 Y: 18 #3",
         "blockId": 343114,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -485,9 +485,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Catacombs",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 16 Y: 9 #1",
         "blockId": 388127,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -506,9 +506,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Catacombs",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 16 Y: 9 #2",
         "blockId": 387127,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -527,9 +527,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Catacombs",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 16 Y: 9 #3",
         "blockId": 386127,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -548,9 +548,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Catacombs",
-        "LocationName": "Catacombs - Money Room",
+        "LocationName": "Catacombs - Money RoomX: 16 Y: 9 #4",
         "blockId": 385127,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -569,9 +569,9 @@
     {
         "Itemname": "I14",
         "Location": "Lab Left",
-        "LocationName": "Lab - Money Room",
+        "LocationName": "Lab - Money RoomX: 13 Y: 12 #1",
         "blockId": 321176,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -590,9 +590,9 @@
     {
         "Itemname": "I14",
         "Location": "Lab Left",
-        "LocationName": "Lab - Money Room",
+        "LocationName": "Lab - Money RoomX: 13 Y: 12 #2",
         "blockId": 320177,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -611,9 +611,9 @@
     {
         "Itemname": "I14",
         "Location": "Lab Left",
-        "LocationName": "Lab - Money Room",
+        "LocationName": "Lab - Money RoomX: 13 Y: 12 #3",
         "blockId": 321177,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -632,9 +632,9 @@
     {
         "Itemname": "I14",
         "Location": "Lab Left",
-        "LocationName": "Lab - Money Room",
+        "LocationName": "Lab - Money RoomX: 13 Y: 12 #4",
         "blockId": 320176,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -653,9 +653,9 @@
     {
         "Itemname": "I14",
         "Location": "Lab Left",
-        "LocationName": "Lab - Money Room",
+        "LocationName": "Lab - Money RoomX: 15 Y: 14 #1",
         "blockId": 368198,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -674,9 +674,9 @@
     {
         "Itemname": "I14",
         "Location": "Lab Left",
-        "LocationName": "Lab - Money Room",
+        "LocationName": "Lab - Money RoomX: 15 Y: 14 #2",
         "blockId": 367198,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -695,9 +695,9 @@
     {
         "Itemname": "I14",
         "Location": "Lab Left",
-        "LocationName": "Lab - Money Room",
+        "LocationName": "Lab - Money RoomX: 15 Y: 14 #3",
         "blockId": 367197,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -716,9 +716,9 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money Room",
+        "LocationName": "Lab - Money RoomX: 17 Y: 13 #1",
         "blockId": 423191,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -737,9 +737,9 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money Room",
+        "LocationName": "Lab - Money RoomX: 17 Y: 13 #2",
         "blockId": 423190,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -758,9 +758,9 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money Room",
+        "LocationName": "Lab - Money RoomX: 17 Y: 13 #3",
         "blockId": 422191,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -779,9 +779,9 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money Room",
+        "LocationName": "Lab - Money RoomX: 17 Y: 13 #4",
         "blockId": 422190,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -800,9 +800,9 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money Room",
+        "LocationName": "Lab - Money RoomX: 18 Y: 10 #1",
         "blockId": 431143,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -821,9 +821,9 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money Room",
+        "LocationName": "Lab - Money RoomX: 18 Y: 10 #2",
         "blockId": 431142,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -842,9 +842,9 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money Room",
+        "LocationName": "Lab - Money RoomX: 25 Y: 12 #1",
         "blockId": 614178,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -863,9 +863,9 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money Room",
+        "LocationName": "Lab - Money RoomX: 25 Y: 12 #2",
         "blockId": 615178,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -884,9 +884,9 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money Room",
+        "LocationName": "Lab - Money RoomX: 25 Y: 12 #3",
         "blockId": 616178,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -905,9 +905,9 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money Room",
+        "LocationName": "Lab - Money RoomX: 25 Y: 12 #4",
         "blockId": 614177,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -926,9 +926,9 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money Room",
+        "LocationName": "Lab - Money RoomX: 25 Y: 12 #5",
         "blockId": 615177,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {
@@ -947,9 +947,9 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money Room",
+        "LocationName": "Lab - Money RoomX: 25 Y: 12 #6",
         "blockId": 616177,
-        "Area": 25,
+        "area": 25,
         "slotId": 1,
         "Requirement": [
             {

@@ -2,9 +2,9 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood Right",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 15 Y: 16 #1",
         "blockId": 369233,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {
@@ -23,9 +23,9 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood Right",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 15 Y: 16 #2",
         "blockId": 370233,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {
@@ -44,9 +44,9 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood Right",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 15 Y: 16 #3",
         "blockId": 369232,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {
@@ -65,9 +65,9 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood Right",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 15 Y: 16 #4",
         "blockId": 370232,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {
@@ -86,9 +86,9 @@
     {
         "Itemname": "I14",
         "Location": "Ulskan Village Area",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 23 Y: 15 #1",
         "blockId": 551216,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {
@@ -107,9 +107,9 @@
     {
         "Itemname": "I14",
         "Location": "Ulskan Village Area",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 23 Y: 15 #2",
         "blockId": 551217,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {
@@ -128,9 +128,9 @@
     {
         "Itemname": "I14",
         "Location": "Ulskan To Plague Forest",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 26 Y: 13 #1",
         "blockId": 631186,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {
@@ -149,9 +149,9 @@
     {
         "Itemname": "I14",
         "Location": "Ulskan To Plague Forest",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 26 Y: 13 #2",
         "blockId": 632186,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {
@@ -170,9 +170,9 @@
     {
         "Itemname": "I14",
         "Location": "Ulskan To Plague Forest",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 26 Y: 13 #3",
         "blockId": 633186,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {
@@ -191,9 +191,9 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood to Forest",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 6 Y: 20 #1",
         "blockId": 148279,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {
@@ -212,9 +212,9 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood Middle",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 6 Y: 16 #1",
         "blockId": 150227,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {
@@ -233,9 +233,9 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood Middle",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 6 Y: 16 #2",
         "blockId": 149228,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {
@@ -254,9 +254,9 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood Middle",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 6 Y: 16 #3",
         "blockId": 150228,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {
@@ -275,9 +275,9 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood Middle",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 6 Y: 12 #1",
         "blockId": 149173,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {
@@ -296,9 +296,9 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood Middle",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 6 Y: 12 #2",
         "blockId": 150173,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {
@@ -317,9 +317,9 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood Middle",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 9 Y: 12 #1",
         "blockId": 234177,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {
@@ -338,9 +338,9 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood Middle",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 9 Y: 12 #2",
         "blockId": 234178,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {
@@ -359,9 +359,9 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood to Relicts",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 3 Y: 10 #1",
         "blockId": 83148,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {
@@ -380,9 +380,9 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood to Relicts",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 3 Y: 10 #2",
         "blockId": 82149,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {
@@ -401,9 +401,9 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood to Relicts",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 3 Y: 10 #3",
         "blockId": 83149,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {
@@ -422,9 +422,9 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood to Ulvosa",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 5 Y: 5 #1",
         "blockId": 124074,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {
@@ -443,9 +443,9 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood to Ulvosa",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 5 Y: 5 #2",
         "blockId": 125074,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {
@@ -464,9 +464,9 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood to Ulvosa",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 5 Y: 5 #3",
         "blockId": 124073,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {
@@ -485,9 +485,9 @@
     {
         "Itemname": "I14",
         "Location": "Gloamwood to Ulvosa",
-        "LocationName": "Gloamwood - Money Room",
+        "LocationName": "Gloamwood - Money RoomX: 5 Y: 5 #4",
         "blockId": 125073,
-        "Area": 9,
+        "area": 9,
         "slotId": 1,
         "Requirement": [
             {

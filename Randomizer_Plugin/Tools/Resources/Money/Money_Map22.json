@@ -2,9 +2,9 @@
     {
         "Itemname": "I14",
         "Location": "Solennian Ruins",
-        "LocationName": "Solennian Ruins - Money Room",
+        "LocationName": "Solennian Ruins - Money RoomX: 23 Y: 7 #1",
         "blockId": 565105,
-        "Area": 22,
+        "area": 22,
         "slotId": 1,
         "Requirement": [
             {
@@ -23,9 +23,9 @@
     {
         "Itemname": "I14",
         "Location": "Solennian Ruins",
-        "LocationName": "Solennian Ruins - Money Room",
+        "LocationName": "Solennian Ruins - Money RoomX: 23 Y: 7 #2",
         "blockId": 566105,
-        "Area": 22,
+        "area": 22,
         "slotId": 1,
         "Requirement": [
             {
@@ -44,9 +44,9 @@
     {
         "Itemname": "I14",
         "Location": "Solennian Ruins",
-        "LocationName": "Solennian Ruins - Money Room",
+        "LocationName": "Solennian Ruins - Money RoomX: 23 Y: 7 #3",
         "blockId": 567105,
-        "Area": 22,
+        "area": 22,
         "slotId": 1,
         "Requirement": [
             {
@@ -65,9 +65,9 @@
     {
         "Itemname": "I14",
         "Location": "Solennian Ruins",
-        "LocationName": "Solennian Ruins - Money Room",
+        "LocationName": "Solennian Ruins - Money RoomX: 24 Y: 10 #1",
         "blockId": 580141,
-        "Area": 22,
+        "area": 22,
         "slotId": 1,
         "Requirement": [
             {
@@ -86,9 +86,9 @@
     {
         "Itemname": "I14",
         "Location": "Solennian Ruins",
-        "LocationName": "Solennian Ruins - Money Room",
+        "LocationName": "Solennian Ruins - Money RoomX: 24 Y: 10 #2",
         "blockId": 579141,
-        "Area": 22,
+        "area": 22,
         "slotId": 1,
         "Requirement": [
             {
@@ -107,9 +107,9 @@
     {
         "Itemname": "I14",
         "Location": "Solennian Ruins",
-        "LocationName": "Solennian Ruins - Money Room",
+        "LocationName": "Solennian Ruins - Money RoomX: 14 Y: 8 #1",
         "blockId": 339119,
-        "Area": 22,
+        "area": 22,
         "slotId": 1,
         "Requirement": [
             {
@@ -128,9 +128,9 @@
     {
         "Itemname": "I14",
         "Location": "Solennian Ruins",
-        "LocationName": "Solennian Ruins - Money Room",
+        "LocationName": "Solennian Ruins - Money RoomX: 14 Y: 8 #2",
         "blockId": 338119,
-        "Area": 22,
+        "area": 22,
         "slotId": 1,
         "Requirement": [
             {
@@ -149,9 +149,9 @@
     {
         "Itemname": "I14",
         "Location": "Solennian Ruins",
-        "LocationName": "Solennian Ruins - Money Room",
+        "LocationName": "Solennian Ruins - Money RoomX: 14 Y: 8 #3",
         "blockId": 339118,
-        "Area": 22,
+        "area": 22,
         "slotId": 1,
         "Requirement": [
             {
@@ -170,9 +170,9 @@
     {
         "Itemname": "I14",
         "Location": "Solennian Ruins",
-        "LocationName": "Solennian Ruins - Money Room",
+        "LocationName": "Solennian Ruins - Money RoomX: 18 Y: 15 #1",
         "blockId": 441219,
-        "Area": 22,
+        "area": 22,
         "slotId": 1,
         "Requirement": [
             {
@@ -191,9 +191,9 @@
     {
         "Itemname": "I14",
         "Location": "Solennian Ruins",
-        "LocationName": "Solennian Ruins - Money Room",
+        "LocationName": "Solennian Ruins - Money RoomX: 18 Y: 15 #2",
         "blockId": 442219,
-        "Area": 22,
+        "area": 22,
         "slotId": 1,
         "Requirement": [
             {
@@ -212,9 +212,9 @@
     {
         "Itemname": "I14",
         "Location": "Solennian Ruins",
-        "LocationName": "Solennian Ruins - Money Room",
+        "LocationName": "Solennian Ruins - Money RoomX: 18 Y: 15 #3",
         "blockId": 443219,
-        "Area": 22,
+        "area": 22,
         "slotId": 1,
         "Requirement": [
             {
@@ -233,9 +233,9 @@
     {
         "Itemname": "I14",
         "Location": "Solennian Ruins",
-        "LocationName": "Solennian Ruins - Money Room",
+        "LocationName": "Solennian Ruins - Money RoomX: 18 Y: 15 #4",
         "blockId": 442218,
-        "Area": 22,
+        "area": 22,
         "slotId": 1,
         "Requirement": [
             {
@@ -254,9 +254,9 @@
     {
         "Itemname": "I14",
         "Location": "Solennian Ruins",
-        "LocationName": "Solennian Ruins - Money Room",
+        "LocationName": "Solennian Ruins - Money RoomX: 20 Y: 13 #1",
         "blockId": 489190,
-        "Area": 22,
+        "area": 22,
         "slotId": 1,
         "Requirement": [
             {
@@ -275,9 +275,9 @@
     {
         "Itemname": "I14",
         "Location": "Solennian Ruins",
-        "LocationName": "Solennian Ruins - Money Room",
+        "LocationName": "Solennian Ruins - Money RoomX: 20 Y: 13 #2",
         "blockId": 488190,
-        "Area": 22,
+        "area": 22,
         "slotId": 1,
         "Requirement": [
             {
@@ -296,9 +296,9 @@
     {
         "Itemname": "I14",
         "Location": "Solennian Ruins",
-        "LocationName": "Solennian Ruins - Money Room",
+        "LocationName": "Solennian Ruins - Money RoomX: 20 Y: 13 #3",
         "blockId": 491190,
-        "Area": 22,
+        "area": 22,
         "slotId": 1,
         "Requirement": [
             {
@@ -317,9 +317,9 @@
     {
         "Itemname": "I14",
         "Location": "Solennian Ruins",
-        "LocationName": "Solennian Ruins - Money Room",
+        "LocationName": "Solennian Ruins - Money RoomX: 20 Y: 13 #4",
         "blockId": 486190,
-        "Area": 22,
+        "area": 22,
         "slotId": 1,
         "Requirement": [
             {

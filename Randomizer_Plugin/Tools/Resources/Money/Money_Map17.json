@@ -2,9 +2,9 @@
     {
         "Itemname": "I14",
         "Location": "Magma Pits Entrance",
-        "LocationName": "Magma Pits - Money Room",
+        "LocationName": "Magma Pits - Money RoomX: 13 Y: 5 #1",
         "blockId": 325075,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -23,9 +23,9 @@
     {
         "Itemname": "I14",
         "Location": "Magma Pits Entrance",
-        "LocationName": "Magma Pits - Money Room",
+        "LocationName": "Magma Pits - Money RoomX: 13 Y: 5 #2",
         "blockId": 325076,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -44,9 +44,9 @@
     {
         "Itemname": "I14",
         "Location": "Magma Pits Entrance",
-        "LocationName": "Magma Pits - Money Room",
+        "LocationName": "Magma Pits - Money RoomX: 13 Y: 5 #3",
         "blockId": 325077,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -65,9 +65,9 @@
     {
         "Itemname": "I14",
         "Location": "Magma Pits",
-        "LocationName": "Magma Pits - Money Room",
+        "LocationName": "Magma Pits - Money RoomX: 6 Y: 8 #1",
         "blockId": 155120,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -86,9 +86,9 @@
     {
         "Itemname": "I14",
         "Location": "Magma Pits",
-        "LocationName": "Magma Pits - Money Room",
+        "LocationName": "Magma Pits - Money RoomX: 6 Y: 8 #2",
         "blockId": 153120,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -107,9 +107,9 @@
     {
         "Itemname": "I14",
         "Location": "Magma Pits",
-        "LocationName": "Magma Pits - Money Room",
+        "LocationName": "Magma Pits - Money RoomX: 6 Y: 8 #3",
         "blockId": 154119,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -128,9 +128,9 @@
     {
         "Itemname": "I14",
         "Location": "Magma Pits",
-        "LocationName": "Magma Pits - Money Room",
+        "LocationName": "Magma Pits - Money RoomX: 6 Y: 8 #4",
         "blockId": 155118,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -149,9 +149,9 @@
     {
         "Itemname": "I14",
         "Location": "Magma Pits",
-        "LocationName": "Magma Pits - Money Room",
+        "LocationName": "Magma Pits - Money RoomX: 6 Y: 8 #5",
         "blockId": 153118,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -170,9 +170,9 @@
     {
         "Itemname": "I14",
         "Location": "Magma Pits",
-        "LocationName": "Magma Pits - Money Room",
+        "LocationName": "Magma Pits - Money RoomX: 0 Y: 9 #1",
         "blockId": 1130,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -191,9 +191,9 @@
     {
         "Itemname": "I14",
         "Location": "Magma Pits",
-        "LocationName": "Magma Pits - Money Room",
+        "LocationName": "Magma Pits - Money RoomX: 0 Y: 9 #2",
         "blockId": 1129,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -212,9 +212,9 @@
     {
         "Itemname": "I14",
         "Location": "Magma Pits",
-        "LocationName": "Magma Pits - Money Room",
+        "LocationName": "Magma Pits - Money RoomX: 0 Y: 9 #3",
         "blockId": 1128,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -233,9 +233,9 @@
     {
         "Itemname": "I14",
         "Location": "Magma Depths O",
-        "LocationName": "Magma Pits - Money Room",
+        "LocationName": "Magma Pits - Money RoomX: 11 Y: 9 #1",
         "blockId": 267130,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -254,9 +254,9 @@
     {
         "Itemname": "I14",
         "Location": "Magma Depths O",
-        "LocationName": "Magma Pits - Money Room",
+        "LocationName": "Magma Pits - Money RoomX: 11 Y: 9 #2",
         "blockId": 267131,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -275,9 +275,9 @@
     {
         "Itemname": "I14",
         "Location": "Magma Depths O",
-        "LocationName": "Magma Pits - Money Room",
+        "LocationName": "Magma Pits - Money RoomX: 11 Y: 9 #3",
         "blockId": 267132,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -296,9 +296,9 @@
     {
         "Itemname": "I14",
         "Location": "Magma Depths O",
-        "LocationName": "Magma Pits - Money Room",
+        "LocationName": "Magma Pits - Money RoomX: 11 Y: 9 #4",
         "blockId": 267133,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -317,9 +317,9 @@
     {
         "Itemname": "I14",
         "Location": "Pre Swamp",
-        "LocationName": "Swamp - Money Room",
+        "LocationName": "Swamp - Money RoomX: 14 Y: 4 #1",
         "blockId": 353060,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -338,9 +338,9 @@
     {
         "Itemname": "I14",
         "Location": "Pre Swamp",
-        "LocationName": "Swamp - Money Room",
+        "LocationName": "Swamp - Money RoomX: 14 Y: 4 #2",
         "blockId": 354060,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -359,9 +359,9 @@
     {
         "Itemname": "I14",
         "Location": "Pre Swamp",
-        "LocationName": "Swamp - Money Room",
+        "LocationName": "Swamp - Money RoomX: 14 Y: 4 #3",
         "blockId": 353061,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -380,9 +380,9 @@
     {
         "Itemname": "I14",
         "Location": "Swamp Entrance",
-        "LocationName": "Swamp - Money Room",
+        "LocationName": "Swamp - Money RoomX: 14 Y: 4 #4",
         "blockId": 354061,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -401,9 +401,9 @@
     {
         "Itemname": "I14",
         "Location": "Swamp",
-        "LocationName": "Swamp - Money Room",
+        "LocationName": "Swamp - Money RoomX: 15 Y: 6 #1",
         "blockId": 383087,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -422,9 +422,9 @@
     {
         "Itemname": "I14",
         "Location": "Swamp",
-        "LocationName": "Swamp - Money Room",
+        "LocationName": "Swamp - Money RoomX: 15 Y: 6 #2",
         "blockId": 384087,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -443,9 +443,9 @@
     {
         "Itemname": "I14",
         "Location": "Swamp",
-        "LocationName": "Swamp - Money Room",
+        "LocationName": "Swamp - Money RoomX: 15 Y: 6 #3",
         "blockId": 385087,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -464,9 +464,9 @@
     {
         "Itemname": "I14",
         "Location": "Swamp",
-        "LocationName": "Swamp - Money Room",
+        "LocationName": "Swamp - Money RoomX: 15 Y: 6 #4",
         "blockId": 383086,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -485,9 +485,9 @@
     {
         "Itemname": "I14",
         "Location": "Swamp",
-        "LocationName": "Swamp - Money Room",
+        "LocationName": "Swamp - Money RoomX: 15 Y: 6 #5",
         "blockId": 384086,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -506,9 +506,9 @@
     {
         "Itemname": "I14",
         "Location": "Swamp",
-        "LocationName": "Swamp - Money Room",
+        "LocationName": "Swamp - Money RoomX: 15 Y: 6 #6",
         "blockId": 385086,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -527,9 +527,9 @@
     {
         "Itemname": "I14",
         "Location": "Pre Swamp",
-        "LocationName": "Swamp - Money Room",
+        "LocationName": "Swamp - Money RoomX: 19 Y: 7 #1",
         "blockId": 458106,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -548,9 +548,9 @@
     {
         "Itemname": "I14",
         "Location": "Pre Swamp",
-        "LocationName": "Swamp - Money Room",
+        "LocationName": "Swamp - Money RoomX: 19 Y: 7 #2",
         "blockId": 457106,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -569,9 +569,9 @@
     {
         "Itemname": "I14",
         "Location": "Pre Swamp",
-        "LocationName": "Swamp - Money Room",
+        "LocationName": "Swamp - Money RoomX: 19 Y: 7 #3",
         "blockId": 458105,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -590,9 +590,9 @@
     {
         "Itemname": "I14",
         "Location": "Pre Swamp",
-        "LocationName": "Swamp - Money Room",
+        "LocationName": "Swamp - Money RoomX: 21 Y: 8 #1",
         "blockId": 513117,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -611,9 +611,9 @@
     {
         "Itemname": "I14",
         "Location": "Pre Swamp",
-        "LocationName": "Swamp - Money Room",
+        "LocationName": "Swamp - Money RoomX: 21 Y: 8 #2",
         "blockId": 513118,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -632,9 +632,9 @@
     {
         "Itemname": "I14",
         "Location": "Swamp to Tartarus",
-        "LocationName": "Swamp - Money Room",
+        "LocationName": "Swamp - Money RoomX: 21 Y: 9 #1",
         "blockId": 503134,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -653,9 +653,9 @@
     {
         "Itemname": "I14",
         "Location": "Swamp to Tartarus",
-        "LocationName": "Swamp - Money Room",
+        "LocationName": "Swamp - Money RoomX: 21 Y: 9 #2",
         "blockId": 504133,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -674,9 +674,9 @@
     {
         "Itemname": "I14",
         "Location": "Swamp to Tartarus",
-        "LocationName": "Swamp - Money Room",
+        "LocationName": "Swamp - Money RoomX: 21 Y: 9 #3",
         "blockId": 504134,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -695,9 +695,9 @@
     {
         "Itemname": "I14",
         "Location": "Magma Depths",
-        "LocationName": "Magma Depths - Money Room",
+        "LocationName": "Magma Depths - Money RoomX: 13 Y: 12 #1",
         "blockId": 314177,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -716,9 +716,9 @@
     {
         "Itemname": "I14",
         "Location": "Magma Depths",
-        "LocationName": "Magma Depths - Money Room",
+        "LocationName": "Magma Depths - Money RoomX: 13 Y: 12 #2",
         "blockId": 313177,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -737,9 +737,9 @@
     {
         "Itemname": "I14",
         "Location": "Magma Depths",
-        "LocationName": "Magma Depths - Money Room",
+        "LocationName": "Magma Depths - Money RoomX: 13 Y: 12 #3",
         "blockId": 313178,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -758,9 +758,9 @@
     {
         "Itemname": "I14",
         "Location": "Magma Depths",
-        "LocationName": "Magma Depths - Money Room",
+        "LocationName": "Magma Depths - Money RoomX: 9 Y: 12 #1",
         "blockId": 228176,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -779,9 +779,9 @@
     {
         "Itemname": "I14",
         "Location": "Magma Depths",
-        "LocationName": "Magma Depths - Money Room",
+        "LocationName": "Magma Depths - Money RoomX: 9 Y: 12 #2",
         "blockId": 228177,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -800,9 +800,9 @@
     {
         "Itemname": "I14",
         "Location": "Magma Depths",
-        "LocationName": "Magma Depths - Money Room",
+        "LocationName": "Magma Depths - Money RoomX: 9 Y: 12 #3",
         "blockId": 227176,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {
@@ -821,9 +821,9 @@
     {
         "Itemname": "I14",
         "Location": "Magma Depths",
-        "LocationName": "Magma Depths - Money Room",
+        "LocationName": "Magma Depths - Money RoomX: 9 Y: 12 #4",
         "blockId": 227177,
-        "Area": 17,
+        "area": 17,
         "slotId": 1,
         "Requirement": [
             {

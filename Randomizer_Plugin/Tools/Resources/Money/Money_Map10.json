@@ -2,9 +2,9 @@
     {
         "Itemname": "I14",
         "Location": "Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 20 Y: 16 #1",
         "blockId": 484232,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -23,9 +23,9 @@
     {
         "Itemname": "I14",
         "Location": "Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 20 Y: 16 #2",
         "blockId": 484233,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -44,9 +44,9 @@
     {
         "Itemname": "I14",
         "Location": "Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 20 Y: 16 #3",
         "blockId": 483233,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -65,9 +65,9 @@
     {
         "Itemname": "I14",
         "Location": "Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 21 Y: 14 #1",
         "blockId": 522199,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -86,9 +86,9 @@
     {
         "Itemname": "I14",
         "Location": "Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 21 Y: 14 #2",
         "blockId": 522198,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -107,9 +107,9 @@
     {
         "Itemname": "I14",
         "Location": "Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 21 Y: 14 #3",
         "blockId": 522197,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -128,9 +128,9 @@
     {
         "Itemname": "I14",
         "Location": "Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 21 Y: 14 #4",
         "blockId": 522196,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -149,9 +149,9 @@
     {
         "Itemname": "I14",
         "Location": "Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 12 Y: 16 #1",
         "blockId": 306226,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -170,9 +170,9 @@
     {
         "Itemname": "I14",
         "Location": "Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 12 Y: 16 #2",
         "blockId": 306227,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -191,9 +191,9 @@
     {
         "Itemname": "I14",
         "Location": "Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 12 Y: 16 #3",
         "blockId": 306228,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -212,9 +212,9 @@
     {
         "Itemname": "I14",
         "Location": "Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 11 Y: 15 #1",
         "blockId": 281214,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -233,9 +233,9 @@
     {
         "Itemname": "I14",
         "Location": "Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 11 Y: 15 #2",
         "blockId": 281215,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -254,9 +254,9 @@
     {
         "Itemname": "I14",
         "Location": "Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 11 Y: 15 #3",
         "blockId": 280215,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -275,9 +275,9 @@
     {
         "Itemname": "I14",
         "Location": "Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 11 Y: 15 #4",
         "blockId": 279215,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -296,9 +296,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 11 Y: 14 #1",
         "blockId": 265198,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -317,9 +317,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 11 Y: 14 #2",
         "blockId": 264197,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -338,9 +338,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 15 Y: 15 #1",
         "blockId": 361212,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -359,9 +359,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 15 Y: 15 #2",
         "blockId": 361211,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -380,9 +380,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 19 Y: 14 #1",
         "blockId": 465206,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -401,9 +401,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 19 Y: 14 #2",
         "blockId": 464205,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -422,9 +422,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 14 Y: 14 #1",
         "blockId": 346196,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -443,9 +443,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 13 Y: 8 #1",
         "blockId": 324104,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -464,9 +464,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 13 Y: 8 #2",
         "blockId": 324105,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -485,9 +485,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 13 Y: 8 #3",
         "blockId": 324106,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -506,9 +506,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 13 Y: 8 #4",
         "blockId": 324107,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -527,9 +527,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Plague Forest",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 13 Y: 8 #5",
         "blockId": 324108,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {
@@ -548,9 +548,9 @@
     {
         "Itemname": "I14",
         "Location": "Plague Forest to Ulskan",
-        "LocationName": "Plague Forest - Money Room",
+        "LocationName": "Plague Forest - Money RoomX: 23 Y: 15 #1",
         "blockId": 550216,
-        "Area": 10,
+        "area": 10,
         "slotId": 1,
         "Requirement": [
             {

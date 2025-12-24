@@ -1,4 +1,5 @@
-[    {
+[
+    {
         "Itemname": "I14",
         "Location": "Desert Base Entrance",
         "LocationName": "Desert Base - Money Room X: 18 Y: 13 #0",
@@ -82,7 +83,6 @@
             }
         ]
     },
-
     {
         "Itemname": "I14",
         "Location": "Desert Base Main",

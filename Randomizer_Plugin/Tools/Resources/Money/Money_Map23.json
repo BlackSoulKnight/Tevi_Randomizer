@@ -2,9 +2,9 @@
     {
         "Itemname": "I14",
         "Location": "Sinner's Oath",
-        "LocationName": "Sinner's Oath - Money Room",
+        "LocationName": "Sinner's Oath - Money RoomX: 6 Y: 4 #1",
         "blockId": 153066,
-        "Area": 23,
+        "area": 23,
         "slotId": 1,
         "Requirement": [
             {
@@ -35,9 +35,9 @@
     {
         "Itemname": "I14",
         "Location": "Sinner's Oath",
-        "LocationName": "Sinner's Oath - Money Room",
+        "LocationName": "Sinner's Oath - Money RoomX: 6 Y: 4 #2",
         "blockId": 154066,
-        "Area": 23,
+        "area": 23,
         "slotId": 1,
         "Requirement": [
             {
@@ -68,9 +68,9 @@
     {
         "Itemname": "I14",
         "Location": "Sinner's Oath",
-        "LocationName": "Sinner's Oath - Money Room",
+        "LocationName": "Sinner's Oath - Money RoomX: 6 Y: 4 #1",
         "blockId": 155066,
-        "Area": 23,
+        "area": 23,
         "slotId": 1,
         "Requirement": [
             {

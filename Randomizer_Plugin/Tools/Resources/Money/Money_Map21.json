@@ -2,9 +2,9 @@
     {
         "Itemname": "I14",
         "Location": "Heavens Valley West",
-        "LocationName": "Heavens Valley West - Money Room",
+        "LocationName": "Heavens Valley West - Money RoomX: 14 Y: 18 #1",
         "blockId": 338256,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -23,9 +23,9 @@
     {
         "Itemname": "I14",
         "Location": "Heavens Valley West",
-        "LocationName": "Heavens Valley West - Money Room",
+        "LocationName": "Heavens Valley West - Money RoomX: 10 Y: 15 #1",
         "blockId": 242213,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -44,9 +44,9 @@
     {
         "Itemname": "I14",
         "Location": "Heavens Valley West",
-        "LocationName": "Heavens Valley West - Money Room",
+        "LocationName": "Heavens Valley West - Money RoomX: 10 Y: 15 #2",
         "blockId": 242212,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -65,9 +65,9 @@
     {
         "Itemname": "I14",
         "Location": "Heavens Valley West",
-        "LocationName": "Heavens Valley West - Money Room",
+        "LocationName": "Heavens Valley West - Money RoomX: 10 Y: 15 #3",
         "blockId": 242211,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -86,9 +86,9 @@
     {
         "Itemname": "I14",
         "Location": "Heavens Valley West",
-        "LocationName": "Heavens Valley West - Money Room",
+        "LocationName": "Heavens Valley West - Money RoomX: 9 Y: 13 #1",
         "blockId": 21619,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -107,9 +107,9 @@
     {
         "Itemname": "I14",
         "Location": "Heavens Valley West",
-        "LocationName": "Heavens Valley West - Money Room",
+        "LocationName": "Heavens Valley West - Money RoomX: 9 Y: 13 #2",
         "blockId": 216190,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -128,9 +128,9 @@
     {
         "Itemname": "I14",
         "Location": "Heavens Valley West",
-        "LocationName": "Heavens Valley West - Money Room",
+        "LocationName": "Heavens Valley West - Money RoomX: 10 Y: 11 #1",
         "blockId": 260160,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -149,9 +149,9 @@
     {
         "Itemname": "I14",
         "Location": "Heavens Valley West",
-        "LocationName": "Heavens Valley West - Money Room",
+        "LocationName": "Heavens Valley West - Money RoomX: 10 Y: 11 #2",
         "blockId": 260159,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -170,9 +170,9 @@
     {
         "Itemname": "I14",
         "Location": "Heavens Valley West",
-        "LocationName": "Heavens Valley West - Money Room",
+        "LocationName": "Heavens Valley West - Money RoomX: 7 Y: 17 #1",
         "blockId": 184247,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -191,9 +191,9 @@
     {
         "Itemname": "I14",
         "Location": "Heavens Valley West",
-        "LocationName": "Heavens Valley West - Money Room",
+        "LocationName": "Heavens Valley West - Money RoomX: 7 Y: 17 #2",
         "blockId": 183246,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -212,9 +212,9 @@
     {
         "Itemname": "I14",
         "Location": "Heavens Valley West",
-        "LocationName": "Heavens Valley West - Money Room",
+        "LocationName": "Heavens Valley West - Money RoomX: 7 Y: 17 #3",
         "blockId": 183247,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -233,9 +233,9 @@
     {
         "Itemname": "I14",
         "Location": "Heavens Valley West",
-        "LocationName": "Heavens Valley West- Money Room",
+        "LocationName": "Heavens Valley West- Money RoomX: 7 Y: 17 #4",
         "blockId": 182247,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -254,9 +254,9 @@
     {
         "Itemname": "I14",
         "Location": "Valhalla Breath West",
-        "LocationName": "Valhalla Breath West - Money Room",
+        "LocationName": "Valhalla Breath West - Money RoomX: 19 Y: 4 #1",
         "blockId": 468066,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -275,9 +275,9 @@
     {
         "Itemname": "I14",
         "Location": "Valhalla Breath West",
-        "LocationName": "Valhalla Breath West - Money Room",
+        "LocationName": "Valhalla Breath West - Money RoomX: 19 Y: 4 #2",
         "blockId": 468065,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -296,9 +296,9 @@
     {
         "Itemname": "I14",
         "Location": "Valhalla Breath West",
-        "LocationName": "Valhalla Breath West - Money Room",
+        "LocationName": "Valhalla Breath West - Money RoomX: 19 Y: 4 #3",
         "blockId": 468067,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -317,9 +317,9 @@
     {
         "Itemname": "I14",
         "Location": "Valhalla Breath West",
-        "LocationName": "Valhalla Breath West - Money Room",
+        "LocationName": "Valhalla Breath West - Money RoomX: 19 Y: 4 #4",
         "blockId": 467067,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -338,9 +338,9 @@
     {
         "Itemname": "I14",
         "Location": "Valhalla Breath West",
-        "LocationName": "Valhalla Breath West - Money Room",
+        "LocationName": "Valhalla Breath West - Money RoomX: 24 Y: 8 #1",
         "blockId": 578122,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -359,9 +359,9 @@
     {
         "Itemname": "I14",
         "Location": "Valhalla Breath West",
-        "LocationName": "Valhalla Breath West - Money Room",
+        "LocationName": "Valhalla Breath West - Money RoomX: 24 Y: 8 #2",
         "blockId": 578121,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -380,9 +380,9 @@
     {
         "Itemname": "I14",
         "Location": "Valhalla Breath West",
-        "LocationName": "Valhalla Breath West - Money Room",
+        "LocationName": "Valhalla Breath West - Money RoomX: 26 Y: 7 #1",
         "blockId": 627099,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -401,9 +401,9 @@
     {
         "Itemname": "I14",
         "Location": "Valhalla Breath West",
-        "LocationName": "Valhalla Breath West - Money Room",
+        "LocationName": "Valhalla Breath West - Money RoomX: 26 Y: 7 #2",
         "blockId": 627100,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -422,9 +422,9 @@
     {
         "Itemname": "I14",
         "Location": "Valhalla Breath West",
-        "LocationName": "Valhalla Breath West - Money Room",
+        "LocationName": "Valhalla Breath West - Money RoomX: 22 Y: 1 #1",
         "blockId": 531025,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -443,9 +443,9 @@
     {
         "Itemname": "I14",
         "Location": "Valhalla Breath West",
-        "LocationName": "Valhalla Breath West - Money Room",
+        "LocationName": "Valhalla Breath West - Money RoomX: 22 Y: 1 #2",
         "blockId": 531024,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -464,9 +464,9 @@
     {
         "Itemname": "I14",
         "Location": "Valhalla Breath West Extended",
-        "LocationName": "Valhalla Breath West - Money Room",
+        "LocationName": "Valhalla Breath West - Money RoomX: 14 Y: 1 #1",
         "blockId": 343020,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -485,9 +485,9 @@
     {
         "Itemname": "I14",
         "Location": "Valhalla Breath West Extended",
-        "LocationName": "Valhalla Breath West - Money Room",
+        "LocationName": "Valhalla Breath West - Money RoomX: 14 Y: 1 #2",
         "blockId": 342020,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -506,9 +506,9 @@
     {
         "Itemname": "I14",
         "Location": "Valhalla Breath West Extended",
-        "LocationName": "Valhalla Breath West - Money Room",
+        "LocationName": "Valhalla Breath West - Money RoomX: 14 Y: 1 #3",
         "blockId": 341020,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -527,9 +527,9 @@
     {
         "Itemname": "I14",
         "Location": "Valhalla Breath West Extended",
-        "LocationName": "Valhalla Breath West - Money Room",
+        "LocationName": "Valhalla Breath West - Money RoomX: 9 Y: 1 #1",
         "blockId": 218019,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -552,9 +552,9 @@
     {
         "Itemname": "I14",
         "Location": "Valhalla Breath West Extended",
-        "LocationName": "Valhalla Breath West - Money Room",
+        "LocationName": "Valhalla Breath West - Money RoomX: 9 Y: 1 #2",
         "blockId": 218021,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -577,9 +577,9 @@
     {
         "Itemname": "I14",
         "Location": "Valhalla Breath West Extended",
-        "LocationName": "Valhalla Breath West - Money Room",
+        "LocationName": "Valhalla Breath West - Money RoomX: 9 Y: 1 #3",
         "blockId": 218022,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {
@@ -602,9 +602,9 @@
     {
         "Itemname": "I14",
         "Location": "Valhalla Breath West Extended",
-        "LocationName": "Valhalla Breath West - Money Room",
+        "LocationName": "Valhalla Breath West - Money RoomX: 9 Y: 1 #4",
         "blockId": 218018,
-        "Area": 21,
+        "area": 21,
         "slotId": 1,
         "Requirement": [
             {

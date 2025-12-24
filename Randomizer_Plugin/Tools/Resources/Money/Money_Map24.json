@@ -2,9 +2,9 @@
     {
         "Itemname": "I14",
         "Location": "Relicts",
-        "LocationName": "Relicts - Money Room",
+        "LocationName": "Relicts - Money RoomX: 9 Y: 8 #1",
         "blockId": 216123,
-        "Area": 24,
+        "area": 24,
         "slotId": 1,
         "Requirement": [
             {
@@ -23,9 +23,9 @@
     {
         "Itemname": "I14",
         "Location": "Relicts",
-        "LocationName": "Relicts - Money Room",
+        "LocationName": "Relicts - Money RoomX: 9 Y: 8 #2",
         "blockId": 216122,
-        "Area": 24,
+        "area": 24,
         "slotId": 1,
         "Requirement": [
             {
@@ -44,9 +44,9 @@
     {
         "Itemname": "I14",
         "Location": "Relicts",
-        "LocationName": "Relicts - Money Room",
+        "LocationName": "Relicts - Money RoomX: 12 Y: 8 #1",
         "blockId": 290115,
-        "Area": 24,
+        "area": 24,
         "slotId": 1,
         "Requirement": [
             {
@@ -65,9 +65,9 @@
     {
         "Itemname": "I14",
         "Location": "Relicts",
-        "LocationName": "Relicts - Money Room",
+        "LocationName": "Relicts - Money RoomX: 12 Y: 8 #2",
         "blockId": 289115,
-        "Area": 24,
+        "area": 24,
         "slotId": 1,
         "Requirement": [
             {
@@ -86,9 +86,9 @@
     {
         "Itemname": "I14",
         "Location": "Relicts",
-        "LocationName": "Relicts - Money Room",
+        "LocationName": "Relicts - Money RoomX: 11 Y: 9 #1",
         "blockId": 273130,
-        "Area": 24,
+        "area": 24,
         "slotId": 1,
         "Requirement": [
             {
@@ -107,9 +107,9 @@
     {
         "Itemname": "I14",
         "Location": "Relicts",
-        "LocationName": "Relicts - Money Room",
+        "LocationName": "Relicts - Money RoomX: 5 Y: 6 #1",
         "blockId": 121094,
-        "Area": 24,
+        "area": 24,
         "slotId": 1,
         "Requirement": [
             {
@@ -128,9 +128,9 @@
     {
         "Itemname": "I14",
         "Location": "Relicts",
-        "LocationName": "Relicts - Money Room",
+        "LocationName": "Relicts - Money RoomX: 1 Y: 8 #1",
         "blockId": 33120,
-        "Area": 24,
+        "area": 24,
         "slotId": 1,
         "Requirement": [
             {
@@ -149,9 +149,9 @@
     {
         "Itemname": "I14",
         "Location": "Relicts",
-        "LocationName": "Relicts - Money Room",
+        "LocationName": "Relicts - Money RoomX: 2 Y: 4 #1",
         "blockId": 54064,
-        "Area": 24,
+        "area": 24,
         "slotId": 1,
         "Requirement": [
             {

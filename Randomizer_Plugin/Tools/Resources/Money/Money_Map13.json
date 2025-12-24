@@ -2,9 +2,9 @@
     {
         "Itemname": "I14",
         "Location": "Outer Moat",
-        "LocationName": "Verdazure Sea West- Money Room",
+        "LocationName": "Verdazure Sea West- Money RoomX: 9 Y: 12 #1",
         "blockId": 221177,
-        "Area": 13,
+        "area": 13,
         "slotId": 1,
         "Requirement": [
             {
@@ -23,9 +23,9 @@
     {
         "Itemname": "I14",
         "Location": "Outer Moat",
-        "LocationName": "Verdazure Sea West- Money Room",
+        "LocationName": "Verdazure Sea West- Money RoomX: 9 Y: 12 #2",
         "blockId": 220177,
-        "Area": 13,
+        "area": 13,
         "slotId": 1,
         "Requirement": [
             {
@@ -44,9 +44,9 @@
     {
         "Itemname": "I14",
         "Location": "Outer Moat",
-        "LocationName": "Verdazure Sea West- Money Room",
+        "LocationName": "Verdazure Sea West- Money RoomX: 18 Y: 12 #1",
         "blockId": 449175,
-        "Area": 13,
+        "area": 13,
         "slotId": 1,
         "Requirement": [
             {
@@ -65,9 +65,9 @@
     {
         "Itemname": "I14",
         "Location": "Outer Moat",
-        "LocationName": "Verdazure Sea West- Money Room",
+        "LocationName": "Verdazure Sea West- Money RoomX: 18 Y: 12 #2",
         "blockId": 450175,
-        "Area": 13,
+        "area": 13,
         "slotId": 1,
         "Requirement": [
             {
@@ -86,9 +86,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Sea West",
-        "LocationName": "Verdazure Sea West- Money Room",
+        "LocationName": "Verdazure Sea West- Money RoomX: 5 Y: 15 #1",
         "blockId": 126214,
-        "Area": 13,
+        "area": 13,
         "slotId": 1,
         "Requirement": [
             {
@@ -107,9 +107,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Sea West",
-        "LocationName": "Verdazure Sea West- Money Room",
+        "LocationName": "Verdazure Sea West- Money RoomX: 5 Y: 15 #2",
         "blockId": 126213,
-        "Area": 13,
+        "area": 13,
         "slotId": 1,
         "Requirement": [
             {
@@ -128,9 +128,9 @@
     {
         "Itemname": "I14",
         "Location": "Outer Moat",
-        "LocationName": "Verdazure Sea West- Money Room",
+        "LocationName": "Verdazure Sea West- Money RoomX: 15 Y: 14 #1",
         "blockId": 373201,
-        "Area": 13,
+        "area": 13,
         "slotId": 1,
         "Requirement": [
             {
@@ -149,9 +149,9 @@
     {
         "Itemname": "I14",
         "Location": "Outer Moat",
-        "LocationName": "Verdazure Sea West- Money Room",
+        "LocationName": "Verdazure Sea West- Money RoomX: 15 Y: 14 #2",
         "blockId": 373200,
-        "Area": 13,
+        "area": 13,
         "slotId": 1,
         "Requirement": [
             {
@@ -170,9 +170,9 @@
     {
         "Itemname": "I14",
         "Location": "Outer Moat",
-        "LocationName": "Verdazure Sea West- Money Room",
+        "LocationName": "Verdazure Sea West- Money RoomX: 15 Y: 14 #3",
         "blockId": 373199,
-        "Area": 13,
+        "area": 13,
         "slotId": 1,
         "Requirement": [
             {
@@ -191,9 +191,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Sea to Forgotten city",
-        "LocationName": "Verdazure Sea West- Money Room",
+        "LocationName": "Verdazure Sea West- Money RoomX: 17 Y: 19 #1",
         "blockId": 415271,
-        "Area": 13,
+        "area": 13,
         "slotId": 1,
         "Requirement": [
             {
@@ -212,9 +212,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Sea to Forgotten city",
-        "LocationName": "Verdazure Sea West- Money Room",
+        "LocationName": "Verdazure Sea West- Money RoomX: 17 Y: 19 #2",
         "blockId": 415270,
-        "Area": 13,
+        "area": 13,
         "slotId": 1,
         "Requirement": [
             {
@@ -233,9 +233,9 @@
     {
         "Itemname": "I14",
         "Location": "Outer Moat",
-        "LocationName": "Verdazure Sea West- Money Room",
+        "LocationName": "Verdazure Sea West- Money RoomX: 17 Y: 14 #1",
         "blockId": 413202,
-        "Area": 13,
+        "area": 13,
         "slotId": 1,
         "Requirement": [
             {
@@ -254,9 +254,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Sea East",
-        "LocationName": "Verdazure Sea West- Money Room",
+        "LocationName": "Verdazure Sea West- Money RoomX: 25 Y: 15 #1",
         "blockId": 619212,
-        "Area": 13,
+        "area": 13,
         "slotId": 1,
         "Requirement": [
             {
@@ -275,9 +275,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Sea East",
-        "LocationName": "Verdazure Sea West- Money Room",
+        "LocationName": "Verdazure Sea West- Money RoomX: 25 Y: 15 #2",
         "blockId": 619213,
-        "Area": 13,
+        "area": 13,
         "slotId": 1,
         "Requirement": [
             {
@@ -296,9 +296,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Sea East",
-        "LocationName": "Verdazure Sea West- Money Room",
+        "LocationName": "Verdazure Sea West- Money RoomX: 25 Y: 15 #3",
         "blockId": 618213,
-        "Area": 13,
+        "area": 13,
         "slotId": 1,
         "Requirement": [
             {

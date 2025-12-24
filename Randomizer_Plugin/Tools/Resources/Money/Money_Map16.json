@@ -2,9 +2,9 @@
     {
         "Itemname": "I14",
         "Location": "Snow City",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 11 Y: 11 #1",
         "blockId": 282163,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -23,9 +23,9 @@
     {
         "Itemname": "I14",
         "Location": "Snow City",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 11 Y: 11 #2",
         "blockId": 283163,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -44,9 +44,9 @@
     {
         "Itemname": "I14",
         "Location": "Snow City",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 11 Y: 11 #3",
         "blockId": 283162,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -65,9 +65,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil Above HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 12 Y: 9 #1",
         "blockId": 303127,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -86,9 +86,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil Above HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 12 Y: 9 #2",
         "blockId": 304127,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -107,9 +107,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil Above HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 14 Y: 6 #1",
         "blockId": 343086,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -128,9 +128,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil Above HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 14 Y: 6 #2",
         "blockId": 342086,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -149,9 +149,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil Above HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 14 Y: 6 #3",
         "blockId": 343087,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -170,9 +170,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil Above HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 14 Y: 6 #4",
         "blockId": 341086,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -191,9 +191,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil Above HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 14 Y: 6 #5",
         "blockId": 341087,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -212,9 +212,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil Above HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 12 Y: 5 #1",
         "blockId": 288076,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -233,9 +233,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil Above HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 12 Y: 5 #2",
         "blockId": 289076,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -254,9 +254,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil Above HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 12 Y: 5 #3",
         "blockId": 289075,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -275,9 +275,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil Above HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 16 Y: 6 #1",
         "blockId": 391088,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -296,9 +296,9 @@
     {
         "Itemname": "I14",
         "Location": "Golden Hands HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 22 Y: 12 #1",
         "blockId": 541172,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -317,9 +317,9 @@
     {
         "Itemname": "I14",
         "Location": "Golden Hands HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 22 Y: 12 #2",
         "blockId": 540172,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -338,9 +338,9 @@
     {
         "Itemname": "I14",
         "Location": "Golden Hands HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 22 Y: 12 #3",
         "blockId": 539172,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -359,9 +359,9 @@
     {
         "Itemname": "I14",
         "Location": "Golden Hands HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 22 Y: 12 #4",
         "blockId": 538172,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -380,9 +380,9 @@
     {
         "Itemname": "I14",
         "Location": "Golden Hands HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 16 Y: 12 #1",
         "blockId": 386173,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -401,9 +401,9 @@
     {
         "Itemname": "I14",
         "Location": "Golden Hands HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 16 Y: 12 #2",
         "blockId": 386172,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -422,9 +422,9 @@
     {
         "Itemname": "I14",
         "Location": "Golden Hands HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 16 Y: 12 #3",
         "blockId": 386171,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -443,9 +443,9 @@
     {
         "Itemname": "I14",
         "Location": "Golden Hands HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 16 Y: 12 #4",
         "blockId": 386170,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -464,9 +464,9 @@
     {
         "Itemname": "I14",
         "Location": "Golden Hands HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 25 Y: 13 #1",
         "blockId": 616192,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -485,9 +485,9 @@
     {
         "Itemname": "I14",
         "Location": "Golden Hands HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 25 Y: 13 #2",
         "blockId": 617192,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -506,9 +506,9 @@
     {
         "Itemname": "I14",
         "Location": "Golden Hands HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 25 Y: 13 #3",
         "blockId": 615192,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -527,9 +527,9 @@
     {
         "Itemname": "I14",
         "Location": "Golden Hands HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 23 Y: 16 #1",
         "blockId": 553231,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -548,9 +548,9 @@
     {
         "Itemname": "I14",
         "Location": "Golden Hands HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 23 Y: 16 #2",
         "blockId": 553230,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -569,9 +569,9 @@
     {
         "Itemname": "I14",
         "Location": "Golden Hands HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 23 Y: 16 #3",
         "blockId": 554231,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -590,9 +590,9 @@
     {
         "Itemname": "I14",
         "Location": "Golden Hands HQ",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 23 Y: 16 #4",
         "blockId": 554230,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -611,9 +611,9 @@
     {
         "Itemname": "I14",
         "Location": "Golden Hands HQ Sewer",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 21 Y: 17 #1",
         "blockId": 505247,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {
@@ -632,9 +632,9 @@
     {
         "Itemname": "I14",
         "Location": "Golden Hands HQ Sewer",
-        "LocationName": "Snow City - Money Room",
+        "LocationName": "Snow City - Money RoomX: 21 Y: 17 #2",
         "blockId": 505248,
-        "Area": 16,
+        "area": 16,
         "slotId": 1,
         "Requirement": [
             {

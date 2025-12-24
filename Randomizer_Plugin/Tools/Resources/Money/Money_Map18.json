@@ -2,9 +2,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper Outside Left Snow To Snowveil",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 16 Y: 13 #1",
         "blockId": 393184,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -23,9 +23,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper Outside Left Snow To Snowveil",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 16 Y: 13 #2",
         "blockId": 393183,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -44,9 +44,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper Outside Left Snow To Snowveil",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 16 Y: 13 #3",
         "blockId": 393182,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -65,9 +65,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper Outside Left",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 17 Y: 8 #1",
         "blockId": 415124,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -86,9 +86,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper Outside Left",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 17 Y: 8 #2",
         "blockId": 416124,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -107,9 +107,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper Outside Left",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 17 Y: 8 #3",
         "blockId": 417124,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -128,9 +128,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper Outside Left",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 20 Y: 6 #1",
         "blockId": 493086,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -149,9 +149,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper Outside Right",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 25 Y: 13 #1",
         "blockId": 600183,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -170,9 +170,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper Outside Right",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 25 Y: 13 #2",
         "blockId": 599183,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -191,9 +191,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper Outside Right",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 25 Y: 11 #1",
         "blockId": 601160,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -212,9 +212,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper Outside Right",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 25 Y: 11 #2",
         "blockId": 601159,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -233,9 +233,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper Outside Right",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 25 Y: 11 #3",
         "blockId": 602158,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -254,9 +254,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper Outside Right",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 24 Y: 8 #1",
         "blockId": 594120,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -275,9 +275,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper Outside Right",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 24 Y: 8 #2",
         "blockId": 594119,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -296,9 +296,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper Outside Right",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 24 Y: 8 #3",
         "blockId": 594121,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -317,9 +317,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper Outside Right",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 24 Y: 6 #1",
         "blockId": 582094,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -338,9 +338,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper Outside Right",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 24 Y: 6 #2",
         "blockId": 581094,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -359,9 +359,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper Outside Right",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 24 Y: 6 #3",
         "blockId": 583094,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -380,9 +380,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 24 Y: 11 #1",
         "blockId": 590164,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -401,9 +401,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 24 Y: 11 #2",
         "blockId": 591164,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -422,9 +422,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 24 Y: 11 #3",
         "blockId": 590163,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -443,9 +443,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 24 Y: 11 #4",
         "blockId": 591163,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -464,9 +464,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 24 Y: 11 #5",
         "blockId": 591162,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -485,9 +485,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 21 Y: 14 #1",
         "blockId": 502198,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -506,9 +506,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 21 Y: 14 #2",
         "blockId": 502197,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -527,9 +527,9 @@
     {
         "Itemname": "I14",
         "Location": "DreamKeeper",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 21 Y: 14 #3",
         "blockId": 502196,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -548,9 +548,9 @@
     {
         "Itemname": "I14",
         "Location": "Dreamless Depths",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 27 Y: 21 #1",
         "blockId": 660299,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -569,9 +569,9 @@
     {
         "Itemname": "I14",
         "Location": "Dreamless Depths",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 24 Y: 21 #1",
         "blockId": 572295,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -590,9 +590,9 @@
     {
         "Itemname": "I14",
         "Location": "Dreamless Depths",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 24 Y: 21 #2",
         "blockId": 572294,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -611,9 +611,9 @@
     {
         "Itemname": "I14",
         "Location": "Dreamless Depths",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 24 Y: 21 #3",
         "blockId": 572293,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -632,9 +632,9 @@
     {
         "Itemname": "I14",
         "Location": "Dreamless Depths",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 24 Y: 21 #4",
         "blockId": 571293,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -653,9 +653,9 @@
     {
         "Itemname": "I14",
         "Location": "Dreamless Depths",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 24 Y: 21 #5",
         "blockId": 570293,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -674,9 +674,9 @@
     {
         "Itemname": "I14",
         "Location": "Dreamless Depths",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 19 Y: 21 #1",
         "blockId": 469289,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -695,9 +695,9 @@
     {
         "Itemname": "I14",
         "Location": "Dreamless Depths",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 19 Y: 21 #2",
         "blockId": 469290,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -716,9 +716,9 @@
     {
         "Itemname": "I14",
         "Location": "Dreamless Depths",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 19 Y: 21 #3",
         "blockId": 469291,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {
@@ -737,9 +737,9 @@
     {
         "Itemname": "I14",
         "Location": "Dreamless Depths",
-        "LocationName": "DreamKeeper - Money Room",
+        "LocationName": "DreamKeeper - Money RoomX: 19 Y: 21 #4",
         "blockId": 470290,
-        "Area": 18,
+        "area": 18,
         "slotId": 1,
         "Requirement": [
             {

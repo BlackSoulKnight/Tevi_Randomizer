@@ -2,9 +2,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Ocean",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 14 Y: 7 #1",
         "blockId": 352102,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -23,9 +23,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Ocean",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 14 Y: 7 #2",
         "blockId": 354102,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -44,9 +44,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Ocean",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 14 Y: 7 #3",
         "blockId": 353101,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -65,9 +65,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Ocean",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 14 Y: 7 #4",
         "blockId": 355101,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -86,9 +86,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Ocean",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 14 Y: 7 #5",
         "blockId": 354100,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -107,9 +107,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Ocean",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 14 Y: 7 #6",
         "blockId": 355099,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -128,9 +128,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Ocean",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 18 Y: 9 #1",
         "blockId": 431127,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -149,9 +149,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Ocean",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 18 Y: 9 #2",
         "blockId": 432127,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -170,9 +170,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Ocean",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 18 Y: 9 #3",
         "blockId": 431128,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -191,9 +191,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Ocean",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 18 Y: 9 #4",
         "blockId": 432128,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -212,9 +212,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Ocean",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 24 Y: 5 #1",
         "blockId": 588076,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -233,9 +233,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Ocean",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 24 Y: 5 #2",
         "blockId": 588077,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -254,9 +254,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Ocean",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 24 Y: 5 #3",
         "blockId": 587077,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -275,9 +275,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Ocean",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 24 Y: 5 #4",
         "blockId": 588078,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -296,9 +296,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Ocean",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 24 Y: 5 #5",
         "blockId": 587078,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -317,9 +317,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Swamp",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 29 Y: 12 #1",
         "blockId": 713179,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -338,9 +338,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Swamp",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 29 Y: 12 #2",
         "blockId": 713178,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -359,9 +359,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Swamp",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 29 Y: 12 #3",
         "blockId": 713177,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -380,9 +380,9 @@
     {
         "Itemname": "I14",
         "Location": "Verdazure Swamp",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 29 Y: 15 #1",
         "blockId": 705213,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -401,27 +401,27 @@
     {
         "Itemname": "I14",
         "Location": "Forgotten City",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 14 Y: 13 #1",
         "blockId": 353187,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
-                {
-                    "Method": "ChargeShot && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
-                    "Difficulty": 0
-                },
-                {
-                    "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
-                    "Difficulty": 0
-                },
-                {
-                    "Method": "ITEM_WALLJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
-                    "Difficulty": 0
-                },
-                {
-                    "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
-                    "Difficulty": 0
-                }
+            {
+                "Method": "ChargeShot && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_WALLJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                "Difficulty": 0
+            }
         ],
         "LocationRegion": [
             {
@@ -434,27 +434,27 @@
     {
         "Itemname": "I14",
         "Location": "Forgotten City",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 14 Y: 13 #2",
         "blockId": 353188,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
-                {
-                    "Method": "ChargeShot && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
-                    "Difficulty": 0
-                },
-                {
-                    "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
-                    "Difficulty": 0
-                },
-                {
-                    "Method": "ITEM_WALLJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
-                    "Difficulty": 0
-                },
-                {
-                    "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
-                    "Difficulty": 0
-                }
+            {
+                "Method": "ChargeShot && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_WALLJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                "Difficulty": 0
+            }
         ],
         "LocationRegion": [
             {
@@ -467,27 +467,27 @@
     {
         "Itemname": "I14",
         "Location": "Forgotten City",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 14 Y: 13 #3",
         "blockId": 352187,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
-                {
-                    "Method": "ChargeShot && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
-                    "Difficulty": 0
-                },
-                {
-                    "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
-                    "Difficulty": 0
-                },
-                {
-                    "Method": "ITEM_WALLJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
-                    "Difficulty": 0
-                },
-                {
-                    "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
-                    "Difficulty": 0
-                }
+            {
+                "Method": "ChargeShot && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_WALLJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                "Difficulty": 0
+            }
         ],
         "LocationRegion": [
             {
@@ -500,27 +500,27 @@
     {
         "Itemname": "I14",
         "Location": "Forgotten City",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 14 Y: 13 #4",
         "blockId": 352188,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
-                {
-                    "Method": "ChargeShot && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
-                    "Difficulty": 0
-                },
-                {
-                    "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
-                    "Difficulty": 0
-                },
-                {
-                    "Method": "ITEM_WALLJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
-                    "Difficulty": 0
-                },
-                {
-                    "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
-                    "Difficulty": 0
-                }
+            {
+                "Method": "ChargeShot && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_DOUBLEJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_WALLJUMP && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                "Difficulty": 0
+            }
         ],
         "LocationRegion": [
             {
@@ -533,9 +533,9 @@
     {
         "Itemname": "I14",
         "Location": "Forgotten City Upper Exit",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 14 Y: 11 #1",
         "blockId": 337165,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -554,9 +554,9 @@
     {
         "Itemname": "I14",
         "Location": "Forgotten City Upper Exit",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 14 Y: 11 #2",
         "blockId": 337164,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -575,9 +575,9 @@
     {
         "Itemname": "I14",
         "Location": "Forgotten City Upper Exit",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 14 Y: 11 #3",
         "blockId": 337163,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -596,9 +596,9 @@
     {
         "Itemname": "I14",
         "Location": "Forgotten City Upper Exit",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 14 Y: 11 #4",
         "blockId": 337162,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -617,9 +617,9 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Forgotten City",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 13 Y: 15 #1",
         "blockId": 326213,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -638,9 +638,9 @@
     {
         "Itemname": "I14",
         "Location": "Forgotten City Entrance",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 10 Y: 17 #1",
         "blockId": 240247,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -659,9 +659,9 @@
     {
         "Itemname": "I14",
         "Location": "Forgotten City Entrance",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 10 Y: 17 #2",
         "blockId": 240246,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -680,9 +680,9 @@
     {
         "Itemname": "I14",
         "Location": "Forgotten City",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 15 Y: 18 #1",
         "blockId": 378254,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -701,9 +701,9 @@
     {
         "Itemname": "I14",
         "Location": "Forgotten City",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 15 Y: 18 #2",
         "blockId": 379253,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -722,9 +722,9 @@
     {
         "Itemname": "I14",
         "Location": "Forgotten City",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 10 Y: 20 #1",
         "blockId": 240289,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -743,9 +743,9 @@
     {
         "Itemname": "I14",
         "Location": "Forgotten City",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 10 Y: 20 #2",
         "blockId": 240287,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -764,9 +764,9 @@
     {
         "Itemname": "I14",
         "Location": "Forgotten City",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 15 Y: 21 #1",
         "blockId": 377298,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -785,9 +785,9 @@
     {
         "Itemname": "I14",
         "Location": "Forgotten City",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 19 Y: 16 #1",
         "blockId": 472231,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -806,9 +806,9 @@
     {
         "Itemname": "I14",
         "Location": "Forgotten City",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 19 Y: 16 #2",
         "blockId": 471232,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -827,9 +827,9 @@
     {
         "Itemname": "I14",
         "Location": "Forgotten City",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 19 Y: 16 #3",
         "blockId": 471233,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -848,9 +848,9 @@
     {
         "Itemname": "I14",
         "Location": "Forgotten City",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 19 Y: 16 #4",
         "blockId": 472232,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {
@@ -869,9 +869,9 @@
     {
         "Itemname": "I14",
         "Location": "Forgotten City",
-        "LocationName": "Verdazure Ocean - Money Room",
+        "LocationName": "Verdazure Ocean - Money RoomX: 19 Y: 16 #5",
         "blockId": 472233,
-        "Area": 14,
+        "area": 14,
         "slotId": 1,
         "Requirement": [
             {

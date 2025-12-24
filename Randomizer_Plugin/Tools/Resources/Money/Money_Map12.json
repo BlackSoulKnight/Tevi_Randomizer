@@ -2,9 +2,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil above Verglas Village",
-        "LocationName": "Snowveil - Money Room",
+        "LocationName": "Snowveil - Money RoomX: 19 Y: 6 #1",
         "blockId": 474086,
-        "Area": 12,
+        "area": 12,
         "slotId": 1,
         "Requirement": [
             {
@@ -23,9 +23,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil above Verglas Village",
-        "LocationName": "Snowveil - Money Room",
+        "LocationName": "Snowveil - Money RoomX: 19 Y: 6 #2",
         "blockId": 473086,
-        "Area": 12,
+        "area": 12,
         "slotId": 1,
         "Requirement": [
             {
@@ -44,9 +44,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil above Verglas Village",
-        "LocationName": "Snowveil - Money Room",
+        "LocationName": "Snowveil - Money RoomX: 19 Y: 6 #3",
         "blockId": 475086,
-        "Area": 12,
+        "area": 12,
         "slotId": 1,
         "Requirement": [
             {
@@ -65,9 +65,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil above Verglas Village",
-        "LocationName": "Snowveil - Money Room",
+        "LocationName": "Snowveil - Money RoomX: 19 Y: 6 #4",
         "blockId": 474087,
-        "Area": 12,
+        "area": 12,
         "slotId": 1,
         "Requirement": [
             {
@@ -86,9 +86,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil above Verglas Village",
-        "LocationName": "Snowveil - Money Room",
+        "LocationName": "Snowveil - Money RoomX: 19 Y: 6 #5",
         "blockId": 473087,
-        "Area": 12,
+        "area": 12,
         "slotId": 1,
         "Requirement": [
             {
@@ -107,9 +107,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil above Verglas Village",
-        "LocationName": "Snowveil - Money Room",
+        "LocationName": "Snowveil - Money RoomX: 19 Y: 6 #6",
         "blockId": 475087,
-        "Area": 12,
+        "area": 12,
         "slotId": 1,
         "Requirement": [
             {
@@ -128,9 +128,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil above Verglas Village",
-        "LocationName": "Snowveil - Money Room",
+        "LocationName": "Snowveil - Money RoomX: 19 Y: 6 #7",
         "blockId": 474088,
-        "Area": 12,
+        "area": 12,
         "slotId": 1,
         "Requirement": [
             {
@@ -149,9 +149,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil above Verglas Village",
-        "LocationName": "Snowveil - Money Room",
+        "LocationName": "Snowveil - Money RoomX: 19 Y: 6 #8",
         "blockId": 473088,
-        "Area": 12,
+        "area": 12,
         "slotId": 1,
         "Requirement": [
             {
@@ -170,9 +170,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil above Verglas Village",
-        "LocationName": "Snowveil - Money Room",
+        "LocationName": "Snowveil - Money RoomX: 19 Y: 6 #9",
         "blockId": 475088,
-        "Area": 12,
+        "area": 12,
         "slotId": 1,
         "Requirement": [
             {
@@ -191,9 +191,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil",
-        "LocationName": "Snowveil - Money Room",
+        "LocationName": "Snowveil - Money RoomX: 25 Y: 12 #1",
         "blockId": 607174,
-        "Area": 12,
+        "area": 12,
         "slotId": 1,
         "Requirement": [
             {
@@ -212,9 +212,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil",
-        "LocationName": "Snowveil - Money Room",
+        "LocationName": "Snowveil - Money RoomX: 25 Y: 12 #2",
         "blockId": 607173,
-        "Area": 12,
+        "area": 12,
         "slotId": 1,
         "Requirement": [
             {
@@ -233,9 +233,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil",
-        "LocationName": "Snowveil - Money Room",
+        "LocationName": "Snowveil - Money RoomX: 25 Y: 12 #3",
         "blockId": 607172,
-        "Area": 12,
+        "area": 12,
         "slotId": 1,
         "Requirement": [
             {
@@ -254,9 +254,9 @@
     {
         "Itemname": "I14",
         "Location": "Snowveil",
-        "LocationName": "Snowveil - Money Room",
+        "LocationName": "Snowveil - Money RoomX: 25 Y: 12 #4",
         "blockId": 607171,
-        "Area": 12,
+        "area": 12,
         "slotId": 1,
         "Requirement": [
             {

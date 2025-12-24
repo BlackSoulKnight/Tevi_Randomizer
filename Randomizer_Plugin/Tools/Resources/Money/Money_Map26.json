@@ -2,9 +2,9 @@
     {
         "Itemname": "I14",
         "Location": "Cloister",
-        "LocationName": "Cloister - Money Room",
+        "LocationName": "Cloister - Money RoomX: 19 Y: 10 #1",
         "blockId": 456149,
-        "Area": 26,
+        "area": 26,
         "slotId": 1,
         "Requirement": [
             {
@@ -23,9 +23,9 @@
     {
         "Itemname": "I14",
         "Location": "Cloister",
-        "LocationName": "Cloister - Money Room",
+        "LocationName": "Cloister - Money RoomX: 19 Y: 10 #2",
         "blockId": 457150,
-        "Area": 26,
+        "area": 26,
         "slotId": 1,
         "Requirement": [
             {
@@ -44,9 +44,9 @@
     {
         "Itemname": "I14",
         "Location": "Cloister",
-        "LocationName": "Cloister - Money Room",
+        "LocationName": "Cloister - Money RoomX: 19 Y: 10 #3",
         "blockId": 455150,
-        "Area": 26,
+        "area": 26,
         "slotId": 1,
         "Requirement": [
             {
@@ -65,9 +65,9 @@
     {
         "Itemname": "I14",
         "Location": "Cloister",
-        "LocationName": "Cloister - Money Room",
+        "LocationName": "Cloister - Money RoomX: 30 Y: 10 #1",
         "blockId": 734143,
-        "Area": 26,
+        "area": 26,
         "slotId": 1,
         "Requirement": [
             {
@@ -86,9 +86,9 @@
     {
         "Itemname": "I14",
         "Location": "Cloister",
-        "LocationName": "Cloister - Money Room",
+        "LocationName": "Cloister - Money RoomX: 30 Y: 10 #2",
         "blockId": 734142,
-        "Area": 26,
+        "area": 26,
         "slotId": 1,
         "Requirement": [
             {
@@ -107,9 +107,9 @@
     {
         "Itemname": "I14",
         "Location": "Cloister Pre Boss",
-        "LocationName": "Cloister - Money Room",
+        "LocationName": "Cloister - Money RoomX: 27 Y: 12 #1",
         "blockId": 654169,
-        "Area": 26,
+        "area": 26,
         "slotId": 1,
         "Requirement": [
             {
@@ -128,9 +128,9 @@
     {
         "Itemname": "I14",
         "Location": "Cloister Pre Boss",
-        "LocationName": "Cloister - Money Room",
+        "LocationName": "Cloister - Money RoomX: 27 Y: 12 #2",
         "blockId": 653169,
-        "Area": 26,
+        "area": 26,
         "slotId": 1,
         "Requirement": [
             {
@@ -149,9 +149,9 @@
     {
         "Itemname": "I14",
         "Location": "Cloister Pre Boss",
-        "LocationName": "Cloister - Money Room",
+        "LocationName": "Cloister - Money RoomX: 27 Y: 12 #3",
         "blockId": 654168,
-        "Area": 26,
+        "area": 26,
         "slotId": 1,
         "Requirement": [
             {
@@ -170,9 +170,9 @@
     {
         "Itemname": "I14",
         "Location": "Cloister Pre Boss",
-        "LocationName": "Cloister - Money Room",
+        "LocationName": "Cloister - Money RoomX: 27 Y: 12 #4",
         "blockId": 653168,
-        "Area": 26,
+        "area": 26,
         "slotId": 1,
         "Requirement": [
             {
@@ -191,9 +191,9 @@
     {
         "Itemname": "I14",
         "Location": "Cloister Pre Boss",
-        "LocationName": "Cloister - Money Room",
+        "LocationName": "Cloister - Money RoomX: 31 Y: 12 #1",
         "blockId": 759177,
-        "Area": 26,
+        "area": 26,
         "slotId": 1,
         "Requirement": [
             {
@@ -212,9 +212,9 @@
     {
         "Itemname": "I14",
         "Location": "Cloister Pre Boss",
-        "LocationName": "Cloister - Money Room",
+        "LocationName": "Cloister - Money RoomX: 31 Y: 12 #2",
         "blockId": 760177,
-        "Area": 26,
+        "area": 26,
         "slotId": 1,
         "Requirement": [
             {
@@ -233,9 +233,9 @@
     {
         "Itemname": "I14",
         "Location": "Cloister Pre Boss",
-        "LocationName": "Cloister - Money Room",
+        "LocationName": "Cloister - Money RoomX: 31 Y: 12 #3",
         "blockId": 758177,
-        "Area": 26,
+        "area": 26,
         "slotId": 1,
         "Requirement": [
             {
@@ -254,9 +254,9 @@
     {
         "Itemname": "I14",
         "Location": "Cloister Pre Boss",
-        "LocationName": "Cloister - Money Room",
+        "LocationName": "Cloister - Money RoomX: 31 Y: 12 #4",
         "blockId": 758177,
-        "Area": 26,
+        "area": 26,
         "slotId": 1,
         "Requirement": [
             {
@@ -275,9 +275,9 @@
     {
         "Itemname": "I14",
         "Location": "Cloister Pre Boss",
-        "LocationName": "Cloister - Money Room",
+        "LocationName": "Cloister - Money RoomX: 31 Y: 12 #5",
         "blockId": 761177,
-        "Area": 26,
+        "area": 26,
         "slotId": 1,
         "Requirement": [
             {
@@ -296,9 +296,9 @@
     {
         "Itemname": "I14",
         "Location": "Cloister Pre Boss",
-        "LocationName": "Cloister - Money Room",
+        "LocationName": "Cloister - Money RoomX: 31 Y: 12 #6",
         "blockId": 757177,
-        "Area": 26,
+        "area": 26,
         "slotId": 1,
         "Requirement": [
             {
@@ -317,9 +317,9 @@
     {
         "Itemname": "I14",
         "Location": "Cloister Pre Boss",
-        "LocationName": "Cloister - Money Room",
+        "LocationName": "Cloister - Money RoomX: 20 Y: 13 #1",
         "blockId": 481189,
-        "Area": 26,
+        "area": 26,
         "slotId": 1,
         "Requirement": [
             {
@@ -338,9 +338,9 @@
     {
         "Itemname": "I14",
         "Location": "Cloister Pre Boss",
-        "LocationName": "Cloister - Money Room",
+        "LocationName": "Cloister - Money RoomX: 20 Y: 13 #2",
         "blockId": 480189,
-        "Area": 26,
+        "area": 26,
         "slotId": 1,
         "Requirement": [
             {
@@ -359,9 +359,9 @@
     {
         "Itemname": "I14",
         "Location": "Cloister Pre Boss",
-        "LocationName": "Cloister - Money Room",
+        "LocationName": "Cloister - Money RoomX: 20 Y: 13 #3",
         "blockId": 481190,
-        "Area": 26,
+        "area": 26,
         "slotId": 1,
         "Requirement": [
             {
@@ -380,9 +380,9 @@
     {
         "Itemname": "I14",
         "Location": "Cloister Pre Boss",
-        "LocationName": "Cloister - Money Room",
+        "LocationName": "Cloister - Money RoomX: 20 Y: 13 #4",
         "blockId": 479189,
-        "Area": 26,
+        "area": 26,
         "slotId": 1,
         "Requirement": [
             {
@@ -401,9 +401,9 @@
     {
         "Itemname": "I14",
         "Location": "Cloister Pre Boss",
-        "LocationName": "Cloister - Money Room",
+        "LocationName": "Cloister - Money RoomX: 20 Y: 13 #5",
         "blockId": 480190,
-        "Area": 26,
+        "area": 26,
         "slotId": 1,
         "Requirement": [
             {
@@ -422,9 +422,9 @@
     {
         "Itemname": "I14",
         "Location": "Cloister Pre Boss",
-        "LocationName": "Cloister - Money Room",
+        "LocationName": "Cloister - Money RoomX: 20 Y: 13 #6",
         "blockId": 479190,
-        "Area": 26,
+        "area": 26,
         "slotId": 1,
         "Requirement": [
             {
