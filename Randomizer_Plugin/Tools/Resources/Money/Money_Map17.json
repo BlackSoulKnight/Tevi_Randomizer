@@ -407,7 +407,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ((ITEM_DOUBLEJUMP && (ITEM_AirDash || ITEM_SPEEDUP 2`)) || ITEM_JETPACK)",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ((ITEM_DOUBLEJUMP && (ITEM_AirDash || ITEM_SPEEDUP 2)) || ITEM_JETPACK)",
                 "Difficulty": 0
             }
         ],
@@ -428,7 +428,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ((ITEM_DOUBLEJUMP && (ITEM_AirDash || ITEM_SPEEDUP 2`)) || ITEM_JETPACK)",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ((ITEM_DOUBLEJUMP && (ITEM_AirDash || ITEM_SPEEDUP 2)) || ITEM_JETPACK)",
                 "Difficulty": 0
             }
         ],
@@ -449,7 +449,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ((ITEM_DOUBLEJUMP && (ITEM_AirDash || ITEM_SPEEDUP 2`)) || ITEM_JETPACK)",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ((ITEM_DOUBLEJUMP && (ITEM_AirDash || ITEM_SPEEDUP 2)) || ITEM_JETPACK)",
                 "Difficulty": 0
             }
         ],
@@ -470,7 +470,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ((ITEM_DOUBLEJUMP && (ITEM_AirDash || ITEM_SPEEDUP 2`)) || ITEM_JETPACK)",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ((ITEM_DOUBLEJUMP && (ITEM_AirDash || ITEM_SPEEDUP 2)) || ITEM_JETPACK)",
                 "Difficulty": 0
             }
         ],
@@ -491,7 +491,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ((ITEM_DOUBLEJUMP && (ITEM_AirDash || ITEM_SPEEDUP 2`)) || ITEM_JETPACK)",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ((ITEM_DOUBLEJUMP && (ITEM_AirDash || ITEM_SPEEDUP 2)) || ITEM_JETPACK)",
                 "Difficulty": 0
             }
         ],
@@ -512,7 +512,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ((ITEM_DOUBLEJUMP && (ITEM_AirDash || ITEM_SPEEDUP 2`)) || ITEM_JETPACK)",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ((ITEM_DOUBLEJUMP && (ITEM_AirDash || ITEM_SPEEDUP 2)) || ITEM_JETPACK)",
                 "Difficulty": 0
             }
         ],

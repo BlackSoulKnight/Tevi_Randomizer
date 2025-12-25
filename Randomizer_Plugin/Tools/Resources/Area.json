@@ -272,6 +272,10 @@
             ]
         },
         {
+            "Name":"Morose City Shop",
+            "Connections":[]
+        },
+        {
             "Name": "Shop Bonus",
             "Connections":[]
         }
@@ -603,6 +607,10 @@
                     "Method": "EVENT_MoroseVisited && ITEM_RailPass"
                 }
             ]
+        },
+        {
+            "Name":"Ana Thema Shop",
+            "Connections":[]
         },
         {
             "Name": "Ana Thema to Gallery",
@@ -1228,6 +1236,10 @@
             ]
         },
         {
+            "Name":"Tartarus Shop",
+            "Connections":[]
+        },
+        {
             "Name": "Tartarus Catacombs",
             "Connections": [
                 {
@@ -1277,6 +1289,11 @@
                     "Exit":"Shop Bonus",
                     "Method":"Chapter 2"
                 }
+            ]
+        },
+        {
+            "Name": "Snow City Shop",
+            "Connections": [
             ]
         },
         {
@@ -1697,6 +1714,10 @@
                     "Method":"Chapter 2"
                 }
             ]
+        },
+        {
+            "Name":"Valhalla City Shop",
+            "Connections":[]
         }
     ],
     "Map21": [
