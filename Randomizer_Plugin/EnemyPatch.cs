@@ -104,26 +104,81 @@ namespace TeviRandomizer
         }
 
 
-        [HarmonyPostfix]
+        [HarmonyPrefix]
         [HarmonyPatch(typeof(SaveManager), "CheckEnemyDefeatedTypeCount", [typeof(enemyController)] )]
-        static void dropCore(ref bool __result,ref enemyController ec)
+        static bool dropCore(ref bool __result,ref enemyController ec)
         {
-            if(!__result)
+            Character.Type reversed = ec.type;
+            if (enemyReplace != null && RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedEnemy])
             {
-                byte b = 0;
-                if(ec.type == Character.Type.Pestilence || ec.type == Character.Type.Pestilence_Range)
-                {
-                    b = 16;
-                }
-                if (ec.dropCore)
-                {
-                    b = 24;
-                }
-                if(b>0 && SaveManager.Instance.savedata.enemyDefeatedType[(int)ec.type] == b)
-                {
-                    __result = true;
-                }
+                int i = 0;
+                for (i = 0; i < enemyReplace.Length; i++)
+                    if (enemyReplace[i] == (int)ec.type)
+                        break;
+                reversed = (Character.Type)i;
             }
+            bool flag = false;
+            bool flag2 = false;
+
+            switch (reversed)
+            {
+                case Character.Type.Hermitcrab_Shoes:
+                case Character.Type.GH_Bot:
+                case Character.Type.Bat:
+                case Character.Type.GH_CleanStaff:
+                case Character.Type.Cobra:
+                case Character.Type.Cactus:
+                case Character.Type.Scorpion:
+                case Character.Type.Shroom:
+                case Character.Type.Mouse_Forest:
+                case Character.Type.Snapweed:
+                case Character.Type.Dragonweed:
+                case Character.Type.SteamTank:
+                case Character.Type.Ruinserf:
+                case Character.Type.Doggy_Armor:
+                case Character.Type.Crawler:
+                case Character.Type.Frog:
+                case Character.Type.Shieldbot_Forest:
+                case Character.Type.Shieldbot_Fire:
+                case Character.Type.Shieldbot_Pollution:
+                case Character.Type.Crawler_Pollution:
+                case Character.Type.Dragonweed_Pollution:
+                case Character.Type.Cragmiester:
+                case Character.Type.Hermitcrab_Gold:
+                case Character.Type.V_Guard:
+                case Character.Type.V_Chariot:
+                case Character.Type.T_Skeleton:
+                case Character.Type.T_Clown:
+                case Character.Type.Crawler_Fire:
+                case Character.Type.T_Curse:
+                case Character.Type.V_Unicorn:
+                case Character.Type.V_Ironmaiden:
+                case Character.Type.Landmine:
+                case Character.Type.Knights_A:
+                    flag = true;
+                    break;
+                case Character.Type.Pestilence:
+                case Character.Type.Pestilence_Range:
+                    flag = true;
+                    flag2 = true;
+                    break;
+            }
+            if (ec.dropCore)
+            {
+                flag2 = true;
+            }
+            if (flag && flag2 && !RandomizerPlugin.UniqueEnemiesKilled.Contains((int)reversed))
+            {
+                __result = true;
+                RandomizerPlugin.UniqueEnemiesKilled.Add((int)reversed);
+            }
+
+            if (__result)
+            {
+                ItemSystemPatch.number = (int)ec.type;
+            }
+
+            return false;
         }
 
         public static short[] enemyReplace = null;

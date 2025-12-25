@@ -7,6 +7,7 @@ using System.Security.Cryptography;
 using TMPro;
 using UnityEngine;
 using static UnityEngine.UI.Image;
+using static UnityEngine.UIElements.UIR.Allocator2D;
 
 namespace TeviRandomizer
 {
@@ -139,6 +140,40 @@ namespace TeviRandomizer
             }
         }
 
+        static bool FreeShop()
+        {
+            switch (WorldManager.Instance.Area)
+            {
+                case 3:
+                    //Morose
+                    if (SaveManager.Instance.GetItem(ItemList.Type.QUEST_Memory) > 0)
+                        return true;
+                    break;
+                case 8:
+                    //Ana thema
+                    if (SaveManager.Instance.GetItem(ItemList.Type.QUEST_Flute) > 0)
+                        return true;
+                    break;
+                case 15:
+                    //Taratrus
+                    if (SaveManager.Instance.GetItem(ItemList.Type.ITEM_RailPass) > 0)
+                        return true;
+                    break;
+                case 16:
+                    //Snow City
+                    if (SaveManager.Instance.GetItem(ItemList.Type.QUEST_Compass) > 0)
+                        return true;
+                    break;
+                case 20:
+                    //Valhalla
+                    if (SaveManager.Instance.GetItem(ItemList.Type.ITEM_AirshipPass) > 0)
+                        return true;
+                    break;
+            }
+            return false;
+
+        }
+
 
         [HarmonyPatch(typeof(HUDShopMenu), "AddItem")]
         [HarmonyPrefix]
@@ -146,7 +181,6 @@ namespace TeviRandomizer
         {
 
             byte area = WorldManager.Instance.Area;
-
 
             int num = GemaItemManager.Instance.GetItemCoin(item);
             if (num <= 1000)
@@ -516,9 +550,11 @@ namespace TeviRandomizer
 
                         flag2 = false;
                     }
-                    if (SaveManager.Instance.GetResource(ItemList.Resource.COIN) >= price && flag2)
+                    bool freeShop = FreeShop();
+                    if ((SaveManager.Instance.GetResource(ItemList.Resource.COIN) >= price || freeShop) && flag2)
                     {
-                        SaveManager.Instance.SubResource(ItemList.Resource.COIN, price);
+                        if(!freeShop)
+                            SaveManager.Instance.SubResource(ItemList.Resource.COIN, price);
                         if (___typeN == Character.Type.Ian)
                         {
                             SaveManager.Instance.savedata.coinUsedIan += price;
@@ -667,7 +703,8 @@ namespace TeviRandomizer
                 texts[0].text = itemName;
             }
 
-            texts[2].text = _price.ToString();
+            texts[2].text = FreeShop()? "0":_price.ToString();
+
             ___itype = t;
             return false;
         }
@@ -675,7 +712,7 @@ namespace TeviRandomizer
 
         [HarmonyPatch(typeof(HUDShopMenu), "UpdateShopItemDetail")]
         [HarmonyPostfix]
-        static void ItemShopDescriptionFix(ref HUDShopMenu __instance, ref TextMeshPro ___item_desc, ref byte ___ShopID, ref GemaShopItemSlot[] ___itemslots, ref int ___Selected)
+        static void ItemShopDescriptionFix(ref HUDShopMenu __instance, ref TextMeshPro ___item_desc, ref byte ___ShopID, ref GemaShopItemSlot[] ___itemslots, ref int ___Selected, ref TextMeshPro ___item_price)
         {
 
             if (__instance.ShopType == 0)
@@ -729,6 +766,10 @@ namespace TeviRandomizer
                     textMeshPro.text = textMeshPro.text + "<br><br>" + Localize.GetLocalizeTextWithKeyword("ITEMDESC.EQUIPBADGETIPS", contains: false);
                 }
                 ___item_desc.text = InputButtonManager.Instance.AddButtonsToPromote(___item_desc.text);
+                if (FreeShop())
+                {
+                    ___item_price.text = "0";
+                }
             }
         }
 

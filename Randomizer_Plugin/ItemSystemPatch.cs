@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using static UnityEngine.UIElements.UIR.BestFitAllocator;
 
 
 namespace TeviRandomizer
@@ -13,7 +14,7 @@ namespace TeviRandomizer
     class ItemSystemPatch()
     {
         // Items that need to be handled differently
-        static ItemList.Type[] itemExceptions = { RandomizerPlugin.PortalItem };
+        static ItemList.Type[] itemExceptions = { RandomizerPlugin.PortalItem,RandomizerPlugin.CoreUpgradeItem,RandomizerPlugin.ItemUpgradeItem,RandomizerPlugin.MoneyItem };
 
         //Hotswap item recieved
         [HarmonyPatch(typeof(HUDObtainedItem), "GiveItem")]
@@ -74,6 +75,7 @@ namespace TeviRandomizer
 
             if (itemExceptions.Contains(type))
             {
+                var em = EventManager.Instance;
                 switch (type)
                 {
                     case RandomizerPlugin.PortalItem:
@@ -84,6 +86,15 @@ namespace TeviRandomizer
                         TeleporterRando.setTeleporterIcon(value);
                         value = 255;
                         return true;
+                    case ItemList.Type.I16:
+                        CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_UPGRADE, ItemList.Resource.UPGRADE);
+                        return false;
+                    case ItemList.Type.I15:
+                        CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_RESOURCE, ItemList.Resource.CORE);
+                        return false;
+                    case ItemList.Type.I14:
+                        CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_COIN, ItemList.Resource.COIN);
+                        return false;
                 }
             }
 
@@ -243,7 +254,21 @@ namespace TeviRandomizer
                 SaveManager.Instance.SetStackableItem(item, value,true);
                 return false;
             }
-            return true;
+            var em = EventManager.Instance;
+            switch (item)
+            {
+                case ItemList.Type.I16:
+                    CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_UPGRADE, ItemList.Resource.UPGRADE);
+                    return false;
+                case ItemList.Type.I15:
+                    CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_RESOURCE, ItemList.Resource.CORE);
+                    return false;
+                case ItemList.Type.I14:
+                    CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_COIN, ItemList.Resource.COIN);
+                    return false;
+                default:
+                    return true;
+            }
         }
 
         [HarmonyPatch(typeof(SaveManager), "SetItem")]
@@ -485,6 +510,8 @@ namespace TeviRandomizer
             BLOCK = 1,
             ENEMY = 2,
             EVENT = 3,
+            CRAFTING = 4,
+            ARCADE = 5,
         }
         private static collectResourceType collectType;
 
@@ -522,6 +549,8 @@ namespace TeviRandomizer
                     //place a switch for different resources gained
                     if (r != ItemList.Resource.UPGRADE  && r != ItemList.Resource.CORE)
                         return true;
+                    if (r == ItemList.Resource.CORE)
+                        blockPos = uniqueEnemies - number;
                     Debug.LogWarning($"Upgrade collected from killing mobs at Area:{WorldManager.Instance.Area}");
                     break;
                 case collectResourceType.EVENT:
@@ -545,15 +574,26 @@ namespace TeviRandomizer
                     if (bigBadBoss)
                     {
                         blockPos = BigBossOffest;
+                        blockPos -= number;
                         if (r == ItemList.Resource.CORE)
-                            blockPos--;
+                            blockPos-=2;
                     }
                     break;
+                case collectResourceType.CRAFTING:
+                    blockPos = CraftingOffset - number*2;
+                    if(r == ItemList.Resource.CORE)
+                        blockPos--;
+                    break;
+                case collectResourceType.ARCADE:
+                    blockPos = ArcadeOffset - number;
+                    break;
                 case collectResourceType.NONE:
-                    default:
-                        return true;
+                default:
+                    number = 0;
+                    return true;
                     }
             collectType = collectResourceType.NONE;
+            number = 0;
             if (!LocationTracker.hasResource(WorldManager.Instance.Area, blockPos))
             {
                 LocationTracker.addResourceToList(WorldManager.Instance.Area, blockPos);
@@ -570,6 +610,10 @@ namespace TeviRandomizer
         const int ShopBonusOffset = -100;
         const int EliteMissionOffset = -200;
         const int BigBossOffest = -150;
+        const int ArcadeOffset = -250;
+        public static int number = 0;
+        const int CraftingOffset = -300;
+        const int uniqueEnemies = -10_000;
         static List<ItemList.Type> itemQueue;
         [HarmonyPatch(typeof(ShopBonus),"EVENT")]
         [HarmonyPrefix]
@@ -577,9 +621,11 @@ namespace TeviRandomizer
         {
 
             EventManager em = EventManager.Instance;
+                
             if (em.EventStage == 10)
-                collectType = collectResourceType.EVENT;
-                    em.NextStage();
+            {
+                em.NextStage();
+            }
             if(em.EventStage == 20)
             {
                 if (!(em.EventTime >= 0.25f))
@@ -617,61 +663,134 @@ namespace TeviRandomizer
             }
             if(em.EventStage == 30)
             {
-                giveItemToPlayer();
-            }
-        }
-        
-        static void giveItemToPlayer()
-        {
-            var em = EventManager.Instance;
-            if (em.EventTime > 0.75f && em.EventTime < 100f)
-            {
-                if (itemQueue.Count > 0)
+                if (em.EventTime > 0.75f && em.EventTime < 100f)
                 {
-                    ItemList.Type item = itemQueue.ElementAt(0);
-                    itemQueue.RemoveAt(0);
-                    switch (item)
+                    if (itemQueue.Count > 0)
                     {
-                        case ItemList.Type.I16:
-                            CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_UPGRADE, ItemList.Resource.UPGRADE);
-                            break;
-                        case ItemList.Type.I15:
-                            CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_RESOURCE, ItemList.Resource.CORE);
-                            break;
-                        case ItemList.Type.I14:
-                            CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_COIN, ItemList.Resource.COIN);
-                            break;
-                        default:
-                            HUDObtainedItem.Instance.GiveItem(item, 1, true);
-                            break;
+                        ItemList.Type item = itemQueue.ElementAt(0);
+                        itemQueue.RemoveAt(0);
+                        collectType = collectResourceType.EVENT;
+                        switch (item)
+                        {
+                            case ItemList.Type.I16:
+                                CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_UPGRADE, ItemList.Resource.UPGRADE);
+                                break;
+                            case ItemList.Type.I15:
+                                CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_RESOURCE, ItemList.Resource.CORE);
+                                break;
+                            case ItemList.Type.I14:
+                                CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_COIN, ItemList.Resource.COIN);
+                                break;
+                            default:
+                                HUDObtainedItem.Instance.GiveItem(item, 1, true);
+                                break;
+                        }
                     }
+                    else
+                    {
+                        em.StopEvent();
+                        collectType = collectResourceType.NONE;
+                    }
+                    em.EventTime = 100f;
                 }
-                else
-                    em.StopEvent();
-                em.EventTime = 100f;
-            }
-            if (em.EventTime >= 100.5f && !HUDObtainedItem.Instance.isDisplaying())
-            {
-                em.EventTime = 0f;
+                if (em.EventTime >= 100.75f && !HUDObtainedItem.Instance.isDisplaying())
+                {
+                    em.EventTime = 0f;
+                }
             }
         }
-
+    
         static bool bigBadBoss = false;
-
+        static bool craftingResource = false;
         [HarmonyPatch(typeof(SaveManager),"AddResource")]
         [HarmonyPrefix]
-        static bool redirectToCollect()
+        static bool redirectToCollect(ref ItemList.Resource resource,ref int value)
         {
             if (bigBadBoss)
             {
+                number = 0;
                 collectType = collectResourceType.EVENT;
-                CollectManager.Instance.CreateCollect(EventManager.Instance.GetPlayerLastPosition(0), ElementType.B_RESOURCE, ItemList.Resource.CORE);
+                CollectManager.Instance.CreateCollect(EventManager.Instance.GetPlayerLastPosition(0), ElementType.B_RESOURCE, resource);
+
+                number = 1;
                 collectType = collectResourceType.EVENT;
-                CollectManager.Instance.CreateCollect(EventManager.Instance.GetPlayerLastPosition(0), ElementType.B_RESOURCE, ItemList.Resource.UPGRADE);
+                CollectManager.Instance.CreateCollect(EventManager.Instance.GetPlayerLastPosition(0), ElementType.B_RESOURCE, resource);
+
+                number = 0;
                 return false;
             }
+            if (craftingResource && (resource == ItemList.Resource.CORE || resource == ItemList.Resource.UPGRADE))
+            {
+                collectType = collectResourceType.CRAFTING;
+                if (resource == ItemList.Resource.CORE)
+                    number = SaveManager.Instance.GetCoreExchange();
+                if (resource == ItemList.Resource.UPGRADE)
+                    number = SaveManager.Instance.GetUpgradeExchange();
+
+                var blockPos = CraftingOffset - number * 2;
+                if (resource == ItemList.Resource.CORE)
+                    blockPos--;
+                if (!LocationTracker.hasResource(WorldManager.Instance.Area, blockPos))
+                {
+                    ItemList.Type item = RandomizerPlugin.getRandomizedResource(resource, WorldManager.Instance.Area, blockPos);
+                    if (item == ItemList.Type.I14 || item == ItemList.Type.I15 || item == ItemList.Type.I16)
+                    {
+                        resource = (ItemList.Resource)((byte)ItemList.Resource.COIN + (byte)item); 
+                        LocationTracker.addResourceToList(WorldManager.Instance.Area, blockPos);
+                        return true;
+                    }
+                }
+
+                CollectManager.Instance.CreateCollect(EventManager.Instance.GetPlayerLastPosition(0), ElementType.B_RESOURCE,resource);
+                return false;
+            }
+
             return true;
         }
+        [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid),"Update")]
+        [HarmonyPrefix]
+        static void crafton()=>craftingResource = true;
+        [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid), "OnDisable")]
+        [HarmonyPostfix]
+        static void craftoff()=>craftingResource = false;
+
+        [HarmonyPatch(typeof(SaveManager),"GiveUpgrade")]
+        [HarmonyPrefix]
+        static void acradeBonus()
+        {
+            collectType = collectResourceType.ARCADE;
+            if (SaveManager.Instance.GetMiniFlag(Mini.PlayedMiniGame) == 0 && SaveManager.Instance.savedata.minigame_highest_score > 0)
+                    number = 0;
+            else
+            {
+                var i = SaveManager.Instance.savedata.minigame_highest_round+1;
+                while ( i <= MainVar.instance.MINIGAME_ROUND_CLEARED)
+                {
+                    if (i == 1)
+                    {
+                        number = 1;
+                        SaveManager.Instance.savedata.minigame_highest_round = (byte)i;
+                        return;
+                    }
+                    if (i == 3)
+                    {
+                        number = 2;
+                        SaveManager.Instance.savedata.minigame_highest_round = (byte)i;
+                        return;
+                    }
+                    if (i == 5)
+                    {
+                        number = 3;
+                        SaveManager.Instance.savedata.minigame_highest_round = (byte)i;
+                        return;
+                    }
+                    if (i > 5)
+                        return;
+                    i++;
+                }
+            } 
+        }
+
         [HarmonyPatch(typeof(END_BOOKMARK),"EVENT")]
         [HarmonyPrefix]
         static void baddy()

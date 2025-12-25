@@ -73,6 +73,10 @@ namespace TeviRandomizer
     {
 
         public const ItemList.Type PortalItem = ItemList.Type.I13;
+        public const ItemList.Type MoneyItem = ItemList.Type.I14;
+        public const ItemList.Type CoreUpgradeItem = ItemList.Type.I15;
+        public const ItemList.Type ItemUpgradeItem = ItemList.Type.I16;
+
         public enum EventID
         {
             IllusionPalace = 9999
@@ -97,7 +101,7 @@ namespace TeviRandomizer
         static public string pluginPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         static public string seed;
         static public Dictionary<int, int> transitionData;
-
+        static public List<int> UniqueEnemiesKilled = new List<int>();
         static public Randomizer randomizer;
         static private bool randomizerEnabled = false;
         static private Harmony harmonyPatchInstance = new Harmony("Randomizer");
@@ -230,7 +234,7 @@ namespace TeviRandomizer
                 t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
             }
             {
-                Localize.SystemText newText = createNewText("ITEMDESC.I19", "Celia is now available when Orb has reached level 2");
+                Localize.SystemText newText = createNewText("ITEMDESC.I19", "Celia is now available.");
                 t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
                 t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
             }
@@ -240,7 +244,37 @@ namespace TeviRandomizer
                 t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
             }
             {
-                Localize.SystemText newText = createNewText("ITEMDESC.I20", "Sable is now available when Orb has reached level 2");
+                Localize.SystemText newText = createNewText("ITEMDESC.I20", "Sable is now available.");
+                t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
+                t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
+            }
+            {
+                Localize.SystemText newText = createNewText("ITEMNAME.I14", "500 Zennie Pack");
+                t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
+                t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
+            }
+            {
+                Localize.SystemText newText = createNewText("ITEMDESC.I14", "You found 500 Zennies.");
+                t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
+                t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
+            }
+            {
+                Localize.SystemText newText = createNewText("ITEMNAME.I15", "Magitite Shard");
+                t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
+                t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
+            }
+            {
+                Localize.SystemText newText = createNewText("ITEMDESC.I15", "You found a Magitite Shard.");
+                t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
+                t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
+            }
+            {
+                Localize.SystemText newText = createNewText("ITEMNAME.I16", "Mananite Shard");
+                t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
+                t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
+            }
+            {
+                Localize.SystemText newText = createNewText("ITEMDESC.I16", "You found a Mananite Shard.");
                 t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Add(newText);
                 t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
             }
@@ -400,6 +434,7 @@ namespace TeviRandomizer
             __itemData.Clear();
             transitionVisited.Clear();
             LocationTracker.clearItemList();
+            UniqueEnemiesKilled.Clear();
             transitionData = null;
             ResourcePatch.AreaResource = null;
             ResourcePatch.resources = new GameObject[0];
@@ -787,7 +822,7 @@ namespace TeviRandomizer
 
         [HarmonyPatch(typeof(CommonResource), "Awake")]
         [HarmonyPostfix]
-        static void replaceSprite(ref Sprite[] ___items, ref Sprite[] ___questitems)
+        static void replaceSprite(ref Sprite[] ___items, ref Sprite[] ___questitems,ref Sprite[] ___resources)
         {
             if (___items.Length > 0)
             {
@@ -801,6 +836,9 @@ namespace TeviRandomizer
                     ___items[10] = ___questitems[9];
                 if (___items[11] == null)
                     ___items[11] = ___questitems[9];
+                ___items[14] = ___resources[0];
+                ___items[15] = ___resources[1];
+                ___items[16] = ___resources[2];
             }
 
 

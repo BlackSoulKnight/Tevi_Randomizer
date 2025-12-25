@@ -48,6 +48,6 @@ for a in jsonFile:
     if a["Itemname"] == "I15":
         core +=1
 
-print("Core:"+core)
-print("upgrade:"+upgrade)
+print("Core:"+str(core))
+print("upgrade:"+str(upgrade))
 

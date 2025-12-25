@@ -9,6 +9,7 @@ using Archipelago.MultiClient.Net.BounceFeatures.DeathLink;
 using Archipelago.MultiClient.Net.Enums;
 using Archipelago.MultiClient.Net.Models;
 using Archipelago.MultiClient.Net.Packets;
+using EventMode;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 
@@ -425,7 +426,22 @@ namespace TeviRandomizer
                         itemID = (byte)RandomizerPlugin.PortalItem;
                     }
                     teviItem = (ItemList.Type)itemID;
-                    HUDObtainedItem.Instance.GiveItem(teviItem,value, true);
+                    var em = EventManager.Instance;
+                    switch (teviItem)
+                    {
+                        case ItemList.Type.I16:
+                            CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_UPGRADE, ItemList.Resource.UPGRADE);
+                            break;
+                        case ItemList.Type.I15:
+                            CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_RESOURCE, ItemList.Resource.CORE);
+                            break;
+                        case ItemList.Type.I14:
+                            CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_COIN, ItemList.Resource.COIN);
+                            break;
+                        default:
+                            HUDObtainedItem.Instance.GiveItem(teviItem, value, true);
+                            break;
+                    }
                     currentItemNR++;
                 }
 

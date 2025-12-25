@@ -106,6 +106,15 @@ namespace TeviRandomizer
                         RandomizerPlugin.transitionVisited = new List<int>();
                     }
                 }
+
+                if (eS3File.KeyExists("UniqueEnemies"))
+                {
+                    RandomizerPlugin.UniqueEnemiesKilled = eS3File.Load<List<int>>("UniqueEnemies");
+                    if(RandomizerPlugin.UniqueEnemiesKilled == null)
+                    {
+                        RandomizerPlugin.UniqueEnemiesKilled = new List<int>();
+                    }
+                }
                 if (eS3File.KeyExists("randomizedMusic"))
                 {
                     Extras.RandomizeExtra.randomizedMusic = eS3File.Load<byte[]>("randomizedMusic");
@@ -195,7 +204,7 @@ namespace TeviRandomizer
             eS3File.Save("Seed", RandomizerPlugin.seed);
             eS3File.Save("HintList", ChatSystemPatch.hintList);
             eS3File.Save("GoMode", RandomizerPlugin.GoMode);
-
+            eS3File.Save("UniqueEnemies",RandomizerPlugin.UniqueEnemiesKilled);
             if (MainVar.instance._isAutoSave)
             {
                 if (ArchipelagoInterface.Instance != null && ArchipelagoInterface.Instance.isConnected)
