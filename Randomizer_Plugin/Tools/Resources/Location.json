@@ -12311,11 +12311,11 @@
         "slotId": 2,
         "Requirement": [
             {
-                "Method": "ITEM_Explorer && Core 3 && Upgrade 1 && RainbowCheck",
+                "Method": "ITEM_Explorer && Upgrade 1 && RainbowCheck",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_Explorer && Core 1 && Upgrade 1 && Explorer",
+                "Method": "ITEM_Explorer && Upgrade 1 && Explorer",
                 "Difficulty": 0
             }
         ],
@@ -12334,11 +12334,11 @@
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "ITEM_Explorer && Core 6 && Upgrade 1 && RainbowCheck",
+                "Method": "ITEM_Explorer && Upgrade 1 && RainbowCheck",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_Explorer && Core 1 && Upgrade 1 && Explorer",
+                "Method": "ITEM_Explorer && Upgrade 1 && Explorer",
                 "Difficulty": 0
             }
         ],
@@ -12395,7 +12395,7 @@
         "slotId": 2,
         "Requirement": [
             {
-                "Method": "ITEM_ORB && Upgrade 3",
+                "Method": "ITEM_ORB && Core 3",
                 "Difficulty": 0
             }
         ],
@@ -12414,7 +12414,7 @@
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "ITEM_ORB && Upgrade 3 && EVENT_Air",
+                "Method": "ITEM_ORB && Core 3 && EVENT_Air",
                 "Difficulty": 0
             }
         ],
@@ -12623,7 +12623,7 @@
         "slotId": 2,
         "Requirement": [
             {
-                "Method": "ITEM_SPEEDUP && Upgrade 2",
+                "Method": "ITEM_SPEEDUP && Core 2",
                 "Difficulty": 0
             }
         ],
@@ -12642,7 +12642,7 @@
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "ITEM_SPEEDUP && Upgrade 3",
+                "Method": "ITEM_SPEEDUP && Core 3",
                 "Difficulty": 0
             }
         ],
@@ -12699,7 +12699,7 @@
         "slotId": 2,
         "Requirement": [
             {
-                "Method": "ITEM_WALLJUMP && Upgrade 2 && EVENT_Air",
+                "Method": "ITEM_WALLJUMP && Core 2 && EVENT_Air",
                 "Difficulty": 0
             }
         ],
@@ -12718,7 +12718,7 @@
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "ITEM_WALLJUMP && Upgrade 2 && EVENT_Air",
+                "Method": "ITEM_WALLJUMP && Core 2 && EVENT_Air",
                 "Difficulty": 0
             }
         ],
@@ -12737,7 +12737,7 @@
         "slotId": 2,
         "Requirement": [
             {
-                "Method": "ITEM_JETPACK && Upgrade 1",
+                "Method": "ITEM_JETPACK && Core 1",
                 "Difficulty": 0
             }
         ],
@@ -12756,7 +12756,7 @@
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "ITEM_JETPACK && Upgrade 3",
+                "Method": "ITEM_JETPACK && Core 3",
                 "Difficulty": 0
             }
         ],
@@ -12889,7 +12889,7 @@
         "slotId": 2,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend && Upgrade 1",
+                "Method": "ITEM_BombLengthExtend && Core 1",
                 "Difficulty": 0
             }
         ],
@@ -12908,7 +12908,7 @@
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "ITEM_BombLengthExtend 2 && Upgrade 3 && EVENT_Fire",
+                "Method": "ITEM_BombLengthExtend 2 && Core 3 && EVENT_Fire",
                 "Difficulty": 0
             }
         ],
@@ -13136,7 +13136,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && ITEM_ORB 3 && Core 5",
+                "Method": "Coins 250 && ITEM_ORB 3 && Upgrade 4",
                 "Difficulty": 0
             }
         ],
@@ -13155,7 +13155,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && ITEM_ORB 3 && Core 7",
+                "Method": "Coins 250 && ITEM_ORB 3 && Upgrade 4",
                 "Difficulty": 0
             }
         ],
@@ -13174,7 +13174,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && ITEM_ORB 3 && Core 8",
+                "Method": "Coins 250 && ITEM_ORB 3 && Upgrade 4",
                 "Difficulty": 0
             }
         ],
@@ -13193,7 +13193,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Core 4",
+                "Method": "Coins 250 && Upgrade 4",
                 "Difficulty": 0
             }
         ],
@@ -13212,7 +13212,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && Core 8",
+                "Method": "Coins 250 && Upgrade 4",
                 "Difficulty": 0
             }
         ],

@@ -666,13 +666,15 @@ namespace TeviRandomizer
                     {
                         if (iType.ToString().Contains("_OrbBoost"))
                         {
-                            if (count == 1)
+                            if (count == 2)
                             {
                                 num = 4;
+                                /*
                                 if (SaveManager.Instance.GetOrbBoostObtained() > 0)
                                 {
                                     num += 4;
                                 }
+                                */
                             }
                             if (count % __instance.maxMaterial == 0)
                             {
@@ -682,9 +684,10 @@ namespace TeviRandomizer
                         }
                         if (iType.ToString().Contains("_OrbType"))
                         {
-                            if (count == 1)
+                            if (count == 2)
                             {
                                 num = 4;
+                                /*
                                 if (SaveManager.Instance.GetOrbTypeObtained() > 0)
                                 {
                                     num++;
@@ -697,6 +700,7 @@ namespace TeviRandomizer
                                 {
                                     num++;
                                 }
+                                */
                             }
                             if (count % __instance.maxMaterial == 0)
                             {
@@ -818,12 +822,12 @@ namespace TeviRandomizer
                                         {
                                             if (getItemUpgradeCount(iType) == 1)
                                             {
-                                                __result = 1;
+                                                __result = 0;
                                                 return false;
                                             }
                                             if (getItemUpgradeCount(iType) >= 2)
                                             {
-                                                __result = 1;
+                                                __result = 0;
                                                 return false;
                                             }
                                         }
@@ -831,12 +835,12 @@ namespace TeviRandomizer
                                         {
                                             if (getItemUpgradeCount(iType) == 1)
                                             {
-                                                __result = 3;
+                                                __result = 0;
                                                 return false;
                                             }
                                             if (getItemUpgradeCount(iType) >= 2)
                                             {
-                                                __result = 6;
+                                                __result = 0;
                                                 return false;
                                             }
                                         }
@@ -1427,6 +1431,24 @@ namespace TeviRandomizer
             return false;
         }
 
+        
+        [HarmonyPatch(typeof(GemaItemManager),"Start")]
+        [HarmonyPostfix]
+        static void changeItemMats()
+        {
+            var instance = GemaItemManager.Instance;
+            if (instance != null)
+            {
+                ItemList.Type[] progessionItems = [ItemList.Type.ITEM_ORB,ItemList.Type.ITEM_JETPACK,ItemList.Type.ITEM_SPEEDUP,ItemList.Type.ITEM_WALLJUMP,ItemList.Type.ITEM_BombLengthExtend ];
+                foreach (var itemType in progessionItems)
+                {
+                    var item = instance.GetItemDB(itemType);
+                    item.core = item.upgrade;
+                    item.upgrade = 0;
+                }
+            }
+        }
+        
     }
 
 }
