@@ -238,6 +238,10 @@
                     "Method": ""
                 },
                 {
+                    "Exit": "Morose City Shop",
+                    "Method": "QUEST_Memory"
+                },
+                {
                     "Exit": "0303",
                     "Method": ""
                 },
@@ -577,6 +581,10 @@
                 {
                     "Exit": "Vena Shop",
                     "Method": "EVENT_MoroseVisited"
+                },
+                {
+                    "Exit": "Ana Thema Shop",
+                    "Method": "QUEST_Flute"
                 },
                 {
                     "Exit": "Teleporter Ana thema",
@@ -1202,6 +1210,10 @@
                     "Method": ""
                 },
                 {
+                    "Exit": "Tartarus Shop",
+                    "Method": "ITEM_RailPass"
+                },
+                {
                     "Exit": "1502",
                     "Method": ""
                 },
@@ -1233,6 +1245,10 @@
         {
             "Name": "Snow City",
             "Connections": [
+                {
+                    "Exit": "Snow City Shop",
+                    "Method": "QUEST_Compass"
+                },
                 {
                     "Exit": "1604",
                     "Method": ""
@@ -1656,6 +1672,10 @@
         {
             "Name": "Valhalla City",
             "Connections": [
+                {
+                    "Exit": "Valhalla City Shop",
+                    "Method": "ITEM_AirshipPass"
+                },
                 {
                     "Exit": "2008",
                     "Method": ""
