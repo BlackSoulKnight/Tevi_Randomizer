@@ -2,12 +2,9 @@
 using EventMode;
 using HarmonyLib;
 using Map;
-using Steamworks.Ugc;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 
 namespace TeviRandomizer
@@ -563,7 +560,10 @@ namespace TeviRandomizer
                 case collectResourceType.ENEMY:
                     //place a switch for different resources gained
                     if (r != ItemList.Resource.UPGRADE && r != ItemList.Resource.CORE)
-                        return true;
+                    {
+                        customCollector(position, element, r);
+                        return false;
+                    }
                     if (r == ItemList.Resource.CORE)
                     {
                         area = 1;
@@ -601,7 +601,8 @@ namespace TeviRandomizer
                         if(r != ItemList.Resource.CORE && r != ItemList.Resource.UPGRADE)
                         {
                             Debug.Log(r);
-                            return true;
+                            customCollector(position, element,r);
+                            return false;
                         }
                             
                         blockPos = BigBossOffest;
@@ -616,7 +617,8 @@ namespace TeviRandomizer
                 case collectResourceType.NONE:
                 default:
                     number = 0;
-                    return true;
+                    customCollector(position, element,r);
+                    return false;
             }
             number = 0;
             if (!LocationTracker.hasResource((byte)area, blockPos))
@@ -632,14 +634,69 @@ namespace TeviRandomizer
                 r = itemToResource(item);
                 if (r == ItemList.Resource.COIN)
                     element = ElementType.B_COIN;
-                return true;
+                customCollector(position, element,r);
+                return false;
             }
             Debug.LogWarning($"[Resource Collection] Something went wrong: {collectType} -> Area:{area} ID:{blockPos}");
-            return true;
+            customCollector(position, element,r);
+            return false;
         }
 
 
-        static ItemList.Resource itemToResource(ItemList.Type item)
+        static void customCollector(Vector3 position, ElementType element, ItemList.Resource r)
+        {
+            int num = 1;
+            ItemList.Resource resource = ItemList.Resource.COIN;
+            if (element == ElementType.B_COIN)
+            {
+                resource = ItemList.Resource.COIN;
+                num = 5;
+            }
+            if (element == ElementType.B_RESOURCE || element == ElementType.B_UPGRADE)
+            {
+                resource = r;
+            }
+            int spawned = 0;
+            var collects = CollectManager.Instance.collects;
+            for (int i = 0; i < num; i++)
+            {
+                bool flag = false;
+                foreach (collectScript collect in collects)
+                {
+                    if (!collect.isActiveAndEnabled)
+                    {
+                        collect.resource = resource;
+                        collect.transform.position = position;
+                        collect.EnableMe();
+                        flag = true;
+                        break;
+                    }
+                }
+                if (flag) 
+                    spawned++;
+            }
+            if(spawned < num)
+            {
+                collectScript prefab = Traverse.Create(CollectManager.Instance).Field("collect_prefab").GetValue<collectScript>();
+
+                foreach (var collect in collects)
+                {
+                    collectScript collectScript2 = UnityEngine.Object.Instantiate(prefab);
+                    collectScript2.DisableMe();
+                    collectScript2.transform.parent = CollectManager.Instance.transform;
+                    collects.Add(collectScript2);
+                    if(spawned < num)
+                    {
+                        collectScript2.resource = resource;
+                        collectScript2.transform.position = position;
+                        collectScript2.EnableMe();
+                        spawned++;
+                    }
+                }
+            }
+        }
+
+        public static ItemList.Resource itemToResource(ItemList.Type item)
         {
             switch (item)
             {
@@ -650,7 +707,7 @@ namespace TeviRandomizer
                 case ItemList.Type.I16:
                     return ItemList.Resource.CORE;
                 default:
-                    return ItemList.Resource.FOOD;
+                    return ItemList.Resource.RESOURCE_MAX;
             }
         }
 
@@ -683,7 +740,7 @@ namespace TeviRandomizer
         public static int number = 0;
         const int CraftingOffset = -300;
         const int uniqueEnemies = -10_000;
-        static List<ItemList.Type> itemQueue;
+
         [HarmonyPatch(typeof(ShopBonus), "EVENT")]
         [HarmonyPrefix]
         static void shopBoni()
@@ -701,17 +758,17 @@ namespace TeviRandomizer
                 {
                     return;
                 }
-                itemQueue = new List<ItemList.Type>();
                 if (em.GetCounter(3) == 0f)
                 {
-                    int num = 0;
                     while (SaveManager.Instance.savedata.coinUsedIan >= 3000 + 7000 * SaveManager.Instance.GetMiniFlag(Mini.ShopBonusIan))
                     {
                         SaveManager.Instance.SetMiniFlag(Mini.ShopBonusIan, (byte)(SaveManager.Instance.GetMiniFlag(Mini.ShopBonusIan) + 1));
-                        if (!LocationTracker.hasResource(3, ShopBonusOffset + SaveManager.Instance.GetMiniFlag(Mini.ShopBonusIan)))
+                        var blockPos = ShopBonusOffset + SaveManager.Instance.GetMiniFlag(Mini.ShopBonusIan);
+                        if (!LocationTracker.hasResource(3, blockPos))
                         {
-                            LocationTracker.addResourceToList(3, ShopBonusOffset + SaveManager.Instance.GetMiniFlag(Mini.ShopBonusIan));
-                            itemQueue.Add(RandomizerPlugin.getRandomizedResource(ItemList.Resource.CORE, 3, ShopBonusOffset + SaveManager.Instance.GetMiniFlag(Mini.ShopBonusIan)));
+                            LocationTracker.addResourceToList(3, blockPos);
+                            var item = RandomizerPlugin.getRandomizedResource(ItemList.Resource.CORE, 3, blockPos);
+                            ResourceQueueItem(item, 3, blockPos);
                         }
                     }
                 }
@@ -720,10 +777,13 @@ namespace TeviRandomizer
                     while (SaveManager.Instance.savedata.coinUsedCC >= 4000 + 7500 * SaveManager.Instance.GetMiniFlag(Mini.ShopBonusCC))
                     {
                         SaveManager.Instance.SetMiniFlag(Mini.ShopBonusCC, (byte)(SaveManager.Instance.GetMiniFlag(Mini.ShopBonusCC) + 1));
-                        if (!LocationTracker.hasResource(3, ShopBonusOffset - SaveManager.Instance.GetMiniFlag(Mini.ShopBonusCC)))
+                        var blockPos = ShopBonusOffset - SaveManager.Instance.GetMiniFlag(Mini.ShopBonusCC);
+                        if (!LocationTracker.hasResource(3, blockPos))
                         {
-                            LocationTracker.addResourceToList(3, ShopBonusOffset - SaveManager.Instance.GetMiniFlag(Mini.ShopBonusCC));
-                            itemQueue.Add(RandomizerPlugin.getRandomizedResource(ItemList.Resource.CORE, 3, ShopBonusOffset - SaveManager.Instance.GetMiniFlag(Mini.ShopBonusCC)));
+                            LocationTracker.addResourceToList(3, blockPos);
+                            var item =RandomizerPlugin.getRandomizedResource(ItemList.Resource.CORE, 3,blockPos);
+                            ResourceQueueItem(item, 3,blockPos);
+
                         }
                     }
                 }
@@ -731,42 +791,7 @@ namespace TeviRandomizer
                 em.NextStage();
             }
             if (em.EventStage == 30)
-            {
-                if (em.EventTime > 0.75f && em.EventTime < 100f)
-                {
-                    if (itemQueue.Count > 0)
-                    {
-                        ItemList.Type item = itemQueue.ElementAt(0);
-                        itemQueue.RemoveAt(0);
-                        collectType = collectResourceType.EVENT;
-                        switch (item)
-                        {
-                            case ItemList.Type.I16:
-                                CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_UPGRADE, ItemList.Resource.UPGRADE);
-                                break;
-                            case ItemList.Type.I15:
-                                CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_RESOURCE, ItemList.Resource.CORE);
-                                break;
-                            case ItemList.Type.I14:
-                                CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_COIN, ItemList.Resource.COIN);
-                                break;
-                            default:
-                                HUDObtainedItem.Instance.GiveItem(item, 1, true);
-                                break;
-                        }
-                    }
-                    else
-                    {
-                        em.StopEvent();
-                        collectType = collectResourceType.NONE;
-                    }
-                    em.EventTime = 100f;
-                }
-                if (em.EventTime >= 100.75f && !HUDObtainedItem.Instance.isDisplaying())
-                {
-                    em.EventTime = 0f;
-                }
-            }
+                em.StopEvent();
         }
 
         static bool bigBadBoss = false;
@@ -802,17 +827,19 @@ namespace TeviRandomizer
                 var blockPos = CraftingOffset - number * 2;
                 if (resource == ItemList.Resource.CORE)
                     blockPos--;
-                if (!LocationTracker.hasResource(WorldManager.Instance.Area, blockPos))
+                if (!LocationTracker.hasResource(1, blockPos))
                 {
-                    LocationTracker.addResourceToList(WorldManager.Instance.Area, blockPos);
-                    ItemList.Type item = RandomizerPlugin.getRandomizedResource(resource, WorldManager.Instance.Area, blockPos);
+                    LocationTracker.addResourceToList(1, blockPos);
+                    ItemList.Type item = RandomizerPlugin.getRandomizedResource(resource, 1, blockPos);
                     if (item == ItemList.Type.I14 || item == ItemList.Type.I15 || item == ItemList.Type.I16)
                     {
                         resource = itemToResource(item);
+                        if (resource == ItemList.Resource.COIN)
+                            value = 500;
                         return true;
                     }
                     else
-                        ResourceQueueItem(item, WorldManager.Instance.Area, blockPos);
+                        ResourceQueueItem(item, 1, blockPos);
                 }
 
                 return false;

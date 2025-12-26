@@ -1,13 +1,7 @@
-﻿using Archipelago.MultiClient.Net.Models;
-using BepInEx;
+﻿using BepInEx;
 using EventMode;
-using HarmonyLib;
-using System;
 using System.Collections.Generic;
-using System.Security.Cryptography;
-using System.Text;
 using UnityEngine;
-using static System.Collections.Specialized.BitVector32;
 
 namespace TeviRandomizer
 {
@@ -18,12 +12,15 @@ namespace TeviRandomizer
         public bool Randomized;
         public string Name;
         public string Description;
-        public TeviItemInfo(ItemList.Type type,byte value,bool randomized,string name ="",string description="") {
+        public bool SkipHUD = false;
+        public TeviItemInfo(ItemList.Type type,byte value, bool randomized, string name = "", string description = "", bool skipHUD = false)
+        {
             Type = type;
             Value = value;
             Randomized = randomized;
             Name = name;
             Description = description;
+            SkipHUD = skipHUD;
         }
     }
 
@@ -37,7 +34,7 @@ namespace TeviRandomizer
             if (WorldManager.Instance?.MapInited == true && !EventManager.Instance.IsChangingMap() && GemaUIPauseMenu.Instance.GetAllowPause())
             {
                 if (!checkResourcePause())
-                    while (ResourceQueue.Count > 0)
+                    if (ResourceQueue.Count > 0 )
                     {
                         var em = EventManager.Instance;
                         var resource = ResourceQueue.Dequeue();
@@ -57,13 +54,23 @@ namespace TeviRandomizer
                             string localizeDesc = Localize.GetLocalizeTextWithKeyword("ITEMDESC." + GemaItemManager.Instance.GetItemString(item.Type), false);
                             if (item.Randomized)
                             {
+                                var checkItem = ItemSystemPatch.itemToResource(item.Type);
+                                if (checkItem != ItemList.Resource.RESOURCE_MAX)
+                                {
+                                    ResourceQueue.Enqueue(checkItem);
+                                    return;
+                                }
+
                                 if (!item.Description.IsNullOrWhiteSpace())
                                     RandomizerPlugin.changeSystemText("ITEMNAME." + GemaItemManager.Instance.GetItemString(item.Type), item.Name);
                                 if (!item.Name.IsNullOrWhiteSpace())
                                     RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(item.Type), item.Description);
                             }
-
-                            HUDObtainedItem.Instance.GiveItem(item.Type, item.Value, item.Randomized);
+                            if (item.SkipHUD && item.Randomized)
+                                //@TODO Make it work
+                                SaveManager.Instance.SetItem(item.Type, item.Value);
+                            else
+                                HUDObtainedItem.Instance.GiveItem(item.Type, item.Value, item.Randomized);
 
                             // reverse Text change
                             if (item.Randomized)
@@ -82,26 +89,26 @@ namespace TeviRandomizer
 
         bool checkResourcePause()
         {
-            if ((EventManager.Instance.getMode() == EventMode.Mode.OFF || EventManager.Instance.EventTime > 300f))
+            if (EventManager.Instance != null && EventManager.Instance.getMode() != EventMode.Mode.OFF)
                 return true;
 
-            return GameSystem.Instance.isAnyPause();
+            return GameSystem.Instance?.isAnyPause() == true;
         }
         bool checkHUDObtainPause()
         {
-            if (HUDSaveMenu.Instance.isDisplaying())
+            if (HUDSaveMenu.Instance?.isDisplaying() == true)
                 return true;
-            if (PauseFrame.Instance.isActiveAndEnabled)
+            if (PauseFrame.Instance?.isActiveAndEnabled == true)
                 return true;
-            if (GemaUIChangeDifficulty.Instance.isDisplaying())
+            if (GemaUIChangeDifficulty.Instance?.isDisplaying() == true)
                 return true;
-            if (HUDUseItemWindow.Instance.isDisplaying())
+            if (HUDUseItemWindow.Instance?.isDisplaying() == true)
                 return true;
-            if (HUDObtainedItem.Instance.isDisplaying())
+            if (HUDObtainedItem.Instance?.isDisplaying() == true)
                 return true;
-            if (HUDHelpScreen.Instance.isDisplaying())
+            if (HUDHelpScreen.Instance?.isDisplaying() == true)
                 return true;
-            if (GemaQuestionWindow.Instance.isDisplaying())
+            if (GemaQuestionWindow.Instance?.isDisplaying() == true)
                 return true;
 
 
@@ -111,7 +118,7 @@ namespace TeviRandomizer
         void test()
         {
 
-            TeviItemInfo item = new TeviItemInfo(ItemList.Type.ITEM_ORB, 1, true);
+            TeviItemInfo item = new TeviItemInfo(ItemList.Type.I16, 1, true);
             ItemQueue.Enqueue(item);
             ItemQueue.Enqueue(item);
             ItemQueue.Enqueue(item);
