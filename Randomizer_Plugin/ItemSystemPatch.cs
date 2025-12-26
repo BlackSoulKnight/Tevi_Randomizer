@@ -109,7 +109,7 @@ namespace TeviRandomizer
             {
                 if (ArchipelagoInterface.Instance.isConnected)
                 {
-                    string itemName = "";
+                    string itemName = type.ToString();
                     if (!doRandomBadge)
                         itemName = ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APLocationName[$"{__state.Item1} #{__state.Item2}"]);
                     ItemList.Type item;
