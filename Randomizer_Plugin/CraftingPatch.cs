@@ -847,7 +847,7 @@ namespace TeviRandomizer
                                         break;
                                 }
                             }
-                            if (count == 2 && num > 10 && num < 100)
+                            if (count == 2 || count == 1 && num > 10 && num < 100)
                             {
                                 int num2 = num % 10;
                                 num /= 10;

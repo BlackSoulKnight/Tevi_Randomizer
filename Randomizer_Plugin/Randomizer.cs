@@ -524,14 +524,6 @@ namespace TeviRandomizer
 
         }
 
-        public string findLocationName(int item, int slot)
-        {
-            string val = "";
-            val = locations.Find(x => x.itemId == item && x.slotId == slot).Loaction;
-            return val;
-        }
-
-
 
         private ItemList.Type getFillerItem(int randomNumber)
         {

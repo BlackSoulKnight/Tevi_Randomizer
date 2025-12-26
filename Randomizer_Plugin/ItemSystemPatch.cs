@@ -1,12 +1,13 @@
-﻿using EventMode;
+﻿using Character;
+using EventMode;
 using HarmonyLib;
 using Map;
+using Steamworks.Ugc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using static UnityEngine.UIElements.UIR.BestFitAllocator;
 
 
 namespace TeviRandomizer
@@ -14,7 +15,7 @@ namespace TeviRandomizer
     class ItemSystemPatch()
     {
         // Items that need to be handled differently
-        static ItemList.Type[] itemExceptions = { RandomizerPlugin.PortalItem,RandomizerPlugin.CoreUpgradeItem,RandomizerPlugin.ItemUpgradeItem,RandomizerPlugin.MoneyItem };
+        static ItemList.Type[] itemExceptions = { RandomizerPlugin.PortalItem, RandomizerPlugin.CoreUpgradeItem, RandomizerPlugin.ItemUpgradeItem, RandomizerPlugin.MoneyItem };
 
         //Hotswap item recieved
         [HarmonyPatch(typeof(HUDObtainedItem), "GiveItem")]
@@ -26,7 +27,7 @@ namespace TeviRandomizer
             ItemList.Type original = type;
             if (!doRandomBadge)
             {
-                if(RandomizerPlugin.checkItemGot(type,value))
+                if (RandomizerPlugin.checkItemGot(type, value))
                     return false;
                 LocationTracker.addItemToList(type, value);
 
@@ -40,14 +41,14 @@ namespace TeviRandomizer
                         itemName = ArchipelagoInterface.Instance.getLocItemName(type, value);
                         string playerName = ArchipelagoInterface.Instance.getLocPlayerName(type, value);
                         desc = $"You found {itemName} for {playerName}";
-                        __state = (type,value);
+                        __state = (type, value);
 
                         ItemList.Type item;
                         if (Enum.TryParse(itemName, out item))
                         {
                             itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + item.ToString(), true);
 
-                            desc = "<color=\"red\">"+$"                                                                          <size=200%> FOOL!</color><size=100%>\n\n\n<font-weight=100>{itemName} was stolen by {playerName}";
+                            desc = "<color=\"red\">" + $"                                                                          <size=200%> FOOL!</color><size=100%>\n\n\n<font-weight=100>{itemName} was stolen by {playerName}";
                         }
 
                         RandomizerPlugin.changeSystemText("ITEMNAME." + GemaItemManager.Instance.GetItemString(data), itemName);
@@ -56,7 +57,7 @@ namespace TeviRandomizer
                 }
 
                 type = data;
-                if(RandomizerPlugin.__itemData.ContainsKey(LocationTracker.APLocationName[$"{original} #{value}"]))
+                if (RandomizerPlugin.__itemData.ContainsKey(LocationTracker.APLocationName[$"{original} #{value}"]))
                     itemName = RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{original} #{value}"]];
 
                 if (type == RandomizerPlugin.PortalItem)
@@ -86,15 +87,12 @@ namespace TeviRandomizer
                         TeleporterRando.setTeleporterIcon(value);
                         value = 255;
                         return true;
+                    // this can lead to an infinite loop
                     case ItemList.Type.I16:
-                        CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_UPGRADE, ItemList.Resource.UPGRADE);
-                        return false;
                     case ItemList.Type.I15:
-                        CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_RESOURCE, ItemList.Resource.CORE);
-                        return false;
                     case ItemList.Type.I14:
-                        CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_COIN, ItemList.Resource.COIN);
-                        return false;
+                        Debug.LogError("[HUDObtainItem] Item I16 -> I14 Should not be given to the player with this System");
+                        return true;
                 }
             }
 
@@ -107,14 +105,16 @@ namespace TeviRandomizer
 
         [HarmonyPatch(typeof(HUDObtainedItem), "GiveItem")]
         [HarmonyPostfix]
-        static void changeSpriteInUI(ref SpriteRenderer ___itemicon,ref (ItemList.Type, byte) __state,ref ItemList.Type type)
+        static void changeSpriteInUI(ref SpriteRenderer ___itemicon, ref (ItemList.Type, byte) __state, ref ItemList.Type type, ref bool doRandomBadge)
         {
 
             if (type == ArchipelagoInterface.remoteItem || type == ArchipelagoInterface.remoteItemProgressive)
             {
                 if (ArchipelagoInterface.Instance.isConnected)
                 {
-                    string itemName = ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APLocationName[$"{__state.Item1} #{__state.Item2}"]);
+                    string itemName = "";
+                    if (!doRandomBadge)
+                        itemName = ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APLocationName[$"{__state.Item1} #{__state.Item2}"]);
                     ItemList.Type item;
                     if (Enum.TryParse(itemName, out item))
                     {
@@ -135,7 +135,12 @@ namespace TeviRandomizer
                 case ItemList.Type.ITEM_ORB:
 
                     RandomizerPlugin.addOrbStatus(1);
-
+                    break;
+                case ItemList.Type.ITEM_KNIFE:
+                    if (SaveManager.Instance.GetUnlockedLogic(PlayerLogicState.TEVI_STRONG_GROUND_FRONT) <= 0)
+                    {
+                        SaveManager.Instance.SetUnlockLogic(PlayerLogicState.TEVI_STRONG_GROUND_FRONT, 1, usePopUp: true);
+                    }
                     break;
                 default:
                     break;
@@ -190,7 +195,7 @@ namespace TeviRandomizer
 
             if (SaveManager.Instance.GetOrb() == 2 && (SaveManager.Instance.GetItem(ItemList.Type.I19) > 0 || SaveManager.Instance.GetItem(ItemList.Type.I20) > 0 || item == ItemList.Type.I20 || item == ItemList.Type.I19) || (SaveManager.Instance.GetOrb() == 1 && RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart]))
             {
-                if((SaveManager.Instance.GetOrb() == 1 && RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart]))
+                if ((SaveManager.Instance.GetOrb() == 1 && RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart]))
                     RandomizerPlugin.addOrbStatus(1);
                 RandomizerPlugin.addOrbStatus(1);
 
@@ -213,9 +218,9 @@ namespace TeviRandomizer
                 }
             }
 
-            if(ArchipelagoInterface.Instance.isConnected)
+            if (ArchipelagoInterface.Instance.isConnected)
             {
-                if(item == ArchipelagoInterface.remoteItem || item == ArchipelagoInterface.remoteItemProgressive)
+                if (item == ArchipelagoInterface.remoteItem || item == ArchipelagoInterface.remoteItemProgressive)
                 {
                     return false;
                 }
@@ -223,14 +228,17 @@ namespace TeviRandomizer
 
             if (item >= ItemList.Type.BADGE_START && item <= ItemList.Type.BADGE_MAX)
             {
-                if(SaveManager.Instance.GetMiniFlag(Mini.UnlockedBadge) <= 0)
+                if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedBadge) <= 0)
                     SaveManager.Instance.SetMiniFlag(Mini.UnlockedBadge, 1);
 
             }
             if (item.ToString().Contains("ITEM"))
             {
-                if(value == 0)
+                if (value == 0)
                 {
+                    if (item == ItemList.Type.ITEM_KNIFE && SaveManager.Instance.GetUnlockedLogic(PlayerLogicState.TEVI_STRONG_GROUND_FRONT) > 0)
+                        SaveManager.Instance.SetUnlockLogic(PlayerLogicState.TEVI_STRONG_GROUND_FRONT, 0, usePopUp: true);
+
                     return true;
                 }
                 value = SaveManager.Instance.GetItem(item);
@@ -251,7 +259,7 @@ namespace TeviRandomizer
             }
             else if (item.ToString().Contains("STACKABLE"))
             {
-                SaveManager.Instance.SetStackableItem(item, value,true);
+                SaveManager.Instance.SetStackableItem(item, value, true);
                 return false;
             }
             var em = EventManager.Instance;
@@ -278,9 +286,9 @@ namespace TeviRandomizer
             if (item == ItemList.Type.I19 || item == ItemList.Type.I20) EventManager.Instance.ReloadOrbStatus();
         }
 
-        [HarmonyPatch(typeof(SaveManager),"SetStackableItem")]
+        [HarmonyPatch(typeof(SaveManager), "SetStackableItem")]
         [HarmonyPrefix]
-        static bool StackableItemChanges(ref ItemList.Type item,ref byte id,ref SaveManager __instance,ref float ___renewTimer_Item)
+        static bool StackableItemChanges(ref ItemList.Type item, ref byte id, ref SaveManager __instance, ref float ___renewTimer_Item)
         {
             // execptions
             if (itemExceptions.Contains(item))
@@ -297,13 +305,13 @@ namespace TeviRandomizer
             {
                 byte val = (byte)Math.Min(__instance.savedata.stackableCount[(int)(item - 1)] + 1, byte.MaxValue);
                 __instance.savedata.stackableCount[(int)(item - 1)] = val;
-                if(item == ItemList.Type.STACKABLE_BAG)
+                if (item == ItemList.Type.STACKABLE_BAG)
                 {
-                    __instance.savedata.stackableItemList[(int)(item - 1), Math.Min((byte)(val - 1+30), (byte)35)] = true;
+                    __instance.savedata.stackableItemList[(int)(item - 1), Math.Min((byte)(val - 1 + 30), (byte)35)] = true;
                 }
             }
 
-            Debug.Log("[SaveManager] " + item.ToString() + " set to "+ __instance.savedata.stackableCount[(int)(item - 1)]);
+            Debug.Log("[SaveManager] " + item.ToString() + " set to " + __instance.savedata.stackableCount[(int)(item - 1)]);
             if (Application.isEditor || value)
             {
                 ___renewTimer_Item = 0.03f;
@@ -346,11 +354,11 @@ namespace TeviRandomizer
             itemid = RandomizerPlugin.getRandomizedItem(data2.itemid, data2.GetSlotID());
 
 
-			if (ArchipelagoInterface.Instance.isConnected && (itemid == ArchipelagoInterface.remoteItem || itemid == ArchipelagoInterface.remoteItemProgressive))
-			{
+            if (ArchipelagoInterface.Instance.isConnected && (itemid == ArchipelagoInterface.remoteItem || itemid == ArchipelagoInterface.remoteItemProgressive))
+            {
                 string itemName = ArchipelagoInterface.Instance.getLocItemName(data2.itemid, data2.GetSlotID());
                 ItemList.Type item;
-				if (Enum.TryParse(itemName, out item)) {
+                if (Enum.TryParse(itemName, out item)) {
                     itemid = item;
                 }
                 else
@@ -359,8 +367,8 @@ namespace TeviRandomizer
                     data2.DisableMe();
                     return false;
                 }
-			}
-			if (itemid == ItemList.Type.STACKABLE_COG)
+            }
+            if (itemid == ItemList.Type.STACKABLE_COG)
             {
                 FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.ITEM);
 
@@ -407,10 +415,10 @@ namespace TeviRandomizer
             return false;
         }
 
-        static readonly ItemList.Type[] newPins = {ArchipelagoInterface.remoteItemProgressive, ArchipelagoInterface.remoteItem, ItemList.Type.I19,RandomizerPlugin.PortalItem, ItemList.Type.I20, ItemList.Type.STACKABLE_COG };
+        static readonly ItemList.Type[] newPins = { ArchipelagoInterface.remoteItemProgressive, ArchipelagoInterface.remoteItem, ItemList.Type.I19, RandomizerPlugin.PortalItem, ItemList.Type.I20, ItemList.Type.STACKABLE_COG };
 
         //autoPin Icons
-        [HarmonyPatch(typeof(GemaItemExplorer),"StartMe")]
+        [HarmonyPatch(typeof(GemaItemExplorer), "StartMe")]
         [HarmonyPostfix]
         static void changeDiscoveryPin()
         {
@@ -429,69 +437,69 @@ namespace TeviRandomizer
                     return;
                 }
                 nearestType = RandomizerPlugin.getRandomizedItem(tile.itemid, tile.GetSlotID());
-				if (ArchipelagoInterface.Instance.isConnected && (nearestType == ArchipelagoInterface.remoteItem || nearestType == ArchipelagoInterface.remoteItemProgressive))
-				{
-					Icon icon = Icon.PIN9;
-					string itemName = ArchipelagoInterface.Instance.getLocItemName(tile.itemid, tile.GetSlotID());
-					ItemList.Type item;
-					if (Enum.TryParse(itemName, out item))
-					{
-						nearestType = item;
-						if (nearestType.ToString().Contains("STACKABLE"))
-						{
-							icon = Icon.PIN2;
-							if (WorldManager.Instance.CurrentRoomArea == AreaType.SNOWCAVE)
-							{
-								if (nearestType == ItemList.Type.STACKABLE_EP && WorldManager.Instance.CurrentRoomX == 20 && WorldManager.Instance.CurrentRoomY == 13)
-								{
-									icon = Icon.OFF;
-								}
-								if (nearestType == ItemList.Type.STACKABLE_EP && WorldManager.Instance.CurrentRoomX == 20 && WorldManager.Instance.CurrentRoomY == 14)
-								{
-									icon = Icon.OFF;
-								}
-							}
-							if (WorldManager.Instance.CurrentRoomArea == AreaType.CLIFF && nearestType == ItemList.Type.STACKABLE_MP && (WorldManager.Instance.CurrentRoomType == RoomType.YONLY || WorldManager.Instance.CurrentRoomType == RoomType.YONLY2))
-							{
-								icon = Icon.OFF;
-							}
-						}
-						else if (nearestType.ToString().Contains("BADGE"))
-						{
-							icon = Icon.PIN1;
-							if (WorldManager.Instance.CurrentRoomArea == AreaType.BLUSHFOREST)
-							{
-								if (WorldManager.Instance.CurrentRoomX == 12 && WorldManager.Instance.CurrentRoomY == 13)
-								{
-									icon = Icon.OFF;
-								}
-								if (WorldManager.Instance.CurrentRoomX == 12 && WorldManager.Instance.CurrentRoomY == 14)
-								{
-									icon = Icon.OFF;
-								}
-							}
-							if (WorldManager.Instance.CurrentRoomArea == AreaType.A_GALLERY)
-							{
-								if (WorldManager.Instance.CurrentRoomX == 28 && WorldManager.Instance.CurrentRoomY == 5)
-								{
-									icon = Icon.OFF;
-								}
-								if (WorldManager.Instance.CurrentRoomX == 28 && WorldManager.Instance.CurrentRoomY == 6)
-								{
-									icon = Icon.OFF;
-								}
-							}
-						}
-						else if (nearestType.ToString().Contains("ITEM") || nearestType.ToString().Contains("QUEST") || nearestType == ItemList.Type.STACKABLE_BAG || nearestType.ToString().Contains("Useable"))
-						{
-							icon = Icon.PIN9;
-						}
+                if (ArchipelagoInterface.Instance.isConnected && (nearestType == ArchipelagoInterface.remoteItem || nearestType == ArchipelagoInterface.remoteItemProgressive))
+                {
+                    Icon icon = Icon.PIN9;
+                    string itemName = ArchipelagoInterface.Instance.getLocItemName(tile.itemid, tile.GetSlotID());
+                    ItemList.Type item;
+                    if (Enum.TryParse(itemName, out item))
+                    {
+                        nearestType = item;
+                        if (nearestType.ToString().Contains("STACKABLE"))
+                        {
+                            icon = Icon.PIN2;
+                            if (WorldManager.Instance.CurrentRoomArea == AreaType.SNOWCAVE)
+                            {
+                                if (nearestType == ItemList.Type.STACKABLE_EP && WorldManager.Instance.CurrentRoomX == 20 && WorldManager.Instance.CurrentRoomY == 13)
+                                {
+                                    icon = Icon.OFF;
+                                }
+                                if (nearestType == ItemList.Type.STACKABLE_EP && WorldManager.Instance.CurrentRoomX == 20 && WorldManager.Instance.CurrentRoomY == 14)
+                                {
+                                    icon = Icon.OFF;
+                                }
+                            }
+                            if (WorldManager.Instance.CurrentRoomArea == AreaType.CLIFF && nearestType == ItemList.Type.STACKABLE_MP && (WorldManager.Instance.CurrentRoomType == RoomType.YONLY || WorldManager.Instance.CurrentRoomType == RoomType.YONLY2))
+                            {
+                                icon = Icon.OFF;
+                            }
+                        }
+                        else if (nearestType.ToString().Contains("BADGE"))
+                        {
+                            icon = Icon.PIN1;
+                            if (WorldManager.Instance.CurrentRoomArea == AreaType.BLUSHFOREST)
+                            {
+                                if (WorldManager.Instance.CurrentRoomX == 12 && WorldManager.Instance.CurrentRoomY == 13)
+                                {
+                                    icon = Icon.OFF;
+                                }
+                                if (WorldManager.Instance.CurrentRoomX == 12 && WorldManager.Instance.CurrentRoomY == 14)
+                                {
+                                    icon = Icon.OFF;
+                                }
+                            }
+                            if (WorldManager.Instance.CurrentRoomArea == AreaType.A_GALLERY)
+                            {
+                                if (WorldManager.Instance.CurrentRoomX == 28 && WorldManager.Instance.CurrentRoomY == 5)
+                                {
+                                    icon = Icon.OFF;
+                                }
+                                if (WorldManager.Instance.CurrentRoomX == 28 && WorldManager.Instance.CurrentRoomY == 6)
+                                {
+                                    icon = Icon.OFF;
+                                }
+                            }
+                        }
+                        else if (nearestType.ToString().Contains("ITEM") || nearestType.ToString().Contains("QUEST") || nearestType == ItemList.Type.STACKABLE_BAG || nearestType.ToString().Contains("Useable"))
+                        {
+                            icon = Icon.PIN9;
+                        }
 
-					}
-					FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, WorldManager.Instance.CurrentRoomX, WorldManager.Instance.CurrentRoomY, icon);
+                    }
+                    FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, WorldManager.Instance.CurrentRoomX, WorldManager.Instance.CurrentRoomY, icon);
 
-				}
-				else if (newPins.Contains(nearestType))
+                }
+                else if (newPins.Contains(nearestType))
                 {
                     Debug.Log("[GemaItemExplorer] Change icon to item : " + Icon.PIN9);
                     FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, WorldManager.Instance.CurrentRoomX, WorldManager.Instance.CurrentRoomY, Icon.PIN9);
@@ -510,7 +518,6 @@ namespace TeviRandomizer
             BLOCK = 1,
             ENEMY = 2,
             EVENT = 3,
-            CRAFTING = 4,
             ARCADE = 5,
         }
         private static collectResourceType collectType;
@@ -522,6 +529,8 @@ namespace TeviRandomizer
         [HarmonyPostfix]
         static void uncheckDestroyedBlock() => collectType = collectResourceType.NONE;
 
+
+
         [HarmonyPatch(typeof(enemyController), "AreaDefeatUpgradeRequirement")]
         [HarmonyPrefix]
         static void checkKilledEnemy() => collectType = collectResourceType.ENEMY;
@@ -530,15 +539,21 @@ namespace TeviRandomizer
         [HarmonyPostfix]
         static void uncheckKilledEnemy() => collectType = collectResourceType.NONE;
 
+
+
         [HarmonyPatch(typeof(enemyController), "AreaDefeatUpgradeRequirement")]
         [HarmonyPostfix]
         static void reduceMinRewuirement(ref int __result) => __result = 0;
 
-        [HarmonyPatch(typeof(CollectManager),"CreateCollect")]
+        [HarmonyPatch(typeof(CollectManager), "CreateCollect")]
         [HarmonyPrefix]
-        static bool collectBlock(ref Vector3 position,ref ItemList.Resource r)
+        static bool collectBlock(ref Vector3 position, ref ItemList.Resource r, ref ElementType element)
         {
+
+
             int blockPos = 0;
+            int area = WorldManager.Instance.Area;
+
             switch (collectType)
             {
                 case collectResourceType.BLOCK:
@@ -547,10 +562,13 @@ namespace TeviRandomizer
                     break;
                 case collectResourceType.ENEMY:
                     //place a switch for different resources gained
-                    if (r != ItemList.Resource.UPGRADE  && r != ItemList.Resource.CORE)
+                    if (r != ItemList.Resource.UPGRADE && r != ItemList.Resource.CORE)
                         return true;
                     if (r == ItemList.Resource.CORE)
+                    {
+                        area = 1;
                         blockPos = uniqueEnemies - number;
+                    }
                     Debug.LogWarning($"Upgrade collected from killing mobs at Area:{WorldManager.Instance.Area}");
                     break;
                 case collectResourceType.EVENT:
@@ -558,31 +576,39 @@ namespace TeviRandomizer
                     Debug.Log($"[TeviRandomizer] Collecting Resource from: {EventManager.Instance.GetCurrentEvent().ToString()}");
                     switch (eventmode)
                     {
-                        case Mode.AfterMission:
-                            var submode = EventManager.Instance.getSubMode();
-                            blockPos = submode == Mode.StartMission3A ? EliteMissionOffset : 0;
-                            blockPos = submode == Mode.StartMission3B ? EliteMissionOffset-1*2 : 0;
-                            blockPos = submode == Mode.StartMission3C ? EliteMissionOffset-2*2 : 0;
-                            blockPos = submode == Mode.StartMission8A ? EliteMissionOffset-3*2 : 0;
-                            blockPos = submode == Mode.StartMission15A ? EliteMissionOffset-4*2 : 0;
-                            blockPos = submode == Mode.StartMission20A ? EliteMissionOffset-5*2 : 0;
-                            if (r == ItemList.Resource.CORE)
-                                blockPos--;
-                            break;
-                        default:break;
+                        default: break;
+                    }
+                    if (missionResource)
+                    {
+                        var submode = missionMode;
+                        if (submode == Mode.StartMission3A)
+                            blockPos = EliteMissionOffset;
+                        if (submode == Mode.StartMission3B)
+                            blockPos = EliteMissionOffset - 1 * 2;
+                        if (submode == Mode.StartMission3C)
+                            blockPos = EliteMissionOffset - 2 * 2;
+                        if (submode == Mode.StartMission8A)
+                            blockPos = EliteMissionOffset - 3 * 2;
+                        if (submode == Mode.StartMission15A)
+                            blockPos = EliteMissionOffset - 4 * 2;
+                        if (submode == Mode.StartMission20A)
+                            blockPos = EliteMissionOffset - 5 * 2;
+                        if (r == ItemList.Resource.CORE)
+                            blockPos--;
                     }
                     if (bigBadBoss)
                     {
+                        if(r != ItemList.Resource.CORE && r != ItemList.Resource.UPGRADE)
+                        {
+                            Debug.Log(r);
+                            return true;
+                        }
+                            
                         blockPos = BigBossOffest;
                         blockPos -= number;
                         if (r == ItemList.Resource.CORE)
-                            blockPos-=2;
+                            blockPos -= 2;
                     }
-                    break;
-                case collectResourceType.CRAFTING:
-                    blockPos = CraftingOffset - number*2;
-                    if(r == ItemList.Resource.CORE)
-                        blockPos--;
                     break;
                 case collectResourceType.ARCADE:
                     blockPos = ArcadeOffset - number;
@@ -591,20 +617,63 @@ namespace TeviRandomizer
                 default:
                     number = 0;
                     return true;
-                    }
-            collectType = collectResourceType.NONE;
+            }
             number = 0;
-            if (!LocationTracker.hasResource(WorldManager.Instance.Area, blockPos))
+            if (!LocationTracker.hasResource((byte)area, blockPos))
             {
-                LocationTracker.addResourceToList(WorldManager.Instance.Area, blockPos);
-                ItemList.Type item = RandomizerPlugin.getRandomizedResource(r,WorldManager.Instance.Area, blockPos);
+                LocationTracker.addResourceToList((byte)area, blockPos);
+                ItemList.Type item = RandomizerPlugin.getRandomizedResource(r, (byte)area, blockPos);
                 if (!(item == ItemList.Type.OFF || item == ItemList.Type.I14 || item == ItemList.Type.I15 || item == ItemList.Type.I16))
                 {
-                    HUDObtainedItem.Instance.GiveItem(item, 1, true);
+                    ResourceQueueItem(item, (byte)area, blockPos);
                     return false;
                 }
+
+                r = itemToResource(item);
+                if (r == ItemList.Resource.COIN)
+                    element = ElementType.B_COIN;
+                return true;
             }
+            Debug.LogWarning($"[Resource Collection] Something went wrong: {collectType} -> Area:{area} ID:{blockPos}");
             return true;
+        }
+
+
+        static ItemList.Resource itemToResource(ItemList.Type item)
+        {
+            switch (item)
+            {
+                case ItemList.Type.I14:
+                    return ItemList.Resource.COIN;
+                case ItemList.Type.I15:
+                    return ItemList.Resource.UPGRADE;
+                case ItemList.Type.I16:
+                    return ItemList.Resource.CORE;
+                default:
+                    return ItemList.Resource.FOOD;
+            }
+        }
+
+        static void ResourceQueueItem(ItemList.Type item,byte area,int blockPos)
+        {
+            string name = "";
+            string desc = "";
+            if (ArchipelagoInterface.Instance?.isConnected == true && (item == ArchipelagoInterface.remoteItemProgressive || item == ArchipelagoInterface.remoteItem))
+            {
+                var location = LocationTracker.getResourceLocationName(area, blockPos);
+
+                name = ArchipelagoInterface.Instance.getLocItemName(location);
+                string playerName = ArchipelagoInterface.Instance.getLocPlayerName(location);
+                desc = $"You found {name} for {playerName}";
+
+                if (Enum.TryParse(name, out ItemList.Type item2))
+                {
+                    item = item2;
+                    name = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + item2.ToString(), true);
+                    desc = "<color=\"red\">" + $"                                                                          <size=200%> FOOL!</color><size=100%>\n\n\n<font-weight=100>{name} was stolen by {playerName}";
+                }
+            }
+            ItemDistributionSystem.ItemQueue.Enqueue(new TeviItemInfo(item, 1, true, name, desc));
         }
 
         const int ShopBonusOffset = -100;
@@ -615,18 +684,18 @@ namespace TeviRandomizer
         const int CraftingOffset = -300;
         const int uniqueEnemies = -10_000;
         static List<ItemList.Type> itemQueue;
-        [HarmonyPatch(typeof(ShopBonus),"EVENT")]
+        [HarmonyPatch(typeof(ShopBonus), "EVENT")]
         [HarmonyPrefix]
         static void shopBoni()
         {
 
             EventManager em = EventManager.Instance;
-                
+
             if (em.EventStage == 10)
             {
                 em.NextStage();
             }
-            if(em.EventStage == 20)
+            if (em.EventStage == 20)
             {
                 if (!(em.EventTime >= 0.25f))
                 {
@@ -642,7 +711,7 @@ namespace TeviRandomizer
                         if (!LocationTracker.hasResource(3, ShopBonusOffset + SaveManager.Instance.GetMiniFlag(Mini.ShopBonusIan)))
                         {
                             LocationTracker.addResourceToList(3, ShopBonusOffset + SaveManager.Instance.GetMiniFlag(Mini.ShopBonusIan));
-                            itemQueue.Add(RandomizerPlugin.getRandomizedResource(ItemList.Resource.CORE, 3,ShopBonusOffset+ SaveManager.Instance.GetMiniFlag(Mini.ShopBonusIan)));
+                            itemQueue.Add(RandomizerPlugin.getRandomizedResource(ItemList.Resource.CORE, 3, ShopBonusOffset + SaveManager.Instance.GetMiniFlag(Mini.ShopBonusIan)));
                         }
                     }
                 }
@@ -661,7 +730,7 @@ namespace TeviRandomizer
                 CameraScript.Instance.PlaySound(AllSound.SEList.Collect_Resource2);
                 em.NextStage();
             }
-            if(em.EventStage == 30)
+            if (em.EventStage == 30)
             {
                 if (em.EventTime > 0.75f && em.EventTime < 100f)
                 {
@@ -699,21 +768,25 @@ namespace TeviRandomizer
                 }
             }
         }
-    
+
         static bool bigBadBoss = false;
         static bool craftingResource = false;
-        [HarmonyPatch(typeof(SaveManager),"AddResource")]
+        static bool missionResource = false;
+        static Mode missionMode = Mode.OFF;
+        [HarmonyPatch(typeof(SaveManager), "AddResource")]
         [HarmonyPrefix]
-        static bool redirectToCollect(ref ItemList.Resource resource,ref int value)
+        static bool redirectToCollect(ref ItemList.Resource resource, ref int value)
         {
             if (bigBadBoss)
             {
+                if (resource != ItemList.Resource.CORE && resource != ItemList.Resource.UPGRADE)
+                {
+                    return true;
+                }
                 number = 0;
-                collectType = collectResourceType.EVENT;
                 CollectManager.Instance.CreateCollect(EventManager.Instance.GetPlayerLastPosition(0), ElementType.B_RESOURCE, resource);
 
                 number = 1;
-                collectType = collectResourceType.EVENT;
                 CollectManager.Instance.CreateCollect(EventManager.Instance.GetPlayerLastPosition(0), ElementType.B_RESOURCE, resource);
 
                 number = 0;
@@ -721,7 +794,6 @@ namespace TeviRandomizer
             }
             if (craftingResource && (resource == ItemList.Resource.CORE || resource == ItemList.Resource.UPGRADE))
             {
-                collectType = collectResourceType.CRAFTING;
                 if (resource == ItemList.Resource.CORE)
                     number = SaveManager.Instance.GetCoreExchange();
                 if (resource == ItemList.Resource.UPGRADE)
@@ -732,27 +804,59 @@ namespace TeviRandomizer
                     blockPos--;
                 if (!LocationTracker.hasResource(WorldManager.Instance.Area, blockPos))
                 {
+                    LocationTracker.addResourceToList(WorldManager.Instance.Area, blockPos);
                     ItemList.Type item = RandomizerPlugin.getRandomizedResource(resource, WorldManager.Instance.Area, blockPos);
                     if (item == ItemList.Type.I14 || item == ItemList.Type.I15 || item == ItemList.Type.I16)
                     {
-                        resource = (ItemList.Resource)((byte)ItemList.Resource.COIN + (byte)item); 
-                        LocationTracker.addResourceToList(WorldManager.Instance.Area, blockPos);
+                        resource = itemToResource(item);
                         return true;
                     }
+                    else
+                        ResourceQueueItem(item, WorldManager.Instance.Area, blockPos);
                 }
 
-                CollectManager.Instance.CreateCollect(EventManager.Instance.GetPlayerLastPosition(0), ElementType.B_RESOURCE,resource);
                 return false;
             }
 
             return true;
         }
-        [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid),"Update")]
+
+
+        // Crafting
+
+        [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid), "Update")]
         [HarmonyPrefix]
-        static void crafton()=>craftingResource = true;
+        static void crafton() => craftingResource = true;
         [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid), "OnDisable")]
         [HarmonyPostfix]
-        static void craftoff()=>craftingResource = false;
+        static void craftoff() => craftingResource = false;
+
+
+
+        // Elite Missions
+
+        [HarmonyPatch(typeof(AfterMission), "EVENT")]
+        [HarmonyPrefix]
+        static void eliteMissionON()
+        {
+            collectType = collectResourceType.EVENT;
+            missionResource = true;
+            missionMode = EventManager.Instance.getSubMode();
+        }
+        [HarmonyPatch(typeof(AfterMission), "EVENT")]
+        [HarmonyPostfix]
+        static void elitMissionOF()
+        {
+            collectType = collectResourceType.NONE;
+            missionResource = false;
+            missionMode = Mode.OFF;
+
+        }
+
+
+
+
+        // Tartarus Arcade
 
         [HarmonyPatch(typeof(SaveManager),"GiveUpgrade")]
         [HarmonyPrefix]
@@ -790,20 +894,33 @@ namespace TeviRandomizer
                 }
             } 
         }
+        [HarmonyPatch(typeof(SaveManager), "GiveUpgrade")]
+        [HarmonyPostfix]
+        static void disableArcadeBonsu() => collectType = collectResourceType.NONE;
+
+
+
+        //Elite Bosses
 
         [HarmonyPatch(typeof(END_BOOKMARK),"EVENT")]
         [HarmonyPrefix]
         static void baddy()
         {
             if (EventManager.Instance.EventStage == 100 && (WorldManager.Instance.CurrentRoomBG == RoomBG.SEAL || WorldManager.Instance.CurrentRoomBG == RoomBG.ZENITH))
+            {
+                collectType = collectResourceType.EVENT;
                 bigBadBoss = true;
+            }
         }
         [HarmonyPatch(typeof(END_BOOKMARK),"EVENT")]
         [HarmonyPostfix]
         static void nobaddy()
         {
             if (EventManager.Instance.EventStage == 100 && (WorldManager.Instance.CurrentRoomBG == RoomBG.SEAL || WorldManager.Instance.CurrentRoomBG == RoomBG.ZENITH))
+            {
+                collectType = collectResourceType.NONE;
                 bigBadBoss = false;
+            }
         }
 
     }
