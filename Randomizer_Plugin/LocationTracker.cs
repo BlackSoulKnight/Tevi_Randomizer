@@ -69,7 +69,13 @@ namespace TeviRandomizer
             else
                 return collectedLocationList.Contains($"{area} #{blockId}");
         }
-
+        public static string getResourceLocationName(byte area,int blockId)
+        {
+            if (APResoucreLocationame.ContainsKey($"{area} #{blockId}"))
+                return APResoucreLocationame[$"{area} #{blockId}"];
+            else
+                return $"{area} #{blockId}";
+        }
 
         public static bool checkLocation(string location)
         {

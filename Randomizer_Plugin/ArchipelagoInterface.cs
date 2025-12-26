@@ -430,16 +430,16 @@ namespace TeviRandomizer
                     switch (teviItem)
                     {
                         case ItemList.Type.I16:
-                            CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_UPGRADE, ItemList.Resource.UPGRADE);
+                            ItemDistributionSystem.ResourceQueue.Enqueue(ItemList.Resource.UPGRADE);
                             break;
                         case ItemList.Type.I15:
-                            CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_RESOURCE, ItemList.Resource.CORE);
+                            ItemDistributionSystem.ResourceQueue.Enqueue(ItemList.Resource.CORE);
                             break;
                         case ItemList.Type.I14:
-                            CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, ElementType.B_COIN, ItemList.Resource.COIN);
+                            ItemDistributionSystem.ResourceQueue.Enqueue(ItemList.Resource.COIN);
                             break;
                         default:
-                            HUDObtainedItem.Instance.GiveItem(teviItem, value, true);
+                            ItemDistributionSystem.ItemQueue.Enqueue(new TeviItemInfo(teviItem, value, true));
                             break;
                     }
                     currentItemNR++;

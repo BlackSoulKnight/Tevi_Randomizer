@@ -130,6 +130,7 @@ namespace TeviRandomizer
         private void Awake()
         {
             this.gameObject.AddComponent<ArchipelagoInterface>();
+            this.gameObject.AddComponent<ItemDistributionSystem>();
             ArchipelagoInterface.Instance = gameObject.GetComponent<ArchipelagoInterface>();
             Localize.GetLocalizeTextWithKeyword("", false);
             randomizer = Randomizer.Instance;
