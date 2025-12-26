@@ -436,6 +436,7 @@ namespace TeviRandomizer
             transitionVisited.Clear();
             LocationTracker.clearItemList();
             UniqueEnemiesKilled.Clear();
+            ItemDistributionSystem.reset();
             transitionData = null;
             ResourcePatch.AreaResource = null;
             ResourcePatch.resources = new GameObject[0];

@@ -146,6 +146,41 @@ namespace TeviRandomizer
             ResourceQueue.Enqueue(ItemList.Resource.COIN);
         }
 
+        static TeviItemInfo[] asItemQueue;
+        static ItemList.Resource[] asResourceQueue;
+
+
+
+        //Savegame stuff
+
+        public static void reset()
+        {
+            ItemQueue.Clear();
+            ResourceQueue.Clear();
+        }
+        public static void loadFromSlot(ES3File savefile)
+        {
+            if (savefile.KeyExists("ItemQueue"))
+                ItemQueue = new(savefile.Load<TeviItemInfo[]>("ItemQueue"));
+            if (savefile.KeyExists("ResourceQueue"))
+                ResourceQueue = new(savefile.Load<ItemList.Resource[]>("ResourceQueue"));
+            
+        }
+        public static void saveToSlot(ES3File saveFile)
+        {
+            saveFile.Save<TeviItemInfo[]>("ItemQueue",ItemQueue.ToArray());
+            saveFile.Save<ItemList.Resource[]>("ResourceQueue", ResourceQueue.ToArray());
+        }
+        public static void saveToTmpSlot(ES3File saveFile)
+        {
+            saveFile.Save<TeviItemInfo[]>("ItemQueue", asItemQueue);
+            saveFile.Save<ItemList.Resource[]>("ResourceQueue", asResourceQueue);
+        }
+        public static void saveToTmp()
+        {
+            asItemQueue = ItemQueue.ToArray();
+            asResourceQueue = ResourceQueue.ToArray();
+        }
 
 
     }

@@ -133,6 +133,8 @@ namespace TeviRandomizer
                 }
                 if(eS3File.KeyExists("Archipelago_currItem"))
                     ArchipelagoInterface.Instance.currentItemNR = eS3File.Load<int>("Archipelago_currItem");
+
+                ItemDistributionSystem.loadFromSlot(eS3File);
                 if ( ArchipelagoInterface.Instance != null && ArchipelagoInterface.Instance.isConnected && eS3File.KeyExists("Archipelago_currItem"))
                 {
                     ArchipelagoInterface.Instance.storeData();
@@ -212,6 +214,7 @@ namespace TeviRandomizer
                     eS3File.Save("Archipelago_currItem", autoSaveAPIndex);
                 }
                 eS3File.Save("LocationList", autoSaveLocations);
+                ItemDistributionSystem.saveToTmpSlot(eS3File);
 
             }
             else
@@ -221,6 +224,7 @@ namespace TeviRandomizer
                     eS3File.Save("Archipelago_currItem", ArchipelagoInterface.Instance.currentItemNR);
                 }
                 eS3File.Save("LocationList", LocationTracker.getCollectedLocationList());
+                ItemDistributionSystem.saveToSlot(eS3File);
             }
 
 
@@ -250,6 +254,7 @@ namespace TeviRandomizer
             {
                 autoSaveAPIndex = ArchipelagoInterface.Instance.currentItemNR;
                 autoSaveLocations = LocationTracker.getCollectedLocationList();
+                ItemDistributionSystem.saveToTmp();
 
             }
             return true;
