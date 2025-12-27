@@ -402,6 +402,12 @@ namespace TeviRandomizer
             {
                 FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.ITEM);
             }
+            else if(itemid == ItemList.Type.I14)
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.COIN);
+            else if(itemid == ItemList.Type.I15)
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.UPGRADE);
+            else if(itemid == ItemList.Type.I16)
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.UPGRADE);
             else
             {
                 Debug.LogWarning("[EventDetect] Invalid Item obtained!");
@@ -412,7 +418,7 @@ namespace TeviRandomizer
             return false;
         }
 
-        static readonly ItemList.Type[] newPins = { ArchipelagoInterface.remoteItemProgressive, ArchipelagoInterface.remoteItem, ItemList.Type.I19, RandomizerPlugin.PortalItem, ItemList.Type.I20, ItemList.Type.STACKABLE_COG };
+        static readonly ItemList.Type[] newPins = { ArchipelagoInterface.remoteItemProgressive, ArchipelagoInterface.remoteItem, ItemList.Type.I19, RandomizerPlugin.PortalItem, ItemList.Type.I20, ItemList.Type.STACKABLE_COG, ItemList.Type.I14, ItemList.Type.I15, ItemList.Type.I16 };
 
         //autoPin Icons
         [HarmonyPatch(typeof(GemaItemExplorer), "StartMe")]
@@ -530,7 +536,11 @@ namespace TeviRandomizer
 
         [HarmonyPatch(typeof(enemyController), "AreaDefeatUpgradeRequirement")]
         [HarmonyPrefix]
-        static void checkKilledEnemy() => collectType = collectResourceType.ENEMY;
+        static void checkKillEnemy() => collectType = collectResourceType.ENEMY;
+
+        [HarmonyPatch(typeof(enemyController), "DropItem")]
+        [HarmonyPrefix]
+        static void checkKillUniqueEnemy() => collectType = collectResourceType.ENEMY;
 
         [HarmonyPatch(typeof(enemyController), "DefeatEnemy")]
         [HarmonyPostfix]
@@ -562,6 +572,7 @@ namespace TeviRandomizer
                     if (r != ItemList.Resource.UPGRADE && r != ItemList.Resource.CORE)
                     {
                         customCollector(position, element, r);
+                        Debug.Log($"[Loot] The Enemy droped {r}");
                         return false;
                     }
                     if (r == ItemList.Resource.CORE)
@@ -569,7 +580,7 @@ namespace TeviRandomizer
                         area = 1;
                         blockPos = uniqueEnemies - number;
                     }
-                    Debug.LogWarning($"Upgrade collected from killing mobs at Area:{WorldManager.Instance.Area}");
+                    Debug.LogWarning($"[Loot] Collecting {r} from killed mob at Area:{WorldManager.Instance.Area}");
                     break;
                 case collectResourceType.EVENT:
                     var eventmode = EventManager.Instance.GetCurrentEvent();
@@ -586,13 +597,13 @@ namespace TeviRandomizer
                         if (submode == Mode.StartMission3B)
                             blockPos = EliteMissionOffset - 1 * 2;
                         if (submode == Mode.StartMission3C)
-                            blockPos = EliteMissionOffset - 2 * 2;
-                        if (submode == Mode.StartMission8A)
-                            blockPos = EliteMissionOffset - 3 * 2;
-                        if (submode == Mode.StartMission15A)
-                            blockPos = EliteMissionOffset - 4 * 2;
-                        if (submode == Mode.StartMission20A)
                             blockPos = EliteMissionOffset - 5 * 2;
+                        if (submode == Mode.StartMission8A)
+                            blockPos = EliteMissionOffset - 2 * 2;
+                        if (submode == Mode.StartMission15A)
+                            blockPos = EliteMissionOffset - 3 * 2;
+                        if (submode == Mode.StartMission20A)
+                            blockPos = EliteMissionOffset - 4 * 2;
                         if (r == ItemList.Resource.CORE)
                             blockPos--;
                     }
@@ -730,7 +741,13 @@ namespace TeviRandomizer
                     desc = "<color=\"red\">" + $"                                                                          <size=200%> FOOL!</color><size=100%>\n\n\n<font-weight=100>{name} was stolen by {playerName}";
                 }
             }
-            ItemDistributionSystem.ItemQueue.Enqueue(new TeviItemInfo(item, 1, true, name, desc));
+            string locname = LocationTracker.getResourceLocationName(area,blockPos);
+
+            byte value = 1;
+            if(item == RandomizerPlugin.PortalItem && RandomizerPlugin.__itemData.TryGetValue(locname, out string itemName))
+                value = byte.Parse(itemName.Split(["Teleporter "], StringSplitOptions.RemoveEmptyEntries)[0]);
+
+            ItemDistributionSystem.ItemQueue.Enqueue(new TeviItemInfo(item, value, true, name, desc));
         }
 
         const int ShopBonusOffset = -100;
@@ -754,7 +771,7 @@ namespace TeviRandomizer
             }
             if (em.EventStage == 20)
             {
-                if (!(em.EventTime >= 0.25f))
+                if (!(em.EventTime >= 0.23f))
                 {
                     return;
                 }
@@ -798,6 +815,10 @@ namespace TeviRandomizer
         static bool craftingResource = false;
         static bool missionResource = false;
         static Mode missionMode = Mode.OFF;
+
+
+
+
         [HarmonyPatch(typeof(SaveManager), "AddResource")]
         [HarmonyPrefix]
         static bool redirectToCollect(ref ItemList.Resource resource, ref int value)
@@ -819,6 +840,7 @@ namespace TeviRandomizer
             }
             if (craftingResource && (resource == ItemList.Resource.CORE || resource == ItemList.Resource.UPGRADE))
             {
+                Debug.Log($"[Resource Conversion] Converting {resource} into a Randomized Item");
                 if (resource == ItemList.Resource.CORE)
                     number = SaveManager.Instance.GetCoreExchange();
                 if (resource == ItemList.Resource.UPGRADE)
@@ -853,10 +875,9 @@ namespace TeviRandomizer
 
         [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid), "Update")]
         [HarmonyPrefix]
-        static void crafton() => craftingResource = true;
-        [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid), "OnDisable")]
-        [HarmonyPostfix]
-        static void craftoff() => craftingResource = false;
+        static void crafton(ref ItemList.Type ___currentItemType) => 
+            craftingResource = (___currentItemType == ItemList.Type.Function_MaterialExchangeA || ___currentItemType == ItemList.Type.Function_MaterialExchangeB);
+        
 
 
 

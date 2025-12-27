@@ -98,7 +98,7 @@ namespace TeviRandomizer
         {
             if (HUDSaveMenu.Instance?.isDisplaying() == true)
                 return true;
-            if (PauseFrame.Instance?.isActiveAndEnabled == true)
+            if (PauseFrame.Instance != null && PauseFrame.Instance.isActiveAndEnabled == true)
                 return true;
             if (GemaUIChangeDifficulty.Instance?.isDisplaying() == true)
                 return true;
