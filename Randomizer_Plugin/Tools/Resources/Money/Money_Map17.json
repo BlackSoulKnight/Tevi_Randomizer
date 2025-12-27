@@ -401,7 +401,7 @@
     {
         "Itemname": "I14",
         "Location": "Swamp",
-        "LocationName": "Swamp - Money Room X: 15 Y: 6 #1",
+        "LocationName": "Swamp - Money Room X: 16 Y: 6 #1",
         "blockId": 383087,
         "area": 17,
         "slotId": 1,
@@ -414,7 +414,7 @@
         "LocationRegion": [
             {
                 "Area": 17,
-                "X": 15,
+                "X": 16,
                 "Y": 6
             }
         ]
@@ -422,7 +422,7 @@
     {
         "Itemname": "I14",
         "Location": "Swamp",
-        "LocationName": "Swamp - Money Room X: 15 Y: 6 #2",
+        "LocationName": "Swamp - Money Room X: 16 Y: 6 #2",
         "blockId": 384087,
         "area": 17,
         "slotId": 1,
@@ -435,7 +435,7 @@
         "LocationRegion": [
             {
                 "Area": 17,
-                "X": 15,
+                "X": 16,
                 "Y": 6
             }
         ]
@@ -443,7 +443,7 @@
     {
         "Itemname": "I14",
         "Location": "Swamp",
-        "LocationName": "Swamp - Money Room X: 15 Y: 6 #3",
+        "LocationName": "Swamp - Money Room X: 16 Y: 6 #3",
         "blockId": 385087,
         "area": 17,
         "slotId": 1,
@@ -456,7 +456,7 @@
         "LocationRegion": [
             {
                 "Area": 17,
-                "X": 15,
+                "X": 16,
                 "Y": 6
             }
         ]
@@ -464,7 +464,7 @@
     {
         "Itemname": "I14",
         "Location": "Swamp",
-        "LocationName": "Swamp - Money Room X: 15 Y: 6 #4",
+        "LocationName": "Swamp - Money Room X: 16 Y: 6 #4",
         "blockId": 383086,
         "area": 17,
         "slotId": 1,
@@ -477,7 +477,7 @@
         "LocationRegion": [
             {
                 "Area": 17,
-                "X": 15,
+                "X": 16,
                 "Y": 6
             }
         ]
@@ -485,7 +485,7 @@
     {
         "Itemname": "I14",
         "Location": "Swamp",
-        "LocationName": "Swamp - Money Room X: 15 Y: 6 #5",
+        "LocationName": "Swamp - Money Room X: 16 Y: 6 #5",
         "blockId": 384086,
         "area": 17,
         "slotId": 1,
@@ -498,7 +498,7 @@
         "LocationRegion": [
             {
                 "Area": 17,
-                "X": 15,
+                "X": 16,
                 "Y": 6
             }
         ]
@@ -506,7 +506,7 @@
     {
         "Itemname": "I14",
         "Location": "Swamp",
-        "LocationName": "Swamp - Money Room X: 15 Y: 6 #6",
+        "LocationName": "Swamp - Money Room X: 16 Y: 6 #6",
         "blockId": 385086,
         "area": 17,
         "slotId": 1,
@@ -519,7 +519,7 @@
         "LocationRegion": [
             {
                 "Area": 17,
-                "X": 15,
+                "X": 16,
                 "Y": 6
             }
         ]

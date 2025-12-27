@@ -191,7 +191,7 @@
     {
         "Itemname": "I14",
         "Location": "Heavens Valley Snow Route Middle",
-        "LocationName": "Heavens Valley East - Money Room X: 13 Y: 7 #1",
+        "LocationName": "Heavens Valley East - Money Room X: 13 Y: 6 #1",
         "blockId": 325094,
         "area": 19,
         "slotId": 1,
@@ -205,14 +205,14 @@
             {
                 "Area": 19,
                 "X": 13,
-                "Y": 7
+                "Y": 6
             }
         ]
     },
     {
         "Itemname": "I14",
         "Location": "Heavens Valley Snow Route Middle",
-        "LocationName": "Heavens Valley East - Money Room X: 13 Y: 7 #2",
+        "LocationName": "Heavens Valley East - Money Room X: 13 Y: 6 #2",
         "blockId": 326094,
         "area": 19,
         "slotId": 1,
@@ -226,14 +226,14 @@
             {
                 "Area": 19,
                 "X": 13,
-                "Y": 7
+                "Y": 6
             }
         ]
     },
     {
         "Itemname": "I14",
         "Location": "Heavens Valley Snow Route Middle",
-        "LocationName": "Heavens Valley East - Money Room X: 13 Y: 7 #3",
+        "LocationName": "Heavens Valley East - Money Room X: 13 Y: 6 #3",
         "blockId": 327094,
         "area": 19,
         "slotId": 1,
@@ -247,14 +247,14 @@
             {
                 "Area": 19,
                 "X": 13,
-                "Y": 7
+                "Y": 6
             }
         ]
     },
     {
         "Itemname": "I14",
         "Location": "Heavens Valley Snow Route Middle",
-        "LocationName": "Heavens Valley East - Money Room X: 13 Y: 7 #4",
+        "LocationName": "Heavens Valley East - Money Room X: 13 Y: 6 #4",
         "blockId": 326093,
         "area": 19,
         "slotId": 1,
@@ -268,7 +268,7 @@
             {
                 "Area": 19,
                 "X": 13,
-                "Y": 7
+                "Y": 6
             }
         ]
     },

@@ -169,7 +169,7 @@
     },
     {
         "Itemname": "I14",
-        "Location": "Travoll Mines to Morose City",
+        "Location": "Travoll Mines to Thanatara Canyon",
         "LocationName": "Travoll Mines - Money Room X: 6 Y: 9 #2",
         "blockId": 146133,
         "area": 5,
@@ -254,7 +254,7 @@
     {
         "Itemname": "I14",
         "Location": "Travoll Mines",
-        "LocationName": "Travoll Mines - Money Room X: 8 Y: 11 #1",
+        "LocationName": "Travoll Mines - Money Room X: 9 Y: 11 #1",
         "blockId": 215158,
         "area": 5,
         "slotId": 1,
@@ -267,7 +267,7 @@
         "LocationRegion": [
             {
                 "Area": 5,
-                "X": 8,
+                "X": 9,
                 "Y": 11
             }
         ]
@@ -484,7 +484,7 @@
     },
     {
         "Itemname": "I14",
-        "Location": "Travoll Mines",
+        "Location": "Travoll Mines to Forest",
         "LocationName": "Travoll Mines - Money Room X: 18 Y: 8 #1",
         "blockId": 450118,
         "area": 5,
@@ -505,7 +505,7 @@
     },
     {
         "Itemname": "I14",
-        "Location": "Travoll Mines",
+        "Location": "Travoll Mines to Forest",
         "LocationName": "Travoll Mines - Money Room X: 18 Y: 8 #2",
         "blockId": 450119,
         "area": 5,
@@ -526,7 +526,7 @@
     },
     {
         "Itemname": "I14",
-        "Location": "Travoll Mines",
+        "Location": "Travoll Mines to Forest",
         "LocationName": "Travoll Mines - Money Room X: 18 Y: 8 #3",
         "blockId": 451119,
         "area": 5,

@@ -2,7 +2,7 @@
     {
         "Itemname": "I14",
         "Location": "Forest",
-        "LocationName": "Forest - Money Room X: 9 Y: 13 #1",
+        "LocationName": "Forest - Money Room X: 8 Y: 13 #1",
         "blockId": 196191,
         "area": 4,
         "slotId": 1,
@@ -15,7 +15,7 @@
         "LocationRegion": [
             {
                 "Area": 4,
-                "X": 9,
+                "X": 8,
                 "Y": 13
             }
         ]
@@ -23,7 +23,7 @@
     {
         "Itemname": "I14",
         "Location": "Forest",
-        "LocationName": "Forest - Money Room X: 9 Y: 13 #2",
+        "LocationName": "Forest - Money Room X: 8 Y: 13 #2",
         "blockId": 196192,
         "area": 4,
         "slotId": 1,
@@ -36,7 +36,7 @@
         "LocationRegion": [
             {
                 "Area": 4,
-                "X": 9,
+                "X": 8,
                 "Y": 13
             }
         ]
@@ -212,7 +212,7 @@
     {
         "Itemname": "I14",
         "Location": "Forest Maze",
-        "LocationName": "Forest Maze - Money Room X: 11 Y: 28 #1",
+        "LocationName": "Forest Maze - Money Room X: 11 Y: 17 #1",
         "blockId": 283240,
         "area": 4,
         "slotId": 1,
@@ -226,14 +226,14 @@
             {
                 "Area": 4,
                 "X": 11,
-                "Y": 28
+                "Y": 17
             }
         ]
     },
     {
         "Itemname": "I14",
         "Location": "Forest Maze",
-        "LocationName": "Forest Maze - Money Room X: 11 Y: 28 #2",
+        "LocationName": "Forest Maze - Money Room X: 11 Y: 17 #2",
         "blockId": 283241,
         "area": 4,
         "slotId": 1,
@@ -247,7 +247,7 @@
             {
                 "Area": 4,
                 "X": 11,
-                "Y": 28
+                "Y": 17
             }
         ]
     },

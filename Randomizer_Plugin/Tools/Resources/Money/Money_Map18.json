@@ -674,7 +674,7 @@
     {
         "Itemname": "I14",
         "Location": "Dreamless Depths",
-        "LocationName": "DreamKeeper - Money Room X: 19 Y: 21 #1",
+        "LocationName": "DreamKeeper - Money Room X: 19 Y: 20 #1",
         "blockId": 469289,
         "area": 18,
         "slotId": 1,
@@ -688,14 +688,14 @@
             {
                 "Area": 18,
                 "X": 19,
-                "Y": 21
+                "Y": 20
             }
         ]
     },
     {
         "Itemname": "I14",
         "Location": "Dreamless Depths",
-        "LocationName": "DreamKeeper - Money Room X: 19 Y: 21 #2",
+        "LocationName": "DreamKeeper - Money Room X: 19 Y: 20 #2",
         "blockId": 469290,
         "area": 18,
         "slotId": 1,
@@ -709,14 +709,14 @@
             {
                 "Area": 18,
                 "X": 19,
-                "Y": 21
+                "Y": 20
             }
         ]
     },
     {
         "Itemname": "I14",
         "Location": "Dreamless Depths",
-        "LocationName": "DreamKeeper - Money Room X: 19 Y: 21 #3",
+        "LocationName": "DreamKeeper - Money Room X: 19 Y: 20 #3",
         "blockId": 469291,
         "area": 18,
         "slotId": 1,
@@ -730,14 +730,14 @@
             {
                 "Area": 18,
                 "X": 19,
-                "Y": 21
+                "Y": 20
             }
         ]
     },
     {
         "Itemname": "I14",
         "Location": "Dreamless Depths",
-        "LocationName": "DreamKeeper - Money Room X: 19 Y: 21 #4",
+        "LocationName": "DreamKeeper - Money Room X: 19 Y: 20 #4",
         "blockId": 470290,
         "area": 18,
         "slotId": 1,
@@ -751,7 +751,7 @@
             {
                 "Area": 18,
                 "X": 19,
-                "Y": 21
+                "Y": 20
             }
         ]
     }

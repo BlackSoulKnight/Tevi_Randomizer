@@ -2,7 +2,7 @@
     {
         "Itemname": "I14",
         "Location": "Travoll Industrie",
-        "LocationName": "Travoll Industrie - Money Room X: 15 Y: 14 #1",
+        "LocationName": "Travoll Industrie - Money Room X: 14 Y: 14 #1",
         "blockId": 356206,
         "area": 6,
         "slotId": 1,
@@ -15,7 +15,7 @@
         "LocationRegion": [
             {
                 "Area": 6,
-                "X": 15,
+                "X": 14,
                 "Y": 14
             }
         ]
@@ -23,7 +23,7 @@
     {
         "Itemname": "I14",
         "Location": "Travoll Industrie",
-        "LocationName": "Travoll Industrie - Money Room X: 15 Y: 14 #2",
+        "LocationName": "Travoll Industrie - Money Room X: 14 Y: 14 #2",
         "blockId": 355206,
         "area": 6,
         "slotId": 1,
@@ -36,7 +36,7 @@
         "LocationRegion": [
             {
                 "Area": 6,
-                "X": 15,
+                "X": 14,
                 "Y": 14
             }
         ]

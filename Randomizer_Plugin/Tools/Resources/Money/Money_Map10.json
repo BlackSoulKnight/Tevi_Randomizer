@@ -443,7 +443,7 @@
     {
         "Itemname": "I14",
         "Location": "Teleporter Plague Forest",
-        "LocationName": "Plague Forest - Money Room X: 13 Y: 8 #1",
+        "LocationName": "Plague Forest - Money Room X: 13 Y: 7 #1",
         "blockId": 324104,
         "area": 10,
         "slotId": 1,
@@ -457,14 +457,14 @@
             {
                 "Area": 10,
                 "X": 13,
-                "Y": 8
+                "Y": 7
             }
         ]
     },
     {
         "Itemname": "I14",
         "Location": "Teleporter Plague Forest",
-        "LocationName": "Plague Forest - Money Room X: 13 Y: 8 #2",
+        "LocationName": "Plague Forest - Money Room X: 13 Y: 7 #2",
         "blockId": 324105,
         "area": 10,
         "slotId": 1,
@@ -478,14 +478,14 @@
             {
                 "Area": 10,
                 "X": 13,
-                "Y": 8
+                "Y": 7
             }
         ]
     },
     {
         "Itemname": "I14",
         "Location": "Teleporter Plague Forest",
-        "LocationName": "Plague Forest - Money Room X: 13 Y: 8 #3",
+        "LocationName": "Plague Forest - Money Room X: 13 Y: 7 #3",
         "blockId": 324106,
         "area": 10,
         "slotId": 1,
@@ -499,14 +499,14 @@
             {
                 "Area": 10,
                 "X": 13,
-                "Y": 8
+                "Y": 7
             }
         ]
     },
     {
         "Itemname": "I14",
         "Location": "Teleporter Plague Forest",
-        "LocationName": "Plague Forest - Money Room X: 13 Y: 8 #4",
+        "LocationName": "Plague Forest - Money Room X: 13 Y: 7 #4",
         "blockId": 324107,
         "area": 10,
         "slotId": 1,
@@ -520,14 +520,14 @@
             {
                 "Area": 10,
                 "X": 13,
-                "Y": 8
+                "Y": 7
             }
         ]
     },
     {
         "Itemname": "I14",
         "Location": "Teleporter Plague Forest",
-        "LocationName": "Plague Forest - Money Room X: 13 Y: 8 #5",
+        "LocationName": "Plague Forest - Money Room X: 13 Y: 7 #5",
         "blockId": 324108,
         "area": 10,
         "slotId": 1,
@@ -541,7 +541,7 @@
             {
                 "Area": 10,
                 "X": 13,
-                "Y": 8
+                "Y": 7
             }
         ]
     },
