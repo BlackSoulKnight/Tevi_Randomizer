@@ -8481,7 +8481,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money Room X: 25 Y: 12 #1",
+        "LocationName": "Lab - Money Room X: 25 Y: 10 #1",
         "blockId": 544149,
         "area": 25,
         "slotId": 1,
@@ -8502,7 +8502,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money Room X: 25 Y: 12 #2",
+        "LocationName": "Lab - Money Room X: 25 Y: 10 #2",
         "blockId": 544150,
         "area": 25,
         "slotId": 1,
@@ -8523,7 +8523,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money Room X: 25 Y: 12 #3",
+        "LocationName": "Lab - Money Room X: 25 Y: 10 #3",
         "blockId": 543150,
         "area": 25,
         "slotId": 1,
@@ -8544,7 +8544,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money Room X: 25 Y: 12 #4",
+        "LocationName": "Lab - Money Room X: 25 Y: 10 #4",
         "blockId": 543149,
         "area": 25,
         "slotId": 1,
@@ -8565,7 +8565,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money Room X: 25 Y: 12 #5",
+        "LocationName": "Lab - Money Room X: 25 Y: 10 #5",
         "blockId": 544148,
         "area": 25,
         "slotId": 1,
@@ -8586,7 +8586,7 @@
     {
         "Itemname": "I14",
         "Location": "Lab",
-        "LocationName": "Lab - Money Room X: 25 Y: 12 #6",
+        "LocationName": "Lab - Money Room X: 25 Y: 10 #6",
         "blockId": 543148,
         "area": 25,
         "slotId": 1,
