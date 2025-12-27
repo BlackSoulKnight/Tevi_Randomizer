@@ -170,7 +170,7 @@
     {
         "Itemname": "I14",
         "Location": "Catacombs Inner",
-        "LocationName": "Catacombs - Money Room X: 4 Y: 10 #3",
+        "LocationName": "Catacombs - Money Room X: 4 Y: 12 #1",
         "blockId": 114176,
         "area": 25,
         "slotId": 1,
@@ -184,14 +184,14 @@
             {
                 "Area": 25,
                 "X": 4,
-                "Y": 10
+                "Y": 12
             }
         ]
     },
     {
         "Itemname": "I14",
         "Location": "Catacombs Inner",
-        "LocationName": "Catacombs - Money Room X: 4 Y: 10 #4",
+        "LocationName": "Catacombs - Money Room X: 4 Y: 12 #2",
         "blockId": 114177,
         "area": 25,
         "slotId": 1,
@@ -205,14 +205,14 @@
             {
                 "Area": 25,
                 "X": 4,
-                "Y": 10
+                "Y": 12
             }
         ]
     },
     {
         "Itemname": "I14",
         "Location": "Catacombs Inner",
-        "LocationName": "Catacombs - Money Room X: 4 Y: 10 #5",
+        "LocationName": "Catacombs - Money Room X: 4 Y: 12 #3",
         "blockId": 114178,
         "area": 25,
         "slotId": 1,
@@ -226,7 +226,7 @@
             {
                 "Area": 25,
                 "X": 4,
-                "Y": 10
+                "Y": 12
             }
         ]
     },
@@ -436,7 +436,7 @@
             {
                 "Area": 25,
                 "X": 14,
-                "Y": 18
+                "Y": 8
             }
         ]
     },
@@ -457,7 +457,7 @@
             {
                 "Area": 25,
                 "X": 14,
-                "Y": 18
+                "Y": 8
             }
         ]
     },
@@ -478,7 +478,7 @@
             {
                 "Area": 25,
                 "X": 14,
-                "Y": 18
+                "Y": 8
             }
         ]
     },
@@ -491,7 +491,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_JETPACK || ITEM_DOUBLEJUMP)",
+                "Method": "(ITEM_AREABOMB) && (ITEM_JETPACK || ITEM_DOUBLEJUMP)",
                 "Difficulty": 0
             }
         ],
@@ -512,7 +512,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_JETPACK || ITEM_DOUBLEJUMP)",
+                "Method": "(ITEM_AREABOMB) && (ITEM_JETPACK || ITEM_DOUBLEJUMP)",
                 "Difficulty": 0
             }
         ],
@@ -533,7 +533,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_JETPACK || ITEM_DOUBLEJUMP)",
+                "Method": "(ITEM_AREABOMB) && (ITEM_JETPACK || ITEM_DOUBLEJUMP)",
                 "Difficulty": 0
             }
         ],
@@ -554,7 +554,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_JETPACK || ITEM_DOUBLEJUMP)",
+                "Method": "(ITEM_AREABOMB) && (ITEM_JETPACK || ITEM_DOUBLEJUMP)",
                 "Difficulty": 0
             }
         ],
@@ -962,6 +962,132 @@
                 "Area": 25,
                 "X": 25,
                 "Y": 12
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Lab",
+        "LocationName": "Lab - Money Room X: 25 Y: 12 #1",
+        "blockId": 544149,
+        "area": 25,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 25,
+                "X": 22,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Lab",
+        "LocationName": "Lab - Money Room X: 25 Y: 12 #2",
+        "blockId": 544150,
+        "area": 25,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 25,
+                "X": 22,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Lab",
+        "LocationName": "Lab - Money Room X: 25 Y: 12 #3",
+        "blockId": 543150,
+        "area": 25,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 25,
+                "X": 22,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Lab",
+        "LocationName": "Lab - Money Room X: 25 Y: 12 #4",
+        "blockId": 543149,
+        "area": 25,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 25,
+                "X": 22,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Lab",
+        "LocationName": "Lab - Money Room X: 25 Y: 12 #5",
+        "blockId": 544148,
+        "area": 25,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 25,
+                "X": 22,
+                "Y": 10
+            }
+        ]
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Lab",
+        "LocationName": "Lab - Money Room X: 25 Y: 12 #6",
+        "blockId": 543148,
+        "area": 25,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 25,
+                "X": 22,
+                "Y": 10
             }
         ]
     }
