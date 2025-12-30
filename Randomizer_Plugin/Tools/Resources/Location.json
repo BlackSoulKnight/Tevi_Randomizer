@@ -13216,7 +13216,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "Coins 250 && ITEM_ORB 3 && Core 4",
+                "Method": "Coins 250 && ITEM_ORB 3 && Upgrade 4",
                 "Difficulty": 0
             }
         ],
