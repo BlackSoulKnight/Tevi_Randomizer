@@ -714,9 +714,9 @@ namespace TeviRandomizer
                 case ItemList.Type.I14:
                     return ItemList.Resource.COIN;
                 case ItemList.Type.I15:
-                    return ItemList.Resource.UPGRADE;
-                case ItemList.Type.I16:
                     return ItemList.Resource.CORE;
+                case ItemList.Type.I16:
+                    return ItemList.Resource.UPGRADE;
                 default:
                     return ItemList.Resource.RESOURCE_MAX;
             }
