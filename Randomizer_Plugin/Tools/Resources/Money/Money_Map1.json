@@ -134,7 +134,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Method": "(ITEM_LINEBOMB  || ITEM_KNIFE)",
                 "Difficulty": 0
             }
         ],
@@ -155,7 +155,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
                 "Difficulty": 0
             }
         ],
@@ -176,7 +176,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
                 "Difficulty": 0
             }
         ],
@@ -197,7 +197,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
                 "Difficulty": 0
             }
         ],
