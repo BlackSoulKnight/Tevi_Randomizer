@@ -878,6 +878,10 @@ namespace TeviRandomizer
         static void crafton(ref ItemList.Type ___currentItemType) => 
             craftingResource = (___currentItemType == ItemList.Type.Function_MaterialExchangeA || ___currentItemType == ItemList.Type.Function_MaterialExchangeB);
         
+        [HarmonyPatch(typeof(GemaUIPauseMenu_CraftGrid), "OnDisable")]
+        [HarmonyPrefix]
+        static void craftoff() => craftingResource = false;
+        
 
 
 
