@@ -5368,7 +5368,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ChargeShot",
+                "Method": "ChargeShot && (ITEM_KNIFE || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_HIJUMP || I19)",
                 "Difficulty": 0
             }
         ],
