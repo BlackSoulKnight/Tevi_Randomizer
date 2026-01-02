@@ -1,10 +1,11 @@
-﻿using HarmonyLib;
-using System;
+﻿using Character;
 using EventMode;
-using Character;
-using UnityEngine;
-using System.Linq;
+using HarmonyLib;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using TeviRandomizer.TeviRandomizerSettings;
+using UnityEngine;
 
 namespace TeviRandomizer
 {
@@ -32,7 +33,7 @@ namespace TeviRandomizer
         static public void testBossReplace(ref Mode setMode)
         {
             originalBoss = setMode;
-            if (eventReplace != null && eventReplace.Length > (short)setMode && eventReplace[(short)setMode] != -1 && RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss]) {
+            if (eventReplace != null && eventReplace.Length > (short)setMode && eventReplace[(short)setMode] != -1 && TeviSettings.customFlags[CustomFlags.RandomizedBoss]) {
                 if(SaveManager.Instance.GetEventFlag(originalBoss) > 0)
                 {
                     setMode = Mode.OFF;
@@ -50,7 +51,7 @@ namespace TeviRandomizer
             EventManager em = EventManager.Instance;
             if (__state.ToString().Contains("BOSS_"))
             {
-                if (eventReplace != null && eventReplace.Length > (short)originalBoss && eventReplace[(short)originalBoss] != -1 && RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss])
+                if (eventReplace != null && eventReplace.Length > (short)originalBoss && eventReplace[(short)originalBoss] != -1 && TeviSettings.customFlags[CustomFlags.RandomizedBoss])
                 {
 
                     SaveManager.Instance.SetEventFlag(__state, 0);
@@ -72,7 +73,7 @@ namespace TeviRandomizer
         [HarmonyPatch(typeof(SaveManager), "SetEventFlag")]
         static void EndBossReplace(ref Mode mode, ref byte value)
         {
-            if(RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss] &&mode.ToString().Contains("END") && mode != Mode.END_BOOKMARK && value != 0 && (short)originalBoss != eventReplace[(short)originalBoss])
+            if(TeviSettings.customFlags[CustomFlags.RandomizedBoss] &&mode.ToString().Contains("END") && mode != Mode.END_BOOKMARK && value != 0 && (short)originalBoss != eventReplace[(short)originalBoss])
             {
                 CameraScript.Instance.NoLimitLR();
                 CameraScript.Instance.NoLimitY();
@@ -91,7 +92,7 @@ namespace TeviRandomizer
         {
             EventManager em = EventManager.Instance;
             byte nr = 0;
-            if (em.Mode.ToString().Contains("BOSS") && em.EventStage == 0 && RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss])
+            if (em.Mode.ToString().Contains("BOSS") && em.EventStage == 0 && TeviSettings.customFlags[CustomFlags.RandomizedBoss])
             {
                 if ((short)originalBoss != eventReplace[(short)originalBoss])
                 {
@@ -109,7 +110,7 @@ namespace TeviRandomizer
         static bool dropCore(ref bool __result,ref enemyController ec)
         {
             Character.Type reversed = ec.type;
-            if (enemyReplace != null && RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedEnemy])
+            if (enemyReplace != null && TeviSettings.customFlags[CustomFlags.RandomizedEnemy])
             {
                 int i = 0;
                 for (i = 0; i < enemyReplace.Length; i++)
@@ -194,11 +195,11 @@ namespace TeviRandomizer
                 if (enemyReplace != null && enemyReplace.Length > (short)type)
                 {
 
-                    if (enemyReplace[(short)type] != -1 && RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedEnemy])
+                    if (enemyReplace[(short)type] != -1 && TeviSettings.customFlags[CustomFlags.RandomizedEnemy])
                         type = (Character.Type)enemyReplace[(short)type];
 
                 }
-                if (RandomizerPlugin.customFlags[(int)CustomFlags.AlwaysRandomizeEnemy] && Extras.RandomizeExtra.enemies != null)
+                if (TeviSettings.customFlags[CustomFlags.AlwaysRandomizeEnemy] && Extras.RandomizeExtra.enemies != null)
                 {
                     if (Extras.RandomizeExtra.enemies.Contains((short)type))
 

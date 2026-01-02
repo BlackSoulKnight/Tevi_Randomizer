@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using TeviRandomizer.TeviRandomizerSettings;
 
 namespace TeviRandomizer
 {
@@ -75,15 +76,15 @@ namespace TeviRandomizer
                 }
                 if (eS3File.KeyExists("GoMode"))
                 {
-                    RandomizerPlugin.GoMode = eS3File.Load<int>("GoMode");
+                    TeviSettings.GoMode = eS3File.Load<int>("GoMode");
                 }
                 if (eS3File.KeyExists("GoalType"))
                 {
-                    RandomizerPlugin.goalType = (RandomizerPlugin.GoalType)eS3File.Load<int>("GoalType");
+                    TeviSettings.goalType = (GoalType)eS3File.Load<int>("GoalType");
                 }
                 if (eS3File.KeyExists("SuperBosses"))
                 {
-                    RandomizerPlugin.customFlags[(int)CustomFlags.SuperBosses] = eS3File.Load<bool>("SuperBosses");
+                    TeviSettings.customFlags[CustomFlags.SuperBosses] = eS3File.Load<bool>("SuperBosses");
                 }
                 if (eS3File.KeyExists("HintList"))
                 {
@@ -201,11 +202,11 @@ namespace TeviRandomizer
             eS3File.Save("EnemyReplace", EnemyPatch.enemyReplace);
             eS3File.Save("randomizedMusic", Extras.RandomizeExtra.randomizedMusic);
             eS3File.Save("randomizedBG", Extras.RandomizeExtra.randomizedBG);
-            eS3File.Save("SuperBosses", RandomizerPlugin.customFlags[(int)CustomFlags.SuperBosses]);
-            eS3File.Save("GoalType", (int)RandomizerPlugin.goalType);
+            eS3File.Save("SuperBosses", TeviSettings.customFlags[CustomFlags.SuperBosses]);
+            eS3File.Save("GoalType", (int)TeviSettings.goalType);
             eS3File.Save("Seed", RandomizerPlugin.seed);
             eS3File.Save("HintList", ChatSystemPatch.hintList);
-            eS3File.Save("GoMode", RandomizerPlugin.GoMode);
+            eS3File.Save("GoMode", TeviSettings.GoMode);
             eS3File.Save("UniqueEnemies",RandomizerPlugin.UniqueEnemiesKilled);
             if (MainVar.instance._isAutoSave)
             {

@@ -3,11 +3,8 @@ using Game;
 using HarmonyLib;
 using Map;
 using System;
-using System.Security.Cryptography;
 using TMPro;
 using UnityEngine;
-using static UnityEngine.UI.Image;
-using static UnityEngine.UIElements.UIR.Allocator2D;
 
 namespace TeviRandomizer
 {

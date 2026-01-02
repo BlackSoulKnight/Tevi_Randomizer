@@ -11,6 +11,7 @@ using UnityEngine.ResourceManagement.ResourceLocations;
 using Bullet;
 using Map;
 using System.Linq;
+using TeviRandomizer.TeviRandomizerSettings;
 using static TeviRandomizer.Extras;
 
 
@@ -682,7 +683,7 @@ namespace TeviRandomizer
         {
             if (WorldManager.Instance.CurrentRoomArea == AreaType.FINALPALACE2 && RoomBG.HEAVENGARDEN3 == bgtype)
                 return false;
-            if (RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBG])
+            if (TeviSettings.customFlags[CustomFlags.RandomizedBG])
             {
                 Debug.Log($"Original BG:{(int)bgtype}");
                 if(RandomizeExtra.randomizedBG[(byte)bgtype] != 0)

@@ -1,10 +1,10 @@
 
 using Newtonsoft.Json.Linq;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
+using TeviRandomizer.TeviRandomizerSettings;
 
 namespace TeviRandomizer
 {
@@ -16,7 +16,7 @@ namespace TeviRandomizer
         static public Dictionary<string,string> APResoucreLocationame = loadUpgradeResourceLocationList();
 
         static private Dictionary<string, string> loadLocationNameList() {
-            string path = RandomizerPlugin.pluginPath + "/resource/";
+            string path = TeviSettings.pluginPath + "/resource/";
             Dictionary<string,string> dict = new Dictionary<string,string>();
             JArray locations = JArray.Parse(File.ReadAllText(path+ "Location.json"));
             foreach(var loc in locations)
@@ -29,7 +29,7 @@ namespace TeviRandomizer
         static private Dictionary<string, string> loadUpgradeResourceLocationList()
         {
             Dictionary<string,string> keyValuePairs = new Dictionary<string,string>();
-            string path = RandomizerPlugin.pluginPath + "/resource/";
+            string path = TeviSettings.pluginPath + "/resource/";
             JArray locations = JArray.Parse(File.ReadAllText(path + "UpgradeResourceLocation.json"));
             foreach (var loc in locations)
             {

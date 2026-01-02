@@ -5,7 +5,7 @@ using Map;
 using System;
 using System.Linq;
 using UnityEngine;
-
+using TeviRandomizer.TeviRandomizerSettings;
 
 namespace TeviRandomizer
 {
@@ -190,9 +190,9 @@ namespace TeviRandomizer
             }
 
 
-            if (SaveManager.Instance.GetOrb() == 2 && (SaveManager.Instance.GetItem(ItemList.Type.I19) > 0 || SaveManager.Instance.GetItem(ItemList.Type.I20) > 0 || item == ItemList.Type.I20 || item == ItemList.Type.I19) || (SaveManager.Instance.GetOrb() == 1 && RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart]))
+            if (SaveManager.Instance.GetOrb() == 2 && (SaveManager.Instance.GetItem(ItemList.Type.I19) > 0 || SaveManager.Instance.GetItem(ItemList.Type.I20) > 0 || item == ItemList.Type.I20 || item == ItemList.Type.I19) || (SaveManager.Instance.GetOrb() == 1 && TeviSettings.customFlags[CustomFlags.CebleStart]))
             {
-                if ((SaveManager.Instance.GetOrb() == 1 && RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart]))
+                if ((SaveManager.Instance.GetOrb() == 1 && TeviSettings.customFlags[CustomFlags.CebleStart]))
                     RandomizerPlugin.addOrbStatus(1);
                 RandomizerPlugin.addOrbStatus(1);
 
@@ -690,7 +690,7 @@ namespace TeviRandomizer
             {
                 collectScript prefab = Traverse.Create(CollectManager.Instance).Field("collect_prefab").GetValue<collectScript>();
 
-                foreach (var collect in collects)
+                foreach (var collect in collects.ToArray())
                 {
                     collectScript collectScript2 = UnityEngine.Object.Instantiate(prefab);
                     collectScript2.DisableMe();

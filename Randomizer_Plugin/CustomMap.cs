@@ -1,22 +1,13 @@
-﻿using Archipelago.MultiClient.Net.Packets;
-using BepInEx;
-using EditorVar;
+﻿using EditorVar;
 using EventMode;
 using HarmonyLib;
 using Map;
-using Mono.Cecil;
-using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.IO;
-using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
+using TeviRandomizer.TeviRandomizerSettings;
 using TMPro;
 using UnityEngine;
-using UnityEngine.TextCore;
-using UnityEngine.UIElements;
-using static MonoMod.RuntimeDetour.DynamicHookGen;
-using static UnityEngine.UIElements.UIR.Allocator2D;
 
 
 namespace TeviRandomizer
@@ -338,14 +329,14 @@ namespace TeviRandomizer
 
 
 
-                spriteRenderer.sprite = CommonResource.Instance.GetDefaultTile();
-                EnemyTile component5 = gameObject.GetComponent<EnemyTile>();
-                component5.type = (Character.Type)spriteID;
-                wm.areadata.enemylist.Add(component5);
+            spriteRenderer.sprite = CommonResource.Instance.GetDefaultTile();
+            EnemyTile component5 = gameObject.GetComponent<EnemyTile>();
+            component5.type = (Character.Type)spriteID;
+            wm.areadata.enemylist.Add(component5);
 
 
 
-                spriteRenderer.sortingOrder = 1000;                                                                                                         //Normal Layer
+            spriteRenderer.sortingOrder = 1000;                                                                                                        //Normal Layer
 
             spriteRenderer.enabled = false;
             gameObject.GetComponent<TextMeshPro>().enabled = false;
@@ -1832,7 +1823,7 @@ namespace TeviRandomizer
         {
             BinaryFormatter binaryFormatter = new BinaryFormatter();
             byte area = WorldManager.Instance.Area;
-            string text = $"{RandomizerPlugin.pluginPath}/CustomMaps/CustomMap{area}.dat";
+            string text = $"{TeviSettings.pluginPath}/CustomMaps/CustomMap{area}.dat";
             if (File.Exists(text))
             {
                 loadingCustomMap = true;

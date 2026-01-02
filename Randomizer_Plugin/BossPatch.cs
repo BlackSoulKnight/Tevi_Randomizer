@@ -4,6 +4,8 @@ using Bullet;
 using Character;
 using HarmonyLib;
 using Game;
+using TeviRandomizer.TeviRandomizerSettings;
+
 namespace TeviRandomizer
 {
     class BossPatch
@@ -312,7 +314,7 @@ namespace TeviRandomizer
             EventManager em = EventManager.Instance;
             byte area = WorldManager.Instance.Area;
 
-            if (RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss])
+            if (TeviSettings.customFlags[CustomFlags.RandomizedBoss])
             {
                 Debug.LogWarning(EnemyPatch.originalBoss);
                 if (

@@ -1,84 +1,618 @@
 ﻿using Newtonsoft.Json.Linq;
-using Steamworks.Data;
-using Steamworks.Ugc;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
-using System.Security.Cryptography.X509Certificates;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using SystemVar;
-using TMPro;
-using UnityEngine;
-using UnityEngine.SocialPlatforms;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
+using TeviRandomizer.TeviRandomizerSettings;
+
 
 
 namespace TeviRandomizer
 {
+    public abstract class OptionObserver
+    {
+        public object Value
+        {
+            get
+            {
+                return _getValue();
+            }
+        }
+
+        private Func<object> _getValue = () => default!;
+        public string Name;
+        public string OptionType { get; }
+        protected OptionObserver(string type)
+        {
+            OptionType = type;
+            Name = "";
+        }
+        protected void setValFunction<T>(Func<T> func)
+        {
+            _getValue = () => func();
+        }
+    }
+
+
+    public class ToggleObserver : OptionObserver
+    {
+        public ToggleObserver(string name, Func<bool> accessor) : base("Toggle")
+        {
+            Name = name;
+            setValFunction(accessor);
+        }
+        public bool isOn() => Value != null ? (bool)Value : false;
+    }
+
+    public class SliderObserver : OptionObserver
+    {
+        public SliderObserver(string name, Func<int> accessor) : base("Slider")
+        {
+            Name = name;
+            setValFunction(accessor);
+        }
+
+    }
+    public class SelectorObserver : OptionObserver
+    {
+        public SelectorObserver(string name, Func<string> accessor) : base("Selector")
+        {
+            Name = name;
+            setValFunction(accessor);
+        }
+    }
+
+
+
     public class Randomizer
     {
 
-        public enum Progression_Items : int
+
+        private void CustomOptions(System.Random seed)
         {
-            I13 = RandomizerPlugin.PortalItem,
-            I19 = ItemList.Type.I19,
-            I20 = ItemList.Type.I20,
-            ITEM_KNIFE = ItemList.Type.ITEM_KNIFE,
-            ITEM_ORB = ItemList.Type.ITEM_ORB,
-            ITEM_LINEBOMB = ItemList.Type.ITEM_LINEBOMB,
-            ITEM_AREABOMB = ItemList.Type.ITEM_AREABOMB,
-            ITEM_BOMBFUEL = ItemList.Type.ITEM_BOMBFUEL,
-            ITEM_HIJUMP = ItemList.Type.ITEM_HIJUMP,
-            ITEM_SPEEDUP = ItemList.Type.ITEM_SPEEDUP,
-            ITEM_SLIDE = ItemList.Type.ITEM_SLIDE,
-            ITEM_WALLJUMP = ItemList.Type.ITEM_WALLJUMP,
-            ITEM_DOUBLEJUMP = ItemList.Type.ITEM_DOUBLEJUMP,
-            ITEM_JETPACK = ItemList.Type.ITEM_JETPACK,
-            ITEM_WATERMOVEMENT = ItemList.Type.ITEM_WATERMOVEMENT,
-            ITEM_MASK = ItemList.Type.ITEM_MASK,
-            ITEM_OrbTypeS2 = ItemList.Type.ITEM_OrbTypeS2,
-            ITEM_OrbTypeS3 = ItemList.Type.ITEM_OrbTypeS3,
-            ITEM_OrbTypeC2 = ItemList.Type.ITEM_OrbTypeC2,
-            ITEM_OrbTypeC3 = ItemList.Type.ITEM_OrbTypeC3,
-            ITEM_AntiDecay = ItemList.Type.ITEM_AntiDecay,
-            ITEM_BombLengthExtend = ItemList.Type.ITEM_BombLengthExtend,
-            ITEM_AirDash = ItemList.Type.ITEM_AirDash,
-            ITEM_RailPass = ItemList.Type.ITEM_RailPass,
-            ITEM_AirshipPass = ItemList.Type.ITEM_AirshipPass,
-            ITEM_Explorer = ItemList.Type.ITEM_Explorer,
-            ITEM_TempRing = ItemList.Type.ITEM_TempRing,
-            ITEM_BoostSystem = ItemList.Type.ITEM_BoostSystem,
-            ITEM_AttackRange = ItemList.Type.ITEM_AttackRange,
-            ITEM_EasyStyle = ItemList.Type.ITEM_EasyStyle,
-            ITEM_DodgeShot = ItemList.Type.ITEM_DodgeShot,
-            ITEM_RapidShots = ItemList.Type.ITEM_RapidShots,
-            ITEM_OrbAmulet = ItemList.Type.ITEM_OrbAmulet,
-            ITEM_GoldenGlove = ItemList.Type.ITEM_GoldenGlove,
-            ITEM_Rotater = ItemList.Type.ITEM_Rotater,
-            ITEM_AirSlide = ItemList.Type.ITEM_AirSlide,
-            ITEM_ZCrystal = ItemList.Type.ITEM_ZCrystal,
-            QUEST_LibraryKey = ItemList.Type.QUEST_LibraryKey,
-            QUEST_RabiPillow = ItemList.Type.QUEST_RabiPillow,
-            QUEST_GHandL = ItemList.Type.QUEST_GHandL,
-            QUEST_GHandR = ItemList.Type.QUEST_GHandR,
-            BADGE_AmuletQuicken = ItemList.Type.BADGE_AmuletQuicken,
-            Useable_VenaBombHealBlock = ItemList.Type.Useable_VenaBombHealBlock,
-            Useable_VenaBombDispel = ItemList.Type.Useable_VenaBombDispel,
-            Useable_VenaBombBunBun = ItemList.Type.Useable_VenaBombBunBun,
-            Useable_VenaBombBig = ItemList.Type.Useable_VenaBombBig,
-            Useable_VenaBombSmall = ItemList.Type.Useable_VenaBombSmall,
+            ignoreLocationList.Clear();
+            foreach (var keyValuePair in settings)
+            {
+                var option = keyValuePair.Value;
+
+
+                switch (option.OptionType)
+                {
+                    case "Toggle":
+                        bool isOn = (bool)option.Value;
+                        switch (option.Name)
+                        {
+                            case "Knife":
+                                if (isOn)
+                                {
+
+                                    Location loc = locations.Find(x => x.itemId == (int)ItemList.Type.ITEM_KNIFE && x.slotId == 1);
+                                    loc.setNewItem(ItemList.Type.ITEM_KNIFE, 4);
+                                    locations.Remove(loc);
+                                    itemPool[ItemList.Type.ITEM_KNIFE.ToString()]--;
+                                }
+                                break;
+                            case "Orb":
+                                if (isOn)
+                                {
+                                    Location loc = locations.Find(x => x.itemId == (int)ItemList.Type.ITEM_ORB && x.slotId == 1);
+                                    loc.setNewItem(ItemList.Type.ITEM_ORB, 4);
+                                    locations.Remove(loc);
+                                    itemPool[ItemList.Type.ITEM_ORB.ToString()]--;
+                                }
+
+                                break;
+                            case "Lv3Compass":
+                                TeviSettings.customFlags[CustomFlags.CompassStart] = isOn;
+                                break;
+                            case "tmpOption":
+                                TeviSettings.customFlags[CustomFlags.TempOption] = isOn;
+                                break;
+                            case "NormalItemCraft":
+                                TeviSettings.customFlags[CustomFlags.NormalItemCraft] = isOn;
+                                if (isOn)
+                                {
+                                    foreach (var item in Enum.GetValues(typeof(Upgradable)))
+                                    {
+                                        ItemList.Type t = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), item.ToString());
+                                        Location loc = locations.Find(x => x.itemId == (int)t && x.slotId == 2);
+                                        loc.setNewItem(t, 5);
+                                        locations.Remove(loc);
+
+                                        loc = locations.Find(x => x.itemId == (int)t && x.slotId == 3);
+                                        loc.setNewItem(t, 6);
+                                        locations.Remove(loc);
+                                        itemPool[t.ToString()] -= 2;
+                                    }
+                                }
+                                break;
+                            case "Ceble":
+                                TeviSettings.customFlags[CustomFlags.CebleStart] = isOn;
+                                break;
+                            case "SuperBosses":
+                                if (!isOn)
+                                {
+                                    Location loc = locations.Find(x => x.itemId == (int)ItemList.Type.STACKABLE_COG && x.slotId == 200);
+                                    loc.setNewItem(ItemList.Type.STACKABLE_COG, 200);
+                                    locations.Remove(loc);
+                                    ignoreLocationList.Add(loc);
+
+                                    loc = locations.Find(x => x.itemId == (int)ItemList.Type.STACKABLE_COG && x.slotId == 201);
+                                    loc.setNewItem(ItemList.Type.STACKABLE_COG, 201);
+                                    locations.Remove(loc);
+                                    ignoreLocationList.Add(loc);
+
+                                    loc = locations.Find(x => x.itemId == (int)ItemList.Type.STACKABLE_COG && x.slotId == 202);
+                                    loc.setNewItem(ItemList.Type.STACKABLE_COG, 202);
+                                    locations.Remove(loc);
+                                    ignoreLocationList.Add(loc);
+                                }
+                                TeviSettings.customFlags[CustomFlags.SuperBosses] = isOn;
+
+                                break;
+                            case "BackFlip":
+                                TeviSettings.customFlags[CustomFlags.BackFlip] = isOn;
+                                break;
+                            case "RabbitJump":
+                                TeviSettings.customFlags[CustomFlags.RabbitJump] = isOn;
+                                break;
+                            case "RabbitWalljump":
+                                TeviSettings.customFlags[CustomFlags.RabbitWalljump] = isOn;
+                                break;
+                            case "CKick":
+                                TeviSettings.customFlags[CustomFlags.CKick] = isOn;
+                                break;
+                            case "HiddenP":
+                                TeviSettings.customFlags[CustomFlags.HiddenP] = isOn;
+                                break;
+                            case "RandomMoney":
+                                TeviSettings.customFlags[CustomFlags.RandomMoney] = isOn;
+                                if (isOn)
+                                    locations.AddRange(Money);
+                                else
+                                    itemPool.Remove(ItemList.Type.I14.ToString());
+                                break;
+                            case "RandomResource":
+                                TeviSettings.customFlags[CustomFlags.RandomResource] = isOn;
+                                if (isOn)
+                                    locations.AddRange(resources);
+                                else
+                                {
+                                    itemPool.Remove(ItemList.Type.I15.ToString());
+                                    itemPool.Remove(ItemList.Type.I16.ToString());
+                                }
+                                break;
+                            default: break;
+                        }
+                        break;
+                    case "Slider":
+                        int value = (int)option.Value;
+                        switch (option.Name)
+                        {
+                            case "RangePot":
+                                TeviSettings.extraPotions[0] = value;
+                                break;
+                            case "MeleePot":
+                                TeviSettings.extraPotions[1] = value;
+                                break;
+                            case "GearReq":
+                                TeviSettings.GoMode = Math.Max(Math.Min(value, 24), 1);
+                                break;
+                            case "GearMax":
+
+                                int max = Math.Max(value, TeviSettings.GoMode);
+
+
+                                itemPool[ItemList.Type.STACKABLE_COG.ToString()] = max;
+                                for (int i = max; i < 25; i++)
+                                {
+                                    ItemList.Type newItem = getFillerItem(seed.Next());
+                                    if (itemPool.ContainsKey(newItem.ToString()))
+                                        itemPool[newItem.ToString()]++;
+                                    else
+                                        itemPool[newItem.ToString()] = 1;
+                                }
+                                break;
+                            default:
+                                break;
+
+                        }
+                        break;
+                    case "Selector":
+                        string selected = (string)option.Value;
+                        switch (option.Name)
+                        {
+                            case "GoalType":
+                                switch (selected)
+                                {
+                                    case "Boss":
+                                        TeviSettings.goalType = GoalType.BossDefeat;
+                                        break;
+                                    case "Gear":
+                                    default:
+                                        TeviSettings.goalType = GoalType.AstralGear;
+                                        break;
+                                }
+                                break;
+                            case "Traverse":
+                                TeviSettings.traverseMode = selected;
+                                TeviSettings.customFlags[CustomFlags.TeleporterRando] = selected == "Teleporter";
+                                TeviSettings.customFlags[CustomFlags.EntranceRando] = selected == "Entrance";
+                                break;
+                            default:
+                                break;
+                        }
+                        break;
+                }
+            }
+            foreach (var item in itemPool.ToArray())
+            {
+                if (item.Value <= 0)
+                    itemPool.Remove(item.Key);
+            }
+        }
+
+        static Dictionary<string, string> getAPItemNames()
+        {
+            Dictionary<string, string> retVal = new();
+            string path = TeviSettings.pluginPath + "/resource/";
+            JToken itemNames = JToken.Parse(File.ReadAllText(path + "ItemToReal.json"));
+            foreach (var item in Enum.GetNames(typeof(ItemList.Type)))
+            {
+                retVal[item] = (string)itemNames[item];
+            }
+            return retVal;
+        }
+        static Dictionary<string, string> APItemNames => getAPItemNames();
+
+
+
+        static bool LogicHelper(Dictionary<string, int> itemList, string logic)
+        {
+            string[] split;
+            split = logic.Split(' ');
+            bool flag = false;
+            switch (split[0])
+            {
+                case "Explorer":
+                case "WindSkip":
+                case "EnemyManip":
+                case "BounceKick":
+                case "ADCKick":
+                case "BarrierSkip":
+                    break;
+                case "ItemUse":
+                case "NotTeleporter":
+                case "Boss":
+                case "":
+                case "True":
+                    flag = true;
+                    break;
+                case "Teleporter":
+                    flag = itemList.ContainsKey(logic);
+                    break;
+                case "LibraryExtra":
+                    flag = TeviSettings.customFlags[CustomFlags.SuperBosses];
+                    break;
+                case "Backflip":
+                    flag = TeviSettings.customFlags[CustomFlags.BackFlip];
+                    break;
+                case "RabbitJump":
+                    flag = TeviSettings.customFlags[CustomFlags.RabbitJump];
+                    break;
+                case "RabbitWalljump":
+                    flag = TeviSettings.customFlags[CustomFlags.RabbitWalljump];
+                    break;
+                case "CKick":
+                    flag = TeviSettings.customFlags[CustomFlags.CKick];
+                    break;
+                case "HiddenP":
+                    flag = TeviSettings.customFlags[CustomFlags.HiddenP];
+                    break;
+                case "OpenMorose":
+                    flag = TeviSettings.customFlags[CustomFlags.tmpOption];
+                    break;
+                case "EarlyDream":
+                    flag = TeviSettings.customFlags[CustomFlags.EarlyDream];
+                    break;
+                case "Chapter":
+                    if (split[0] == "Chapter" && itemList.ContainsKey("EVENT_BOSS"))
+                        if (has_chapter_reached(int.Parse(split[1]), itemList["EVENT_BOSS"]))
+                            flag = true;
+                        else
+                            flag = false;
+                    break;
+                case "AllMemine":
+                    Console.WriteLine("Memine should not be used as Logic");
+                    if (itemList.ContainsKey("EVENT_Memine"))
+                        flag = itemList["EVENT_Memine"] > 5;
+                    break;
+                case "Memine":
+                    Console.WriteLine("Memine should not be used as Logic");
+                    flag = checkMovementItems(itemList);
+                    break;
+                case "ChargeShot":
+                    if (itemList.ContainsKey("ITEM_ORB"))
+                        flag = itemList["ITEM_ORB"] >= 2;
+                    break;
+                case "Upgrade":
+                    flag = itemList.ContainsKey("I16") && itemList["I16"] >= 90;
+                    break;
+                case "Core":
+                    flag = itemList.ContainsKey("I15") && itemList["I15"] >= 35;
+                    break;
+                case "Coins":
+                    int amount = int.Parse(split[1]);
+                    flag = true;
+                    if (amount > 250)
+                    {
+                        return true;
+                    }
+                    break;
+                case "RainbowCheck":
+                    if (itemList.ContainsKey("EVENT_Memine"))
+                        flag = itemList["EVENT_Memine"] >= 3;
+                    break;
+                case "Goal":
+                    switch (TeviSettings.goalType)
+                    {
+                        case TeviRandomizerSettings.GoalType.BossDefeat:
+                            if (itemList.ContainsKey("EVENT_BOSS"))
+                                flag = itemList["EVENT_BOSS"] >= 21;
+                            break;
+                        case TeviRandomizerSettings.GoalType.AstralGear:
+                            if (itemList.ContainsKey("STACKABLE_COG"))
+                                flag = itemList["STACKABLE_COG"] >= TeviSettings.GoMode;
+                            break;
+                        default:
+                            if (itemList.ContainsKey("STACKABLE_COG"))
+                                flag = itemList["STACKABLE_COG"] >= TeviSettings.GoMode;
+                            break;
+                    }
+                    break;
+                case "SpinnerBash":
+                    if (itemList.ContainsKey("ITEM_KNIFE"))
+                        flag = itemList.ContainsKey("ITEM_KNIFE");
+                    break;
+                case "VenaBomb":
+                    if (itemList.ContainsKey("EVENT_Fire"))
+                        flag = itemList.ContainsKey("Useable_VenaBombSmall") || (itemList.ContainsKey("Useable_VenaBombBig") && itemList.ContainsKey("EVENT_Light"));
+                    if (itemList.ContainsKey("EVENT_Earth"))
+                        flag = (itemList.ContainsKey("Useable_VenaBombDispel") && itemList.ContainsKey("EVENT_Water")) || (itemList.ContainsKey("Useable_VenaBombHealBlock") && itemList.ContainsKey("EVENT_Dark"));
+                    break;
+                default:
+                    if (itemList.ContainsKey(split[0]))
+                    {
+                        flag = true;
+                        switch (split[0])
+                        {
+                            case "ITEM_BOMBFUEL":
+                                flag = itemList.ContainsKey("ITEM_LINEBOMB") | itemList.ContainsKey("ITEM_AREABOMB");
+                                break;
+                            case "ITEM_BombLengthExtend":
+                                flag = itemList.ContainsKey("ITEM_LINEBOMB");
+                                break;
+                            case "ITEM_AirSlide":
+                                flag = itemList.ContainsKey("ITEM_SLIDE");
+                                break;
+                            case "ITEM_Rotater":
+                                flag = itemList.ContainsKey("ITEM_KNIFE");
+                                break;
+                        }
+                        if (split.Length > 1 && flag)
+                        {
+                            if (int.Parse(split[1]) <= itemList[split[0]])
+                                flag = true;
+                            else
+                                flag = false;
+                        }
+                    }
+                    break;
+            }
+            return flag;
         }
 
 
-        public static Randomizer Instance = new Randomizer();
+        public static bool checkMovementItems(Dictionary<string, int> itemList)
+        {
 
-        private class Item
+            if (
+                itemList.ContainsKey("ITEM_DOUBLEJUMP") &&
+                itemList.ContainsKey("ITEM_AirDash") &&
+                itemList.ContainsKey("ITEM_WALLJUMP") &&
+                itemList.ContainsKey("ITEM_JETPACK") &&
+                itemList.ContainsKey("ITEM_SLIDE") &&
+                itemList.ContainsKey("ITEM_HIJUMP") &&
+                itemList.ContainsKey("ITEM_WATERMOVEMENT")
+                )
+                return true;
+
+            return false;
+        }
+        private static bool has_chapter_reached(int chapter, int deadBoss)
+        {
+            short counter = 0;
+            int bossCount = deadBoss;
+            if (bossCount >= 1)
+                counter += 1;
+            if (bossCount >= 3)
+                counter += 1;
+            if (bossCount >= 5)
+                counter += 1;
+            if (bossCount >= 7)
+                counter += 1;
+            if (bossCount >= 10)
+                counter += 1;
+            if (bossCount >= 13)
+                counter += 1;
+            if (bossCount >= 16)
+                counter += 1;
+            if (bossCount >= 20)
+                counter += 1;
+            return counter >= chapter;
+        }
+        private static bool can_aquire_Money(Dictionary<string, int> itemList)
+        {
+            if (itemList.ContainsKey("ITEM_KNIFE") || itemList.ContainsKey("ITEM_LINEBOMB"))
+                return true;
+
+            return false;
+        }
+
+
+
+
+
+
+
+
+
+        public class Requirement
+        {
+            public string Method = "";
+            public int Difficulty = 0;
+            static DataTable validator = new DataTable();
+            Operation Logic;
+            public Requirement(string method)
+            {
+                if (method == "" || method == "()")
+                    method = "True";
+                Method = method;
+                string tmp = method;
+                method = method.Replace("&&", "&").Replace("||", "|");
+                var tokensList = Regex
+                    .Split(method, @"([()&|!~])")
+                    .Select(s => s.Trim())
+                    .Where(s => !string.IsNullOrEmpty(s))
+                    .ToList();
+                tokensList.Reverse();
+                Stack<object> tokens = new(tokensList);
+                Stack<object> stack = new();
+
+                while (tokens.Count > 0)
+                {
+                    var next = tokens.Pop();
+                    if (isExpr(next))
+                    {
+                        if (stack.Count == 0)
+                        {
+                            stack.Push(next);
+                            continue;
+                        }
+                        var head = stack.Peek();
+                        switch (head)
+                        {
+                            case "&":
+                                stack.Pop();
+                                var exp = stack.Pop();
+                                Debug.Assert(isExpr(exp));
+                                tokens.Push(new OpAnd((Operation)exp, (Operation)next));
+                                break;
+                            case "|":
+                                stack.Pop();
+                                exp = stack.Pop();
+                                Debug.Assert(isExpr(exp));
+                                tokens.Push(new OpOr((Operation)exp, (Operation)next));
+                                break;
+                            case "!":
+                            case "~":
+                                stack.Pop();
+                                tokens.Push(new OpNot((Operation)next));
+                                break;
+                            default:
+                                stack.Push(next);
+                                break;
+                        }
+                    }
+                    else if ("(&|!~".Contains(next.ToString()))
+                    {
+                        stack.Push(next);
+                    }
+                    else if (next.ToString() == ")")
+                    {
+                        var exp = stack.Pop();
+                        Debug.Assert(isExpr(exp));
+                        var paren = stack.Pop();
+                        Debug.Assert(paren.ToString() == "(");
+                        tokens.Push(exp);
+                    }
+                    else
+                        tokens.Push(new OpLit(next.ToString()));
+                }
+                Debug.Assert(stack.Count == 1 && isExpr(stack.Peek()));
+                Logic = (Operation)stack.Pop();
+            }
+            bool isExpr(object token) => token is Operation;
+            public bool evaluate(Dictionary<string, int> itemList) => Logic.Evaluate(itemList);
+
+
+            abstract class Operation
+            {
+
+                public abstract bool Evaluate(Dictionary<string, int> itemList);
+            }
+            class OpLit : Operation
+            {
+                string name;
+                public override bool Evaluate(Dictionary<string, int> itemList) => LogicHelper(itemList, name);
+                public OpLit(string name)
+                {
+                    this.name = name;
+                }
+            }
+            class OpNot : Operation
+            {
+                Operation op;
+                public override bool Evaluate(Dictionary<string, int> itemList)
+                {
+                    return !op.Evaluate(itemList);
+                }
+
+                public OpNot(Operation op)
+                {
+                    this.op = op;
+                }
+            }
+            class OpOr : Operation
+            {
+                Operation opL;
+                Operation opR;
+                public override bool Evaluate(Dictionary<string, int> itemList)
+                {
+                    return opL.Evaluate(itemList) || opR.Evaluate(itemList);
+                }
+                public OpOr(Operation op, Operation opR)
+                {
+                    this.opL = op;
+                    this.opR = opR;
+                }
+            }
+            class OpAnd : Operation
+            {
+                Operation opL;
+                Operation opR;
+                public override bool Evaluate(Dictionary<string, int> itemList)
+                {
+                    return opL.Evaluate(itemList) && opR.Evaluate(itemList);
+                }
+                public OpAnd(Operation op, Operation opR)
+                {
+                    this.opL = op;
+                    this.opR = opR;
+                }
+            }
+
+
+        }
+
+
+
+
+        public class Item
         {
             public int Id;
             public string Name;
@@ -90,233 +624,7 @@ namespace TeviRandomizer
                 this.Type = _type;
             }
         }
-
-        static public bool vanillaItemCraft = false;
-        private class Requirement
-        {
-            public string Method;
-            public int Difficulty;
-            public Requirement(string method)
-            {
-                string[] info = method.Split(',');
-
-                Method = info[0];
-                if (info.Length > 1)
-                    Difficulty = int.Parse(info[1]);
-            }
-            public bool check(Dictionary<string, int> itemList)
-            {
-                if (Method == "") return true;
-                string tmp = Method;
-                tmp = Regex.Replace(Method, @"\b(\w|\s)+\b( \d+){0,1}", match => {
-                    string[] split;
-                    string d = match.ToString();
-
-                    split = d.Split(' ');
-
-
-                    bool flag = false;
-
-                    switch (split[0])
-                    {
-                        case "Explorer":
-                        case "WindSkip":
-                        case "EnemyManip":
-                        case "BounceKick":
-                        case "ADCKick":
-                        case "BarrierSkip":
-                            break;
-                        case "ItemUse":
-                        case "NotTeleporter":
-                        case "Boss":
-                        case "":
-                        case "True":
-                            flag = true;
-                            break;
-                        case "Teleporter":
-                            flag = itemList.ContainsKey(d);
-                            break;
-                        case "LibraryExtra":
-                            flag = RandomizerPlugin.customFlags[(int)CustomFlags.SuperBosses];
-                            break;
-                        case "Backflip":
-                            flag = ((UnityEngine.UI.Toggle)settings["Toggle BackFlip"]).isOn;
-                            break;
-                        case "RabbitJump":
-                            flag = ((UnityEngine.UI.Toggle)settings["Toggle RabbitJump"]).isOn;
-                            break;
-                        case "RabbitWalljump":
-                            flag = ((UnityEngine.UI.Toggle)settings["Toggle RabbitWalljump"]).isOn;
-                            break;
-                        case "CKick":
-                            flag = ((UnityEngine.UI.Toggle)settings["Toggle CKick"]).isOn;
-                            break;
-                        case "HiddenP":
-                            flag = ((UnityEngine.UI.Toggle)settings["Toggle HiddenP"]).isOn;
-                            break;
-                        case "OpenMorose":
-                            flag = ((UnityEngine.UI.Toggle)settings["Toggle tmpOption"]).isOn;
-                            break;
-                        case "EarlyDream":
-                            flag = ((UnityEngine.UI.Toggle)settings["Toggle EarlyDream"]).isOn;
-                            break;
-                        case "Chapter":
-                            if (split[0] == "Chapter" && itemList.ContainsKey("EVENT_BOSS"))
-                                if (has_chapter_reached(int.Parse(split[1]), itemList["EVENT_BOSS"]))
-                                    flag = true;
-                                else
-                                    flag = false;
-                            break;
-                        case "AllMemine":
-                            Debug.LogError("Memine should not be used as Logic");
-                            if (itemList.ContainsKey("EVENT_Memine"))
-                                flag = itemList["EVENT_Memine"] > 5;
-                            break;
-                        case "Memine":
-                            Debug.LogError("Memine should not be used as Logic");
-                            flag = checkMovementItems(itemList);
-                            break;
-                        case "ChargeShot":
-                            if (itemList.ContainsKey("ITEM_ORB"))
-                                    flag = itemList["ITEM_ORB"] > 1;
-                            break;
-                        case "Upgrade":
-                            bool option = ((UnityEngine.UI.Toggle)settings["Toggle NormalItemCraft"]).isOn;
-                            flag = (option || checkMovementItems(itemList)) && itemList.ContainsKey("ITEM_LINEBOMB");
-                            break;
-                        case "Core":
-                            flag = checkMovementItems(itemList) && itemList.ContainsKey("ITEM_LINEBOMB") && itemList.ContainsKey("ITEM_AREABOMB") && itemList.ContainsKey("ITEM_BombLengthExtend");
-                            break;
-                        case "Coins":
-                            int amount = int.Parse(split[1]);
-                            flag = true;
-                            if (amount > 250)
-                            {
-                                flag = can_aquire_Money(itemList);
-                            }
-                            break;
-                        case "RainbowCheck":
-                            if (itemList.ContainsKey("EVENT_Memine"))
-                                flag = itemList["EVENT_Memine"] > 2;
-                            break;
-                        case "Goal":
-                            switch (RandomizerPlugin.goalType)
-                            {
-                                case RandomizerPlugin.GoalType.BossDefeat:
-                                    if (itemList.ContainsKey("EVENT_BOSS"))
-                                        flag = itemList["EVENT_BOSS"] >= 21;
-                                    break;
-                                case RandomizerPlugin.GoalType.AstralGear:
-                                    if (itemList.ContainsKey("STACKABLE_COG"))
-                                        flag = itemList["STACKABLE_COG"] >= RandomizerPlugin.GoMode;
-                                    break;
-                                default:
-                                    if (itemList.ContainsKey("STACKABLE_COG"))
-                                        flag = itemList["STACKABLE_COG"] >= RandomizerPlugin.GoMode;
-                                    break;
-                            }
-                            break;
-                        case "SpinnerBash":
-                            if (!itemList.ContainsKey("ITEM_KNIFE"))
-                                break;
-                            flag = itemList.ContainsKey("ITEM_KNIFE");
-                            break;
-                        case "VenaBomb":
-                            if (itemList.ContainsKey("EVENT_Fire"))
-                                flag = itemList.ContainsKey("Useable_VenaBombSmall") || (itemList.ContainsKey("Useable_VenaBombBig") && itemList.ContainsKey("EVENT_Light"));
-                            if (itemList.ContainsKey("EVENT_Earth"))
-                                flag = (itemList.ContainsKey("Useable_VenaBombDispel") && itemList.ContainsKey("EVENT_Water")) || (itemList.ContainsKey("Useable_VenaBombHealBlock") && itemList.ContainsKey("EVENT_Dark"));
-                            break;
-                        default:
-                            if (itemList.ContainsKey(split[0]))
-                            {
-                                flag = true;
-                                switch (split[0])
-                                {
-                                    case "ITEM_BOMBFUEL":
-                                        flag = itemList.ContainsKey("ITEM_LINEBOMB") | itemList.ContainsKey("ITEM_AREABOMB");
-                                        break;
-                                    case "ITEM_BombLengthExtend":
-                                        flag = itemList.ContainsKey("ITEM_LINEBOMB");
-                                        break;
-                                    case "ITEM_AirSlide":
-                                        flag = itemList.ContainsKey("ITEM_SLIDE");
-                                        break;
-                                    case "ITEM_Rotater":
-                                        flag = itemList.ContainsKey("ITEM_KNIFE");
-                                        break;
-                                }
-                                if (split.Length > 1 && flag)
-                                {
-                                    if (int.Parse(split[1]) <= itemList[split[0]])
-                                        flag = true;
-                                    else
-                                        flag = false;
-                                }
-                            }
-                            else
-                                flag = false;
-                            break;
-                    }
-
-                    if (flag)
-                        return " true ";
-                    else
-                        return " false ";
-                });
-                tmp = tmp.Replace("&&", "AND").Replace("||", "OR");
-                bool retVal = (bool)new DataTable().Compute(tmp, "");
-
-                return retVal;
-            }
-
-            public bool checkMovementItems(Dictionary<string, int> itemList)
-            {
-
-                if (
-                    itemList.ContainsKey("ITEM_DOUBLEJUMP") &&
-                    itemList.ContainsKey("ITEM_AirDash") &&
-                    itemList.ContainsKey("ITEM_WALLJUMP") &&
-                    itemList.ContainsKey("ITEM_JETPACK") &&
-                    itemList.ContainsKey("ITEM_SLIDE") &&
-                    itemList.ContainsKey("ITEM_HIJUMP") &&
-                    itemList.ContainsKey("ITEM_WATERMOVEMENT")
-                    )
-                    return true;
-
-                return false;
-            }
-            private bool has_chapter_reached(int chapter, int deadBoss)
-            {
-                short counter = 0;
-                bossCount = deadBoss;
-                if (bossCount >= 1)
-                    counter += 1;
-                if (bossCount >= 3)
-                    counter += 1;
-                if (bossCount >= 5)
-                    counter += 1;
-                if (bossCount >= 7)
-                    counter += 1;
-                if (bossCount >= 10)
-                    counter += 1;
-                if (bossCount >= 13)
-                    counter += 1;
-                if (bossCount >= 16)
-                    counter += 1;
-                if (bossCount >= 20)
-                    counter += 1;
-                return counter >= chapter;
-            }
-            private bool can_aquire_Money(Dictionary<string, int> itemList)
-            {
-                if (itemList.ContainsKey("ITEM_KNIFE") || itemList.ContainsKey("ITEM_LINEBOMB"))
-                    return true;
-
-                return false;
-            }
-        }
-        private class Location
+        public class Location
         {
 
 
@@ -325,7 +633,7 @@ namespace TeviRandomizer
             public string Locationname;
             public int itemId;
             public int slotId;
-            public int newItem;
+            public string newItem;
             public int newSlotId;
             public List<Requirement> Requirement;
             public Location(int itemId, string loaction, string locationName, int slotId, string itemname = "")
@@ -336,25 +644,25 @@ namespace TeviRandomizer
                 this.itemId = itemId;
                 this.slotId = slotId;
                 this.Requirement = new List<Requirement>();
-                this.newItem = 0;
-                this.newSlotId = 0;
+                this.newItem = itemname;
+                this.newSlotId = slotId;
             }
             public bool isReachAble(Dictionary<string, int> itemList)
             {
                 foreach (Requirement req in Requirement)
                 {
-                    if (req.check(itemList)) return true;
+                    if (req.evaluate(itemList)) return true;
                 }
                 return false;
             }
             public void setNewItem(ItemList.Type item, int slot)
             {
-                newItem = (int)item;
+                newItem = item.ToString();
                 newSlotId = slot;
             }
             public void setNewItem(int item, int slot)
             {
-                newItem = item;
+                newItem = ((ItemList.Type)item).ToString();
                 newSlotId = slot;
             }
             public void addMethod(string method)
@@ -366,11 +674,12 @@ namespace TeviRandomizer
 
                 foreach (Requirement req in Requirement)
                 {
-                    if (req.check(itemList)) {
+                    if (req.evaluate(itemList))
+                    {
                         return true;
                     }
                 }
-                Debug.Log($"Item {Locationname} {newSlotId} could not be reached.");
+                Console.WriteLine($"Item {Locationname} {newSlotId} could not be reached.");
                 return false;
             }
             public bool checkSelfContain(ItemList.Type item)
@@ -384,7 +693,7 @@ namespace TeviRandomizer
                 return false;
             }
         }
-        private class Area
+        public class Area
         {
             public string Name;
             //public List<Money> Money;
@@ -403,12 +712,7 @@ namespace TeviRandomizer
 
 
         }
-        private class Money
-        {
-            public string Method;
-            public int Amount;
-        }
-        private class Entrance
+        public class Entrance
         {
             Area from;
             public Area to;
@@ -422,35 +726,35 @@ namespace TeviRandomizer
             public bool checkEntrance(Dictionary<string, int> itemList)
             {
                 if (to == null) return false;
-                return method.check(itemList);
+                return method.evaluate(itemList);
             }
             public void debugCheckEntrance(Dictionary<string, int> itemList)
             {
                 if (to == null) return;
-                if (!method.check(itemList)) Debug.Log($"Could not enter {to.Name}. {method.Method}");
+                if (!method.evaluate(itemList)) Console.WriteLine($"Could not enter {to.Name}. {method.Method}");
             }
-
-
         }
 
 
         //Item ID, Amount
-        private Dictionary<int, int> itemPool;
+        private Dictionary<string, int> itemPool;
 
+        public bool finished = false;
         private List<Location> locations;
-        private Dictionary<string, Location> locationString;
         private List<Area> areas;
-        private static int bossCount = 0;
         private List<Area> transitions = new List<Area>();
-        private static Dictionary<int, string> transitionIdToName;
-        private List<string> ignoreLocationList = new List<string>();
+        private static Dictionary<int, string> transitionIdToName = null;
+        private List<Location> resources = new List<Location>();
+        private List<Location> Money = new List<Location>();
+
+        private HashSet<Location> ignoreLocationList = new HashSet<Location>();
         public Randomizer()
         {
-            string path = RandomizerPlugin.pluginPath + "/resource/";
 
-            itemPool = new Dictionary<int, int>();
+            string resourcePath = TeviSettings.pluginPath + "/resource/";
+            itemPool = new Dictionary<string, int>();
             areas = new List<Area>();
-            JObject areaJson = JObject.Parse(File.ReadAllText(path + "Area.json"));
+            JObject areaJson = JObject.Parse(File.ReadAllText(resourcePath + "Area.json"));
             foreach (var map in areaJson)
             {
                 foreach (var area in (JArray)map.Value)
@@ -478,38 +782,38 @@ namespace TeviRandomizer
                     }
                 }
             }
-            transitionIdToName = new Dictionary<int, string>();
-            foreach (string line in File.ReadLines(path + "TransitionId.txt"))
+            if (transitionIdToName == null)
             {
-                string[] para = line.Split(':');
-                if (para.Count() == 2)
-                    transitionIdToName.Add(int.Parse(para[0]), para[1]);
+                transitionIdToName = new Dictionary<int, string>();
+                foreach (string line in File.ReadLines(resourcePath + "TransitionId.txt"))
+                {
+                    string[] para = line.Split(':');
+                    if (para.Count() == 2)
+                        transitionIdToName.Add(int.Parse(para[0]), para[1]);
+                }
             }
-
             locations = new List<Location>();
-            locationString = new Dictionary<string, Location>();
 
-            JArray locationJson = JArray.Parse(File.ReadAllText(path + "Location.json"));
+            JArray locationJson = JArray.Parse(File.ReadAllText(resourcePath + "Location.json"));
 
 
             foreach (var location in locationJson)
             {
                 Location newloc = new Location(0, location["Location"].ToString(), location["LocationName"].ToString(), (int)location["slotId"], location["Itemname"].ToString());
                 ItemList.Type item;
-                if (Enum.TryParse(location["Itemname"].ToString(), out item)) {
-                    if (itemPool.ContainsKey((int)item))
-                        itemPool[(int)item] += 1;
+                if (Enum.TryParse(location["Itemname"].ToString(), out item))
+                {
+                    if (itemPool.ContainsKey(item.ToString()))
+                        itemPool[item.ToString()] += 1;
                     else
-                        itemPool[(int)item] = 1;
+                        itemPool[item.ToString()] = 1;
                     newloc.itemId = (int)item;
-                    newloc.newItem = 0;
 
                 }
                 foreach (var method in location["Requirement"])
                 {
                     newloc.addMethod(method["Method"].ToString());
                 }
-                locationString.Add($"{newloc.Itemname + newloc.slotId}", newloc);
                 locations.Add(newloc);
                 Area se = areas.Find(x => x.Name == newloc.Loaction);
                 if (se != null)
@@ -518,208 +822,150 @@ namespace TeviRandomizer
                 }
                 else
                 {
-                    Debug.LogWarning($"Could not find {newloc.Loaction} to place {newloc.Itemname}");
+                    Console.WriteLine($"Could not find {newloc.Loaction} to place {newloc.Itemname}");
                 }
             }
+
+            itemPool[ItemList.Type.QUEST_Memory.ToString()] = 1;
+            itemPool[ItemList.Type.QUEST_Flute.ToString()] = 1;
+            itemPool[ItemList.Type.QUEST_Compass.ToString()] = 1;
+
+            JArray moneyLocationJson = JArray.Parse(File.ReadAllText(resourcePath + "MoneyLocations.json"));
+            JArray resourceLocationJson = JArray.Parse(File.ReadAllText(resourcePath + "UpgradeResourceLocation.json"));
+
+            foreach (var location in moneyLocationJson)
+            {
+                Location newloc = new Location(0, location["Location"].ToString(), location["LocationName"].ToString(), (int)location["area"] * 100_000_000 + (int)location["blockId"], location["Itemname"].ToString());
+                ItemList.Type item;
+                if (Enum.TryParse(location["Itemname"].ToString(), out item))
+                {
+                    if (itemPool.ContainsKey(item.ToString()))
+                        itemPool[item.ToString()] += 1;
+                    else
+                        itemPool[item.ToString()] = 1;
+                    newloc.itemId = (int)item;
+
+                }
+                foreach (var method in location["Requirement"])
+                {
+                    newloc.addMethod(method["Method"].ToString());
+                }
+
+                Money.Add(newloc);
+                Area se = areas.Find(x => x.Name == newloc.Loaction);
+                if (se != null)
+                {
+                    se.Locations.Add(newloc);
+                }
+                else
+                {
+                    Console.WriteLine($"Could not find {newloc.Loaction} to place {newloc.Itemname}");
+                }
+            }
+            foreach (var location in resourceLocationJson)
+            {
+                Location newloc = new Location(0, location["Location"].ToString(), location["LocationName"].ToString(), (int)location["area"] * 100_000_000 + (int)location["blockId"], location["Itemname"].ToString());
+                ItemList.Type item;
+                if (Enum.TryParse(location["Itemname"].ToString(), out item))
+                {
+                    if (itemPool.ContainsKey(item.ToString()))
+                        itemPool[item.ToString()] += 1;
+                    else
+                        itemPool[item.ToString()] = 1;
+                    newloc.itemId = (int)item;
+
+                }
+
+
+
+                foreach (var method in location["Requirement"])
+                {
+                    newloc.addMethod(method["Method"].ToString());
+                }
+
+                resources.Add(newloc);
+                Area se = areas.Find(x => x.Name == newloc.Loaction);
+                if (se != null)
+                {
+                    se.Locations.Add(newloc);
+                }
+                else
+                {
+                    Console.WriteLine($"Could not find {newloc.Loaction} to place {newloc.Itemname}");
+                }
+            }
+
 
         }
 
 
         private ItemList.Type getFillerItem(int randomNumber)
         {
-            ItemList.Type item = ItemList.Type.STACKABLE_HP + randomNumber%6;
+            ItemList.Type item = ItemList.Type.STACKABLE_HP + randomNumber % 6;
 
             return item;
         }
 
 
-        private void CustomOptions(ref Dictionary<int, int> tmpItemPool,ref List<Location> locationPool, System.Random seed)
+        public static bool creating = false;
+        public static bool failed = false;
+
+        private string createItem(Dictionary<string, int> itemPool, System.Random seed)
         {
-            ignoreLocationList.Clear();
-            foreach (var option in settings)
+            string item = "";
+            int[] weight = new int[itemPool.Count];
+            int total = 0;
+            for (int i = 0; i < itemPool.Count; i++)
             {
-                string[] info = option.Key.Split(' ');
-                switch (info[0])
-                {
-                    case "Toggle":
-                        switch (info[1])
-                        {
-                            case "Knife":
-                                if (((UnityEngine.UI.Toggle)option.Value).isOn)
-                                {
-                                    locationString["ITEM_KNIFE1"].setNewItem(ItemList.Type.ITEM_KNIFE, 4);
-                                    locationPool.Remove(locationPool.Find(x => x.itemId == (int)ItemList.Type.ITEM_KNIFE && x.slotId == 1));
-                                    tmpItemPool[(int)ItemList.Type.ITEM_KNIFE]--;
-                                }
-                                break;
-                            case "Orb":
-                                if (((UnityEngine.UI.Toggle)option.Value).isOn)
-                                {
-                                    locationString["ITEM_ORB1"].setNewItem(ItemList.Type.ITEM_ORB, 4);
-                                    locationPool.Remove(locationPool.Find(x => x.itemId == (int)ItemList.Type.ITEM_ORB && x.slotId == 1));
-                                    tmpItemPool[(int)ItemList.Type.ITEM_ORB]--;
-                                }
-
-                                break;
-                            case "Lv3Compass":
-                                if (((UnityEngine.UI.Toggle)option.Value).isOn)
-                                {
-                                    RandomizerPlugin.customFlags[(int)CustomFlags.CompassStart] = true;
-                                }
-                                else
-                                {
-                                    RandomizerPlugin.customFlags[(int)CustomFlags.CompassStart] = false;
-                                }
-                                break;
-                            case "tmpOption":
-                                if (((UnityEngine.UI.Toggle)option.Value).isOn)
-                                {
-                                    RandomizerPlugin.customFlags[(int)CustomFlags.TempOption] = true;
-                                }
-                                else
-                                {
-                                    RandomizerPlugin.customFlags[(int)CustomFlags.TempOption] = false;
-                                }
-                                break;
-                            case "NormalItemCraft":
-                                if (((UnityEngine.UI.Toggle)option.Value).isOn)
-                                {
-                                    vanillaItemCraft = true;
-                                    foreach (var item in Enum.GetValues(typeof(Upgradable)))
-                                    {
-                                        ItemList.Type t = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), item.ToString());
-                                        locationString[t + "2"].setNewItem(t, 5);
-                                        locationString[t + "3"].setNewItem(t, 6);
-                                        locationPool.Remove(locationPool.Find(x => x.itemId == (int)t && x.slotId == 2));
-                                        locationPool.Remove(locationPool.Find(x => x.itemId == (int)t && x.slotId == 3));
-                                        tmpItemPool[(int)t] -= 2;
-                                    }
-                                }
-                                else vanillaItemCraft = false;
-                                break;
-                            case "Ceble":
-                                if (((UnityEngine.UI.Toggle)option.Value).isOn)
-                                {
-                                    RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart] = true;
-                                }
-                                else
-                                {
-                                    RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart] = false;
-                                }
-                                break;
-                            case "SuperBosses":
-                                if (!((UnityEngine.UI.Toggle)option.Value).isOn)
-                                {
-                                    locationString["STACKABLE_COG200"].setNewItem(ItemList.Type.STACKABLE_COG, 200);
-                                    locationPool.Remove(locationPool.Find(x => x.itemId == (int)ItemList.Type.STACKABLE_COG && x.slotId == 200));
-                                    ignoreLocationList.Add("STACKABLE_COG200");
-                                    locationString["STACKABLE_COG201"].setNewItem(ItemList.Type.STACKABLE_COG, 201);
-                                    locationPool.Remove(locationPool.Find(x => x.itemId == (int)ItemList.Type.STACKABLE_COG && x.slotId == 201));
-                                    ignoreLocationList.Add("STACKABLE_COG201");
-                                    locationString["STACKABLE_COG202"].setNewItem(ItemList.Type.STACKABLE_COG, 202);
-                                    locationPool.Remove(locationPool.Find(x => x.itemId == (int)ItemList.Type.STACKABLE_COG && x.slotId == 202));
-                                    ignoreLocationList.Add("STACKABLE_COG202");
-                                }
-                                RandomizerPlugin.customFlags[(int)CustomFlags.SuperBosses] = ((UnityEngine.UI.Toggle)option.Value).isOn;
-
-                                break;
-                            default: break;
-                        }
-                        break;
-                    case "Slider":
-                        switch (info[1])
-                        {
-                            case "RangePot":
-                                RandomizerPlugin.extraPotions[0] = (int)((UnityEngine.UI.Slider)option.Value).value;
-                                break;
-                            case "MeleePot":
-                                RandomizerPlugin.extraPotions[1] = (int)((UnityEngine.UI.Slider)option.Value).value;
-                                break;
-                            case "GearReq":
-                                RandomizerPlugin.GoMode = (int)((UnityEngine.UI.Slider)option.Value).value;
-                                break;
-                            case "GearMax":
-
-                                int max = Math.Max((int)((UnityEngine.UI.Slider)option.Value).value, RandomizerPlugin.GoMode);
-
-
-                                tmpItemPool[(int)ItemList.Type.STACKABLE_COG] = max;
-                                for (int i = max; i < 25; i++)
-                                {
-                                    ItemList.Type newItem = getFillerItem(seed.Next());
-                                    if (tmpItemPool.ContainsKey((int)newItem))
-                                        tmpItemPool[(int)newItem]++;
-                                    else
-                                        tmpItemPool[(int)newItem] = 1;
-                                }
-                                break;
-                            default:
-                                break;
-
-                        }
-                        break;
-                    case "Selector":
-                        string selectorName = (((string, int, int))UI.UI.settings[option.Key]).Item1;
-                        switch (info[1])
-                        {
-                            case "GoalType":
-                                switch (selectorName)
-                                {
-                                    case "Boss":
-                                        RandomizerPlugin.goalType = RandomizerPlugin.GoalType.BossDefeat;
-                                        break;
-                                    case "Gear":
-                                    default:
-                                        RandomizerPlugin.goalType = RandomizerPlugin.GoalType.AstralGear;
-                                        break;
-                                }
-                                break;
-                            default:
-                                break;
-                        }
-                        break;
-                }
+                total += itemPool.ElementAt(i).Value;
+                weight[i] = total;
             }
+            int itemIndex = seed.Next(total);
+            for (int i = 0; i < weight.Length; i++)
+                if (itemIndex < weight[i])
+                {
+                    item = itemPool.ElementAt(i).Key;
+                    break;
+                }
+            if (String.IsNullOrEmpty(item))
+                item = "PANIC";
+            return item;
         }
 
-        static bool creating = false;
-        
-        public void synccreateSeed(System.Random seed)
+        public bool newSeed(Random seed)
         {
-
-            int debugVal = 0;
-            Dictionary<int, int> localItemPool;
-
-            List<Location> locationPool = new List<Location>();
-            Area startarea = areas.Find(x => x.Name == "Thanatara Canyon");
-            Dictionary<string, int> progressionItems = new Dictionary<string, int>();
             if (seed == null) seed = new System.Random();
-            string traverseMode = (((string, int, int))UI.UI.settings["Selector Traverse"]).Item1;
+
+            Area startarea = areas.Find(x => x.Name == "Thanatara Canyon");
+            Dictionary<string, int> startItems = new();
+            CustomOptions(seed);                 //Extra stuff
+
+            string traverseMode = TeviSettings.traverseMode;
             if (traverseMode == "Transition")
             {
                 foreach (Area area in transitions)
                 {
                     area.Connections[0].to = null;
                 }
-                List<Area> toBePlaced = new List<Area>();
-                toBePlaced.CopyFrom(transitions);
+                List<Area> toBePlaced = new(transitions);
+
 
                 while (toBePlaced.Count > 0)
                 {
                     List<Area> availabeTransition = recursivAreaSearch(startarea);
-                    Debug.Log(availabeTransition.Count);
+                    Console.WriteLine(availabeTransition.Count);
                     Area nextTarget = availabeTransition[seed.Next(availabeTransition.Count)];
                     Area newEntrance;
                     if (availabeTransition.Count > toBePlaced.Count)
                     {
-                        Debug.LogWarning("Something went wrong");
+                        Console.WriteLine("Something went wrong");
                         foreach (Area area in availabeTransition)
                         {
-                            Debug.Log($"{area.Name} Available");
+                            Console.WriteLine($"{area.Name} Available");
                         }
                         foreach (Area area in toBePlaced)
                         {
-                            Debug.Log($"{area.Name} leftover");
+                            Console.WriteLine($"{area.Name} leftover");
                         }
                     }
                     do
@@ -736,114 +982,125 @@ namespace TeviRandomizer
             }
             if (traverseMode == "Teleporter")
             {
-                RandomizerPlugin.customFlags[(int)(CustomFlags.TeleporterRando)] = true;
+                TeviSettings.customFlags[(CustomFlags.TeleporterRando)] = true;
                 startarea.addConnection(areas.Find(x => x.Name == "TeleportHub"), "");
                 foreach (Area area in transitions)
                 {
                     area.Connections[0].to = null;
                 }
             }
-            bool failed = false;
 
-            do
+
+
+            foreach (var loc in locations)
+                if (!loc.Itemname.Contains("EVENT"))
+                    loc.newItem = "";
+            Dictionary<string, int> ItemPoolTry = new(itemPool);
+
+
+            //Progression Items
+            Dictionary<string, int> progressionItems = new();
+            foreach (var key in Enum.GetNames(typeof(Progression_Items)))
             {
-                failed = false;
-                debugVal++;
-                List<int> TeleporterPool = Enumerable.Range(0, 37).ToList();
-
-                locationPool.Clear();
-                locationPool.CopyFrom(locations);
-                locationPool.RemoveAll(x => x.itemId > 3000);                 // Remove all Extra Options from Pool (they are above 3000)
-                locationPool.RemoveAll(x => x.Itemname.Contains("EVENT"));
-
-                foreach (Location loc in locationPool)
+                if (ItemPoolTry.ContainsKey(key))
                 {
-                    loc.setNewItem(-1, -1);
+                    progressionItems[(Enum.Parse(typeof(Progression_Items),key).ToString())] = ItemPoolTry[key];
                 }
-
-                bossCount = 0;
-                localItemPool = new Dictionary<int, int>(itemPool);
-
-                CustomOptions(ref localItemPool, ref locationPool, seed);                 //Extra stuff
-                foreach (int key in Enum.GetValues(typeof(Progression_Items)))
+            }
+            if (traverseMode == "Teleporter")
+            {
+                for (int i = 0; i < 37; i++)
                 {
-                    if (localItemPool.ContainsKey(key))
-                    {
-                        progressionItems[((Progression_Items)key).ToString()] = localItemPool[key];
-                    }
+                    progressionItems[$"Teleporter {i}"] = 1;
                 }
+            }
+            //Placing Progression Items
+            while (progressionItems.Count > 0)
+            {
 
-                if (traverseMode == "Teleporter")
+                string item = createItem(progressionItems, seed);
+
+                int slotId = 0;
+
+                if (item.Contains("Teleporter"))
                 {
-                    for (int i = 0; i < 37; i++)
-                    {
-                        progressionItems[$"Teleporter {i}"] = 1;
-                    }
+                    slotId = int.Parse(item.Split(' ')[1]);
                 }
 
 
-                Debug.Log("Prog");
-                while (progressionItems.Count > 0)
+                progressionItems[item]--;
+
+                if (progressionItems[item] <= 0)
                 {
-                    int itemIndex = seed.Next(progressionItems.Count);
-                    string item = progressionItems.ElementAt(itemIndex).Key;
-                    int itemId;
-                    int slotId = 0;
-
-                    if (item.Contains("Teleporter"))
-                    {
-                        itemId = (int)RandomizerPlugin.PortalItem;
-
-                        slotId = int.Parse(item.Split(' ')[1]);
-
-                    }
-                    else
-                        itemId = (int)Enum.Parse(typeof(Progression_Items), item);
-
-                    progressionItems[item]--;
-                    if (progressionItems[item] <= 0)
-                    {
-                        progressionItems.Remove(item);
-                        if (localItemPool.ContainsKey(itemId))
-                            localItemPool.Remove(itemId);
-                    }
-
-                    List<Location> spot = scanLocations(progressionItems);
-                    if (spot.Count == 0)
-                    {
-                        Debug.LogError("No locations left, restarting seed gen");
-                        failed = true;
-                        break;
-                    }
-                    int pos = seed.Next(spot.Count);
-                    Location loc = locationPool.Find(x => x.Locationname == spot[pos].Locationname);
-
-                    locationString[loc.Itemname + loc.slotId.ToString()].newItem = itemId;
-                    locationString[loc.Itemname + loc.slotId.ToString()].newSlotId = slotId;
-
-                    locationPool.Remove(loc);
-                }
-                if (failed)
-                    continue;
-                Debug.Log("Filler");
-
-                while (locationPool.Count > 0)
-                {
-                    int pos = seed.Next(locationPool.Count);
-                    Location loc = locationPool[pos];
-                    int item = createItem(seed, localItemPool);
-                    locationString[loc.Itemname + loc.slotId.ToString()].newItem = item;
-                    locationPool.Remove(loc);
+                    progressionItems.Remove(item);
+                    if (ItemPoolTry.ContainsKey(item))
+                        ItemPoolTry.Remove(item);
                 }
 
+                List<Location> locs = AssumedFill.AssumedSearch(startarea, progressionItems);
 
-                bossCount = 0;
+                var loc = locs[seed.Next(locs.Count)];
+                loc.newItem = item;
+                loc.newSlotId = slotId;
 
-            } while (failed || !validate());
-            Debug.Log($"[Randomizer] It took {debugVal} tries to create this Seed.");
 
-            creating = false;
-            if (!ArchipelagoInterface.Instance.isConnected)
+            }
+
+            var tes = AssumedFill.AssumedSearch(startarea, startItems);
+            while (tes.Count > 0)
+            {
+                var loc = tes[seed.Next(tes.Count)];
+                tes.Remove(loc);
+                string item = createItem(ItemPoolTry, seed);
+                ItemPoolTry[item]--;
+                if (ItemPoolTry[item] <= 0)
+                    ItemPoolTry.Remove(item);
+
+                loc.newItem = item;
+            }
+
+            return validate();
+        }
+
+        public async void CreateSeed(System.Random seed)
+        {
+            if (creating || TeviSettings.APConnected) { return; }
+            creating = true;
+            failed = false;
+            UI.UI.seedCreationLoading();
+            await Task.Run(() =>
+            {
+                if (newSeed(seed))
+                {
+                    if (!TeviSettings.APConnected)
+                    {
+                        RandomizerPlugin.__itemData = GetData();
+                        Dictionary<int, int> transitionData = new Dictionary<int, int>();
+                        foreach (Area area in transitions)
+                        {
+                            if (area.Connections[0].to == null)
+                                transitionData.Add(int.Parse(area.Name), int.Parse(area.Name));
+                            else
+                                transitionData.Add(int.Parse(area.Name), int.Parse(area.Connections[0].to.Name));
+                        }
+                        TeviSettings.transitionData = transitionData;
+                        saveSpoilerLog(RandomizerPlugin.__itemData);
+                    }
+                }
+                else
+                    failed = true;
+
+                creating = false;
+            });
+        }
+        public void SyncCreateSeed(System.Random seed)
+        {
+            if (creating || TeviSettings.APConnected) { return; }
+            failed = false;
+            creating = true;
+            //seedCreationLoading();
+
+            if (!TeviSettings.APConnected && newSeed(seed))
             {
                 RandomizerPlugin.__itemData = GetData();
                 Dictionary<int, int> transitionData = new Dictionary<int, int>();
@@ -854,196 +1111,18 @@ namespace TeviRandomizer
                     else
                         transitionData.Add(int.Parse(area.Name), int.Parse(area.Connections[0].to.Name));
                 }
-                RandomizerPlugin.transitionData = transitionData;
+                TeviSettings.transitionData = transitionData;
                 saveSpoilerLog(RandomizerPlugin.__itemData);
             }
-        
+            else
+                failed = true;
+            creating = false;
         }
 
-        public async void createSeed(System.Random seed)
-        {
-            if (creating || ArchipelagoInterface.Instance.isConnected) { return; }
-            creating = true;
-            seedCreationLoading();
-            await Task.Run(() =>
-            {
-            int debugVal = 0;
-            Dictionary<int, int> localItemPool;
-            
-            List<Location> locationPool = new List<Location>();
-            Area startarea = areas.Find(x => x.Name == "Thanatara Canyon");
-            Dictionary<string,int> progressionItems = new Dictionary<string, int>();
-            if (seed == null) seed = new System.Random();
-            string traverseMode = (((string, int, int))UI.UI.settings["Selector Traverse"]).Item1;
-            if (traverseMode == "Transition")
-            {
-                foreach (Area area in transitions)
-                {
-                    area.Connections[0].to = null;
-                }
-                List<Area> toBePlaced = new List<Area>();
-                toBePlaced.CopyFrom(transitions);
-                
-                while (toBePlaced.Count > 0)
-                {
-                    List<Area> availabeTransition = recursivAreaSearch(startarea);
-                    Debug.Log(availabeTransition.Count);
-                    Area nextTarget = availabeTransition[seed.Next(availabeTransition.Count)];
-                    Area newEntrance;
-                    if (availabeTransition.Count > toBePlaced.Count)
-                    {
-                        Debug.LogWarning("Something went wrong");
-                        foreach (Area area in availabeTransition)
-                        {
-                            Debug.Log($"{area.Name} Available");
-                        }
-                        foreach (Area area in toBePlaced)
-                        {
-                            Debug.Log($"{area.Name} leftover");
-                        }
-                    }
-                    do
-                    {
-                        newEntrance = toBePlaced[seed.Next(toBePlaced.Count)];
-
-                    } while (availabeTransition.Contains(newEntrance) && !(availabeTransition.All(toBePlaced.Contains) && toBePlaced.All(availabeTransition.Contains)));
-
-                    nextTarget.Connections[0].to = newEntrance;
-                    newEntrance.Connections[0].to = nextTarget;
-                    toBePlaced.Remove(newEntrance);
-                    toBePlaced.Remove(nextTarget);
-                }
-            }
-            if (traverseMode == "Teleporter")
-            {
-                    RandomizerPlugin.customFlags[(int)(CustomFlags.TeleporterRando)] = true;
-                startarea.addConnection(areas.Find(x => x.Name == "TeleportHub"), "");
-                foreach (Area area in transitions)
-                {
-                    area.Connections[0].to = null;
-                }
-            }
-            bool failed = false;
-
-            do
-            {
-                failed = false;
-                debugVal++;
-                List<int> TeleporterPool = Enumerable.Range(0,37).ToList();
-                
-                locationPool.Clear();
-                locationPool.CopyFrom(locations);
-                locationPool.RemoveAll(x => x.itemId > 3000);                 // Remove all Extra Options from Pool (they are above 3000)
-                locationPool.RemoveAll(x => x.Itemname.Contains("EVENT"));
-
-                foreach(Location loc in locationPool)
-                {
-                    loc.setNewItem(-1, -1);
-                }
-
-                bossCount = 0;
-                localItemPool = new Dictionary<int, int>(itemPool);
-
-                CustomOptions(ref localItemPool,ref locationPool, seed);                 //Extra stuff
-                foreach (int key in Enum.GetValues(typeof(Progression_Items)))
-                {
-                    if (localItemPool.ContainsKey(key))
-                    {
-                        progressionItems[((Progression_Items)key).ToString()] = localItemPool[key];
-                    }
-                }
-
-                if(traverseMode == "Teleporter")
-                {
-                    for(int i = 0; i < 37; i++)
-                    {
-                        progressionItems[$"Teleporter {i}"] = 1;
-                    }
-                }
-                    
-
-                Debug.Log("Prog");
-                while(progressionItems.Count > 0)
-                {
-                    int itemIndex = seed.Next(progressionItems.Count);
-                    string item = progressionItems.ElementAt(itemIndex).Key;
-                    int itemId;
-                    int slotId = 0;
-
-                    if (item.Contains("Teleporter"))
-                    {
-                        itemId = (int)RandomizerPlugin.PortalItem;
-                        
-                         slotId = int.Parse(item.Split(' ')[1]);
-
-                    }
-                    else
-                        itemId = (int)Enum.Parse(typeof(Progression_Items), item);
-
-                    progressionItems[item]--;
-                    if (progressionItems[item] <= 0)
-                    {
-                        progressionItems.Remove(item);
-                        if (localItemPool.ContainsKey(itemId))
-                            localItemPool.Remove(itemId);
-                    }
-
-                    List<Location> spot = scanLocations(progressionItems);
-                    if(spot.Count == 0)
-                    {
-                        Debug.LogError("No locations left, restarting seed gen");
-                        failed = true;
-                        break;
-                    }
-                    int pos = seed.Next(spot.Count);
-                    Location loc = locationPool.Find(x => x.Locationname == spot[pos].Locationname);
-
-                    locationString[loc.Itemname + loc.slotId.ToString()].newItem = itemId;
-                    locationString[loc.Itemname + loc.slotId.ToString()].newSlotId = slotId;
-
-                    locationPool.Remove(loc);
-                }
-                if (failed)
-                    continue;
-                Debug.Log("Filler");
-
-                while (locationPool.Count > 0)
-                {
-                    int pos = seed.Next(locationPool.Count);
-                    Location loc = locationPool[pos];
-                    int item = createItem(seed,localItemPool);
-                    locationString[loc.Itemname + loc.slotId.ToString()].newItem = item;
-                    locationPool.Remove(loc);
-                }
-
-
-                bossCount = 0;
-
-            } while (failed || !validate());
-            Debug.Log($"[Randomizer] It took {debugVal} tries to create this Seed.");
-
-                creating = false;
-                if (!ArchipelagoInterface.Instance.isConnected)
-                {
-                    RandomizerPlugin.__itemData = GetData();
-                    Dictionary<int, int> transitionData = new Dictionary<int, int>();
-                    foreach (Area area in transitions)
-                    {
-                        if (area.Connections[0].to == null)
-                            transitionData.Add(int.Parse(area.Name), int.Parse(area.Name));
-                        else
-                            transitionData.Add(int.Parse(area.Name), int.Parse(area.Connections[0].to.Name));
-                    }
-                    RandomizerPlugin.transitionData = transitionData;
-                    saveSpoilerLog(RandomizerPlugin.__itemData);
-                }
-            });
-        }
-        
-        private List<Area> recursivAreaSearch(Area startArea, List<Area> visited = null)
+        private List<Area> recursivAreaSearch(Area startArea, HashSet<Area> visited = null)
         {
             List<Area> area = new List<Area>();
-            if (visited == null) visited = new List<Area>();
+            if (visited == null) visited = new HashSet<Area>();
             if (startArea == null || visited.Contains(startArea)) return area;
             visited.Add(startArea);
             foreach (Entrance con in startArea.Connections)
@@ -1055,7 +1134,7 @@ namespace TeviRandomizer
             return area;
         }
 
-
+        /*
         public async void seedCreationLoading()
         {
             TextMeshProUGUI text = UI.UI.finishedText.GetComponent<TextMeshProUGUI>();
@@ -1081,207 +1160,15 @@ namespace TeviRandomizer
             });
 
         }
+        */
 
-        private int createItem(System.Random seed, Dictionary<int, int> pool)
-        {
-            int item = -1;
-
-            if(pool.Count == 0)
-            {
-                Debug.LogWarning("Not enough item in the Pool");
-                return seed.Next(5) + 1;
-            }
-            while (item <0)
-            {
-                int rnd = seed.Next((int)ItemList.Type.MAX);
-                if (pool.ContainsKey(rnd))
-                {
-                    item = rnd;
-                    pool[rnd]--;
-                    if (pool[rnd] <= 0)
-                    {
-                        pool.Remove(rnd);
-                    }
-                }
-            }
-            return item;
-        }
 
         Dictionary<string, int> itemList = new Dictionary<string, int>();
         List<Area> areaList;
 
-        /*
-         * If itemPool is null -> returns all non reachable Locations
-         * else return all reachable Locations with no Item placed
-         */
-        private List<Location> scanLocations(Dictionary<string, int> itemPool = null, Area startArea = null) {
-
-            if (ArchipelagoInterface.Instance.isConnected)
-            {
-                return null;
-            }
-
-            //Check if Return value contains all reachsable locations
-            bool leftover = false;
-            if (itemPool == null)
-            {
-                itemPool = new Dictionary<string, int>();
-                leftover = true;
-            }
-
-            List<Location> locationsFound = new List<Location>();
-
-
-            int currHint = 0;
-            int currBackHint = 1;
-            int itemCount;
-
-            if (startArea == null)
-                areaList = [areas.Find(x => x.Name == "Thanatara Canyon")];
-            else
-                areaList = [startArea];
-            itemList.Clear();
-            if (areaList.Count == 0)
-            {
-                Debug.LogError("[Randomizer] No Entries in areaList!!!!");
-            }
-
-            foreach(var item in itemPool)
-            {
-                itemList[item.Key] = item.Value;
-            }
-            List<Location> checkedLocation = new List<Location>();
-            List<Entrance> entrances = new List<Entrance>();
-            List<Location> localLocations = new List<Location>();
-            entrances.AddRange(areaList[0].Connections);
-            localLocations.AddRange(areaList[0].Locations);
-
-
-            itemCount = -1;
-            int areaCount = -1;
-            while (itemList.Count != itemCount || checkedLocation.Count != areaCount)
-            {
-                itemCount = itemList.Count;
-                areaCount = checkedLocation.Count;
-
-                foreach (Entrance en in entrances.ToArray())
-                {
-                    if (en.to == null)
-                    {
-                        entrances.Remove(en);
-                        continue;
-                    }
-                    if (areaList.Contains(en.to))
-                    {
-                        entrances.Remove(en); continue;
-                    }
-
-                    if (!areaList.Contains(en.to) && en.checkEntrance(itemList))
-                    {
-                        areaList.Add(en.to);
-                        foreach (Entrance e in en.to.Connections)
-                        {
-                            if (!areaList.Contains(e.to)) entrances.Add(e);
-                        }
-                        localLocations.AddRange(en.to.Locations);
-                        entrances.Remove(en);
-                    }
-                }
-
-                foreach (Location loc in localLocations.ToArray())
-                {
-                    if (ignoreLocationList.Contains($"{loc.Itemname}{loc.slotId}"))
-                    {
-                        checkedLocation.Add(loc);
-                        localLocations.Remove(loc);
-                        continue; 
-                    }
-
-                    if (checkedLocation.Contains(loc))
-                    {
-                        localLocations.Remove(loc);
-                        continue;
-                    }
-
-                    if (loc.isReachAble(itemList))
-                    {
-
-                        //Non standart item
-                        if (loc.newItem == 0)
-                        {
-                            if (!itemList.ContainsKey(loc.Itemname))
-                            {
-                                itemList[loc.Itemname] = 1;
-                            }
-                            else
-                            {
-                                itemList[loc.Itemname] += 1;
-                            }
-                        }
-
-                        string item;
-                        if (loc.newItem > 0)
-                        {
-                            if (((ItemList.Type)loc.newItem) == RandomizerPlugin.PortalItem)
-                            {
-                                item = $"Teleporter {loc.newSlotId}";
-                            }
-                            else
-                            {
-                                item = ((ItemList.Type)loc.newItem).ToString();
-                            }
-
-                            if (!itemList.ContainsKey(item))
-                            {
-                                itemList[item] = 1;
-                            }
-                            else
-                            {
-                                itemList[item] += 1;
-                            }
-
-
-
-                            //Add major Item to Hint List
-                            if (Enum.IsDefined(typeof(MajorItemFlag), item) && currHint < ChatSystemPatch.numberOfHints)
-                            {
-                                if (vanillaItemCraft && loc.Loaction.Contains("Upgrade") && currBackHint + currHint < ChatSystemPatch.numberOfHints)
-                                {
-
-                                    ChatSystemPatch.hintList[ChatSystemPatch.hintList.Length - currBackHint] = (loc.Locationname, item, (byte)loc.newSlotId);
-                                    currBackHint++;
-                                }
-                                else
-                                {
-                                    ChatSystemPatch.hintList[currHint] = (loc.Locationname, item, (byte)loc.newSlotId);
-                                    currHint++;
-                                }
-                            }
-                        }
-                        if(loc.newItem < 0)
-                        {
-                            locationsFound.Add(loc);
-                        }
-                        checkedLocation.Add(loc);
-                        localLocations.Remove(loc);
-
-                    }
-                }
-            }
-
-
-
-            if (leftover)
-            {
-                return checkedLocation;
-            }
-            return locationsFound;
-
-        }
-
         private bool validate(Area startArea = null)
         {
-            if (ArchipelagoInterface.Instance.isConnected)
+            if (TeviSettings.APConnected)
             {
                 return false;
             }
@@ -1293,46 +1180,47 @@ namespace TeviRandomizer
 
             //Check if its beatable
 
-            List<Location> preCheck = scanLocations();
-            if (preCheck.Count < locations.Count)
+            List<Location> preCheck = AssumedFill.AssumedSearch(areaList[0]);
+            itemList = AssumedFill.debugItems;
+            if (AssumedFill.debugLocation.Count < locations.Count)
             {
-                Debug.LogError("Not all Location have an Item");
+                Console.WriteLine("Not all Location are reachable");
                 foreach (Location loc in locations)
                 {
                     if (!preCheck.Contains(loc))
-                        Debug.LogError($"Location {loc.Locationname} is not reachable");
+                        Console.WriteLine($"Location {loc.Locationname} is not reachable");
                 }
+                //saveSpoilerLog(GetData());
+
                 return false;
             }
 
-            switch (RandomizerPlugin.goalType)
+            switch (TeviSettings.goalType)
             {
-                case RandomizerPlugin.GoalType.AstralGear:
+                case GoalType.AstralGear:
                 default:
-                    if (itemList.ContainsKey("STACKABLE_COG") && itemList["STACKABLE_COG"] >= RandomizerPlugin.GoMode)
+                    if (itemList.ContainsKey("STACKABLE_COG") && itemList["STACKABLE_COG"] >= TeviSettings.GoMode)
                     {
+                        finished = true;
                         return true;
                     }
-                    break;
-                case RandomizerPlugin.GoalType.BossDefeat:
+                    else
+                    {
+                        Console.WriteLine($"Not Enoguh Astral Gears {itemList["STACKABLE_COG"]}:{TeviSettings.GoMode}");
+                        return false;
+                    }
+                case GoalType.BossDefeat:
                     if (itemList.ContainsKey("EVENT_BOSS") && itemList["EVENT_BOSS"] >= 21)
-                        return true;
-                    break;
+                        finished = true;
+                    return true;
             }
-
-            foreach (var item in itemList)
-            {
-                if(Enum.IsDefined(typeof(Progression_Items),item.Key))
-                    Debug.LogWarning($"{item.Key}:{item.Value}");
-            }
-            return false;
 
             /*
             if (!itemList.ContainsKey("STACKABLE_COG"))
                 return false;
-            if (itemList["STACKABLE_COG"] > Math.Floor((float)RandomizerPlugin.GoMode / 2f))
+            if (itemList["STACKABLE_COG"] > Math.Floor((float)TeviRandomizerSettings.GoMode / 2f))
             {
-                //Debug.LogWarning("CheckIn");
+                //Console.WriteLine("CheckIn");
                 if (areaList.Count != areas.Count)
                 {
                     foreach (Area ar in areaList)
@@ -1342,7 +1230,7 @@ namespace TeviRandomizer
                         {
                             if (a.Name == ar.Name) { f = true; break; }
                         }
-                        if (!f) { Debug.LogError($"{ar.Name} Not IN LIST"); }
+                        if (!f) { Console.WriteLine($"{ar.Name} Not IN LIST"); }
                     }
 
                 }
@@ -1369,83 +1257,24 @@ namespace TeviRandomizer
             */
 
         }
-        private bool goalCheck(Dictionary<string, int> itemList, List<Area> areaList)
-        {
-            if (itemList["STACKABLE_COG"] < RandomizerPlugin.GoMode)
-            {
-                Debug.LogWarning($"Not Enough Gears in the run. Found {itemList["STACKABLE_COG"]}");
-                return false;
-            }
-            if (!itemList.ContainsKey("ITEM_SLIDE"))
-            {
-                Debug.LogWarning($"Slide Not Found");
-
-                return false;
-            }
-            if (!itemList.ContainsKey("ITEM_LINEBOMB"))
-            {
-                Debug.LogWarning($"LineBomb Not Found");
-
-                return false;
-            }
-            if (!itemList.ContainsKey("ITEM_DOUBLEJUMP"))
-            {
-                Debug.LogWarning($"Double Jump Not Found");
-
-                return false;
-            }
-            if (!itemList.ContainsKey("ITEM_JETPACK"))
-            {
-                Debug.LogWarning($"Jet Not Found");
-
-                return false;
-            }
-            if (!itemList.ContainsKey("ITEM_WALLJUMP"))
-            {
-                Debug.LogWarning($"Walljump Not Found");
-
-                return false;
-            }
-            if (!itemList.ContainsKey("ITEM_AirDash"))
-            {
-                Debug.LogWarning($"Air Dash Not Found");
-
-                return false;
-            }
-            if (!itemList.ContainsKey("ITEM_AirSlide"))
-            {
-                Debug.LogWarning($"Fairy Powder Not Found");
-
-                return false;
-            }
-            if (!itemList.ContainsKey("ITEM_Rotater"))
-            {
-                Debug.LogWarning($"Vortex Glove Not Found");
-
-                return false;
-            }
-            if (!itemList.ContainsKey("ITEM_HIJUMP"))
-            {
-                Debug.LogWarning($"Highjump Glove Not Found");
-
-                return false;
-            }
-            return true;
-        }
 
         public Dictionary<string, string> GetData()
         {
             Dictionary<string, string> data = new Dictionary<string, string>();
+            if (!TeviSettings.customFlags[CustomFlags.RandomMoney])
+                locations.AddRange(Money);
+            if (!TeviSettings.customFlags[CustomFlags.RandomResource])
+                locations.AddRange(resources);
             foreach (Location loc in locations)
             {
 
 
 
                 string item1 = loc.Locationname;
-                string item2 = ((ItemList.Type)loc.newItem).ToString();
+                string item2 = loc.newItem;
                 try
                 {
-                    if (item2 == RandomizerPlugin.PortalItem.ToString())
+                    if (item2 == TeviSettings.PortalItem.ToString())
                     {
                         data.Add(item1, $"Teleporter {loc.newSlotId}");
                     }
@@ -1456,7 +1285,7 @@ namespace TeviRandomizer
                 }
                 catch
                 {
-                    Debug.LogWarning($"Already changed {item1}. Dropping {item2}");
+                    Console.WriteLine($"Already changed {item1}. Dropping {item2}");
 
                 }
             }
@@ -1465,45 +1294,61 @@ namespace TeviRandomizer
             return data;
         }
 
+        static public Dictionary<string, OptionObserver> settings = new Dictionary<string, OptionObserver>();
 
-        static public Dictionary<string, object> settings = new Dictionary<string, object>();
 
-
-        static public void saveSpoilerLog(Dictionary<string, string> itemData)
+        public void saveSpoilerLog(Dictionary<string, string> itemData)
         {
-            if (!Directory.Exists(RandomizerPlugin.pluginPath + "/Data")) Directory.CreateDirectory(RandomizerPlugin.pluginPath + "/Data");
+            if (!Directory.Exists(TeviSettings.pluginPath + "/Data")) Directory.CreateDirectory(TeviSettings.pluginPath + "/Data");
             DateTime today = DateTime.Now;
-            StreamWriter spoilerLog = File.CreateText(RandomizerPlugin.pluginPath + "/Data/" + $"Spoilerlog.{today.Day}.{today.Month}.{today.Year}.{today.Hour}.{today.Minute}.txt");
-            ItemList.Type value;
-            spoilerLog.WriteLine("Locations:");
+            StreamWriter spoilerLog = File.CreateText(TeviSettings.pluginPath + "/Data/" + $"{today.Year}_{today.Month}_{today.Day}_{today.Hour}_{today.Minute}_Spoilerlog.txt");
+            spoilerLog.WriteLine("Options:\n");
+            foreach (var option in settings)
+            {
+                spoilerLog.WriteLine($"{option.Key + ":",-50}{option.Value.Value.ToString()}");
+            }
+
+
+            spoilerLog.WriteLine("\n\n\n\nSpheres:\n");
+
+            Area startarea = areas.Find(x => x.Name == "Thanatara Canyon");
+            var spheres = AssumedFill.SphereSearch(startarea);
+
+            for (int i = 0; i < spheres.Count; i++)
+            {
+                spoilerLog.WriteLine($"{i + 1}: {{");
+                foreach (var loc in spheres[i])
+                {
+                    if (Enum.TryParse<Progression_Items>(loc.newItem, out _) || loc.newItem.Contains("Teleporter"))
+                    {
+                        string item = APItemNames.ContainsKey(loc.newItem) ? APItemNames[loc.newItem] : loc.newItem;
+                        spoilerLog.WriteLine($"    {loc.Locationname} => {item}");
+                    }
+                }
+                spoilerLog.WriteLine("}");
+            }
+
+
+            spoilerLog.WriteLine("\n\n\n\nLocations:\n");
             foreach (KeyValuePair<string, string> item in itemData)
             {
-                if (ItemList.Type.TryParse(item.Value, out value))
-                {
-                    spoilerLog.WriteLine($"{item.Key} => {Localize.GetLocalizeTextWithKeyword("ITEMNAME." + (value).ToString(), false)}");
-                }
-                else
-                {
-                    spoilerLog.WriteLine($"{item.Key} => {item.Value}");
-                }
+
+
+                string item2 = APItemNames.ContainsKey(item.Value) ? APItemNames[item.Value] : item.Value;
+                
+                spoilerLog.WriteLine($"{item.Key} => {item2}");
+                
             }
-            spoilerLog.WriteLine("\nTransitions:");
-            if (RandomizerPlugin.transitionData != null)
+            spoilerLog.WriteLine("\n\n\n\nTransitions:\n");
+            if (TeviSettings.transitionData != null)
             {
-                foreach (var entry in RandomizerPlugin.transitionData)
+                foreach (var entry in TeviSettings.transitionData)
                 {
-                    spoilerLog.WriteLine($"{transitionIdToName[entry.Key]} -> {transitionIdToName[entry.Value]}");
+                    if (transitionIdToName != null)
+                        spoilerLog.WriteLine($"{transitionIdToName[entry.Key]} -> {transitionIdToName[entry.Value]}");
                 }
             }
             spoilerLog.Close();
         }
-
-        private List<Location> getAvailableLocations(Area startArea)
-        {
-            List<Location> locations = new List<Location>();
-
-            return locations;
-        }
-
     }
-    }
+}

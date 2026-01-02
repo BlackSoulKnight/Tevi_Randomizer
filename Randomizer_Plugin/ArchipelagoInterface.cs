@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using Archipelago.MultiClient.Net;
 using Archipelago.MultiClient.Net.BounceFeatures.DeathLink;
 using Archipelago.MultiClient.Net.Enums;
 using Archipelago.MultiClient.Net.Models;
 using Archipelago.MultiClient.Net.Packets;
-using EventMode;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
-
+using TeviRandomizer.TeviRandomizerSettings;
 
 /*
  * Things missing:
@@ -116,7 +114,7 @@ namespace TeviRandomizer
             this.isConnected = true;
             this.isSynced = false;
             this.currentItemNR = 0;
-            if (((UnityEngine.UI.Toggle)Randomizer.settings["Toggle DeathLink"]).isOn)
+            if ((bool)Randomizer.settings["DeathLink"].Value)
                 enableDeathLink();
             lostConnection = false;
             PlayerNames.Clear();
@@ -144,43 +142,43 @@ namespace TeviRandomizer
             Debug.Log(optionData);
             LocationData locationData = new LocationData();
             long extraPotions = (long)optionData.GetValue("free_attack_up");
-            RandomizerPlugin.extraPotions = [(int)extraPotions, (int)extraPotions];
-            RandomizerPlugin.customFlags[(int)CustomFlags.TempOption] = (bool)optionData.GetValue("open_morose");
-            RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart] = (bool)optionData.GetValue("celia_sable");
-            RandomizerPlugin.customFlags[(int)CustomFlags.SuperBosses] = (bool)optionData.GetValue("superBosses");
-            RandomizerPlugin.GoMode = (int)(long)optionData.GetValue("goal_count");
+            TeviSettings.extraPotions = [(int)extraPotions, (int)extraPotions];
+            TeviSettings.customFlags[CustomFlags.TempOption] = (bool)optionData.GetValue("open_morose");
+            TeviSettings.customFlags[CustomFlags.CebleStart] = (bool)optionData.GetValue("celia_sable");
+            TeviSettings.customFlags[CustomFlags.SuperBosses] = (bool)optionData.GetValue("superBosses");
+            TeviSettings.GoMode = (int)(long)optionData.GetValue("goal_count");
             if (optionData.ContainsKey("traverse_mode"))
             {
-                RandomizerPlugin.customFlags[(int)(CustomFlags.TeleporterRando)] = (int)optionData.GetValue("traverse_mode") == 2;
+                TeviSettings.customFlags[CustomFlags.TeleporterRando] = (int)optionData.GetValue("traverse_mode") == 2;
 
             }
             //depcriated
             if(optionData.ContainsKey("teleporter_mode"))
-                RandomizerPlugin.customFlags[(int)(CustomFlags.TeleporterRando)] = (bool)optionData.GetValue("teleporter_mode");
+                TeviSettings.customFlags[CustomFlags.TeleporterRando] = (bool)optionData.GetValue("teleporter_mode");
             if (optionData.ContainsKey("goal_type"))
             {
                 switch ((int)optionData.GetValue("goal_type"))
                 {
                     case 1:
-                        RandomizerPlugin.goalType = RandomizerPlugin.GoalType.BossDefeat;
+                        TeviSettings.goalType = GoalType.BossDefeat;
                         break;
                     case 0:
                     default:
-                        RandomizerPlugin.goalType = RandomizerPlugin.GoalType.AstralGear;
+                        TeviSettings.goalType = GoalType.AstralGear;
                         break;
                 }
             }
             else
-                RandomizerPlugin.goalType = RandomizerPlugin.GoalType.AstralGear;
+                TeviSettings.goalType = GoalType.AstralGear;
         }
         private void oldSlotData(Dictionary<string,object> SlotData)
         {
             
             long extraPotions = (long)SlotData["attackMode"];
-            RandomizerPlugin.extraPotions = [(int)extraPotions, (int)extraPotions];
-            RandomizerPlugin.customFlags[(int)CustomFlags.TempOption] = (long)SlotData["openMorose"] > 0;
-            RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart] = (long)SlotData["CeliaSable"] > 0;
-            RandomizerPlugin.GoMode = (int)(long)SlotData["GoalCount"];
+            TeviSettings.extraPotions = [(int)extraPotions, (int)extraPotions];
+            TeviSettings.customFlags[CustomFlags.TempOption] = (long)SlotData["openMorose"] > 0;
+            TeviSettings.customFlags[CustomFlags.CebleStart] = (long)SlotData["CeliaSable"] > 0;
+            TeviSettings.GoMode = (int)(long)SlotData["GoalCount"];
         }
         private void toggleDeathLink()
         {
@@ -341,7 +339,7 @@ namespace TeviRandomizer
                 }
                 RandomizerPlugin.__itemData.Add(entry.Key,item);
             }
-            RandomizerPlugin.transitionData = transitionData;
+            TeviSettings.transitionData = transitionData;
         }
 
 
@@ -377,7 +375,7 @@ namespace TeviRandomizer
 
         void Awake()
         {
-            string path = RandomizerPlugin.pluginPath + "/resource/";
+            string path = TeviSettings.pluginPath + "/resource/";
 
             TeviToAPName = JObject.Parse(File.ReadAllText(path+ "ItemToReal.json"));
             APNameToTevi = new JObject();
@@ -423,7 +421,7 @@ namespace TeviRandomizer
                     if(itemID >= 500 && itemID <= 536)
                     {
                         value = (byte)(itemID - 500);
-                        itemID = (byte)RandomizerPlugin.PortalItem;
+                        itemID = (byte)TeviSettings.PortalItem;
                     }
                     teviItem = (ItemList.Type)itemID;
                     var em = EventManager.Instance;

@@ -7,64 +7,17 @@ using HarmonyLib;
 using Map;
 using Newtonsoft.Json;
 using QFSW.QC;
-using Rewired.ComponentControls.Data;
-using Steamworks;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-
+using TeviRandomizer.TeviRandomizerSettings;
 
 
 
 namespace TeviRandomizer
 {
-
-
-
-    public enum Upgradable
-    {
-        ITEM_KNIFE = 10,
-        ITEM_ORB = 11,
-        ITEM_RapidShots = 12,
-        ITEM_AttackRange = 13,
-        ITEM_EasyStyle = 14,
-        ITEM_LINEBOMB = 15,
-        ITEM_AREABOMB = 16,
-        ITEM_SPEEDUP = 17,
-        ITEM_AirDash = 18,
-        ITEM_WALLJUMP = 19,
-        ITEM_JETPACK = 20,
-        ITEM_BoostSystem = 21,
-        ITEM_BombLengthExtend = 22,
-        ITEM_MASK = 23,
-        ITEM_TempRing = 24,
-        ITEM_DodgeShot = 25,
-        ITEM_Rotater = 26,
-        ITEM_GoldenGlove = 27,
-        ITEM_OrbAmulet = 28,
-        ITEM_BOMBFUEL = 29,
-        ITEM_Explorer = 30,
-    }
-
-    public enum CustomFlags : short
-    {
-        OrbStart = 0,
-        CebleStart = 1,
-        CompassStart = 2,
-        TempOption = 3,
-        RandomizedEnemy = 4,
-        RandomizedBoss = 7,
-        AlwaysRandomizeEnemy = 5,
-        SuperBosses = 6,
-        RandomizedMusic = 8,
-        RandomizedBG = 9,
-        RevealPaths = 10,
-        TeleporterRando = 11,
-    }
-
-
 
 
     [BepInPlugin("tevi.plugins.randomizer", "Randomizer", MyPluginInfo.PLUGIN_VERSION)]
@@ -82,23 +35,14 @@ namespace TeviRandomizer
             IllusionPalace = 9999
         }
 
-        public enum GoalType
+        RandomizerPlugin()
         {
-            AstralGear,
-            BossDefeat
+            TeviSettings.pluginPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         }
 
-        static public Dictionary<string, string> __itemData = new Dictionary<string, string>();
+        static public Dictionary<string, string> __itemData = new();
 
-        static public int customAtkDiff = -1;
-        static public int customHpDiff = -1;
-        static public int customStartDiff = -1;
         static public List<int> transitionVisited = new List<int>();
-        static public GoalType goalType = GoalType.AstralGear;
-        static public bool[] customFlags = new bool[Enum.GetNames(typeof(CustomFlags)).Length];
-        static public int[] extraPotions = [0, 0]; // Hardcoded omo
-        static public int GoMode = -1;
-        static public string pluginPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         static public string seed;
         static public Dictionary<int, int> transitionData;
         static public List<int> UniqueEnemiesKilled = new List<int>();
@@ -133,7 +77,7 @@ namespace TeviRandomizer
             this.gameObject.AddComponent<ItemDistributionSystem>();
             ArchipelagoInterface.Instance = gameObject.GetComponent<ArchipelagoInterface>();
             Localize.GetLocalizeTextWithKeyword("", false);
-            randomizer = Randomizer.Instance;
+            randomizer = new();
 
             harmonyPatchInstance.PatchAll(typeof(UI.UI));
             toggleRandomizerPlugin();
@@ -151,8 +95,8 @@ namespace TeviRandomizer
                 Debug.Log("Not Connected to a Archipelago Server");
                 return;
             }
-            if(ArchipelagoInterface.Instance.checkoutLocation(location));
-                ArchipelagoInterface.Instance.sendMessage("[Debug] Location send via Console");
+            if(ArchipelagoInterface.Instance.checkoutLocation(location))
+                ArchipelagoInterface.Instance.sendMessage($"[Debug] Send Location {location} via Console");
 
         }
 
@@ -315,13 +259,13 @@ namespace TeviRandomizer
         {
             if (keyword == "Todo.GoalTipFreeRoam")
             {
-                switch (goalType) {
+                switch (TeviSettings.goalType) {
                     case GoalType.BossDefeat:
                         __result = __result.Replace("16 Astral Gears", "21 Boss Kills");
                         break;
                     case GoalType.AstralGear:
                     default:
-                        __result = __result.Replace("16", GoMode.ToString());
+                        __result = __result.Replace("16", TeviSettings.GoMode.ToString());
                         break;
             }
             }
@@ -340,8 +284,8 @@ namespace TeviRandomizer
                 seed = new System.Random().Next(int.MaxValue).ToString();
             }
             rando = new System.Random(seed.GetHashCode());
-
-            randomizer.createSeed(rando);
+            randomizer = new();
+            randomizer.CreateSeed(rando);
             //randomizer.createSeed(rando);
         }
 
@@ -524,7 +468,7 @@ namespace TeviRandomizer
 
 
                     int num5 = (int)___phy_perfer.GetCounter(4);
-                    if(GemaMissionMode.Instance.isInMission() && !customFlags[(short)CustomFlags.TeleporterRando])
+                    if(GemaMissionMode.Instance.isInMission() && !TeviSettings.customFlags[CustomFlags.TeleporterRando])
                         EventManager.Instance.StartWarp(1, 1, 1, 1);
                     else
                         GemaUIPauseMenu.Instance.OpenPauseMenu(true);
@@ -799,7 +743,7 @@ namespace TeviRandomizer
 
         static Sprite createNewArchipelagoSprite(string file)
         {
-            string path = pluginPath + "/resource/Archipelago/" + file;
+            string path = TeviSettings.pluginPath + "/resource/Archipelago/" + file;
             Texture2D texture = new Texture2D(2, 2);
             if (!File.Exists(path)) { return null; }
             byte[] imageAsset = System.IO.File.ReadAllBytes(path);
@@ -809,7 +753,7 @@ namespace TeviRandomizer
         }
         static Sprite createNewSprite(string file)
         {
-            string path = pluginPath + "/resource/" + file;
+            string path = TeviSettings.pluginPath + "/resource/" + file;
             Texture2D texture = new Texture2D(2, 2);
             if (!File.Exists(path)) { return null; }
             byte[] imageAsset = System.IO.File.ReadAllBytes(path);
@@ -1123,14 +1067,14 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static void fade1(ref float target)
         {
-            if (RandomizerPlugin.customFlags[(int)CustomFlags.RevealPaths])
+            if (TeviSettings.customFlags[CustomFlags.RevealPaths])
                 target = 0;
         }
         [HarmonyPatch(typeof(WorldManager), "SetFrontLayer")]
         [HarmonyPrefix]
         static void fade2(ref float target)
         {
-            if (RandomizerPlugin.customFlags[(int)CustomFlags.RevealPaths])
+            if (TeviSettings.customFlags[CustomFlags.RevealPaths])
 
                 target = 0;
         }
@@ -1138,7 +1082,7 @@ namespace TeviRandomizer
         [HarmonyPostfix]
         static void fade0(ref float ___FrontFadeTarget)
         {
-            if (RandomizerPlugin.customFlags[(int)CustomFlags.RevealPaths])
+            if (TeviSettings.customFlags[CustomFlags.RevealPaths])
                 ___FrontFadeTarget = 0;
         }
 
@@ -1169,7 +1113,7 @@ namespace TeviRandomizer
         static void disableChargeShots(ref bool ___mustNormal,ref CharacterPhy __instance)
         {
             
-            if(SaveManager.Instance.GetItem(ItemList.Type.ITEM_ORB) < (RandomizerPlugin.customFlags[(short)CustomFlags.CebleStart]? 1:2))
+            if(SaveManager.Instance.GetItem(ItemList.Type.ITEM_ORB) < (TeviSettings.customFlags[CustomFlags.CebleStart] ? 1:2))
                 ___mustNormal = true;
 
         }
@@ -1257,7 +1201,7 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static void changeMusic(ref Music musicname, ref Music __state)
         {
-            if (RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedMusic])
+            if (TeviSettings.customFlags[CustomFlags.RandomizedMusic])
             {
                 if (Extras.RandomizeExtra.randomizedMusic[(byte)musicname] == 0) {
                     __state = Music.OFF;
@@ -1274,7 +1218,7 @@ namespace TeviRandomizer
         static void saveLastMusic(ref Music ___lastMusic, ref Music __state, ref Music ___readyMusic)
         {
 
-            if (RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedMusic])
+            if (TeviSettings.customFlags[CustomFlags.RandomizedMusic])
             {
 
                 if (__state == Music.LOOP || __state == Music.OFF) { return; }
@@ -1294,14 +1238,14 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static bool setMaxBossHealth(ref enemyController __instance)
         {
-            int customAttack = RandomizerPlugin.customAtkDiff;
-            int customHP = RandomizerPlugin.customHpDiff;
-            if (RandomizerPlugin.customAtkDiff < 0)
+            int customAttack = TeviSettings.customAtkDiff;
+            int customHP = TeviSettings.customHpDiff;
+            if (TeviSettings.customAtkDiff < 0)
                 customAttack = (int)(SaveManager.Instance.GetDifficultyName());
-            if (RandomizerPlugin.customHpDiff < 0)
+            if (TeviSettings.customHpDiff < 0)
                 customHP = (int)(SaveManager.Instance.GetDifficultyName());
 
-            if (RandomizerPlugin.customHpDiff < 0)
+            if (TeviSettings.customHpDiff < 0)
                 customHP = (int)(SaveManager.Instance.GetDifficultyName());
             int num = customAttack - 5;
             float num2 = 0f;
@@ -1341,11 +1285,11 @@ namespace TeviRandomizer
         [HarmonyPostfix]
         static void balanceAct(ref enemyController __instance)
         {
-            int customAttack = RandomizerPlugin.customAtkDiff;
-            int customHP = RandomizerPlugin.customHpDiff;
-            if (RandomizerPlugin.customAtkDiff < 0)
+            int customAttack = TeviSettings.customAtkDiff;
+            int customHP = TeviSettings.customHpDiff;
+            if (TeviSettings.customAtkDiff < 0)
                 customAttack = (int)(SaveManager.Instance.GetDifficultyName());
-            if (RandomizerPlugin.customHpDiff < 0)
+            if (TeviSettings.customHpDiff < 0)
                 customHP = (int)(SaveManager.Instance.GetDifficultyName());
 
             if (!TeamManager.Instance.enemyMembers.Contains(__instance))
@@ -1696,11 +1640,11 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static bool subBossBoost(ref enemyController __instance)
         {
-            int customAttack = RandomizerPlugin.customAtkDiff;
-            int customHP = RandomizerPlugin.customHpDiff;
-            if (RandomizerPlugin.customAtkDiff < 0)
+            int customAttack = TeviSettings.customAtkDiff;
+            int customHP = TeviSettings.customHpDiff;
+            if (TeviSettings.customAtkDiff < 0)
                 customAttack = (int)(SaveManager.Instance.GetDifficultyName());
-            if (RandomizerPlugin.customHpDiff < 0)
+            if (TeviSettings.customHpDiff < 0)
                 customHP = (int)(SaveManager.Instance.GetDifficultyName());
 
             if (GemaBossRushMode.Instance.isBossRush() || (__instance.type != Character.Type.Barados && __instance.type != Character.Type.Caprice && __instance.type != Character.Type.Katu && __instance.type != Character.Type.Thetis && __instance.type != Character.Type.Roleo))
@@ -1787,11 +1731,11 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static bool difficultyBossHealth(ref enemyController __instance)
         {
-            int customAttack = RandomizerPlugin.customAtkDiff;
-            int customHP = RandomizerPlugin.customHpDiff;
-            if (RandomizerPlugin.customAtkDiff < 0)
+            int customAttack = TeviSettings.customAtkDiff;
+            int customHP = TeviSettings.customHpDiff;
+            if (TeviSettings.customAtkDiff < 0)
                 customAttack = (int)(SaveManager.Instance.GetDifficultyName());
-            if (RandomizerPlugin.customHpDiff < 0)
+            if (TeviSettings.customHpDiff < 0)
                 customHP = (int)(SaveManager.Instance.GetDifficultyName());
             float num = 0f;
             Difficulty difficultyName = (Difficulty)customHP;
@@ -1906,11 +1850,11 @@ namespace TeviRandomizer
             if (___cb_perfer.isPlayer())
             {
                 float maxMult = 1f;
-                int customAttack = RandomizerPlugin.customAtkDiff;
-                int customHP = RandomizerPlugin.customHpDiff;
-                if (RandomizerPlugin.customAtkDiff < 0)
+                int customAttack = TeviSettings.customAtkDiff;
+                int customHP = TeviSettings.customHpDiff;
+                if (TeviSettings.customAtkDiff < 0)
                     customAttack = (int)(SaveManager.Instance.GetDifficultyName());
-                if (RandomizerPlugin.customHpDiff < 0)
+                if (TeviSettings.customHpDiff < 0)
                     customHP = (int)(SaveManager.Instance.GetDifficultyName());
 
                 if (customAttack >= 21)

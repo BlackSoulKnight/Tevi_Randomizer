@@ -2,12 +2,8 @@
 using EventMode;
 using Game;
 using HarmonyLib;
-using Map;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using UnityEngine;
-
+using TeviRandomizer.TeviRandomizerSettings;
 namespace TeviRandomizer
 {
     class EventPatch
@@ -33,17 +29,17 @@ namespace TeviRandomizer
                     ArchipelagoInterface.Instance.currentItemNR = 0;
                 }
 
-                if (RandomizerPlugin.customFlags[(int)CustomFlags.CompassStart])
+                if (TeviSettings.customFlags[CustomFlags.CompassStart])
                 {
                     SaveManager.Instance.SetItem(ItemList.Type.ITEM_Explorer, 4);
                     SaveManager.Instance.SetItem(ItemList.Type.ITEM_Explorer, 5);
                     SaveManager.Instance.SetItem(ItemList.Type.ITEM_Explorer, 6);
                 }
-                for (int i = RandomizerPlugin.extraPotions[0]; i > 0; i--)
+                for (int i = TeviSettings.extraPotions[0]; i > 0; i--)
                 {
                     SaveManager.Instance.SetItem(ItemList.Type.STACKABLE_RATK, 1, true);
                 }
-                for (int i = RandomizerPlugin.extraPotions[1]; i > 0; i--)
+                for (int i = TeviSettings.extraPotions[1]; i > 0; i--)
                 {
                     SaveManager.Instance.SetItem(ItemList.Type.STACKABLE_MATK, 1, true);
                 }
@@ -56,10 +52,10 @@ namespace TeviRandomizer
                     SaveManager.Instance.AddBreakTile(0, 367, 248);
                 }
 
-                if (RandomizerPlugin.customStartDiff >= 0)
-                    SaveManager.Instance.SetDifficulty(RandomizerPlugin.customStartDiff);
+                if (TeviSettings.customStartDiff >= 0)
+                    SaveManager.Instance.SetDifficulty(TeviSettings.customStartDiff);
                 // Make a Path to Morose
-                if (RandomizerPlugin.customFlags[(int)CustomFlags.TempOption])
+                if (TeviSettings.customFlags[CustomFlags.TempOption])
                 {
                     // Blocks to the area between Canyon and morose
                     SaveManager.Instance.AddBreakTile(1, 302, 189);
@@ -142,7 +138,7 @@ namespace TeviRandomizer
             {
                 //ShopPatch.alreadyClaimed();
                 //VenaItemClaimedCheck();
-                if (RandomizerPlugin.customFlags[(int)CustomFlags.CebleStart])
+                if (TeviSettings.customFlags[CustomFlags.CebleStart])
                 {
                     SaveManager.Instance.SetItem(ItemList.Type.I19, 1);
                     SaveManager.Instance.SetItem(ItemList.Type.I20, 1);
@@ -347,17 +343,17 @@ namespace TeviRandomizer
         static bool IllusionReq(ref bool __result)
         {
             __result = false;
-            switch (RandomizerPlugin.goalType)
+            switch (TeviSettings.goalType)
             {
-                case RandomizerPlugin.GoalType.BossDefeat:
+                case GoalType.BossDefeat:
                     if(SaveManager.Instance.GetCurrentBossBeaten() < 21)
                     {
                         __result = true;
                     }
                     break;
-                case RandomizerPlugin.GoalType.AstralGear:
+                case GoalType.AstralGear:
                 default:
-                    if (SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_COG) < RandomizerPlugin.GoMode)
+                    if (SaveManager.Instance.GetStackableCount(ItemList.Type.STACKABLE_COG) < TeviSettings.GoMode)
                     {
                         __result = true;
                         return false;
@@ -384,14 +380,14 @@ namespace TeviRandomizer
                     if (!HUDPopupMessage.Instance.gameObject.activeInHierarchy)
                     {
                         string msg;
-                        switch (RandomizerPlugin.goalType)
+                        switch (TeviSettings.goalType)
                         {
-                            case RandomizerPlugin.GoalType .BossDefeat:
+                            case GoalType .BossDefeat:
                                 msg = Localize.GetLocalizeTextWithKeyword("FreeRoamNotEnoughCog", contains: false).Replace("16 Astral Gears", "21 Boss Kills");
                                 break;
                             default:
-                            case RandomizerPlugin.GoalType.AstralGear:
-                                msg = Localize.GetLocalizeTextWithKeyword("FreeRoamNotEnoughCog", contains: false).Replace("16", RandomizerPlugin.GoMode.ToString());
+                            case GoalType.AstralGear:
+                                msg = Localize.GetLocalizeTextWithKeyword("FreeRoamNotEnoughCog", contains: false).Replace("16", TeviSettings.GoMode.ToString());
                                 break;
                         }
                         HUDPopupMessage.Instance.AddMessage(Localize.GetLocalizeTextWithKeyword("POPUP_INFORMATION", contains: false), msg, null, 0);
@@ -578,7 +574,7 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static void noPort()
         {
-            if (!RandomizerPlugin.customFlags[(byte)CustomFlags.TempOption])
+            if (!TeviSettings.customFlags[CustomFlags.TempOption])
             {
                 EventManager.Instance.SetStage(1);
                 FadeManager.Instance.SetTargetAlpha(0f);

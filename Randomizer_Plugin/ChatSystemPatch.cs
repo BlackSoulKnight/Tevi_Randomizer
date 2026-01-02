@@ -2,9 +2,10 @@
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using TeviRandomizer.TeviRandomizerSettings;
 using UnityEngine;
 using UnityEngine.UIElements;
-using System.IO;
 
 namespace TeviRandomizer
 {
@@ -36,7 +37,7 @@ namespace TeviRandomizer
         static Dictionary<string,List<ChatSystem.ChatRow>> customTexts = loadCustomTexts();
         static private Dictionary<string, List<ChatSystem.ChatRow>> loadCustomTexts()
         {
-            string path = RandomizerPlugin.pluginPath + "/resource/customTexts/";
+            string path = TeviSettings.pluginPath + "/resource/customTexts/";
             Dictionary<string, List<ChatSystem.ChatRow>> dict = new Dictionary<string, List<ChatSystem.ChatRow>>();
             JObject texts = JObject.Parse(File.ReadAllText(path + "textCollection.json"));
             JObject jp = JObject.Parse(File.ReadAllText(path + "jp.json"));

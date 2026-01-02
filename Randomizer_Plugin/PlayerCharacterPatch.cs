@@ -1,9 +1,4 @@
-﻿using EventMode;
-using UnityEngine;
-using Bullet;
-using Character;
-using HarmonyLib;
-using Game;
+﻿using HarmonyLib;
 
 namespace TeviRandomizer
 {

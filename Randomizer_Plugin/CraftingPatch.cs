@@ -7,7 +7,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.ResourceManagement;
 using UnityEngine.UI;
-
+using TeviRandomizer.TeviRandomizerSettings;
 namespace TeviRandomizer
 {
     class CraftingPatch

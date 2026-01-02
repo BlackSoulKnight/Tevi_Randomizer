@@ -10,6 +10,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Threading.Tasks;
+using TeviRandomizer.TeviRandomizerSettings;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -44,8 +46,36 @@ namespace TeviRandomizer.UI
         static public GameObject finishedText;
 
 
+        public static async void seedCreationLoading()
+        {
+            TextMeshProUGUI text = finishedText.GetComponent<TextMeshProUGUI>();
+            string t = "Creating ";
+            text.text = "Creating";
+            finishedText.SetActive(true);
+            await Task.Run(() =>
+            {
+                int count = 0;
+                while (Randomizer.creating)
+                {
+                    count++;
+                    text.text = t + new string('.', count % 4);
+                    Task.Delay(300).Wait();
+                }
+                if (ArchipelagoInterface.Instance.isConnected)
+                {
+                    text.text = "Connected to AP Server";
+                }
+                else
+                    text.text = "Finished Creating Seed";
+
+            });
+
+        }
+
+
+
         static byte menuSlot;
-        static GameObject RandoUIPrefab = AssetBundle.LoadFromFile(RandomizerPlugin.pluginPath + "/resource/randomizerui").LoadAsset<GameObject>("Randomizer Setting");
+        static GameObject RandoUIPrefab = AssetBundle.LoadFromFile(TeviSettings.pluginPath + "/resource/randomizerui").LoadAsset<GameObject>("Randomizer Setting");
 
         [HarmonyPatch(typeof(GemaTitleScreenManager),"delayAwake")]
         [HarmonyPostfix]
@@ -54,7 +84,7 @@ namespace TeviRandomizer.UI
             settings.Clear();
             RandomizerPlugin.deloadRando();
 
-            string path = RandomizerPlugin.pluginPath+ "/resource/";
+            string path = TeviSettings.pluginPath+ "/resource/";
 
             //GameObject newSelection = new GameObject("Select Slot", typeof(RectTransform));
             //newSelection.AddComponent<GemaMainMenuSelectionSlot>();
@@ -113,8 +143,8 @@ namespace TeviRandomizer.UI
                 }
                 if (list.Count > 0)
                 {
-                    if (!Directory.Exists(RandomizerPlugin.pluginPath + "/Data")) Directory.CreateDirectory(RandomizerPlugin.pluginPath + "/Data");
-                    StreamWriter errorLog = File.CreateText(RandomizerPlugin.pluginPath + "/Data/" + $"ApLocationMatchError.txt");
+                    if (!Directory.Exists(TeviSettings.pluginPath + "/Data")) Directory.CreateDirectory(TeviSettings.pluginPath + "/Data");
+                    StreamWriter errorLog = File.CreateText(TeviSettings.pluginPath + "/Data/" + $"ApLocationMatchError.txt");
                     foreach(string location in list)
                     {
                         errorLog.WriteLine(location);
@@ -255,26 +285,26 @@ namespace TeviRandomizer.UI
         void patchExtraFeatures()
         {
             Extras.patchWhiteFlash(((UnityEngine.UI.Toggle)UI.settings["Toggle AntiFlash"]).isOn);
-            RandomizerPlugin.customFlags[(int)CustomFlags.AlwaysRandomizeEnemy] = ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn;
-            RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss] = ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomBoss"]).isOn;
-            RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedEnemy] = ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn || ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomEnemies"]).isOn;
-            RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBG] = ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomBG"]).isOn;
-            RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedMusic] = ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomMusic"]).isOn;
-            ResourcePatch.patchResources(RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBoss] || RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedEnemy] || RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBG] || RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedMusic]);
+            TeviSettings.customFlags[CustomFlags.AlwaysRandomizeEnemy] = ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn;
+            TeviSettings.customFlags[CustomFlags.RandomizedBoss] = ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomBoss"]).isOn;
+            TeviSettings.customFlags[CustomFlags.RandomizedEnemy] = ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn || ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomEnemies"]).isOn;
+            TeviSettings.customFlags[CustomFlags.RandomizedBG] = ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomBG"]).isOn;
+            TeviSettings.customFlags[CustomFlags.RandomizedMusic] = ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomMusic"]).isOn;
+            ResourcePatch.patchResources(TeviSettings.customFlags[CustomFlags.RandomizedBoss] || TeviSettings.customFlags[CustomFlags.RandomizedEnemy] || TeviSettings.customFlags[CustomFlags.RandomizedBG] || TeviSettings.customFlags[CustomFlags.RandomizedMusic]);
             if (((UnityEngine.UI.Toggle)UI.settings["Toggle RandomEnemies"]).isOn || ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn) 
                 Extras.RandomizeExtra.randomEnemies();
             if (((UnityEngine.UI.Toggle)UI.settings["Toggle RandomBoss"]).isOn) 
                 Extras.RandomizeExtra.randomBoss();
 
-            if (RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedBG])
+            if (TeviSettings.customFlags[CustomFlags.RandomizedBG])
             {
                 Extras.RandomizeExtra.randomBG();
             }
-            if (RandomizerPlugin.customFlags[(int)CustomFlags.RandomizedMusic])
+            if (TeviSettings.customFlags[CustomFlags.RandomizedMusic])
             {
                 Extras.RandomizeExtra.randomMusic();
             }
-            RandomizerPlugin.customFlags[(int)CustomFlags.RevealPaths] = ((UnityEngine.UI.Toggle)UI.settings["Toggle HIddenPaths"]).isOn;
+            TeviSettings.customFlags[CustomFlags.RevealPaths] = ((UnityEngine.UI.Toggle)UI.settings["Toggle HIddenPaths"]).isOn;
         }
 
         void OnDisable()
@@ -286,9 +316,9 @@ namespace TeviRandomizer.UI
 
         void updateDiffScaler()
         {
-            RandomizerPlugin.customHpDiff = (int)((UnityEngine.UI.Slider)UI.settings["Slider HPScale"]).value;
-            RandomizerPlugin.customAtkDiff = (int)((UnityEngine.UI.Slider)UI.settings["Slider ATKScale"]).value;
-            RandomizerPlugin.customStartDiff = (int)((UnityEngine.UI.Slider)UI.settings["Slider StartDifficulty"]).value;
+            TeviSettings.customHpDiff = (int)((UnityEngine.UI.Slider)UI.settings["Slider HPScale"]).value;
+            TeviSettings.customAtkDiff = (int)((UnityEngine.UI.Slider)UI.settings["Slider ATKScale"]).value;
+            TeviSettings.customStartDiff = (int)((UnityEngine.UI.Slider)UI.settings["Slider StartDifficulty"]).value;
         }
        private void saveSettings()
         {
@@ -351,9 +381,13 @@ namespace TeviRandomizer.UI
             {
                 GameObject t = settingsAt.transform.GetChild(i).gameObject;
                 option[i] = t;
+                string[] name = t.name.Split(' ');
                 if (t.name.Contains("Toggle"))
                 {
-                    UI.settings.Add(t.name, t.GetComponentInChildren<UnityEngine.UI.Toggle>());
+                    var toggle = t.GetComponentInChildren<UnityEngine.UI.Toggle>();
+                    ToggleObserver tog = new(name[1], () => toggle.isOn);
+                    Randomizer.settings[name[1]] = tog;
+                    UI.settings.Add(t.name, toggle);
                 }
                 else if (t.name.Contains("Slider"))
                 {
@@ -380,6 +414,9 @@ namespace TeviRandomizer.UI
                         t.transform.Find("Number").gameObject.GetComponent<TextMeshProUGUI>().text = slider.value.ToString(); 
                     
                     });
+
+                    SliderObserver slid = new(name[1], () => (int)slider.value);
+                    Randomizer.settings[name[1]] = slid;
                     UI.settings.Add(t.name, slider);
                 }
                 else if (t.name.Contains("Selector"))
@@ -387,7 +424,8 @@ namespace TeviRandomizer.UI
                     UI.settings.Add(t.name, ("option name",0, (int)t.transform.GetChild(3).transform.childCount));
                     t.transform.GetChild(2).GetChild(1).GetChild(1).GetChild(0).GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate { moveSelector(-1, t);});
                     t.transform.GetChild(2).GetChild(1).GetChild(1).GetChild(1).GetComponent<UnityEngine.UI.Button>().onClick.AddListener(delegate { moveSelector(1, t);});
-
+                    SelectorObserver sel = new(name[1], () => (((string, int, int))UI.settings[t.name]).Item1);
+                    Randomizer.settings[name[1]] = sel;
                 }
                 else if (t.name.Contains("TextInput")) {
                     TMP_InputField inputField = t.GetComponentInChildren<TMP_InputField>();
@@ -461,7 +499,6 @@ namespace TeviRandomizer.UI
                 
                 RandomizerPlugin.createSeed();
             });
-            Randomizer.settings = UI.settings;
 
             var tabs = gameObject.transform.Find("SwitchTab");
             for (int i = 0; i< tabs.childCount; i++)

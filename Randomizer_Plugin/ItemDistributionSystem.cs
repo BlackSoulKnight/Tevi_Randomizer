@@ -96,19 +96,19 @@ namespace TeviRandomizer
         }
         bool checkHUDObtainPause()
         {
-            if (HUDSaveMenu.Instance?.isDisplaying() == true)
+            if (HUDSaveMenu.Instance != null && HUDSaveMenu.Instance.isDisplaying())
                 return true;
             if (PauseFrame.Instance != null && PauseFrame.Instance.isActiveAndEnabled == true)
                 return true;
-            if (GemaUIChangeDifficulty.Instance?.isDisplaying() == true)
+            if (GemaUIChangeDifficulty.Instance != null && GemaUIChangeDifficulty.Instance.isDisplaying())
                 return true;
-            if (HUDUseItemWindow.Instance?.isDisplaying() == true)
+            if (HUDUseItemWindow.Instance != null && HUDUseItemWindow.Instance.isDisplaying())
                 return true;
-            if (HUDObtainedItem.Instance?.isDisplaying() == true)
+            if (HUDObtainedItem.Instance != null && HUDObtainedItem.Instance.isDisplaying())
                 return true;
-            if (HUDHelpScreen.Instance?.isDisplaying() == true)
+            if (HUDHelpScreen.Instance != null && HUDHelpScreen.Instance.isDisplaying())
                 return true;
-            if (GemaQuestionWindow.Instance?.isDisplaying() == true)
+            if (GemaQuestionWindow.Instance != null && GemaQuestionWindow.Instance.isDisplaying())
                 return true;
 
 
