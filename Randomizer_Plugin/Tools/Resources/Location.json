@@ -713,7 +713,7 @@
     {
         "Itemname": "EVENT_EliteChallangeB",
         "Location": "Thanatara Canyon",
-        "LocationName": "Thanatara Canyon - Elite Challenge B",
+        "LocationName": "Elite Challenge B - Thanatara Canyon X:11 Y:9 ",
         "slotId": 1,
         "Requirement": [
             {
@@ -1496,7 +1496,7 @@
     {
         "Itemname": "EVENT_EliteChallangeA",
         "Location": "Morose City",
-        "LocationName": "Morose City - Elite Challenge A",
+        "LocationName": "Elite Challenge A - Morose City X:19 Y:9",
         "slotId": 0,
         "Requirement": [
             {
@@ -3055,7 +3055,7 @@
     {
         "Itemname": "EVENT_EliteChallangeC",
         "Location": "Gloamwood to Ulvosa",
-        "LocationName": "Gloamwood Upper - Elite Challenge C",
+        "LocationName": "Elite Challenge C - Gloamwood Upper X:7 Y:8",
         "slotId": 1,
         "Requirement": [
             {
@@ -4268,7 +4268,7 @@
     {
         "Itemname": "EVENT_EliteChallangeD",
         "Location": "Ana Thema",
-        "LocationName": "Ana Thema - Elite Challenge D",
+        "LocationName": "Elite Challenge D - Ana Thema X:17 Y:14",
         "slotId": 1,
         "Requirement": [
             {
@@ -5383,7 +5383,7 @@
     {
         "Itemname": "EVENT_EliteChallangeE",
         "Location": "Tartarus",
-        "LocationName": "Tartarus - Elite Challenge E",
+        "LocationName": "Elite Challenge E - Tartarus X:20 Y:13",
         "slotId": 1,
         "Requirement": [
             {
@@ -6806,7 +6806,7 @@
     {
         "Itemname": "EVENT_EliteChallangeF",
         "Location": "Valhalla City",
-        "LocationName": "Valhalla City - Elite Challenge F",
+        "LocationName": "Elite Challenge F - Valhalla City X:20 Y:12",
         "slotId": 18,
         "Requirement": [
             {
