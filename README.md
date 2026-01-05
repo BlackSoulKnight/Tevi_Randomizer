@@ -12,13 +12,11 @@
   + For tornado slash/spanner bash, the same inputs still work, you just need to unlock the moves first
     note: the rando doesn't require these moves and doesn't check for them when placing items
 + Charge shots now require level 2 orbitars
-+ Sable / Celia require level 2 orbitars
++ Sable / Celia can be locked
 + If you don't start with Sable/Celia, the core expansion is not usable until one of them is found. And you're locked to that one character until the other is found
 + The left/right golden hands and the complete golden hands are all separate items which can be found. You can still turn in the left/right hands even if you've found the complete hands for example
-+ There will always be atleast one of each progression item on the field or in crafting, so even if you randomize upgrades you don't need to worry about being softlocked by purple crystals
 + Defeating bosses progresses the internal chapter count which in turn unlocks crafting options and options for Vena's shop
   + Fray and Memloch also unlock more shop options in Morose and Ana Thema respectively
-+ Memine races won't have mobility items as rewards
 + If you're unfamiliar with the item locations, starting with level 3 compass might be a good idea. Professor Zema will also provide hints if you talk to him (non Archipelago Randomizer)
 
 ## Options
@@ -26,7 +24,7 @@
 | ------ | --------- |
 | Orb Start | Start the Game with Orb level 1 |
 | Knife Start              | Start the Game with Knife level 1 |
-| Celia / Sable            | Start the Game with Celia and Sable unlock but still require Orb level 2 |
+| Celia / Sable            | Start the Game with Celia and Sable unlocked |
 | Level 3 Compass          | Start the Game with Compass level 3 |
 | Vanilla Item Upgrades    | Crafting Item result in a level for the item instead of beeing randomized |
 | Early Morose             | Destroys the blocks which require Linebomb to access Morose |
@@ -39,6 +37,9 @@
 | Dropkick Ceiling         | Reverse Horizontal direction with a dropkick while near a ceiling |
 | Map Transition Shuffle   | Shuffle all Transition that would normally lead to a different Area |
 | Library Bosses           | Adds Library Bosses to the logic, they are accessable as soon as its possible to enter the Library <br>(currently only in the Enemy Randomizer test version) |
+| Traverse Nide            | Changes how areas are connected |
+| Random Money             | Money block are randomized into items / money|
+| Random Resource          | Mananite and Magitite sources are randomized |
 
 ### Join the Tevi Speedrunning [Discord](https://discord.gg/e4SW6AaBuj) to gain more Information about tricks for the Game
 
