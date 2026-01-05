@@ -67,7 +67,6 @@ namespace TeviRandomizer
         }
         public void takeScreenshot(int seconds)
         {
-            
             StartCoroutine(screenshot(seconds));
         }
 

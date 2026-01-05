@@ -11117,7 +11117,7 @@
         "slotId": 0,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "EVENT_Memine0",
                 "Difficulty": 0
             }
         ],
@@ -11193,7 +11193,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "EVENT_Memine1",
                 "Difficulty": 0
             }
         ],
@@ -11268,7 +11268,7 @@
         "slotId": 2,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "EVENT_Memine2",
                 "Difficulty": 0
             }
         ],
@@ -11343,7 +11343,7 @@
         "slotId": 3,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "EVENT_Memine3",
                 "Difficulty": 0
             }
         ],
@@ -11437,7 +11437,7 @@
         "slotId": 4,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "EVENT_Memine4",
                 "Difficulty": 0
             }
         ],
@@ -11517,7 +11517,7 @@
         "slotId": 5,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "EVENT_Memine5",
                 "Difficulty": 0
             }
         ],
