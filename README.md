@@ -68,7 +68,6 @@ Note: Archipelago and the Normal version share the same client
 11. Have Randomizer in the start menu
 12. Either generate a new seed in-game or join an Archipelago server
 13. Start a New Game with free roam enabled
-14. DO NOT ENABLE THE CUSTOM MODE "RANDOMIZED BADGE"!
 
 Make sure that Build contains no .cs files <- those are C# source files and cannot be run by BepInEX
 
