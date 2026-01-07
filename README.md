@@ -55,10 +55,21 @@
 Download the latest released Version from here [Tevi Randomizer releases](https://github.com/BlackSoulKnight/Tevi_Randomizer/releases)<br>
 Note: Archipelago and the Normal version share the same client
 
-Install BepInEx<br>
-Start Game<br>
-Extract the Tevi Randomizer Rar into the BepInEx/plugins Folder<br>
-Finished<br><br>
+1. https://github.com/BepInEx/BepInEx/releases/
+2. Download BepInEx 5.4.x win_x64
+3. Open Tevi's Gamefiles
+4. Extract BepInEx in the base Folder (so that doorstop_config.ini and winhttp.dll are next to the TEVI.exe)
+5. Start the Game once
+6. open the BepInEx Folder 
+7. open the plugins Folder 
+8. Extract the Randomizer Rar into the plugins folder https://github.com/BlackSoulKnight/Tevi_Randomizer/releases
+9. (Linux) add `WINEDLLOVERRIDES="winhttp.dll=n,b" %command%` to launch options of Tevi in Steam
+10. Start the Game
+11. Have Randomizer in the start menu
+12. Either generate a new seed in-game or join an Archipelago server
+13. Start a New Game with free roam enabled
+14. DO NOT ENABLE THE CUSTOM MODE "RANDOMIZED BADGE"!
+
 Make sure that Build contains no .cs files <- those are C# source files and cannot be run by BepInEX
 
 ## Usage
