@@ -63,7 +63,7 @@ Note: Archipelago and the Normal version share the same client
 6. open the BepInEx Folder 
 7. open the plugins Folder 
 8. Extract the Randomizer Rar into the plugins folder https://github.com/BlackSoulKnight/Tevi_Randomizer/releases
-9. (Linux) add `WINEDLLOVERRIDES="winhttp.dll=n,b" %command%` to launch options of Tevi in Steam
+9. For Linux User add `WINEDLLOVERRIDES="winhttp.dll=n,b" %command%` to launch options of Tevi in Steam
 10. Start the Game
 11. Have Randomizer in the start menu
 12. Either generate a new seed in-game or join an Archipelago server
