@@ -1134,35 +1134,6 @@ namespace TeviRandomizer
             return area;
         }
 
-        /*
-        public async void seedCreationLoading()
-        {
-            TextMeshProUGUI text = UI.UI.finishedText.GetComponent<TextMeshProUGUI>();
-            string t = "Creating ";
-            text.text = "Creating";
-            UI.UI.finishedText.SetActive(true);
-            await Task.Run(() =>
-            {
-                int count = 0;
-                while (creating)
-                {
-                    count++;
-                    text.text = t + new string('.', count % 4);
-                    Task.Delay(300).Wait();
-                }
-                if (ArchipelagoInterface.Instance.isConnected)
-                {
-                    text.text = "Connected to AP Server";
-                }
-                else
-                    text.text = "Finished Creating Seed";
-
-            });
-
-        }
-        */
-
-
         Dictionary<string, int> itemList = new Dictionary<string, int>();
         List<Area> areaList;
 
@@ -1314,6 +1285,9 @@ namespace TeviRandomizer
             Area startarea = areas.Find(x => x.Name == "Thanatara Canyon");
             var spheres = AssumedFill.SphereSearch(startarea);
 
+            int currHint = 0;
+            int currBackHint = 1;
+
             for (int i = 0; i < spheres.Count; i++)
             {
                 spoilerLog.WriteLine($"{i + 1}: {{");
@@ -1323,6 +1297,20 @@ namespace TeviRandomizer
                     {
                         string item = APItemNames.ContainsKey(loc.newItem) ? APItemNames[loc.newItem] : loc.newItem;
                         spoilerLog.WriteLine($"    {loc.Locationname} => {item}");
+                    }
+                    if (Enum.IsDefined(typeof(MajorItemFlag), loc.newItem) && currHint < ChatSystemPatch.numberOfHints)
+                    {
+                        if (TeviSettings.customFlags[CustomFlags.NormalItemCraft] && loc.Loaction.Contains("Upgrade") && currBackHint + currHint < ChatSystemPatch.numberOfHints)
+                        {
+
+                            ChatSystemPatch.hintList[ChatSystemPatch.hintList.Length - currBackHint] = (loc.Locationname, loc.newItem, (byte)loc.newSlotId);
+                            currBackHint++;
+                        }
+                        else
+                        {
+                            ChatSystemPatch.hintList[currHint] = (loc.Locationname, loc.newItem, (byte)loc.newSlotId);
+                            currHint++;
+                        }
                     }
                 }
                 spoilerLog.WriteLine("}");
@@ -1335,7 +1323,9 @@ namespace TeviRandomizer
 
 
                 string item2 = APItemNames.ContainsKey(item.Value) ? APItemNames[item.Value] : item.Value;
-                
+
+
+
                 spoilerLog.WriteLine($"{item.Key} => {item2}");
                 
             }
