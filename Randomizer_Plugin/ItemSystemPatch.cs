@@ -609,13 +609,13 @@ namespace TeviRandomizer
                     }
                     if (bigBadBoss)
                     {
-                        if(r != ItemList.Resource.CORE && r != ItemList.Resource.UPGRADE)
+                        if (r != ItemList.Resource.CORE && r != ItemList.Resource.UPGRADE)
                         {
                             Debug.Log(r);
                             customCollector(position, element,r);
                             return false;
                         }
-                            
+                        
                         blockPos = BigBossOffest;
                         blockPos -= number;
                         if (r == ItemList.Resource.CORE)
@@ -648,10 +648,24 @@ namespace TeviRandomizer
                 customCollector(position, element,r);
                 return false;
             }
-            Debug.LogWarning($"[Resource Collection] Something went wrong: {collectType} -> Area:{area} ID:{blockPos}");
+            Debug.LogWarning($"[Resource Collection] Resource {r.ToString()} Something went wrong: {collectType} -> Area:{area} ID:{blockPos}");
             customCollector(position, element,r);
             return false;
         }
+
+
+        static bool collectBool = false;
+
+        [HarmonyPatch(typeof(collectScript),"CollectMe")]
+        [HarmonyPrefix]
+        static void collectBoolEnable() => collectBool = true;
+
+        [HarmonyPatch(typeof(collectScript),"CollectMe")]
+        [HarmonyPostfix]
+        static void collectBoolDisabled() => collectBool = false;
+
+
+
 
 
         static void customCollector(Vector3 position, ElementType element, ItemList.Resource r)
@@ -823,7 +837,7 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static bool redirectToCollect(ref ItemList.Resource resource, ref int value)
         {
-            if (bigBadBoss)
+            if (bigBadBoss && !collectBool)
             {
                 if (resource != ItemList.Resource.CORE && resource != ItemList.Resource.UPGRADE)
                 {
@@ -831,10 +845,8 @@ namespace TeviRandomizer
                 }
                 number = 0;
                 CollectManager.Instance.CreateCollect(EventManager.Instance.GetPlayerLastPosition(0), ElementType.B_RESOURCE, resource);
-
                 number = 1;
                 CollectManager.Instance.CreateCollect(EventManager.Instance.GetPlayerLastPosition(0), ElementType.B_RESOURCE, resource);
-
                 number = 0;
                 return false;
             }
