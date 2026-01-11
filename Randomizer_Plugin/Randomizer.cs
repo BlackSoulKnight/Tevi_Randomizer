@@ -1064,7 +1064,7 @@ namespace TeviRandomizer
 
         public async void CreateSeed(System.Random seed)
         {
-            if (creating || TeviSettings.APConnected) { return; }
+            if (creating || ArchipelagoInterface.Instance.isConnected) { return; }
             creating = true;
             failed = false;
             UI.UI.seedCreationLoading();
@@ -1072,7 +1072,7 @@ namespace TeviRandomizer
             {
                 if (newSeed(seed))
                 {
-                    if (!TeviSettings.APConnected)
+                    if (!ArchipelagoInterface.Instance.isConnected)
                     {
                         RandomizerPlugin.__itemData = GetData();
                         Dictionary<int, int> transitionData = new Dictionary<int, int>();
@@ -1095,12 +1095,12 @@ namespace TeviRandomizer
         }
         public void SyncCreateSeed(System.Random seed)
         {
-            if (creating || TeviSettings.APConnected) { return; }
+            if (creating || ArchipelagoInterface.Instance.isConnected) { return; }
             failed = false;
             creating = true;
             //seedCreationLoading();
 
-            if (!TeviSettings.APConnected && newSeed(seed))
+            if (!ArchipelagoInterface.Instance.isConnected && newSeed(seed))
             {
                 RandomizerPlugin.__itemData = GetData();
                 Dictionary<int, int> transitionData = new Dictionary<int, int>();
@@ -1139,7 +1139,7 @@ namespace TeviRandomizer
 
         private bool validate(Area startArea = null)
         {
-            if (TeviSettings.APConnected)
+            if (ArchipelagoInterface.Instance.isConnected)
             {
                 return false;
             }

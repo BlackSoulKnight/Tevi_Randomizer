@@ -143,7 +143,6 @@ namespace TeviRandomizer
             public static int customStartDiff = -1;
             public static int GoMode = -1;
             public static string traverseMode;
-            public static bool APConnected = false;
             public static Dictionary<int, int> transitionData;
             public static string pluginPath = "";
 
