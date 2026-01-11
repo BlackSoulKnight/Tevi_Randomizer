@@ -629,6 +629,16 @@ namespace TeviRandomizer.UI
             selected = 0;
             gameObject.transform.GetChild(4).GetChild(this.tab).gameObject.SetActive(false);
             gameObject.transform.GetChild(4).GetChild(tab).gameObject.SetActive(true);
+            if (tab == 0)
+            {
+                gameObject.transform.Find("Generate").gameObject.SetActive(true);
+                gameObject.transform.Find("Seed").gameObject.SetActive(true);
+            }
+            else
+            {
+                gameObject.transform.Find("Seed").gameObject.SetActive(false);
+                gameObject.transform.Find("Generate").gameObject.SetActive(false);
+            }
             this.tab = tab;
         }
 
