@@ -402,6 +402,14 @@ namespace TeviRandomizer
                             case "ITEM_Rotater":
                                 flag = itemList.ContainsKey("ITEM_KNIFE");
                                 break;
+                            case "ITEM_OrbTypeC2":
+                            case "ITEM_OrbTypeC3":
+                                flag = itemList.ContainsKey("I19");
+                                break;
+                            case "ITEM_OrbTypeS2":
+                            case "ITEM_OrbTypeS3":
+                                flag = itemList.ContainsKey("I20");
+                                break;
                         }
                         if (split.Length > 1 && flag)
                         {
