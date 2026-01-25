@@ -6538,7 +6538,7 @@
     },
     {
         "Itemname": "I14",
-        "Location": "Valhalla Breath West",
+        "Location": "Valhalla Breath West 2",
         "LocationName": "Valhalla Breath West - Money Room X: 19 Y: 4 #1",
         "blockId": 468066,
         "area": 21,
@@ -6559,7 +6559,7 @@
     },
     {
         "Itemname": "I14",
-        "Location": "Valhalla Breath West",
+        "Location": "Valhalla Breath West 2",
         "LocationName": "Valhalla Breath West - Money Room X: 19 Y: 4 #2",
         "blockId": 468065,
         "area": 21,
@@ -6580,7 +6580,7 @@
     },
     {
         "Itemname": "I14",
-        "Location": "Valhalla Breath West",
+        "Location": "Valhalla Breath West 2",
         "LocationName": "Valhalla Breath West - Money Room X: 19 Y: 4 #3",
         "blockId": 468067,
         "area": 21,
@@ -6601,7 +6601,7 @@
     },
     {
         "Itemname": "I14",
-        "Location": "Valhalla Breath West",
+        "Location": "Valhalla Breath West 2",
         "LocationName": "Valhalla Breath West - Money Room X: 19 Y: 4 #4",
         "blockId": 467067,
         "area": 21,
@@ -6622,7 +6622,7 @@
     },
     {
         "Itemname": "I14",
-        "Location": "Valhalla Breath West",
+        "Location": "Valhalla Breath West 1",
         "LocationName": "Valhalla Breath West - Money Room X: 24 Y: 8 #1",
         "blockId": 578122,
         "area": 21,
@@ -6643,7 +6643,7 @@
     },
     {
         "Itemname": "I14",
-        "Location": "Valhalla Breath West",
+        "Location": "Valhalla Breath West 1",
         "LocationName": "Valhalla Breath West - Money Room X: 24 Y: 8 #2",
         "blockId": 578121,
         "area": 21,
@@ -6664,7 +6664,7 @@
     },
     {
         "Itemname": "I14",
-        "Location": "Valhalla Breath West",
+        "Location": "Valhalla Breath West 1",
         "LocationName": "Valhalla Breath West - Money Room X: 26 Y: 7 #1",
         "blockId": 627099,
         "area": 21,
@@ -6685,7 +6685,7 @@
     },
     {
         "Itemname": "I14",
-        "Location": "Valhalla Breath West",
+        "Location": "Valhalla Breath West 1",
         "LocationName": "Valhalla Breath West - Money Room X: 26 Y: 7 #2",
         "blockId": 627100,
         "area": 21,
@@ -6706,7 +6706,7 @@
     },
     {
         "Itemname": "I14",
-        "Location": "Valhalla Breath West",
+        "Location": "Valhalla Breath West 2",
         "LocationName": "Valhalla Breath West - Money Room X: 22 Y: 1 #1",
         "blockId": 531025,
         "area": 21,
@@ -6727,7 +6727,7 @@
     },
     {
         "Itemname": "I14",
-        "Location": "Valhalla Breath West",
+        "Location": "Valhalla Breath West 2",
         "LocationName": "Valhalla Breath West - Money Room X: 22 Y: 1 #2",
         "blockId": 531024,
         "area": 21,

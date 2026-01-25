@@ -1730,11 +1730,11 @@
     ],
     "Map21": [
         {
-            "Name": "Valhalla Breath West",
+            "Name": "Valhalla Breath West 2",
             "Connections": [
                 {
-                    "Exit": "Heavens Valley West",
-                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || HiddenP) && (CKick || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash)"
+                    "Exit": "Heavens Valley West 1",
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "2101",
@@ -1759,26 +1759,43 @@
             ]
         },
         {
+            "Name": "Valhalla Breath West 1",
+            "Connections": [
+                {
+                    "Exit": "Heavens Valley West",
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || HiddenP) && (CKick || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash)"
+                },
+                {
+                    "Exit": "West Breath Enemies",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Valhalla Breath West 2",
+                    "Method": ""
+                }
+            ]
+        },
+        {
             "Name": "Heavens Valley West",
             "Connections": [
                 {
-                    "Exit": "Valhalla Breath West",
+                    "Exit": "Valhalla Breath West 1",
                     "Method": "ITEM_JETPACK && (ITEM_AREABOMB || HiddenP)"
                 },
                 {
-                    "Exit": "Valhalla Breath West",
+                    "Exit": "Valhalla Breath West 1",
                     "Method": "ITEM_AirDash && (ITEM_AREABOMB || HiddenP)"
                 },
                 {
-                    "Exit": "Valhalla Breath West",
+                    "Exit": "Valhalla Breath West 1",
                     "Method": "ITEM_SLIDE && ITEM_AirSlide && (ITEM_AREABOMB || HiddenP)"
                 },
                 {
-                    "Exit": "Valhalla Breath West",
+                    "Exit": "Valhalla Breath West 1",
                     "Method": "ITEM_DOUBLEJUMP && (ITEM_AREABOMB || HiddenP)"
                 },
                 {
-                    "Exit": "Valhalla Breath West",
+                    "Exit": "Valhalla Breath West 1",
                     "Method": "ChargeShot && (ITEM_AREABOMB || HiddenP)"
                 },
                 {
@@ -3423,7 +3440,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Valhalla Breath West",
+                    "Exit": "Valhalla Breath West 2",
                     "Method": ""
                 }
             ]
@@ -3753,7 +3770,7 @@
             "Name": "Teleporter Valhalla Breath West",
             "Connections": [
                 {
-                    "Exit": "Valhalla Breath West",
+                    "Exit": "Valhalla Breath West 2",
                     "Method": ""
                 }
             ]

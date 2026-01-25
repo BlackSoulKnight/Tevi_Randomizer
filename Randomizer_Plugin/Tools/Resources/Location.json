@@ -1247,7 +1247,7 @@
     },
     {
         "Itemname": "STACKABLE_EP",
-        "Location": "Valhalla Breath West",
+        "Location": "Valhalla Breath West 2",
         "LocationName": "Valhalla Breath West - Lemon Bunny Potion",
         "slotId": 13,
         "Requirement": [
@@ -1266,7 +1266,7 @@
     },
     {
         "Itemname": "EVENT_Light",
-        "Location": "Valhalla Breath West",
+        "Location": "Valhalla Breath West 1",
         "LocationName": "Valhalla Breath West - Light",
         "slotId": 2,
         "Requirement": [
@@ -1285,7 +1285,7 @@
     },
     {
         "Itemname": "BADGE_DoubleJumpAttack",
-        "Location": "Valhalla Breath West",
+        "Location": "Valhalla Breath West 1",
         "LocationName": "Valhalla Breath West - Orbital Slash",
         "slotId": 1,
         "Requirement": [
@@ -1304,7 +1304,7 @@
     },
     {
         "Itemname": "BADGE_Normal3HModStabB",
-        "Location": "Valhalla Breath West",
+        "Location": "Valhalla Breath West 2",
         "LocationName": "Valhalla Breath West - Quickstab: Flurry",
         "slotId": 1,
         "Requirement": [
@@ -1323,7 +1323,7 @@
     },
     {
         "Itemname": "STACKABLE_RATK",
-        "Location": "Valhalla Breath West",
+        "Location": "Valhalla Breath West 2",
         "LocationName": "Valhalla Breath West - Grape Bunny Potion",
         "slotId": 13,
         "Requirement": [
@@ -1342,7 +1342,7 @@
     },
     {
         "Itemname": "BADGE_ComboDamageBoost",
-        "Location": "Valhalla Breath West",
+        "Location": "Valhalla Breath West 1",
         "LocationName": "Valhalla Breath West - Combo Momentum: Fever",
         "slotId": 1,
         "Requirement": [
@@ -1361,7 +1361,7 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Valhalla Breath West",
+        "Location": "Valhalla Breath West 1",
         "LocationName": "Valhalla Breath West - Cherry Bunny Potion",
         "slotId": 13,
         "Requirement": [
