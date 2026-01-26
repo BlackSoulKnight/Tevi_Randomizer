@@ -1758,18 +1758,18 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static bool switchTargetMap(ref byte ___targetPosID, ref byte ___targetArea, ref bool ___gotData, ref BoxCollider2D ___box, ref ChangeMapTrigger __instance)
         {
-            if (RandomizerPlugin.transitionData == null) return true;
+            if (TeviSettings.transitionData == null) return true;
             Debug.Log($"Before ID:{___targetPosID} Area:{___targetArea}");
             byte targetPos = (byte)(EventManager.Instance.GetElmData(__instance.transform, 0f, -56f) - 72);
             byte area = WorldManager.Instance.Area;
             if ((area == 20 && targetPos == 2) || (area == 29 && targetPos == 3))
                 targetPos = (byte)(targetPos ^ 1);
             int targetMapAndID = WorldManager.Instance.Area * 100 + targetPos;
-            if (!___gotData && RandomizerPlugin.transitionData.ContainsKey(targetMapAndID))
+            if (!___gotData && TeviSettings.transitionData.ContainsKey(targetMapAndID))
             {
                 ___targetArea = (byte)(EventManager.Instance.GetElmData(__instance.transform, 0f, 56f) - 72);
                 ___targetPosID = (byte)(EventManager.Instance.GetElmData(__instance.transform, 0f, -56f) - 72);
-                int val = RandomizerPlugin.transitionData[targetMapAndID];
+                int val = TeviSettings.transitionData[targetMapAndID];
 
                 // Save New Trasition to a static variable to be used when the player changes the Map
                 ___gotData = true;

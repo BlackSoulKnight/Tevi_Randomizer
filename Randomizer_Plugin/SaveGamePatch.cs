@@ -66,7 +66,7 @@ namespace TeviRandomizer
                         {
                             transitionData[from[i]] = to[i];
                         }
-                        RandomizerPlugin.transitionData = transitionData;
+                        TeviSettings.transitionData = transitionData;
                     }
                 }
 
@@ -169,7 +169,7 @@ namespace TeviRandomizer
             customSaveFileNames(ref result, ref saveslot);
             ES3File eS3File = new ES3File(result);
             Dictionary<string, string> s = RandomizerPlugin.__itemData;
-            Dictionary<int, int> transitionData = RandomizerPlugin.transitionData;
+            Dictionary<int, int> transitionData = TeviSettings.transitionData;
 
             if (s != null)
             {

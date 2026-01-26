@@ -44,7 +44,6 @@ namespace TeviRandomizer
 
         static public List<int> transitionVisited = new List<int>();
         static public string seed;
-        static public Dictionary<int, int> transitionData;
         static public List<int> UniqueEnemiesKilled = new List<int>();
         static public Randomizer randomizer;
         static private bool randomizerEnabled = false;
@@ -380,7 +379,7 @@ namespace TeviRandomizer
             LocationTracker.clearItemList();
             UniqueEnemiesKilled.Clear();
             ItemDistributionSystem.reset();
-            transitionData = null;
+            TeviSettings.transitionData = null;
             ResourcePatch.AreaResource = null;
             ResourcePatch.resources = new GameObject[0];
             ArchipelagoInterface.Instance.currentItemNR = 0;
