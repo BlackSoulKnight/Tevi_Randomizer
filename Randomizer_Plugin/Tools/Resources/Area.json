@@ -1733,7 +1733,7 @@
             "Name": "Valhalla Breath West 2",
             "Connections": [
                 {
-                    "Exit": "Heavens Valley West 1",
+                    "Exit": "Valhalla Breath West 1",
                     "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
