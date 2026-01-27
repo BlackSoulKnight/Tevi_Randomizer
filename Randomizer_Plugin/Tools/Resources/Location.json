@@ -2940,7 +2940,7 @@
         "slotId": 19,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ChargeShot && ITEM_LINEBOMB",
+                "Method": "ITEM_SLIDE && ChargeShot && (ITEM_LINEBOMB || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
         ],
