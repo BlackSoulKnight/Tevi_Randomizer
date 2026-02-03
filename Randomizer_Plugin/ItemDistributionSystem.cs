@@ -13,7 +13,8 @@ namespace TeviRandomizer
         public string Name;
         public string Description;
         public bool SkipHUD = false;
-        public TeviItemInfo(ItemList.Type type,byte value, bool randomized, string name = "", string description = "", bool skipHUD = false)
+        public Sprite ItemIcon = null;
+        public TeviItemInfo(ItemList.Type type,byte value, bool randomized, string name = "", string description = "", bool skipHUD = false, Sprite itemIcon = null)
         {
             Type = type;
             Value = value;
@@ -21,6 +22,7 @@ namespace TeviRandomizer
             Name = name;
             Description = description;
             SkipHUD = skipHUD;
+            ItemIcon = itemIcon;
         }
     }
 
@@ -70,7 +72,10 @@ namespace TeviRandomizer
                                 //@TODO Make it work
                                 SaveManager.Instance.SetItem(item.Type, item.Value);
                             else
+                            {
+                                ItemSystemPatch.ChangeItemSpriteTemp = item.ItemIcon;
                                 HUDObtainedItem.Instance.GiveItem(item.Type, item.Value, item.Randomized);
+                            }
 
                             // reverse Text change
                             if (item.Randomized)

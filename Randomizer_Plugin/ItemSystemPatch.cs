@@ -100,6 +100,7 @@ namespace TeviRandomizer
             return true;
         }
 
+        public static Sprite ChangeItemSpriteTemp = null;
         [HarmonyPatch(typeof(HUDObtainedItem), "GiveItem")]
         [HarmonyPostfix]
         static void changeSpriteInUI(ref SpriteRenderer ___itemicon, ref (ItemList.Type, byte) __state, ref ItemList.Type type, ref bool doRandomBadge)
@@ -118,6 +119,11 @@ namespace TeviRandomizer
                         ___itemicon.sprite = CommonResource.Instance.GetItem((int)item);
                     }
                 }
+            }
+            if (ChangeItemSpriteTemp != null)
+            {
+                ___itemicon.sprite = ChangeItemSpriteTemp;
+                ChangeItemSpriteTemp = null;
             }
         }
 
@@ -740,6 +746,7 @@ namespace TeviRandomizer
         {
             string name = "";
             string desc = "";
+            Sprite icon = null;
             if (ArchipelagoInterface.Instance?.isConnected == true && (item == ArchipelagoInterface.remoteItemProgressive || item == ArchipelagoInterface.remoteItem))
             {
                 var location = LocationTracker.getResourceLocationName(area, blockPos);
@@ -750,9 +757,9 @@ namespace TeviRandomizer
 
                 if (Enum.TryParse(name, out ItemList.Type item2))
                 {
-                    item = item2;
                     name = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + item2.ToString(), true);
                     desc = "<color=\"red\">" + $"                                                                          <size=200%> FOOL!</color><size=100%>\n\n\n<font-weight=100>{name} was stolen by {playerName}";
+                    icon = CommonResource.Instance.GetItem((int)item2);
                 }
             }
             string locname = LocationTracker.getResourceLocationName(area,blockPos);
@@ -761,7 +768,7 @@ namespace TeviRandomizer
             if(item == RandomizerPlugin.PortalItem && RandomizerPlugin.__itemData.TryGetValue(locname, out string itemName))
                 value = byte.Parse(itemName.Split(["Teleporter "], StringSplitOptions.RemoveEmptyEntries)[0]);
 
-            ItemDistributionSystem.ItemQueue.Enqueue(new TeviItemInfo(item, value, true, name, desc));
+            ItemDistributionSystem.ItemQueue.Enqueue(new TeviItemInfo(item, value, true, name, desc,false,icon));
         }
 
         const int ShopBonusOffset = -100;
