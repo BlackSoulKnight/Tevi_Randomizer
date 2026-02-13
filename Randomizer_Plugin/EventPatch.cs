@@ -35,14 +35,21 @@ namespace TeviRandomizer
                     SaveManager.Instance.SetItem(ItemList.Type.ITEM_Explorer, 5);
                     SaveManager.Instance.SetItem(ItemList.Type.ITEM_Explorer, 6);
                 }
-                for (int i = TeviSettings.extraPotions[0]; i > 0; i--)
-                {
+                for (int i = TeviSettings.extraPotions[(int)FreePot.Range]; i > 0; i--)
                     SaveManager.Instance.SetItem(ItemList.Type.STACKABLE_RATK, 1, true);
-                }
-                for (int i = TeviSettings.extraPotions[1]; i > 0; i--)
-                {
+
+                for (int i = TeviSettings.extraPotions[(int)FreePot.Melee]; i > 0; i--)
                     SaveManager.Instance.SetItem(ItemList.Type.STACKABLE_MATK, 1, true);
-                }
+
+                for (int i = TeviSettings.extraPotions[(int)FreePot.Mana]; i > 0; i--)
+                    SaveManager.Instance.SetItem(ItemList.Type.STACKABLE_MP, 1, true);
+
+                for (int i = TeviSettings.extraPotions[(int)FreePot.HP]; i > 0; i--)
+                    SaveManager.Instance.SetItem(ItemList.Type.STACKABLE_HP, 1, true);
+
+                for (int i = TeviSettings.extraPotions[(int)FreePot.EP]; i > 0; i--)
+                    SaveManager.Instance.SetItem(ItemList.Type.STACKABLE_EP, 1, true);
+
                 if (!SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam)) // Story Mode unstuck Cross Bomb dependancy
                 {
                     SaveManager.Instance.AddBreakTile(0, 394, 244);

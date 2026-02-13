@@ -271,6 +271,23 @@ namespace TeviRandomizer
 
         }
 
+        [HarmonyPatch(typeof(SaveManager), "RenewStackableCount")]
+        [HarmonyPrefix]
+        static bool RenewStackableCOunt(ref ItemList.Type item)
+        {
+            switch (item)
+            {
+                case ItemList.Type.STACKABLE_MP:
+                case ItemList.Type.STACKABLE_HP:
+                case ItemList.Type.STACKABLE_EP:
+                case ItemList.Type.STACKABLE_RATK:
+                case ItemList.Type.STACKABLE_MATK:
+                case ItemList.Type.STACKABLE_SHARD:
+                    return false;
+                default:
+                    return true;
+            }
+        }
     }
 
 }

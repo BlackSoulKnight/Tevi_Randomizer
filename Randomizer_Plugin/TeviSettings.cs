@@ -116,6 +116,14 @@ namespace TeviRandomizer
             AstralGear,
             BossDefeat
         }
+        public enum FreePot :int
+        {
+            Range,
+            Melee,
+            Mana,
+            HP,
+            EP
+        }
         class TeviSettings
         {
 
@@ -135,7 +143,7 @@ namespace TeviRandomizer
                 return ret;
             }
 
-            public static int[] extraPotions = [0, 0]; // Hardcoded omo
+            public static int[] extraPotions = [0,0,0,0,0]; // Hardcoded omo
             public static Dictionary<CustomFlags, bool> customFlags = SetUpFlags();
             public static GoalType goalType = GoalType.AstralGear;
             public static int customAtkDiff = -1;

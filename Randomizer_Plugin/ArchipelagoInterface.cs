@@ -141,8 +141,24 @@ namespace TeviRandomizer
         {
             Debug.Log(optionData);
             LocationData locationData = new LocationData();
-            long extraPotions = (long)optionData.GetValue("free_attack_up");
-            TeviSettings.extraPotions = [(int)extraPotions, (int)extraPotions];
+
+
+            if(optionData.ContainsKey("free_MATK"))
+                TeviSettings.extraPotions[(int)FreePot.Melee] = (int)(long)optionData["free_MATK"];
+
+            if(optionData.ContainsKey("free_RATK"))
+                TeviSettings.extraPotions[(int)FreePot.Range] = (int)(long)optionData["free_RATK"];
+
+            if(optionData.ContainsKey("free_HP"))
+                TeviSettings.extraPotions[(int)FreePot.HP] = (int)(long)optionData["free_HP"];
+
+            if(optionData.ContainsKey("free_MP"))
+                TeviSettings.extraPotions[(int)FreePot.Mana] = (int)(long)optionData["free_MP"];
+
+            if(optionData.ContainsKey("free_EP"))
+                TeviSettings.extraPotions[(int)FreePot.EP] = (int)(long)optionData["free_EP"];
+
+
             TeviSettings.customFlags[CustomFlags.TempOption] = (bool)optionData.GetValue("open_morose");
             TeviSettings.customFlags[CustomFlags.CebleStart] = (bool)optionData.GetValue("celia_sable");
             TeviSettings.customFlags[CustomFlags.SuperBosses] = (bool)optionData.GetValue("superBosses");
@@ -152,9 +168,6 @@ namespace TeviRandomizer
                 TeviSettings.customFlags[CustomFlags.TeleporterRando] = (int)optionData.GetValue("traverse_mode") == 2;
 
             }
-            //depcriated
-            if(optionData.ContainsKey("teleporter_mode"))
-                TeviSettings.customFlags[CustomFlags.TeleporterRando] = (bool)optionData.GetValue("teleporter_mode");
             if (optionData.ContainsKey("goal_type"))
             {
                 switch ((int)optionData.GetValue("goal_type"))
@@ -170,6 +183,16 @@ namespace TeviRandomizer
             }
             else
                 TeviSettings.goalType = GoalType.AstralGear;
+
+            //depcriated
+            if (optionData.ContainsKey("free_attack_up"))
+            {
+                long extraPotions = (long)optionData.GetValue("free_attack_up");
+                TeviSettings.extraPotions = [(int)extraPotions, (int)extraPotions];
+            }
+            if (optionData.ContainsKey("teleporter_mode"))
+                TeviSettings.customFlags[CustomFlags.TeleporterRando] = (bool)optionData.GetValue("teleporter_mode");
+
         }
         private void oldSlotData(Dictionary<string,object> SlotData)
         {
