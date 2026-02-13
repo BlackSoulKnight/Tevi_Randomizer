@@ -301,12 +301,12 @@ namespace TeviRandomizer
             if (this.isConnected)
             {
                 long id;
-                try
+                if (locations.ContainsKey(location))
                 {
                     id = locations[location].id;
                     session.Locations.CompleteLocationChecks(id);
                 }
-                catch
+                else
                 {
                     Debug.LogError("location not found in Location Dictionary");
                     return false;
@@ -347,7 +347,7 @@ namespace TeviRandomizer
         {
             if(locations.ContainsKey(Location))
                 return locations[Location].player == this.player;
-            return false;
+            return true;
         }
         public bool isItemNative(ItemList.Type item,byte slot) => isItemNative(LocationTracker.APLocationName[$"{item} #{slot}"]);
 
@@ -367,10 +367,10 @@ namespace TeviRandomizer
             session.Locations.ScoutLocationsAsync(HintCreationPolicy.CreateAndAnnounceOnce, locationID);
         }
 
-        public string getLocItemName(string Location) => locations[Location].item;
+        public string getLocItemName(string Location) => locations.ContainsKey(Location) ? locations[Location].item : "LOCATION NOT FOUND";
         public string getLocItemName(ItemList.Type item,byte slot) => getLocItemName(LocationTracker.APLocationName[$"{item} #{slot}"]);
 
-        public string getLocPlayerName(string Location) => PlayerNames[locations[Location].player];
+        public string getLocPlayerName(string Location) => locations.ContainsKey(Location) ? PlayerNames[locations[Location].player] : "Yourself";
         public string getLocPlayerName(ItemList.Type item, byte slot) => getLocPlayerName(LocationTracker.APLocationName[$"{item} #{slot}"]);
 
         void Awake()

@@ -761,6 +761,10 @@ namespace TeviRandomizer
                     desc = "<color=\"red\">" + $"                                                                          <size=200%> FOOL!</color><size=100%>\n\n\n<font-weight=100>{name} was stolen by {playerName}";
                     icon = CommonResource.Instance.GetItem((int)item2);
                 }
+                else
+                {
+                    name = item.ToString();
+                }
             }
             string locname = LocationTracker.getResourceLocationName(area,blockPos);
 
