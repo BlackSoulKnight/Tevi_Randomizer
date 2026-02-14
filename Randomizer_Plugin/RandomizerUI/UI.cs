@@ -66,9 +66,15 @@ namespace TeviRandomizer.UI
                     text.text = "Connected to AP Server";
                 }
                 else
-                    text.text = "Finished Creating Seed";
+                    text.text = "Seed created";
 
             });
+            if (ArchipelagoInterface.Instance.isConnected)
+            {
+                text.text = "Connected to AP Server";
+            }
+            else
+                text.text = "Seed created";
 
         }
 
@@ -434,6 +440,15 @@ namespace TeviRandomizer.UI
                         finishEditing = true;
                         EventSystem.current.SetSelectedGameObject(null);
                     });
+                    inputField.onSelect.AddListener(delegate
+                    {
+                        isTextInput = true;
+                    });
+                    inputField.onDeselect.AddListener(delegate
+                    {
+                        isTextInput = false;
+                        EventSystem.current.SetSelectedGameObject(null);
+                    });
                     UI.settings.Add(t.name, inputField);
                 }
                 else if (t.name.Contains("Button"))
@@ -462,7 +477,7 @@ namespace TeviRandomizer.UI
             }
             return option; 
         }
-
+        private bool isTextInput = false;
         private void addAllOptions(GameObject gameObject)
         {
             GameObject settingsAt = gameObject.transform.GetChild(4).gameObject;
@@ -762,7 +777,7 @@ namespace TeviRandomizer.UI
             Controller con = player.controllers.GetLastActiveController();
             if (con != null)
             {
-                if(con.type == ControllerType.Mouse)
+                if(con.type == ControllerType.Mouse || isTextInput)
                 {
                     return;
                 }
