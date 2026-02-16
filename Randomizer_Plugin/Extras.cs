@@ -324,7 +324,9 @@ namespace TeviRandomizer
             static public void randomMusic()
             {
                 List<int> arr = Enumerable.Range(4, (int)((byte)Music.MAX)-1).ToList();
-                int[] removed = [93,94,95,82,83,81];
+                HashSet<int> removed = [0, 1,2,81,82,83,85,87,88,89,90,93,94,95,96,97]; //87-90 93-96 dlc 
+                //no Translation [3,4,5,78,79,80];
+
                 foreach (int i in removed)
                 {
                     arr.Remove(i);
