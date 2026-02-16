@@ -310,6 +310,11 @@ namespace TeviRandomizer
             }
             return ;
         }
+
+        [HarmonyPrefix]
+        [HarmonyPatch(typeof(BackgroundManager), "ChangeBackground")]
+        static void resetBackground() => BackgroundManager.Instance.DisableAllBackground();
+
         [HarmonyPostfix]
         [HarmonyPatch(typeof(AreaResource), "GetBackdrop", new[] { typeof(string) })]
         static void GetBackdrop(ref AreaResource __instance,ref Sprite __result, ref string name)

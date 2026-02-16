@@ -302,7 +302,7 @@ namespace TeviRandomizer
             static public void randomBG()
             {
                 List<int> arr = Enumerable.Range(1, (int)((byte)Map.RoomBG.MAX)-1).ToList();
-                int[] removed = [3,9,11, 12,15, 18,19,21,23,24,34,35,36,37,38,40,42,43,46,55,58, 59, 66, 67, 68,70,72,74,83,85, 88, 89,90, 91,94,98,100,101,  102, 103, 105, 106];
+                HashSet<int> removed = [0,1,3,4,18,19,20,34,35,36,37,38,43,49,69,70,85,86,88,91,96,100];
                 foreach(int i in removed)
                 {
                     arr.Remove(i);
@@ -314,6 +314,13 @@ namespace TeviRandomizer
                     arr.RemoveAt(num);
                 }
             }
+            /*
+             Debug.Log(((Map.RoomBG)i).ToString());
+            BackgroundManager.Instance.DisableAllBackground();
+            BackgroundManager.Instance.ChangeBackground((Map.RoomBG)i);
+            i++;
+             */
+
             static public void randomMusic()
             {
                 List<int> arr = Enumerable.Range(4, (int)((byte)Music.MAX)-1).ToList();
