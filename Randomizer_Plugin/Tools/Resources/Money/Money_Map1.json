@@ -50,8 +50,12 @@
         "slotId": 16214301,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_DOUBLEJUMP || ITEM_HIJUMP || ITEM_JETPACK || ITEM_AirDash)",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash)",
                 "Difficulty": 0
+            },
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_HIJUMP)",
+                "Difficulty": 2
             }
         ],
         "LocationRegion": [
@@ -71,8 +75,12 @@
         "slotId": 161143,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_DOUBLEJUMP || ITEM_HIJUMP || ITEM_JETPACK || ITEM_AirDash)",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash)",
                 "Difficulty": 0
+            },
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_HIJUMP)",
+                "Difficulty": 2
             }
         ],
         "LocationRegion": [
@@ -92,8 +100,12 @@
         "slotId": 162142,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_DOUBLEJUMP || ITEM_HIJUMP || ITEM_JETPACK || ITEM_AirDash)",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash)",
                 "Difficulty": 0
+            },
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_HIJUMP)",
+                "Difficulty": 2
             }
         ],
         "LocationRegion": [
@@ -113,8 +125,12 @@
         "slotId": 161142,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_DOUBLEJUMP || ITEM_HIJUMP || ITEM_JETPACK || ITEM_AirDash)",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash)",
                 "Difficulty": 0
+            },
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_HIJUMP)",
+                "Difficulty": 2
             }
         ],
         "LocationRegion": [
