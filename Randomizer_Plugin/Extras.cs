@@ -302,7 +302,7 @@ namespace TeviRandomizer
             static public void randomBG()
             {
                 List<int> arr = Enumerable.Range(1, (int)((byte)Map.RoomBG.MAX)-1).ToList();
-                HashSet<int> removed = [0,1,3,4,18,19,20,34,35,36,37,38,43,49,69,70,85,86,88,91,96,100];
+                HashSet<int> removed = [0,1,3,4,12,18,19,20,34,35,36,37,38,43,49,69,70,85,86,88,91,96,100];
                 foreach(int i in removed)
                 {
                     arr.Remove(i);
