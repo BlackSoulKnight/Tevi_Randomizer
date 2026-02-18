@@ -17,7 +17,7 @@ namespace TeviRandomizer
         //Hotswap item recieved
         [HarmonyPatch(typeof(HUDObtainedItem), "GiveItem")]
         [HarmonyPrefix]
-        static bool ObtainItem(ref ItemList.Type type, ref byte value, ref bool doRandomBadge, ref (ItemList.Type, byte) __state)
+        static bool ObtainItem(ref ItemList.Type type, ref byte value, ref bool doRandomBadge)
         {
             if (itemExceptions.Contains(type))
             {
@@ -48,23 +48,8 @@ namespace TeviRandomizer
         public static Sprite ChangeItemSpriteTemp = null;
         [HarmonyPatch(typeof(HUDObtainedItem), "GiveItem")]
         [HarmonyPostfix]
-        static void changeSpriteInUI(ref SpriteRenderer ___itemicon, ref (ItemList.Type, byte) __state, ref ItemList.Type type, ref bool doRandomBadge)
+        static void changeSpriteInUI(ref SpriteRenderer ___itemicon, ref ItemList.Type type, ref bool doRandomBadge)
         {
-
-            if (type == ArchipelagoInterface.remoteItem || type == ArchipelagoInterface.remoteItemProgressive)
-            {
-                if (ArchipelagoInterface.Instance.isConnected)
-                {
-                    string itemName = type.ToString();
-                    if (!doRandomBadge)
-                        itemName = ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APLocationName[$"{__state.Item1} #{__state.Item2}"]);
-                    ItemList.Type item;
-                    if (Enum.TryParse(itemName, out item))
-                    {
-                        ___itemicon.sprite = CommonResource.Instance.GetItem((int)item);
-                    }
-                }
-            }
             if (ChangeItemSpriteTemp != null)
             {
                 ___itemicon.sprite = ChangeItemSpriteTemp;

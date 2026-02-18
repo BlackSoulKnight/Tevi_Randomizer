@@ -56,13 +56,12 @@ namespace TeviRandomizer
                         //save original
                         string localizeName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + GemaItemManager.Instance.GetItemString(item.Type), false);
                         string localizeDesc = Localize.GetLocalizeTextWithKeyword("ITEMDESC." + GemaItemManager.Instance.GetItemString(item.Type), false);
-                        item.Description = localizeDesc;
-                        item.Name = localizeName;
 
 
                         //change
-                        changeText(item);
-
+                        RandomizerPlugin.changeSystemText("ITEMNAME." + GemaItemManager.Instance.GetItemString(item.Type), item.Name);
+                        if (!item.Name.IsNullOrWhiteSpace())
+                            RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(item.Type), item.Description);
 
                         //give player
                         if (item.SkipHUD)
@@ -88,23 +87,6 @@ namespace TeviRandomizer
         void changeText(TeviItemInfo item)
         {
 
-            if (ArchipelagoInterface.Instance.isConnected)
-            {
-                if (item.Type == ArchipelagoInterface.remoteItem || item.Type == ArchipelagoInterface.remoteItemProgressive)
-                {
-
-                    item.Name = ArchipelagoInterface.Instance.getLocItemName(item.Type, item.Value);
-                    string playerName = ArchipelagoInterface.Instance.getLocPlayerName(item.Type, item.Value);
-                    item.Description = $"You found {item.Name} for {playerName}";
-
-                    if (Enum.TryParse(item.Name,out ItemList.Type _))
-                    {
-                        item.Name = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + item.ToString(), true);
-
-                        item.Description = "<color=\"red\">" + $"                                                                          <size=200%> FOOL!</color><size=100%>\n\n\n<font-weight=100>{item.Name} was stolen by {playerName}";
-                    }
-                }
-            }
 
 
             RandomizerPlugin.changeSystemText("ITEMNAME." + GemaItemManager.Instance.GetItemString(item.Value), item.Name);
@@ -188,6 +170,24 @@ namespace TeviRandomizer
                     item.Value = byte.Parse(itemName.Split(["Teleporter "], StringSplitOptions.RemoveEmptyEntries)[0]);
                     item.Name = (string)ArchipelagoInterface.Instance.TeviToAPName[item.Name];
                     item.Description = $"{itemName} is now available.";
+                }
+
+                if (ArchipelagoInterface.Instance.isConnected)
+                {
+                    if (item.Type == ArchipelagoInterface.remoteItem || item.Type == ArchipelagoInterface.remoteItemProgressive)
+                    {
+
+                        item.Name = ArchipelagoInterface.Instance.getLocItemName(originalItem, item.Value);
+                        string playerName = ArchipelagoInterface.Instance.getLocPlayerName(originalItem, item.Value);
+                        item.Description = $"You found {item.Name} for {playerName}";
+
+                        if (Enum.TryParse(item.Name, out ItemList.Type fake))
+                        {
+                            item.Name = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + fake, true);
+                            item.ItemIcon = CommonResource.Instance.GetItem((int)fake);
+                            item.Description = "<color=\"red\">" + $"                                                                          <size=200%> FOOL!</color><size=100%>\n\n\n<font-weight=100>{item.Name} was stolen by {playerName}";
+                        }
+                    }
                 }
             }
 
