@@ -289,6 +289,42 @@ namespace TeviRandomizer
 
 
         static public ItemList.Type getRandomizedItem(ItemList.Type itemid, byte slotid) => getRandomizedItem(itemid.ToString(), slotid);
+        static public ItemList.Type getRandomizedItem(string item, byte slot)
+        {
+
+            ItemList.Type data;
+            if (ArchipelagoInterface.Instance.isConnected && LocationTracker.APLocationName.ContainsKey($"{item} #{slot}"))
+            {
+                if (!ArchipelagoInterface.Instance.isItemNative(LocationTracker.APLocationName[$"{item} #{slot}"]) || item == "Remote")
+                    data = ArchipelagoInterface.Instance.isItemProgessive(LocationTracker.APLocationName[$"{item} #{slot}"]) ? ArchipelagoInterface.remoteItemProgressive : ArchipelagoInterface.remoteItem;
+                else
+                    if (!Enum.TryParse(ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APLocationName[$"{item} #{slot}"]), out data))
+                {
+                    //Debug.LogWarning($"Could not find {itemid.ToString()} {slotid}");
+                    if (ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APLocationName[$"{item} #{slot}"]).Contains("Teleporter"))
+                        data = PortalItem;
+                    else
+                        data = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), item);
+                }
+            }
+            else
+            {
+                try
+                {
+                    data = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), __itemData[LocationTracker.APLocationName[$"{item} #{slot}"]]);
+                }
+                catch
+                {
+                    //Debug.LogWarning($"Could not find {itemid.ToString()} {slotid}");
+                    if (LocationTracker.APLocationName.ContainsKey($"{item} #{slot}") && __itemData.ContainsKey(LocationTracker.APLocationName[$"{item} #{slot}"]) && __itemData[LocationTracker.APLocationName[$"{item} #{slot}"]].Contains("Teleporter"))
+                        data = PortalItem;
+                    else
+                        data = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), item);
+                }
+            }
+            return data;
+        }
+
 
         static public ItemList.Type getRandomizedResource(ItemList.Resource item, byte area, int blockID)
         {
@@ -322,41 +358,6 @@ namespace TeviRandomizer
                         data = PortalItem;
                     else
                         data = (ItemList.Type)((int)item + (int)ItemList.Type.I14);
-                }
-            }
-            return data;
-        }
-        static public ItemList.Type getRandomizedItem(string item, byte slot)
-        {
-
-            ItemList.Type data;
-            if (ArchipelagoInterface.Instance.isConnected && LocationTracker.APLocationName.ContainsKey($"{item} #{slot}"))
-            {
-                if(!ArchipelagoInterface.Instance.isItemNative(LocationTracker.APLocationName[$"{item} #{slot}"]) || item == "Remote")
-                    data = ArchipelagoInterface.Instance.isItemProgessive(LocationTracker.APLocationName[$"{item} #{slot}"]) ? ArchipelagoInterface.remoteItemProgressive : ArchipelagoInterface.remoteItem;
-                else
-                    if (!Enum.TryParse(ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APLocationName[$"{item} #{slot}"]),out data))
-                    {
-                    //Debug.LogWarning($"Could not find {itemid.ToString()} {slotid}");
-                    if (ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APLocationName[$"{item} #{slot}"]).Contains("Teleporter"))
-                        data = PortalItem;
-                    else
-                        data = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), item);
-                    }
-            }
-            else
-            {
-                try
-                {
-                    data = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), __itemData[LocationTracker.APLocationName[$"{item} #{slot}"]]);
-                }
-                catch
-                {
-                    //Debug.LogWarning($"Could not find {itemid.ToString()} {slotid}");
-                    if (LocationTracker.APLocationName.ContainsKey($"{item} #{slot}") && __itemData.ContainsKey(LocationTracker.APLocationName[$"{item} #{slot}"]) && __itemData[LocationTracker.APLocationName[$"{item} #{slot}"]].Contains("Teleporter"))
-                        data = PortalItem;
-                    else
-                        data = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), item);
                 }
             }
             return data;
@@ -865,7 +866,7 @@ namespace TeviRandomizer
             {
                 if (em.EventTime > 0.145f && em.EventTime < 100f)
                 {
-                    HUDObtainedItem.Instance.GiveItem(ItemList.Type.I19, 1);
+                    ItemDistributionSystem.EnqueueItem(new(ItemList.Type.I19, 1, false));
                     em.EventTime = 100f;
                 }
                 if (em.EventTime >= 100.5f && !HUDObtainedItem.Instance.isDisplaying())

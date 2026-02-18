@@ -19,67 +19,12 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static bool ObtainItem(ref ItemList.Type type, ref byte value, ref bool doRandomBadge, ref (ItemList.Type, byte) __state)
         {
-            string itemName = "";
-            string desc;
-            ItemList.Type original = type;
-            if (!doRandomBadge)
-            {
-                if (RandomizerPlugin.checkItemGot(type, value))
-                    return false;
-                LocationTracker.addItemToList(type, value);
-
-                ItemList.Type data = RandomizerPlugin.getRandomizedItem(type, value);
-
-                if (ArchipelagoInterface.Instance.isConnected)
-                {
-                    if (data == ArchipelagoInterface.remoteItem || data == ArchipelagoInterface.remoteItemProgressive)
-                    {
-
-                        itemName = ArchipelagoInterface.Instance.getLocItemName(type, value);
-                        string playerName = ArchipelagoInterface.Instance.getLocPlayerName(type, value);
-                        desc = $"You found {itemName} for {playerName}";
-                        __state = (type, value);
-
-                        ItemList.Type item;
-                        if (Enum.TryParse(itemName, out item))
-                        {
-                            itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + item.ToString(), true);
-
-                            desc = "<color=\"red\">" + $"                                                                          <size=200%> FOOL!</color><size=100%>\n\n\n<font-weight=100>{itemName} was stolen by {playerName}";
-                        }
-
-                        RandomizerPlugin.changeSystemText("ITEMNAME." + GemaItemManager.Instance.GetItemString(data), itemName);
-                        RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(data), desc);
-                    }
-                }
-
-                type = data;
-                if (RandomizerPlugin.__itemData.ContainsKey(LocationTracker.APLocationName[$"{original} #{value}"]))
-                    itemName = RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{original} #{value}"]];
-
-                if (type == RandomizerPlugin.PortalItem)
-                {
-                    value = byte.Parse(itemName.Split(["Teleporter "], StringSplitOptions.RemoveEmptyEntries)[0]);
-                    itemName = (string)ArchipelagoInterface.Instance.TeviToAPName[itemName];
-                }
-            }
-            else
-            {
-                //Archipelago implementation
-                itemName = (string)ArchipelagoInterface.Instance.TeviToAPName[$"Teleporter {value}"];
-
-            }
-
-
             if (itemExceptions.Contains(type))
             {
                 var em = EventManager.Instance;
                 switch (type)
                 {
                     case RandomizerPlugin.PortalItem:
-                        desc = $"{itemName} has been Unlocked.";
-                        RandomizerPlugin.changeSystemText("ITEMNAME." + GemaItemManager.Instance.GetItemString(type), itemName);
-                        RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(type), desc);
                         SaveManager.Instance.SetStackableItem(type, value, true); // do i need this?
                         TeleporterRando.setTeleporterIcon(value);
                         value = 255;
@@ -352,9 +297,11 @@ namespace TeviRandomizer
             short atRoomY = __instance.CurrentRoomY;
             __instance.GetRoomWithPosition(data2.transform.position.x, data2.transform.position.y, out atRoomX, out atRoomY);
             Debug.Log("Collecting : X = " + atRoomX + " , Y = " + atRoomY + " , Type : " + itemid);
+            var slotId = data2.GetSlotID();
+            ItemDistributionSystem.EnqueueItem(new(itemid, slotId,false));
 
-            HUDObtainedItem.Instance.GiveItem(itemid, data2.GetSlotID());
-            itemid = RandomizerPlugin.getRandomizedItem(data2.itemid, data2.GetSlotID());
+            itemid = RandomizerPlugin.getRandomizedItem(data2.itemid, slotId);
+
 
 
             if (ArchipelagoInterface.Instance.isConnected && (itemid == ArchipelagoInterface.remoteItem || itemid == ArchipelagoInterface.remoteItemProgressive))
@@ -674,7 +621,7 @@ namespace TeviRandomizer
 
 
 
-        static void customCollector(Vector3 position, ElementType element, ItemList.Resource r)
+        public static void customCollector(Vector3 position, ElementType element, ItemList.Resource r)
         {
             int num = 1;
             ItemList.Resource resource = ItemList.Resource.COIN;
@@ -772,7 +719,7 @@ namespace TeviRandomizer
             if(item == RandomizerPlugin.PortalItem && RandomizerPlugin.__itemData.TryGetValue(locname, out string itemName))
                 value = byte.Parse(itemName.Split(["Teleporter "], StringSplitOptions.RemoveEmptyEntries)[0]);
 
-            ItemDistributionSystem.ItemQueue.Enqueue(new TeviItemInfo(item, value, true, name, desc,false,icon));
+            ItemDistributionSystem.EnqueueItem(new TeviItemInfo(item, value, true, name, desc,false,icon));
         }
 
         const int ShopBonusOffset = -100;

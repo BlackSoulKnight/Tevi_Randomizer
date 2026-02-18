@@ -566,33 +566,8 @@ namespace TeviRandomizer
                             slot = (byte)(30 + ___ShopID);
                         }
 
-                        data = RandomizerPlugin.getRandomizedItem(___itemslots[___Selected].GetItem(),slot);
 
-                        // SetItem does not have a function to add a Location check to the list
-                        LocationTracker.addItemToList(___itemslots[___Selected].GetItem(), slot);
-
-                        if (data == RandomizerPlugin.PortalItem)
-                        {
-                            string itemName = RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{___itemslots[___Selected].GetItem()} #{slot}"]];
-                            byte value = byte.Parse(itemName.Split(["Teleporter "], StringSplitOptions.RemoveEmptyEntries)[0]);
-                            SaveManager.Instance.SetStackableItem(data, value, true); // do i need this?
-                            TeleporterRando.setTeleporterIcon(value);
-                        }
-                        else
-                        {
-                            if (data.ToString().Contains("STACKABLE"))
-                            {
-                                SaveManager.Instance.SetStackableItem(data, 1, value: true);
-                                if (data == ItemList.Type.STACKABLE_BAG)
-                                {
-                                    SettingManager.Instance.SetAchievement(Achievements.ACHI_SHOP_BUYBAG);
-                                }
-                            }
-                            else
-                            {
-                                SaveManager.Instance.SetItem(data, 1);
-                            }
-                        }
+                         ItemDistributionSystem.EnqueueItem(new(___itemslots[___Selected].GetItem(), slot, false, skipHUD:true));
 
                         if (___itemslots[___Selected].GetItem().ToString().Contains("BADGE_"))
                         {

@@ -113,7 +113,7 @@ namespace TeviRandomizer.Story_Mode
                     SaveManager.Instance.SetMiniFlag(Mini.CanOpenBag, 1);
                     if (!SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam) && !SaveManager.Instance.GetCustomGame(CustomGame.RandomBadge))
                     {
-                        HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_TauntThink, 1);
+                        ItemDistributionSystem.EnqueueItem(new(ItemList.Type.BADGE_TauntThink, 1, false));
                     }
                     em.StopEvent();
                     em.StartBoss();

@@ -2,8 +2,11 @@
 using EventMode;
 using Game;
 using HarmonyLib;
-using UnityEngine;
+using System;
+using System.Collections.Generic;
+using System.Reflection.Emit;
 using TeviRandomizer.TeviRandomizerSettings;
+using UnityEngine;
 namespace TeviRandomizer
 {
     class EventPatch
@@ -96,7 +99,7 @@ namespace TeviRandomizer
                 if (em.EventTime > 0.1f && em.EventTime < 100f)
                 {
                     SaveManager.Instance.SetOrb(0);
-                    HUDObtainedItem.Instance.GiveItem(ItemList.Type.ITEM_ORB, 1);
+                    ItemDistributionSystem.EnqueueItem(new(ItemList.Type.ITEM_ORB, 1, false));
                     em.EventTime = 100f;
                 }
                 else if (em.EventTime > 100.5f)
@@ -111,7 +114,7 @@ namespace TeviRandomizer
                 {
                     if (em.EventTime > 0.1f && em.EventTime < 100f)
                     {
-                        HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_BossPassing, 1);
+                        ItemDistributionSystem.EnqueueItem(new(ItemList.Type.BADGE_BossPassing, 1, false));
                         em.EventTime = 100f;
                     }
                     else if (em.EventTime > 100.5f)
@@ -129,7 +132,7 @@ namespace TeviRandomizer
                 {
                     if (em.EventTime > 0.1f && em.EventTime < 100f)
                     {
-                        HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_FreeFoodRefill, 1);
+                        ItemDistributionSystem.EnqueueItem(new(ItemList.Type.BADGE_FreeFoodRefill, 1, false));
                         em.EventTime = 100f;
                     }
                     else if (em.EventTime > 100.5f)
@@ -424,7 +427,7 @@ namespace TeviRandomizer
         {
             if (EventManager.Instance.EventStage == 20 && EventManager.Instance.EventTime > 0.7f && EventManager.Instance.EventTime < 100f)
             {
-                HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_DoubleAirDash, 1);
+                ItemDistributionSystem.EnqueueItem(new(ItemList.Type.BADGE_DoubleAirDash, 1, false));
                 EventManager.Instance.EventTime = 100f;
             }
             return true;
@@ -439,27 +442,27 @@ namespace TeviRandomizer
             {
                 if (em.getSubMode() == Mode.StartMission3A)
                 {
-                    HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_CrystalGen, 1);
+                    ItemDistributionSystem.EnqueueItem(new(ItemList.Type.BADGE_CrystalGen, 1, false));
                 }
                 if (em.getSubMode() == Mode.StartMission3B)
                 {
-                    HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_BoostSizeIncrease, 1);
+                    ItemDistributionSystem.EnqueueItem(new(ItemList.Type.BADGE_BoostSizeIncrease, 1, false));
                 }
                 if (em.getSubMode() == Mode.StartMission3C)
                 {
-                    HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_BoostCostCut, 1);
+                    ItemDistributionSystem.EnqueueItem(new(ItemList.Type.BADGE_BoostCostCut, 1, false));
                 }
                 if (em.getSubMode() == Mode.StartMission8A)
                 {
-                    HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_AmuletDouble, 1);
+                    ItemDistributionSystem.EnqueueItem(new(ItemList.Type.BADGE_AmuletDouble, 1, false));
                 }
                 if (em.getSubMode() == Mode.StartMission15A)
                 {
-                    HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_AmuletQuicken, 1);
+                    ItemDistributionSystem.EnqueueItem(new(ItemList.Type.BADGE_AmuletQuicken, 1, false));
                 }
                 if (em.getSubMode() == Mode.StartMission20A)
                 {
-                    HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_BoostHitCount, 1);
+                    ItemDistributionSystem.EnqueueItem(new(ItemList.Type.BADGE_BoostHitCount, 1, false));
                 }
                 em.EventTime = 100f;
             }
@@ -526,7 +529,7 @@ namespace TeviRandomizer
 
                     if (SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam) && !RandomizerPlugin.checkItemGot(ItemList.Type.STACKABLE_COG, (byte)id))
                     {
-                        HUDObtainedItem.Instance.GiveItem(ItemList.Type.STACKABLE_COG, (byte)id);
+                        ItemDistributionSystem.EnqueueItem(new(ItemList.Type.STACKABLE_COG, (byte)id, false));
                     }
                     if (SaveManager.Instance.GetMiniFlag(Mini.GameCleared) <= 0)
                     {
@@ -548,6 +551,32 @@ namespace TeviRandomizer
         }
 
 
+        [HarmonyPatch(typeof(END_BOOKMARK),"EVENT")]
+        [HarmonyTranspiler]
+        static IEnumerable<CodeInstruction> test(IEnumerable<CodeInstruction> instructions)
+        {
+            var original = AccessTools.Method(
+                typeof(HUDObtainedItem),
+                "GiveItem"
+            );
+
+            var replacement = AccessTools.Method(
+                typeof(Hooks),
+                "GiveItemReplace"
+            );
+
+            foreach (var instruction in instructions)
+            {
+                if (instruction.Calls(original))
+                {
+                    yield return new CodeInstruction(OpCodes.Call, replacement);
+                    continue;
+                }
+
+                yield return instruction;
+            }
+        }
+        
 
         [HarmonyPatch(typeof(Chap4CyrilRoom),"EVENT")]
         [HarmonyPrefix]
@@ -567,7 +596,7 @@ namespace TeviRandomizer
                     }
                     if (em.EventTime > 0.75f && em.EventTime < 100f)
                     {
-                        HUDObtainedItem.Instance.GiveItem(ItemList.Type.BADGE_CrystalAbsorberS, 1);
+                        ItemDistributionSystem.EnqueueItem(new(ItemList.Type.BADGE_CrystalAbsorberS, 1, false));
                         em.EventTime = 100f;
                     }
                     if (em.EventTime >= 100.5f && !HUDObtainedItem.Instance.isDisplaying())

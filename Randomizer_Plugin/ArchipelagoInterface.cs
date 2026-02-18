@@ -448,21 +448,7 @@ namespace TeviRandomizer
                     }
                     teviItem = (ItemList.Type)itemID;
                     var em = EventManager.Instance;
-                    switch (teviItem)
-                    {
-                        case ItemList.Type.I16:
-                            ItemDistributionSystem.ResourceQueue.Enqueue(ItemList.Resource.UPGRADE);
-                            break;
-                        case ItemList.Type.I15:
-                            ItemDistributionSystem.ResourceQueue.Enqueue(ItemList.Resource.CORE);
-                            break;
-                        case ItemList.Type.I14:
-                            ItemDistributionSystem.ResourceQueue.Enqueue(ItemList.Resource.COIN);
-                            break;
-                        default:
-                            ItemDistributionSystem.ItemQueue.Enqueue(new TeviItemInfo(teviItem, value, true));
-                            break;
-                    }
+                    ItemDistributionSystem.EnqueueItem(new(teviItem,value,true));
                     currentItemNR++;
                 }
 

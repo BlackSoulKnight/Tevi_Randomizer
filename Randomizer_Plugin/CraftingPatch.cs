@@ -1054,11 +1054,11 @@ namespace TeviRandomizer
                         }
                         if (___craftList[___selected].isUpgrade)
                         {
-                            HUDObtainedItem.Instance.GiveItem(___currentItemType, (byte)(getItemUpgradeCount(___currentItemType) + 1));
+                            ItemDistributionSystem.EnqueueItem(new(___currentItemType, (byte)(getItemUpgradeCount(___currentItemType) + 1), false));
                             ___isJustCraftedBadge = 1.75f;
                         }
                         else
-                            HUDObtainedItem.Instance.GiveItem(___currentItemType, 1);
+                            ItemDistributionSystem.EnqueueItem(new(___currentItemType, 1, false));
                         if (___currentItemType.ToString().Contains("BADGE"))
                         {
                             SaveManager.Instance.SetMiniFlag(Mini.BadgeCrafted, (byte)(SaveManager.Instance.GetMiniFlag(Mini.BadgeCrafted) + 1));

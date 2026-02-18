@@ -1,7 +1,11 @@
 ﻿using BepInEx;
 using EventMode;
+using Spine;
+using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
+using static UnityEngine.UI.Image;
 
 namespace TeviRandomizer
 {
@@ -28,69 +32,84 @@ namespace TeviRandomizer
 
     class ItemDistributionSystem : MonoBehaviour
     {
-        public static Queue<TeviItemInfo> ItemQueue = new Queue<TeviItemInfo>();
-        public static Queue<ItemList.Resource> ResourceQueue = new Queue<ItemList.Resource>();
+        private static Queue<TeviItemInfo> ItemQueue = new Queue<TeviItemInfo>();
+        private static Queue<ItemList.Resource> ResourceQueue = new Queue<ItemList.Resource>();
 
         void Update()
         {
             if (WorldManager.Instance?.MapInited == true && !EventManager.Instance.IsChangingMap() && GemaUIPauseMenu.Instance.GetAllowPause())
             {
-                if (!checkResourcePause())
-                    if (ResourceQueue.Count > 0 )
+                if (!checkResourcePause() && ResourceQueue.Count > 0)
                     {
                         var em = EventManager.Instance;
                         var resource = ResourceQueue.Dequeue();
                         ElementType type = resource == ItemList.Resource.COIN ? ElementType.B_COIN : ElementType.B_UPGRADE;
+                        ItemSystemPatch.customCollector(em.mainCharacter.t.position, type,resource);
                         CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, type, resource);
 
                     }
-
-                if (!checkHUDObtainPause())
-                    if (ItemQueue.Count > 0)
+                if (!checkHUDObtainPause() && ItemQueue.Count > 0)
+                {
+                    var item = ItemQueue.Dequeue();
+                    if (item != null)
                     {
-                        var item = ItemQueue.Dequeue();
-                        if (item != null)
+                        //save original
+                        string localizeName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + GemaItemManager.Instance.GetItemString(item.Type), false);
+                        string localizeDesc = Localize.GetLocalizeTextWithKeyword("ITEMDESC." + GemaItemManager.Instance.GetItemString(item.Type), false);
+                        item.Description = localizeDesc;
+                        item.Name = localizeName;
+
+
+                        //change
+                        changeText(item);
+
+
+                        //give player
+                        if (item.SkipHUD)
+                            //@TODO Make it work
+                            SaveManager.Instance.SetItem(item.Type, item.Value);
+                        else
                         {
-                            //change Text if possible and item is alread randomized 
-                            string localizeName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + GemaItemManager.Instance.GetItemString(item.Type), false);
-                            string localizeDesc = Localize.GetLocalizeTextWithKeyword("ITEMDESC." + GemaItemManager.Instance.GetItemString(item.Type), false);
-                            if (item.Randomized)
-                            {
-                                var checkItem = ItemSystemPatch.itemToResource(item.Type);
-                                if (checkItem != ItemList.Resource.RESOURCE_MAX)
-                                {
-                                    ResourceQueue.Enqueue(checkItem);
-                                    return;
-                                }
-
-                                if (!item.Description.IsNullOrWhiteSpace())
-                                    RandomizerPlugin.changeSystemText("ITEMNAME." + GemaItemManager.Instance.GetItemString(item.Type), item.Name);
-                                if (!item.Name.IsNullOrWhiteSpace())
-                                    RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(item.Type), item.Description);
-                            }
-                            if (item.SkipHUD && item.Randomized)
-                                //@TODO Make it work
-                                SaveManager.Instance.SetItem(item.Type, item.Value);
-                            else
-                            {
-                                ItemSystemPatch.ChangeItemSpriteTemp = item.ItemIcon;
-                                HUDObtainedItem.Instance.GiveItem(item.Type, item.Value, item.Randomized);
-                            }
-
-                            // reverse Text change
-                            if (item.Randomized)
-                            {
-                                if (!item.Description.IsNullOrWhiteSpace())
-                                    RandomizerPlugin.changeSystemText("ITEMNAME." + GemaItemManager.Instance.GetItemString(item.Type), localizeName);
-                                if (!item.Name.IsNullOrWhiteSpace())
-                                    RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(item.Type), localizeDesc);
-                            }
+                            ItemSystemPatch.ChangeItemSpriteTemp = item.ItemIcon;
+                            HUDObtainedItem.Instance.GiveItem(item.Type, item.Value, item.Randomized);
                         }
+
+                        // reverse change
+                        if (!item.Description.IsNullOrWhiteSpace())
+                            RandomizerPlugin.changeSystemText("ITEMNAME." + GemaItemManager.Instance.GetItemString(item.Type), localizeName);
+                        if (!item.Name.IsNullOrWhiteSpace())
+                            RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(item.Type), localizeDesc);
+
                     }
+                }
             }
         }
 
+        void changeText(TeviItemInfo item)
+        {
 
+            if (ArchipelagoInterface.Instance.isConnected)
+            {
+                if (item.Type == ArchipelagoInterface.remoteItem || item.Type == ArchipelagoInterface.remoteItemProgressive)
+                {
+
+                    item.Name = ArchipelagoInterface.Instance.getLocItemName(item.Type, item.Value);
+                    string playerName = ArchipelagoInterface.Instance.getLocPlayerName(item.Type, item.Value);
+                    item.Description = $"You found {item.Name} for {playerName}";
+
+                    if (Enum.TryParse(item.Name,out ItemList.Type _))
+                    {
+                        item.Name = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + item.ToString(), true);
+
+                        item.Description = "<color=\"red\">" + $"                                                                          <size=200%> FOOL!</color><size=100%>\n\n\n<font-weight=100>{item.Name} was stolen by {playerName}";
+                    }
+                }
+            }
+
+
+            RandomizerPlugin.changeSystemText("ITEMNAME." + GemaItemManager.Instance.GetItemString(item.Value), item.Name);
+            RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(item.Value), item.Description);
+        }
 
         bool checkResourcePause()
         {
@@ -151,13 +170,55 @@ namespace TeviRandomizer
             ResourceQueue.Enqueue(ItemList.Resource.COIN);
         }
 
-        static TeviItemInfo[] asItemQueue;
-        static ItemList.Resource[] asResourceQueue;
+        public static void EnqueueItem(TeviItemInfo item)
+        {
+            if (!item.Randomized)
+            {
+                if (RandomizerPlugin.checkItemGot(item.Type, item.Value))
+                    return;
+                LocationTracker.addItemToList(item.Type, item.Value);
+
+                var originalItem = item.Type;
+                item.Type = RandomizerPlugin.getRandomizedItem(item.Type, item.Value);
+                if (item.Type == RandomizerPlugin.PortalItem)
+                {
+                    string itemName = "";
+                    if (RandomizerPlugin.__itemData.ContainsKey(LocationTracker.APLocationName[$"{originalItem} #{item.Value}"]))
+                        itemName = RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{originalItem} #{item.Value}"]];
+                    item.Value = byte.Parse(itemName.Split(["Teleporter "], StringSplitOptions.RemoveEmptyEntries)[0]);
+                    item.Name = (string)ArchipelagoInterface.Instance.TeviToAPName[item.Name];
+                    item.Description = $"{itemName} is now available.";
+                }
+            }
+
+            switch (item.Type)
+            {
+                case RandomizerPlugin.MoneyItem:
+                    ResourceQueue.Enqueue(ItemList.Resource.COIN);
+                    break;
+                case RandomizerPlugin.ItemUpgradeItem:
+                    ResourceQueue.Enqueue(ItemList.Resource.UPGRADE);
+                    break;
+                case RandomizerPlugin.CoreUpgradeItem:
+                    ResourceQueue.Enqueue(ItemList.Resource.CORE);
+                    break;
+                default:
+                    ItemQueue.Enqueue(item);
+                    break;
+            }
+        }
+
+        //Traps
+
+
 
 
 
         //Savegame stuff
 
+
+        static TeviItemInfo[] AutoSaveItemQueue;
+        static ItemList.Resource[] AutoSaveResourceQueue;
         public static void reset()
         {
             ItemQueue.Clear();
@@ -178,13 +239,13 @@ namespace TeviRandomizer
         }
         public static void saveToTmpSlot(ES3File saveFile)
         {
-            saveFile.Save<TeviItemInfo[]>("ItemQueue", asItemQueue);
-            saveFile.Save<ItemList.Resource[]>("ResourceQueue", asResourceQueue);
+            saveFile.Save<TeviItemInfo[]>("ItemQueue", AutoSaveItemQueue);
+            saveFile.Save<ItemList.Resource[]>("ResourceQueue", AutoSaveResourceQueue);
         }
         public static void saveToTmp()
         {
-            asItemQueue = ItemQueue.ToArray();
-            asResourceQueue = ResourceQueue.ToArray();
+            AutoSaveItemQueue = ItemQueue.ToArray();
+            AutoSaveResourceQueue = ResourceQueue.ToArray();
         }
 
 
