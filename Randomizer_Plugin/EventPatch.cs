@@ -153,7 +153,10 @@ namespace TeviRandomizer
                     SaveManager.Instance.SetItem(ItemList.Type.I19, 1);
                     SaveManager.Instance.SetItem(ItemList.Type.I20, 1);
                 }
+                CameraScript.Instance.RenewEnemySpawn();
+                TeleporterRando.setTeleporterIcon(TeviSettings.StartLocation);
             }
+
             return true;
         }
 
@@ -295,6 +298,14 @@ namespace TeviRandomizer
             return true;
         }
 
+        [HarmonyPatch(typeof(Chap0Start), "EVENT")]
+        [HarmonyPrefix]
+        static void mep()
+        {
+            if(EventManager.Instance.EventStage == 130)
+                EventManager.Instance.mainCharacter.t.position = new Vector3(6748f, -2184f, 0f);
+
+        }
         [HarmonyPatch(typeof(Chap0Start), "CheckSR")]
         [HarmonyPrefix]
         static bool StartItemSetup()
@@ -317,6 +328,7 @@ namespace TeviRandomizer
                 SaveManager.Instance.SetEventFlag(Mode.Chap0UnlockFirstVent, 1, force: true);
                 SaveManager.Instance.SetMiniFlag(Mini.UnlockedCraft, 1);
                 EventManager.Instance.TryStartEvent(Mode.Chap0GetKnife, force: true);
+                TeleporterRando.removeTeleporterIcon(TeleporterRando.TeleporterLoc.Canyon);
                 return false;
             }
             return true;

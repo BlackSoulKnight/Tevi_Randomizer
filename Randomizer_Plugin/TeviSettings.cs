@@ -145,6 +145,7 @@ namespace TeviRandomizer
 
             public static int[] extraPotions = [0,0,0,0,0]; // Hardcoded omo
             public static Dictionary<CustomFlags, bool> customFlags = SetUpFlags();
+            public static TeleporterRando.TeleporterLoc StartLocation = TeleporterRando.TeleporterLoc.Canyon;
             public static GoalType goalType = GoalType.AstralGear;
             public static int customAtkDiff = -1;
             public static int customHpDiff = -1;
