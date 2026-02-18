@@ -285,18 +285,28 @@ namespace TeviRandomizer.UI
             loadSettings();
             updateDiffScaler();
             patchExtraFeatures();
+            if (RandomizerPlugin.randomizerEnabled)
+            {
+                text[0] = text[0].Replace("Enable", "Disable");
+            }
+            else
+            {
+                text[0] = text[0].Replace("Disable", "Enable");
+            }
+            GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce(text[0]);
+
         }
 
 
         void patchExtraFeatures()
         {
-            Extras.patchWhiteFlash(((UnityEngine.UI.Toggle)UI.settings["Toggle AntiFlash"]).isOn);
+            Extras.patchWhiteFlash(((UnityEngine.UI.Toggle)UI.settings["Toggle AntiFlash"]).isOn && RandomizerPlugin.randomizerEnabled );
             TeviSettings.customFlags[CustomFlags.AlwaysRandomizeEnemy] = ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn;
             TeviSettings.customFlags[CustomFlags.RandomizedBoss] = ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomBoss"]).isOn;
             TeviSettings.customFlags[CustomFlags.RandomizedEnemy] = ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn || ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomEnemies"]).isOn;
             TeviSettings.customFlags[CustomFlags.RandomizedBG] = ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomBG"]).isOn;
             TeviSettings.customFlags[CustomFlags.RandomizedMusic] = ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomMusic"]).isOn;
-            ResourcePatch.patchResources(TeviSettings.customFlags[CustomFlags.RandomizedBoss] || TeviSettings.customFlags[CustomFlags.RandomizedEnemy] || TeviSettings.customFlags[CustomFlags.RandomizedBG] || TeviSettings.customFlags[CustomFlags.RandomizedMusic]);
+            ResourcePatch.patchResources((TeviSettings.customFlags[CustomFlags.RandomizedBoss] || TeviSettings.customFlags[CustomFlags.RandomizedEnemy] || TeviSettings.customFlags[CustomFlags.RandomizedBG] || TeviSettings.customFlags[CustomFlags.RandomizedMusic]) && RandomizerPlugin.randomizerEnabled);
             if (((UnityEngine.UI.Toggle)UI.settings["Toggle RandomEnemies"]).isOn || ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn) 
                 Extras.RandomizeExtra.randomEnemies();
             if (((UnityEngine.UI.Toggle)UI.settings["Toggle RandomBoss"]).isOn) 
@@ -830,10 +840,10 @@ namespace TeviRandomizer.UI
 
             }
 
-            
-            if(InputButtonManager.Instance.GetButton(7) && InputButtonManager.Instance.GetButton(8))
+            if (InputButtonManager.Instance.GetButton(7) && InputButtonManager.Instance.GetButton(8))
             {
-                if (RandomizerPlugin.toggleRandomizerPlugin())
+                RandomizerPlugin.toggleRandomizerPlugin();
+                if (RandomizerPlugin.randomizerEnabled)
                 {
                     text[0] = text[0].Replace("Enable", "Disable");
                 }
@@ -843,6 +853,8 @@ namespace TeviRandomizer.UI
                 }
                 GemaUIPauseMenu_BottomBarPrompt.Instance.TopBarUpdateForce(text[0]);
             }
+
+
         }
         static int buttonNR = 13;
     }

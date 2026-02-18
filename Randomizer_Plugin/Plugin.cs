@@ -46,7 +46,7 @@ namespace TeviRandomizer
         static public string seed;
         static public List<int> UniqueEnemiesKilled = new List<int>();
         static public Randomizer randomizer;
-        static private bool randomizerEnabled = false;
+        static public bool randomizerEnabled = false;
         static private Harmony harmonyPatchInstance = new Harmony("Randomizer");
 
         public IEnumerator screenshot(int seconds)
