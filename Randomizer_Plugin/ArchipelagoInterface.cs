@@ -25,11 +25,17 @@ namespace TeviRandomizer
 
     public class ArchipelagoInterface : MonoBehaviour
     {
+        [Flags] enum PopupChoice
+        {
+            None = 0,
+            Progression = 1,
+            Sigils = 2,
+            All = 4,
+        }
         public const ItemList.Type remoteItem = ItemList.Type.I10;
         public const ItemList.Type remoteItemProgressive = ItemList.Type.I11;
         
         public const string AP_WORLD_VERSION = "0.6.7";
-        public string connectedVersion = "";
         public const string ConnectionLost = "APLost";
 
         private class LocationData
@@ -59,6 +65,7 @@ namespace TeviRandomizer
         private Dictionary<int, int> transitionData = new Dictionary<int, int>();
         public int currentItemNR = 0;
         private Dictionary<long, string> PlayerNames = new Dictionary<long, string>();
+        private PopupChoice ItemPopUpChoice = PopupChoice.None;
         public bool connectToRoom(string uri, int port, string user, string password = null)
         {
             if (session != null && session.Socket.Connected)
@@ -125,13 +132,10 @@ namespace TeviRandomizer
 
             if (success.SlotData.ContainsKey("options"))
                 setCustomFlags((JObject)success.SlotData["options"]);
-            else
-                oldSlotData(success.SlotData);
             if(success.SlotData.ContainsKey("version"))
                 connectVersion = (string)success.SlotData["version"];
             getOwnLocationData().Wait();
             getOwnTransitionData(success.SlotData["transitionData"]);
-            connectedVersion = (string)success.SlotData["version"];
             UI.UI.checkApWorldLocationCheck = true;
             return true;
         }
@@ -158,6 +162,14 @@ namespace TeviRandomizer
             if(optionData.ContainsKey("free_EP"))
                 TeviSettings.extraPotions[(int)FreePot.EP] = (int)(long)optionData["free_EP"];
 
+            if (optionData.ContainsKey("popupAll"))
+                ItemPopUpChoice |= PopupChoice.All;
+
+            if (optionData.ContainsKey("popupProgression"))
+                ItemPopUpChoice |= PopupChoice.Progression;
+
+            if (optionData.ContainsKey("popupBadge"))
+                ItemPopUpChoice |= PopupChoice.Sigils;
 
             TeviSettings.customFlags[CustomFlags.TempOption] = (bool)optionData.GetValue("open_morose");
             TeviSettings.customFlags[CustomFlags.CebleStart] = (bool)optionData.GetValue("celia_sable");
@@ -194,15 +206,7 @@ namespace TeviRandomizer
                 TeviSettings.customFlags[CustomFlags.TeleporterRando] = (bool)optionData.GetValue("teleporter_mode");
 
         }
-        private void oldSlotData(Dictionary<string,object> SlotData)
-        {
-            
-            long extraPotions = (long)SlotData["attackMode"];
-            TeviSettings.extraPotions = [(int)extraPotions, (int)extraPotions];
-            TeviSettings.customFlags[CustomFlags.TempOption] = (long)SlotData["openMorose"] > 0;
-            TeviSettings.customFlags[CustomFlags.CebleStart] = (long)SlotData["CeliaSable"] > 0;
-            TeviSettings.GoMode = (int)(long)SlotData["GoalCount"];
-        }
+
         private void toggleDeathLink()
         {
             if (deathLink == null)
@@ -448,7 +452,17 @@ namespace TeviRandomizer
                     }
                     teviItem = (ItemList.Type)itemID;
                     var em = EventManager.Instance;
-                    ItemDistributionSystem.EnqueueItem(new(teviItem,value,true));
+                    bool skiphud = true;
+
+                    int flags = (int)ItemPopUpChoice;
+                    if (ItemPopUpChoice.HasFlag(PopupChoice.Progression) && TeviSettings.ProgressionsItems.Contains(teviItem.ToString()))
+                        skiphud = false;
+                    if (ItemPopUpChoice.HasFlag(PopupChoice.Sigils) && teviItem.ToString().Contains("BADGE"))
+                        skiphud = false;
+                    if (ItemPopUpChoice.HasFlag(PopupChoice.All))
+                        skiphud = false;
+
+                    ItemDistributionSystem.EnqueueItem(new(teviItem,value,true,skipHUD:skiphud));
                     currentItemNR++;
                 }
 

@@ -25,6 +25,7 @@ namespace TeviRandomizer
     public class RandomizerPlugin : BaseUnityPlugin
     {
 
+        public const ItemList.Type Trap = ItemList.Type.I12;
         public const ItemList.Type PortalItem = ItemList.Type.I13;
         public const ItemList.Type MoneyItem = ItemList.Type.I14;
         public const ItemList.Type CoreUpgradeItem = ItemList.Type.I15;
@@ -73,13 +74,13 @@ namespace TeviRandomizer
         {
             this.gameObject.AddComponent<ArchipelagoInterface>();
             this.gameObject.AddComponent<ItemDistributionSystem>();
+            this.gameObject.AddComponent<TeviTraps>();
             ArchipelagoInterface.Instance = gameObject.GetComponent<ArchipelagoInterface>();
             Localize.GetLocalizeTextWithKeyword("", false);
             randomizer = new();
 
             harmonyPatchInstance.PatchAll(typeof(UI.UI));
             toggleRandomizerPlugin();
-
 
             Logger.LogInfo($"Plugin Randomizer is loaded!");
 
@@ -399,6 +400,13 @@ namespace TeviRandomizer
         static public Sprite getSprite(int itemID, bool custom = false)
         {
             return CommonResource.Instance.GetItem(itemID);
+        }
+
+        [HarmonyPatch(typeof(HUDResourceGotPopup),"Awake")]
+        [HarmonyPostfix]
+        public static void getPopUpChache(ref HUDResourceGotPopup __instance)
+        {
+               ItemDistributionSystem.PopUpChacheList = Traverse.Create(__instance).Field("activelist").GetValue<List<ResourceGotPopup>>();
         }
 
         public static BulletType[] bulletSwap = new BulletType[(int)BulletType.MAX];

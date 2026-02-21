@@ -132,7 +132,7 @@ namespace TeviRandomizer
             public const ItemList.Type CoreUpgradeItem = ItemList.Type.I15;
             public const ItemList.Type ItemUpgradeItem = ItemList.Type.I16;
 
-
+            public static readonly HashSet<string> ProgressionsItems = new (Enum.GetNames(typeof(Progression_Items)));
             static Dictionary<CustomFlags, bool> SetUpFlags()
             {
                 Dictionary<CustomFlags, bool> ret = new();

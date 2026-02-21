@@ -1,5 +1,6 @@
 ﻿using BepInEx;
 using EventMode;
+using HarmonyLib;
 using Spine;
 using System;
 using System.Collections.Generic;
@@ -34,7 +35,8 @@ namespace TeviRandomizer
     {
         private static Queue<TeviItemInfo> ItemQueue = new Queue<TeviItemInfo>();
         private static Queue<ItemList.Resource> ResourceQueue = new Queue<ItemList.Resource>();
-
+        private static Queue<TeviItemInfo> SmallHudPopQueue = new();
+        public static List<ResourceGotPopup> PopUpChacheList = null;
         void Update()
         {
             if (WorldManager.Instance?.MapInited == true && !EventManager.Instance.IsChangingMap() && GemaUIPauseMenu.Instance.GetAllowPause())
@@ -59,14 +61,19 @@ namespace TeviRandomizer
 
 
                         //change
-                        RandomizerPlugin.changeSystemText("ITEMNAME." + GemaItemManager.Instance.GetItemString(item.Type), item.Name);
                         if (!item.Name.IsNullOrWhiteSpace())
+                            RandomizerPlugin.changeSystemText("ITEMNAME." + GemaItemManager.Instance.GetItemString(item.Type), item.Name);
+                        if (!item.Description.IsNullOrWhiteSpace())
                             RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(item.Type), item.Description);
 
                         //give player
                         if (item.SkipHUD)
-                            //@TODO Make it work
+                        {
+                            SmallHudPopQueue.Enqueue(item);
                             SaveManager.Instance.SetItem(item.Type, item.Value);
+
+
+                        }
                         else
                         {
                             ItemSystemPatch.ChangeItemSpriteTemp = item.ItemIcon;
@@ -80,6 +87,18 @@ namespace TeviRandomizer
                             RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(item.Type), localizeDesc);
 
                     }
+                }
+                if (PopUpChacheList != null && PopUpChacheList.Count<10 && SmallHudPopQueue.Count >0)
+                {
+                    var item = SmallHudPopQueue.Dequeue();
+                    string localizeName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + GemaItemManager.Instance.GetItemString(item.Type), false);
+                    if (!item.Name.IsNullOrWhiteSpace())
+                        RandomizerPlugin.changeSystemText("ITEMNAME." + GemaItemManager.Instance.GetItemString(item.Type), item.Name);
+                    
+                    HUDResourceGotPopup.Instance.AddPopupNotLost(item.Type);
+
+                    if (!item.Description.IsNullOrWhiteSpace())
+                        RandomizerPlugin.changeSystemText("ITEMNAME." + GemaItemManager.Instance.GetItemString(item.Type), localizeName);
                 }
             }
         }
@@ -97,7 +116,6 @@ namespace TeviRandomizer
         {
             if (EventManager.Instance != null && EventManager.Instance.getMode() != EventMode.Mode.OFF)
                 return true;
-
             return GameSystem.Instance?.isAnyPause() == true;
         }
         bool checkHUDObtainPause()
