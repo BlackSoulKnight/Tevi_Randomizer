@@ -223,8 +223,6 @@ namespace TeviRandomizer
                 t.Field("jsonlistSysTxtDictionary").GetValue<Dictionary<string, Localize.SystemText>>().Add(newText.keyword, t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>()[t.Field("jsonlistSysTxt").GetValue<List<Localize.SystemText>>().Count - 1]);
             }
 
-
-
         }
 
         [HarmonyPatch(typeof(Localize), "GetLocalizeTextWithKeyword")]
@@ -267,6 +265,7 @@ namespace TeviRandomizer
                         __result = __result.Replace("16", TeviSettings.GoMode.ToString());
                         break;
             }
+
             }
             if (ArchipelagoInterface.Instance != null && ArchipelagoInterface.Instance.isConnected)
             {
@@ -638,6 +637,10 @@ namespace TeviRandomizer
                         spr = CommonResource.Instance.GetItem((int)item);
                     }
                 }
+            }
+            if(data == Trap)
+            {
+                spr = CommonResource.Instance.GetItem(UnityEngine.Random.RandomRangeInt(0, TeviSettings.ProgressionsItemValues.Length));
             }
 
             if (data >= ItemList.Type.BADGE_START && data <= ItemList.Type.BADGE_MAX)
@@ -1058,7 +1061,7 @@ namespace TeviRandomizer
 
 
 
-        static int bonusDropKickDmg;
+        static float bonusDropKickDmg;
         static bulletScript currentDropKick;
         static bool DropKickDmgUpdated = false;
         static CharacterBase lastHit;
@@ -1149,6 +1152,12 @@ namespace TeviRandomizer
         }
 
 
+       public static void ChangeQuickDropBadgeDescription()
+        {
+            RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(ItemList.Type.BADGE_QuickDropExtendA), "^Quickdrops^ combo increased by additionally $+1$. After ^quickdrop^ hits enemy, all melee attack power $+5 %$, max cumulation $33 %$\nThe cumulative effect begins to decrease after landing and disappears completely after about 5s");
+            RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(ItemList.Type.BADGE_QuickDropExtendB), "^Quickdrops^ combo increased by additionally $+3$.");
+            RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(ItemList.Type.BADGE_QuickDropDouble), "Number of ^quickdrops^ combo gained is $doubled$");
+        }
 
         [HarmonyPatch(typeof(CharacterBase), "BulletHurtPlayer")]
         [HarmonyPostfix]
@@ -1159,8 +1168,15 @@ namespace TeviRandomizer
             {
                 if (type == BulletType.QUICK_DROP)
                 {
-                    bonusDropKickDmg++;
-
+                    float bonus = 0.1f;
+                    if (SaveManager.Instance.GetBadgeEquipped(ItemList.Type.BADGE_QuickDropExtendA))
+                        bonus++;
+                    if (SaveManager.Instance.GetBadgeEquipped(ItemList.Type.BADGE_QuickDropExtendB))
+                        bonus+=3;
+                    if (SaveManager.Instance.GetBadgeEquipped(ItemList.Type.BADGE_QuickDropDouble))
+                        bonus *= 1.33f;
+                    bonusDropKickDmg += bonus;
+                    Traverse.Create(owner.phy_perfer).Field<byte>("quickDropRemaining").Value += 1;
                 }
                 else if (damage > 0 && (owner != null && owner.isPlayer()) || __instance.isPlayer())
                 {
