@@ -27,5 +27,65 @@
             "emotion":"",
             "pose":""
         }
+    ],
+    "chapterall_Sign_OASISHOME_1":[
+        {
+            "textId":1,
+            "text":"One of the most important Feature for Free Roam is the Reverse Wall Jump.",
+            "character":"Info",
+            "flag":"hidden",
+            "position":"",
+            "emotion":"",
+            "pose":""
+        },
+        {
+            "textId":2,
+            "text":"To perform this technique you must first face away from the Wall. Then first jump and then move towards the wall. Now you can perform a walljump normaly.",
+            "character":"Info",
+            "flag":"hidden",
+            "position":"",
+            "emotion":"",
+            "pose":""
+        },
+        {
+            "textId":3,
+            "text":"Additionally it is possible to use Dropkick to perform one additionally Walljump against the oppposite of the first wall.",
+            "character":"Info",
+            "flag":"hidden",
+            "position":"",
+            "emotion":"",
+            "pose":""
+        }
+    ],
+    "chapterall_Sign_OASISHOME_2":[
+        {
+            "textId":1,
+            "text":"Performing only Dropkicks without getting hit increases the damage with each successful hit.",
+            "character":"Info",
+            "flag":"hidden",
+            "position":"",
+            "emotion":"",
+            "pose":""
+        },
+        {
+            "textId":1,
+            "text":"When you hit a Dropkick you gain one additionally Dropkick, this can repeated indefinitely.",
+            "character":"Info",
+            "flag":"hidden",
+            "position":"",
+            "emotion":"",
+            "pose":""
+        }
+    ],
+    "chapterall_Sign_OASISHOME_3":[
+        {
+            "textId":1,
+            "text":"Tornado Spin or 4th Melee can destroy Moneyblocks and Tornado Spin is unlocked when Dagger is aquired.",
+            "character":"Info",
+            "flag":"hidden",
+            "position":"",
+            "emotion":"",
+            "pose":""
+        }
     ]
 }
