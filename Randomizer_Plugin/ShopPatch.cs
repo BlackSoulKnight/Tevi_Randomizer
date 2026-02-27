@@ -669,11 +669,15 @@ namespace TeviRandomizer
                 }
                 texts[0].text = itemName;
             }
-            if (___itype == RandomizerPlugin.PortalItem)
+            if (___itype == RandomizerPlugin.PortalItem || ___itype == RandomizerPlugin.Trap)
             {
                 string itemName = (string)ArchipelagoInterface.Instance.TeviToAPName[RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{item} #{slot}"]]];
                 texts[0].text = itemName;
+                bgicon.enabled = false;
             }
+            if (___itype == RandomizerPlugin.Trap)
+                ___itemicon.sprite = CommonResource.Instance.GetItem((int)ItemList.Type.Other_Unknown);
+
 
             texts[2].text = FreeShop()? "0":_price.ToString();
 
@@ -709,6 +713,8 @@ namespace TeviRandomizer
                     data = RandomizerPlugin.getRandomizedItem(item, 1);
                     ___item_desc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(data);
                 }
+                if(data == RandomizerPlugin.Trap)
+                    ___item_desc.text = ___itemslots[___Selected].GetName();
                 if (ArchipelagoInterface.Instance.isConnected && (data == ArchipelagoInterface.remoteItem || data == ArchipelagoInterface.remoteItemProgressive))
                 {
                     string itemName = ArchipelagoInterface.Instance.getLocItemName(item, slot);

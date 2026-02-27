@@ -59,14 +59,12 @@ namespace TeviRandomizer
 
         static async Task getAllResources()
         {
-
-
             ResourceScene = SceneManager.CreateScene("AllResource");
             GameObject newObj = new GameObject("Resource");
             AreaResource = newObj.AddComponent<AreaResource>();
             //newObj.AddComponent<Resources>();
             SceneManager.MoveGameObjectToScene(newObj, ResourceScene);
-
+            
             List<AsyncOperationHandle<SceneInstance>> sceneHandle = new List<AsyncOperationHandle<SceneInstance>>();
             for (int i = 0; i < MainVar.instance.MAXAREA - 2; i++)
             {

@@ -692,6 +692,7 @@ namespace TeviRandomizer
                     name = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + item2.ToString(), true);
                     desc = "<color=\"red\">" + $"                                                                          <size=200%> FOOL!</color><size=100%>\n\n\n<font-weight=100>{name} was stolen by {playerName}";
                     icon = CommonResource.Instance.GetItem((int)item2);
+                    TeviTraps.SpawnBun();
                 }
                 else
                 {
@@ -703,7 +704,11 @@ namespace TeviRandomizer
             byte value = 1;
             if(item == RandomizerPlugin.PortalItem && RandomizerPlugin.__itemData.TryGetValue(locname, out string itemName))
                 value = byte.Parse(itemName.Split(["Teleporter "], StringSplitOptions.RemoveEmptyEntries)[0]);
-
+            if(item == RandomizerPlugin.Trap && RandomizerPlugin.__itemData.TryGetValue(locname, out itemName))
+            {
+                name = itemName;
+                value = (byte)TeviTraps.NameToTrap(itemName);
+            }
             ItemDistributionSystem.EnqueueItem(new TeviItemInfo(item, value, true, name, desc,false,icon));
         }
 

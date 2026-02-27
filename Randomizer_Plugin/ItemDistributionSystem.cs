@@ -36,6 +36,7 @@ namespace TeviRandomizer
         private static Queue<TeviItemInfo> ItemQueue = new Queue<TeviItemInfo>();
         private static Queue<ItemList.Resource> ResourceQueue = new Queue<ItemList.Resource>();
         private static Queue<TeviItemInfo> SmallHudPopQueue = new();
+        private static Queue<TeviItemInfo> TrapQueue = new();
         public static List<ResourceGotPopup> PopUpChacheList = null;
         void Update()
         {
@@ -88,6 +89,25 @@ namespace TeviRandomizer
 
                     }
                 }
+                if (!checkHUDObtainPause() && TrapQueue.Count > 0)
+                {
+                    var trap = TrapQueue.Dequeue();
+                    switch ((TeviTraps.Traps)trap.Value)
+                    {
+                        case TeviTraps.Traps.ReverseCam:
+                            TeviTraps.ReverseCamDuration += 15;
+                            break;
+                        case TeviTraps.Traps.DoubleTime:
+                            TeviTraps.DoubleTimeDuration += 15;
+                            break;
+                        case TeviTraps.Traps.Debuff:
+                            TeviTraps.ApplyDebuff(TeviTraps.RandomDebuff);
+                            break;
+                        case TeviTraps.Traps.Yeet:
+                            TeviTraps.YeetBunny = true;
+                            break;
+                    }
+                }
                 if (PopUpChacheList != null && PopUpChacheList.Count<10 && SmallHudPopQueue.Count >0)
                 {
                     var item = SmallHudPopQueue.Dequeue();
@@ -100,6 +120,7 @@ namespace TeviRandomizer
                     if (!item.Description.IsNullOrWhiteSpace())
                         RandomizerPlugin.changeSystemText("ITEMNAME." + GemaItemManager.Instance.GetItemString(item.Type), localizeName);
                 }
+
             }
         }
 
@@ -189,7 +210,14 @@ namespace TeviRandomizer
                     item.Name = (string)ArchipelagoInterface.Instance.TeviToAPName[item.Name];
                     item.Description = $"{itemName} is now available.";
                 }
+                if(item.Type == RandomizerPlugin.Trap)
+                {
 
+                    if (RandomizerPlugin.__itemData.ContainsKey(LocationTracker.APLocationName[$"{originalItem} #{item.Value}"]))
+                        item.Name = RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{originalItem} #{item.Value}"]];
+                    item.Value = (byte)TeviTraps.NameToTrap(item.Name);
+
+                }
                 if (ArchipelagoInterface.Instance.isConnected)
                 {
                     if (item.Type == ArchipelagoInterface.remoteItem || item.Type == ArchipelagoInterface.remoteItemProgressive)
@@ -201,9 +229,9 @@ namespace TeviRandomizer
 
                         if (Enum.TryParse(item.Name, out ItemList.Type fake))
                         {
-                            item.Name = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + fake, true);
                             item.ItemIcon = CommonResource.Instance.GetItem((int)fake);
                             item.Description = "<color=\"red\">" + $"                                                                          <size=200%> FOOL!</color><size=100%>\n\n\n<font-weight=100>{item.Name} was stolen by {playerName}";
+                            TeviTraps.SpawnBun();
                         }
                     }
                 }
@@ -219,6 +247,9 @@ namespace TeviRandomizer
                     break;
                 case RandomizerPlugin.CoreUpgradeItem:
                     ResourceQueue.Enqueue(ItemList.Resource.CORE);
+                    break;
+                case RandomizerPlugin.Trap:
+                    TrapQueue.Enqueue(item);
                     break;
                 default:
                     ItemQueue.Enqueue(item);

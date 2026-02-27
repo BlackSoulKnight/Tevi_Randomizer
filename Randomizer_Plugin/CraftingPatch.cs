@@ -136,7 +136,13 @@ namespace TeviRandomizer
                     ___selectedDesc.text = $"Unlocks the {___selectedName.text}";
 
                 }
-                if (itemType.ToString().Contains("_OrbBoost"))
+                else if(data == RandomizerPlugin.Trap)
+                {
+                    ___selectedName.text = (string)ArchipelagoInterface.Instance.TeviToAPName[RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{itemType} #{slot}"]]];
+                    ___selectedDesc.text = $"{___selectedName.text}";
+
+                }
+                else if (itemType.ToString().Contains("_OrbBoost"))
                 {
                     ___selectedDesc.text = "<font-weight=200>" + Localize.GetLocalizeTextWithKeyword("ITEMDESC.ORBBOOSTSERIES", contains: false);
                     ___selectedDesc.text = Localize.AddColorToBadgeDesc(___selectedDesc.text);
@@ -449,7 +455,7 @@ namespace TeviRandomizer
                         }
                     }
                 }
-                if(data == RandomizerPlugin.PortalItem)
+                if(data == RandomizerPlugin.PortalItem ||data == RandomizerPlugin.Trap)
                 {
                     itemName = (string)ArchipelagoInterface.Instance.TeviToAPName[RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{itype} #{1}"]]];
                 }
@@ -487,7 +493,7 @@ namespace TeviRandomizer
                 string itemName = ArchipelagoInterface.Instance.getLocItemName(itype, 1);
                 if (Enum.TryParse(itemName, out item))
                 {
-                    if (item == RandomizerPlugin.PortalItem)
+                    if (item == RandomizerPlugin.PortalItem || item == RandomizerPlugin.Trap)
                     {
                         itemName = (string)ArchipelagoInterface.Instance.TeviToAPName[RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{itype} #{1}"]]];
                     }

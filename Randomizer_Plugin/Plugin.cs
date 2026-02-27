@@ -125,9 +125,9 @@ namespace TeviRandomizer
                 //harmonyPatchInstance.PatchAll(typeof(ResourcePatch));
                 harmonyPatchInstance.PatchAll(typeof(EnemyPatch));
                 harmonyPatchInstance.PatchAll(typeof(BossPatch));
-                harmonyPatchInstance.PatchAll(typeof(Story_Mode.StoryEventPatch));
                 harmonyPatchInstance.PatchAll(typeof(BaseGameFixes));
                 harmonyPatchInstance.PatchAll(typeof(PlayerCharacterPatch));
+                harmonyPatchInstance.PatchAll(typeof(HintSystemPatch));
                 randomizerEnabled = true;
                 return true;
             }
@@ -301,8 +301,11 @@ namespace TeviRandomizer
                     if (!Enum.TryParse(ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APLocationName[$"{item} #{slot}"]), out data))
                 {
                     //Debug.LogWarning($"Could not find {itemid.ToString()} {slotid}");
-                    if (ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APLocationName[$"{item} #{slot}"]).Contains("Teleporter"))
+                    string itemName = ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APLocationName[$"{item} #{slot}"]);
+                    if (itemName.Contains("Teleporter"))
                         data = PortalItem;
+                    else if (TeviTraps.NameToTrap(itemName) != TeviTraps.Traps.None)
+                        data = Trap;
                     else
                         data = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), item);
                 }
@@ -315,9 +318,17 @@ namespace TeviRandomizer
                 }
                 catch
                 {
-                    //Debug.LogWarning($"Could not find {itemid.ToString()} {slotid}");
-                    if (LocationTracker.APLocationName.ContainsKey($"{item} #{slot}") && __itemData.ContainsKey(LocationTracker.APLocationName[$"{item} #{slot}"]) && __itemData[LocationTracker.APLocationName[$"{item} #{slot}"]].Contains("Teleporter"))
-                        data = PortalItem;
+                    if (LocationTracker.APLocationName.ContainsKey($"{item} #{slot}") && __itemData.ContainsKey(LocationTracker.APLocationName[$"{item} #{slot}"]))
+                    {
+                        string itemName = __itemData[LocationTracker.APLocationName[$"{item} #{slot}"]];
+                        //Debug.LogWarning($"Could not find {itemid.ToString()} {slotid}");
+                        if (itemName.Contains("Teleporter"))
+                            data = PortalItem;
+                        else if (TeviTraps.NameToTrap(itemName) != TeviTraps.Traps.None)
+                            data = Trap;
+                        else
+                            data = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), item);
+                    }
                     else
                         data = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), item);
                 }
@@ -339,8 +350,11 @@ namespace TeviRandomizer
                 if (!Enum.TryParse(ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APResoucreLocationame[$"{area} #{blockID}"]),out data))
                     {
                     //Debug.LogWarning($"Could not find {itemid.ToString()} {slotid}");
-                    if (ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APResoucreLocationame[$"{area} #{blockID}"]).Contains("Teleporter"))
+                    string itemName = ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APResoucreLocationame[$"{area} #{blockID}"]);
+                    if (itemName.Contains("Teleporter"))
                         data = PortalItem;
+                    else if (TeviTraps.NameToTrap(itemName) != TeviTraps.Traps.None)
+                        data = Trap;
                     else
                         data = (ItemList.Type)((int)item + (int)ItemList.Type.I14);
                     }
@@ -354,8 +368,11 @@ namespace TeviRandomizer
                 catch  (Exception e)
                 {
                     Debug.LogWarning($"{e}");
-                    if (LocationTracker.APResoucreLocationame.ContainsKey($"{area} #{blockID}") && __itemData.ContainsKey(LocationTracker.APResoucreLocationame[$"{area} #{blockID}"]) && __itemData[LocationTracker.APResoucreLocationame[$"{area} #{blockID}"]].Contains("Teleporter"))
+                    string itemName = ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APResoucreLocationame[$"{area} #{blockID}"]);
+                    if (itemName.Contains("Teleporter"))
                         data = PortalItem;
+                    else if (TeviTraps.NameToTrap(itemName) != TeviTraps.Traps.None)
+                        data = Trap;
                     else
                         data = (ItemList.Type)((int)item + (int)ItemList.Type.I14);
                 }
@@ -783,8 +800,8 @@ namespace TeviRandomizer
             if (___items.Length > 0)
             {
 
-                ___items[10] = createNewArchipelagoSprite("nonProgression.png");
-                ___items[11] = createNewArchipelagoSprite("Progression.png");
+                ___items[10] = createNewArchipelagoSprite("nonProgressive.png");
+                ___items[11] = createNewArchipelagoSprite("Progressive.png");
                 ___items[13] = createNewSprite("Teleporter.png");
                 if (___items[13] == null)
                     ___items[13] = ___items[0];
@@ -795,6 +812,7 @@ namespace TeviRandomizer
                 ___items[14] = ___resources[0];
                 ___items[15] = ___resources[1];
                 ___items[16] = ___resources[2];
+                ___items[12] = CommonResource.Instance.GetItem((int)ItemList.Type.Other_Unknown);
             }
 
 

@@ -400,6 +400,11 @@ namespace TeviRandomizer
         public string getLocPlayerName(string Location) => locations.ContainsKey(Location) ? PlayerNames[locations[Location].player] : "Yourself";
         public string getLocPlayerName(ItemList.Type item, byte slot) => getLocPlayerName(LocationTracker.APLocationName[$"{item} #{slot}"]);
 
+        private Action<Hint> HintPackage = (hint) =>
+        {
+            
+        };
+
         void Awake()
         {
             string path = TeviSettings.pluginPath + "/resource/";
@@ -444,11 +449,18 @@ namespace TeviRandomizer
                 {
                     ItemInfo item = session.Items.AllItemsReceived[currentItemNR];
                     byte value = 1;
+                    string name = "";
                     int itemID = (int)(item.ItemId - baseID);
                     if(itemID >= 500 && itemID <= 536)
                     {
                         value = (byte)(itemID - 500);
                         itemID = (byte)TeviSettings.PortalItem;
+                    }
+                    if(itemID >= 550)
+                    {
+                        name = item.ItemName;
+                        itemID = (byte)RandomizerPlugin.Trap;
+                        value = (byte)TeviTraps.NameToTrap(name);
                     }
                     teviItem = (ItemList.Type)itemID;
                     var em = EventManager.Instance;
@@ -462,7 +474,10 @@ namespace TeviRandomizer
                     if (ItemPopUpChoice.HasFlag(PopupChoice.All))
                         skiphud = false;
 
-                    ItemDistributionSystem.EnqueueItem(new(teviItem,value,true,skipHUD:skiphud));
+                    if (teviItem == RandomizerPlugin.Trap)
+                        skiphud = true;
+
+                    ItemDistributionSystem.EnqueueItem(new(teviItem,value,true,name,skipHUD:skiphud));
                     currentItemNR++;
                 }
 

@@ -442,5 +442,10 @@
     "Teleporter 33":                             "Teleporter Gallery of Mirrors",       
     "Teleporter 34":                             "Teleporter Gallery of Souls",         
     "Teleporter 35":                             "Teleporter Blushwood",                
-    "Teleporter 36":                             "Teleporter Evernight Garden"       
+    "Teleporter 36":                             "Teleporter Evernight Garden",
+    
+    "Yeet":                                      "Yeet",
+    "Reverse Camera":                            "Reverse Camera",
+    "Double Time":                               "Double Time",
+    "Debuff":                                    "Debuff"
 }
