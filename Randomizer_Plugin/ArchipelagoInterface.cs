@@ -151,7 +151,7 @@ namespace TeviRandomizer
         {
             Debug.Log(optionData);
             LocationData locationData = new LocationData();
-
+            ItemPopUpChoice = PopupChoice.None;
 
             if(optionData.ContainsKey("free_MATK"))
                 TeviSettings.extraPotions[(int)FreePot.Melee] = (int)(long)optionData["free_MATK"];
