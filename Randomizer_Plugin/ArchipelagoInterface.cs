@@ -1,16 +1,20 @@
-﻿using System;
+﻿using Archipelago.MultiClient.Net;
+using Archipelago.MultiClient.Net.BounceFeatures.DeathLink;
+using Archipelago.MultiClient.Net.Enums;
+using Archipelago.MultiClient.Net.Helpers;
+using Archipelago.MultiClient.Net.Models;
+using Archipelago.MultiClient.Net.Packets;
+using Map;
+using Newtonsoft.Json.Linq;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
-using Archipelago.MultiClient.Net;
-using Archipelago.MultiClient.Net.BounceFeatures.DeathLink;
-using Archipelago.MultiClient.Net.Enums;
-using Archipelago.MultiClient.Net.Models;
-using Archipelago.MultiClient.Net.Packets;
-using Newtonsoft.Json.Linq;
-using UnityEngine;
 using TeviRandomizer.TeviRandomizerSettings;
+using UnityEngine;
 
 /*
  * Things missing:
@@ -34,7 +38,7 @@ namespace TeviRandomizer
         }
         public const ItemList.Type remoteItem = ItemList.Type.I10;
         public const ItemList.Type remoteItemProgressive = ItemList.Type.I11;
-        
+        HintsHelper hintsHelper;
         public const string AP_WORLD_VERSION = "0.6.7";
         public const string ConnectionLost = "APLost";
 
@@ -74,7 +78,8 @@ namespace TeviRandomizer
                 isConnected = false;
             }
 
-
+            PlayerHintQueue.Clear();
+            PlayerHints.Clear();
             session = ArchipelagoSessionFactory.CreateSession(uri, port);
             try
             {
@@ -137,6 +142,7 @@ namespace TeviRandomizer
             getOwnLocationData().Wait();
             getOwnTransitionData(success.SlotData["transitionData"]);
             UI.UI.checkApWorldLocationCheck = true;
+            session.Hints.TrackHints(HintPackage);
             return true;
         }
 
@@ -400,9 +406,27 @@ namespace TeviRandomizer
         public string getLocPlayerName(string Location) => locations.ContainsKey(Location) ? PlayerNames[locations[Location].player] : "Yourself";
         public string getLocPlayerName(ItemList.Type item, byte slot) => getLocPlayerName(LocationTracker.APLocationName[$"{item} #{slot}"]);
 
-        private Action<Hint> HintPackage = (hint) =>
+        private static Dictionary<long,Hint> PlayerHints = new Dictionary<long,Hint>();
+        private static Queue<Hint> PlayerHintQueue = new();
+        private Action<Hint[]> HintPackage = (hints) =>
         {
-            
+            foreach (Hint hint in hints)
+            {
+                if (PlayerHints.ContainsKey(hint.LocationId))
+                {
+                    if (PlayerHints[hint.LocationId].Status == HintStatus.Priority && hint.Status != HintStatus.Priority)
+                        PlayerHintQueue.Enqueue(PlayerHints[hint.LocationId]);
+                    if (PlayerHints[hint.LocationId].Status != HintStatus.Priority && hint.Status == HintStatus.Priority)
+                        PlayerHintQueue.Enqueue(PlayerHints[hint.LocationId]);
+                    PlayerHints[hint.LocationId].Status = hint.Status;
+                }
+                else
+                {
+                    PlayerHints[hint.LocationId] = hint;
+                    if (hint.Status == HintStatus.Priority)
+                        PlayerHintQueue.Enqueue(hint);
+                }
+            }
         };
 
         void Awake()
@@ -481,6 +505,18 @@ namespace TeviRandomizer
                     currentItemNR++;
                 }
 
+                while(PlayerHintQueue.Count > 0)
+                {
+                    Hint hint = PlayerHintQueue.Dequeue();
+                    string loc = session.Locations.GetLocationNameFromId(hint.LocationId);
+                    string itemName = getLocItemName(loc);
+                    if (TeviToAPName.ContainsKey(itemName))
+                        itemName = TeviToAPName[itemName].ToString();
+                    if (hint.Status == HintStatus.Priority)
+                        HintSystemPatch.CreateCustomTodo(loc, itemName);
+                    else
+                        HintSystemPatch.RemoveCustomTodo(loc);
+                }
             }
         }
     }

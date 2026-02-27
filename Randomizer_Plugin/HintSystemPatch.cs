@@ -43,7 +43,7 @@ namespace TeviRandomizer
     {
         private static List<TeviHint> HintQueue = new();
         static Hashtable teviHints = new();
-        static bool CreateCustomTodo(string loc,string ItemName)
+        public static bool CreateCustomTodo(string loc,string ItemName)
         {
             if (!LocationTracker.LocationMapPositions.ContainsKey(loc))
             {
@@ -72,8 +72,15 @@ namespace TeviRandomizer
         public static void RemoveCustomTodo(string loc)
         {
             var spot = LocationTracker.LocationMapPositions[loc];
+            TeviHint tmp = new(spot.Area, spot.X, spot.Y);
             if (!teviHints.ContainsKey(TeviHint.HashCode(spot.Area, spot.X, spot.Y)))
             {
+                if (HintQueue.Contains(tmp))
+                {
+                    int index = HintQueue.FindIndex(h => h.LocationName == loc);
+                    if (index >= 0)
+                        HintQueue.RemoveAt(index);
+                }
                 UpdateHintQueue();
                 return;
             }
