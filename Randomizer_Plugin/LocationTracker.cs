@@ -1,17 +1,29 @@
 
 using Newtonsoft.Json.Linq;
+using Spine;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using UnityEngine;
 using TeviRandomizer.TeviRandomizerSettings;
+using UnityEngine;
 
 namespace TeviRandomizer
 {
+    record LocationPosition
+    {
+        public byte Area,X,Y;
+        public LocationPosition(byte area, byte x, byte y)
+        {
+            Area = area;
+            X = x;
+            Y = y;
+        }
+    }
     class LocationTracker
     {
         public static bool active = true;
         static List<string> collectedLocationList = new List<string>();
+        static public Dictionary<string, LocationPosition> LocationMapPositions = new();
         static public Dictionary<string,string> APLocationName = loadLocationNameList();
         static public Dictionary<string,string> APResoucreLocationame = loadUpgradeResourceLocationList();
 
@@ -22,6 +34,12 @@ namespace TeviRandomizer
             foreach(var loc in locations)
             {
                 dict.Add($"{loc["Itemname"]} #{loc["slotId"]}", loc["LocationName"].ToString());
+                JObject p = (JObject)(loc["LocationRegion"][0]);
+                try
+                {
+                    LocationMapPositions.Add(loc["LocationName"].ToString(), new((byte)p["Area"], (byte)p["X"], (byte)p["Y"]));
+                }
+                catch { }
             }
             return dict;
         }
@@ -42,6 +60,13 @@ namespace TeviRandomizer
                     Debug.LogError($"KEY ALREADY EXISTS: {$"{loc["area"]} #{(int)loc["blockId"]}"}");
                 else
                     keyValuePairs.Add($"{loc["area"]} #{(int)loc["blockId"]}", loc["LocationName"].ToString());
+
+                JObject p = (JObject)(loc["LocationRegion"][0]);
+                try
+                {
+                    LocationMapPositions.Add(loc["LocationName"].ToString(), new((byte)p["Area"], (byte)p["X"], (byte)p["Y"]));
+                }
+                catch { }
             }
             return keyValuePairs;
         }
@@ -86,21 +111,23 @@ namespace TeviRandomizer
         public static void addItemToList(ItemList.Type item, byte slot)
         {
             if (APLocationName.ContainsKey($"{item} #{slot}"))
+            {
                 addLocationToList(APLocationName[$"{item} #{slot}"]);
+            }
             else
             {
                 addLocationToList($"{item} #{slot}");
-                return;
             }
         }
         public static void addResourceToList(byte area, int blockId)
         {
             if (APResoucreLocationame.ContainsKey($"{area} #{blockId}"))
+            {
                 addLocationToList(APResoucreLocationame[$"{area} #{blockId}"]);
+            }
             else
             {
                 addLocationToList($"{area} #{blockId}");
-                return;
             }
         }
         
@@ -108,6 +135,7 @@ namespace TeviRandomizer
         public static void addLocationToList(string location)
         {
             collectedLocationList.Add(location);
+            HintSystemPatch.RemoveCustomTodo(location);
             if (ArchipelagoInterface.Instance.isConnected)
             {
                 ArchipelagoInterface.Instance.checkoutLocation(location);

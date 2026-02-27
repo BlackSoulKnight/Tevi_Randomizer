@@ -288,6 +288,19 @@ namespace TeviRandomizer
                     return true;
             }
         }
+
+        [HarmonyPatch(typeof(SaveManager),"_Awake")]
+        [HarmonyPostfix]
+        static void increaseSaveDataArray(ref SaveManager.SaveData ___savedata,ref SaveManager __instance)
+        {
+            ___savedata.todoA = new byte[2000];
+            ___savedata.todoX = new byte[2000];
+            ___savedata.todoY = new byte[2000];
+            ___savedata.todoID = new byte[2000];
+            ___savedata.oldtodoID = new byte[2000];
+            Traverse.Create(__instance).Field("MAXTODO").SetValue(2000);
+            Traverse.Create(__instance).Field("MAXOLDTODO").SetValue(2000);
+        }
     }
 
 }
