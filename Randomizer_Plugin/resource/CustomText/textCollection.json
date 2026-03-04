@@ -11,7 +11,7 @@
         },
         {
             "textId":2,
-            "text":"Another row of text",
+            "text":"This room can be used to learn about the features that are required to complete the game.",
             "character":"Info",
             "flag":"hidden",
             "position":"",
