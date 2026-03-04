@@ -1,4 +1,5 @@
-﻿using Character;
+﻿using Bullet;
+using Character;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,6 +15,7 @@ namespace TeviRandomizer
             DoubleTime,
             Yeet,
             Debuff,
+            Taunt,
             None
         }
         private static void ChangeCam(float zoomLevel) => MainVar.instance.CamZoom = zoomLevel;
@@ -145,6 +147,37 @@ namespace TeviRandomizer
             item.SkipHUD = true;
             return item;
         }
+        public static void useTaunt()
+        {
+            int taunt = UnityEngine.Random.Range(0,(int)Taunt.MAX);
+
+            EventManager.Instance.mainCharacter.ChangeLogicStatus(PlayerLogicState.TAUNT);
+            EventManager.Instance.mainCharacter.phy_perfer.SetCounter(10, taunt);
+            EventManager.Instance.mainCharacter.phy_perfer.SetCounter(11, 0f);
+            EventManager.Instance.mainCharacter.phy_perfer.SetCounter(12, 0f);
+            EventManager.Instance.mainCharacter.phy_perfer.SetCounter(13, UnityEngine.Random.Range(0f, 99f));
+            EventManager.Instance.mainCharacter.phy_perfer.SetCounter(14, 0f);
+            GameSystem.Instance.NoCharacterInput = 0.25f;
+        }
+        
+        public void shootBullet()
+        {
+            
+            bulletScript bulletScript3 = BulletManager.Instance.ShootBullet(b, BulletType.Tevi_AIBulletOrb, (k == 0) ? SpriteType.BulletOrbS : SpriteType.BulletOrbC);
+            if (bulletScript3 != null)
+            {
+                bulletScript3.SetSpeedAngleDamageSize(0f, 0f, 0f, 0f, 0f);
+                bulletScript3.SetMaterialDefault();
+                bulletScript3.SetOrder(235 + k * 2);
+                bulletScript3.SetLife(99999f);
+                bulletScript3.SetSpriteSize(2f, justSpawn: false);
+                bulletScript3.SetCounter(9, k);
+                bulletScript3.SetMaterial(AreaResource.Instance.GetMaterialByName("TeviB Material"));
+                bulletScript3.SetPosition(b.t.position);
+                bulletScript3._render.sprite;
+            }
+        }
+        
         public static Traps NameToTrap(string name)
         {
             switch (name)
@@ -157,11 +190,13 @@ namespace TeviRandomizer
                     return Traps.DoubleTime;
                 case "Reverse Camera":
                     return Traps.ReverseCam;
+                case "Taunt":
+                    return Traps.Taunt;
                 default:
                     return Traps.None;
             }
         }
-
+        
         void Update()
         {
             if (GameSystem.Instance == null || GameSystem.Instance.isAnyPause()) return;
