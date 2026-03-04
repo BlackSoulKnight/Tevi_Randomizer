@@ -64,7 +64,6 @@ namespace TeviRandomizer
             Layer layer = Layer.NORMAL;
             Traverse worldmng = Traverse.Create(WorldManager.Instance);
             GameObject gameObject = UnityEngine.Object.Instantiate(worldmng.Field("tileset_prefab").GetValue<GameObject>());                          //Create new Item
-            gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
             BoxCollider2D boxCollider2D = gameObject.GetComponentInChildren<BoxCollider2D>();
             EdgeCollider2D edgeCollider2D = gameObject.GetComponent<EdgeCollider2D>();
@@ -98,11 +97,17 @@ namespace TeviRandomizer
                 num2 = (int)((float)spriteID / 10000f);
                 spriteID %= 10000;
             }
+            int num6 = 540;
 
             int num7 = 468;
             bool flag = false;
-
-            if (spriteID >= num7 && spriteID < 576)
+            if (spriteID >= num6 && spriteID < 576)
+            {
+                
+                spriteRenderer.sprite = CommonResource.Instance.GetArea99(spriteID - num6);
+                
+            }
+            else if (spriteID >= num7 && spriteID < 576)
             {
                 spriteID = num;
                 tileData.spriteID = spriteID + num2 * 10000 + num3 * 100000;
@@ -231,7 +236,11 @@ namespace TeviRandomizer
                 }
                 WorldManager.Instance.areadata.SetHitBox(x, y, b);
             }
-
+            var text = gameObject.GetComponentInChildren<TextMeshPro>();
+            if (text != null)
+            {
+                text.enabled = false;
+            }
 
             WorldManager.Instance.areadata.tilelist.Add(tileData);
         }
@@ -339,7 +348,9 @@ namespace TeviRandomizer
             spriteRenderer.sortingOrder = 1000;                                                                                                        //Normal Layer
 
             spriteRenderer.enabled = false;
-            gameObject.GetComponent<TextMeshPro>().enabled = false;
+            var text = gameObject.GetComponentInChildren<TextMeshPro>();
+            if(text != null)
+                text.enabled = false;
 
 
             WorldManager.Instance.areadata.tilelist.Add(tileData);
@@ -371,7 +382,6 @@ namespace TeviRandomizer
             Traverse worldmng = Traverse.Create(WorldManager.Instance);
             GameObject gameObject = UnityEngine.Object.Instantiate(worldmng.Field("elementset_prefab").GetValue<GameObject>());                          //Create new Item
             //gameObject.transform.GetChild(0).gameObject.SetActive(false);
-            gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
             BoxCollider2D boxCollider2D = gameObject.GetComponentInChildren<BoxCollider2D>();
             EdgeCollider2D edgeCollider2D = gameObject.GetComponent<EdgeCollider2D>();
@@ -1416,7 +1426,11 @@ namespace TeviRandomizer
 
             color.a = 0f;
             spriteRenderer.enabled = false;
-            gameObject.GetComponent<TextMeshPro>().enabled = false;
+            var text = gameObject.GetComponentInChildren<TextMeshPro>();
+            if (text != null)
+            {
+                text.enabled = false;
+            }
             WorldManager.Instance.areadata.tilelist.Add(tileData);
         }
 
@@ -1446,7 +1460,6 @@ namespace TeviRandomizer
             Traverse worldmng = Traverse.Create(WorldManager.Instance);
             GameObject gameObject = UnityEngine.Object.Instantiate(worldmng.Field("backdrop_prefab").GetValue<GameObject>());                          //Create new Item
             //gameObject.transform.GetChild(0).gameObject.SetActive(false);
-            gameObject.GetComponent<SpriteRenderer>().enabled = false;
 
             BoxCollider2D boxCollider2D = gameObject.GetComponentInChildren<BoxCollider2D>();
             EdgeCollider2D edgeCollider2D = gameObject.GetComponent<EdgeCollider2D>();
