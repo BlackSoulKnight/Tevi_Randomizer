@@ -1,4 +1,5 @@
 ﻿using BepInEx;
+using Character;
 using EventMode;
 using HarmonyLib;
 using Spine;
@@ -48,7 +49,6 @@ namespace TeviRandomizer
                         var resource = ResourceQueue.Dequeue();
                         ElementType type = resource == ItemList.Resource.COIN ? ElementType.B_COIN : ElementType.B_UPGRADE;
                         ItemSystemPatch.customCollector(em.mainCharacter.t.position, type,resource);
-                        CollectManager.Instance.CreateCollect(em.mainCharacter.t.position, type, resource);
 
                     }
                 if (!checkHUDObtainPause() && ItemQueue.Count > 0)
@@ -72,8 +72,6 @@ namespace TeviRandomizer
                         {
                             SmallHudPopQueue.Enqueue(item);
                             SaveManager.Instance.SetItem(item.Type, item.Value);
-
-
                         }
                         else
                         {
@@ -89,7 +87,7 @@ namespace TeviRandomizer
 
                     }
                 }
-                if (!checkHUDObtainPause() && TrapQueue.Count > 0)
+                if (!checkResourcePause() && TrapQueue.Count > 0)
                 {
                     var trap = TrapQueue.Dequeue();
                     switch ((TeviTraps.Traps)trap.Value)
@@ -98,7 +96,7 @@ namespace TeviRandomizer
                             TeviTraps.ReverseCamDuration += 15;
                             break;
                         case TeviTraps.Traps.DoubleTime:
-                            TeviTraps.DoubleTimeDuration += 15;
+                            TeviTraps.DoubleTimeDuration += 30;
                             break;
                         case TeviTraps.Traps.Debuff:
                             TeviTraps.ApplyDebuff(TeviTraps.RandomDebuff);
@@ -106,7 +104,16 @@ namespace TeviRandomizer
                         case TeviTraps.Traps.Yeet:
                             TeviTraps.YeetBunny = true;
                             break;
+                        case TeviTraps.Traps.Taunt:
+                            TeviTraps.TauntQueue.Enqueue(Taunt.MAX);
+                            break;
+                        case TeviTraps.Traps.ReduceJump:
+                            TeviTraps.ReducedJumpHeightDuration += 30;
+                            break;
                     }
+                    TeviItemInfo info = new(RandomizerPlugin.Trap, 1, true, TeviTraps.TrapToName((TeviTraps.Traps)trap.Value));
+                    SmallHudPopQueue.Enqueue(info);
+
                 }
                 if (PopUpChacheList != null && PopUpChacheList.Count<10 && SmallHudPopQueue.Count >0)
                 {
@@ -201,14 +208,11 @@ namespace TeviRandomizer
 
                 var originalItem = item.Type;
                 item.Type = RandomizerPlugin.getRandomizedItem(item.Type, item.Value);
-                if (item.Type == RandomizerPlugin.PortalItem)
+                if (item.Type == RandomizerPlugin.PortalItem && RandomizerPlugin.__itemData.TryGetValue(LocationTracker.APLocationName[$"{originalItem} #{item.Value}"], out string itemName))
                 {
-                    string itemName = "";
-                    if (RandomizerPlugin.__itemData.ContainsKey(LocationTracker.APLocationName[$"{originalItem} #{item.Value}"]))
-                        itemName = RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{originalItem} #{item.Value}"]];
                     item.Value = byte.Parse(itemName.Split(["Teleporter "], StringSplitOptions.RemoveEmptyEntries)[0]);
-                    item.Name = (string)ArchipelagoInterface.Instance.TeviToAPName[item.Name];
-                    item.Description = $"{itemName} is now available.";
+                    item.Name = (string)ArchipelagoInterface.Instance.TeviToAPName[itemName];
+                    item.Description = $"{item.Name} is now available.";
                 }
                 if(item.Type == RandomizerPlugin.Trap)
                 {
