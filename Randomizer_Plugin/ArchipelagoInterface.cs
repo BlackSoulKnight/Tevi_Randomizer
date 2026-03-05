@@ -168,13 +168,13 @@ namespace TeviRandomizer
             if(optionData.ContainsKey("free_EP"))
                 TeviSettings.extraPotions[(int)FreePot.EP] = (int)(long)optionData["free_EP"];
 
-            if (optionData.ContainsKey("popupAll"))
+            if (optionData.ContainsKey("popupAll") && (bool)optionData.GetValue("popupAll"))
                 ItemPopUpChoice |= PopupChoice.All;
 
-            if (optionData.ContainsKey("popupProgression"))
+            if (optionData.ContainsKey("popupProgression") && (bool)optionData.GetValue("popupProgression"))
                 ItemPopUpChoice |= PopupChoice.Progression;
 
-            if (optionData.ContainsKey("popupBadge"))
+            if (optionData.ContainsKey("popupBadge") && (bool)optionData.GetValue("popupBadge"))
                 ItemPopUpChoice |= PopupChoice.Sigils;
 
             TeviSettings.customFlags[CustomFlags.TempOption] = (bool)optionData.GetValue("open_morose");
@@ -483,8 +483,8 @@ namespace TeviRandomizer
                     if(itemID >= 550)
                     {
                         name = item.ItemName;
+                        value = (byte)(itemID - 550);
                         itemID = (byte)RandomizerPlugin.Trap;
-                        value = (byte)TeviTraps.NameToTrap(name);
                     }
                     teviItem = (ItemList.Type)itemID;
                     var em = EventManager.Instance;
