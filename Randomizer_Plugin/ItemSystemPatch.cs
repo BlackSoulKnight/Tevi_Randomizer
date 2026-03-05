@@ -147,6 +147,11 @@ namespace TeviRandomizer
                 switch (item)
                 {
                     case RandomizerPlugin.PortalItem:
+                        if (value != 255)
+                        {
+                            SaveManager.Instance.SetStackableItem(RandomizerPlugin.PortalItem, value, true); // do i need this?
+                            TeleporterRando.setTeleporterIcon(value);
+                        }
                         return false;
                 }
             }
@@ -346,6 +351,8 @@ namespace TeviRandomizer
                 FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.UPGRADE);
             else if(itemid == ItemList.Type.I16)
                 FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.UPGRADE);
+            else if(itemid == RandomizerPlugin.Trap)
+                FullMap.Instance.SetMiniMapIcon(WorldManager.Instance.Area, atRoomX, atRoomY, Icon.ITEM);
             else
             {
                 Debug.LogWarning("[EventDetect] Invalid Item obtained!");
@@ -356,7 +363,7 @@ namespace TeviRandomizer
             return false;
         }
 
-        static readonly ItemList.Type[] newPins = { ArchipelagoInterface.remoteItemProgressive, ArchipelagoInterface.remoteItem, ItemList.Type.I19, RandomizerPlugin.PortalItem, ItemList.Type.I20, ItemList.Type.STACKABLE_COG, ItemList.Type.I14, ItemList.Type.I15, ItemList.Type.I16 };
+        static readonly ItemList.Type[] newPins = { RandomizerPlugin.Trap,ArchipelagoInterface.remoteItemProgressive, ArchipelagoInterface.remoteItem, ItemList.Type.I19, RandomizerPlugin.PortalItem, ItemList.Type.I20, ItemList.Type.STACKABLE_COG, ItemList.Type.I14, ItemList.Type.I15, ItemList.Type.I16 };
 
         //autoPin Icons
         [HarmonyPatch(typeof(GemaItemExplorer), "StartMe")]
@@ -583,7 +590,9 @@ namespace TeviRandomizer
                 r = itemToResource(item);
                 if (r == ItemList.Resource.COIN)
                     element = ElementType.B_COIN;
-                customCollector(position, element,r);
+                else
+                    element = ElementType.B_RESOURCE;
+                    customCollector(position, element, r);
                 return false;
             }
             Debug.LogWarning($"[Resource Collection] Resource {r.ToString()} Something went wrong: {collectType} -> Area:{area} ID:{blockPos}");
@@ -702,8 +711,12 @@ namespace TeviRandomizer
             string locname = LocationTracker.getResourceLocationName(area,blockPos);
 
             byte value = 1;
-            if(item == RandomizerPlugin.PortalItem && RandomizerPlugin.__itemData.TryGetValue(locname, out string itemName))
+            if (item == RandomizerPlugin.PortalItem && RandomizerPlugin.__itemData.TryGetValue(locname, out string itemName))
+            {
                 value = byte.Parse(itemName.Split(["Teleporter "], StringSplitOptions.RemoveEmptyEntries)[0]);
+                name = (string)ArchipelagoInterface.Instance.TeviToAPName[itemName];
+                desc = $"{name} is now available.";
+            }
             if(item == RandomizerPlugin.Trap && RandomizerPlugin.__itemData.TryGetValue(locname, out itemName))
             {
                 name = itemName;
