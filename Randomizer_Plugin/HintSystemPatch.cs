@@ -71,6 +71,8 @@ namespace TeviRandomizer
         }
         public static void RemoveCustomTodo(string loc)
         {
+            if (!LocationTracker.LocationMapPositions.ContainsKey(loc))
+                return;
             var spot = LocationTracker.LocationMapPositions[loc];
             TeviHint tmp = new(spot.Area, spot.X, spot.Y);
             if (!teviHints.ContainsKey(TeviHint.HashCode(spot.Area, spot.X, spot.Y)))
