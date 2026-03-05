@@ -171,7 +171,7 @@ namespace TeviRandomizer
                     return Traps.ReverseCam;
                 case "Taunt":
                     return Traps.Taunt;
-                case "Reduce Jump Heigh":
+                case "Reduce Jump Height":
                     return Traps.ReduceJump;
                 default:
                     return Traps.None;
@@ -192,7 +192,7 @@ namespace TeviRandomizer
                 case Traps.Taunt:
                     return "Taunt";
                 case Traps.ReduceJump:
-                    return "Reduce Jump Heigh";
+                    return "Reduce Jump Height";
                 default:
                     return "None";
             }

@@ -448,5 +448,6 @@
     "Reverse Camera":                            "Reverse Camera",
     "Double Time":                               "Double Time",
     "Debuff":                                    "Debuff",
-    "Taunt":                                     "Taunt"
+    "Taunt":                                     "Taunt",
+    "Reduce Jump Height":                         "Reduce Jump Height"
 }
