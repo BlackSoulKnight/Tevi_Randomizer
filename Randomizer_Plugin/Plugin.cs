@@ -657,7 +657,7 @@ namespace TeviRandomizer
             }
             if(data == Trap)
             {
-                spr = CommonResource.Instance.GetItem(UnityEngine.Random.RandomRangeInt(0, TeviSettings.ProgressionsItemValues.Length));
+                spr = CommonResource.Instance.GetItem((int)TeviSettings.ProgressionsItemValues.GetValue(UnityEngine.Random.RandomRangeInt(0, TeviSettings.ProgressionsItemValues.Length)));
             }
 
             if (data >= ItemList.Type.BADGE_START && data <= ItemList.Type.BADGE_MAX)

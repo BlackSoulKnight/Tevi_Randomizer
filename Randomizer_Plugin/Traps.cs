@@ -16,6 +16,7 @@ namespace TeviRandomizer
             Yeet,
             Debuff,
             Taunt,
+            ReduceJump,
             None
         }
         private static void ChangeCam(float zoomLevel) => MainVar.instance.CamZoom = zoomLevel;
@@ -24,7 +25,9 @@ namespace TeviRandomizer
         public static int RandomDebuff => Debuffs[UnityEngine.Random.Range(0, Debuffs.Length)];
         public static float ReverseCamDuration = 0;
         public static float DoubleTimeDuration = 0;
-        public static bool YeetBunny = false; 
+        public static float ReducedJumpHeightDuration = 0;
+        public static bool YeetBunny = false;
+        public static Queue<Taunt> TauntQueue = new Queue<Taunt>();
         public static void ApplyDebuff(int debuff)
         {
             float time = 1;
@@ -122,31 +125,7 @@ namespace TeviRandomizer
             characterBase.enemy_perfer.InitAI();
             //characterBase.spranim_prefer.pixel.anim.runtimeAnimatorController = ResourcePatch.SnowBunny;
         }
-        public static TeviItemInfo getDebuff(TeviItemInfo item, string itemName)
-        {
-            switch (itemName)
-            {
-                case "Yeet":
-                    item.Value = (int)Traps.Yeet;
-                    item.Name = "Yeet";
-                    break;
-                case "Double Time":
-                    item.Value = (int)Traps.DoubleTime;
-                    item.Name = "Double Time";
-                    break;
-                case "Reverse Cam":
-                    item.Value = (int)Traps.ReverseCam;
-                    item.Name = "Reverse Cam";
-                    break;
-                case "Random Debuff":
-                    item.Value = (int)Traps.Debuff;
-                    item.Name = "Random Debuff";
-                    break;
-            }
-
-            item.SkipHUD = true;
-            return item;
-        }
+        private static ObjectPhy Playert_phys => EventManager.Instance.mainCharacter.phy_perfer;
         public static void useTaunt()
         {
             int taunt = UnityEngine.Random.Range(0,(int)Taunt.MAX);
@@ -159,7 +138,7 @@ namespace TeviRandomizer
             EventManager.Instance.mainCharacter.phy_perfer.SetCounter(14, 0f);
             GameSystem.Instance.NoCharacterInput = 0.25f;
         }
-        
+        /*
         public void shootBullet()
         {
             
@@ -177,7 +156,7 @@ namespace TeviRandomizer
                 bulletScript3._render.sprite;
             }
         }
-        
+        */
         public static Traps NameToTrap(string name)
         {
             switch (name)
@@ -192,8 +171,30 @@ namespace TeviRandomizer
                     return Traps.ReverseCam;
                 case "Taunt":
                     return Traps.Taunt;
+                case "Reduce Jump Heigh":
+                    return Traps.ReduceJump;
                 default:
                     return Traps.None;
+            }
+        }
+        public static string TrapToName(Traps trap)
+        {
+            switch (trap)
+            {
+                case Traps.Yeet:
+                    return "Yeet";
+                case Traps.Debuff:
+                    return "Debuff";
+                case Traps.DoubleTime:
+                    return "Double Time";
+                case Traps.ReverseCam:
+                    return "Reverse Camera";
+                case Traps.Taunt:
+                    return "Taunt";
+                case Traps.ReduceJump:
+                    return "Reduce Jump Heigh";
+                default:
+                    return "None";
             }
         }
         
@@ -206,6 +207,13 @@ namespace TeviRandomizer
                 ChangeGameSpeed(2);
                 if (DoubleTimeDuration <= 0)
                     ChangeGameSpeed(1);
+            }
+            if (ReducedJumpHeightDuration>0 && EventManager.Instance.Mode == EventMode.Mode.OFF)
+            {
+                ReducedJumpHeightDuration -= Time.unscaledDeltaTime;
+                Playert_phys.jumpHeight = 100;
+                if (ReducedJumpHeightDuration <= 0)
+                    Playert_phys.jumpHeight = 200;
             }
 
             if (ReverseCamDuration>0 && EventManager.Instance.Mode == EventMode.Mode.OFF)
@@ -221,6 +229,11 @@ namespace TeviRandomizer
                 EventManager.Instance.mainCharacter.DoKnockToPlayer(null, EventManager.Instance.mainCharacter, 0.5f, 10*direction, 1, true);
                 EventManager.Instance.mainCharacter.PlaySound(AllSound.SEList.PLAYERKNOCKOUT);
                 YeetBunny = false;
+            }
+            if(TauntQueue.Count > 0 && EventManager.Instance.mainCharacter.logicStatus == PlayerLogicState.NORMAL)
+            {
+                TauntQueue.Dequeue();
+                useTaunt();
             }
 
         }
