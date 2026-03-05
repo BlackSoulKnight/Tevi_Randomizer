@@ -52,6 +52,12 @@ namespace TeviRandomizer
             foreach (var loc in locations)
             {
                 keyValuePairs.Add($"{loc["area"]} #{(int)loc["blockId"]}", loc["LocationName"].ToString());
+                JObject p = (JObject)(loc["LocationRegion"][0]);
+                try
+                {
+                    LocationMapPositions.Add(loc["LocationName"].ToString(), new((byte)p["Area"], (byte)p["X"], (byte)p["Y"]));
+                }
+                catch { }
             }
             locations = JArray.Parse(File.ReadAllText(path + "MoneyLocations.json"));
             foreach (var loc in locations)
