@@ -39,7 +39,7 @@ namespace TeviRandomizer
         public const ItemList.Type remoteItem = ItemList.Type.I10;
         public const ItemList.Type remoteItemProgressive = ItemList.Type.I11;
         HintsHelper hintsHelper;
-        public const string AP_WORLD_VERSION = "0.6.7";
+        public const string AP_WORLD_VERSION = "0.6.8";
         public const string ConnectionLost = "APLost";
 
         private class LocationData
