@@ -12,6 +12,34 @@ namespace TeviRandomizer
     class EventPatch
     {
 
+
+
+        [HarmonyPatch(typeof(Chap0GetKnife), "EVENT")]
+        [HarmonyTranspiler]
+        static IEnumerable<CodeInstruction> replaceStartGive(IEnumerable<CodeInstruction> instructions)
+        {
+            var original = AccessTools.Method(
+                typeof(HUDObtainedItem),
+                "GiveItem"
+            );
+
+            var replacement = AccessTools.Method(
+                typeof(Hooks),
+                "GiveItemReplace"
+            );
+
+            foreach (var instruction in instructions)
+            {
+                if (instruction.Calls(original))
+                {
+                    yield return new CodeInstruction(OpCodes.Call, replacement);
+                    continue;
+                }
+
+                yield return instruction;
+            }
+        }
+
         // Free Start Items
         [HarmonyPatch(typeof(Chap0GetKnife), "EVENT")]
         [HarmonyPrefix]
@@ -96,16 +124,9 @@ namespace TeviRandomizer
             }
             else if (em.EventStage == 20)
             {
-                if (em.EventTime > 0.1f && em.EventTime < 100f)
-                {
-                    SaveManager.Instance.SetOrb(0);
-                    ItemDistributionSystem.EnqueueItem(new(ItemList.Type.ITEM_ORB, 1, false));
-                    em.EventTime = 100f;
-                }
-                else if (em.EventTime > 100.5f)
-                {
-                    em.SetStage(21);
-                }
+                Hooks.GiveItemReplace(null,ItemList.Type.ITEM_ORB, 1,false);
+                SaveManager.Instance.SetOrb(0);
+                em.SetStage(21);
                 return false;
             }
             else if (em.EventStage == 21)
@@ -178,6 +199,31 @@ namespace TeviRandomizer
             MainVar.instance.NewCustomGame[1] = true;
         }
 
+        [HarmonyPatch(typeof(AfterMemineChallenge), "EVENT")]
+        [HarmonyTranspiler]
+        static IEnumerable<CodeInstruction> replaceMemineGive(IEnumerable<CodeInstruction> instructions)
+        {
+            var original = AccessTools.Method(
+                typeof(HUDObtainedItem),
+                "GiveItem"
+            );
+
+            var replacement = AccessTools.Method(
+                typeof(Hooks),
+                "GiveItemReplace"
+            );
+
+            foreach (var instruction in instructions)
+            {
+                if (instruction.Calls(original))
+                {
+                    yield return new CodeInstruction(OpCodes.Call, replacement);
+                    continue;
+                }
+
+                yield return instruction;
+            }
+        }
 
         [HarmonyPatch(typeof(AfterMemineChallenge), "EVENT")]
         [HarmonyPrefix]
@@ -629,7 +675,15 @@ namespace TeviRandomizer
                 EventManager.Instance.StopEvent();
             }
         }
-
+        [HarmonyPatch(typeof(GemaRabiEasterEggScene),"Update")]
+        [HarmonyPrefix]
+        static void unfade(float ___timer)
+        {
+            if(___timer > 301f)
+            {
+                FadeManager.Instance.SetAll(0, 0, 0, 1, 0f, 5f);
+            }
+        }
 
     }
 

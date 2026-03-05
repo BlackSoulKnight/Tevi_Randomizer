@@ -9,7 +9,7 @@ namespace TeviRandomizer
     {
         public static void GiveItemReplace(HUDObtainedItem instance,ItemList.Type type, byte slotid,bool isRandomBadge)
         {
-            ItemDistributionSystem.EnqueueItem(new(type, slotid, false));
+            ItemDistributionSystem.EnqueueItem(new(type, slotid, isRandomBadge));
         }
     }
 }
