@@ -9056,7 +9056,7 @@
         "slotId": 32,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_LINEBOMB || ITEM_AREABOMB",
                 "Difficulty": 0
             }
         ],
@@ -10076,12 +10076,12 @@
     },
     {
         "Itemname": "EVENT_BOSS",
-        "Location": "DreamKeeper",
+        "Location": "Teleporter DreamKeeper Inside",
         "LocationName": "DreamKeeper - Boss Alius",
         "slotId": 61,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
         ],
