@@ -1746,7 +1746,7 @@
         ],
         "Requirement": [
             {
-                "Method": "Chapter 2",
+                "Method": "Chapter 6",
                 "Difficulty": 0
             }
         ]
@@ -1758,42 +1758,6 @@
         "slotId": 1,
         "area": 3,
         "blockId":  -117,
-        "LocationRegion": [
-            {
-                "Area": 3,
-                "X": 15 ,
-                "Y": 10
-            },
-            {
-                "Area": 16,
-                "X": 8,
-                "Y": 8
-            },
-            {
-                "Area": 8,
-                "X": 14,
-                "Y": 13
-            },
-            {
-                "Area": 15,
-                "X": 16,
-                "Y": 12
-            }
-        ],
-        "Requirement": [
-            {
-                "Method": "Chapter 6",
-                "Difficulty": 0
-            }
-        ]
-    },
-    {
-        "Itemname": "I16",
-        "Location": "Shop Bonus",
-        "LocationName": "CC Shop Bonus - #18",
-        "slotId": 1,
-        "area": 3,
-        "blockId":  -118,
         "LocationRegion": [
             {
                 "Area": 3,
