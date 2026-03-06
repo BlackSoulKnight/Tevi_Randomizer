@@ -474,9 +474,12 @@ namespace TeviRandomizer
                     ItemInfo item = session.Items.AllItemsReceived[currentItemNR];
                     byte value = 1;
                     string name = "";
+                    string desc = "";
                     int itemID = (int)(item.ItemId - baseID);
                     if(itemID >= 500 && itemID <= 536)
                     {
+                        name = item.ItemName;
+                        desc = $"{name} is now available.";
                         value = (byte)(itemID - 500);
                         itemID = (byte)TeviSettings.PortalItem;
                     }
@@ -501,7 +504,7 @@ namespace TeviRandomizer
                     if (teviItem == RandomizerPlugin.Trap)
                         skiphud = true;
 
-                    ItemDistributionSystem.EnqueueItem(new(teviItem,value,true,name,skipHUD:skiphud));
+                    ItemDistributionSystem.EnqueueItem(new(teviItem,value,true,name,desc,skipHUD:skiphud));
                     currentItemNR++;
                 }
 
