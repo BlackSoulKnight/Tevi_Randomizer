@@ -787,7 +787,7 @@
                 },
                 {
                     "Exit": "Ulskan To Plague Forest",
-                    "Method": "(ITEM_AREABOMB || (ITEM_LINEBOMB && ITEM_BombLengthExtend)) && (ITEM_JETPACK || ITEM_DOUBLEJUMP) && VenaBomb"
+                    "Method": "(ITEM_AREABOMB || (ITEM_LINEBOMB && ITEM_BombLengthExtend)) && (ITEM_JETPACK || ITEM_DOUBLEJUMP) && VenaBomb && ITEM_SLIDE"
                 },
                 {
                     "Exit": "Bat",
