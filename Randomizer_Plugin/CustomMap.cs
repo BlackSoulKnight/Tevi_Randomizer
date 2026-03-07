@@ -1763,7 +1763,7 @@ namespace TeviRandomizer
             {
                 ArchipelagoInterface.Instance.updateCurretMap(__instance.Area);
             }
-            BonusFeaturePatch.ChangeQuickDropBadgeDescription();
+            Bonus_Features.QuickdropPatch.ChangeQuickDropBadgeDescription();
             //Send AP World Transition Data and change CurrentMap Value
         }
 

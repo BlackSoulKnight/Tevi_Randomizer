@@ -86,6 +86,16 @@ namespace TeviRandomizer
 
         }
 
+        //update everything Cooldown related
+        private void Update()
+        {
+            if (WorldManager.Instance?.MapInited == true && !EventManager.Instance.IsChangingMap() && GemaUIPauseMenu.Instance.GetAllowPause() && !GameSystem.Instance.isAnyPause())
+            {
+                Bonus_Features.QuickdropPatch.QuickdropTimer += Time.deltaTime;
+            }
+        }
+
+
         [Command("sendLocation", QFSW.QC.Platform.AllPlatforms, MonoTargetType.Single)]
         private void SendLocation(string location)
         {
@@ -119,7 +129,7 @@ namespace TeviRandomizer
                 harmonyPatchInstance.PatchAll(typeof(ScalePatch));
                 harmonyPatchInstance.PatchAll(typeof(OrbPatch));
                 harmonyPatchInstance.PatchAll(typeof(RabiSmashPatch));
-                harmonyPatchInstance.PatchAll(typeof(BonusFeaturePatch));
+                PatchAllBonusFeatures();
                 harmonyPatchInstance.PatchAll(typeof(ChatSystemPatch));
                 harmonyPatchInstance.PatchAll(typeof(CustomMap));
                 //harmonyPatchInstance.PatchAll(typeof(ResourcePatch));
@@ -132,7 +142,15 @@ namespace TeviRandomizer
                 return true;
             }
         }
+        static void PatchAllBonusFeatures()
+        {
+            harmonyPatchInstance.PatchAll(typeof(Bonus_Features.AreabombPatch));
+            harmonyPatchInstance.PatchAll(typeof(Bonus_Features.OrbitarPatch));
+            harmonyPatchInstance.PatchAll(typeof(Bonus_Features.QuickdropPatch));
+            harmonyPatchInstance.PatchAll(typeof(Bonus_Features.RevealHiddenPaths));
+            harmonyPatchInstance.PatchAll(typeof(Bonus_Features.MusicPatch));
 
+        }
 
         // Create a new Text without Localization
         static Localize.SystemText createNewText(string keyword, string text)
@@ -1072,205 +1090,6 @@ namespace TeviRandomizer
         }
 
     }
-
-
-    class BonusFeaturePatch()
-    {
-
-
-
-        static float bonusDropKickDmg;
-        static bulletScript currentDropKick;
-        static bool DropKickDmgUpdated = false;
-        static CharacterBase lastHit;
-        [HarmonyPatch(typeof(SaveManager), "TryRenewLevel")]
-        [HarmonyPostfix]
-        static void resetBonusDmg()
-        {
-            bonusDropKickDmg = 0;
-        }
-
-
-        [HarmonyPatch(typeof(WorldManager), "StartFadeFrontLayer")]
-        [HarmonyPrefix]
-        static void fade1(ref float target)
-        {
-            if (TeviSettings.customFlags[CustomFlags.RevealPaths])
-                target = 0;
-        }
-        [HarmonyPatch(typeof(WorldManager), "SetFrontLayer")]
-        [HarmonyPrefix]
-        static void fade2(ref float target)
-        {
-            if (TeviSettings.customFlags[CustomFlags.RevealPaths])
-
-                target = 0;
-        }
-        [HarmonyPatch(typeof(WorldManager), "Awake")]
-        [HarmonyPostfix]
-        static void fade0(ref float ___FrontFadeTarget)
-        {
-            if (TeviSettings.customFlags[CustomFlags.RevealPaths])
-                ___FrontFadeTarget = 0;
-        }
-
-        //test Features
-        //Throw Clusterbomb without Crossbombs
-        [HarmonyPatch(typeof(ObjectPhy), "UseBomb")]
-        [HarmonyPostfix]
-        static void useAreaBomb(ref ObjectPhy __instance, ref CharacterBase ___cb_perfer,ref bool __result)
-        {
-            if (SaveManager.Instance.CanUseItem(ItemList.Type.ITEM_AREABOMB) > 0 && SaveManager.Instance.CanUseItem(ItemList.Type.ITEM_LINEBOMB) == 0)
-            {
-
-                ___cb_perfer.playerc_perfer.meter_bomb.EnableMe(0f);
-                __instance.SetCounter(0, 1f);
-                __instance.SetCounter(1, 0.48f);
-                __instance.SetCounter(5, 0f);
-                __instance.SetCounter(18, 0f);
-                ___cb_perfer.spranim_prefer.ToggleOther(0);
-                ___cb_perfer.SetHitboxStarted(on: false);
-                ___cb_perfer.ChangeLogicStatus(PlayerLogicState.TEVI_GROUND_ITEM);
-                __result = true;
-            }
-        }
-
-        //Use Sable and Celia without chargeshots
-        [HarmonyPatch(typeof(CharacterPhy), "GetRangedControls")]
-        [HarmonyPostfix]
-        static void disableChargeShots(ref bool ___mustNormal,ref CharacterPhy __instance)
-        {
-            
-            if(SaveManager.Instance.GetItem(ItemList.Type.ITEM_ORB) < (TeviSettings.customFlags[CustomFlags.CebleStart] ? 1:2))
-                ___mustNormal = true;
-
-        }
-
-        [HarmonyPatch(typeof(OrbBall),"NormalShot")]
-        [HarmonyPostfix]
-        static void reduceChargeHeld(ref bool __result,ref CharacterPhy ___owner_phy)
-        {
-            if (__result)
-            {
-                float num10 = 9f;
-                if (SaveManager.Instance.GetBadgeEquipped(ItemList.Type.BADGE_NormalShotReducerA))
-                {
-                    num10 -= 3.15f;
-                }
-                if (SaveManager.Instance.GetBadgeEquipped(ItemList.Type.BADGE_NormalShotReducerB))
-                {
-                    num10 -= 4.05f;
-                }
-                if (___owner_phy.charge - num10 <= 0 && ___owner_phy.chargeheld > 0)
-                {
-                    ___owner_phy.charge += 100;
-                    ___owner_phy.chargeheld--;
-                }
-            }
-        }
-
-
-       public static void ChangeQuickDropBadgeDescription()
-        {
-            RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(ItemList.Type.BADGE_QuickDropExtendA), "^Quickdrops^ combo increased by additionally $+1$. After ^quickdrop^ hits enemy, all melee attack power $+5 %$, max cumulation $33 %$\nThe cumulative effect begins to decrease after landing and disappears completely after about 5s");
-            RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(ItemList.Type.BADGE_QuickDropExtendB), "^Quickdrops^ combo increased by additionally $+3$.");
-            RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(ItemList.Type.BADGE_QuickDropDouble), "Number of ^quickdrops^ combo gained is $doubled$");
-        }
-
-        [HarmonyPatch(typeof(CharacterBase), "BulletHurtPlayer")]
-        [HarmonyPostfix]
-        static void HurtCheck(ref CharacterBase owner, float damage, BulletType type, ref CharacterBase __instance, ref bool __result)
-        {
-            //Debug.Log($"{type} {damage} {owner}");
-            if (__result)
-            {
-                if (type == BulletType.QUICK_DROP)
-                {
-                    float bonus = 0.1f;
-                    if (SaveManager.Instance.GetBadgeEquipped(ItemList.Type.BADGE_QuickDropExtendA))
-                        bonus++;
-                    if (SaveManager.Instance.GetBadgeEquipped(ItemList.Type.BADGE_QuickDropExtendB))
-                        bonus+=3;
-                    if (SaveManager.Instance.GetBadgeEquipped(ItemList.Type.BADGE_QuickDropDouble))
-                        bonus *= 1.33f;
-                    bonusDropKickDmg += bonus;
-                    Traverse.Create(owner.phy_perfer).Field<byte>("quickDropRemaining").Value += 1;
-                }
-                else if (damage > 0 && (owner != null && owner.isPlayer()) || __instance.isPlayer())
-                {
-                    if (type == BulletType.TEVI_WEAK_DASH || type == BulletType.TEVI_WEAK_ATTACK || type == BulletType.ORB_SHOT_NORMAL || type == BulletType.SUMMONBUNNY_HIT) return;
-                    //Debug.Log("Combo was broken by " + type);
-                    bonusDropKickDmg = 0;
-                }
-            }
-        }
-
-        [HarmonyPatch(typeof(BulletManager), "ShootBullet")]
-        [HarmonyPostfix]
-        static void getNewBullets(ref bulletScript __result, ref BulletType type)
-        {
-
-            if (type == BulletType.QUICK_DROP)
-            {
-                DropKickDmgUpdated = false;
-                currentDropKick = __result;
-            }
-
-        }
-        static float testValue = 0.05f;
-        [HarmonyPatch(typeof(playerController), "_Update")]
-        [HarmonyPostfix]
-        static void updateDropkickDamage(ref PlayerLogicState ___logicStatus, ref ObjectPhy ___phy_perfer, ref CharacterPhy ___cphy_perfer, ref CharacterBase __instance)
-        {
-            if (___logicStatus == PlayerLogicState.QUICKDROP && !DropKickDmgUpdated && currentDropKick != null && __instance.isPlayer())
-            {
-                DropKickDmgUpdated = true;
-                float num3 = 0.343525f;
-                num3 += testValue * bonusDropKickDmg;
-                if (___cphy_perfer != null)
-                {
-                    num3 += (float)(int)___cphy_perfer.quickdrophit * 0.02f;
-                }
-                if (SaveManager.Instance.GetBadgeEquipped(ItemList.Type.BADGE_DoubleJumpStrike) && ___phy_perfer.jumped >= 2)
-                {
-                    num3 *= 1.17f;
-                }
-                currentDropKick.SetDamage(num3);
-            }
-        }
-        [HarmonyPatch(typeof(MusicManager), "PlayMusic")]
-        [HarmonyPrefix]
-        static void changeMusic(ref Music musicname, ref Music __state)
-        {
-            if (TeviSettings.customFlags[CustomFlags.RandomizedMusic])
-            {
-                if (Extras.RandomizeExtra.randomizedMusic[(byte)musicname] == 0) {
-                    __state = Music.OFF;
-                    return;
-                        }
-
-                __state = musicname;
-                if (musicname == Music.LOOP) { return; }
-                musicname = (Music)Extras.RandomizeExtra.randomizedMusic[(byte)musicname];
-            }
-        }
-        [HarmonyPatch(typeof(MusicManager), "PlayMusic")]
-        [HarmonyPostfix]
-        static void saveLastMusic(ref Music ___lastMusic, ref Music __state, ref Music ___readyMusic)
-        {
-
-            if (TeviSettings.customFlags[CustomFlags.RandomizedMusic])
-            {
-
-                if (__state == Music.LOOP || __state == Music.OFF) { return; }
-                ___lastMusic = __state;
-                ___readyMusic = Music.OFF;
-            }
-        }
-    }
-
-    
-
 
     class ScalePatch()
     {

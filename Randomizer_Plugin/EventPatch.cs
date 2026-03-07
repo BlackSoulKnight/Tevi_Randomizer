@@ -405,6 +405,15 @@ namespace TeviRandomizer
             return false;
         }
 
+        [HarmonyPatch(typeof(enemyController), "handexhange_delaystart")]
+        [HarmonyPrefix]
+        static bool HandExchange()
+        {
+            ItemDistributionSystem.EnqueueItem(new(ItemList.Type.ITEM_GoldenHands, 1, false));
+            return false;
+        }
+
+
 
         [HarmonyPatch(typeof(Chap8FreeRoamNoIllusionPalace7x7), "REQUIREMENT")]
         [HarmonyPrefix]

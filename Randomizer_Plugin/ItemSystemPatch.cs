@@ -687,11 +687,10 @@ namespace TeviRandomizer
         {
             string name = "";
             string desc = "";
+            string location = LocationTracker.getResourceLocationName(area,blockPos);
             Sprite icon = null;
             if (ArchipelagoInterface.Instance?.isConnected == true && (item == ArchipelagoInterface.remoteItemProgressive || item == ArchipelagoInterface.remoteItem))
             {
-                var location = LocationTracker.getResourceLocationName(area, blockPos);
-
                 name = ArchipelagoInterface.Instance.getLocItemName(location);
                 string playerName = ArchipelagoInterface.Instance.getLocPlayerName(location);
                 desc = $"You found {name} for {playerName}";
@@ -703,21 +702,16 @@ namespace TeviRandomizer
                     icon = CommonResource.Instance.GetItem((int)item2);
                     TeviTraps.SpawnBun();
                 }
-                else
-                {
-                    name = item.ToString();
-                }
             }
-            string locname = LocationTracker.getResourceLocationName(area,blockPos);
 
             byte value = 1;
-            if (item == RandomizerPlugin.PortalItem && RandomizerPlugin.__itemData.TryGetValue(locname, out string itemName))
+            if (item == RandomizerPlugin.PortalItem && RandomizerPlugin.__itemData.TryGetValue(location, out string itemName))
             {
                 value = byte.Parse(itemName.Split(["Teleporter "], StringSplitOptions.RemoveEmptyEntries)[0]);
                 name = (string)ArchipelagoInterface.Instance.TeviToAPName[itemName];
                 desc = $"{name} is now available.";
             }
-            if(item == RandomizerPlugin.Trap && RandomizerPlugin.__itemData.TryGetValue(locname, out itemName))
+            if(item == RandomizerPlugin.Trap && RandomizerPlugin.__itemData.TryGetValue(location, out itemName))
             {
                 name = itemName;
                 value = (byte)TeviTraps.NameToTrap(itemName);
