@@ -1,0 +1,3476 @@
+[
+    {
+        "Name": "STACKABLE_COG",
+        "DisplayName": "Astral Gear",
+        "Default_Quantity": 25,
+        "Maximum_Quantity": 255,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541001
+    },
+    {
+        "Name": "STACKABLE_HP",
+        "DisplayName": "Kiwi Bunny Potion",
+        "Default_Quantity": 35,
+        "Maximum_Quantity": 255,
+        "Classification": "filler",
+        "Weight": 80,
+        "ID": 44966541002
+    },
+    {
+        "Name": "STACKABLE_MP",
+        "DisplayName": "Blueberry Bunny Potion",
+        "Default_Quantity": 35,
+        "Maximum_Quantity": 255,
+        "Classification": "filler",
+        "Weight": 80,
+        "ID": 44966541003
+    },
+    {
+        "Name": "STACKABLE_EP",
+        "DisplayName": "Lemon Bunny Potion",
+        "Default_Quantity": 35,
+        "Maximum_Quantity": 255,
+        "Classification": "filler",
+        "Weight": 80,
+        "ID": 44966541004
+    },
+    {
+        "Name": "STACKABLE_MATK",
+        "DisplayName": "Cherry Bunny Potion",
+        "Default_Quantity": 35,
+        "Maximum_Quantity": 255,
+        "Classification": "filler",
+        "Weight": 80,
+        "ID": 44966541005
+    },
+    {
+        "Name": "STACKABLE_RATK",
+        "DisplayName": "Grape Bunny Potion",
+        "Default_Quantity": 35,
+        "Maximum_Quantity": 255,
+        "Classification": "filler",
+        "Weight": 80,
+        "ID": 44966541006
+    },
+    {
+        "Name": "STACKABLE_BAG",
+        "DisplayName": "Bag Expander",
+        "Default_Quantity": 5,
+        "Maximum_Quantity": 255,
+        "Classification": "filler",
+        "Weight": 150,
+        "ID": 44966541007
+    },
+    {
+        "Name": "STACKABLE_SHARD",
+        "DisplayName": "Rainbow Bunny Potion",
+        "Default_Quantity": 15,
+        "Maximum_Quantity": 255,
+        "Classification": "filler",
+        "Weight": 60,
+        "ID": 44966541008
+    },
+    {
+        "Name": "I14",
+        "DisplayName": "500 Zennie Pack",
+        "Default_Quantity": 591,
+        "Maximum_Quantity": 591,
+        "Classification": "filler",
+        "Weight": 10,
+        "ID": 44966541014
+    },
+    {
+        "Name": "I15",
+        "DisplayName": "Magitite Shard",
+        "Default_Quantity": 35,
+        "Maximum_Quantity": 70,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541015
+    },
+    {
+        "Name": "I16",
+        "DisplayName": "Mananite Shard",
+        "Default_Quantity": 90,
+        "Maximum_Quantity": 96,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541016
+    },
+    {
+        "Name": "I19",
+        "DisplayName": "Celia",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541019
+    },
+    {
+        "Name": "I20",
+        "DisplayName": "Sable",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541020
+    },
+    {
+        "Name": "ITEM_KNIFE",
+        "DisplayName": "Dagger",
+        "Default_Quantity": 3,
+        "Maximum_Quantity": 255,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541022
+    },
+    {
+        "Name": "ITEM_ORB",
+        "DisplayName": "Orbitars",
+        "Default_Quantity": 3,
+        "Maximum_Quantity": 255,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541023
+    },
+    {
+        "Name": "ITEM_LINEBOMB",
+        "DisplayName": "Cross Bomb",
+        "Default_Quantity": 3,
+        "Maximum_Quantity": 255,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541024
+    },
+    {
+        "Name": "ITEM_AREABOMB",
+        "DisplayName": "Cluster Bomb",
+        "Default_Quantity": 3,
+        "Maximum_Quantity": 255,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541025
+    },
+    {
+        "Name": "ITEM_BOMBFUEL",
+        "DisplayName": "Bomb Fuel",
+        "Default_Quantity": 3,
+        "Maximum_Quantity": 255,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541026
+    },
+    {
+        "Name": "ITEM_HIJUMP",
+        "DisplayName": "Rabi Boots",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 255,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541027
+    },
+    {
+        "Name": "ITEM_SPEEDUP",
+        "DisplayName": "Running Boots",
+        "Default_Quantity": 3,
+        "Maximum_Quantity": 255,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541028
+    },
+    {
+        "Name": "ITEM_SLIDE",
+        "DisplayName": "Slick Boots",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 255,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541029
+    },
+    {
+        "Name": "ITEM_WALLJUMP",
+        "DisplayName": "Parkour Boots",
+        "Default_Quantity": 3,
+        "Maximum_Quantity": 255,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541030
+    },
+    {
+        "Name": "ITEM_DOUBLEJUMP",
+        "DisplayName": "Double Rabi Boots",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541031
+    },
+    {
+        "Name": "ITEM_JETPACK",
+        "DisplayName": "Jetpack",
+        "Default_Quantity": 3,
+        "Maximum_Quantity": 255,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541032
+    },
+    {
+        "Name": "ITEM_WATERMOVEMENT",
+        "DisplayName": "Hydrodynamo",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 255,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541033
+    },
+    {
+        "Name": "ITEM_PKBADGE",
+        "DisplayName": "PK Recon Badge",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 255,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541034
+    },
+    {
+        "Name": "ITEM_MASK",
+        "DisplayName": "Decay Mask",
+        "Default_Quantity": 3,
+        "Maximum_Quantity": 255,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541035
+    },
+    {
+        "Name": "ITEM_OrbTypeS2",
+        "DisplayName": "Red Module Type-B",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541036
+    },
+    {
+        "Name": "ITEM_OrbTypeS3",
+        "DisplayName": "Red Module Type-C",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541037
+    },
+    {
+        "Name": "ITEM_OrbTypeC2",
+        "DisplayName": "Blue Module Type-B",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541038
+    },
+    {
+        "Name": "ITEM_OrbTypeC3",
+        "DisplayName": "Blue Module Type-C",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541039
+    },
+    {
+        "Name": "ITEM_AntiDecay",
+        "DisplayName": "Decay Antidote",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 255,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541040
+    },
+    {
+        "Name": "ITEM_BombLengthExtend",
+        "DisplayName": "Combustible",
+        "Default_Quantity": 3,
+        "Maximum_Quantity": 255,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541041
+    },
+    {
+        "Name": "ITEM_AirDash",
+        "DisplayName": "Slipstream Boots",
+        "Default_Quantity": 3,
+        "Maximum_Quantity": 255,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541042
+    },
+    {
+        "Name": "ITEM_RailPass",
+        "DisplayName": "Tartarus VIP Pass",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541043
+    },
+    {
+        "Name": "ITEM_AirshipPass",
+        "DisplayName": "Valhalla VIP Pass",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541044
+    },
+    {
+        "Name": "ITEM_Royal",
+        "DisplayName": "Royal Emblem",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541045
+    },
+    {
+        "Name": "ITEM_AntiIce",
+        "DisplayName": "Grip Sole Boots",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541046
+    },
+    {
+        "Name": "ITEM_Explorer",
+        "DisplayName": "Explorer's Compass",
+        "Default_Quantity": 3,
+        "Maximum_Quantity": 3,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541047
+    },
+    {
+        "Name": "ITEM_TempRing",
+        "DisplayName": "Equilibrium Ring",
+        "Default_Quantity": 3,
+        "Maximum_Quantity": 3,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541048
+    },
+    {
+        "Name": "ITEM_BoostSystem",
+        "DisplayName": "Modular Blueprints",
+        "Default_Quantity": 3,
+        "Maximum_Quantity": 255,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541049
+    },
+    {
+        "Name": "ITEM_OrbBoostU",
+        "DisplayName": "Core Module Type-U",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541050
+    },
+    {
+        "Name": "ITEM_OrbBoostD",
+        "DisplayName": "Core Module Type-D",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541051
+    },
+    {
+        "Name": "ITEM_AttackRange",
+        "DisplayName": "Deadly Reach",
+        "Default_Quantity": 3,
+        "Maximum_Quantity": 255,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541052
+    },
+    {
+        "Name": "ITEM_DodgeShot",
+        "DisplayName": "Shining Bangle",
+        "Default_Quantity": 3,
+        "Maximum_Quantity": 255,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541053
+    },
+    {
+        "Name": "ITEM_EasyStyle",
+        "DisplayName": "Spanner of Wisdom",
+        "Default_Quantity": 3,
+        "Maximum_Quantity": 3,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541054
+    },
+    {
+        "Name": "ITEM_WonderNote",
+        "DisplayName": "Delicious Secret Notes",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541056
+    },
+    {
+        "Name": "ITEM_RapidShots",
+        "DisplayName": "Rapid Shots Modchip",
+        "Default_Quantity": 3,
+        "Maximum_Quantity": 4,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541057
+    },
+    {
+        "Name": "ITEM_OrbAmulet",
+        "DisplayName": "Soul Burst Module",
+        "Default_Quantity": 3,
+        "Maximum_Quantity": 255,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541059
+    },
+    {
+        "Name": "ITEM_GoldenGlove",
+        "DisplayName": "Trinketeer's Fortune",
+        "Default_Quantity": 3,
+        "Maximum_Quantity": 255,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541060
+    },
+    {
+        "Name": "ITEM_Alterscope",
+        "DisplayName": "Alterscope",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541061
+    },
+    {
+        "Name": "ITEM_GoldenHands",
+        "DisplayName": "Gilded Exultation",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541062
+    },
+    {
+        "Name": "ITEM_Rotater",
+        "DisplayName": "Vortex Gloves",
+        "Default_Quantity": 3,
+        "Maximum_Quantity": 255,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541063
+    },
+    {
+        "Name": "ITEM_AirSlide",
+        "DisplayName": "Airy Powder",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541064
+    },
+    {
+        "Name": "ITEM_VenaCharm",
+        "DisplayName": "Kitty Paw Charm",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541065
+    },
+    {
+        "Name": "ITEM_ZCrystal",
+        "DisplayName": "Alembic Crystal",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541066
+    },
+    {
+        "Name": "QUEST_Flute",
+        "DisplayName": "Crystal Flute",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541099
+    },
+    {
+        "Name": "QUEST_Memory",
+        "DisplayName": "Memory Box",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541100
+    },
+    {
+        "Name": "QUEST_Compass",
+        "DisplayName": "Frozen Fate",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541102
+    },
+    {
+        "Name": "QUEST_GHandL",
+        "DisplayName": "Gilded Left Hand",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541106
+    },
+    {
+        "Name": "QUEST_GHandR",
+        "DisplayName": "Gilded Right Hand",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541107
+    },
+    {
+        "Name": "QUEST_RabiPillow",
+        "DisplayName": "Nap Pillow",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541109
+    },
+    {
+        "Name": "QUEST_LibraryKey",
+        "DisplayName": "Library Key",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541110
+    },
+    {
+        "Name": "BADGE_ANTIENERGYBALL",
+        "DisplayName": "Palladium",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541120
+    },
+    {
+        "Name": "BADGE_BACKSTAB",
+        "DisplayName": "Backstab",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541121
+    },
+    {
+        "Name": "BADGE_RangeCombo",
+        "DisplayName": "C. Count Frenzy: Hotshot",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541122
+    },
+    {
+        "Name": "BADGE_MAXHPUP",
+        "DisplayName": "Health Plus",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541123
+    },
+    {
+        "Name": "BADGE_CELIATYPEBANGLE",
+        "DisplayName": "Celia Type-B: Prism",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541124
+    },
+    {
+        "Name": "BADGE_Normal2AntiHealth",
+        "DisplayName": "Knives Out",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541125
+    },
+    {
+        "Name": "BADGE_RevengeA",
+        "DisplayName": "Red Haze",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541126
+    },
+    {
+        "Name": "BADGE_DodgeWeakGroundUp",
+        "DisplayName": "Dodge Enhancer: Upper",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541127
+    },
+    {
+        "Name": "BADGE_DodgeWeakAirDown",
+        "DisplayName": "Dodge Enhancer: Spiral",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541128
+    },
+    {
+        "Name": "BADGE_DodgeStrongAirDown",
+        "DisplayName": "Dodge Enhancer: Spanner",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541130
+    },
+    {
+        "Name": "BADGE_DodgeSlide",
+        "DisplayName": "Dodge Enhancer: Slide",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541131
+    },
+    {
+        "Name": "BADGE_DodgeEPBoost",
+        "DisplayName": "EP Booster: Dodge",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541132
+    },
+    {
+        "Name": "BADGE_StyleComboAirNormal3A",
+        "DisplayName": "Style Combo: Windmill B",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541133
+    },
+    {
+        "Name": "BADGE_ChangeOrbCharger",
+        "DisplayName": "MP Surge: Tag Out",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541134
+    },
+    {
+        "Name": "BADGE_WallCharger",
+        "DisplayName": "MP Surge: Concuss",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541135
+    },
+    {
+        "Name": "BADGE_CeliaAShortRangeBurst",
+        "DisplayName": "Celia Type-A: Beguile",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541136
+    },
+    {
+        "Name": "BADGE_Lucky7Defend",
+        "DisplayName": "Lucky 7: A",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541137
+    },
+    {
+        "Name": "BADGE_LateCharge",
+        "DisplayName": "MP Quicken: Accelerate",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541138
+    },
+    {
+        "Name": "BADGE_AutoAirCombo",
+        "DisplayName": "C. Count Frenzy: Acrobatics",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541139
+    },
+    {
+        "Name": "BADGE_WeakGroundUpModOneHit",
+        "DisplayName": "Upper Slash: Vicious",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541140
+    },
+    {
+        "Name": "BADGE_GroundNormal4Mod",
+        "DisplayName": "Titanium Spanner",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541141
+    },
+    {
+        "Name": "BADGE_AirComboQuicken",
+        "DisplayName": "Aerial Accel",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541142
+    },
+    {
+        "Name": "BADGE_SableALongRangeSnipe",
+        "DisplayName": "Sable Type-A: Fanged",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541143
+    },
+    {
+        "Name": "BADGE_InvincibilityExtend",
+        "DisplayName": "Invictus",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541144
+    },
+    {
+        "Name": "BADGE_CommonDropRecover",
+        "DisplayName": "Grub Guru",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541145
+    },
+    {
+        "Name": "BADGE_MapDiscoverRecover",
+        "DisplayName": "Intrepid Explorer",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541146
+    },
+    {
+        "Name": "BADGE_BaseComboBooster",
+        "DisplayName": "Heavy Metal",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541147
+    },
+    {
+        "Name": "BADGE_BattleStartCharger",
+        "DisplayName": "MP Surge: Battle Start",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541148
+    },
+    {
+        "Name": "BADGE_BombNormal4Buffer",
+        "DisplayName": "Aplomb",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541149
+    },
+    {
+        "Name": "BADGE_ChargeShotDiscount",
+        "DisplayName": "MP Saver: Fireworks",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541150
+    },
+    {
+        "Name": "BADGE_WeakGroundUpModCombo",
+        "DisplayName": "C. Count Frenzy: Uprise",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541151
+    },
+    {
+        "Name": "BADGE_DodgeCharger",
+        "DisplayName": "MP Surge: Dodge",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541152
+    },
+    {
+        "Name": "BADGE_StepUpCharge",
+        "DisplayName": "MP Quicken: Step Up",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541153
+    },
+    {
+        "Name": "BADGE_CeliaALongStun",
+        "DisplayName": "Celia Type-A: Stunning",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541154
+    },
+    {
+        "Name": "BADGE_DodgeHealthCounter",
+        "DisplayName": "Dodge Recovery",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541155
+    },
+    {
+        "Name": "BADGE_ComboBreakBoost",
+        "DisplayName": "Combo Crasher",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541156
+    },
+    {
+        "Name": "BADGE_ComboAntiFullHealth",
+        "DisplayName": "Battlecry",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541157
+    },
+    {
+        "Name": "BADGE_WeakAirNormal3ModDamageBoost",
+        "DisplayName": "Air Combo: Focus",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541158
+    },
+    {
+        "Name": "BADGE_BackflipSnipe",
+        "DisplayName": "Acrobat",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541159
+    },
+    {
+        "Name": "BADGE_AirComboExtend",
+        "DisplayName": "Aerial Kinetics",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541160
+    },
+    {
+        "Name": "BADGE_EnergyDefend",
+        "DisplayName": "Mana Armor",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541161
+    },
+    {
+        "Name": "BADGE_QuickMeleeLagA",
+        "DisplayName": "Deft A",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541162
+    },
+    {
+        "Name": "BADGE_QuickMeleeLagB",
+        "DisplayName": "Deft B",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541163
+    },
+    {
+        "Name": "BADGE_Normal3HRedCancel",
+        "DisplayName": "Quickstab: Sunder",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541164
+    },
+    {
+        "Name": "BADGE_ComboTimeExtendA",
+        "DisplayName": "Combo Time Extend A ",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541165
+    },
+    {
+        "Name": "BADGE_ComboTimeExtendB",
+        "DisplayName": "Combo Time Extend B",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541166
+    },
+    {
+        "Name": "BADGE_ComboTimeExtendC",
+        "DisplayName": "Combo Time Extend C",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541167
+    },
+    {
+        "Name": "BADGE_ToArmorReducer",
+        "DisplayName": "Whipcrack",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541168
+    },
+    {
+        "Name": "BADGE_ComboDamageBoost",
+        "DisplayName": "Combo Momentum: Fever",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541169
+    },
+    {
+        "Name": "BADGE_NormalShotWhenChargedShot",
+        "DisplayName": "Two-pronged Shot",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541170
+    },
+    {
+        "Name": "BADGE_FrameCancel",
+        "DisplayName": "Full Stop A",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541171
+    },
+    {
+        "Name": "BADGE_LowerThan20",
+        "DisplayName": "Under Score",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541172
+    },
+    {
+        "Name": "BADGE_GroundWeakUpAirExcute",
+        "DisplayName": "Upper Slash: Augment",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541173
+    },
+    {
+        "Name": "BADGE_InstantDodgeMeter",
+        "DisplayName": "Dodge: Panic Switch",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541174
+    },
+    {
+        "Name": "BADGE_Normal2MultHit",
+        "DisplayName": "C. Count Frenzy: Preemptive",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541175
+    },
+    {
+        "Name": "BADGE_MAXHPBIGUP",
+        "DisplayName": "Health Surge",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541176
+    },
+    {
+        "Name": "BADGE_ConvertDef2Off",
+        "DisplayName": "Glass Knife",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541177
+    },
+    {
+        "Name": "BADGE_ConvertOff2Def",
+        "DisplayName": "Buns of Steel",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541178
+    },
+    {
+        "Name": "BADGE_ComboDodgeMeter",
+        "DisplayName": "Combo Momentum: Dodge",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541179
+    },
+    {
+        "Name": "BADGE_BreakTimeExtend",
+        "DisplayName": "Break Extend",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541180
+    },
+    {
+        "Name": "BADGE_BreakDamageBoost",
+        "DisplayName": "Nasty Break-up",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541181
+    },
+    {
+        "Name": "BADGE_BreakRangeChaser",
+        "DisplayName": "MP Surge: Break",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541182
+    },
+    {
+        "Name": "BADGE_ComboSaver",
+        "DisplayName": "Combo Momentum: Saver",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541183
+    },
+    {
+        "Name": "BADGE_1HealthTypeA",
+        "DisplayName": "Perseverance A",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541184
+    },
+    {
+        "Name": "BADGE_EPCombo",
+        "DisplayName": "EP Booster: Quintuple",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541185
+    },
+    {
+        "Name": "BADGE_SimpleBreak",
+        "DisplayName": "Quick Break",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541186
+    },
+    {
+        "Name": "BADGE_QuickDropExtendA",
+        "DisplayName": "Power Drop",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541187
+    },
+    {
+        "Name": "BADGE_QuickDropExtendB",
+        "DisplayName": "Pogo Drop",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541188
+    },
+    {
+        "Name": "BADGE_QuickDropDouble",
+        "DisplayName": "Double Drop",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541189
+    },
+    {
+        "Name": "BADGE_CrystalAbsorberS",
+        "DisplayName": "Crystalline Scarlet",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541190
+    },
+    {
+        "Name": "BADGE_CrystalAbsorberC",
+        "DisplayName": "Crystalline Cyan",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541191
+    },
+    {
+        "Name": "BADGE_GroundNormalComboSpeedup",
+        "DisplayName": "Terrestrial Agility",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541192
+    },
+    {
+        "Name": "BADGE_AirNormalComboSpeedup",
+        "DisplayName": "Aerial Agility",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541193
+    },
+    {
+        "Name": "BADGE_DoubleNormalComboSpeedup",
+        "DisplayName": "Galvanise",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541194
+    },
+    {
+        "Name": "BADGE_NormalShotReducerA",
+        "DisplayName": "Orbital Efficiency A",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541195
+    },
+    {
+        "Name": "BADGE_NormalShotReducerB",
+        "DisplayName": "Orbital Efficiency B",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541196
+    },
+    {
+        "Name": "BADGE_QuickBomber",
+        "DisplayName": "Quick Bomber",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541197
+    },
+    {
+        "Name": "BADGE_Normal3HModStabA",
+        "DisplayName": "Quickstab: Lightning",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541198
+    },
+    {
+        "Name": "BADGE_Normal3HModStabB",
+        "DisplayName": "Quickstab: Flurry",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541199
+    },
+    {
+        "Name": "BADGE_WeakAirDownFreqUpA",
+        "DisplayName": "Spiral Slash: Flurry",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541201
+    },
+    {
+        "Name": "BADGE_WeakAirDownFreqUpB",
+        "DisplayName": "Spiral Slash: Cyclone",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541202
+    },
+    {
+        "Name": "BADGE_AreaBombThrower",
+        "DisplayName": "Bomb Pitcher",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541203
+    },
+    {
+        "Name": "BADGE_StyleComboAirDashA",
+        "DisplayName": "Style Combo: Flash A",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541204
+    },
+    {
+        "Name": "BADGE_DoubleDispelLineBombHigh",
+        "DisplayName": "High Defence Bomber",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541205
+    },
+    {
+        "Name": "BADGE_DoubleDispelLineBombLow",
+        "DisplayName": "Low Defence Bomber",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541206
+    },
+    {
+        "Name": "BADGE_StyleComboAirDashS",
+        "DisplayName": "Style Combo: Triple Flash S",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541207
+    },
+    {
+        "Name": "BADGE_StyleComboHeavyGroundFrontA",
+        "DisplayName": "Style Combo: Tornado A",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541208
+    },
+    {
+        "Name": "BADGE_GroundBombQuickExcute",
+        "DisplayName": "Short Fuse",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541209
+    },
+    {
+        "Name": "BADGE_StyleComboNormal4HAAA",
+        "DisplayName": "Style Combo: Lock On A",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541210
+    },
+    {
+        "Name": "BADGE_StyleComboSlidingS",
+        "DisplayName": "Style Combo: Bunny Kick S",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541211
+    },
+    {
+        "Name": "BADGE_StyleComboBackflipA",
+        "DisplayName": "Style Combo: Trickshot",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541212
+    },
+    {
+        "Name": "BADGE_StyleComboPassiveA",
+        "DisplayName": "C. Rank Frenzy: Focus A",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541213
+    },
+    {
+        "Name": "BADGE_StyleComboPassiveS",
+        "DisplayName": "C. Rank Frenzy: Focus S",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541214
+    },
+    {
+        "Name": "BADGE_StyleComboPassiveMAX",
+        "DisplayName": "C. Rank Frenzy: Focus MAX",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541215
+    },
+    {
+        "Name": "BADGE_StrongFrontEnhance",
+        "DisplayName": "Tornado Spin: Pressure",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541216
+    },
+    {
+        "Name": "BADGE_Unlucky7",
+        "DisplayName": "Unlucky 7",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541217
+    },
+    {
+        "Name": "BADGE_BoostMeleeOffense",
+        "DisplayName": "Core Expansion: Vitalize",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541218
+    },
+    {
+        "Name": "BADGE_Cursed6",
+        "DisplayName": "Cursed 6",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541219
+    },
+    {
+        "Name": "BADGE_BoostCharging",
+        "DisplayName": "Core Expansion: Charge",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541220
+    },
+    {
+        "Name": "BADGE_PerfectCharge",
+        "DisplayName": "MP Quicken: Steady",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541221
+    },
+    {
+        "Name": "BADGE_StyleCharge",
+        "DisplayName": "MP Quicken: Style",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541222
+    },
+    {
+        "Name": "BADGE_ComboCharge",
+        "DisplayName": "MP Quicken: Combo",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541223
+    },
+    {
+        "Name": "BADGE_HealCharge",
+        "DisplayName": "MP Surge: Recovery",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541224
+    },
+    {
+        "Name": "BADGE_BreakHeal",
+        "DisplayName": "Coffee Break",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541225
+    },
+    {
+        "Name": "BADGE_SableBNormalShotDebuff",
+        "DisplayName": "Sable Type-B: Malediction",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541226
+    },
+    {
+        "Name": "BADGE_BoostDodgeAdd",
+        "DisplayName": "Core Expansion: Dazzle",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541227
+    },
+    {
+        "Name": "BADGE_DodgeMeterBoost",
+        "DisplayName": "Dodge: Optimize",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541228
+    },
+    {
+        "Name": "BADGE_StyleComboAddDamageA",
+        "DisplayName": "C. Rank Frenzy: Attack",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541229
+    },
+    {
+        "Name": "BADGE_StyleComboReduceDamageS",
+        "DisplayName": "C. Rank Frenzy: Defend",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541230
+    },
+    {
+        "Name": "BADGE_DebuffCounter",
+        "DisplayName": "Debuff Counter",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541231
+    },
+    {
+        "Name": "BADGE_CrystalIncrease",
+        "DisplayName": "Crystal Boon",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541232
+    },
+    {
+        "Name": "BADGE_Recover3",
+        "DisplayName": "Triple Threat",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541233
+    },
+    {
+        "Name": "BADGE_AntiAir",
+        "DisplayName": "Dogfight",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541234
+    },
+    {
+        "Name": "BADGE_Cannon",
+        "DisplayName": "Magic Cannon",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541235
+    },
+    {
+        "Name": "BADGE_AllMeleeSpeedUp",
+        "DisplayName": "Dextrous",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541236
+    },
+    {
+        "Name": "BADGE_Instant1",
+        "DisplayName": "Hero Call",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541237
+    },
+    {
+        "Name": "BADGE_AutoDodge",
+        "DisplayName": "Dodge: Feeling Lucky",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541238
+    },
+    {
+        "Name": "BADGE_BuffRush",
+        "DisplayName": "Buff Rush",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541239
+    },
+    {
+        "Name": "BADGE_DodgeChargedDodgeShot",
+        "DisplayName": "Dodge: Discharge",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541240
+    },
+    {
+        "Name": "BADGE_BoostShieldAbsorb",
+        "DisplayName": "Core Expansion: Recovery",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541241
+    },
+    {
+        "Name": "BADGE_Hurt2Punisher",
+        "DisplayName": "Punisher",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541242
+    },
+    {
+        "Name": "BADGE_SupportShot",
+        "DisplayName": "Synchronized Support II",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541243
+    },
+    {
+        "Name": "BADGE_CeliaTypeBAmount",
+        "DisplayName": "Celia Type-B: Halo",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541244
+    },
+    {
+        "Name": "BADGE_DoubleJumpStrike",
+        "DisplayName": "Bounce Bonus",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541245
+    },
+    {
+        "Name": "BADGE_QuickMPRegainA",
+        "DisplayName": "MP Reset A",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541246
+    },
+    {
+        "Name": "BADGE_QuickMPRegainB",
+        "DisplayName": "MP Reset B",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541247
+    },
+    {
+        "Name": "BADGE_PerfectCost",
+        "DisplayName": "EP Booster: Perfectionist",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541248
+    },
+    {
+        "Name": "BADGE_BoostTimeExtend",
+        "DisplayName": "Core Expansion: Extend",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541249
+    },
+    {
+        "Name": "BADGE_BackflipMultiHit",
+        "DisplayName": "Backflip Flurry",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541250
+    },
+    {
+        "Name": "BADGE_DamageToMaxHP",
+        "DisplayName": "Shock Armor",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541251
+    },
+    {
+        "Name": "BADGE_FallDamageReduce",
+        "DisplayName": "Head Over Heels",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541252
+    },
+    {
+        "Name": "BADGE_DoubleGroundNormal3N1",
+        "DisplayName": "Dual Combo: Flow",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541253
+    },
+    {
+        "Name": "BADGE_DoubleGroundNormal3N2",
+        "DisplayName": "Dual Combo: Rush",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541254
+    },
+    {
+        "Name": "BADGE_1HealthTypeB",
+        "DisplayName": "Perseverance D",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541255
+    },
+    {
+        "Name": "BADGE_1HealthTypeC",
+        "DisplayName": "Perseverance B",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541256
+    },
+    {
+        "Name": "BADGE_StraightCost",
+        "DisplayName": "EP Booster: Variety",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541257
+    },
+    {
+        "Name": "BADGE_HitMP",
+        "DisplayName": "MP Surge: Brawl",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541258
+    },
+    {
+        "Name": "BADGE_1HealthTypeD",
+        "DisplayName": "Perseverance C",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541259
+    },
+    {
+        "Name": "BADGE_RapidShotsEnhance",
+        "DisplayName": "Rapid Shots Enhance",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541260
+    },
+    {
+        "Name": "BADGE_MAXHPCost",
+        "DisplayName": "EP Booster: HP",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541261
+    },
+    {
+        "Name": "BADGE_SableAHitIncrease",
+        "DisplayName": "Sable Type-A: Ensnare",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541262
+    },
+    {
+        "Name": "BADGE_CeliaASlowShot",
+        "DisplayName": "Celia Type-A: Meteoric",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541263
+    },
+    {
+        "Name": "BADGE_SableBReturnStyle",
+        "DisplayName": "Sable Type-B: Backlash",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541264
+    },
+    {
+        "Name": "BADGE_SableCBigExplode",
+        "DisplayName": "Sable Type-C: Ignite",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541265
+    },
+    {
+        "Name": "BADGE_HP2MP",
+        "DisplayName": "MP Quicken: Bloodlust",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541266
+    },
+    {
+        "Name": "BADGE_MAXHP2MP",
+        "DisplayName": "MP Quicken: Sacrifice",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541267
+    },
+    {
+        "Name": "BADGE_RythemCharge",
+        "DisplayName": "MP Saver: Rhythm",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541268
+    },
+    {
+        "Name": "BADGE_NonChargeShotRapid",
+        "DisplayName": "Swift Shots",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541269
+    },
+    {
+        "Name": "BADGE_GoldenLuck",
+        "DisplayName": "Dodge: Golden Luck",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541270
+    },
+    {
+        "Name": "BADGE_SableALastHitEnhance",
+        "DisplayName": "Sable Type-A: Voracious",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541271
+    },
+    {
+        "Name": "BADGE_CeliaCShotIncrease",
+        "DisplayName": "Celia Type-C: Barrage",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541272
+    },
+    {
+        "Name": "BADGE_CeliaCShotAllDirection",
+        "DisplayName": "Celia Type-C: Panoptic",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541273
+    },
+    {
+        "Name": "BADGE_SableCSaver",
+        "DisplayName": "Sable Type-C: Fervid",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541274
+    },
+    {
+        "Name": "BADGE_MAXHP2MAXMP",
+        "DisplayName": "Blood Magic",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541275
+    },
+    {
+        "Name": "BADGE_100COMBO",
+        "DisplayName": "The Untamed",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541276
+    },
+    {
+        "Name": "BADGE_120CHARGE",
+        "DisplayName": "MP Quicken: Melee",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541277
+    },
+    {
+        "Name": "BADGE_NormalSupportShot",
+        "DisplayName": "Synchronized Support I",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541278
+    },
+    {
+        "Name": "BADGE_AutoChargeCombo",
+        "DisplayName": "Ranged Roulette",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541279
+    },
+    {
+        "Name": "BADGE_Lucky7DamageReduce",
+        "DisplayName": "Lucky 7: B",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541280
+    },
+    {
+        "Name": "BADGE_8thDamageHeal",
+        "DisplayName": "Attenu-8",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541281
+    },
+    {
+        "Name": "BADGE_SuperKnockBomb",
+        "DisplayName": "Supercluster Bomb",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541282
+    },
+    {
+        "Name": "BADGE_LateAttack",
+        "DisplayName": "Crouching Bunny",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541283
+    },
+    {
+        "Name": "BADGE_StrongFrontRapid",
+        "DisplayName": "Tornado Spin: Flurry",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541284
+    },
+    {
+        "Name": "BADGE_StrongFrontFly",
+        "DisplayName": "Tornado Spin: Grav Reversal",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541285
+    },
+    {
+        "Name": "BADGE_EPMeleeReduce",
+        "DisplayName": "EP Booster: Melee Menace",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541286
+    },
+    {
+        "Name": "BADGE_EasyDodge",
+        "DisplayName": "Dodge: Headstrong",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541287
+    },
+    {
+        "Name": "BADGE_JetpackMP",
+        "DisplayName": "Aerial Assist",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541288
+    },
+    {
+        "Name": "BADGE_Lucky7C",
+        "DisplayName": "Lucky 7: C",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541289
+    },
+    {
+        "Name": "BADGE_KnockConvert",
+        "DisplayName": "Ballasting Off",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541290
+    },
+    {
+        "Name": "BADGE_ChargeHeal",
+        "DisplayName": "Life Steal",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541291
+    },
+    {
+        "Name": "BADGE_BombCharge",
+        "DisplayName": "MP Surge: Explosives",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541292
+    },
+    {
+        "Name": "BADGE_MAXMPCost",
+        "DisplayName": "EP Booster: MP",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541293
+    },
+    {
+        "Name": "BADGE_MPAllBurst",
+        "DisplayName": "Mana Flare",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541294
+    },
+    {
+        "Name": "BADGE_AirCombo2Hits",
+        "DisplayName": "Double Airstrike",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541295
+    },
+    {
+        "Name": "BADGE_StrongAirUpDebuff",
+        "DisplayName": "Spanner Bash: Wrecker",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541296
+    },
+    {
+        "Name": "BADGE_Amulet10",
+        "DisplayName": "Supernova",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541297
+    },
+    {
+        "Name": "BADGE_AutoBombChain",
+        "DisplayName": "Daisy Chain",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541298
+    },
+    {
+        "Name": "BADGE_PrepDef",
+        "DisplayName": "Blood Armor",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541299
+    },
+    {
+        "Name": "BADGE_SuperArmor2",
+        "DisplayName": "Even Keel",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541300
+    },
+    {
+        "Name": "BADGE_BOnceHeal",
+        "DisplayName": "Enthusiastic Excavator",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541301
+    },
+    {
+        "Name": "BADGE_AmuletMPCharge",
+        "DisplayName": "MP Surge: Soul",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541302
+    },
+    {
+        "Name": "BADGE_AutoHealing",
+        "DisplayName": "Auto Heal",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541303
+    },
+    {
+        "Name": "BADGE_ChargeIntoEnemy",
+        "DisplayName": "Headbutt",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541304
+    },
+    {
+        "Name": "BADGE_GStrongUpBulletCancelS",
+        "DisplayName": "Bulletproof Pillar S",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541305
+    },
+    {
+        "Name": "BADGE_GStrongUpBulletCancelC",
+        "DisplayName": "Bulletproof Pillar C",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541306
+    },
+    {
+        "Name": "BADGE_HitCountChargeRate",
+        "DisplayName": "MP Quicken: Battlescars",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541307
+    },
+    {
+        "Name": "BADGE_SafeItemUse",
+        "DisplayName": "Excuse Me",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541308
+    },
+    {
+        "Name": "BADGE_4Knifes",
+        "DisplayName": "Slash Quartet",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541309
+    },
+    {
+        "Name": "BADGE_GStrongUpWidth",
+        "DisplayName": "Thick Pillar",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541310
+    },
+    {
+        "Name": "BADGE_KnockHitEnhance",
+        "DisplayName": "Dominator",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541311
+    },
+    {
+        "Name": "BADGE_PowerDrop",
+        "DisplayName": "Drop Kick",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541312
+    },
+    {
+        "Name": "BADGE_CrystalAttack",
+        "DisplayName": "Crystal Shrapnel",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541313
+    },
+    {
+        "Name": "BADGE_SlideThenStrongUp",
+        "DisplayName": "Slide Basher",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541314
+    },
+    {
+        "Name": "BADGE_LaserRes",
+        "DisplayName": "Refractor",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541315
+    },
+    {
+        "Name": "BADGE_ConsumeableCharge",
+        "DisplayName": "MP Quicken: Sugar Rush",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541316
+    },
+    {
+        "Name": "BADGE_GroundNormalComboAutoSpeedup",
+        "DisplayName": "Terrestrial Momentum",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541317
+    },
+    {
+        "Name": "BADGE_CrystalBulletCancel",
+        "DisplayName": "Crystal Mirror",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541318
+    },
+    {
+        "Name": "BADGE_AntiGround",
+        "DisplayName": "Ground Control",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541319
+    },
+    {
+        "Name": "BADGE_EnemyDefeatExp",
+        "DisplayName": "Bone Breaker",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541320
+    },
+    {
+        "Name": "BADGE_SuperArmor33",
+        "DisplayName": "Act Tough",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541321
+    },
+    {
+        "Name": "BADGE_ArrowDamageUp",
+        "DisplayName": "Razor Arrow",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541322
+    },
+    {
+        "Name": "BADGE_StyleComboBackImageS",
+        "DisplayName": "Style Combo: Afterimage S",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541323
+    },
+    {
+        "Name": "BADGE_BadgeCDReduce",
+        "DisplayName": "Sigil Quicken",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541324
+    },
+    {
+        "Name": "BADGE_HP2Damage6",
+        "DisplayName": "Blood Boil",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541325
+    },
+    {
+        "Name": "BADGE_BoostQuickErase",
+        "DisplayName": "Core Expansion: Erase",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541326
+    },
+    {
+        "Name": "BADGE_CrystalHeal",
+        "DisplayName": "Crystal Healing",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541327
+    },
+    {
+        "Name": "BADGE_BoostEnhance",
+        "DisplayName": "Core Expansion: Transcend",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541328
+    },
+    {
+        "Name": "BADGE_BoostHitCount",
+        "DisplayName": "Core Expansion: Combo",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541329
+    },
+    {
+        "Name": "BADGE_AmuletQuicken",
+        "DisplayName": "Supersonic",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541330
+    },
+    {
+        "Name": "BADGE_CrystalGen",
+        "DisplayName": "Crystallize",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541331
+    },
+    {
+        "Name": "BADGE_RevengeB",
+        "DisplayName": "Hot Buzz",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541332
+    },
+    {
+        "Name": "BADGE_PurchaseBadgeCost",
+        "DisplayName": "EP Booster: Shopaholic",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541333
+    },
+    {
+        "Name": "BADGE_CraftBadgeCost",
+        "DisplayName": "EP Booster: Synthesizer",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541334
+    },
+    {
+        "Name": "BADGE_RememberBrutalForce",
+        "DisplayName": "Muscle Memory",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541335
+    },
+    {
+        "Name": "BADGE_GroundNormalCombo4AltDmg",
+        "DisplayName": "Slayer",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541336
+    },
+    {
+        "Name": "BADGE_DashFlashInv",
+        "DisplayName": "Shooting Star",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541337
+    },
+    {
+        "Name": "BADGE_UpperDoubleHitAfterOutline",
+        "DisplayName": "Upper Slash: Shatter",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541338
+    },
+    {
+        "Name": "BADGE_BoostSizeIncrease",
+        "DisplayName": "Core Expansion: Radiant",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541339
+    },
+    {
+        "Name": "BADGE_BoostCostCut",
+        "DisplayName": "Core Expansion: Saver",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541340
+    },
+    {
+        "Name": "BADGE_AmuletDouble",
+        "DisplayName": "Overdrive",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541341
+    },
+    {
+        "Name": "BADGE_ComboStyleDamageUp",
+        "DisplayName": "C. Rank Frenzy: Fierce",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541342
+    },
+    {
+        "Name": "BADGE_FasterTeviStrongGroundUp",
+        "DisplayName": "Fast Pillar",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541343
+    },
+    {
+        "Name": "BADGE_BounceTeviStrongAirUp",
+        "DisplayName": "Spanner Bash: Bounce",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541344
+    },
+    {
+        "Name": "BADGE_UpperHigh",
+        "DisplayName": "Upper Slash: Volley",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541345
+    },
+    {
+        "Name": "BADGE_DoubleAirDash",
+        "DisplayName": "Electric Wind",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541346
+    },
+    {
+        "Name": "BADGE_StyleComboWeakGroundUpA",
+        "DisplayName": "Style Combo: Upper A",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541347
+    },
+    {
+        "Name": "BADGE_StyleComboNormal3H",
+        "DisplayName": "Style Combo: Power A",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541348
+    },
+    {
+        "Name": "BADGE_StyleComboNormal1QuickFar",
+        "DisplayName": "Style Combo: Aerial A",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541349
+    },
+    {
+        "Name": "BADGE_SlideHalt",
+        "DisplayName": "Slide Halt",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541350
+    },
+    {
+        "Name": "BADGE_BossPassing",
+        "DisplayName": "Metamorphose",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541351
+    },
+    {
+        "Name": "BADGE_StyleComboBackflipBomb",
+        "DisplayName": "Style Combo: Backbomb S",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541352
+    },
+    {
+        "Name": "BADGE_StyleComboNewAttack",
+        "DisplayName": "C. Rank Frenzy: Starter",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541353
+    },
+    {
+        "Name": "BADGE_WeakAirDownRotate",
+        "DisplayName": "Windmill Strike",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541354
+    },
+    {
+        "Name": "BADGE_DoubleJumpAttack",
+        "DisplayName": "Orbital Slash",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541355
+    },
+    {
+        "Name": "BADGE_EarlyKnockRecover",
+        "DisplayName": "Spring Back",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541356
+    },
+    {
+        "Name": "BADGE_BombRecoverDebuff",
+        "DisplayName": "Bombard",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541357
+    },
+    {
+        "Name": "BADGE_BombDispelDebuff",
+        "DisplayName": "Shell Shock",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541358
+    },
+    {
+        "Name": "BADGE_FreeFoodRefill",
+        "DisplayName": "Biscuit Delivery",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541359
+    },
+    {
+        "Name": "BADGE_SuperFrameCancel",
+        "DisplayName": "Full Stop B",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541360
+    },
+    {
+        "Name": "BADGE_AutoFoodCraft",
+        "DisplayName": "Magic Mixer",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541361
+    },
+    {
+        "Name": "BADGE_AutoFoodUse",
+        "DisplayName": "Inhale Dessert",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541362
+    },
+    {
+        "Name": "BADGE_AutoCombo",
+        "DisplayName": "Combo Assist",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541363
+    },
+    {
+        "Name": "BADGE_GroundNormalCombo4AltTiming",
+        "DisplayName": "Flash Point",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541364
+    },
+    {
+        "Name": "BADGE_TauntThink",
+        "DisplayName": "Special Action: Question Mark",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541365
+    },
+    {
+        "Name": "BADGE_TauntKnife",
+        "DisplayName": "Special Action: Show Off",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541366
+    },
+    {
+        "Name": "BADGE_TauntPhoto",
+        "DisplayName": "Special Action: Paparazzo",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541367
+    },
+    {
+        "Name": "BADGE_TauntStare",
+        "DisplayName": "Special Action: Speechless",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541368
+    },
+    {
+        "Name": "BADGE_TauntYawn",
+        "DisplayName": "Special Action: Yawn",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541369
+    },
+    {
+        "Name": "BADGE_TauntSit",
+        "DisplayName": "Special Action: Olive Branch",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541370
+    },
+    {
+        "Name": "BADGE_DominantEffectDownA",
+        "DisplayName": "Weak Dominance A",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541371
+    },
+    {
+        "Name": "BADGE_DominantEffectDownB",
+        "DisplayName": "Weak Dominance B",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541372
+    },
+    {
+        "Name": "BADGE_ArmorCritCrit",
+        "DisplayName": "Armor Piercer",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541373
+    },
+    {
+        "Name": "BADGE_BoostFullOffense",
+        "DisplayName": "Core Expansion: Full Offense",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541374
+    },
+    {
+        "Name": "BADGE_RangeBreak",
+        "DisplayName": "Range Break",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "filler",
+        "Weight": 100,
+        "ID": 44966541375
+    },
+    {
+        "Name": "BADGE_AntiAirPlat",
+        "DisplayName": "Mana Platform",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541376
+    },
+    {
+        "Name": "BADGE_AutoPilot",
+        "DisplayName": "Go Ballistic",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "useful",
+        "Weight": 100,
+        "ID": 44966541377
+    },
+    {
+        "Name": "Useable_CocoBall",
+        "DisplayName": "Cocoa Truffles",
+        "Default_Quantity": 0,
+        "Maximum_Quantity": 999999,
+        "Classification": "filler",
+        "Weight": 20,
+        "ID": 44966541380
+    },
+    {
+        "Name": "Useable_Puff",
+        "DisplayName": "Fluffy Cream Puff",
+        "Default_Quantity": 0,
+        "Maximum_Quantity": 999999,
+        "Classification": "filler",
+        "Weight": 20,
+        "ID": 44966541381
+    },
+    {
+        "Name": "Useable_Lollipop",
+        "DisplayName": "Vitalolly",
+        "Default_Quantity": 0,
+        "Maximum_Quantity": 999999,
+        "Classification": "filler",
+        "Weight": 20,
+        "ID": 44966541382
+    },
+    {
+        "Name": "Useable_EnergyDrink",
+        "DisplayName": "Energy Happy Juice",
+        "Default_Quantity": 0,
+        "Maximum_Quantity": 999999,
+        "Classification": "filler",
+        "Weight": 20,
+        "ID": 44966541383
+    },
+    {
+        "Name": "Useable_MintIceCream",
+        "DisplayName": "Crispy Crunchsicle",
+        "Default_Quantity": 0,
+        "Maximum_Quantity": 999999,
+        "Classification": "filler",
+        "Weight": 20,
+        "ID": 44966541384
+    },
+    {
+        "Name": "Useable_Donut",
+        "DisplayName": "Rewind Donut",
+        "Default_Quantity": 0,
+        "Maximum_Quantity": 999999,
+        "Classification": "filler",
+        "Weight": 20,
+        "ID": 44966541385
+    },
+    {
+        "Name": "Useable_VoodooPie",
+        "DisplayName": "Voodoo's Mewmew Cookie",
+        "Default_Quantity": 0,
+        "Maximum_Quantity": 999999,
+        "Classification": "filler",
+        "Weight": 20,
+        "ID": 44966541386
+    },
+    {
+        "Name": "Useable_RumiCake",
+        "DisplayName": "Snowflake Rumi Cake",
+        "Default_Quantity": 0,
+        "Maximum_Quantity": 999999,
+        "Classification": "filler",
+        "Weight": 20,
+        "ID": 44966541387
+    },
+    {
+        "Name": "Useable_MilkTea",
+        "DisplayName": "Rainbowba",
+        "Default_Quantity": 0,
+        "Maximum_Quantity": 999999,
+        "Classification": "filler",
+        "Weight": 20,
+        "ID": 44966541388
+    },
+    {
+        "Name": "Useable_WaffleWonderTemp",
+        "DisplayName": "Waffle of Wonder (Attempt)",
+        "Default_Quantity": 0,
+        "Maximum_Quantity": 999999,
+        "Classification": "filler",
+        "Weight": 20,
+        "ID": 44966541389
+    },
+    {
+        "Name": "Useable_Mysterious",
+        "DisplayName": "Mysterious Confection",
+        "Default_Quantity": 0,
+        "Maximum_Quantity": 999999,
+        "Classification": "filler",
+        "Weight": 20,
+        "ID": 44966541390
+    },
+    {
+        "Name": "Useable_WaffleAHoneycloud",
+        "DisplayName": "Honeycloud Waffle",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 999999,
+        "Classification": "filler",
+        "Weight": 20,
+        "ID": 44966541391
+    },
+    {
+        "Name": "Useable_WaffleBMeringue",
+        "DisplayName": "Toasted Meringue Waffle",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 999999,
+        "Classification": "filler",
+        "Weight": 20,
+        "ID": 44966541392
+    },
+    {
+        "Name": "Useable_WaffleCMorning",
+        "DisplayName": "Good Morning Waffle",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 999999,
+        "Classification": "filler",
+        "Weight": 20,
+        "ID": 44966541393
+    },
+    {
+        "Name": "Useable_WaffleDJellydrop",
+        "DisplayName": "Berry Pink Waffle",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 999999,
+        "Classification": "filler",
+        "Weight": 20,
+        "ID": 44966541394
+    },
+    {
+        "Name": "Useable_WaffleElueberry",
+        "DisplayName": "Blueberry Waffle",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 999999,
+        "Classification": "filler",
+        "Weight": 20,
+        "ID": 44966541395
+    },
+    {
+        "Name": "Useable_WaffleWonderFull",
+        "DisplayName": "Whimsical Waffle of Wonder",
+        "Default_Quantity": 0,
+        "Maximum_Quantity": 999999,
+        "Classification": "filler",
+        "Weight": 20,
+        "ID": 44966541396
+    },
+    {
+        "Name": "Useable_VenaBombSmall",
+        "DisplayName": "Void Bomb",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 999999,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541398
+    },
+    {
+        "Name": "Useable_VenaBombBig",
+        "DisplayName": "Cloud Bomb",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 999999,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541399
+    },
+    {
+        "Name": "Useable_VenaBombBunBun",
+        "DisplayName": "BB Rabbit",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 999999,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541400
+    },
+    {
+        "Name": "Useable_VenaBombDispel",
+        "DisplayName": "Calico Bomb",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 999999,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541401
+    },
+    {
+        "Name": "Useable_VenaBombHealBlock",
+        "DisplayName": "Tabby Bomb",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 999999,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541402
+    },
+    {
+        "Name": "Useable_BSnack",
+        "DisplayName": "Burnt Dessert",
+        "Default_Quantity": 0,
+        "Maximum_Quantity": 999999,
+        "Classification": "filler",
+        "Weight": 20,
+        "ID": 44966541404
+    },
+    {
+        "Name": "Useable_Biscuit",
+        "DisplayName": "Pocket Biscuit",
+        "Default_Quantity": 0,
+        "Maximum_Quantity": 999999,
+        "Classification": "filler",
+        "Weight": 20,
+        "ID": 44966541405
+    },
+    {
+        "Name": "Teleporter 0",
+        "DisplayName": "Teleporter Desert Base",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541500
+    },
+    {
+        "Name": "Teleporter 1",
+        "DisplayName": "Teleporter Canyon",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541501
+    },
+    {
+        "Name": "Teleporter 2",
+        "DisplayName": "Teleporter Oasis",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541502
+    },
+    {
+        "Name": "Teleporter 3",
+        "DisplayName": "Teleporter Morose",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541503
+    },
+    {
+        "Name": "Teleporter 4",
+        "DisplayName": "Teleporter ForestMaze",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541504
+    },
+    {
+        "Name": "Teleporter 5",
+        "DisplayName": "Teleporter Forest",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541505
+    },
+    {
+        "Name": "Teleporter 6",
+        "DisplayName": "Teleporter Mines",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541506
+    },
+    {
+        "Name": "Teleporter 7",
+        "DisplayName": "Teleporter Industry",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541507
+    },
+    {
+        "Name": "Teleporter 8",
+        "DisplayName": "Teleporter Copper Forest",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541508
+    },
+    {
+        "Name": "Teleporter 9",
+        "DisplayName": "Teleporter Anathema",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541509
+    },
+    {
+        "Name": "Teleporter 10",
+        "DisplayName": "Teleporter Gloamwood",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541510
+    },
+    {
+        "Name": "Teleporter 11",
+        "DisplayName": "Teleporter Plague",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541511
+    },
+    {
+        "Name": "Teleporter 12",
+        "DisplayName": "Teleporter Ulvosa",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541512
+    },
+    {
+        "Name": "Teleporter 13",
+        "DisplayName": "Teleporter Snow Village",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541513
+    },
+    {
+        "Name": "Teleporter 14",
+        "DisplayName": "Teleporter Sea",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541514
+    },
+    {
+        "Name": "Teleporter 15",
+        "DisplayName": "Teleporter Ocean",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541515
+    },
+    {
+        "Name": "Teleporter 16",
+        "DisplayName": "Teleporter Forgotten City",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541516
+    },
+    {
+        "Name": "Teleporter 17",
+        "DisplayName": "Teleporter Tartarus",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541517
+    },
+    {
+        "Name": "Teleporter 18",
+        "DisplayName": "Teleporter Snow City",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541518
+    },
+    {
+        "Name": "Teleporter 19",
+        "DisplayName": "Teleporter Magma Depths",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541519
+    },
+    {
+        "Name": "Teleporter 20",
+        "DisplayName": "Teleporter Dreamkeeper Outside",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541520
+    },
+    {
+        "Name": "Teleporter 21",
+        "DisplayName": "Teleporter Dreamkeeper Inside",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541521
+    },
+    {
+        "Name": "Teleporter 22",
+        "DisplayName": "Teleporter Deep Dream",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541522
+    },
+    {
+        "Name": "Teleporter 23",
+        "DisplayName": "Teleporter Valhalla Breath East",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541523
+    },
+    {
+        "Name": "Teleporter 24",
+        "DisplayName": "Teleporter Valhalla City",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541524
+    },
+    {
+        "Name": "Teleporter 25",
+        "DisplayName": "Teleporter Heavens Valley West",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541525
+    },
+    {
+        "Name": "Teleporter 26",
+        "DisplayName": "Teleporter Valhalla Breath West",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541526
+    },
+    {
+        "Name": "Teleporter 27",
+        "DisplayName": "Teleporter Ruins",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541527
+    },
+    {
+        "Name": "Teleporter 28",
+        "DisplayName": "Teleporter Sinner's Hell",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541528
+    },
+    {
+        "Name": "Teleporter 29",
+        "DisplayName": "Teleporter Relicts",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541529
+    },
+    {
+        "Name": "Teleporter 30",
+        "DisplayName": "Teleporter Catacombs",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541530
+    },
+    {
+        "Name": "Teleporter 31",
+        "DisplayName": "Teleporter Lab",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541531
+    },
+    {
+        "Name": "Teleporter 32",
+        "DisplayName": "Teleporter Cloister",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541532
+    },
+    {
+        "Name": "Teleporter 33",
+        "DisplayName": "Teleporter Gallery of Mirrors",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541533
+    },
+    {
+        "Name": "Teleporter 34",
+        "DisplayName": "Teleporter Gallery of Souls",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541534
+    },
+    {
+        "Name": "Teleporter 35",
+        "DisplayName": "Teleporter Blushwood",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541535
+    },
+    {
+        "Name": "Teleporter 36",
+        "DisplayName": "Teleporter Evernight Garden",
+        "Default_Quantity": 1,
+        "Maximum_Quantity": 1,
+        "Classification": "progression",
+        "Weight": 100,
+        "ID": 44966541536
+    },
+    {
+        "Name": "Reverse Camera",
+        "DisplayName": "Reverse Camera",
+        "Default_Quantity": 0,
+        "Maximum_Quantity": 99999999,
+        "Classification": "trap",
+        "Weight": 1,
+        "ID": 44966541550
+    },
+    {
+        "Name": "Double Time",
+        "DisplayName": "Double Time",
+        "Default_Quantity": 0,
+        "Maximum_Quantity": 99999999,
+        "Classification": "trap",
+        "Weight": 1,
+        "ID": 44966541551
+    },
+    {
+        "Name": "Debuff",
+        "DisplayName": "Debuff",
+        "Default_Quantity": 0,
+        "Maximum_Quantity": 99999999,
+        "Classification": "trap",
+        "Weight": 6,
+        "ID": 44966541553
+    },
+    {
+        "Name": "Yeet",
+        "DisplayName": "Yeet",
+        "Default_Quantity": 0,
+        "Maximum_Quantity": 99999999,
+        "Classification": "trap",
+        "Weight": 1,
+        "ID": 44966541552
+    },
+    {
+        "Name": "Taunt",
+        "DisplayName": "Taunt",
+        "Default_Quantity": 0,
+        "Maximum_Quantity": 99999999,
+        "Classification": "trap",
+        "Weight": 1,
+        "ID": 44966541554
+    },
+    {
+        "Name": "Reduce Jump Height",
+        "DisplayName": "Reduce Jump Height",
+        "Default_Quantity": 0,
+        "Maximum_Quantity": 99999999,
+        "Classification": "trap",
+        "Weight": 1,
+        "ID": 44966541555
+    }
+]
