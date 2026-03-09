@@ -5,7 +5,7 @@
         "Default_Quantity": 25,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 1
     },
     {
@@ -77,7 +77,7 @@
         "Default_Quantity": 591,
         "Maximum_Quantity": 591,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 14
     },
     {
@@ -86,7 +86,7 @@
         "Default_Quantity": 35,
         "Maximum_Quantity": 70,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 15
     },
     {
@@ -95,7 +95,7 @@
         "Default_Quantity": 90,
         "Maximum_Quantity": 96,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 16
     },
     {
@@ -104,7 +104,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 19
     },
     {
@@ -113,7 +113,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 20
     },
     {
@@ -122,7 +122,7 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 22
     },
     {
@@ -131,7 +131,7 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 23
     },
     {
@@ -140,7 +140,7 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 24
     },
     {
@@ -149,7 +149,7 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 25
     },
     {
@@ -158,7 +158,7 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 26
     },
     {
@@ -167,7 +167,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 27
     },
     {
@@ -176,7 +176,7 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 28
     },
     {
@@ -185,7 +185,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 29
     },
     {
@@ -194,7 +194,7 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 30
     },
     {
@@ -203,7 +203,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 31
     },
     {
@@ -212,7 +212,7 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 32
     },
     {
@@ -221,7 +221,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 33
     },
     {
@@ -230,7 +230,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 255,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 34
     },
     {
@@ -239,7 +239,7 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 35
     },
     {
@@ -248,7 +248,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 36
     },
     {
@@ -257,7 +257,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 37
     },
     {
@@ -266,7 +266,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 38
     },
     {
@@ -275,7 +275,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 39
     },
     {
@@ -284,7 +284,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 40
     },
     {
@@ -293,7 +293,7 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 41
     },
     {
@@ -302,7 +302,7 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 42
     },
     {
@@ -311,7 +311,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 43
     },
     {
@@ -320,7 +320,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 44
     },
     {
@@ -329,7 +329,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 45
     },
     {
@@ -338,7 +338,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 46
     },
     {
@@ -347,7 +347,7 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 3,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 47
     },
     {
@@ -356,7 +356,7 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 3,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 48
     },
     {
@@ -365,7 +365,7 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 49
     },
     {
@@ -374,7 +374,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 50
     },
     {
@@ -383,7 +383,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 51
     },
     {
@@ -392,7 +392,7 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 52
     },
     {
@@ -401,7 +401,7 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 53
     },
     {
@@ -410,7 +410,7 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 3,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 54
     },
     {
@@ -419,7 +419,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 56
     },
     {
@@ -428,7 +428,7 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 4,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 57
     },
     {
@@ -437,7 +437,7 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 59
     },
     {
@@ -446,7 +446,7 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 60
     },
     {
@@ -455,7 +455,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 61
     },
     {
@@ -464,7 +464,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 62
     },
     {
@@ -473,7 +473,7 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 63
     },
     {
@@ -482,7 +482,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 64
     },
     {
@@ -491,7 +491,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 65
     },
     {
@@ -500,7 +500,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 66
     },
     {
@@ -509,7 +509,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 99
     },
     {
@@ -518,7 +518,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 10
     },
     {
@@ -527,7 +527,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 12
     },
     {
@@ -536,7 +536,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 16
     },
     {
@@ -545,7 +545,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 17
     },
     {
@@ -554,7 +554,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 19
     },
     {
@@ -563,7 +563,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 110
     },
     {
@@ -572,7 +572,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 120
     },
     {
@@ -581,7 +581,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 121
     },
     {
@@ -590,7 +590,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 122
     },
     {
@@ -599,7 +599,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 123
     },
     {
@@ -608,7 +608,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 124
     },
     {
@@ -617,7 +617,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 125
     },
     {
@@ -626,7 +626,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 126
     },
     {
@@ -635,7 +635,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 127
     },
     {
@@ -644,7 +644,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 128
     },
     {
@@ -653,7 +653,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 130
     },
     {
@@ -662,7 +662,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 131
     },
     {
@@ -671,7 +671,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 132
     },
     {
@@ -680,7 +680,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 133
     },
     {
@@ -689,7 +689,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 134
     },
     {
@@ -698,7 +698,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 135
     },
     {
@@ -707,7 +707,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 136
     },
     {
@@ -716,7 +716,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 137
     },
     {
@@ -725,7 +725,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 138
     },
     {
@@ -734,7 +734,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 139
     },
     {
@@ -743,7 +743,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 140
     },
     {
@@ -752,7 +752,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 141
     },
     {
@@ -761,7 +761,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 142
     },
     {
@@ -770,7 +770,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 143
     },
     {
@@ -779,7 +779,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 144
     },
     {
@@ -788,7 +788,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 145
     },
     {
@@ -797,7 +797,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 146
     },
     {
@@ -806,7 +806,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 147
     },
     {
@@ -815,7 +815,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 148
     },
     {
@@ -824,7 +824,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 149
     },
     {
@@ -833,7 +833,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 150
     },
     {
@@ -842,7 +842,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 151
     },
     {
@@ -851,7 +851,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 152
     },
     {
@@ -860,7 +860,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 153
     },
     {
@@ -869,7 +869,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 154
     },
     {
@@ -878,7 +878,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 155
     },
     {
@@ -887,7 +887,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 156
     },
     {
@@ -896,7 +896,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 157
     },
     {
@@ -905,7 +905,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 158
     },
     {
@@ -914,7 +914,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 159
     },
     {
@@ -923,7 +923,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 160
     },
     {
@@ -932,7 +932,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 161
     },
     {
@@ -941,7 +941,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 162
     },
     {
@@ -950,7 +950,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 163
     },
     {
@@ -959,7 +959,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 164
     },
     {
@@ -968,7 +968,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 165
     },
     {
@@ -977,7 +977,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 166
     },
     {
@@ -986,7 +986,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 167
     },
     {
@@ -995,7 +995,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 168
     },
     {
@@ -1004,7 +1004,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 169
     },
     {
@@ -1013,7 +1013,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 170
     },
     {
@@ -1022,7 +1022,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 171
     },
     {
@@ -1031,7 +1031,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 172
     },
     {
@@ -1040,7 +1040,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 173
     },
     {
@@ -1049,7 +1049,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 174
     },
     {
@@ -1058,7 +1058,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 175
     },
     {
@@ -1067,7 +1067,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 176
     },
     {
@@ -1076,7 +1076,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 177
     },
     {
@@ -1085,7 +1085,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 178
     },
     {
@@ -1094,7 +1094,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 179
     },
     {
@@ -1103,7 +1103,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 180
     },
     {
@@ -1112,7 +1112,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 181
     },
     {
@@ -1121,7 +1121,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 182
     },
     {
@@ -1130,7 +1130,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 183
     },
     {
@@ -1139,7 +1139,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 184
     },
     {
@@ -1148,7 +1148,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 185
     },
     {
@@ -1157,7 +1157,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 186
     },
     {
@@ -1166,7 +1166,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 187
     },
     {
@@ -1175,7 +1175,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 188
     },
     {
@@ -1184,7 +1184,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 189
     },
     {
@@ -1193,7 +1193,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 190
     },
     {
@@ -1202,7 +1202,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 191
     },
     {
@@ -1211,7 +1211,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 192
     },
     {
@@ -1220,7 +1220,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 193
     },
     {
@@ -1229,7 +1229,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 194
     },
     {
@@ -1238,7 +1238,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 195
     },
     {
@@ -1247,7 +1247,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 196
     },
     {
@@ -1256,7 +1256,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 197
     },
     {
@@ -1265,7 +1265,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 198
     },
     {
@@ -1274,7 +1274,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 199
     },
     {
@@ -1283,7 +1283,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 21
     },
     {
@@ -1292,7 +1292,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 22
     },
     {
@@ -1301,7 +1301,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 23
     },
     {
@@ -1310,7 +1310,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 24
     },
     {
@@ -1319,7 +1319,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 25
     },
     {
@@ -1328,7 +1328,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 26
     },
     {
@@ -1337,7 +1337,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 27
     },
     {
@@ -1346,7 +1346,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 28
     },
     {
@@ -1355,7 +1355,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 29
     },
     {
@@ -1364,7 +1364,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 210
     },
     {
@@ -1373,7 +1373,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 211
     },
     {
@@ -1382,7 +1382,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 212
     },
     {
@@ -1391,7 +1391,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 213
     },
     {
@@ -1400,7 +1400,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 214
     },
     {
@@ -1409,7 +1409,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 215
     },
     {
@@ -1418,7 +1418,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 216
     },
     {
@@ -1427,7 +1427,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 217
     },
     {
@@ -1436,7 +1436,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 218
     },
     {
@@ -1445,7 +1445,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 219
     },
     {
@@ -1454,7 +1454,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 220
     },
     {
@@ -1463,7 +1463,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 221
     },
     {
@@ -1472,7 +1472,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 222
     },
     {
@@ -1481,7 +1481,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 223
     },
     {
@@ -1490,7 +1490,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 224
     },
     {
@@ -1499,7 +1499,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 225
     },
     {
@@ -1508,7 +1508,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 226
     },
     {
@@ -1517,7 +1517,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 227
     },
     {
@@ -1526,7 +1526,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 228
     },
     {
@@ -1535,7 +1535,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 229
     },
     {
@@ -1544,7 +1544,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 230
     },
     {
@@ -1553,7 +1553,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 231
     },
     {
@@ -1562,7 +1562,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 232
     },
     {
@@ -1571,7 +1571,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 233
     },
     {
@@ -1580,7 +1580,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 234
     },
     {
@@ -1589,7 +1589,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 235
     },
     {
@@ -1598,7 +1598,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 236
     },
     {
@@ -1607,7 +1607,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 237
     },
     {
@@ -1616,7 +1616,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 238
     },
     {
@@ -1625,7 +1625,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 239
     },
     {
@@ -1634,7 +1634,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 240
     },
     {
@@ -1643,7 +1643,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 241
     },
     {
@@ -1652,7 +1652,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 242
     },
     {
@@ -1661,7 +1661,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 243
     },
     {
@@ -1670,7 +1670,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 244
     },
     {
@@ -1679,7 +1679,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 245
     },
     {
@@ -1688,7 +1688,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 246
     },
     {
@@ -1697,7 +1697,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 247
     },
     {
@@ -1706,7 +1706,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 248
     },
     {
@@ -1715,7 +1715,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 249
     },
     {
@@ -1724,7 +1724,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 250
     },
     {
@@ -1733,7 +1733,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 251
     },
     {
@@ -1742,7 +1742,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 252
     },
     {
@@ -1751,7 +1751,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 253
     },
     {
@@ -1760,7 +1760,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 254
     },
     {
@@ -1769,7 +1769,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 255
     },
     {
@@ -1778,7 +1778,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 256
     },
     {
@@ -1787,7 +1787,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 257
     },
     {
@@ -1796,7 +1796,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 258
     },
     {
@@ -1805,7 +1805,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 259
     },
     {
@@ -1814,7 +1814,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 260
     },
     {
@@ -1823,7 +1823,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 261
     },
     {
@@ -1832,7 +1832,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 262
     },
     {
@@ -1841,7 +1841,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 263
     },
     {
@@ -1850,7 +1850,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 264
     },
     {
@@ -1859,7 +1859,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 265
     },
     {
@@ -1868,7 +1868,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 266
     },
     {
@@ -1877,7 +1877,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 267
     },
     {
@@ -1886,7 +1886,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 268
     },
     {
@@ -1895,7 +1895,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 269
     },
     {
@@ -1904,7 +1904,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 270
     },
     {
@@ -1913,7 +1913,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 271
     },
     {
@@ -1922,7 +1922,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 272
     },
     {
@@ -1931,7 +1931,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 273
     },
     {
@@ -1940,7 +1940,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 274
     },
     {
@@ -1949,7 +1949,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 275
     },
     {
@@ -1958,7 +1958,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 276
     },
     {
@@ -1967,7 +1967,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 277
     },
     {
@@ -1976,7 +1976,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 278
     },
     {
@@ -1985,7 +1985,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 279
     },
     {
@@ -1994,7 +1994,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 280
     },
     {
@@ -2003,7 +2003,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 281
     },
     {
@@ -2012,7 +2012,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 282
     },
     {
@@ -2021,7 +2021,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 283
     },
     {
@@ -2030,7 +2030,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 284
     },
     {
@@ -2039,7 +2039,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 285
     },
     {
@@ -2048,7 +2048,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 286
     },
     {
@@ -2057,7 +2057,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 287
     },
     {
@@ -2066,7 +2066,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 288
     },
     {
@@ -2075,7 +2075,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 289
     },
     {
@@ -2084,7 +2084,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 290
     },
     {
@@ -2093,7 +2093,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 291
     },
     {
@@ -2102,7 +2102,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 292
     },
     {
@@ -2111,7 +2111,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 293
     },
     {
@@ -2120,7 +2120,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 294
     },
     {
@@ -2129,7 +2129,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 295
     },
     {
@@ -2138,7 +2138,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 296
     },
     {
@@ -2147,7 +2147,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 297
     },
     {
@@ -2156,7 +2156,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 298
     },
     {
@@ -2165,7 +2165,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 299
     },
     {
@@ -2174,7 +2174,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 30
     },
     {
@@ -2183,7 +2183,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 31
     },
     {
@@ -2192,7 +2192,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 32
     },
     {
@@ -2201,7 +2201,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 33
     },
     {
@@ -2210,7 +2210,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 34
     },
     {
@@ -2219,7 +2219,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 35
     },
     {
@@ -2228,7 +2228,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 36
     },
     {
@@ -2237,7 +2237,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 37
     },
     {
@@ -2246,7 +2246,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 38
     },
     {
@@ -2255,7 +2255,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 39
     },
     {
@@ -2264,7 +2264,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 310
     },
     {
@@ -2273,7 +2273,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 311
     },
     {
@@ -2282,7 +2282,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 312
     },
     {
@@ -2291,7 +2291,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 313
     },
     {
@@ -2300,7 +2300,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 314
     },
     {
@@ -2309,7 +2309,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 315
     },
     {
@@ -2318,7 +2318,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 316
     },
     {
@@ -2327,7 +2327,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 317
     },
     {
@@ -2336,7 +2336,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 318
     },
     {
@@ -2345,7 +2345,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 319
     },
     {
@@ -2354,7 +2354,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 320
     },
     {
@@ -2363,7 +2363,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 321
     },
     {
@@ -2372,7 +2372,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 322
     },
     {
@@ -2381,7 +2381,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 323
     },
     {
@@ -2390,7 +2390,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 324
     },
     {
@@ -2399,7 +2399,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 325
     },
     {
@@ -2408,7 +2408,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 326
     },
     {
@@ -2417,7 +2417,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 327
     },
     {
@@ -2426,7 +2426,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 328
     },
     {
@@ -2435,7 +2435,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 329
     },
     {
@@ -2444,7 +2444,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 330
     },
     {
@@ -2453,7 +2453,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 331
     },
     {
@@ -2462,7 +2462,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 332
     },
     {
@@ -2471,7 +2471,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 333
     },
     {
@@ -2480,7 +2480,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 334
     },
     {
@@ -2489,7 +2489,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 335
     },
     {
@@ -2498,7 +2498,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 336
     },
     {
@@ -2507,7 +2507,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 337
     },
     {
@@ -2516,7 +2516,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 338
     },
     {
@@ -2525,7 +2525,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 339
     },
     {
@@ -2534,7 +2534,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 340
     },
     {
@@ -2543,7 +2543,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 341
     },
     {
@@ -2552,7 +2552,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 342
     },
     {
@@ -2561,7 +2561,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 343
     },
     {
@@ -2570,7 +2570,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 344
     },
     {
@@ -2579,7 +2579,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 345
     },
     {
@@ -2588,7 +2588,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 346
     },
     {
@@ -2597,7 +2597,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 347
     },
     {
@@ -2606,7 +2606,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 348
     },
     {
@@ -2615,7 +2615,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 349
     },
     {
@@ -2624,7 +2624,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 350
     },
     {
@@ -2633,7 +2633,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 351
     },
     {
@@ -2642,7 +2642,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 352
     },
     {
@@ -2651,7 +2651,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 353
     },
     {
@@ -2660,7 +2660,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 354
     },
     {
@@ -2669,7 +2669,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 355
     },
     {
@@ -2678,7 +2678,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 356
     },
     {
@@ -2687,7 +2687,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 357
     },
     {
@@ -2696,7 +2696,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 358
     },
     {
@@ -2705,7 +2705,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 359
     },
     {
@@ -2714,7 +2714,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 360
     },
     {
@@ -2723,7 +2723,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 361
     },
     {
@@ -2732,7 +2732,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 362
     },
     {
@@ -2741,7 +2741,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 363
     },
     {
@@ -2750,7 +2750,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 364
     },
     {
@@ -2759,7 +2759,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 365
     },
     {
@@ -2768,7 +2768,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 366
     },
     {
@@ -2777,7 +2777,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 367
     },
     {
@@ -2786,7 +2786,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 368
     },
     {
@@ -2795,7 +2795,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 369
     },
     {
@@ -2804,7 +2804,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 370
     },
     {
@@ -2813,7 +2813,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 371
     },
     {
@@ -2822,7 +2822,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 372
     },
     {
@@ -2831,7 +2831,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 373
     },
     {
@@ -2840,7 +2840,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 374
     },
     {
@@ -2849,7 +2849,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 375
     },
     {
@@ -2858,7 +2858,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 376
     },
     {
@@ -2867,7 +2867,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 377
     },
     {
@@ -3029,7 +3029,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 999999,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 398
     },
     {
@@ -3038,7 +3038,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 999999,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 399
     },
     {
@@ -3047,7 +3047,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 999999,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 40
     },
     {
@@ -3056,7 +3056,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 999999,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 41
     },
     {
@@ -3065,7 +3065,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 999999,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 42
     },
     {
@@ -3092,7 +3092,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 50
     },
     {
@@ -3101,7 +3101,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 51
     },
     {
@@ -3110,7 +3110,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 52
     },
     {
@@ -3119,7 +3119,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 53
     },
     {
@@ -3128,7 +3128,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 54
     },
     {
@@ -3137,7 +3137,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 55
     },
     {
@@ -3146,7 +3146,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 56
     },
     {
@@ -3155,7 +3155,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 57
     },
     {
@@ -3164,7 +3164,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 58
     },
     {
@@ -3173,7 +3173,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 59
     },
     {
@@ -3182,7 +3182,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 510
     },
     {
@@ -3191,7 +3191,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 511
     },
     {
@@ -3200,7 +3200,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 512
     },
     {
@@ -3209,7 +3209,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 513
     },
     {
@@ -3218,7 +3218,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 514
     },
     {
@@ -3227,7 +3227,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 515
     },
     {
@@ -3236,7 +3236,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 516
     },
     {
@@ -3245,7 +3245,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 517
     },
     {
@@ -3254,7 +3254,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 518
     },
     {
@@ -3263,7 +3263,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 519
     },
     {
@@ -3272,7 +3272,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 520
     },
     {
@@ -3281,7 +3281,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 521
     },
     {
@@ -3290,7 +3290,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 522
     },
     {
@@ -3299,7 +3299,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 523
     },
     {
@@ -3308,7 +3308,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 524
     },
     {
@@ -3317,7 +3317,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 525
     },
     {
@@ -3326,7 +3326,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 526
     },
     {
@@ -3335,7 +3335,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 527
     },
     {
@@ -3344,7 +3344,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 528
     },
     {
@@ -3353,7 +3353,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 529
     },
     {
@@ -3362,7 +3362,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 530
     },
     {
@@ -3371,7 +3371,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 531
     },
     {
@@ -3380,7 +3380,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 532
     },
     {
@@ -3389,7 +3389,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 533
     },
     {
@@ -3398,7 +3398,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 534
     },
     {
@@ -3407,7 +3407,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 535
     },
     {
@@ -3416,7 +3416,7 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 10,
+        "Weight": 100,
         "ID": 536
     },
     {
