@@ -5,8 +5,8 @@
         "Default_Quantity": 25,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541001
+        "Weight": 10,
+        "ID": 1
     },
     {
         "Name": "STACKABLE_HP",
@@ -15,7 +15,7 @@
         "Maximum_Quantity": 255,
         "Classification": "filler",
         "Weight": 80,
-        "ID": 44966541002
+        "ID": 2
     },
     {
         "Name": "STACKABLE_MP",
@@ -24,7 +24,7 @@
         "Maximum_Quantity": 255,
         "Classification": "filler",
         "Weight": 80,
-        "ID": 44966541003
+        "ID": 3
     },
     {
         "Name": "STACKABLE_EP",
@@ -33,7 +33,7 @@
         "Maximum_Quantity": 255,
         "Classification": "filler",
         "Weight": 80,
-        "ID": 44966541004
+        "ID": 4
     },
     {
         "Name": "STACKABLE_MATK",
@@ -42,7 +42,7 @@
         "Maximum_Quantity": 255,
         "Classification": "filler",
         "Weight": 80,
-        "ID": 44966541005
+        "ID": 5
     },
     {
         "Name": "STACKABLE_RATK",
@@ -51,7 +51,7 @@
         "Maximum_Quantity": 255,
         "Classification": "filler",
         "Weight": 80,
-        "ID": 44966541006
+        "ID": 6
     },
     {
         "Name": "STACKABLE_BAG",
@@ -60,7 +60,7 @@
         "Maximum_Quantity": 255,
         "Classification": "filler",
         "Weight": 150,
-        "ID": 44966541007
+        "ID": 7
     },
     {
         "Name": "STACKABLE_SHARD",
@@ -69,16 +69,16 @@
         "Maximum_Quantity": 255,
         "Classification": "filler",
         "Weight": 60,
-        "ID": 44966541008
+        "ID": 8
     },
     {
         "Name": "I14",
-        "DisplayName": "500 Zennie Pack",
+        "DisplayName": "50 Zennie Pack",
         "Default_Quantity": 591,
         "Maximum_Quantity": 591,
         "Classification": "filler",
         "Weight": 10,
-        "ID": 44966541014
+        "ID": 14
     },
     {
         "Name": "I15",
@@ -86,8 +86,8 @@
         "Default_Quantity": 35,
         "Maximum_Quantity": 70,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541015
+        "Weight": 10,
+        "ID": 15
     },
     {
         "Name": "I16",
@@ -95,8 +95,8 @@
         "Default_Quantity": 90,
         "Maximum_Quantity": 96,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541016
+        "Weight": 10,
+        "ID": 16
     },
     {
         "Name": "I19",
@@ -104,8 +104,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541019
+        "Weight": 10,
+        "ID": 19
     },
     {
         "Name": "I20",
@@ -113,8 +113,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541020
+        "Weight": 10,
+        "ID": 20
     },
     {
         "Name": "ITEM_KNIFE",
@@ -122,8 +122,8 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541022
+        "Weight": 10,
+        "ID": 22
     },
     {
         "Name": "ITEM_ORB",
@@ -131,8 +131,8 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541023
+        "Weight": 10,
+        "ID": 23
     },
     {
         "Name": "ITEM_LINEBOMB",
@@ -140,8 +140,8 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541024
+        "Weight": 10,
+        "ID": 24
     },
     {
         "Name": "ITEM_AREABOMB",
@@ -149,8 +149,8 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541025
+        "Weight": 10,
+        "ID": 25
     },
     {
         "Name": "ITEM_BOMBFUEL",
@@ -158,8 +158,8 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541026
+        "Weight": 10,
+        "ID": 26
     },
     {
         "Name": "ITEM_HIJUMP",
@@ -167,8 +167,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541027
+        "Weight": 10,
+        "ID": 27
     },
     {
         "Name": "ITEM_SPEEDUP",
@@ -176,8 +176,8 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541028
+        "Weight": 10,
+        "ID": 28
     },
     {
         "Name": "ITEM_SLIDE",
@@ -185,8 +185,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541029
+        "Weight": 10,
+        "ID": 29
     },
     {
         "Name": "ITEM_WALLJUMP",
@@ -194,8 +194,8 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541030
+        "Weight": 10,
+        "ID": 30
     },
     {
         "Name": "ITEM_DOUBLEJUMP",
@@ -203,8 +203,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541031
+        "Weight": 10,
+        "ID": 31
     },
     {
         "Name": "ITEM_JETPACK",
@@ -212,8 +212,8 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541032
+        "Weight": 10,
+        "ID": 32
     },
     {
         "Name": "ITEM_WATERMOVEMENT",
@@ -221,8 +221,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541033
+        "Weight": 10,
+        "ID": 33
     },
     {
         "Name": "ITEM_PKBADGE",
@@ -230,8 +230,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 255,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541034
+        "Weight": 10,
+        "ID": 34
     },
     {
         "Name": "ITEM_MASK",
@@ -239,8 +239,8 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541035
+        "Weight": 10,
+        "ID": 35
     },
     {
         "Name": "ITEM_OrbTypeS2",
@@ -248,8 +248,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541036
+        "Weight": 10,
+        "ID": 36
     },
     {
         "Name": "ITEM_OrbTypeS3",
@@ -257,8 +257,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541037
+        "Weight": 10,
+        "ID": 37
     },
     {
         "Name": "ITEM_OrbTypeC2",
@@ -266,8 +266,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541038
+        "Weight": 10,
+        "ID": 38
     },
     {
         "Name": "ITEM_OrbTypeC3",
@@ -275,8 +275,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541039
+        "Weight": 10,
+        "ID": 39
     },
     {
         "Name": "ITEM_AntiDecay",
@@ -284,8 +284,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541040
+        "Weight": 10,
+        "ID": 40
     },
     {
         "Name": "ITEM_BombLengthExtend",
@@ -293,8 +293,8 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541041
+        "Weight": 10,
+        "ID": 41
     },
     {
         "Name": "ITEM_AirDash",
@@ -302,8 +302,8 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541042
+        "Weight": 10,
+        "ID": 42
     },
     {
         "Name": "ITEM_RailPass",
@@ -311,8 +311,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541043
+        "Weight": 10,
+        "ID": 43
     },
     {
         "Name": "ITEM_AirshipPass",
@@ -320,8 +320,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541044
+        "Weight": 10,
+        "ID": 44
     },
     {
         "Name": "ITEM_Royal",
@@ -329,8 +329,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541045
+        "Weight": 10,
+        "ID": 45
     },
     {
         "Name": "ITEM_AntiIce",
@@ -338,8 +338,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541046
+        "Weight": 10,
+        "ID": 46
     },
     {
         "Name": "ITEM_Explorer",
@@ -347,8 +347,8 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 3,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541047
+        "Weight": 10,
+        "ID": 47
     },
     {
         "Name": "ITEM_TempRing",
@@ -356,8 +356,8 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 3,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541048
+        "Weight": 10,
+        "ID": 48
     },
     {
         "Name": "ITEM_BoostSystem",
@@ -365,8 +365,8 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541049
+        "Weight": 10,
+        "ID": 49
     },
     {
         "Name": "ITEM_OrbBoostU",
@@ -374,8 +374,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541050
+        "Weight": 10,
+        "ID": 50
     },
     {
         "Name": "ITEM_OrbBoostD",
@@ -383,8 +383,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541051
+        "Weight": 10,
+        "ID": 51
     },
     {
         "Name": "ITEM_AttackRange",
@@ -392,8 +392,8 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541052
+        "Weight": 10,
+        "ID": 52
     },
     {
         "Name": "ITEM_DodgeShot",
@@ -401,8 +401,8 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541053
+        "Weight": 10,
+        "ID": 53
     },
     {
         "Name": "ITEM_EasyStyle",
@@ -410,8 +410,8 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 3,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541054
+        "Weight": 10,
+        "ID": 54
     },
     {
         "Name": "ITEM_WonderNote",
@@ -419,8 +419,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541056
+        "Weight": 10,
+        "ID": 56
     },
     {
         "Name": "ITEM_RapidShots",
@@ -428,8 +428,8 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 4,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541057
+        "Weight": 10,
+        "ID": 57
     },
     {
         "Name": "ITEM_OrbAmulet",
@@ -437,8 +437,8 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541059
+        "Weight": 10,
+        "ID": 59
     },
     {
         "Name": "ITEM_GoldenGlove",
@@ -446,8 +446,8 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541060
+        "Weight": 10,
+        "ID": 60
     },
     {
         "Name": "ITEM_Alterscope",
@@ -455,8 +455,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541061
+        "Weight": 10,
+        "ID": 61
     },
     {
         "Name": "ITEM_GoldenHands",
@@ -464,8 +464,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541062
+        "Weight": 10,
+        "ID": 62
     },
     {
         "Name": "ITEM_Rotater",
@@ -473,8 +473,8 @@
         "Default_Quantity": 3,
         "Maximum_Quantity": 255,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541063
+        "Weight": 10,
+        "ID": 63
     },
     {
         "Name": "ITEM_AirSlide",
@@ -482,8 +482,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541064
+        "Weight": 10,
+        "ID": 64
     },
     {
         "Name": "ITEM_VenaCharm",
@@ -491,8 +491,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541065
+        "Weight": 10,
+        "ID": 65
     },
     {
         "Name": "ITEM_ZCrystal",
@@ -500,8 +500,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541066
+        "Weight": 10,
+        "ID": 66
     },
     {
         "Name": "QUEST_Flute",
@@ -509,8 +509,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541099
+        "Weight": 10,
+        "ID": 99
     },
     {
         "Name": "QUEST_Memory",
@@ -518,8 +518,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541100
+        "Weight": 10,
+        "ID": 10
     },
     {
         "Name": "QUEST_Compass",
@@ -527,8 +527,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541102
+        "Weight": 10,
+        "ID": 12
     },
     {
         "Name": "QUEST_GHandL",
@@ -536,8 +536,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541106
+        "Weight": 10,
+        "ID": 16
     },
     {
         "Name": "QUEST_GHandR",
@@ -545,8 +545,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541107
+        "Weight": 10,
+        "ID": 17
     },
     {
         "Name": "QUEST_RabiPillow",
@@ -554,8 +554,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541109
+        "Weight": 10,
+        "ID": 19
     },
     {
         "Name": "QUEST_LibraryKey",
@@ -563,8 +563,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541110
+        "Weight": 10,
+        "ID": 110
     },
     {
         "Name": "BADGE_ANTIENERGYBALL",
@@ -572,8 +572,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541120
+        "Weight": 10,
+        "ID": 120
     },
     {
         "Name": "BADGE_BACKSTAB",
@@ -581,8 +581,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541121
+        "Weight": 10,
+        "ID": 121
     },
     {
         "Name": "BADGE_RangeCombo",
@@ -590,8 +590,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541122
+        "Weight": 10,
+        "ID": 122
     },
     {
         "Name": "BADGE_MAXHPUP",
@@ -599,8 +599,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541123
+        "Weight": 10,
+        "ID": 123
     },
     {
         "Name": "BADGE_CELIATYPEBANGLE",
@@ -608,8 +608,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541124
+        "Weight": 10,
+        "ID": 124
     },
     {
         "Name": "BADGE_Normal2AntiHealth",
@@ -617,8 +617,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541125
+        "Weight": 10,
+        "ID": 125
     },
     {
         "Name": "BADGE_RevengeA",
@@ -626,8 +626,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541126
+        "Weight": 10,
+        "ID": 126
     },
     {
         "Name": "BADGE_DodgeWeakGroundUp",
@@ -635,8 +635,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541127
+        "Weight": 10,
+        "ID": 127
     },
     {
         "Name": "BADGE_DodgeWeakAirDown",
@@ -644,8 +644,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541128
+        "Weight": 10,
+        "ID": 128
     },
     {
         "Name": "BADGE_DodgeStrongAirDown",
@@ -653,8 +653,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541130
+        "Weight": 10,
+        "ID": 130
     },
     {
         "Name": "BADGE_DodgeSlide",
@@ -662,8 +662,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541131
+        "Weight": 10,
+        "ID": 131
     },
     {
         "Name": "BADGE_DodgeEPBoost",
@@ -671,8 +671,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541132
+        "Weight": 10,
+        "ID": 132
     },
     {
         "Name": "BADGE_StyleComboAirNormal3A",
@@ -680,8 +680,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541133
+        "Weight": 10,
+        "ID": 133
     },
     {
         "Name": "BADGE_ChangeOrbCharger",
@@ -689,8 +689,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541134
+        "Weight": 10,
+        "ID": 134
     },
     {
         "Name": "BADGE_WallCharger",
@@ -698,8 +698,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541135
+        "Weight": 10,
+        "ID": 135
     },
     {
         "Name": "BADGE_CeliaAShortRangeBurst",
@@ -707,8 +707,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541136
+        "Weight": 10,
+        "ID": 136
     },
     {
         "Name": "BADGE_Lucky7Defend",
@@ -716,8 +716,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541137
+        "Weight": 10,
+        "ID": 137
     },
     {
         "Name": "BADGE_LateCharge",
@@ -725,8 +725,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541138
+        "Weight": 10,
+        "ID": 138
     },
     {
         "Name": "BADGE_AutoAirCombo",
@@ -734,8 +734,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541139
+        "Weight": 10,
+        "ID": 139
     },
     {
         "Name": "BADGE_WeakGroundUpModOneHit",
@@ -743,8 +743,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541140
+        "Weight": 10,
+        "ID": 140
     },
     {
         "Name": "BADGE_GroundNormal4Mod",
@@ -752,8 +752,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541141
+        "Weight": 10,
+        "ID": 141
     },
     {
         "Name": "BADGE_AirComboQuicken",
@@ -761,8 +761,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541142
+        "Weight": 10,
+        "ID": 142
     },
     {
         "Name": "BADGE_SableALongRangeSnipe",
@@ -770,8 +770,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541143
+        "Weight": 10,
+        "ID": 143
     },
     {
         "Name": "BADGE_InvincibilityExtend",
@@ -779,8 +779,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541144
+        "Weight": 10,
+        "ID": 144
     },
     {
         "Name": "BADGE_CommonDropRecover",
@@ -788,8 +788,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541145
+        "Weight": 10,
+        "ID": 145
     },
     {
         "Name": "BADGE_MapDiscoverRecover",
@@ -797,8 +797,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541146
+        "Weight": 10,
+        "ID": 146
     },
     {
         "Name": "BADGE_BaseComboBooster",
@@ -806,8 +806,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541147
+        "Weight": 10,
+        "ID": 147
     },
     {
         "Name": "BADGE_BattleStartCharger",
@@ -815,8 +815,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541148
+        "Weight": 10,
+        "ID": 148
     },
     {
         "Name": "BADGE_BombNormal4Buffer",
@@ -824,8 +824,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541149
+        "Weight": 10,
+        "ID": 149
     },
     {
         "Name": "BADGE_ChargeShotDiscount",
@@ -833,8 +833,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541150
+        "Weight": 10,
+        "ID": 150
     },
     {
         "Name": "BADGE_WeakGroundUpModCombo",
@@ -842,8 +842,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541151
+        "Weight": 10,
+        "ID": 151
     },
     {
         "Name": "BADGE_DodgeCharger",
@@ -851,8 +851,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541152
+        "Weight": 10,
+        "ID": 152
     },
     {
         "Name": "BADGE_StepUpCharge",
@@ -860,8 +860,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541153
+        "Weight": 10,
+        "ID": 153
     },
     {
         "Name": "BADGE_CeliaALongStun",
@@ -869,8 +869,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541154
+        "Weight": 10,
+        "ID": 154
     },
     {
         "Name": "BADGE_DodgeHealthCounter",
@@ -878,8 +878,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541155
+        "Weight": 10,
+        "ID": 155
     },
     {
         "Name": "BADGE_ComboBreakBoost",
@@ -887,8 +887,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541156
+        "Weight": 10,
+        "ID": 156
     },
     {
         "Name": "BADGE_ComboAntiFullHealth",
@@ -896,8 +896,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541157
+        "Weight": 10,
+        "ID": 157
     },
     {
         "Name": "BADGE_WeakAirNormal3ModDamageBoost",
@@ -905,8 +905,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541158
+        "Weight": 10,
+        "ID": 158
     },
     {
         "Name": "BADGE_BackflipSnipe",
@@ -914,8 +914,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541159
+        "Weight": 10,
+        "ID": 159
     },
     {
         "Name": "BADGE_AirComboExtend",
@@ -923,8 +923,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541160
+        "Weight": 10,
+        "ID": 160
     },
     {
         "Name": "BADGE_EnergyDefend",
@@ -932,8 +932,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541161
+        "Weight": 10,
+        "ID": 161
     },
     {
         "Name": "BADGE_QuickMeleeLagA",
@@ -941,8 +941,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541162
+        "Weight": 10,
+        "ID": 162
     },
     {
         "Name": "BADGE_QuickMeleeLagB",
@@ -950,8 +950,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541163
+        "Weight": 10,
+        "ID": 163
     },
     {
         "Name": "BADGE_Normal3HRedCancel",
@@ -959,8 +959,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541164
+        "Weight": 10,
+        "ID": 164
     },
     {
         "Name": "BADGE_ComboTimeExtendA",
@@ -968,8 +968,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541165
+        "Weight": 10,
+        "ID": 165
     },
     {
         "Name": "BADGE_ComboTimeExtendB",
@@ -977,8 +977,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541166
+        "Weight": 10,
+        "ID": 166
     },
     {
         "Name": "BADGE_ComboTimeExtendC",
@@ -986,8 +986,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541167
+        "Weight": 10,
+        "ID": 167
     },
     {
         "Name": "BADGE_ToArmorReducer",
@@ -995,8 +995,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541168
+        "Weight": 10,
+        "ID": 168
     },
     {
         "Name": "BADGE_ComboDamageBoost",
@@ -1004,8 +1004,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541169
+        "Weight": 10,
+        "ID": 169
     },
     {
         "Name": "BADGE_NormalShotWhenChargedShot",
@@ -1013,8 +1013,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541170
+        "Weight": 10,
+        "ID": 170
     },
     {
         "Name": "BADGE_FrameCancel",
@@ -1022,8 +1022,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541171
+        "Weight": 10,
+        "ID": 171
     },
     {
         "Name": "BADGE_LowerThan20",
@@ -1031,8 +1031,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541172
+        "Weight": 10,
+        "ID": 172
     },
     {
         "Name": "BADGE_GroundWeakUpAirExcute",
@@ -1040,8 +1040,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541173
+        "Weight": 10,
+        "ID": 173
     },
     {
         "Name": "BADGE_InstantDodgeMeter",
@@ -1049,8 +1049,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541174
+        "Weight": 10,
+        "ID": 174
     },
     {
         "Name": "BADGE_Normal2MultHit",
@@ -1058,8 +1058,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541175
+        "Weight": 10,
+        "ID": 175
     },
     {
         "Name": "BADGE_MAXHPBIGUP",
@@ -1067,8 +1067,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541176
+        "Weight": 10,
+        "ID": 176
     },
     {
         "Name": "BADGE_ConvertDef2Off",
@@ -1076,8 +1076,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541177
+        "Weight": 10,
+        "ID": 177
     },
     {
         "Name": "BADGE_ConvertOff2Def",
@@ -1085,8 +1085,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541178
+        "Weight": 10,
+        "ID": 178
     },
     {
         "Name": "BADGE_ComboDodgeMeter",
@@ -1094,8 +1094,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541179
+        "Weight": 10,
+        "ID": 179
     },
     {
         "Name": "BADGE_BreakTimeExtend",
@@ -1103,8 +1103,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541180
+        "Weight": 10,
+        "ID": 180
     },
     {
         "Name": "BADGE_BreakDamageBoost",
@@ -1112,8 +1112,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541181
+        "Weight": 10,
+        "ID": 181
     },
     {
         "Name": "BADGE_BreakRangeChaser",
@@ -1121,8 +1121,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541182
+        "Weight": 10,
+        "ID": 182
     },
     {
         "Name": "BADGE_ComboSaver",
@@ -1130,8 +1130,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541183
+        "Weight": 10,
+        "ID": 183
     },
     {
         "Name": "BADGE_1HealthTypeA",
@@ -1139,8 +1139,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541184
+        "Weight": 10,
+        "ID": 184
     },
     {
         "Name": "BADGE_EPCombo",
@@ -1148,8 +1148,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541185
+        "Weight": 10,
+        "ID": 185
     },
     {
         "Name": "BADGE_SimpleBreak",
@@ -1157,8 +1157,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541186
+        "Weight": 10,
+        "ID": 186
     },
     {
         "Name": "BADGE_QuickDropExtendA",
@@ -1166,8 +1166,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541187
+        "Weight": 10,
+        "ID": 187
     },
     {
         "Name": "BADGE_QuickDropExtendB",
@@ -1175,8 +1175,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541188
+        "Weight": 10,
+        "ID": 188
     },
     {
         "Name": "BADGE_QuickDropDouble",
@@ -1184,8 +1184,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541189
+        "Weight": 10,
+        "ID": 189
     },
     {
         "Name": "BADGE_CrystalAbsorberS",
@@ -1193,8 +1193,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541190
+        "Weight": 10,
+        "ID": 190
     },
     {
         "Name": "BADGE_CrystalAbsorberC",
@@ -1202,8 +1202,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541191
+        "Weight": 10,
+        "ID": 191
     },
     {
         "Name": "BADGE_GroundNormalComboSpeedup",
@@ -1211,8 +1211,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541192
+        "Weight": 10,
+        "ID": 192
     },
     {
         "Name": "BADGE_AirNormalComboSpeedup",
@@ -1220,8 +1220,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541193
+        "Weight": 10,
+        "ID": 193
     },
     {
         "Name": "BADGE_DoubleNormalComboSpeedup",
@@ -1229,8 +1229,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541194
+        "Weight": 10,
+        "ID": 194
     },
     {
         "Name": "BADGE_NormalShotReducerA",
@@ -1238,8 +1238,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541195
+        "Weight": 10,
+        "ID": 195
     },
     {
         "Name": "BADGE_NormalShotReducerB",
@@ -1247,8 +1247,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541196
+        "Weight": 10,
+        "ID": 196
     },
     {
         "Name": "BADGE_QuickBomber",
@@ -1256,8 +1256,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541197
+        "Weight": 10,
+        "ID": 197
     },
     {
         "Name": "BADGE_Normal3HModStabA",
@@ -1265,8 +1265,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541198
+        "Weight": 10,
+        "ID": 198
     },
     {
         "Name": "BADGE_Normal3HModStabB",
@@ -1274,8 +1274,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541199
+        "Weight": 10,
+        "ID": 199
     },
     {
         "Name": "BADGE_WeakAirDownFreqUpA",
@@ -1283,8 +1283,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541201
+        "Weight": 10,
+        "ID": 21
     },
     {
         "Name": "BADGE_WeakAirDownFreqUpB",
@@ -1292,8 +1292,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541202
+        "Weight": 10,
+        "ID": 22
     },
     {
         "Name": "BADGE_AreaBombThrower",
@@ -1301,8 +1301,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541203
+        "Weight": 10,
+        "ID": 23
     },
     {
         "Name": "BADGE_StyleComboAirDashA",
@@ -1310,8 +1310,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541204
+        "Weight": 10,
+        "ID": 24
     },
     {
         "Name": "BADGE_DoubleDispelLineBombHigh",
@@ -1319,8 +1319,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541205
+        "Weight": 10,
+        "ID": 25
     },
     {
         "Name": "BADGE_DoubleDispelLineBombLow",
@@ -1328,8 +1328,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541206
+        "Weight": 10,
+        "ID": 26
     },
     {
         "Name": "BADGE_StyleComboAirDashS",
@@ -1337,8 +1337,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541207
+        "Weight": 10,
+        "ID": 27
     },
     {
         "Name": "BADGE_StyleComboHeavyGroundFrontA",
@@ -1346,8 +1346,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541208
+        "Weight": 10,
+        "ID": 28
     },
     {
         "Name": "BADGE_GroundBombQuickExcute",
@@ -1355,8 +1355,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541209
+        "Weight": 10,
+        "ID": 29
     },
     {
         "Name": "BADGE_StyleComboNormal4HAAA",
@@ -1364,8 +1364,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541210
+        "Weight": 10,
+        "ID": 210
     },
     {
         "Name": "BADGE_StyleComboSlidingS",
@@ -1373,8 +1373,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541211
+        "Weight": 10,
+        "ID": 211
     },
     {
         "Name": "BADGE_StyleComboBackflipA",
@@ -1382,8 +1382,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541212
+        "Weight": 10,
+        "ID": 212
     },
     {
         "Name": "BADGE_StyleComboPassiveA",
@@ -1391,8 +1391,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541213
+        "Weight": 10,
+        "ID": 213
     },
     {
         "Name": "BADGE_StyleComboPassiveS",
@@ -1400,8 +1400,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541214
+        "Weight": 10,
+        "ID": 214
     },
     {
         "Name": "BADGE_StyleComboPassiveMAX",
@@ -1409,8 +1409,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541215
+        "Weight": 10,
+        "ID": 215
     },
     {
         "Name": "BADGE_StrongFrontEnhance",
@@ -1418,8 +1418,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541216
+        "Weight": 10,
+        "ID": 216
     },
     {
         "Name": "BADGE_Unlucky7",
@@ -1427,8 +1427,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541217
+        "Weight": 10,
+        "ID": 217
     },
     {
         "Name": "BADGE_BoostMeleeOffense",
@@ -1436,8 +1436,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541218
+        "Weight": 10,
+        "ID": 218
     },
     {
         "Name": "BADGE_Cursed6",
@@ -1445,8 +1445,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541219
+        "Weight": 10,
+        "ID": 219
     },
     {
         "Name": "BADGE_BoostCharging",
@@ -1454,8 +1454,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541220
+        "Weight": 10,
+        "ID": 220
     },
     {
         "Name": "BADGE_PerfectCharge",
@@ -1463,8 +1463,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541221
+        "Weight": 10,
+        "ID": 221
     },
     {
         "Name": "BADGE_StyleCharge",
@@ -1472,8 +1472,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541222
+        "Weight": 10,
+        "ID": 222
     },
     {
         "Name": "BADGE_ComboCharge",
@@ -1481,8 +1481,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541223
+        "Weight": 10,
+        "ID": 223
     },
     {
         "Name": "BADGE_HealCharge",
@@ -1490,8 +1490,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541224
+        "Weight": 10,
+        "ID": 224
     },
     {
         "Name": "BADGE_BreakHeal",
@@ -1499,8 +1499,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541225
+        "Weight": 10,
+        "ID": 225
     },
     {
         "Name": "BADGE_SableBNormalShotDebuff",
@@ -1508,8 +1508,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541226
+        "Weight": 10,
+        "ID": 226
     },
     {
         "Name": "BADGE_BoostDodgeAdd",
@@ -1517,8 +1517,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541227
+        "Weight": 10,
+        "ID": 227
     },
     {
         "Name": "BADGE_DodgeMeterBoost",
@@ -1526,8 +1526,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541228
+        "Weight": 10,
+        "ID": 228
     },
     {
         "Name": "BADGE_StyleComboAddDamageA",
@@ -1535,8 +1535,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541229
+        "Weight": 10,
+        "ID": 229
     },
     {
         "Name": "BADGE_StyleComboReduceDamageS",
@@ -1544,8 +1544,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541230
+        "Weight": 10,
+        "ID": 230
     },
     {
         "Name": "BADGE_DebuffCounter",
@@ -1553,8 +1553,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541231
+        "Weight": 10,
+        "ID": 231
     },
     {
         "Name": "BADGE_CrystalIncrease",
@@ -1562,8 +1562,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541232
+        "Weight": 10,
+        "ID": 232
     },
     {
         "Name": "BADGE_Recover3",
@@ -1571,8 +1571,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541233
+        "Weight": 10,
+        "ID": 233
     },
     {
         "Name": "BADGE_AntiAir",
@@ -1580,8 +1580,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541234
+        "Weight": 10,
+        "ID": 234
     },
     {
         "Name": "BADGE_Cannon",
@@ -1589,8 +1589,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541235
+        "Weight": 10,
+        "ID": 235
     },
     {
         "Name": "BADGE_AllMeleeSpeedUp",
@@ -1598,8 +1598,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541236
+        "Weight": 10,
+        "ID": 236
     },
     {
         "Name": "BADGE_Instant1",
@@ -1607,8 +1607,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541237
+        "Weight": 10,
+        "ID": 237
     },
     {
         "Name": "BADGE_AutoDodge",
@@ -1616,8 +1616,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541238
+        "Weight": 10,
+        "ID": 238
     },
     {
         "Name": "BADGE_BuffRush",
@@ -1625,8 +1625,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541239
+        "Weight": 10,
+        "ID": 239
     },
     {
         "Name": "BADGE_DodgeChargedDodgeShot",
@@ -1634,8 +1634,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541240
+        "Weight": 10,
+        "ID": 240
     },
     {
         "Name": "BADGE_BoostShieldAbsorb",
@@ -1643,8 +1643,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541241
+        "Weight": 10,
+        "ID": 241
     },
     {
         "Name": "BADGE_Hurt2Punisher",
@@ -1652,8 +1652,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541242
+        "Weight": 10,
+        "ID": 242
     },
     {
         "Name": "BADGE_SupportShot",
@@ -1661,8 +1661,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541243
+        "Weight": 10,
+        "ID": 243
     },
     {
         "Name": "BADGE_CeliaTypeBAmount",
@@ -1670,8 +1670,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541244
+        "Weight": 10,
+        "ID": 244
     },
     {
         "Name": "BADGE_DoubleJumpStrike",
@@ -1679,8 +1679,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541245
+        "Weight": 10,
+        "ID": 245
     },
     {
         "Name": "BADGE_QuickMPRegainA",
@@ -1688,8 +1688,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541246
+        "Weight": 10,
+        "ID": 246
     },
     {
         "Name": "BADGE_QuickMPRegainB",
@@ -1697,8 +1697,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541247
+        "Weight": 10,
+        "ID": 247
     },
     {
         "Name": "BADGE_PerfectCost",
@@ -1706,8 +1706,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541248
+        "Weight": 10,
+        "ID": 248
     },
     {
         "Name": "BADGE_BoostTimeExtend",
@@ -1715,8 +1715,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541249
+        "Weight": 10,
+        "ID": 249
     },
     {
         "Name": "BADGE_BackflipMultiHit",
@@ -1724,8 +1724,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541250
+        "Weight": 10,
+        "ID": 250
     },
     {
         "Name": "BADGE_DamageToMaxHP",
@@ -1733,8 +1733,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541251
+        "Weight": 10,
+        "ID": 251
     },
     {
         "Name": "BADGE_FallDamageReduce",
@@ -1742,8 +1742,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541252
+        "Weight": 10,
+        "ID": 252
     },
     {
         "Name": "BADGE_DoubleGroundNormal3N1",
@@ -1751,8 +1751,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541253
+        "Weight": 10,
+        "ID": 253
     },
     {
         "Name": "BADGE_DoubleGroundNormal3N2",
@@ -1760,8 +1760,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541254
+        "Weight": 10,
+        "ID": 254
     },
     {
         "Name": "BADGE_1HealthTypeB",
@@ -1769,8 +1769,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541255
+        "Weight": 10,
+        "ID": 255
     },
     {
         "Name": "BADGE_1HealthTypeC",
@@ -1778,8 +1778,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541256
+        "Weight": 10,
+        "ID": 256
     },
     {
         "Name": "BADGE_StraightCost",
@@ -1787,8 +1787,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541257
+        "Weight": 10,
+        "ID": 257
     },
     {
         "Name": "BADGE_HitMP",
@@ -1796,8 +1796,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541258
+        "Weight": 10,
+        "ID": 258
     },
     {
         "Name": "BADGE_1HealthTypeD",
@@ -1805,8 +1805,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541259
+        "Weight": 10,
+        "ID": 259
     },
     {
         "Name": "BADGE_RapidShotsEnhance",
@@ -1814,8 +1814,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541260
+        "Weight": 10,
+        "ID": 260
     },
     {
         "Name": "BADGE_MAXHPCost",
@@ -1823,8 +1823,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541261
+        "Weight": 10,
+        "ID": 261
     },
     {
         "Name": "BADGE_SableAHitIncrease",
@@ -1832,8 +1832,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541262
+        "Weight": 10,
+        "ID": 262
     },
     {
         "Name": "BADGE_CeliaASlowShot",
@@ -1841,8 +1841,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541263
+        "Weight": 10,
+        "ID": 263
     },
     {
         "Name": "BADGE_SableBReturnStyle",
@@ -1850,8 +1850,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541264
+        "Weight": 10,
+        "ID": 264
     },
     {
         "Name": "BADGE_SableCBigExplode",
@@ -1859,8 +1859,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541265
+        "Weight": 10,
+        "ID": 265
     },
     {
         "Name": "BADGE_HP2MP",
@@ -1868,8 +1868,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541266
+        "Weight": 10,
+        "ID": 266
     },
     {
         "Name": "BADGE_MAXHP2MP",
@@ -1877,8 +1877,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541267
+        "Weight": 10,
+        "ID": 267
     },
     {
         "Name": "BADGE_RythemCharge",
@@ -1886,8 +1886,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541268
+        "Weight": 10,
+        "ID": 268
     },
     {
         "Name": "BADGE_NonChargeShotRapid",
@@ -1895,8 +1895,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541269
+        "Weight": 10,
+        "ID": 269
     },
     {
         "Name": "BADGE_GoldenLuck",
@@ -1904,8 +1904,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541270
+        "Weight": 10,
+        "ID": 270
     },
     {
         "Name": "BADGE_SableALastHitEnhance",
@@ -1913,8 +1913,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541271
+        "Weight": 10,
+        "ID": 271
     },
     {
         "Name": "BADGE_CeliaCShotIncrease",
@@ -1922,8 +1922,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541272
+        "Weight": 10,
+        "ID": 272
     },
     {
         "Name": "BADGE_CeliaCShotAllDirection",
@@ -1931,8 +1931,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541273
+        "Weight": 10,
+        "ID": 273
     },
     {
         "Name": "BADGE_SableCSaver",
@@ -1940,8 +1940,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541274
+        "Weight": 10,
+        "ID": 274
     },
     {
         "Name": "BADGE_MAXHP2MAXMP",
@@ -1949,17 +1949,17 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541275
+        "Weight": 10,
+        "ID": 275
     },
     {
-        "Name": "BADGE_100COMBO",
+        "Name": "BADGE_10COMBO",
         "DisplayName": "The Untamed",
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541276
+        "Weight": 10,
+        "ID": 276
     },
     {
         "Name": "BADGE_120CHARGE",
@@ -1967,8 +1967,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541277
+        "Weight": 10,
+        "ID": 277
     },
     {
         "Name": "BADGE_NormalSupportShot",
@@ -1976,8 +1976,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541278
+        "Weight": 10,
+        "ID": 278
     },
     {
         "Name": "BADGE_AutoChargeCombo",
@@ -1985,8 +1985,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541279
+        "Weight": 10,
+        "ID": 279
     },
     {
         "Name": "BADGE_Lucky7DamageReduce",
@@ -1994,8 +1994,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541280
+        "Weight": 10,
+        "ID": 280
     },
     {
         "Name": "BADGE_8thDamageHeal",
@@ -2003,8 +2003,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541281
+        "Weight": 10,
+        "ID": 281
     },
     {
         "Name": "BADGE_SuperKnockBomb",
@@ -2012,8 +2012,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541282
+        "Weight": 10,
+        "ID": 282
     },
     {
         "Name": "BADGE_LateAttack",
@@ -2021,8 +2021,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541283
+        "Weight": 10,
+        "ID": 283
     },
     {
         "Name": "BADGE_StrongFrontRapid",
@@ -2030,8 +2030,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541284
+        "Weight": 10,
+        "ID": 284
     },
     {
         "Name": "BADGE_StrongFrontFly",
@@ -2039,8 +2039,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541285
+        "Weight": 10,
+        "ID": 285
     },
     {
         "Name": "BADGE_EPMeleeReduce",
@@ -2048,8 +2048,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541286
+        "Weight": 10,
+        "ID": 286
     },
     {
         "Name": "BADGE_EasyDodge",
@@ -2057,8 +2057,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541287
+        "Weight": 10,
+        "ID": 287
     },
     {
         "Name": "BADGE_JetpackMP",
@@ -2066,8 +2066,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541288
+        "Weight": 10,
+        "ID": 288
     },
     {
         "Name": "BADGE_Lucky7C",
@@ -2075,8 +2075,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541289
+        "Weight": 10,
+        "ID": 289
     },
     {
         "Name": "BADGE_KnockConvert",
@@ -2084,8 +2084,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541290
+        "Weight": 10,
+        "ID": 290
     },
     {
         "Name": "BADGE_ChargeHeal",
@@ -2093,8 +2093,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541291
+        "Weight": 10,
+        "ID": 291
     },
     {
         "Name": "BADGE_BombCharge",
@@ -2102,8 +2102,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541292
+        "Weight": 10,
+        "ID": 292
     },
     {
         "Name": "BADGE_MAXMPCost",
@@ -2111,8 +2111,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541293
+        "Weight": 10,
+        "ID": 293
     },
     {
         "Name": "BADGE_MPAllBurst",
@@ -2120,8 +2120,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541294
+        "Weight": 10,
+        "ID": 294
     },
     {
         "Name": "BADGE_AirCombo2Hits",
@@ -2129,8 +2129,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541295
+        "Weight": 10,
+        "ID": 295
     },
     {
         "Name": "BADGE_StrongAirUpDebuff",
@@ -2138,8 +2138,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541296
+        "Weight": 10,
+        "ID": 296
     },
     {
         "Name": "BADGE_Amulet10",
@@ -2147,8 +2147,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541297
+        "Weight": 10,
+        "ID": 297
     },
     {
         "Name": "BADGE_AutoBombChain",
@@ -2156,8 +2156,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541298
+        "Weight": 10,
+        "ID": 298
     },
     {
         "Name": "BADGE_PrepDef",
@@ -2165,8 +2165,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541299
+        "Weight": 10,
+        "ID": 299
     },
     {
         "Name": "BADGE_SuperArmor2",
@@ -2174,8 +2174,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541300
+        "Weight": 10,
+        "ID": 30
     },
     {
         "Name": "BADGE_BOnceHeal",
@@ -2183,8 +2183,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541301
+        "Weight": 10,
+        "ID": 31
     },
     {
         "Name": "BADGE_AmuletMPCharge",
@@ -2192,8 +2192,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541302
+        "Weight": 10,
+        "ID": 32
     },
     {
         "Name": "BADGE_AutoHealing",
@@ -2201,8 +2201,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541303
+        "Weight": 10,
+        "ID": 33
     },
     {
         "Name": "BADGE_ChargeIntoEnemy",
@@ -2210,8 +2210,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541304
+        "Weight": 10,
+        "ID": 34
     },
     {
         "Name": "BADGE_GStrongUpBulletCancelS",
@@ -2219,8 +2219,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541305
+        "Weight": 10,
+        "ID": 35
     },
     {
         "Name": "BADGE_GStrongUpBulletCancelC",
@@ -2228,8 +2228,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541306
+        "Weight": 10,
+        "ID": 36
     },
     {
         "Name": "BADGE_HitCountChargeRate",
@@ -2237,8 +2237,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541307
+        "Weight": 10,
+        "ID": 37
     },
     {
         "Name": "BADGE_SafeItemUse",
@@ -2246,8 +2246,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541308
+        "Weight": 10,
+        "ID": 38
     },
     {
         "Name": "BADGE_4Knifes",
@@ -2255,8 +2255,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541309
+        "Weight": 10,
+        "ID": 39
     },
     {
         "Name": "BADGE_GStrongUpWidth",
@@ -2264,8 +2264,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541310
+        "Weight": 10,
+        "ID": 310
     },
     {
         "Name": "BADGE_KnockHitEnhance",
@@ -2273,8 +2273,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541311
+        "Weight": 10,
+        "ID": 311
     },
     {
         "Name": "BADGE_PowerDrop",
@@ -2282,8 +2282,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541312
+        "Weight": 10,
+        "ID": 312
     },
     {
         "Name": "BADGE_CrystalAttack",
@@ -2291,8 +2291,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541313
+        "Weight": 10,
+        "ID": 313
     },
     {
         "Name": "BADGE_SlideThenStrongUp",
@@ -2300,8 +2300,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541314
+        "Weight": 10,
+        "ID": 314
     },
     {
         "Name": "BADGE_LaserRes",
@@ -2309,8 +2309,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541315
+        "Weight": 10,
+        "ID": 315
     },
     {
         "Name": "BADGE_ConsumeableCharge",
@@ -2318,8 +2318,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541316
+        "Weight": 10,
+        "ID": 316
     },
     {
         "Name": "BADGE_GroundNormalComboAutoSpeedup",
@@ -2327,8 +2327,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541317
+        "Weight": 10,
+        "ID": 317
     },
     {
         "Name": "BADGE_CrystalBulletCancel",
@@ -2336,8 +2336,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541318
+        "Weight": 10,
+        "ID": 318
     },
     {
         "Name": "BADGE_AntiGround",
@@ -2345,8 +2345,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541319
+        "Weight": 10,
+        "ID": 319
     },
     {
         "Name": "BADGE_EnemyDefeatExp",
@@ -2354,8 +2354,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541320
+        "Weight": 10,
+        "ID": 320
     },
     {
         "Name": "BADGE_SuperArmor33",
@@ -2363,8 +2363,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541321
+        "Weight": 10,
+        "ID": 321
     },
     {
         "Name": "BADGE_ArrowDamageUp",
@@ -2372,8 +2372,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541322
+        "Weight": 10,
+        "ID": 322
     },
     {
         "Name": "BADGE_StyleComboBackImageS",
@@ -2381,8 +2381,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541323
+        "Weight": 10,
+        "ID": 323
     },
     {
         "Name": "BADGE_BadgeCDReduce",
@@ -2390,8 +2390,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541324
+        "Weight": 10,
+        "ID": 324
     },
     {
         "Name": "BADGE_HP2Damage6",
@@ -2399,8 +2399,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541325
+        "Weight": 10,
+        "ID": 325
     },
     {
         "Name": "BADGE_BoostQuickErase",
@@ -2408,8 +2408,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541326
+        "Weight": 10,
+        "ID": 326
     },
     {
         "Name": "BADGE_CrystalHeal",
@@ -2417,8 +2417,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541327
+        "Weight": 10,
+        "ID": 327
     },
     {
         "Name": "BADGE_BoostEnhance",
@@ -2426,8 +2426,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541328
+        "Weight": 10,
+        "ID": 328
     },
     {
         "Name": "BADGE_BoostHitCount",
@@ -2435,8 +2435,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541329
+        "Weight": 10,
+        "ID": 329
     },
     {
         "Name": "BADGE_AmuletQuicken",
@@ -2444,8 +2444,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541330
+        "Weight": 10,
+        "ID": 330
     },
     {
         "Name": "BADGE_CrystalGen",
@@ -2453,8 +2453,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541331
+        "Weight": 10,
+        "ID": 331
     },
     {
         "Name": "BADGE_RevengeB",
@@ -2462,8 +2462,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541332
+        "Weight": 10,
+        "ID": 332
     },
     {
         "Name": "BADGE_PurchaseBadgeCost",
@@ -2471,8 +2471,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541333
+        "Weight": 10,
+        "ID": 333
     },
     {
         "Name": "BADGE_CraftBadgeCost",
@@ -2480,8 +2480,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541334
+        "Weight": 10,
+        "ID": 334
     },
     {
         "Name": "BADGE_RememberBrutalForce",
@@ -2489,8 +2489,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541335
+        "Weight": 10,
+        "ID": 335
     },
     {
         "Name": "BADGE_GroundNormalCombo4AltDmg",
@@ -2498,8 +2498,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541336
+        "Weight": 10,
+        "ID": 336
     },
     {
         "Name": "BADGE_DashFlashInv",
@@ -2507,8 +2507,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541337
+        "Weight": 10,
+        "ID": 337
     },
     {
         "Name": "BADGE_UpperDoubleHitAfterOutline",
@@ -2516,8 +2516,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541338
+        "Weight": 10,
+        "ID": 338
     },
     {
         "Name": "BADGE_BoostSizeIncrease",
@@ -2525,8 +2525,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541339
+        "Weight": 10,
+        "ID": 339
     },
     {
         "Name": "BADGE_BoostCostCut",
@@ -2534,8 +2534,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541340
+        "Weight": 10,
+        "ID": 340
     },
     {
         "Name": "BADGE_AmuletDouble",
@@ -2543,8 +2543,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541341
+        "Weight": 10,
+        "ID": 341
     },
     {
         "Name": "BADGE_ComboStyleDamageUp",
@@ -2552,8 +2552,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541342
+        "Weight": 10,
+        "ID": 342
     },
     {
         "Name": "BADGE_FasterTeviStrongGroundUp",
@@ -2561,8 +2561,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541343
+        "Weight": 10,
+        "ID": 343
     },
     {
         "Name": "BADGE_BounceTeviStrongAirUp",
@@ -2570,8 +2570,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541344
+        "Weight": 10,
+        "ID": 344
     },
     {
         "Name": "BADGE_UpperHigh",
@@ -2579,8 +2579,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541345
+        "Weight": 10,
+        "ID": 345
     },
     {
         "Name": "BADGE_DoubleAirDash",
@@ -2588,8 +2588,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541346
+        "Weight": 10,
+        "ID": 346
     },
     {
         "Name": "BADGE_StyleComboWeakGroundUpA",
@@ -2597,8 +2597,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541347
+        "Weight": 10,
+        "ID": 347
     },
     {
         "Name": "BADGE_StyleComboNormal3H",
@@ -2606,8 +2606,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541348
+        "Weight": 10,
+        "ID": 348
     },
     {
         "Name": "BADGE_StyleComboNormal1QuickFar",
@@ -2615,8 +2615,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541349
+        "Weight": 10,
+        "ID": 349
     },
     {
         "Name": "BADGE_SlideHalt",
@@ -2624,8 +2624,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541350
+        "Weight": 10,
+        "ID": 350
     },
     {
         "Name": "BADGE_BossPassing",
@@ -2633,8 +2633,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541351
+        "Weight": 10,
+        "ID": 351
     },
     {
         "Name": "BADGE_StyleComboBackflipBomb",
@@ -2642,8 +2642,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541352
+        "Weight": 10,
+        "ID": 352
     },
     {
         "Name": "BADGE_StyleComboNewAttack",
@@ -2651,8 +2651,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541353
+        "Weight": 10,
+        "ID": 353
     },
     {
         "Name": "BADGE_WeakAirDownRotate",
@@ -2660,8 +2660,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541354
+        "Weight": 10,
+        "ID": 354
     },
     {
         "Name": "BADGE_DoubleJumpAttack",
@@ -2669,8 +2669,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541355
+        "Weight": 10,
+        "ID": 355
     },
     {
         "Name": "BADGE_EarlyKnockRecover",
@@ -2678,8 +2678,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541356
+        "Weight": 10,
+        "ID": 356
     },
     {
         "Name": "BADGE_BombRecoverDebuff",
@@ -2687,8 +2687,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541357
+        "Weight": 10,
+        "ID": 357
     },
     {
         "Name": "BADGE_BombDispelDebuff",
@@ -2696,8 +2696,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541358
+        "Weight": 10,
+        "ID": 358
     },
     {
         "Name": "BADGE_FreeFoodRefill",
@@ -2705,8 +2705,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541359
+        "Weight": 10,
+        "ID": 359
     },
     {
         "Name": "BADGE_SuperFrameCancel",
@@ -2714,8 +2714,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541360
+        "Weight": 10,
+        "ID": 360
     },
     {
         "Name": "BADGE_AutoFoodCraft",
@@ -2723,8 +2723,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541361
+        "Weight": 10,
+        "ID": 361
     },
     {
         "Name": "BADGE_AutoFoodUse",
@@ -2732,8 +2732,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541362
+        "Weight": 10,
+        "ID": 362
     },
     {
         "Name": "BADGE_AutoCombo",
@@ -2741,8 +2741,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541363
+        "Weight": 10,
+        "ID": 363
     },
     {
         "Name": "BADGE_GroundNormalCombo4AltTiming",
@@ -2750,8 +2750,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541364
+        "Weight": 10,
+        "ID": 364
     },
     {
         "Name": "BADGE_TauntThink",
@@ -2759,8 +2759,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541365
+        "Weight": 10,
+        "ID": 365
     },
     {
         "Name": "BADGE_TauntKnife",
@@ -2768,8 +2768,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541366
+        "Weight": 10,
+        "ID": 366
     },
     {
         "Name": "BADGE_TauntPhoto",
@@ -2777,8 +2777,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541367
+        "Weight": 10,
+        "ID": 367
     },
     {
         "Name": "BADGE_TauntStare",
@@ -2786,8 +2786,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541368
+        "Weight": 10,
+        "ID": 368
     },
     {
         "Name": "BADGE_TauntYawn",
@@ -2795,8 +2795,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541369
+        "Weight": 10,
+        "ID": 369
     },
     {
         "Name": "BADGE_TauntSit",
@@ -2804,8 +2804,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541370
+        "Weight": 10,
+        "ID": 370
     },
     {
         "Name": "BADGE_DominantEffectDownA",
@@ -2813,8 +2813,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541371
+        "Weight": 10,
+        "ID": 371
     },
     {
         "Name": "BADGE_DominantEffectDownB",
@@ -2822,8 +2822,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541372
+        "Weight": 10,
+        "ID": 372
     },
     {
         "Name": "BADGE_ArmorCritCrit",
@@ -2831,8 +2831,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541373
+        "Weight": 10,
+        "ID": 373
     },
     {
         "Name": "BADGE_BoostFullOffense",
@@ -2840,8 +2840,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541374
+        "Weight": 10,
+        "ID": 374
     },
     {
         "Name": "BADGE_RangeBreak",
@@ -2849,8 +2849,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "filler",
-        "Weight": 100,
-        "ID": 44966541375
+        "Weight": 10,
+        "ID": 375
     },
     {
         "Name": "BADGE_AntiAirPlat",
@@ -2858,8 +2858,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541376
+        "Weight": 10,
+        "ID": 376
     },
     {
         "Name": "BADGE_AutoPilot",
@@ -2867,8 +2867,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "useful",
-        "Weight": 100,
-        "ID": 44966541377
+        "Weight": 10,
+        "ID": 377
     },
     {
         "Name": "Useable_CocoBall",
@@ -2877,7 +2877,7 @@
         "Maximum_Quantity": 999999,
         "Classification": "filler",
         "Weight": 20,
-        "ID": 44966541380
+        "ID": 380
     },
     {
         "Name": "Useable_Puff",
@@ -2886,7 +2886,7 @@
         "Maximum_Quantity": 999999,
         "Classification": "filler",
         "Weight": 20,
-        "ID": 44966541381
+        "ID": 381
     },
     {
         "Name": "Useable_Lollipop",
@@ -2895,7 +2895,7 @@
         "Maximum_Quantity": 999999,
         "Classification": "filler",
         "Weight": 20,
-        "ID": 44966541382
+        "ID": 382
     },
     {
         "Name": "Useable_EnergyDrink",
@@ -2904,7 +2904,7 @@
         "Maximum_Quantity": 999999,
         "Classification": "filler",
         "Weight": 20,
-        "ID": 44966541383
+        "ID": 383
     },
     {
         "Name": "Useable_MintIceCream",
@@ -2913,7 +2913,7 @@
         "Maximum_Quantity": 999999,
         "Classification": "filler",
         "Weight": 20,
-        "ID": 44966541384
+        "ID": 384
     },
     {
         "Name": "Useable_Donut",
@@ -2922,7 +2922,7 @@
         "Maximum_Quantity": 999999,
         "Classification": "filler",
         "Weight": 20,
-        "ID": 44966541385
+        "ID": 385
     },
     {
         "Name": "Useable_VoodooPie",
@@ -2931,7 +2931,7 @@
         "Maximum_Quantity": 999999,
         "Classification": "filler",
         "Weight": 20,
-        "ID": 44966541386
+        "ID": 386
     },
     {
         "Name": "Useable_RumiCake",
@@ -2940,7 +2940,7 @@
         "Maximum_Quantity": 999999,
         "Classification": "filler",
         "Weight": 20,
-        "ID": 44966541387
+        "ID": 387
     },
     {
         "Name": "Useable_MilkTea",
@@ -2949,7 +2949,7 @@
         "Maximum_Quantity": 999999,
         "Classification": "filler",
         "Weight": 20,
-        "ID": 44966541388
+        "ID": 388
     },
     {
         "Name": "Useable_WaffleWonderTemp",
@@ -2958,7 +2958,7 @@
         "Maximum_Quantity": 999999,
         "Classification": "filler",
         "Weight": 20,
-        "ID": 44966541389
+        "ID": 389
     },
     {
         "Name": "Useable_Mysterious",
@@ -2967,7 +2967,7 @@
         "Maximum_Quantity": 999999,
         "Classification": "filler",
         "Weight": 20,
-        "ID": 44966541390
+        "ID": 390
     },
     {
         "Name": "Useable_WaffleAHoneycloud",
@@ -2976,7 +2976,7 @@
         "Maximum_Quantity": 999999,
         "Classification": "filler",
         "Weight": 20,
-        "ID": 44966541391
+        "ID": 391
     },
     {
         "Name": "Useable_WaffleBMeringue",
@@ -2985,7 +2985,7 @@
         "Maximum_Quantity": 999999,
         "Classification": "filler",
         "Weight": 20,
-        "ID": 44966541392
+        "ID": 392
     },
     {
         "Name": "Useable_WaffleCMorning",
@@ -2994,7 +2994,7 @@
         "Maximum_Quantity": 999999,
         "Classification": "filler",
         "Weight": 20,
-        "ID": 44966541393
+        "ID": 393
     },
     {
         "Name": "Useable_WaffleDJellydrop",
@@ -3003,7 +3003,7 @@
         "Maximum_Quantity": 999999,
         "Classification": "filler",
         "Weight": 20,
-        "ID": 44966541394
+        "ID": 394
     },
     {
         "Name": "Useable_WaffleElueberry",
@@ -3012,7 +3012,7 @@
         "Maximum_Quantity": 999999,
         "Classification": "filler",
         "Weight": 20,
-        "ID": 44966541395
+        "ID": 395
     },
     {
         "Name": "Useable_WaffleWonderFull",
@@ -3021,7 +3021,7 @@
         "Maximum_Quantity": 999999,
         "Classification": "filler",
         "Weight": 20,
-        "ID": 44966541396
+        "ID": 396
     },
     {
         "Name": "Useable_VenaBombSmall",
@@ -3029,8 +3029,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 999999,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541398
+        "Weight": 10,
+        "ID": 398
     },
     {
         "Name": "Useable_VenaBombBig",
@@ -3038,8 +3038,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 999999,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541399
+        "Weight": 10,
+        "ID": 399
     },
     {
         "Name": "Useable_VenaBombBunBun",
@@ -3047,8 +3047,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 999999,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541400
+        "Weight": 10,
+        "ID": 40
     },
     {
         "Name": "Useable_VenaBombDispel",
@@ -3056,8 +3056,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 999999,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541401
+        "Weight": 10,
+        "ID": 41
     },
     {
         "Name": "Useable_VenaBombHealBlock",
@@ -3065,8 +3065,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 999999,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541402
+        "Weight": 10,
+        "ID": 42
     },
     {
         "Name": "Useable_BSnack",
@@ -3075,7 +3075,7 @@
         "Maximum_Quantity": 999999,
         "Classification": "filler",
         "Weight": 20,
-        "ID": 44966541404
+        "ID": 44
     },
     {
         "Name": "Useable_Biscuit",
@@ -3084,7 +3084,7 @@
         "Maximum_Quantity": 999999,
         "Classification": "filler",
         "Weight": 20,
-        "ID": 44966541405
+        "ID": 45
     },
     {
         "Name": "Teleporter 0",
@@ -3092,8 +3092,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541500
+        "Weight": 10,
+        "ID": 50
     },
     {
         "Name": "Teleporter 1",
@@ -3101,8 +3101,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541501
+        "Weight": 10,
+        "ID": 51
     },
     {
         "Name": "Teleporter 2",
@@ -3110,8 +3110,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541502
+        "Weight": 10,
+        "ID": 52
     },
     {
         "Name": "Teleporter 3",
@@ -3119,8 +3119,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541503
+        "Weight": 10,
+        "ID": 53
     },
     {
         "Name": "Teleporter 4",
@@ -3128,8 +3128,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541504
+        "Weight": 10,
+        "ID": 54
     },
     {
         "Name": "Teleporter 5",
@@ -3137,8 +3137,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541505
+        "Weight": 10,
+        "ID": 55
     },
     {
         "Name": "Teleporter 6",
@@ -3146,8 +3146,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541506
+        "Weight": 10,
+        "ID": 56
     },
     {
         "Name": "Teleporter 7",
@@ -3155,8 +3155,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541507
+        "Weight": 10,
+        "ID": 57
     },
     {
         "Name": "Teleporter 8",
@@ -3164,8 +3164,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541508
+        "Weight": 10,
+        "ID": 58
     },
     {
         "Name": "Teleporter 9",
@@ -3173,8 +3173,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541509
+        "Weight": 10,
+        "ID": 59
     },
     {
         "Name": "Teleporter 10",
@@ -3182,8 +3182,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541510
+        "Weight": 10,
+        "ID": 510
     },
     {
         "Name": "Teleporter 11",
@@ -3191,8 +3191,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541511
+        "Weight": 10,
+        "ID": 511
     },
     {
         "Name": "Teleporter 12",
@@ -3200,8 +3200,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541512
+        "Weight": 10,
+        "ID": 512
     },
     {
         "Name": "Teleporter 13",
@@ -3209,8 +3209,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541513
+        "Weight": 10,
+        "ID": 513
     },
     {
         "Name": "Teleporter 14",
@@ -3218,8 +3218,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541514
+        "Weight": 10,
+        "ID": 514
     },
     {
         "Name": "Teleporter 15",
@@ -3227,8 +3227,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541515
+        "Weight": 10,
+        "ID": 515
     },
     {
         "Name": "Teleporter 16",
@@ -3236,8 +3236,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541516
+        "Weight": 10,
+        "ID": 516
     },
     {
         "Name": "Teleporter 17",
@@ -3245,8 +3245,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541517
+        "Weight": 10,
+        "ID": 517
     },
     {
         "Name": "Teleporter 18",
@@ -3254,8 +3254,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541518
+        "Weight": 10,
+        "ID": 518
     },
     {
         "Name": "Teleporter 19",
@@ -3263,8 +3263,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541519
+        "Weight": 10,
+        "ID": 519
     },
     {
         "Name": "Teleporter 20",
@@ -3272,8 +3272,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541520
+        "Weight": 10,
+        "ID": 520
     },
     {
         "Name": "Teleporter 21",
@@ -3281,8 +3281,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541521
+        "Weight": 10,
+        "ID": 521
     },
     {
         "Name": "Teleporter 22",
@@ -3290,8 +3290,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541522
+        "Weight": 10,
+        "ID": 522
     },
     {
         "Name": "Teleporter 23",
@@ -3299,8 +3299,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541523
+        "Weight": 10,
+        "ID": 523
     },
     {
         "Name": "Teleporter 24",
@@ -3308,8 +3308,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541524
+        "Weight": 10,
+        "ID": 524
     },
     {
         "Name": "Teleporter 25",
@@ -3317,8 +3317,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541525
+        "Weight": 10,
+        "ID": 525
     },
     {
         "Name": "Teleporter 26",
@@ -3326,8 +3326,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541526
+        "Weight": 10,
+        "ID": 526
     },
     {
         "Name": "Teleporter 27",
@@ -3335,8 +3335,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541527
+        "Weight": 10,
+        "ID": 527
     },
     {
         "Name": "Teleporter 28",
@@ -3344,8 +3344,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541528
+        "Weight": 10,
+        "ID": 528
     },
     {
         "Name": "Teleporter 29",
@@ -3353,8 +3353,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541529
+        "Weight": 10,
+        "ID": 529
     },
     {
         "Name": "Teleporter 30",
@@ -3362,8 +3362,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541530
+        "Weight": 10,
+        "ID": 530
     },
     {
         "Name": "Teleporter 31",
@@ -3371,8 +3371,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541531
+        "Weight": 10,
+        "ID": 531
     },
     {
         "Name": "Teleporter 32",
@@ -3380,8 +3380,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541532
+        "Weight": 10,
+        "ID": 532
     },
     {
         "Name": "Teleporter 33",
@@ -3389,8 +3389,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541533
+        "Weight": 10,
+        "ID": 533
     },
     {
         "Name": "Teleporter 34",
@@ -3398,8 +3398,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541534
+        "Weight": 10,
+        "ID": 534
     },
     {
         "Name": "Teleporter 35",
@@ -3407,8 +3407,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541535
+        "Weight": 10,
+        "ID": 535
     },
     {
         "Name": "Teleporter 36",
@@ -3416,8 +3416,8 @@
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
         "Classification": "progression",
-        "Weight": 100,
-        "ID": 44966541536
+        "Weight": 10,
+        "ID": 536
     },
     {
         "Name": "Reverse Camera",
@@ -3426,7 +3426,7 @@
         "Maximum_Quantity": 99999999,
         "Classification": "trap",
         "Weight": 1,
-        "ID": 44966541550
+        "ID": 550
     },
     {
         "Name": "Double Time",
@@ -3435,7 +3435,7 @@
         "Maximum_Quantity": 99999999,
         "Classification": "trap",
         "Weight": 1,
-        "ID": 44966541551
+        "ID": 551
     },
     {
         "Name": "Debuff",
@@ -3444,7 +3444,7 @@
         "Maximum_Quantity": 99999999,
         "Classification": "trap",
         "Weight": 6,
-        "ID": 44966541553
+        "ID": 553
     },
     {
         "Name": "Yeet",
@@ -3453,7 +3453,7 @@
         "Maximum_Quantity": 99999999,
         "Classification": "trap",
         "Weight": 1,
-        "ID": 44966541552
+        "ID": 552
     },
     {
         "Name": "Taunt",
@@ -3462,7 +3462,7 @@
         "Maximum_Quantity": 99999999,
         "Classification": "trap",
         "Weight": 1,
-        "ID": 44966541554
+        "ID": 554
     },
     {
         "Name": "Reduce Jump Height",
@@ -3471,6 +3471,6 @@
         "Maximum_Quantity": 99999999,
         "Classification": "trap",
         "Weight": 1,
-        "ID": 44966541555
+        "ID": 555
     }
 ]
