@@ -27,7 +27,7 @@ for file in os.listdir(Path):
     singleFile += jsonFile
 
 
-writer = open(os.path.dirname(os.path.realpath(__file__))+"/MoneyLocations.json",'w+')
+writer = open(os.path.dirname(os.path.realpath(__file__))+"/../../resource/JsonFiles//MoneyLocations.json",'w+')
 writer.write(json.dumps(singleFile,indent=4))
 writer.close()
 
@@ -36,7 +36,7 @@ print(totalAmount)
 
 print("upgrades things")
 
-Path = os.path.dirname(os.path.realpath(__file__))+"/UpgradeResourceLocation.json"
+Path = os.path.dirname(os.path.realpath(__file__))+"/../../resource/JsonFiles/UpgradeResourceLocation.json"
 jsonFileRead = open(Path,'r')
 jsonFile = json.load(jsonFileRead)
 jsonFileRead.close()
