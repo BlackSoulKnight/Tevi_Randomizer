@@ -18,7 +18,8 @@
                 "Method": "ITEM_LINEBOMB || ITEM_AREABOMB",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 582
     },
     {
         "Itemname": "I16",
@@ -39,7 +40,8 @@
                 "Method": "ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 583
     },
     {
         "Itemname": "I16",
@@ -60,7 +62,8 @@
                 "Method": "ITEM_LINEBOMB || ITEM_AREABOMB",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 584
     },
     {
         "Itemname": "I16",
@@ -81,7 +84,8 @@
                 "Method": "ITEM_LINEBOMB || ITEM_AREABOMB",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 585
     },
     {
         "Itemname": "I16",
@@ -102,7 +106,8 @@
                 "Method": "ITEM_LINEBOMB || ITEM_AREABOMB",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 586
     },
     {
         "Itemname": "I16",
@@ -123,7 +128,8 @@
                 "Method": "(ITEM_LINEBOMB && ((ITEM_BombLengthExtend && ITEM_SLIDE) || ITEM_BombLengthExtend 3))|| (ITEM_AREABOMB && ITEM_SLIDE)",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 587
     },
     {
         "Itemname": "I16",
@@ -144,7 +150,8 @@
                 "Method": "ITEM_LINEBOMB || ITEM_AREABOMB",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 588
     },
     {
         "Itemname": "I16",
@@ -165,7 +172,8 @@
                 "Method": "ITEM_AREABOMB",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 589
     },
     {
         "Itemname": "I16",
@@ -186,7 +194,8 @@
                 "Method": "ITEM_LINEBOMB || ITEM_AREABOMB",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 590
     },
     {
         "Itemname": "I16",
@@ -207,7 +216,8 @@
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && (ITEM_JETPACK || ITEM_DOUBLEJUMP || ITEM_AirDash || ChargeShot || HiddenP)",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 591
     },
     {
         "Itemname": "I16",
@@ -228,7 +238,8 @@
                 "Method": "ITEM_KNIFE && (ITEM_LINEBOMB || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 592
     },
     {
         "Itemname": "I16",
@@ -249,7 +260,8 @@
                 "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 593
     },
     {
         "Itemname": "I16",
@@ -270,7 +282,8 @@
                 "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 594
     },
     {
         "Itemname": "I16",
@@ -291,7 +304,8 @@
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 595
     },
     {
         "Itemname": "I16",
@@ -312,7 +326,8 @@
                 "Method": "(ITEM_LINEBOMB)",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 596
     },
     {
         "Itemname": "I16",
@@ -333,7 +348,8 @@
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 597
     },
     {
         "Itemname": "I16",
@@ -354,7 +370,8 @@
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 598
     },
     {
         "Itemname": "I16",
@@ -375,7 +392,8 @@
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_SLIDE && (ITEM_AirDash || ITEM_JETPACK || ITEM_AirSlide || ITEM_DOUBLEJUMP)",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 599
     },
     {
         "Itemname": "I16",
@@ -396,7 +414,8 @@
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ((ITEM_AirDash && (ITEM_JETPACK || ITEM_SPEEDUP 2)) || ITEM_JETPACK 2 || ITEM_DOUBLEJUMP || (ITEM_JETPACK && ITEM_SPEEDUP))",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 600
     },
     {
         "Itemname": "I16",
@@ -417,7 +436,8 @@
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ((ITEM_DOUBLEJUMP && (ITEM_JETPACK || ITEM_AirDash)) || (ITEM_DOUBLEJUMP && ITEM_AirDash))",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 601
     },
     {
         "Itemname": "I16",
@@ -438,7 +458,8 @@
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 602
     },
     {
         "Itemname": "I16",
@@ -459,7 +480,8 @@
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ((ITEM_JETPACK && (ITEM_DOUBLEJUMP || ITEM_AirDash)) || (ITEM_DOUBLEJUMP && ITEM_AirDash))",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 603
     },
     {
         "Itemname": "I16",
@@ -480,7 +502,8 @@
                 "Method": "((ITEM_LINEBOMB && ITEM_KNIFE)|| ITEM_AREABOMB) && (ITEM_WALLJUMP || (ITEM_DOUBLEJUMP && (ITEM_HIJUMP || ITEM_JETPACK)))",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 604
     },
     {
         "Itemname": "I16",
@@ -501,7 +524,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 605
     },
     {
         "Itemname": "I16",
@@ -522,7 +546,8 @@
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 606
     },
     {
         "Itemname": "I16",
@@ -543,7 +568,8 @@
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 607
     },
     {
         "Itemname": "I16",
@@ -564,7 +590,8 @@
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && (ITEM_HIJUMP || ITEM_JETPACK || ITEM_DOUBLEJUMP)",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 608
     },
     {
         "Itemname": "I16",
@@ -585,7 +612,8 @@
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 609
     },
     {
         "Itemname": "I16",
@@ -606,7 +634,8 @@
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 610
     },
     {
         "Itemname": "I16",
@@ -627,7 +656,8 @@
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && (ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash)",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 611
     },
     {
         "Itemname": "I16",
@@ -648,7 +678,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 612
     },
     {
         "Itemname": "I16",
@@ -669,7 +700,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 613
     },
     {
         "Itemname": "I16",
@@ -690,7 +722,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 614
     },
     {
         "Itemname": "I16",
@@ -711,7 +744,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 615
     },
     {
         "Itemname": "I16",
@@ -732,7 +766,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 616
     },
     {
         "Itemname": "I16",
@@ -753,7 +788,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 617
     },
     {
         "Itemname": "I16",
@@ -774,7 +810,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 618
     },
     {
         "Itemname": "I16",
@@ -795,7 +832,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 619
     },
     {
         "Itemname": "I16",
@@ -816,7 +854,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 620
     },
     {
         "Itemname": "I16",
@@ -837,7 +876,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 621
     },
     {
         "Itemname": "I16",
@@ -858,7 +898,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 622
     },
     {
         "Itemname": "I16",
@@ -879,7 +920,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 623
     },
     {
         "Itemname": "I16",
@@ -900,7 +942,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 624
     },
     {
         "Itemname": "I16",
@@ -921,7 +964,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 625
     },
     {
         "Itemname": "I16",
@@ -942,7 +986,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 626
     },
     {
         "Itemname": "I16",
@@ -963,7 +1008,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 627
     },
     {
         "Itemname": "I16",
@@ -984,7 +1030,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 628
     },
     {
         "Itemname": "I16",
@@ -1005,7 +1052,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 629
     },
     {
         "Itemname": "I16",
@@ -1026,7 +1074,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 630
     },
     {
         "Itemname": "I16",
@@ -1047,7 +1096,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 631
     },
     {
         "Itemname": "I16",
@@ -1068,7 +1118,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 632
     },
     {
         "Itemname": "I16",
@@ -1089,7 +1140,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 633
     },
     {
         "Itemname": "I16",
@@ -1110,7 +1162,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 634
     },
     {
         "Itemname": "I16",
@@ -1131,7 +1184,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 635
     },
     {
         "Itemname": "I16",
@@ -1152,7 +1206,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 636
     },
     {
         "Itemname": "I16",
@@ -1173,7 +1228,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 637
     },
     {
         "Itemname": "I16",
@@ -1181,11 +1237,11 @@
         "LocationName": "CC Shop Bonus - #1",
         "slotId": 1,
         "area": 3,
-        "blockId":  -101,
+        "blockId": -101,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -1209,7 +1265,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 638
     },
     {
         "Itemname": "I16",
@@ -1217,11 +1274,11 @@
         "LocationName": "CC Shop Bonus - #2",
         "slotId": 1,
         "area": 3,
-        "blockId":  -102,
+        "blockId": -102,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -1245,7 +1302,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 639
     },
     {
         "Itemname": "I16",
@@ -1253,11 +1311,11 @@
         "LocationName": "CC Shop Bonus - #3",
         "slotId": 1,
         "area": 3,
-        "blockId":  -103,
+        "blockId": -103,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -1281,7 +1339,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 640
     },
     {
         "Itemname": "I16",
@@ -1289,11 +1348,11 @@
         "LocationName": "CC Shop Bonus - #4",
         "slotId": 1,
         "area": 3,
-        "blockId":  -104,
+        "blockId": -104,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -1317,7 +1376,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 641
     },
     {
         "Itemname": "I16",
@@ -1325,11 +1385,11 @@
         "LocationName": "CC Shop Bonus - #5",
         "slotId": 1,
         "area": 3,
-        "blockId":  -105,
+        "blockId": -105,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -1353,7 +1413,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 642
     },
     {
         "Itemname": "I16",
@@ -1361,11 +1422,11 @@
         "LocationName": "CC Shop Bonus - #6",
         "slotId": 1,
         "area": 3,
-        "blockId":  -106,
+        "blockId": -106,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -1389,7 +1450,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 643
     },
     {
         "Itemname": "I16",
@@ -1397,11 +1459,11 @@
         "LocationName": "CC Shop Bonus - #7",
         "slotId": 1,
         "area": 3,
-        "blockId":  -107,
+        "blockId": -107,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -1425,7 +1487,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 644
     },
     {
         "Itemname": "I16",
@@ -1433,11 +1496,11 @@
         "LocationName": "CC Shop Bonus - #8",
         "slotId": 1,
         "area": 3,
-        "blockId":  -108,
+        "blockId": -108,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -1461,7 +1524,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 645
     },
     {
         "Itemname": "I16",
@@ -1469,11 +1533,11 @@
         "LocationName": "CC Shop Bonus - #9",
         "slotId": 1,
         "area": 3,
-        "blockId":  -109,
+        "blockId": -109,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -1497,7 +1561,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 646
     },
     {
         "Itemname": "I16",
@@ -1505,11 +1570,11 @@
         "LocationName": "CC Shop Bonus - #10",
         "slotId": 1,
         "area": 3,
-        "blockId":  -110,
+        "blockId": -110,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -1533,7 +1598,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 647
     },
     {
         "Itemname": "I16",
@@ -1541,11 +1607,11 @@
         "LocationName": "CC Shop Bonus - #11",
         "slotId": 1,
         "area": 3,
-        "blockId":  -111,
+        "blockId": -111,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -1569,7 +1635,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 648
     },
     {
         "Itemname": "I16",
@@ -1577,11 +1644,11 @@
         "LocationName": "CC Shop Bonus - #12",
         "slotId": 1,
         "area": 3,
-        "blockId":  -112,
+        "blockId": -112,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -1605,7 +1672,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 649
     },
     {
         "Itemname": "I16",
@@ -1613,11 +1681,11 @@
         "LocationName": "CC Shop Bonus - #13",
         "slotId": 1,
         "area": 3,
-        "blockId":  -113,
+        "blockId": -113,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -1641,7 +1709,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 650
     },
     {
         "Itemname": "I16",
@@ -1649,11 +1718,11 @@
         "LocationName": "CC Shop Bonus - #14",
         "slotId": 1,
         "area": 3,
-        "blockId":  -114,
+        "blockId": -114,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -1677,7 +1746,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 651
     },
     {
         "Itemname": "I16",
@@ -1685,11 +1755,11 @@
         "LocationName": "CC Shop Bonus - #15",
         "slotId": 1,
         "area": 3,
-        "blockId":  -115,
+        "blockId": -115,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -1713,7 +1783,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 652
     },
     {
         "Itemname": "I16",
@@ -1721,11 +1792,11 @@
         "LocationName": "CC Shop Bonus - #16",
         "slotId": 1,
         "area": 3,
-        "blockId":  -116,
+        "blockId": -116,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -1749,7 +1820,8 @@
                 "Method": "Chapter 6",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 653
     },
     {
         "Itemname": "I16",
@@ -1757,11 +1829,11 @@
         "LocationName": "CC Shop Bonus - #17",
         "slotId": 1,
         "area": 3,
-        "blockId":  -117,
+        "blockId": -117,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -1785,7 +1857,8 @@
                 "Method": "Chapter 6",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 654
     },
     {
         "Itemname": "I15",
@@ -1793,11 +1866,11 @@
         "LocationName": "Ian Shop Bonus - #1",
         "slotId": 1,
         "area": 3,
-        "blockId":  -99,
+        "blockId": -99,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -1821,7 +1894,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 655
     },
     {
         "Itemname": "I15",
@@ -1829,11 +1903,11 @@
         "LocationName": "Ian Shop Bonus - #2",
         "slotId": 1,
         "area": 3,
-        "blockId":  -98,
+        "blockId": -98,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -1857,7 +1931,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 656
     },
     {
         "Itemname": "I15",
@@ -1865,11 +1940,11 @@
         "LocationName": "Ian Shop Bonus - #3",
         "slotId": 1,
         "area": 3,
-        "blockId":  -97,
+        "blockId": -97,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -1893,7 +1968,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 657
     },
     {
         "Itemname": "I15",
@@ -1901,11 +1977,11 @@
         "LocationName": "Ian Shop Bonus - #4",
         "slotId": 1,
         "area": 3,
-        "blockId":  -96,
+        "blockId": -96,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -1929,7 +2005,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 658
     },
     {
         "Itemname": "I15",
@@ -1937,11 +2014,11 @@
         "LocationName": "Ian Shop Bonus - #5",
         "slotId": 1,
         "area": 3,
-        "blockId":  -95,
+        "blockId": -95,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -1965,7 +2042,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 659
     },
     {
         "Itemname": "I15",
@@ -1973,11 +2051,11 @@
         "LocationName": "Ian Shop Bonus - #6",
         "slotId": 1,
         "area": 3,
-        "blockId":  -94,
+        "blockId": -94,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -2001,7 +2079,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 660
     },
     {
         "Itemname": "I15",
@@ -2009,11 +2088,11 @@
         "LocationName": "Ian Shop Bonus - #7",
         "slotId": 1,
         "area": 3,
-        "blockId":  -93,
+        "blockId": -93,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -2037,7 +2116,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 661
     },
     {
         "Itemname": "I15",
@@ -2045,11 +2125,11 @@
         "LocationName": "Ian Shop Bonus - #8",
         "slotId": 1,
         "area": 3,
-        "blockId":  -92,
+        "blockId": -92,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -2073,7 +2153,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 662
     },
     {
         "Itemname": "I15",
@@ -2081,11 +2162,11 @@
         "LocationName": "Ian Shop Bonus - #9",
         "slotId": 1,
         "area": 3,
-        "blockId":  -91,
+        "blockId": -91,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -2109,7 +2190,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 663
     },
     {
         "Itemname": "I15",
@@ -2117,11 +2199,11 @@
         "LocationName": "Ian Shop Bonus - #10",
         "slotId": 1,
         "area": 3,
-        "blockId":  -90,
+        "blockId": -90,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -2145,7 +2227,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 664
     },
     {
         "Itemname": "I15",
@@ -2153,11 +2236,11 @@
         "LocationName": "Ian Shop Bonus - #11",
         "slotId": 1,
         "area": 3,
-        "blockId":  -89,
+        "blockId": -89,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -2181,7 +2264,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 665
     },
     {
         "Itemname": "I15",
@@ -2189,11 +2273,11 @@
         "LocationName": "Ian Shop Bonus - #12",
         "slotId": 1,
         "area": 3,
-        "blockId":  -88,
+        "blockId": -88,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -2217,7 +2301,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 666
     },
     {
         "Itemname": "I15",
@@ -2225,11 +2310,11 @@
         "LocationName": "Ian Shop Bonus - #13",
         "slotId": 1,
         "area": 3,
-        "blockId":  -87,
+        "blockId": -87,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -2253,7 +2338,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 667
     },
     {
         "Itemname": "I15",
@@ -2261,11 +2347,11 @@
         "LocationName": "Ian Shop Bonus - #14",
         "slotId": 1,
         "area": 3,
-        "blockId":  -86,
+        "blockId": -86,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -2289,7 +2375,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 668
     },
     {
         "Itemname": "I15",
@@ -2297,11 +2384,11 @@
         "LocationName": "Ian Shop Bonus - #15",
         "slotId": 1,
         "area": 3,
-        "blockId":  -85,
+        "blockId": -85,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -2325,7 +2412,8 @@
                 "Method": "Chapter 2 && EVENT_Memloch",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 669
     },
     {
         "Itemname": "I15",
@@ -2333,11 +2421,11 @@
         "LocationName": "Ian Shop Bonus - #16",
         "slotId": 1,
         "area": 3,
-        "blockId":  -84,
+        "blockId": -84,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -2361,7 +2449,8 @@
                 "Method": "Chapter 2 && EVENT_Memloch",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 670
     },
     {
         "Itemname": "I15",
@@ -2369,11 +2458,11 @@
         "LocationName": "Ian Shop Bonus - #17",
         "slotId": 1,
         "area": 3,
-        "blockId":  -83,
+        "blockId": -83,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -2397,7 +2486,8 @@
                 "Method": "Chapter 2 && EVENT_Demonfray",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 671
     },
     {
         "Itemname": "I15",
@@ -2405,11 +2495,11 @@
         "LocationName": "Ian Shop Bonus - #18",
         "slotId": 1,
         "area": 3,
-        "blockId":  -82,
+        "blockId": -82,
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 10
             },
             {
@@ -2433,7 +2523,8 @@
                 "Method": "Chapter 2 && EVENT_Demonfray",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 672
     },
     {
         "Itemname": "I16",
@@ -2441,7 +2532,7 @@
         "LocationName": "Elite Challenge A Mananite",
         "slotId": 1,
         "area": 1,
-        "blockId":  -200,
+        "blockId": -200,
         "LocationRegion": [
             {
                 "Area": 1,
@@ -2454,7 +2545,8 @@
                 "Method": "EVENT_EliteChallangeA",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 673
     },
     {
         "Itemname": "I15",
@@ -2462,7 +2554,7 @@
         "LocationName": "Elite Challenge A Magitite",
         "slotId": 1,
         "area": 1,
-        "blockId":  -201,
+        "blockId": -201,
         "LocationRegion": [
             {
                 "Area": 1,
@@ -2475,7 +2567,8 @@
                 "Method": "EVENT_EliteChallangeA",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 674
     },
     {
         "Itemname": "I16",
@@ -2483,7 +2576,7 @@
         "LocationName": "Elite Challenge B Mananite",
         "slotId": 1,
         "area": 22,
-        "blockId":  -202,
+        "blockId": -202,
         "LocationRegion": [
             {
                 "Area": 22,
@@ -2496,7 +2589,8 @@
                 "Method": "EVENT_EliteChallangeB",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 675
     },
     {
         "Itemname": "I15",
@@ -2504,7 +2598,7 @@
         "LocationName": "Elite Challenge B Magitite",
         "slotId": 1,
         "area": 22,
-        "blockId":  -203,
+        "blockId": -203,
         "LocationRegion": [
             {
                 "Area": 22,
@@ -2517,7 +2611,8 @@
                 "Method": "EVENT_EliteChallangeB",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 676
     },
     {
         "Itemname": "I16",
@@ -2525,7 +2620,7 @@
         "LocationName": "Elite Challenge D Mananite",
         "slotId": 1,
         "area": 11,
-        "blockId":  -204,
+        "blockId": -204,
         "LocationRegion": [
             {
                 "Area": 11,
@@ -2538,7 +2633,8 @@
                 "Method": "EVENT_EliteChallangeD",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 677
     },
     {
         "Itemname": "I15",
@@ -2546,7 +2642,7 @@
         "LocationName": "Elite Challenge D Magitite",
         "slotId": 1,
         "area": 11,
-        "blockId":  -205,
+        "blockId": -205,
         "LocationRegion": [
             {
                 "Area": 11,
@@ -2559,7 +2655,8 @@
                 "Method": "EVENT_EliteChallangeD",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 678
     },
     {
         "Itemname": "I16",
@@ -2567,7 +2664,7 @@
         "LocationName": "Elite Challenge E Mananite",
         "slotId": 1,
         "area": 17,
-        "blockId":  -206,
+        "blockId": -206,
         "LocationRegion": [
             {
                 "Area": 17,
@@ -2580,7 +2677,8 @@
                 "Method": "EVENT_EliteChallangeE && ITEM_SLIDE",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 679
     },
     {
         "Itemname": "I15",
@@ -2588,7 +2686,7 @@
         "LocationName": "Elite Challenge E Magitite",
         "slotId": 1,
         "area": 17,
-        "blockId":  -207,
+        "blockId": -207,
         "LocationRegion": [
             {
                 "Area": 17,
@@ -2601,7 +2699,8 @@
                 "Method": "EVENT_EliteChallangeE && ITEM_SLIDE",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 680
     },
     {
         "Itemname": "I16",
@@ -2609,7 +2708,7 @@
         "LocationName": "Elite Challenge F Mananite",
         "slotId": 1,
         "area": 26,
-        "blockId":  -208,
+        "blockId": -208,
         "LocationRegion": [
             {
                 "Area": 26,
@@ -2622,7 +2721,8 @@
                 "Method": "EVENT_EliteChallangeF",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 681
     },
     {
         "Itemname": "I15",
@@ -2630,7 +2730,7 @@
         "LocationName": "Elite Challenge F Magitite",
         "slotId": 1,
         "area": 26,
-        "blockId":  -209,
+        "blockId": -209,
         "LocationRegion": [
             {
                 "Area": 26,
@@ -2643,7 +2743,8 @@
                 "Method": "EVENT_EliteChallangeF",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 682
     },
     {
         "Itemname": "I16",
@@ -2651,7 +2752,7 @@
         "LocationName": "Elite Challenge C Mananite",
         "slotId": 1,
         "area": 7,
-        "blockId":  -210,
+        "blockId": -210,
         "LocationRegion": [
             {
                 "Area": 7,
@@ -2664,7 +2765,8 @@
                 "Method": "EVENT_EliteChallangeC",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 683
     },
     {
         "Itemname": "I15",
@@ -2672,7 +2774,7 @@
         "LocationName": "Elite Challenge C Magitite",
         "slotId": 1,
         "area": 7,
-        "blockId":  -211,
+        "blockId": -211,
         "LocationRegion": [
             {
                 "Area": 7,
@@ -2685,7 +2787,8 @@
                 "Method": "EVENT_EliteChallangeC",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 684
     },
     {
         "Itemname": "I15",
@@ -2693,7 +2796,7 @@
         "LocationName": "Amaryllis fight Magitite #1",
         "slotId": 1,
         "area": 29,
-        "blockId":  -152,
+        "blockId": -152,
         "LocationRegion": [
             {
                 "Area": 29,
@@ -2706,7 +2809,8 @@
                 "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 685
     },
     {
         "Itemname": "I15",
@@ -2714,7 +2818,7 @@
         "LocationName": "Amaryllis fight Magitite #2",
         "slotId": 1,
         "area": 29,
-        "blockId":  -153,
+        "blockId": -153,
         "LocationRegion": [
             {
                 "Area": 29,
@@ -2727,7 +2831,8 @@
                 "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 686
     },
     {
         "Itemname": "I16",
@@ -2735,7 +2840,7 @@
         "LocationName": "Amaryllis fight Mananite #1",
         "slotId": 1,
         "area": 29,
-        "blockId":  -150,
+        "blockId": -150,
         "LocationRegion": [
             {
                 "Area": 29,
@@ -2748,7 +2853,8 @@
                 "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 687
     },
     {
         "Itemname": "I16",
@@ -2756,7 +2862,7 @@
         "LocationName": "Amaryllis fight Mananite #2",
         "slotId": 1,
         "area": 29,
-        "blockId":  -151,
+        "blockId": -151,
         "LocationRegion": [
             {
                 "Area": 29,
@@ -2769,7 +2875,8 @@
                 "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 688
     },
     {
         "Itemname": "I16",
@@ -2777,7 +2884,7 @@
         "LocationName": "Vassago fight Mananite #1",
         "slotId": 1,
         "area": 25,
-        "blockId":  -150,
+        "blockId": -150,
         "LocationRegion": [
             {
                 "Area": 25,
@@ -2790,7 +2897,8 @@
                 "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 689
     },
     {
         "Itemname": "I16",
@@ -2798,7 +2906,7 @@
         "LocationName": "Vassago fight Mananite #2",
         "slotId": 1,
         "area": 25,
-        "blockId":  -151,
+        "blockId": -151,
         "LocationRegion": [
             {
                 "Area": 25,
@@ -2811,7 +2919,8 @@
                 "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 690
     },
     {
         "Itemname": "I15",
@@ -2819,7 +2928,7 @@
         "LocationName": "Vassago fight Magitite #1",
         "slotId": 1,
         "area": 25,
-        "blockId":  -152,
+        "blockId": -152,
         "LocationRegion": [
             {
                 "Area": 25,
@@ -2832,7 +2941,8 @@
                 "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 691
     },
     {
         "Itemname": "I15",
@@ -2840,7 +2950,7 @@
         "LocationName": "Vassago fight Magitite #2",
         "slotId": 1,
         "area": 25,
-        "blockId":  -153,
+        "blockId": -153,
         "LocationRegion": [
             {
                 "Area": 25,
@@ -2853,7 +2963,8 @@
                 "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 692
     },
     {
         "Itemname": "I16",
@@ -2861,7 +2972,7 @@
         "LocationName": "Tartarus - Arcade Mananite #1",
         "slotId": 1,
         "area": 15,
-        "blockId":  -250,
+        "blockId": -250,
         "LocationRegion": [
             {
                 "Area": 15,
@@ -2874,7 +2985,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 693
     },
     {
         "Itemname": "I16",
@@ -2882,7 +2994,7 @@
         "LocationName": "Tartarus - Arcade Mananite #2",
         "slotId": 1,
         "area": 15,
-        "blockId":  -251,
+        "blockId": -251,
         "LocationRegion": [
             {
                 "Area": 15,
@@ -2895,7 +3007,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 694
     },
     {
         "Itemname": "I16",
@@ -2903,7 +3016,7 @@
         "LocationName": "Tartarus - Arcade Mananite #3",
         "slotId": 1,
         "area": 15,
-        "blockId":  -252,
+        "blockId": -252,
         "LocationRegion": [
             {
                 "Area": 15,
@@ -2916,7 +3029,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 695
     },
     {
         "Itemname": "I16",
@@ -2924,7 +3038,7 @@
         "LocationName": "Tartarus - Arcade Mananite #4",
         "slotId": 1,
         "area": 15,
-        "blockId":  -253,
+        "blockId": -253,
         "LocationRegion": [
             {
                 "Area": 15,
@@ -2937,7 +3051,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 696
     },
     {
         "Itemname": "I16",
@@ -2945,7 +3060,7 @@
         "LocationName": "Crafting - Mananite #1",
         "slotId": 1,
         "area": 1,
-        "blockId":  -300,
+        "blockId": -300,
         "LocationRegion": [
             {
                 "Area": 99,
@@ -2958,7 +3073,8 @@
                 "Method": "Chapter 1",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 697
     },
     {
         "Itemname": "I16",
@@ -2966,7 +3082,7 @@
         "LocationName": "Crafting - Mananite #2",
         "slotId": 1,
         "area": 1,
-        "blockId":  -302,
+        "blockId": -302,
         "LocationRegion": [
             {
                 "Area": 99,
@@ -2979,7 +3095,8 @@
                 "Method": "Chapter 1",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 698
     },
     {
         "Itemname": "I16",
@@ -2987,7 +3104,7 @@
         "LocationName": "Crafting - Mananite #3",
         "slotId": 1,
         "area": 1,
-        "blockId":  -304,
+        "blockId": -304,
         "LocationRegion": [
             {
                 "Area": 99,
@@ -3000,7 +3117,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 699
     },
     {
         "Itemname": "I16",
@@ -3008,7 +3126,7 @@
         "LocationName": "Crafting - Mananite #4",
         "slotId": 1,
         "area": 1,
-        "blockId":  -306,
+        "blockId": -306,
         "LocationRegion": [
             {
                 "Area": 99,
@@ -3021,7 +3139,8 @@
                 "Method": "Chapter 3",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 700
     },
     {
         "Itemname": "I16",
@@ -3029,7 +3148,7 @@
         "LocationName": "Crafting - Mananite #5",
         "slotId": 1,
         "area": 1,
-        "blockId":  -308,
+        "blockId": -308,
         "LocationRegion": [
             {
                 "Area": 99,
@@ -3042,7 +3161,8 @@
                 "Method": "Chapter 4",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 701
     },
     {
         "Itemname": "I16",
@@ -3050,7 +3170,7 @@
         "LocationName": "Crafting - Mananite #6",
         "slotId": 1,
         "area": 1,
-        "blockId":  -310,
+        "blockId": -310,
         "LocationRegion": [
             {
                 "Area": 99,
@@ -3063,7 +3183,8 @@
                 "Method": "Chapter 5",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 702
     },
     {
         "Itemname": "I16",
@@ -3071,7 +3192,7 @@
         "LocationName": "Crafting - Mananite #7",
         "slotId": 1,
         "area": 1,
-        "blockId":  -312,
+        "blockId": -312,
         "LocationRegion": [
             {
                 "Area": 99,
@@ -3084,7 +3205,8 @@
                 "Method": "Chapter 6",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 703
     },
     {
         "Itemname": "I16",
@@ -3092,7 +3214,7 @@
         "LocationName": "Crafting - Mananite #8",
         "slotId": 1,
         "area": 1,
-        "blockId":  -314,
+        "blockId": -314,
         "LocationRegion": [
             {
                 "Area": 99,
@@ -3105,7 +3227,8 @@
                 "Method": "Chapter 7",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 704
     },
     {
         "Itemname": "I16",
@@ -3113,7 +3236,7 @@
         "LocationName": "Crafting - Mananite #9",
         "slotId": 1,
         "area": 1,
-        "blockId":  -316,
+        "blockId": -316,
         "LocationRegion": [
             {
                 "Area": 99,
@@ -3126,7 +3249,8 @@
                 "Method": "Chapter 8",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 705
     },
     {
         "Itemname": "I15",
@@ -3134,7 +3258,7 @@
         "LocationName": "Crafting - Magitite #1",
         "slotId": 1,
         "area": 1,
-        "blockId":  -301,
+        "blockId": -301,
         "LocationRegion": [
             {
                 "Area": 99,
@@ -3147,7 +3271,8 @@
                 "Method": "Chapter 1",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 706
     },
     {
         "Itemname": "I15",
@@ -3155,7 +3280,7 @@
         "LocationName": "Crafting - Magitite #2",
         "slotId": 1,
         "area": 1,
-        "blockId":  -303,
+        "blockId": -303,
         "LocationRegion": [
             {
                 "Area": 99,
@@ -3168,7 +3293,8 @@
                 "Method": "Chapter 1",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 707
     },
     {
         "Itemname": "I15",
@@ -3176,7 +3302,7 @@
         "LocationName": "Crafting - Magitite #3",
         "slotId": 1,
         "area": 1,
-        "blockId":  -305,
+        "blockId": -305,
         "LocationRegion": [
             {
                 "Area": 99,
@@ -3189,7 +3315,8 @@
                 "Method": "Chapter 2",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 708
     },
     {
         "Itemname": "I15",
@@ -3197,7 +3324,7 @@
         "LocationName": "Crafting - Magitite #4",
         "slotId": 1,
         "area": 1,
-        "blockId":  -307,
+        "blockId": -307,
         "LocationRegion": [
             {
                 "Area": 99,
@@ -3210,7 +3337,8 @@
                 "Method": "Chapter 3",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 709
     },
     {
         "Itemname": "I15",
@@ -3218,7 +3346,7 @@
         "LocationName": "Crafting - Magitite #5",
         "slotId": 1,
         "area": 1,
-        "blockId":  -309,
+        "blockId": -309,
         "LocationRegion": [
             {
                 "Area": 99,
@@ -3231,7 +3359,8 @@
                 "Method": "Chapter 4",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 710
     },
     {
         "Itemname": "I15",
@@ -3239,7 +3368,7 @@
         "LocationName": "Crafting - Magitite #6",
         "slotId": 1,
         "area": 1,
-        "blockId":  -311,
+        "blockId": -311,
         "LocationRegion": [
             {
                 "Area": 99,
@@ -3252,7 +3381,8 @@
                 "Method": "Chapter 5",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 711
     },
     {
         "Itemname": "I15",
@@ -3260,7 +3390,7 @@
         "LocationName": "Crafting - Magitite #7",
         "slotId": 1,
         "area": 1,
-        "blockId":  -313,
+        "blockId": -313,
         "LocationRegion": [
             {
                 "Area": 99,
@@ -3273,7 +3403,8 @@
                 "Method": "Chapter 6",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 712
     },
     {
         "Itemname": "I15",
@@ -3281,7 +3412,7 @@
         "LocationName": "Crafting - Magitite #8",
         "slotId": 1,
         "area": 1,
-        "blockId":  -315,
+        "blockId": -315,
         "LocationRegion": [
             {
                 "Area": 99,
@@ -3294,7 +3425,8 @@
                 "Method": "Chapter 7",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 713
     },
     {
         "Itemname": "I15",
@@ -3302,7 +3434,7 @@
         "LocationName": "Crafting - Magitite #9",
         "slotId": 1,
         "area": 1,
-        "blockId":  -317,
+        "blockId": -317,
         "LocationRegion": [
             {
                 "Area": 99,
@@ -3315,7 +3447,8 @@
                 "Method": "Chapter 8",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 714
     },
     {
         "Itemname": "I15",
@@ -3323,7 +3456,7 @@
         "LocationName": "Unique Enemy Magitite - Hermitcrab Shoes",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10017,
+        "blockId": -10017,
         "LocationRegion": [
             {
                 "Area": 13,
@@ -3336,7 +3469,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 715
     },
     {
         "Itemname": "I15",
@@ -3344,7 +3478,7 @@
         "LocationName": "Unique Enemy Magitite - GH Bot",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10061,
+        "blockId": -10061,
         "LocationRegion": [
             {
                 "Area": 0,
@@ -3357,7 +3491,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 716
     },
     {
         "Itemname": "I15",
@@ -3365,7 +3500,7 @@
         "LocationName": "Unique Enemy Magitite - Bat",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10063,
+        "blockId": -10063,
         "LocationRegion": [
             {
                 "Area": 9,
@@ -3383,7 +3518,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 717
     },
     {
         "Itemname": "I15",
@@ -3391,7 +3527,7 @@
         "LocationName": "Unique Enemy Magitite - GH CleanStaff",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10065,
+        "blockId": -10065,
         "LocationRegion": [
             {
                 "Area": 0,
@@ -3409,7 +3545,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 718
     },
     {
         "Itemname": "I15",
@@ -3417,7 +3554,7 @@
         "LocationName": "Unique Enemy Magitite - Cobra",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10066,
+        "blockId": -10066,
         "LocationRegion": [
             {
                 "Area": 1,
@@ -3430,7 +3567,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 719
     },
     {
         "Itemname": "I15",
@@ -3438,7 +3576,7 @@
         "LocationName": "Unique Enemy Magitite - Cactus",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10068,
+        "blockId": -10068,
         "LocationRegion": [
             {
                 "Area": 1,
@@ -3451,7 +3589,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 720
     },
     {
         "Itemname": "I15",
@@ -3459,7 +3598,7 @@
         "LocationName": "Unique Enemy Magitite - Scorpion",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10070,
+        "blockId": -10070,
         "LocationRegion": [
             {
                 "Area": 2,
@@ -3472,7 +3611,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 721
     },
     {
         "Itemname": "I15",
@@ -3480,7 +3620,7 @@
         "LocationName": "Unique Enemy Magitite - Shroom",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10072,
+        "blockId": -10072,
         "LocationRegion": [
             {
                 "Area": 4,
@@ -3493,7 +3633,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 722
     },
     {
         "Itemname": "I15",
@@ -3501,12 +3642,12 @@
         "LocationName": "Unique Enemy Magitite - Mouse_Forest",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10076,
+        "blockId": -10076,
         "LocationRegion": [
             {
                 "Area": 28,
                 "X": 11,
-                "Y": 13 
+                "Y": 13
             }
         ],
         "Requirement": [
@@ -3514,7 +3655,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 723
     },
     {
         "Itemname": "I15",
@@ -3522,7 +3664,7 @@
         "LocationName": "Unique Enemy Magitite - Snapweed",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10077,
+        "blockId": -10077,
         "LocationRegion": [
             {
                 "Area": 4,
@@ -3535,7 +3677,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 724
     },
     {
         "Itemname": "I15",
@@ -3543,7 +3686,7 @@
         "LocationName": "Unique Enemy Magitite - Dragonweed",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10085,
+        "blockId": -10085,
         "LocationRegion": [
             {
                 "Area": 7,
@@ -3561,7 +3704,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 725
     },
     {
         "Itemname": "I15",
@@ -3569,7 +3713,7 @@
         "LocationName": "Unique Enemy Magitite - SteamTank",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10092,
+        "blockId": -10092,
         "LocationRegion": [
             {
                 "Area": 5,
@@ -3582,7 +3726,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 726
     },
     {
         "Itemname": "I15",
@@ -3590,7 +3735,7 @@
         "LocationName": "Unique Enemy Magitite - Ruinserf",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10096,
+        "blockId": -10096,
         "LocationRegion": [
             {
                 "Area": 22,
@@ -3603,7 +3748,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 727
     },
     {
         "Itemname": "I15",
@@ -3611,7 +3757,7 @@
         "LocationName": "Unique Enemy Magitite - Doggy_Armor",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10098,
+        "blockId": -10098,
         "LocationRegion": [
             {
                 "Area": 6,
@@ -3629,7 +3775,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 728
     },
     {
         "Itemname": "I15",
@@ -3637,7 +3784,7 @@
         "LocationName": "Unique Enemy Magitite - Crawler",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10101,
+        "blockId": -10101,
         "LocationRegion": [
             {
                 "Area": 24,
@@ -3650,7 +3797,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 729
     },
     {
         "Itemname": "I15",
@@ -3658,12 +3806,12 @@
         "LocationName": "Unique Enemy Magitite - Frog",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10104,
+        "blockId": -10104,
         "LocationRegion": [
             {
                 "Area": 14,
                 "X": 15,
-                "Y": 10 
+                "Y": 10
             }
         ],
         "Requirement": [
@@ -3671,7 +3819,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 730
     },
     {
         "Itemname": "I15",
@@ -3679,7 +3828,7 @@
         "LocationName": "Unique Enemy Magitite - Shieldbot_Forest",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10129,
+        "blockId": -10129,
         "LocationRegion": [
             {
                 "Area": 21,
@@ -3692,7 +3841,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 731
     },
     {
         "Itemname": "I15",
@@ -3700,7 +3850,7 @@
         "LocationName": "Unique Enemy Magitite - Shieldbot_Fire",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10132,
+        "blockId": -10132,
         "LocationRegion": [
             {
                 "Area": 17,
@@ -3713,7 +3863,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 732
     },
     {
         "Itemname": "I15",
@@ -3721,7 +3872,7 @@
         "LocationName": "Unique Enemy Magitite - Shieldbot_Pollution",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10136,
+        "blockId": -10136,
         "LocationRegion": [
             {
                 "Area": 10,
@@ -3734,7 +3885,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 733
     },
     {
         "Itemname": "I15",
@@ -3742,7 +3894,7 @@
         "LocationName": "Unique Enemy Magitite - Crawler_Pollution",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10138,
+        "blockId": -10138,
         "LocationRegion": [
             {
                 "Area": 11,
@@ -3755,7 +3907,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 734
     },
     {
         "Itemname": "I15",
@@ -3763,7 +3916,7 @@
         "LocationName": "Unique Enemy Magitite - Dragonweed_Pollution",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10150,
+        "blockId": -10150,
         "LocationRegion": [
             {
                 "Area": 27,
@@ -3776,7 +3929,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 735
     },
     {
         "Itemname": "I15",
@@ -3784,7 +3938,7 @@
         "LocationName": "Unique Enemy Magitite - Cragmiester",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10151,
+        "blockId": -10151,
         "LocationRegion": [
             {
                 "Area": 27,
@@ -3797,7 +3951,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 736
     },
     {
         "Itemname": "I15",
@@ -3805,7 +3960,7 @@
         "LocationName": "Unique Enemy Magitite - Hermitcrab_Gold",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10163,
+        "blockId": -10163,
         "LocationRegion": [
             {
                 "Area": 14,
@@ -3818,7 +3973,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 737
     },
     {
         "Itemname": "I15",
@@ -3826,7 +3982,7 @@
         "LocationName": "Unique Enemy Magitite - V_Guard",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10168,
+        "blockId": -10168,
         "LocationRegion": [
             {
                 "Area": 19,
@@ -3839,7 +3995,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 738
     },
     {
         "Itemname": "I15",
@@ -3847,7 +4004,7 @@
         "LocationName": "Unique Enemy Magitite - V_Chariot",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10173,
+        "blockId": -10173,
         "LocationRegion": [
             {
                 "Area": 21,
@@ -3860,7 +4017,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 739
     },
     {
         "Itemname": "I15",
@@ -3868,7 +4026,7 @@
         "LocationName": "Unique Enemy Magitite - T_Skeleton",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10174,
+        "blockId": -10174,
         "LocationRegion": [
             {
                 "Area": 17,
@@ -3881,7 +4039,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 740
     },
     {
         "Itemname": "I15",
@@ -3889,7 +4048,7 @@
         "LocationName": "Unique Enemy Magitite - T_Clown",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10175,
+        "blockId": -10175,
         "LocationRegion": [
             {
                 "Area": 14,
@@ -3902,7 +4061,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 741
     },
     {
         "Itemname": "I15",
@@ -3910,7 +4070,7 @@
         "LocationName": "Unique Enemy Magitite - Crawler_Fire",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10186,
+        "blockId": -10186,
         "LocationRegion": [
             {
                 "Area": 17,
@@ -3923,7 +4083,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 742
     },
     {
         "Itemname": "I15",
@@ -3931,7 +4092,7 @@
         "LocationName": "Unique Enemy Magitite - T_Curse",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10194,
+        "blockId": -10194,
         "LocationRegion": [
             {
                 "Area": 25,
@@ -3949,7 +4110,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 743
     },
     {
         "Itemname": "I15",
@@ -3957,7 +4119,7 @@
         "LocationName": "Unique Enemy Magitite - V_Unicorn",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10206,
+        "blockId": -10206,
         "LocationRegion": [
             {
                 "Area": 29,
@@ -3970,7 +4132,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 744
     },
     {
         "Itemname": "I15",
@@ -3978,7 +4141,7 @@
         "LocationName": "Unique Enemy Magitite - V_Ironmaiden",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10207,
+        "blockId": -10207,
         "LocationRegion": [
             {
                 "Area": 26,
@@ -3991,7 +4154,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 745
     },
     {
         "Itemname": "I15",
@@ -3999,7 +4163,7 @@
         "LocationName": "Unique Enemy Magitite - Landmine",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10213,
+        "blockId": -10213,
         "LocationRegion": [
             {
                 "Area": 25,
@@ -4012,7 +4176,8 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 746
     },
     {
         "Itemname": "I15",
@@ -4020,7 +4185,7 @@
         "LocationName": "Unique Enemy Magitite - Knights_A",
         "slotId": 1,
         "area": 1,
-        "blockId":  -10243,
+        "blockId": -10243,
         "LocationRegion": [
             {
                 "Area": 23,
@@ -4033,6 +4198,7 @@
                 "Method": "",
                 "Difficulty": 0
             }
-        ]
+        ],
+        "LocationID": 747
     }
 ]

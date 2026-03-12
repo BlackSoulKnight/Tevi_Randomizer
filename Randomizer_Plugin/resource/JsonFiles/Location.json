@@ -16,7 +16,8 @@
                 "X": 14,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 1
     },
     {
         "Itemname": "ITEM_Explorer",
@@ -35,7 +36,8 @@
                 "X": 11,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 2
     },
     {
         "Itemname": "ITEM_PKBADGE",
@@ -59,7 +61,8 @@
                 "X": 15,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 3
     },
     {
         "Itemname": "BADGE_TauntYawn",
@@ -78,7 +81,8 @@
                 "X": 10,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 4
     },
     {
         "Itemname": "BADGE_EarlyKnockRecover",
@@ -97,7 +101,8 @@
                 "X": 12,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 5
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -116,7 +121,8 @@
                 "X": 9,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 6
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -135,7 +141,8 @@
                 "X": 8,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 7
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -159,7 +166,8 @@
                 "X": 15,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 8
     },
     {
         "Itemname": "EVENT_BOSS",
@@ -183,7 +191,8 @@
                 "X": 15,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_SHARD",
@@ -210,7 +219,8 @@
                 "X": 14,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 9
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -229,7 +239,8 @@
                 "X": 15,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 10
     },
     {
         "Itemname": "ITEM_HIJUMP",
@@ -248,7 +259,8 @@
                 "X": 14,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 11
     },
     {
         "Itemname": "BADGE_WallCharger",
@@ -267,7 +279,8 @@
                 "X": 19,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 12
     },
     {
         "Itemname": "BADGE_AutoCombo",
@@ -286,7 +299,8 @@
                 "X": 18,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 13
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -305,7 +319,8 @@
                 "X": 17,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 14
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -329,7 +344,8 @@
                 "X": 0,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 15
     },
     {
         "Itemname": "EVENT_BOSS",
@@ -348,7 +364,8 @@
                 "X": 17,
                 "Y": 16
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "BADGE_BACKSTAB",
@@ -367,7 +384,8 @@
                 "X": 13,
                 "Y": 16
             }
-        ]
+        ],
+        "LocationID": 16
     },
     {
         "Itemname": "BADGE_Normal2AntiHealth",
@@ -386,7 +404,8 @@
                 "X": 13,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 17
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -405,7 +424,8 @@
                 "X": 12,
                 "Y": 18
             }
-        ]
+        ],
+        "LocationID": 18
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -424,7 +444,8 @@
                 "X": 13,
                 "Y": 17
             }
-        ]
+        ],
+        "LocationID": 19
     },
     {
         "Itemname": "BADGE_ChangeOrbCharger",
@@ -443,7 +464,8 @@
                 "X": 17,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 20
     },
     {
         "Itemname": "BADGE_ANTIENERGYBALL",
@@ -462,9 +484,10 @@
                 "X": 9,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 21
     },
-    {   
+    {
         "Itemname": "STACKABLE_HP",
         "Location": "Desert Base Upper Half",
         "LocationName": "Desert Base Upper Half - Kiwi Bunny Potion",
@@ -481,7 +504,8 @@
                 "X": 8,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 22
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -500,7 +524,8 @@
                 "X": 8,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 23
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -519,7 +544,8 @@
                 "X": 6,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 24
     },
     {
         "Itemname": "QUEST_GHandL",
@@ -538,7 +564,8 @@
                 "X": 2,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 25
     },
     {
         "Itemname": "BADGE_ConvertDef2Off",
@@ -557,7 +584,8 @@
                 "X": 10,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 26
     },
     {
         "Itemname": "BADGE_LowerThan20",
@@ -576,7 +604,8 @@
                 "X": 13,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 27
     },
     {
         "Itemname": "ITEM_EasyStyle",
@@ -595,7 +624,8 @@
                 "X": 4,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 28
     },
     {
         "Itemname": "ITEM_KNIFE",
@@ -614,7 +644,8 @@
                 "X": 5,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 29
     },
     {
         "Itemname": "ITEM_ORB",
@@ -633,7 +664,8 @@
                 "X": 5,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 30
     },
     {
         "Itemname": "BADGE_MAXHPUP",
@@ -652,7 +684,8 @@
                 "X": 7,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 31
     },
     {
         "Itemname": "BADGE_RangeCombo",
@@ -671,7 +704,8 @@
                 "X": 8,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 32
     },
     {
         "Itemname": "BADGE_SuperArmor2",
@@ -690,7 +724,8 @@
                 "X": 8,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 33
     },
     {
         "Itemname": "BADGE_PerfectCharge",
@@ -709,7 +744,8 @@
                 "X": 12,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 34
     },
     {
         "Itemname": "BADGE_StyleComboAddDamageA",
@@ -728,7 +764,8 @@
                 "X": 6,
                 "Y": 4
             }
-        ]
+        ],
+        "LocationID": 35
     },
     {
         "Itemname": "EVENT_EliteChallangeB",
@@ -751,7 +788,8 @@
                 "X": 11,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -770,7 +808,8 @@
                 "X": 8,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 36
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -789,7 +828,8 @@
                 "X": 9,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 37
     },
     {
         "Itemname": "ITEM_LINEBOMB",
@@ -808,7 +848,8 @@
                 "X": 8,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 38
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -827,7 +868,8 @@
                 "X": 12,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 39
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -846,7 +888,8 @@
                 "X": 22,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 40
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -865,7 +908,8 @@
                 "X": 20,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 41
     },
     {
         "Itemname": "BADGE_StrongAirUpDebuff",
@@ -884,7 +928,8 @@
                 "X": 27,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 42
     },
     {
         "Itemname": "BADGE_CrystalGen",
@@ -903,7 +948,8 @@
                 "X": 19,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 43
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -938,7 +984,8 @@
                 "X": 25,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 44
     },
     {
         "Itemname": "EVENT_Fire",
@@ -957,7 +1004,8 @@
                 "X": 16,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -976,7 +1024,8 @@
                 "X": 27,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 45
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -1000,7 +1049,8 @@
                 "X": 9,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 46
     },
     {
         "Itemname": "EVENT_BOSS",
@@ -1019,7 +1069,8 @@
                 "X": 20,
                 "Y": 15
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -1038,7 +1089,8 @@
                 "X": 14,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 47
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -1057,7 +1109,8 @@
                 "X": 25,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 48
     },
     {
         "Itemname": "BADGE_BreakDamageBoost",
@@ -1084,7 +1137,8 @@
                 "X": 20,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 49
     },
     {
         "Itemname": "BADGE_Lucky7DamageReduce",
@@ -1115,7 +1169,8 @@
                 "X": 17,
                 "Y": 15
             }
-        ]
+        ],
+        "LocationID": 50
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -1134,7 +1189,8 @@
                 "X": 29,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 51
     },
     {
         "Itemname": "BADGE_BoostSizeIncrease",
@@ -1153,7 +1209,8 @@
                 "X": 27,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 52
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -1172,7 +1229,8 @@
                 "X": 15,
                 "Y": 16
             }
-        ]
+        ],
+        "LocationID": 53
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -1211,7 +1269,8 @@
                 "X": 12,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 54
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -1230,7 +1289,8 @@
                 "X": 12,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 55
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -1249,7 +1309,8 @@
                 "X": 12,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 56
     },
     {
         "Itemname": "EVENT_Light",
@@ -1268,7 +1329,8 @@
                 "X": 11,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -1287,7 +1349,8 @@
                 "X": 25,
                 "Y": 4
             }
-        ]
+        ],
+        "LocationID": 57
     },
     {
         "Itemname": "EVENT_Light",
@@ -1306,7 +1369,8 @@
                 "X": 14,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "BADGE_DoubleJumpAttack",
@@ -1325,7 +1389,8 @@
                 "X": 15,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 58
     },
     {
         "Itemname": "BADGE_Normal3HModStabB",
@@ -1344,7 +1409,8 @@
                 "X": 26,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 59
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -1363,7 +1429,8 @@
                 "X": 20,
                 "Y": 1
             }
-        ]
+        ],
+        "LocationID": 60
     },
     {
         "Itemname": "BADGE_ComboDamageBoost",
@@ -1382,7 +1449,8 @@
                 "X": 26,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 61
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -1413,7 +1481,8 @@
                 "X": 15,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 62
     },
     {
         "Itemname": "BADGE_DoubleNormalComboSpeedup",
@@ -1432,7 +1501,8 @@
                 "X": 13,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 63
     },
     {
         "Itemname": "BADGE_RapidShotsEnhance",
@@ -1455,7 +1525,8 @@
                 "X": 4,
                 "Y": 3
             }
-        ]
+        ],
+        "LocationID": 64
     },
     {
         "Itemname": "BADGE_Lucky7C",
@@ -1478,7 +1549,8 @@
                 "X": 5,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 65
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -1497,7 +1569,8 @@
                 "X": 16,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 66
     },
     {
         "Itemname": "EVENT_MoroseVisited",
@@ -1516,7 +1589,8 @@
                 "X": 0,
                 "Y": 0
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "EVENT_EliteChallangeA",
@@ -1535,7 +1609,8 @@
                 "X": 19,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -1559,7 +1634,8 @@
                 "X": 3,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 67
     },
     {
         "Itemname": "EVENT_BOSS",
@@ -1578,7 +1654,8 @@
                 "X": 12,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -1597,7 +1674,8 @@
                 "X": 14,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 68
     },
     {
         "Itemname": "BADGE_TauntPhoto",
@@ -1616,7 +1694,8 @@
                 "X": 21,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 69
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -1640,7 +1719,8 @@
                 "X": 18,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 70
     },
     {
         "Itemname": "EVENT_MoroseSHOP",
@@ -1656,10 +1736,11 @@
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "ITEM_SPEEDUP",
@@ -1675,10 +1756,11 @@
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 71
     },
     {
         "Itemname": "BADGE_BossPassing",
@@ -1694,10 +1776,11 @@
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 72
     },
     {
         "Itemname": "BADGE_StyleComboAirDashS",
@@ -1713,10 +1796,11 @@
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 73
     },
     {
         "Itemname": "BADGE_MAXHPCost",
@@ -1732,10 +1816,11 @@
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 74
     },
     {
         "Itemname": "BADGE_EnemyDefeatExp",
@@ -1751,10 +1836,11 @@
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 75
     },
     {
         "Itemname": "BADGE_1HealthTypeA",
@@ -1770,10 +1856,11 @@
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 76
     },
     {
         "Itemname": "BADGE_TauntThink",
@@ -1789,10 +1876,11 @@
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 77
     },
     {
         "Itemname": "BADGE_QuickMPRegainA",
@@ -1808,10 +1896,11 @@
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 78
     },
     {
         "Itemname": "BADGE_MapDiscoverRecover",
@@ -1827,10 +1916,11 @@
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 79
     },
     {
         "Itemname": "BADGE_StyleComboAirNormal3A",
@@ -1846,10 +1936,11 @@
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 80
     },
     {
         "Itemname": "BADGE_UpperDoubleHitAfterOutline",
@@ -1865,10 +1956,11 @@
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 81
     },
     {
         "Itemname": "BADGE_Hurt2Punisher",
@@ -1884,10 +1976,11 @@
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 82
     },
     {
         "Itemname": "STACKABLE_BAG",
@@ -1903,10 +1996,11 @@
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 83
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -1922,10 +2016,11 @@
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 84
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -1941,10 +2036,11 @@
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 85
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -1960,10 +2056,11 @@
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 86
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -1979,10 +2076,11 @@
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 87
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -1998,10 +2096,11 @@
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 88
     },
     {
         "Itemname": "STACKABLE_SHARD",
@@ -2017,10 +2116,11 @@
         "LocationRegion": [
             {
                 "Area": 3,
-                "X": 15 ,
+                "X": 15,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 89
     },
     {
         "Itemname": "Useable_WaffleAHoneycloud",
@@ -2039,7 +2139,8 @@
                 "X": 16,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 90
     },
     {
         "Itemname": "Useable_WaffleBMeringue",
@@ -2058,7 +2159,8 @@
                 "X": 16,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 91
     },
     {
         "Itemname": "Useable_WaffleCMorning",
@@ -2077,7 +2179,8 @@
                 "X": 16,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 92
     },
     {
         "Itemname": "Useable_WaffleDJellydrop",
@@ -2096,7 +2199,8 @@
                 "X": 16,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 93
     },
     {
         "Itemname": "Useable_WaffleElueberry",
@@ -2115,7 +2219,8 @@
                 "X": 16,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 94
     },
     {
         "Itemname": "BADGE_StyleComboBackflipBomb",
@@ -2150,7 +2255,8 @@
                 "X": 10,
                 "Y": 18
             }
-        ]
+        ],
+        "LocationID": 95
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -2169,7 +2275,8 @@
                 "X": 13,
                 "Y": 17
             }
-        ]
+        ],
+        "LocationID": 96
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -2188,7 +2295,8 @@
                 "X": 12,
                 "Y": 20
             }
-        ]
+        ],
+        "LocationID": 97
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -2205,9 +2313,10 @@
             {
                 "Area": 6,
                 "X": 15,
-                "Y":20
+                "Y": 20
             }
-        ]
+        ],
+        "LocationID": 98
     },
     {
         "Itemname": "ITEM_BOMBFUEL",
@@ -2226,7 +2335,8 @@
                 "X": 11,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 99
     },
     {
         "Itemname": "BADGE_ConvertOff2Def",
@@ -2253,7 +2363,8 @@
                 "X": 10,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 100
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -2272,7 +2383,8 @@
                 "X": 11,
                 "Y": 15
             }
-        ]
+        ],
+        "LocationID": 101
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -2291,7 +2403,8 @@
                 "X": 1,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 102
     },
     {
         "Itemname": "EVENT_Fire",
@@ -2315,7 +2428,8 @@
                 "X": 17,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -2339,7 +2453,8 @@
                 "X": 12,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 103
     },
     {
         "Itemname": "EVENT_BOSS",
@@ -2358,7 +2473,8 @@
                 "X": 2,
                 "Y": 15
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "BADGE_AirComboQuicken",
@@ -2377,7 +2493,8 @@
                 "X": 6,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 104
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -2396,7 +2513,8 @@
                 "X": 9,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 105
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -2415,7 +2533,8 @@
                 "X": 5,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 106
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -2434,7 +2553,8 @@
                 "X": 19,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 107
     },
     {
         "Itemname": "BADGE_EasyDodge",
@@ -2453,7 +2573,8 @@
                 "X": 19,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 108
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -2472,7 +2593,8 @@
                 "X": 8,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 109
     },
     {
         "Itemname": "BADGE_EnergyDefend",
@@ -2491,7 +2613,8 @@
                 "X": 17,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 110
     },
     {
         "Itemname": "BADGE_GroundBombQuickExcute",
@@ -2510,7 +2633,8 @@
                 "X": 9,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 111
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -2529,7 +2653,8 @@
                 "X": 11,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 112
     },
     {
         "Itemname": "BADGE_NormalShotReducerA",
@@ -2548,7 +2673,8 @@
                 "X": 13,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 113
     },
     {
         "Itemname": "BADGE_TauntSit",
@@ -2567,7 +2693,8 @@
                 "X": 12,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 114
     },
     {
         "Itemname": "I19",
@@ -2586,7 +2713,8 @@
                 "X": 11,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 115
     },
     {
         "Itemname": "ITEM_BoostSystem",
@@ -2605,7 +2733,8 @@
                 "X": 16,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 116
     },
     {
         "Itemname": "BADGE_GroundNormal4Mod",
@@ -2624,7 +2753,8 @@
                 "X": 12,
                 "Y": 19
             }
-        ]
+        ],
+        "LocationID": 117
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -2643,7 +2773,8 @@
                 "X": 11,
                 "Y": 18
             }
-        ]
+        ],
+        "LocationID": 118
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -2667,7 +2798,8 @@
                 "X": 18,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 119
     },
     {
         "Itemname": "EVENT_BOSS",
@@ -2686,7 +2818,8 @@
                 "X": 14,
                 "Y": 15
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "BADGE_BackflipSnipe",
@@ -2705,7 +2838,8 @@
                 "X": 20,
                 "Y": 15
             }
-        ]
+        ],
+        "LocationID": 120
     },
     {
         "Itemname": "BADGE_AutoHealing",
@@ -2724,7 +2858,8 @@
                 "X": 5,
                 "Y": 21
             }
-        ]
+        ],
+        "LocationID": 121
     },
     {
         "Itemname": "ITEM_GoldenHands",
@@ -2743,7 +2878,8 @@
                 "X": 7,
                 "Y": 21
             }
-        ]
+        ],
+        "LocationID": 122
     },
     {
         "Itemname": "BADGE_HealCharge",
@@ -2762,7 +2898,8 @@
                 "X": 9,
                 "Y": 21
             }
-        ]
+        ],
+        "LocationID": 123
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -2781,7 +2918,8 @@
                 "X": 6,
                 "Y": 20
             }
-        ]
+        ],
+        "LocationID": 124
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -2800,7 +2938,8 @@
                 "X": 15,
                 "Y": 17
             }
-        ]
+        ],
+        "LocationID": 125
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -2819,7 +2958,8 @@
                 "X": 15,
                 "Y": 16
             }
-        ]
+        ],
+        "LocationID": 126
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -2838,7 +2978,8 @@
                 "X": 9,
                 "Y": 19
             }
-        ]
+        ],
+        "LocationID": 127
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -2857,7 +2998,8 @@
                 "X": 4,
                 "Y": 18
             }
-        ]
+        ],
+        "LocationID": 128
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -2876,7 +3018,8 @@
                 "X": 8,
                 "Y": 19
             }
-        ]
+        ],
+        "LocationID": 129
     },
     {
         "Itemname": "BADGE_QuickBomber",
@@ -2895,7 +3038,8 @@
                 "X": 10,
                 "Y": 16
             }
-        ]
+        ],
+        "LocationID": 130
     },
     {
         "Itemname": "ITEM_MASK",
@@ -2914,7 +3058,8 @@
                 "X": 9,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 131
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -2933,7 +3078,8 @@
                 "X": 8,
                 "Y": 20
             }
-        ]
+        ],
+        "LocationID": 132
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -2952,7 +3098,8 @@
                 "X": 7,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 133
     },
     {
         "Itemname": "BADGE_ComboTimeExtendC",
@@ -2971,7 +3118,8 @@
                 "X": 9,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 134
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -2990,7 +3138,8 @@
                 "X": 2,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 135
     },
     {
         "Itemname": "STACKABLE_SHARD",
@@ -3017,7 +3166,8 @@
                 "X": 10,
                 "Y": 18
             }
-        ]
+        ],
+        "LocationID": 136
     },
     {
         "Itemname": "BADGE_TauntStare",
@@ -3052,7 +3202,8 @@
                 "X": 4,
                 "Y": 20
             }
-        ]
+        ],
+        "LocationID": 137
     },
     {
         "Itemname": "BADGE_DodgeMeterBoost",
@@ -3071,7 +3222,8 @@
                 "X": 4,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 138
     },
     {
         "Itemname": "EVENT_Earth",
@@ -3090,7 +3242,8 @@
                 "X": 7,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "EVENT_EliteChallangeC",
@@ -3109,7 +3262,8 @@
                 "X": 7,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "BADGE_BattleStartCharger",
@@ -3128,7 +3282,8 @@
                 "X": 14,
                 "Y": 17
             }
-        ]
+        ],
+        "LocationID": 139
     },
     {
         "Itemname": "EVENT_Earth",
@@ -3147,7 +3302,8 @@
                 "X": 16,
                 "Y": 15
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -3170,7 +3326,8 @@
                 "X": 17,
                 "Y": 18
             }
-        ]
+        ],
+        "LocationID": 140
     },
     {
         "Itemname": "BADGE_AirNormalComboSpeedup",
@@ -3189,7 +3346,8 @@
                 "X": 18,
                 "Y": 16
             }
-        ]
+        ],
+        "LocationID": 141
     },
     {
         "Itemname": "BADGE_DoubleGroundNormal3N1",
@@ -3208,7 +3366,8 @@
                 "X": 23,
                 "Y": 16
             }
-        ]
+        ],
+        "LocationID": 142
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -3227,7 +3386,8 @@
                 "X": 23,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 143
     },
     {
         "Itemname": "ITEM_AntiDecay",
@@ -3246,7 +3406,8 @@
                 "X": 28,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 144
     },
     {
         "Itemname": "BADGE_SlideHalt",
@@ -3265,7 +3426,8 @@
                 "X": 16,
                 "Y": 17
             }
-        ]
+        ],
+        "LocationID": 145
     },
     {
         "Itemname": "BADGE_GoldenLuck",
@@ -3284,7 +3446,8 @@
                 "X": 25,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 146
     },
     {
         "Itemname": "BADGE_WeakAirDownRotate",
@@ -3303,7 +3466,8 @@
                 "X": 16,
                 "Y": 17
             }
-        ]
+        ],
+        "LocationID": 147
     },
     {
         "Itemname": "BADGE_StyleComboReduceDamageS",
@@ -3322,7 +3486,8 @@
                 "X": 13,
                 "Y": 16
             }
-        ]
+        ],
+        "LocationID": 148
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -3341,7 +3506,8 @@
                 "X": 14,
                 "Y": 16
             }
-        ]
+        ],
+        "LocationID": 149
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -3360,7 +3526,8 @@
                 "X": 11,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 150
     },
     {
         "Itemname": "ITEM_SLIDE",
@@ -3379,7 +3546,8 @@
                 "X": 13,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 151
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -3398,7 +3566,8 @@
                 "X": 20,
                 "Y": 15
             }
-        ]
+        ],
+        "LocationID": 152
     },
     {
         "Itemname": "BADGE_TauntKnife",
@@ -3433,7 +3602,8 @@
                 "X": 18,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 153
     },
     {
         "Itemname": "BADGE_DodgeWeakGroundUp",
@@ -3452,7 +3622,8 @@
                 "X": 17,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 154
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -3476,7 +3647,8 @@
                 "X": 0,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 155
     },
     {
         "Itemname": "EVENT_BOSS",
@@ -3495,7 +3667,8 @@
                 "X": 19,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "BADGE_BombNormal4Buffer",
@@ -3514,7 +3687,8 @@
                 "X": 23,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 156
     },
     {
         "Itemname": "BADGE_PrepDef",
@@ -3533,7 +3707,8 @@
                 "X": 23,
                 "Y": 16
             }
-        ]
+        ],
+        "LocationID": 157
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -3552,7 +3727,8 @@
                 "X": 13,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 158
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -3571,7 +3747,8 @@
                 "X": 15,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 159
     },
     {
         "Itemname": "BADGE_Unlucky7",
@@ -3590,7 +3767,8 @@
                 "X": 13,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 160
     },
     {
         "Itemname": "BADGE_HP2MP",
@@ -3609,7 +3787,8 @@
                 "X": 4,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 161
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -3640,7 +3819,8 @@
                 "X": 13,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 162
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -3659,7 +3839,8 @@
                 "X": 9,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 163
     },
     {
         "Itemname": "BADGE_AmuletDouble",
@@ -3678,7 +3859,8 @@
                 "X": 11,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 164
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -3697,7 +3879,8 @@
                 "X": 14,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 165
     },
     {
         "Itemname": "BADGE_WeakAirDownFreqUpB",
@@ -3716,7 +3899,8 @@
                 "X": 20,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 166
     },
     {
         "Itemname": "BADGE_BoostDodgeAdd",
@@ -3735,7 +3919,8 @@
                 "X": 20,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 167
     },
     {
         "Itemname": "BADGE_BoostMeleeOffense",
@@ -3754,7 +3939,8 @@
                 "X": 18,
                 "Y": 15
             }
-        ]
+        ],
+        "LocationID": 168
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -3773,7 +3959,8 @@
                 "X": 15,
                 "Y": 15
             }
-        ]
+        ],
+        "LocationID": 169
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -3797,7 +3984,8 @@
                 "X": 15,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 170
     },
     {
         "Itemname": "EVENT_BOSS",
@@ -3816,7 +4004,8 @@
                 "X": 11,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "ITEM_OrbAmulet",
@@ -3835,7 +4024,8 @@
                 "X": 9,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 171
     },
     {
         "Itemname": "BADGE_Cursed6",
@@ -3862,7 +4052,8 @@
                 "X": 7,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 172
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -3881,7 +4072,8 @@
                 "X": 6,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 173
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -3900,7 +4092,8 @@
                 "X": 12,
                 "Y": 16
             }
-        ]
+        ],
+        "LocationID": 174
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -3919,7 +4112,8 @@
                 "X": 8,
                 "Y": 19
             }
-        ]
+        ],
+        "LocationID": 175
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -3946,7 +4140,8 @@
                 "X": 15,
                 "Y": 19
             }
-        ]
+        ],
+        "LocationID": 176
     },
     {
         "Itemname": "BADGE_BoostCostCut",
@@ -3965,7 +4160,8 @@
                 "X": 18,
                 "Y": 19
             }
-        ]
+        ],
+        "LocationID": 177
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -3984,7 +4180,8 @@
                 "X": 18,
                 "Y": 19
             }
-        ]
+        ],
+        "LocationID": 178
     },
     {
         "Itemname": "BADGE_StyleCharge",
@@ -4011,7 +4208,8 @@
                 "X": 4,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 179
     },
     {
         "Itemname": "BADGE_LateCharge",
@@ -4030,7 +4228,8 @@
                 "X": 10,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 180
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -4049,7 +4248,8 @@
                 "X": 5,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 181
     },
     {
         "Itemname": "EVENT_Fire",
@@ -4068,7 +4268,8 @@
                 "X": 5,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "BADGE_8thDamageHeal",
@@ -4103,7 +4304,8 @@
                 "X": 3,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 182
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -4127,7 +4329,8 @@
                 "X": 6,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 183
     },
     {
         "Itemname": "EVENT_BOSS",
@@ -4146,7 +4349,8 @@
                 "X": 8,
                 "Y": 4
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "ITEM_WonderNote",
@@ -4165,7 +4369,8 @@
                 "X": 10,
                 "Y": 4
             }
-        ]
+        ],
+        "LocationID": 184
     },
     {
         "Itemname": "BADGE_AmuletMPCharge",
@@ -4184,7 +4389,8 @@
                 "X": 10,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 185
     },
     {
         "Itemname": "QUEST_LibraryKey",
@@ -4211,7 +4417,8 @@
                 "X": 14,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 186
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -4242,7 +4449,8 @@
                 "X": 15,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 187
     },
     {
         "Itemname": "I20",
@@ -4261,7 +4469,8 @@
                 "X": 13,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 188
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -4280,7 +4489,8 @@
                 "X": 13,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 189
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -4299,7 +4509,8 @@
                 "X": 13,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 190
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -4318,7 +4529,8 @@
                 "X": 13,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 191
     },
     {
         "Itemname": "EVENT_EliteChallangeD",
@@ -4337,7 +4549,8 @@
                 "X": 17,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "BADGE_QuickMeleeLagA",
@@ -4356,7 +4569,8 @@
                 "X": 23,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 192
     },
     {
         "Itemname": "EVENT_AnathemaVisited",
@@ -4375,7 +4589,8 @@
                 "X": 0,
                 "Y": 0
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "BADGE_GroundNormalComboSpeedup",
@@ -4394,7 +4609,8 @@
                 "X": 22,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 193
     },
     {
         "Itemname": "BADGE_StyleComboNewAttack",
@@ -4413,7 +4629,8 @@
                 "X": 25,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 194
     },
     {
         "Itemname": "EVENT_AnathemaSHOP",
@@ -4432,7 +4649,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "ITEM_AttackRange",
@@ -4451,7 +4669,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 195
     },
     {
         "Itemname": "BADGE_GroundNormalCombo4AltTiming",
@@ -4470,7 +4689,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 196
     },
     {
         "Itemname": "BADGE_BreakTimeExtend",
@@ -4489,7 +4709,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 197
     },
     {
         "Itemname": "BADGE_StrongFrontFly",
@@ -4508,7 +4729,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 198
     },
     {
         "Itemname": "BADGE_1HealthTypeB",
@@ -4527,7 +4749,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 199
     },
     {
         "Itemname": "BADGE_StepUpCharge",
@@ -4546,7 +4769,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 200
     },
     {
         "Itemname": "BADGE_GroundWeakUpAirExcute",
@@ -4565,7 +4789,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 201
     },
     {
         "Itemname": "BADGE_SupportShot",
@@ -4584,7 +4809,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 202
     },
     {
         "Itemname": "BADGE_StraightCost",
@@ -4603,7 +4829,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 203
     },
     {
         "Itemname": "BADGE_WeakAirNormal3ModDamageBoost",
@@ -4622,7 +4849,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 204
     },
     {
         "Itemname": "BADGE_DodgeHealthCounter",
@@ -4641,7 +4869,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 205
     },
     {
         "Itemname": "BADGE_AutoAirCombo",
@@ -4660,7 +4889,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 206
     },
     {
         "Itemname": "BADGE_SuperArmor33",
@@ -4679,7 +4909,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 207
     },
     {
         "Itemname": "BADGE_FreeFoodRefill",
@@ -4698,7 +4929,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 208
     },
     {
         "Itemname": "BADGE_StyleComboNormal4HAAA",
@@ -4717,7 +4949,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 209
     },
     {
         "Itemname": "BADGE_ComboBreakBoost",
@@ -4736,7 +4969,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 210
     },
     {
         "Itemname": "STACKABLE_BAG",
@@ -4755,7 +4989,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 211
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -4774,7 +5009,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 212
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -4793,7 +5029,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 213
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -4812,7 +5049,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 214
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -4831,7 +5069,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 215
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -4850,7 +5089,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 216
     },
     {
         "Itemname": "STACKABLE_SHARD",
@@ -4869,7 +5109,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 217
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -4888,7 +5129,8 @@
                 "X": 11,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 218
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -4907,7 +5149,8 @@
                 "X": 9,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 219
     },
     {
         "Itemname": "BADGE_AmuletQuicken",
@@ -4926,7 +5169,8 @@
                 "X": 7,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 220
     },
     {
         "Itemname": "ITEM_JETPACK",
@@ -4945,7 +5189,8 @@
                 "X": 0,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 221
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -4964,7 +5209,8 @@
                 "X": 3,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 222
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -4983,7 +5229,8 @@
                 "X": 2,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 223
     },
     {
         "Itemname": "BADGE_EPCombo",
@@ -5002,7 +5249,8 @@
                 "X": 11,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 224
     },
     {
         "Itemname": "BADGE_ArrowDamageUp",
@@ -5021,7 +5269,8 @@
                 "X": 10,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 225
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -5040,7 +5289,8 @@
                 "X": 12,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 226
     },
     {
         "Itemname": "BADGE_1HealthTypeC",
@@ -5060,7 +5310,8 @@
                 "X": 11,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 227
     },
     {
         "Itemname": "BADGE_AntiGround",
@@ -5079,7 +5330,8 @@
                 "X": 4,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 228
     },
     {
         "Itemname": "BADGE_HitMP",
@@ -5098,7 +5350,8 @@
                 "X": 6,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 229
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -5121,7 +5374,8 @@
                 "X": 10,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 230
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -5140,7 +5394,8 @@
                 "X": 10,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 231
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -5163,7 +5418,8 @@
                 "X": 16,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 232
     },
     {
         "Itemname": "BADGE_DoubleGroundNormal3N2",
@@ -5186,7 +5442,8 @@
                 "X": 15,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 233
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -5205,7 +5462,8 @@
                 "X": 15,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 234
     },
     {
         "Itemname": "EVENT_Dark",
@@ -5224,7 +5482,8 @@
                 "X": 18,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "BADGE_AirComboExtend",
@@ -5243,7 +5502,8 @@
                 "X": 22,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 235
     },
     {
         "Itemname": "ITEM_AREABOMB",
@@ -5262,7 +5522,8 @@
                 "X": 18,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 236
     },
     {
         "Itemname": "EVENT_Dark",
@@ -5281,7 +5542,8 @@
                 "X": 20,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -5300,7 +5562,8 @@
                 "X": 22,
                 "Y": 4
             }
-        ]
+        ],
+        "LocationID": 237
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -5319,7 +5582,8 @@
                 "X": 17,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 238
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -5338,7 +5602,8 @@
                 "X": 15,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 239
     },
     {
         "Itemname": "BADGE_Normal3HModStabA",
@@ -5357,7 +5622,8 @@
                 "X": 18,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 240
     },
     {
         "Itemname": "BADGE_BreakRangeChaser",
@@ -5376,7 +5642,8 @@
                 "X": 17,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 241
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -5395,7 +5662,8 @@
                 "X": 20,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 242
     },
     {
         "Itemname": "BADGE_Normal2MultHit",
@@ -5414,7 +5682,8 @@
                 "X": 22,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 243
     },
     {
         "Itemname": "BADGE_NonChargeShotRapid",
@@ -5433,7 +5702,8 @@
                 "X": 14,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 244
     },
     {
         "Itemname": "EVENT_EliteChallangeE",
@@ -5452,7 +5722,8 @@
                 "X": 20,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "BADGE_CrystalAbsorberS",
@@ -5471,7 +5742,8 @@
                 "X": 17,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 245
     },
     {
         "Itemname": "QUEST_RabiPillow",
@@ -5490,7 +5762,8 @@
                 "X": 11,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 246
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -5509,7 +5782,8 @@
                 "X": 15,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 247
     },
     {
         "Itemname": "BADGE_Lucky7Defend",
@@ -5552,7 +5826,8 @@
                 "X": 13,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 248
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -5571,7 +5846,8 @@
                 "X": 16,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 249
     },
     {
         "Itemname": "BADGE_WeakGroundUpModOneHit",
@@ -5590,7 +5866,8 @@
                 "X": 15,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 250
     },
     {
         "Itemname": "EVENT_TartarusSHOP",
@@ -5609,7 +5886,8 @@
                 "X": 17,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "ITEM_RailPass",
@@ -5628,7 +5906,8 @@
                 "X": 17,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 251
     },
     {
         "Itemname": "BADGE_StyleComboBackflipA",
@@ -5647,7 +5926,8 @@
                 "X": 17,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 252
     },
     {
         "Itemname": "BADGE_RevengeB",
@@ -5666,7 +5946,8 @@
                 "X": 17,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 253
     },
     {
         "Itemname": "BADGE_ComboCharge",
@@ -5685,7 +5966,8 @@
                 "X": 17,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 254
     },
     {
         "Itemname": "BADGE_SimpleBreak",
@@ -5704,7 +5986,8 @@
                 "X": 17,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 255
     },
     {
         "Itemname": "BADGE_PurchaseBadgeCost",
@@ -5723,7 +6006,8 @@
                 "X": 17,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 256
     },
     {
         "Itemname": "BADGE_DoubleJumpStrike",
@@ -5742,7 +6026,8 @@
                 "X": 17,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 257
     },
     {
         "Itemname": "BADGE_BoostTimeExtend",
@@ -5761,7 +6046,8 @@
                 "X": 17,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 258
     },
     {
         "Itemname": "BADGE_CrystalHeal",
@@ -5780,7 +6066,8 @@
                 "X": 17,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 259
     },
     {
         "Itemname": "BADGE_FallDamageReduce",
@@ -5799,7 +6086,8 @@
                 "X": 17,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 260
     },
     {
         "Itemname": "BADGE_DoubleDispelLineBombLow",
@@ -5818,7 +6106,8 @@
                 "X": 17,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 261
     },
     {
         "Itemname": "STACKABLE_BAG",
@@ -5837,7 +6126,8 @@
                 "X": 17,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 262
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -5856,7 +6146,8 @@
                 "X": 17,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 263
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -5875,7 +6166,8 @@
                 "X": 17,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 264
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -5894,7 +6186,8 @@
                 "X": 17,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 265
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -5913,7 +6206,8 @@
                 "X": 17,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 266
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -5932,7 +6226,8 @@
                 "X": 17,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 267
     },
     {
         "Itemname": "STACKABLE_SHARD",
@@ -5951,7 +6246,8 @@
                 "X": 17,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 268
     },
     {
         "Itemname": "BADGE_WeakAirDownFreqUpA",
@@ -5970,7 +6266,8 @@
                 "X": 7,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 269
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -5989,7 +6286,8 @@
                 "X": 8,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 270
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -6008,7 +6306,8 @@
                 "X": 12,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 271
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -6027,7 +6326,8 @@
                 "X": 15,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 272
     },
     {
         "Itemname": "BADGE_DoubleDispelLineBombHigh",
@@ -6046,7 +6346,8 @@
                 "X": 5,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 273
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -6065,7 +6366,8 @@
                 "X": 5,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 274
     },
     {
         "Itemname": "BADGE_QuickDropDouble",
@@ -6084,7 +6386,8 @@
                 "X": 0,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 275
     },
     {
         "Itemname": "BADGE_CrystalAttack",
@@ -6103,7 +6406,8 @@
                 "X": 4,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 276
     },
     {
         "Itemname": "BADGE_AntiAir",
@@ -6126,7 +6430,8 @@
                 "X": 6,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 277
     },
     {
         "Itemname": "BADGE_InstantDodgeMeter",
@@ -6145,7 +6450,8 @@
                 "X": 8,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 278
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -6169,7 +6475,8 @@
                 "X": 0,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 279
     },
     {
         "Itemname": "EVENT_BOSS",
@@ -6188,7 +6495,8 @@
                 "X": 3,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -6207,7 +6515,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 280
     },
     {
         "Itemname": "BADGE_DodgeEPBoost",
@@ -6226,7 +6535,8 @@
                 "X": 12,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 281
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -6245,7 +6555,8 @@
                 "X": 20,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 282
     },
     {
         "Itemname": "BADGE_DodgeWeakAirDown",
@@ -6264,7 +6575,8 @@
                 "X": 19,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 283
     },
     {
         "Itemname": "BADGE_BoostCharging",
@@ -6283,7 +6595,8 @@
                 "X": 19,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 284
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -6302,7 +6615,8 @@
                 "X": 17,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 285
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -6321,7 +6635,8 @@
                 "X": 20,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 286
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -6345,7 +6660,8 @@
                 "X": 12,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 287
     },
     {
         "Itemname": "EVENT_BOSS",
@@ -6364,7 +6680,8 @@
                 "X": 24,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "EVENT_Demonfray",
@@ -6383,7 +6700,8 @@
                 "X": 24,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "BADGE_StyleComboPassiveA",
@@ -6402,7 +6720,8 @@
                 "X": 25,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 288
     },
     {
         "Itemname": "ITEM_DodgeShot",
@@ -6421,7 +6740,8 @@
                 "X": 22,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 289
     },
     {
         "Itemname": "ITEM_Alterscope",
@@ -6440,7 +6760,8 @@
                 "X": 26,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 290
     },
     {
         "Itemname": "BADGE_HitCountChargeRate",
@@ -6459,7 +6780,8 @@
                 "X": 27,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 291
     },
     {
         "Itemname": "ITEM_WATERMOVEMENT",
@@ -6478,7 +6800,8 @@
                 "X": 19,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 292
     },
     {
         "Itemname": "EVENT_Water",
@@ -6497,7 +6820,8 @@
                 "X": 11,
                 "Y": 15
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -6516,7 +6840,8 @@
                 "X": 18,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 293
     },
     {
         "Itemname": "BADGE_CommonDropRecover",
@@ -6535,7 +6860,8 @@
                 "X": 22,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 294
     },
     {
         "Itemname": "EVENT_Water",
@@ -6554,7 +6880,8 @@
                 "X": 23,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -6573,7 +6900,8 @@
                 "X": 11,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 295
     },
     {
         "Itemname": "BADGE_InvincibilityExtend",
@@ -6592,7 +6920,8 @@
                 "X": 14,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 296
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -6611,7 +6940,8 @@
                 "X": 16,
                 "Y": 17
             }
-        ]
+        ],
+        "LocationID": 297
     },
     {
         "Itemname": "BADGE_ComboTimeExtendA",
@@ -6630,7 +6960,8 @@
                 "X": 7,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 298
     },
     {
         "Itemname": "EVENT_Dark",
@@ -6649,7 +6980,8 @@
                 "X": 10,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "EVENT_Earth",
@@ -6668,7 +7000,8 @@
                 "X": 8,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "EVENT_Light",
@@ -6687,7 +7020,8 @@
                 "X": 8,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -6706,7 +7040,8 @@
                 "X": 10,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 299
     },
     {
         "Itemname": "BADGE_AutoDodge",
@@ -6725,7 +7060,8 @@
                 "X": 12,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 300
     },
     {
         "Itemname": "BADGE_AirCombo2Hits",
@@ -6744,7 +7080,8 @@
                 "X": 13,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 301
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -6763,7 +7100,8 @@
                 "X": 15,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 302
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -6790,7 +7128,8 @@
                 "X": 11,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 303
     },
     {
         "Itemname": "BADGE_BoostShieldAbsorb",
@@ -6809,7 +7148,8 @@
                 "X": 9,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 304
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -6828,7 +7168,8 @@
                 "X": 8,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 305
     },
     {
         "Itemname": "STACKABLE_SHARD",
@@ -6847,7 +7188,8 @@
                 "X": 7,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 306
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -6866,7 +7208,8 @@
                 "X": 25,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 307
     },
     {
         "Itemname": "EVENT_EliteChallangeF",
@@ -6885,7 +7228,8 @@
                 "X": 20,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -6904,7 +7248,8 @@
                 "X": 21,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 308
     },
     {
         "Itemname": "BADGE_BuffRush",
@@ -6935,7 +7280,8 @@
                 "X": 21,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 309
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -6954,7 +7300,8 @@
                 "X": 25,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 310
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -6993,7 +7340,8 @@
                 "X": 24,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 311
     },
     {
         "Itemname": "BADGE_ComboSaver",
@@ -7016,7 +7364,8 @@
                 "X": 20,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 312
     },
     {
         "Itemname": "EVENT_ValhallaSHOP",
@@ -7035,7 +7384,8 @@
                 "X": 23,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "ITEM_AirshipPass",
@@ -7054,7 +7404,8 @@
                 "X": 23,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 313
     },
     {
         "Itemname": "BADGE_StyleComboAirDashA",
@@ -7073,7 +7424,8 @@
                 "X": 23,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 314
     },
     {
         "Itemname": "BADGE_StrongFrontRapid",
@@ -7092,7 +7444,8 @@
                 "X": 23,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 315
     },
     {
         "Itemname": "BADGE_BackflipMultiHit",
@@ -7111,7 +7464,8 @@
                 "X": 23,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 316
     },
     {
         "Itemname": "BADGE_ComboDodgeMeter",
@@ -7130,7 +7484,8 @@
                 "X": 23,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 317
     },
     {
         "Itemname": "BADGE_RythemCharge",
@@ -7149,7 +7504,8 @@
                 "X": 23,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 318
     },
     {
         "Itemname": "BADGE_PerfectCost",
@@ -7168,7 +7524,8 @@
                 "X": 23,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 319
     },
     {
         "Itemname": "BADGE_StyleComboSlidingS",
@@ -7187,7 +7544,8 @@
                 "X": 23,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 320
     },
     {
         "Itemname": "BADGE_DamageToMaxHP",
@@ -7206,7 +7564,8 @@
                 "X": 23,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 321
     },
     {
         "Itemname": "BADGE_Normal3HRedCancel",
@@ -7225,7 +7584,8 @@
                 "X": 23,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 322
     },
     {
         "Itemname": "BADGE_BoostQuickErase",
@@ -7244,7 +7604,8 @@
                 "X": 23,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 323
     },
     {
         "Itemname": "STACKABLE_BAG",
@@ -7263,7 +7624,8 @@
                 "X": 23,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 324
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -7282,7 +7644,8 @@
                 "X": 23,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 325
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -7301,7 +7664,8 @@
                 "X": 23,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 326
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -7320,7 +7684,8 @@
                 "X": 23,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 327
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -7339,7 +7704,8 @@
                 "X": 23,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 328
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -7358,7 +7724,8 @@
                 "X": 23,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 329
     },
     {
         "Itemname": "STACKABLE_SHARD",
@@ -7377,7 +7744,8 @@
                 "X": 23,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 330
     },
     {
         "Itemname": "ITEM_AirDash",
@@ -7396,7 +7764,8 @@
                 "X": 22,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 331
     },
     {
         "Itemname": "BADGE_CrystalAbsorberC",
@@ -7427,7 +7796,8 @@
                 "X": 20,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 332
     },
     {
         "Itemname": "BADGE_StyleComboNormal3H",
@@ -7466,7 +7836,8 @@
                 "X": 26,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 333
     },
     {
         "Itemname": "BADGE_QuickMeleeLagB",
@@ -7493,7 +7864,8 @@
                 "X": 24,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 334
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -7512,7 +7884,8 @@
                 "X": 25,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 335
     },
     {
         "Itemname": "BADGE_ToArmorReducer",
@@ -7539,7 +7912,8 @@
                 "X": 20,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 336
     },
     {
         "Itemname": "BADGE_DashFlashInv",
@@ -7558,7 +7932,8 @@
                 "X": 26,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 337
     },
     {
         "Itemname": "BADGE_ComboAntiFullHealth",
@@ -7577,7 +7952,8 @@
                 "X": 26,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 338
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -7601,7 +7977,8 @@
                 "X": 3,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 339
     },
     {
         "Itemname": "EVENT_BOSS",
@@ -7620,7 +7997,8 @@
                 "X": 11,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "BADGE_DebuffCounter",
@@ -7639,7 +8017,8 @@
                 "X": 11,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 340
     },
     {
         "Itemname": "BADGE_CrystalIncrease",
@@ -7670,7 +8049,8 @@
                 "X": 6,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 341
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -7689,7 +8069,8 @@
                 "X": 9,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 342
     },
     {
         "Itemname": "BADGE_BoostHitCount",
@@ -7708,7 +8089,8 @@
                 "X": 21,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 343
     },
     {
         "Itemname": "EVENT_FreeStrongAttack",
@@ -7727,7 +8109,8 @@
                 "X": 0,
                 "Y": 0
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -7746,7 +8129,8 @@
                 "X": 21,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 344
     },
     {
         "Itemname": "BADGE_StyleComboNormal1QuickFar",
@@ -7765,7 +8149,8 @@
                 "X": 24,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 345
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -7784,7 +8169,8 @@
                 "X": 25,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 346
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -7803,7 +8189,8 @@
                 "X": 29,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 347
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -7822,7 +8209,8 @@
                 "X": 30,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 348
     },
     {
         "Itemname": "BADGE_BreakHeal",
@@ -7841,7 +8229,8 @@
                 "X": 29,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 349
     },
     {
         "Itemname": "ITEM_WALLJUMP",
@@ -7860,7 +8249,8 @@
                 "X": 30,
                 "Y": 15
             }
-        ]
+        ],
+        "LocationID": 350
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -7879,7 +8269,8 @@
                 "X": 23,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 351
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -7903,7 +8294,8 @@
                 "X": 9,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 352
     },
     {
         "Itemname": "EVENT_BOSS",
@@ -7922,7 +8314,8 @@
                 "X": 22,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "BADGE_QuickMPRegainB",
@@ -7953,7 +8346,8 @@
                 "X": 24,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 353
     },
     {
         "Itemname": "BADGE_StyleComboPassiveMAX",
@@ -7980,7 +8374,8 @@
                 "X": 26,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 354
     },
     {
         "Itemname": "BADGE_LateAttack",
@@ -7999,7 +8394,8 @@
                 "X": 24,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 355
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -8018,7 +8414,8 @@
                 "X": 19,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 356
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -8037,7 +8434,8 @@
                 "X": 17,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 357
     },
     {
         "Itemname": "BADGE_ChargeShotDiscount",
@@ -8056,7 +8454,8 @@
                 "X": 21,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 358
     },
     {
         "Itemname": "BADGE_AreaBombThrower",
@@ -8075,7 +8474,8 @@
                 "X": 28,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 359
     },
     {
         "Itemname": "BADGE_Recover3",
@@ -8094,7 +8494,8 @@
                 "X": 24,
                 "Y": 4
             }
-        ]
+        ],
+        "LocationID": 360
     },
     {
         "Itemname": "ITEM_BombLengthExtend",
@@ -8113,7 +8514,8 @@
                 "X": 27,
                 "Y": 4
             }
-        ]
+        ],
+        "LocationID": 361
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -8137,7 +8539,8 @@
                 "X": 18,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 362
     },
     {
         "Itemname": "EVENT_BOSS",
@@ -8156,7 +8559,8 @@
                 "X": 26,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "EVENT_Memloch",
@@ -8175,7 +8579,8 @@
                 "X": 26,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -8194,7 +8599,8 @@
                 "X": 27,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 363
     },
     {
         "Itemname": "BADGE_WeakGroundUpModCombo",
@@ -8229,7 +8635,8 @@
                 "X": 29,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 364
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -8260,7 +8667,8 @@
                 "X": 21,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 365
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -8279,7 +8687,8 @@
                 "X": 10,
                 "Y": 4
             }
-        ]
+        ],
+        "LocationID": 366
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -8298,7 +8707,8 @@
                 "X": 27,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 367
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -8317,7 +8727,8 @@
                 "X": 27,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 368
     },
     {
         "Itemname": "ITEM_DOUBLEJUMP",
@@ -8336,7 +8747,8 @@
                 "X": 26,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 369
     },
     {
         "Itemname": "BADGE_Instant1",
@@ -8355,7 +8767,8 @@
                 "X": 19,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 370
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -8379,7 +8792,8 @@
                 "X": 6,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 371
     },
     {
         "Itemname": "EVENT_BOSS",
@@ -8398,7 +8812,8 @@
                 "X": 17,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -8437,7 +8852,8 @@
                 "X": 8,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 372
     },
     {
         "Itemname": "BADGE_DodgeCharger",
@@ -8456,7 +8872,8 @@
                 "X": 13,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 373
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -8475,7 +8892,8 @@
                 "X": 12,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 374
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -8494,7 +8912,8 @@
                 "X": 19,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 375
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -8513,7 +8932,8 @@
                 "X": 26,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 376
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -8533,7 +8953,8 @@
                 "X": 19,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 377
     },
     {
         "Itemname": "BADGE_ComboTimeExtendB",
@@ -8556,7 +8977,8 @@
                 "X": 29,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 378
     },
     {
         "Itemname": "BADGE_BOnceHeal",
@@ -8575,7 +8997,8 @@
                 "X": 25,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 379
     },
     {
         "Itemname": "EVENT_Dark",
@@ -8594,7 +9017,8 @@
                 "X": 25,
                 "Y": 19
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "EVENT_SnowMechanic",
@@ -8613,7 +9037,8 @@
                 "X": 27,
                 "Y": 19
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -8632,7 +9057,8 @@
                 "X": 25,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 380
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -8651,7 +9077,8 @@
                 "X": 24,
                 "Y": 16
             }
-        ]
+        ],
+        "LocationID": 381
     },
     {
         "Itemname": "BADGE_StrongFrontEnhance",
@@ -8670,7 +9097,8 @@
                 "X": 26,
                 "Y": 16
             }
-        ]
+        ],
+        "LocationID": 382
     },
     {
         "Itemname": "BADGE_RevengeA",
@@ -8689,7 +9117,8 @@
                 "X": 29,
                 "Y": 17
             }
-        ]
+        ],
+        "LocationID": 383
     },
     {
         "Itemname": "BADGE_GStrongUpBulletCancelS",
@@ -8708,7 +9137,8 @@
                 "X": 27,
                 "Y": 19
             }
-        ]
+        ],
+        "LocationID": 384
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -8735,7 +9165,8 @@
                 "X": 25,
                 "Y": 18
             }
-        ]
+        ],
+        "LocationID": 385
     },
     {
         "Itemname": "BADGE_MAXHP2MAXMP",
@@ -8754,7 +9185,8 @@
                 "X": 14,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 386
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -8773,7 +9205,8 @@
                 "X": 13,
                 "Y": 17
             }
-        ]
+        ],
+        "LocationID": 387
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -8792,7 +9225,8 @@
                 "X": 16,
                 "Y": 20
             }
-        ]
+        ],
+        "LocationID": 388
     },
     {
         "Itemname": "BADGE_QuickDropExtendB",
@@ -8811,7 +9245,8 @@
                 "X": 13,
                 "Y": 19
             }
-        ]
+        ],
+        "LocationID": 389
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -8830,7 +9265,8 @@
                 "X": 17,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 390
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -8866,7 +9302,8 @@
                 "X": 3,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 391
     },
     {
         "Itemname": "EVENT_BOSS",
@@ -8897,7 +9334,8 @@
                 "X": 17,
                 "Y": 16
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "BADGE_BaseComboBooster",
@@ -8928,7 +9366,8 @@
                 "X": 14,
                 "Y": 15
             }
-        ]
+        ],
+        "LocationID": 392
     },
     {
         "Itemname": "BADGE_StyleComboPassiveS",
@@ -8947,7 +9386,8 @@
                 "X": 19,
                 "Y": 17
             }
-        ]
+        ],
+        "LocationID": 393
     },
     {
         "Itemname": "BADGE_DodgeChargedDodgeShot",
@@ -8966,7 +9406,8 @@
                 "X": 19,
                 "Y": 15
             }
-        ]
+        ],
+        "LocationID": 394
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -8985,7 +9426,8 @@
                 "X": 24,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 395
     },
     {
         "Itemname": "EVENT_Air",
@@ -9004,7 +9446,8 @@
                 "X": 23,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "BADGE_EPMeleeReduce",
@@ -9023,7 +9466,8 @@
                 "X": 21,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 396
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -9047,7 +9491,8 @@
                 "X": 9,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 397
     },
     {
         "Itemname": "EVENT_BOSS",
@@ -9066,7 +9511,8 @@
                 "X": 15,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "BADGE_ChargeHeal",
@@ -9085,7 +9531,8 @@
                 "X": 16,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 398
     },
     {
         "Itemname": "ITEM_Rotater",
@@ -9104,7 +9551,8 @@
                 "X": 14,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 399
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -9131,7 +9579,8 @@
                 "X": 15,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 400
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -9162,7 +9611,8 @@
                 "X": 18,
                 "Y": 4
             }
-        ]
+        ],
+        "LocationID": 401
     },
     {
         "Itemname": "BADGE_JetpackMP",
@@ -9185,7 +9635,8 @@
                 "X": 25,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 402
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -9212,7 +9663,8 @@
                 "X": 22,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 403
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -9231,7 +9683,8 @@
                 "X": 10,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 404
     },
     {
         "Itemname": "BADGE_4Knifes",
@@ -9250,7 +9703,8 @@
                 "X": 15,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 405
     },
     {
         "Itemname": "EVENT_SnowSHOP",
@@ -9269,7 +9723,8 @@
                 "X": 8,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "ITEM_GoldenGlove",
@@ -9288,7 +9743,8 @@
                 "X": 8,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 406
     },
     {
         "Itemname": "BADGE_DodgeSlide",
@@ -9307,7 +9763,8 @@
                 "X": 8,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 407
     },
     {
         "Itemname": "BADGE_GroundNormalCombo4AltDmg",
@@ -9326,7 +9783,8 @@
                 "X": 8,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 408
     },
     {
         "Itemname": "BADGE_AutoChargeCombo",
@@ -9345,7 +9803,8 @@
                 "X": 8,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 409
     },
     {
         "Itemname": "BADGE_1HealthTypeD",
@@ -9364,7 +9823,8 @@
                 "X": 8,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 410
     },
     {
         "Itemname": "BADGE_KnockConvert",
@@ -9383,7 +9843,8 @@
                 "X": 8,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 411
     },
     {
         "Itemname": "BADGE_BombCharge",
@@ -9402,7 +9863,8 @@
                 "X": 8,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 412
     },
     {
         "Itemname": "BADGE_MPAllBurst",
@@ -9421,7 +9883,8 @@
                 "X": 8,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 413
     },
     {
         "Itemname": "BADGE_FasterTeviStrongGroundUp",
@@ -9440,7 +9903,8 @@
                 "X": 8,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 414
     },
     {
         "Itemname": "STACKABLE_BAG",
@@ -9459,7 +9923,8 @@
                 "X": 8,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 415
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -9478,7 +9943,8 @@
                 "X": 8,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 416
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -9497,7 +9963,8 @@
                 "X": 8,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 417
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -9516,7 +9983,8 @@
                 "X": 8,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 418
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -9535,7 +10003,8 @@
                 "X": 8,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 419
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -9554,7 +10023,8 @@
                 "X": 8,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 420
     },
     {
         "Itemname": "STACKABLE_SHARD",
@@ -9573,7 +10043,8 @@
                 "X": 8,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 421
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -9592,7 +10063,8 @@
                 "X": 15,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 422
     },
     {
         "Itemname": "BADGE_GStrongUpWidth",
@@ -9611,7 +10083,8 @@
                 "X": 18,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 423
     },
     {
         "Itemname": "EVENT_Air",
@@ -9630,7 +10103,8 @@
                 "X": 14,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "EVENT_SnowMechanic",
@@ -9649,7 +10123,8 @@
                 "X": 17,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -9668,7 +10143,8 @@
                 "X": 24,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 424
     },
     {
         "Itemname": "QUEST_GHandR",
@@ -9687,7 +10163,8 @@
                 "X": 28,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 425
     },
     {
         "Itemname": "BADGE_ChargeIntoEnemy",
@@ -9706,7 +10183,8 @@
                 "X": 19,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 426
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -9725,7 +10203,8 @@
                 "X": 16,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 427
     },
     {
         "Itemname": "BADGE_DodgeStrongAirDown",
@@ -9744,7 +10223,8 @@
                 "X": 23,
                 "Y": 15
             }
-        ]
+        ],
+        "LocationID": 428
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -9763,7 +10243,8 @@
                 "X": 19,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 429
     },
     {
         "Itemname": "EVENT_HQSwitch1",
@@ -9782,7 +10263,8 @@
                 "X": 25,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -9801,7 +10283,8 @@
                 "X": 16,
                 "Y": 16
             }
-        ]
+        ],
+        "LocationID": 430
     },
     {
         "Itemname": "BADGE_SuperKnockBomb",
@@ -9820,7 +10303,8 @@
                 "X": 20,
                 "Y": 17
             }
-        ]
+        ],
+        "LocationID": 431
     },
     {
         "Itemname": "ITEM_AirSlide",
@@ -9851,7 +10335,8 @@
                 "X": 17,
                 "Y": 15
             }
-        ]
+        ],
+        "LocationID": 432
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -9887,7 +10372,8 @@
                 "X": 6,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 433
     },
     {
         "Itemname": "EVENT_BOSS",
@@ -9918,7 +10404,8 @@
                 "X": 18,
                 "Y": 15
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "BADGE_SlideThenStrongUp",
@@ -9949,7 +10436,8 @@
                 "X": 26,
                 "Y": 11
             }
-        ]
+        ],
+        "LocationID": 434
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -9968,7 +10456,8 @@
                 "X": 25,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 435
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -9991,7 +10480,8 @@
                 "X": 19,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 436
     },
     {
         "Itemname": "ITEM_TempRing",
@@ -10010,7 +10500,8 @@
                 "X": 19,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 437
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -10029,7 +10520,8 @@
                 "X": 17,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 438
     },
     {
         "Itemname": "BADGE_ConsumeableCharge",
@@ -10048,7 +10540,8 @@
                 "X": 22,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 439
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -10072,7 +10565,8 @@
                 "X": 12,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 440
     },
     {
         "Itemname": "EVENT_BOSS",
@@ -10091,7 +10585,8 @@
                 "X": 22,
                 "Y": 15
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "ITEM_AntiIce",
@@ -10110,7 +10605,8 @@
                 "X": 18,
                 "Y": 15
             }
-        ]
+        ],
+        "LocationID": 441
     },
     {
         "Itemname": "BADGE_LaserRes",
@@ -10129,7 +10625,8 @@
                 "X": 19,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 442
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -10148,7 +10645,8 @@
                 "X": 22,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 443
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -10167,7 +10665,8 @@
                 "X": 18,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 444
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -10191,7 +10690,8 @@
                 "X": 15,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 445
     },
     {
         "Itemname": "EVENT_BOSS",
@@ -10210,7 +10710,8 @@
                 "X": 20,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -10229,7 +10730,8 @@
                 "X": 22,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 446
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -10248,7 +10750,8 @@
                 "X": 20,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 447
     },
     {
         "Itemname": "BADGE_KnockHitEnhance",
@@ -10271,7 +10774,8 @@
                 "X": 21,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 448
     },
     {
         "Itemname": "BADGE_CrystalBulletCancel",
@@ -10290,7 +10794,8 @@
                 "X": 18,
                 "Y": 18
             }
-        ]
+        ],
+        "LocationID": 449
     },
     {
         "Itemname": "BADGE_GroundNormalComboAutoSpeedup",
@@ -10317,7 +10822,8 @@
                 "X": 25,
                 "Y": 19
             }
-        ]
+        ],
+        "LocationID": 450
     },
     {
         "Itemname": "BADGE_BadgeCDReduce",
@@ -10349,7 +10855,8 @@
                 "X": 13,
                 "Y": 17
             }
-        ]
+        ],
+        "LocationID": 451
     },
     {
         "Itemname": "ITEM_Royal",
@@ -10380,7 +10887,8 @@
                 "X": 16,
                 "Y": 17
             }
-        ]
+        ],
+        "LocationID": 452
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -10399,7 +10907,8 @@
                 "X": 14,
                 "Y": 18
             }
-        ]
+        ],
+        "LocationID": 453
     },
     {
         "Itemname": "EVENT_Air",
@@ -10418,7 +10927,8 @@
                 "X": 14,
                 "Y": 17
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "EVENT_Light",
@@ -10437,7 +10947,8 @@
                 "X": 14,
                 "Y": 15
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -10468,7 +10979,8 @@
                 "X": 16,
                 "Y": 15
             }
-        ]
+        ],
+        "LocationID": 454
     },
     {
         "Itemname": "BADGE_SafeItemUse",
@@ -10491,7 +11003,8 @@
                 "X": 13,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 455
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -10510,7 +11023,8 @@
                 "X": 5,
                 "Y": 3
             }
-        ]
+        ],
+        "LocationID": 456
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -10529,7 +11043,8 @@
                 "X": 6,
                 "Y": 3
             }
-        ]
+        ],
+        "LocationID": 457
     },
     {
         "Itemname": "EVENT_SnowMechanic",
@@ -10548,7 +11063,8 @@
                 "X": 12,
                 "Y": 3
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "BADGE_GStrongUpBulletCancelC",
@@ -10567,7 +11083,8 @@
                 "X": 12,
                 "Y": 3
             }
-        ]
+        ],
+        "LocationID": 458
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -10586,7 +11103,8 @@
                 "X": 9,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 459
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -10605,7 +11123,8 @@
                 "X": 8,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 460
     },
     {
         "Itemname": "BADGE_HP2Damage6",
@@ -10624,7 +11143,8 @@
                 "X": 13,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 461
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -10643,7 +11163,8 @@
                 "X": 10,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 462
     },
     {
         "Itemname": "ITEM_RapidShots",
@@ -10662,7 +11183,8 @@
                 "X": 8,
                 "Y": 3
             }
-        ]
+        ],
+        "LocationID": 463
     },
     {
         "Itemname": "STACKABLE_COG",
@@ -10686,7 +11208,8 @@
                 "X": 18,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 464
     },
     {
         "Itemname": "EVENT_BOSS",
@@ -10705,7 +11228,8 @@
                 "X": 11,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -10736,7 +11260,8 @@
                 "X": 6,
                 "Y": 3
             }
-        ]
+        ],
+        "LocationID": 465
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -10763,7 +11288,8 @@
                 "X": 16,
                 "Y": 4
             }
-        ]
+        ],
+        "LocationID": 466
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -10786,7 +11312,8 @@
                 "X": 20,
                 "Y": 3
             }
-        ]
+        ],
+        "LocationID": 467
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -10809,7 +11336,8 @@
                 "X": 20,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 468
     },
     {
         "Itemname": "BADGE_BoostEnhance",
@@ -10828,7 +11356,8 @@
                 "X": 19,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 469
     },
     {
         "Itemname": "ITEM_ZCrystal",
@@ -10847,7 +11376,8 @@
                 "X": 24,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 470
     },
     {
         "Itemname": "BADGE_BombRecoverDebuff",
@@ -10876,7 +11406,8 @@
                 "X": 19,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 471
     },
     {
         "Itemname": "BADGE_AutoFoodCraft",
@@ -10905,7 +11436,8 @@
                 "X": 19,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 472
     },
     {
         "Itemname": "BADGE_AutoFoodUse",
@@ -10934,7 +11466,8 @@
                 "X": 19,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 473
     },
     {
         "Itemname": "BADGE_BombDispelDebuff",
@@ -10963,7 +11496,8 @@
                 "X": 19,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 474
     },
     {
         "Itemname": "ITEM_VenaCharm",
@@ -10992,7 +11526,8 @@
                 "X": 19,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 475
     },
     {
         "Itemname": "ITEM_RapidShots",
@@ -11021,7 +11556,8 @@
                 "X": 19,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 476
     },
     {
         "Itemname": "Useable_VenaBombSmall",
@@ -11050,7 +11586,8 @@
                 "X": 19,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 477
     },
     {
         "Itemname": "Useable_VenaBombBig",
@@ -11079,7 +11616,8 @@
                 "X": 19,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 478
     },
     {
         "Itemname": "Useable_VenaBombBunBun",
@@ -11108,7 +11646,8 @@
                 "X": 19,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 479
     },
     {
         "Itemname": "Useable_VenaBombDispel",
@@ -11137,7 +11676,8 @@
                 "X": 19,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 480
     },
     {
         "Itemname": "Useable_VenaBombHealBlock",
@@ -11166,7 +11706,8 @@
                 "X": 19,
                 "Y": 9
             }
-        ]
+        ],
+        "LocationID": 481
     },
     {
         "Itemname": "BADGE_DoubleAirDash",
@@ -11185,7 +11726,8 @@
                 "X": 0,
                 "Y": 0
             }
-        ]
+        ],
+        "LocationID": 482
     },
     {
         "Itemname": "STACKABLE_SHARD",
@@ -11204,7 +11746,8 @@
                 "X": 2,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 483
     },
     {
         "Itemname": "EVENT_Memine",
@@ -11223,7 +11766,8 @@
                 "X": 2,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "EVENT_Memine0_END",
@@ -11242,7 +11786,8 @@
                 "X": 2,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "EVENT_Memine0",
@@ -11261,7 +11806,8 @@
                 "X": 11,
                 "Y": 20
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_SHARD",
@@ -11280,7 +11826,8 @@
                 "X": 18,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 484
     },
     {
         "Itemname": "EVENT_Memine",
@@ -11299,9 +11846,10 @@
                 "X": 18,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 0
     },
-        {
+    {
         "Itemname": "EVENT_Memine1_END",
         "Location": "Verdazure Ocean",
         "LocationName": "Verdazure Ocean - Memine Race End",
@@ -11318,7 +11866,8 @@
                 "X": 18,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "EVENT_Memine1",
@@ -11337,7 +11886,8 @@
                 "X": 13,
                 "Y": 8
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_SHARD",
@@ -11356,7 +11906,8 @@
                 "X": 11,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 485
     },
     {
         "Itemname": "EVENT_Memine",
@@ -11375,8 +11926,10 @@
                 "X": 11,
                 "Y": 14
             }
-        ]
-    },    {
+        ],
+        "LocationID": 0
+    },
+    {
         "Itemname": "EVENT_Memine2_END",
         "Location": "CopperWood Industry to Travoll Industrie",
         "LocationName": "CopperWood - Memine Race End",
@@ -11393,7 +11946,8 @@
                 "X": 11,
                 "Y": 14
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "EVENT_Memine2",
@@ -11412,7 +11966,8 @@
                 "X": 14,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_SHARD",
@@ -11431,7 +11986,8 @@
                 "X": 22,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 486
     },
     {
         "Itemname": "EVENT_Memine",
@@ -11450,8 +12006,10 @@
                 "X": 22,
                 "Y": 7
             }
-        ]
-    },    {
+        ],
+        "LocationID": 0
+    },
+    {
         "Itemname": "EVENT_Memine3_END",
         "Location": "Valhalla City",
         "LocationName": "Valhalla City - Memine Race End",
@@ -11468,7 +12026,8 @@
                 "X": 22,
                 "Y": 7
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "EVENT_Memine3",
@@ -11487,7 +12046,8 @@
                 "X": 11,
                 "Y": 10
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "EVENT_Memine4",
@@ -11506,7 +12066,8 @@
                 "X": 3,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_SHARD",
@@ -11525,7 +12086,8 @@
                 "X": 18,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 487
     },
     {
         "Itemname": "EVENT_Memine",
@@ -11544,8 +12106,10 @@
                 "X": 18,
                 "Y": 5
             }
-        ]
-    },    {
+        ],
+        "LocationID": 0
+    },
+    {
         "Itemname": "EVENT_Memine4_END",
         "Location": "EverGarden BossPath",
         "LocationName": "EverGarden - Memine Race End",
@@ -11562,7 +12126,8 @@
                 "X": 18,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_SHARD",
@@ -11593,7 +12158,8 @@
                 "X": 18,
                 "Y": 16
             }
-        ]
+        ],
+        "LocationID": 488
     },
     {
         "Itemname": "EVENT_Memine",
@@ -11624,8 +12190,10 @@
                 "X": 18,
                 "Y": 16
             }
-        ]
-    },    {
+        ],
+        "LocationID": 0
+    },
+    {
         "Itemname": "EVENT_Memine5_END",
         "Location": "Forgotten City",
         "LocationName": "Forgotten City - Memine Race End",
@@ -11642,7 +12210,8 @@
                 "X": 18,
                 "Y": 16
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "EVENT_Memine5",
@@ -11661,7 +12230,8 @@
                 "X": 14,
                 "Y": 12
             }
-        ]
+        ],
+        "LocationID": 0
     },
     {
         "Itemname": "STACKABLE_SHARD",
@@ -11680,7 +12250,8 @@
                 "X": 0,
                 "Y": 0
             }
-        ]
+        ],
+        "LocationID": 489
     },
     {
         "Itemname": "BADGE_SableALastHitEnhance",
@@ -11699,7 +12270,8 @@
                 "X": 1,
                 "Y": 0
             }
-        ]
+        ],
+        "LocationID": 490
     },
     {
         "Itemname": "BADGE_SableALongRangeSnipe",
@@ -11718,7 +12290,8 @@
                 "X": 2,
                 "Y": 0
             }
-        ]
+        ],
+        "LocationID": 491
     },
     {
         "Itemname": "BADGE_SableAHitIncrease",
@@ -11737,7 +12310,8 @@
                 "X": 3,
                 "Y": 0
             }
-        ]
+        ],
+        "LocationID": 492
     },
     {
         "Itemname": "BADGE_SableBNormalShotDebuff",
@@ -11756,7 +12330,8 @@
                 "X": 4,
                 "Y": 0
             }
-        ]
+        ],
+        "LocationID": 493
     },
     {
         "Itemname": "BADGE_SableBReturnStyle",
@@ -11775,7 +12350,8 @@
                 "X": 5,
                 "Y": 0
             }
-        ]
+        ],
+        "LocationID": 494
     },
     {
         "Itemname": "BADGE_SableCBigExplode",
@@ -11794,7 +12370,8 @@
                 "X": 6,
                 "Y": 0
             }
-        ]
+        ],
+        "LocationID": 495
     },
     {
         "Itemname": "BADGE_SableCSaver",
@@ -11813,7 +12390,8 @@
                 "X": 7,
                 "Y": 0
             }
-        ]
+        ],
+        "LocationID": 496
     },
     {
         "Itemname": "BADGE_RememberBrutalForce",
@@ -11832,7 +12410,8 @@
                 "X": 16,
                 "Y": 13
             }
-        ]
+        ],
+        "LocationID": 497
     },
     {
         "Itemname": "BADGE_CeliaALongStun",
@@ -11851,7 +12430,8 @@
                 "X": 8,
                 "Y": 0
             }
-        ]
+        ],
+        "LocationID": 498
     },
     {
         "Itemname": "BADGE_CeliaASlowShot",
@@ -11870,7 +12450,8 @@
                 "X": 9,
                 "Y": 0
             }
-        ]
+        ],
+        "LocationID": 499
     },
     {
         "Itemname": "BADGE_CeliaAShortRangeBurst",
@@ -11889,7 +12470,8 @@
                 "X": 10,
                 "Y": 0
             }
-        ]
+        ],
+        "LocationID": 500
     },
     {
         "Itemname": "BADGE_CeliaTypeBAmount",
@@ -11908,7 +12490,8 @@
                 "X": 11,
                 "Y": 0
             }
-        ]
+        ],
+        "LocationID": 501
     },
     {
         "Itemname": "BADGE_CELIATYPEBANGLE",
@@ -11927,7 +12510,8 @@
                 "X": 12,
                 "Y": 0
             }
-        ]
+        ],
+        "LocationID": 502
     },
     {
         "Itemname": "BADGE_CeliaCShotIncrease",
@@ -11946,7 +12530,8 @@
                 "X": 13,
                 "Y": 0
             }
-        ]
+        ],
+        "LocationID": 503
     },
     {
         "Itemname": "BADGE_CeliaCShotAllDirection",
@@ -11965,7 +12550,8 @@
                 "X": 14,
                 "Y": 0
             }
-        ]
+        ],
+        "LocationID": 504
     },
     {
         "Itemname": "BADGE_ComboStyleDamageUp",
@@ -11984,7 +12570,8 @@
                 "X": 1,
                 "Y": 1
             }
-        ]
+        ],
+        "LocationID": 505
     },
     {
         "Itemname": "BADGE_FrameCancel",
@@ -12003,7 +12590,8 @@
                 "X": 2,
                 "Y": 1
             }
-        ]
+        ],
+        "LocationID": 506
     },
     {
         "Itemname": "BADGE_NormalShotReducerB",
@@ -12022,7 +12610,8 @@
                 "X": 3,
                 "Y": 1
             }
-        ]
+        ],
+        "LocationID": 507
     },
     {
         "Itemname": "BADGE_StyleComboWeakGroundUpA",
@@ -12041,7 +12630,8 @@
                 "X": 4,
                 "Y": 1
             }
-        ]
+        ],
+        "LocationID": 508
     },
     {
         "Itemname": "BADGE_NormalShotWhenChargedShot",
@@ -12060,7 +12650,8 @@
                 "X": 1,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 509
     },
     {
         "Itemname": "BADGE_120CHARGE",
@@ -12079,7 +12670,8 @@
                 "X": 2,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 510
     },
     {
         "Itemname": "BADGE_AllMeleeSpeedUp",
@@ -12098,7 +12690,8 @@
                 "X": 3,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 511
     },
     {
         "Itemname": "BADGE_PowerDrop",
@@ -12117,7 +12710,8 @@
                 "X": 4,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 512
     },
     {
         "Itemname": "BADGE_DominantEffectDownA",
@@ -12136,7 +12730,8 @@
                 "X": 5,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 513
     },
     {
         "Itemname": "BADGE_QuickDropExtendA",
@@ -12155,7 +12750,8 @@
                 "X": 1,
                 "Y": 3
             }
-        ]
+        ],
+        "LocationID": 514
     },
     {
         "Itemname": "BADGE_Cannon",
@@ -12174,7 +12770,8 @@
                 "X": 2,
                 "Y": 3
             }
-        ]
+        ],
+        "LocationID": 515
     },
     {
         "Itemname": "BADGE_NormalSupportShot",
@@ -12193,7 +12790,8 @@
                 "X": 3,
                 "Y": 3
             }
-        ]
+        ],
+        "LocationID": 516
     },
     {
         "Itemname": "BADGE_MAXHPBIGUP",
@@ -12212,7 +12810,8 @@
                 "X": 4,
                 "Y": 3
             }
-        ]
+        ],
+        "LocationID": 517
     },
     {
         "Itemname": "BADGE_BoostFullOffense",
@@ -12231,7 +12830,8 @@
                 "X": 5,
                 "Y": 3
             }
-        ]
+        ],
+        "LocationID": 518
     },
     {
         "Itemname": "BADGE_MAXHP2MP",
@@ -12250,7 +12850,8 @@
                 "X": 1,
                 "Y": 4
             }
-        ]
+        ],
+        "LocationID": 519
     },
     {
         "Itemname": "BADGE_CraftBadgeCost",
@@ -12269,7 +12870,8 @@
                 "X": 2,
                 "Y": 4
             }
-        ]
+        ],
+        "LocationID": 520
     },
     {
         "Itemname": "BADGE_StyleComboBackImageS",
@@ -12288,7 +12890,8 @@
                 "X": 3,
                 "Y": 4
             }
-        ]
+        ],
+        "LocationID": 521
     },
     {
         "Itemname": "BADGE_AntiAirPlat",
@@ -12307,7 +12910,8 @@
                 "X": 4,
                 "Y": 4
             }
-        ]
+        ],
+        "LocationID": 522
     },
     {
         "Itemname": "BADGE_StyleComboHeavyGroundFrontA",
@@ -12326,7 +12930,8 @@
                 "X": 5,
                 "Y": 4
             }
-        ]
+        ],
+        "LocationID": 523
     },
     {
         "Itemname": "BADGE_AutoBombChain",
@@ -12345,7 +12950,8 @@
                 "X": 1,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 524
     },
     {
         "Itemname": "BADGE_BounceTeviStrongAirUp",
@@ -12364,7 +12970,8 @@
                 "X": 2,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 525
     },
     {
         "Itemname": "BADGE_SuperFrameCancel",
@@ -12383,7 +12990,8 @@
                 "X": 3,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 526
     },
     {
         "Itemname": "BADGE_ArmorCritCrit",
@@ -12402,7 +13010,8 @@
                 "X": 4,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 527
     },
     {
         "Itemname": "BADGE_Amulet10",
@@ -12421,7 +13030,8 @@
                 "X": 5,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 528
     },
     {
         "Itemname": "BADGE_MAXMPCost",
@@ -12440,7 +13050,8 @@
                 "X": 1,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 529
     },
     {
         "Itemname": "BADGE_100COMBO",
@@ -12459,7 +13070,8 @@
                 "X": 2,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 530
     },
     {
         "Itemname": "BADGE_DominantEffectDownB",
@@ -12478,7 +13090,8 @@
                 "X": 3,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 531
     },
     {
         "Itemname": "BADGE_RangeBreak",
@@ -12497,7 +13110,8 @@
                 "X": 4,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 532
     },
     {
         "Itemname": "BADGE_AutoPilot",
@@ -12516,7 +13130,8 @@
                 "X": 15,
                 "Y": 0
             }
-        ]
+        ],
+        "LocationID": 533
     },
     {
         "Itemname": "ITEM_Explorer",
@@ -12539,7 +13154,8 @@
                 "X": 20,
                 "Y": 1
             }
-        ]
+        ],
+        "LocationID": 534
     },
     {
         "Itemname": "ITEM_Explorer",
@@ -12562,7 +13178,8 @@
                 "X": 20,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 535
     },
     {
         "Itemname": "ITEM_KNIFE",
@@ -12581,7 +13198,8 @@
                 "X": 21,
                 "Y": 1
             }
-        ]
+        ],
+        "LocationID": 536
     },
     {
         "Itemname": "ITEM_KNIFE",
@@ -12600,7 +13218,8 @@
                 "X": 21,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 537
     },
     {
         "Itemname": "ITEM_ORB",
@@ -12619,7 +13238,8 @@
                 "X": 22,
                 "Y": 1
             }
-        ]
+        ],
+        "LocationID": 538
     },
     {
         "Itemname": "ITEM_ORB",
@@ -12638,7 +13258,8 @@
                 "X": 22,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 539
     },
     {
         "Itemname": "ITEM_RapidShots",
@@ -12657,7 +13278,8 @@
                 "X": 23,
                 "Y": 1
             }
-        ]
+        ],
+        "LocationID": 540
     },
     {
         "Itemname": "ITEM_RapidShots",
@@ -12676,7 +13298,8 @@
                 "X": 23,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 541
     },
     {
         "Itemname": "ITEM_AttackRange",
@@ -12695,7 +13318,8 @@
                 "X": 24,
                 "Y": 1
             }
-        ]
+        ],
+        "LocationID": 542
     },
     {
         "Itemname": "ITEM_AttackRange",
@@ -12714,7 +13338,8 @@
                 "X": 24,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 543
     },
     {
         "Itemname": "ITEM_EasyStyle",
@@ -12733,7 +13358,8 @@
                 "X": 25,
                 "Y": 1
             }
-        ]
+        ],
+        "LocationID": 544
     },
     {
         "Itemname": "ITEM_EasyStyle",
@@ -12752,7 +13378,8 @@
                 "X": 25,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 545
     },
     {
         "Itemname": "ITEM_LINEBOMB",
@@ -12771,7 +13398,8 @@
                 "X": 26,
                 "Y": 1
             }
-        ]
+        ],
+        "LocationID": 546
     },
     {
         "Itemname": "ITEM_LINEBOMB",
@@ -12790,7 +13418,8 @@
                 "X": 26,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 547
     },
     {
         "Itemname": "ITEM_AREABOMB",
@@ -12809,7 +13438,8 @@
                 "X": 27,
                 "Y": 1
             }
-        ]
+        ],
+        "LocationID": 548
     },
     {
         "Itemname": "ITEM_AREABOMB",
@@ -12828,7 +13458,8 @@
                 "X": 27,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 549
     },
     {
         "Itemname": "ITEM_SPEEDUP",
@@ -12847,7 +13478,8 @@
                 "X": 28,
                 "Y": 1
             }
-        ]
+        ],
+        "LocationID": 550
     },
     {
         "Itemname": "ITEM_SPEEDUP",
@@ -12866,7 +13498,8 @@
                 "X": 28,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 551
     },
     {
         "Itemname": "ITEM_AirDash",
@@ -12885,7 +13518,8 @@
                 "X": 29,
                 "Y": 1
             }
-        ]
+        ],
+        "LocationID": 552
     },
     {
         "Itemname": "ITEM_AirDash",
@@ -12904,7 +13538,8 @@
                 "X": 29,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 553
     },
     {
         "Itemname": "ITEM_WALLJUMP",
@@ -12923,7 +13558,8 @@
                 "X": 30,
                 "Y": 1
             }
-        ]
+        ],
+        "LocationID": 554
     },
     {
         "Itemname": "ITEM_WALLJUMP",
@@ -12942,7 +13578,8 @@
                 "X": 30,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 555
     },
     {
         "Itemname": "ITEM_JETPACK",
@@ -12961,7 +13598,8 @@
                 "X": 29,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 556
     },
     {
         "Itemname": "ITEM_JETPACK",
@@ -12980,7 +13618,8 @@
                 "X": 29,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 557
     },
     {
         "Itemname": "ITEM_BoostSystem",
@@ -12999,7 +13638,8 @@
                 "X": 20,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 558
     },
     {
         "Itemname": "ITEM_BoostSystem",
@@ -13018,7 +13658,8 @@
                 "X": 20,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 559
     },
     {
         "Itemname": "ITEM_OrbAmulet",
@@ -13037,7 +13678,8 @@
                 "X": 21,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 560
     },
     {
         "Itemname": "ITEM_OrbAmulet",
@@ -13056,7 +13698,8 @@
                 "X": 21,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 561
     },
     {
         "Itemname": "ITEM_BOMBFUEL",
@@ -13075,7 +13718,8 @@
                 "X": 22,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 562
     },
     {
         "Itemname": "ITEM_BOMBFUEL",
@@ -13094,7 +13738,8 @@
                 "X": 22,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 563
     },
     {
         "Itemname": "ITEM_BombLengthExtend",
@@ -13113,7 +13758,8 @@
                 "X": 23,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 564
     },
     {
         "Itemname": "ITEM_BombLengthExtend",
@@ -13132,7 +13778,8 @@
                 "X": 23,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 565
     },
     {
         "Itemname": "ITEM_MASK",
@@ -13151,7 +13798,8 @@
                 "X": 24,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 566
     },
     {
         "Itemname": "ITEM_MASK",
@@ -13170,7 +13818,8 @@
                 "X": 24,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 567
     },
     {
         "Itemname": "ITEM_TempRing",
@@ -13189,7 +13838,8 @@
                 "X": 25,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 568
     },
     {
         "Itemname": "ITEM_TempRing",
@@ -13208,7 +13858,8 @@
                 "X": 25,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 569
     },
     {
         "Itemname": "ITEM_DodgeShot",
@@ -13227,7 +13878,8 @@
                 "X": 26,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 570
     },
     {
         "Itemname": "ITEM_DodgeShot",
@@ -13246,7 +13898,8 @@
                 "X": 26,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 571
     },
     {
         "Itemname": "ITEM_Rotater",
@@ -13265,7 +13918,8 @@
                 "X": 27,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 572
     },
     {
         "Itemname": "ITEM_Rotater",
@@ -13284,7 +13938,8 @@
                 "X": 27,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 573
     },
     {
         "Itemname": "ITEM_GoldenGlove",
@@ -13303,7 +13958,8 @@
                 "X": 28,
                 "Y": 5
             }
-        ]
+        ],
+        "LocationID": 574
     },
     {
         "Itemname": "ITEM_GoldenGlove",
@@ -13322,7 +13978,8 @@
                 "X": 28,
                 "Y": 6
             }
-        ]
+        ],
+        "LocationID": 575
     },
     {
         "Itemname": "ITEM_OrbTypeC2",
@@ -13341,7 +13998,8 @@
                 "X": 34,
                 "Y": 1
             }
-        ]
+        ],
+        "LocationID": 576
     },
     {
         "Itemname": "ITEM_OrbTypeS2",
@@ -13360,7 +14018,8 @@
                 "X": 34,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 577
     },
     {
         "Itemname": "ITEM_OrbTypeC3",
@@ -13379,7 +14038,8 @@
                 "X": 34,
                 "Y": 3
             }
-        ]
+        ],
+        "LocationID": 578
     },
     {
         "Itemname": "ITEM_OrbTypeS3",
@@ -13398,7 +14058,8 @@
                 "X": 34,
                 "Y": 4
             }
-        ]
+        ],
+        "LocationID": 579
     },
     {
         "Itemname": "ITEM_OrbBoostU",
@@ -13417,7 +14078,8 @@
                 "X": 35,
                 "Y": 1
             }
-        ]
+        ],
+        "LocationID": 580
     },
     {
         "Itemname": "ITEM_OrbBoostD",
@@ -13436,6 +14098,7 @@
                 "X": 35,
                 "Y": 2
             }
-        ]
+        ],
+        "LocationID": 581
     }
 ]
