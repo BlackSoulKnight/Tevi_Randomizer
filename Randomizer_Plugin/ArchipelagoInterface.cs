@@ -64,7 +64,10 @@ namespace TeviRandomizer
         private bool lostConnection = false;
         private JObject APNameToTevi;
         public JObject TeviToAPName;
-        private const long baseID = 44966541000;
+        private int StartIDTeleporter = -1;
+        private int EndIDTeleporter = -1;
+        private int StartIDTrap = -1;
+        private int EndIDTrap = -1;
         private Dictionary<string, LocationData> locations = new Dictionary<string, LocationData>();
         private Dictionary<int, int> transitionData = new Dictionary<int, int>();
         public int currentItemNR = 0;
@@ -139,6 +142,18 @@ namespace TeviRandomizer
                 setCustomFlags((JObject)success.SlotData["options"]);
             if(success.SlotData.ContainsKey("version"))
                 connectVersion = (string)success.SlotData["version"];
+            if (success.SlotData.ContainsKey("StartIDTeleporter"))
+            {
+                StartIDTeleporter = (int)(long)success.SlotData["StartIDTeleporter"];
+                EndIDTeleporter = StartIDTeleporter + Enum.GetValues(typeof(TeleporterRando.TeleporterLoc)).Length;
+            }
+            if (success.SlotData.ContainsKey("StartIDTrap"))
+            {
+                StartIDTrap = (int)(long)success.SlotData["StartIDTrap"];
+                EndIDTrap = StartIDTrap + Enum.GetValues(typeof(TeviTraps.Traps)).Length;
+
+            }
+
             getOwnLocationData().Wait();
             getOwnTransitionData(success.SlotData["transitionData"]);
             UI.UI.checkApWorldLocationCheck = true;
@@ -475,18 +490,18 @@ namespace TeviRandomizer
                     byte value = 1;
                     string name = "";
                     string desc = "";
-                    int itemID = (int)(item.ItemId - baseID);
-                    if(itemID >= 500 && itemID <= 536)
+                    int itemID = (int)item.ItemId;
+                    if(StartIDTeleporter > 0 && itemID >= StartIDTeleporter && itemID <= EndIDTeleporter)
                     {
                         name = item.ItemName;
                         desc = $"{name} is now available.";
-                        value = (byte)(itemID - 500);
+                        value = (byte)(itemID - StartIDTeleporter);
                         itemID = (byte)TeviSettings.PortalItem;
                     }
-                    if(itemID >= 550)
+                    if(StartIDTeleporter > 0 && itemID >= StartIDTrap && itemID < EndIDTrap)
                     {
                         name = item.ItemName;
-                        value = (byte)(itemID - 550);
+                        value = (byte)(itemID - StartIDTrap);
                         itemID = (byte)RandomizerPlugin.Trap;
                     }
                     teviItem = (ItemList.Type)itemID;
@@ -494,7 +509,7 @@ namespace TeviRandomizer
                     bool skiphud = true;
 
                     int flags = (int)ItemPopUpChoice;
-                    if (ItemPopUpChoice.HasFlag(PopupChoice.Progression) && TeviSettings.ProgressionsItems.Contains(teviItem.ToString()))
+                    if (ItemPopUpChoice.HasFlag(PopupChoice.Progression) && TeviSettings.ProgressionItems.Contains(teviItem.ToString()))
                         skiphud = false;
                     if (ItemPopUpChoice.HasFlag(PopupChoice.Sigils) && teviItem.ToString().Contains("BADGE"))
                         skiphud = false;
