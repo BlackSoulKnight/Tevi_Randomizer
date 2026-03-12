@@ -81,7 +81,7 @@
     },
     {
         "Name": "I14",
-        "DisplayName": "50 Zennie Pack",
+        "DisplayName": "500 Zennie Pack",
         "Default_Quantity": 591,
         "Maximum_Quantity": 591,
         "Classification": "filler",
@@ -2170,7 +2170,7 @@
         "Group": "Badge"
     },
     {
-        "Name": "BADGE_10COMBO",
+        "Name": "BADGE_100COMBO",
         "DisplayName": "The Untamed",
         "Default_Quantity": 1,
         "Maximum_Quantity": 1,
