@@ -137,7 +137,8 @@
                 {
                     "Exit": "Cobra",
                     "Method": ""
-                },                {
+                },
+                {
                     "Exit": "0106",
                     "Method": ""
                 },
@@ -174,21 +175,11 @@
         },
         {
             "Name": "Crafting",
-            "Connections": [
-                {
-                    "Exit": "",
-                    "Method": ""
-                }
-            ]
+            "Connections": []
         },
         {
             "Name": "Item Upgrade",
-            "Connections": [
-                {
-                    "Exit": "",
-                    "Method": ""
-                }
-            ]
+            "Connections": []
         },
         {
             "Name": "Gurun Desert",
@@ -196,7 +187,8 @@
                 {
                     "Exit": "Cactus",
                     "Method": ""
-                },                {
+                },
+                {
                     "Exit": "0102",
                     "Method": ""
                 },
@@ -218,7 +210,8 @@
                 {
                     "Exit": "Scorpion",
                     "Method": ""
-                },                {
+                },
+                {
                     "Exit": "0201",
                     "Method": ""
                 },
@@ -268,17 +261,17 @@
             ]
         },
         {
-            "Name":"Morose City Shop",
-            "Connections":[
+            "Name": "Morose City Shop",
+            "Connections": [
                 {
-                    "Exit":"Shop Bonus",
-                    "Method":"Chapter 2 && EVENT_SnowSHOP && EVENT_ValhallaSHOP && EVENT_TartarusSHOP && EVENT_AnathemaSHOP && EVENT_MoroseSHOP"
+                    "Exit": "Shop Bonus",
+                    "Method": "Chapter 2 && EVENT_SnowSHOP && EVENT_ValhallaSHOP && EVENT_TartarusSHOP && EVENT_AnathemaSHOP && EVENT_MoroseSHOP"
                 }
             ]
         },
         {
             "Name": "Shop Bonus",
-            "Connections":[]
+            "Connections": []
         }
     ],
     "Map04": [
@@ -610,11 +603,11 @@
             ]
         },
         {
-            "Name":"Ana Thema Shop",
-            "Connections":[
+            "Name": "Ana Thema Shop",
+            "Connections": [
                 {
-                    "Exit":"Shop Bonus",
-                    "Method":"Chapter 2 && EVENT_SnowSHOP && EVENT_ValhallaSHOP && EVENT_TartarusSHOP && EVENT_AnathemaSHOP && EVENT_MoroseSHOP"
+                    "Exit": "Shop Bonus",
+                    "Method": "Chapter 2 && EVENT_SnowSHOP && EVENT_ValhallaSHOP && EVENT_TartarusSHOP && EVENT_AnathemaSHOP && EVENT_MoroseSHOP"
                 }
             ]
         },
@@ -633,12 +626,7 @@
         },
         {
             "Name": "Vena Shop",
-            "Connections": [
-                {
-                    "Exit": "",
-                    "Method": ""
-                }
-            ]
+            "Connections": []
         }
     ],
     "Map09": [
@@ -1238,11 +1226,11 @@
             ]
         },
         {
-            "Name":"Tartarus Shop",
-            "Connections":[
+            "Name": "Tartarus Shop",
+            "Connections": [
                 {
-                    "Exit":"Shop Bonus",
-                    "Method":"Chapter 2 && EVENT_SnowSHOP && EVENT_ValhallaSHOP && EVENT_TartarusSHOP && EVENT_AnathemaSHOP && EVENT_MoroseSHOP"
+                    "Exit": "Shop Bonus",
+                    "Method": "Chapter 2 && EVENT_SnowSHOP && EVENT_ValhallaSHOP && EVENT_TartarusSHOP && EVENT_AnathemaSHOP && EVENT_MoroseSHOP"
                 }
             ]
         },
@@ -1298,8 +1286,8 @@
             "Name": "Snow City Shop",
             "Connections": [
                 {
-                    "Exit":"Shop Bonus",
-                    "Method":"Chapter 2 && EVENT_SnowSHOP && EVENT_ValhallaSHOP && EVENT_TartarusSHOP && EVENT_AnathemaSHOP && EVENT_MoroseSHOP"
+                    "Exit": "Shop Bonus",
+                    "Method": "Chapter 2 && EVENT_SnowSHOP && EVENT_ValhallaSHOP && EVENT_TartarusSHOP && EVENT_AnathemaSHOP && EVENT_MoroseSHOP"
                 }
             ]
         },
@@ -1625,12 +1613,7 @@
         {
             "Name": "Dreamless Depths 2",
             "Note": "Could be in Trasition Rando, isnt yet",
-            "Connections": [
-                {
-                    "Exit": "",
-                    "Method": ""
-                }
-            ]
+            "Connections": []
         }
     ],
     "Map19": [
@@ -1653,9 +1636,7 @@
         },
         {
             "Name": "Valley East Enemies",
-            "Connections": [
-
-            ]
+            "Connections": []
         },
         {
             "Name": "Heavens Valley Snow Route Middle",
@@ -1719,11 +1700,11 @@
             ]
         },
         {
-            "Name":"Valhalla City Shop",
-            "Connections":[
+            "Name": "Valhalla City Shop",
+            "Connections": [
                 {
-                    "Exit":"Shop Bonus",
-                    "Method":"Chapter 2 && EVENT_SnowSHOP && EVENT_ValhallaSHOP && EVENT_TartarusSHOP && EVENT_AnathemaSHOP && EVENT_MoroseSHOP"
+                    "Exit": "Shop Bonus",
+                    "Method": "Chapter 2 && EVENT_SnowSHOP && EVENT_ValhallaSHOP && EVENT_TartarusSHOP && EVENT_AnathemaSHOP && EVENT_MoroseSHOP"
                 }
             ]
         }
@@ -1820,15 +1801,14 @@
             "Name": "Valhalla Breath West Extended",
             "Connections": [
                 {
-                    "Exit":"V_Chariot",
+                    "Exit": "V_Chariot",
                     "Method": ""
                 }
             ]
         },
         {
             "Name": "West Breath Enemies",
-            "Connections": [
-            ]
+            "Connections": []
         }
     ],
     "Map22": [
@@ -1957,9 +1937,7 @@
         },
         {
             "Name": "Catalab Enemies",
-            "Connections": [
-
-            ]
+            "Connections": []
         },
         {
             "Name": "Catacombs Main",
@@ -2123,12 +2101,7 @@
         },
         {
             "Name": "Cloister Pre Boss",
-            "Connections": [
-                {
-                    "Exit": "",
-                    "Method": ""
-                }
-            ]
+            "Connections": []
         }
     ],
     "Map27": [
@@ -2151,8 +2124,7 @@
         },
         {
             "Name": "Gallery of Enemies",
-            "Connections": [
-            ]
+            "Connections": []
         },
         {
             "Name": "Gallery of Mirrors East",
@@ -2272,12 +2244,7 @@
         },
         {
             "Name": "Blushwood Sliding",
-            "Connections": [
-                {
-                    "Exit": "",
-                    "Method": ""
-                }
-            ]
+            "Connections": []
         }
     ],
     "Map29": [
@@ -2316,7 +2283,8 @@
                 {
                     "Exit": "EverGarden",
                     "Method": "ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK"
-                },                {
+                },
+                {
                     "Exit": "V_Unicorn",
                     "Method": ""
                 },
@@ -3690,11 +3658,10 @@
                     "Method": "( ITEM_AREABOMB || ITEM_LINEBOMB )"
                 }
             ]
-        },        
+        },
         {
             "Name": "Magma Swamp Enemies",
-            "Connections": [
-            ]
+            "Connections": []
         },
         {
             "Name": "Teleporter DreamKeeper Outside",
@@ -4025,7 +3992,7 @@
             ]
         }
     ],
-    "UniqueEnemies":[
+    "UniqueEnemies": [
         {
             "Name": "Hermitcrab_Shoes",
             "Connections": []
