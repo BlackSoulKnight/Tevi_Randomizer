@@ -103,5 +103,39 @@ namespace TeviRandomizer
             } while (visited.Count != prev);
             return returnVal;
         }
+        public static List<Randomizer.Location> TestReachability(Randomizer.Area start, List<Randomizer.Location> allLocations, Dictionary<string,int> startItems = null)
+        {
+            List<Randomizer.Location> missing = new();
+
+            HashSet<Randomizer.Location> visited = new();
+            Dictionary<string, int> items = startItems !=null?new(startItems):new();
+            Queue<Randomizer.Location> newLocations = new();
+
+            int prev = -1;
+            do
+            {
+                prev = visited.Count;
+                newLocations = new(Search(start, items));
+                while (newLocations.Count > 0)
+                {
+                    var loc = newLocations.Dequeue();
+                    if (visited.Contains(loc))
+                        continue;
+                    if (loc.isReachAble(items))
+                    {
+                        if (items.ContainsKey(loc.newItem))
+                            items[loc.newItem] += 1;
+                        else
+                            items[loc.newItem] = 1;
+                        prev = -1;
+                        visited.Add(loc);
+                    }
+                }
+            } while (visited.Count != prev);
+            foreach( var loc in allLocations)
+                if( !visited.Contains(loc) )
+                    missing.Add(loc);
+            return missing;
+        }
     }
 }
