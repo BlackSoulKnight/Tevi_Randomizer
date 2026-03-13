@@ -168,21 +168,6 @@ namespace TeviRandomizer
             LocationData locationData = new LocationData();
             ItemPopUpChoice = PopupChoice.None;
 
-            if(optionData.ContainsKey("free_MATK"))
-                TeviSettings.extraPotions[(int)FreePot.Melee] = (int)(long)optionData["free_MATK"];
-
-            if(optionData.ContainsKey("free_RATK"))
-                TeviSettings.extraPotions[(int)FreePot.Range] = (int)(long)optionData["free_RATK"];
-
-            if(optionData.ContainsKey("free_HP"))
-                TeviSettings.extraPotions[(int)FreePot.HP] = (int)(long)optionData["free_HP"];
-
-            if(optionData.ContainsKey("free_MP"))
-                TeviSettings.extraPotions[(int)FreePot.Mana] = (int)(long)optionData["free_MP"];
-
-            if(optionData.ContainsKey("free_EP"))
-                TeviSettings.extraPotions[(int)FreePot.EP] = (int)(long)optionData["free_EP"];
-
             if (optionData.ContainsKey("popupAll") && (bool)optionData.GetValue("popupAll"))
                 ItemPopUpChoice |= PopupChoice.All;
 

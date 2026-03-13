@@ -1,23 +1,15 @@
-﻿using BepInEx;
-using Bullet;
-using Game;
+﻿using Game;
 using HarmonyLib;
-using JetBrains.Annotations;
-using QFSW.QC;
 using Rewired;
-using RewiredConsts;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Net;
 using System.Threading.Tasks;
 using TeviRandomizer.TeviRandomizerSettings;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.SocialPlatforms;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
+
 
 
 
@@ -306,6 +298,12 @@ namespace TeviRandomizer.UI
             TeviSettings.customFlags[CustomFlags.RandomizedEnemy] = ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn || ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomEnemies"]).isOn;
             TeviSettings.customFlags[CustomFlags.RandomizedBG] = ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomBG"]).isOn;
             TeviSettings.customFlags[CustomFlags.RandomizedMusic] = ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomMusic"]).isOn;
+            TeviSettings.extraPotions[(int)FreePot.Melee] = (int)Randomizer.settings["MeleePot"].Value;
+            TeviSettings.extraPotions[(int)FreePot.Range] = (int)Randomizer.settings["RangePot"].Value;
+            TeviSettings.extraPotions[(int)FreePot.HP] = (int)Randomizer.settings["HealthPot"].Value;
+            TeviSettings.extraPotions[(int)FreePot.Mana] = (int)Randomizer.settings["ManaPot"].Value;
+            TeviSettings.extraPotions[(int)FreePot.EP] = (int)Randomizer.settings["SigilPot"].Value;
+            TeviSettings.customFlags[CustomFlags.CompassStart] = (bool)Randomizer.settings["Lv3Compass"].Value;
             ResourcePatch.patchResources((TeviSettings.customFlags[CustomFlags.RandomizedBoss] || TeviSettings.customFlags[CustomFlags.RandomizedEnemy] || TeviSettings.customFlags[CustomFlags.RandomizedBG] || TeviSettings.customFlags[CustomFlags.RandomizedMusic]) && RandomizerPlugin.randomizerEnabled);
             if (((UnityEngine.UI.Toggle)UI.settings["Toggle RandomEnemies"]).isOn || ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn) 
                 Extras.RandomizeExtra.randomEnemies();
