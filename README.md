@@ -1,6 +1,7 @@
 # Tevi Randomizer
 
 ## Tips/Rando exclusive knowledge
++ For easier runs add extra potions in the Start Bonus tab
 + If you're stuck or need to back track, there is always a free crafting option for bell which teleports you to any Teleporter you have visited
 + The rando may require the freeroam exclusive tech (wall jumps and wall kicks) for vertical mobility before finding any vertical mobility items
   + To do a wall jump without the wall jump item, face away from a wall then jump, turn towards the wall then press away and jump
@@ -27,6 +28,9 @@
 | Celia / Sable            | Start the Game with Celia and Sable unlocked |
 | Level 3 Compass          | Start the Game with Compass level 3 |
 | Vanilla Item Upgrades    | Crafting Item result in a level for the item instead of beeing randomized |
+| Magitite Amount          | Resource amount for upgrading important movement items |
+| Mananite Amount          | Resource amount for upgrading other items |
+| Traps in Percent         | Replace x % of non progression items into traps |
 | Early Morose             | Destroys the blocks which require Linebomb to access Morose |
 | Dream Barrier Skip       | Enter Dreamers Keep without destroying 2 of the 3 Blue Orbs required |
 | Hidden Free Roam Path    | Logic will include all hidden Paths |
