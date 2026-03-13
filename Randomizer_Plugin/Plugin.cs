@@ -30,6 +30,8 @@ namespace TeviRandomizer
         public const ItemList.Type MoneyItem = ItemList.Type.I14;
         public const ItemList.Type CoreUpgradeItem = ItemList.Type.I15;
         public const ItemList.Type ItemUpgradeItem = ItemList.Type.I16;
+        public const ItemList.Type CeliaItem = ItemList.Type.I19;
+        public const ItemList.Type SableItem = ItemList.Type.I20;
 
         public enum EventID
         {
@@ -38,7 +40,6 @@ namespace TeviRandomizer
 
         RandomizerPlugin()
         {
-            TeviSettings.pluginPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
         }
 
         static public Dictionary<string, string> __itemData = new();
@@ -89,10 +90,11 @@ namespace TeviRandomizer
         //update everything Cooldown related
         private void Update()
         {
-            if (WorldManager.Instance?.MapInited == true && !EventManager.Instance.IsChangingMap() && GemaUIPauseMenu.Instance.GetAllowPause() && !GameSystem.Instance.isAnyPause())
-            {
-                Bonus_Features.QuickdropPatch.QuickdropTimer += Time.deltaTime;
-            }
+            if(WorldManager.Instance != null && EventManager.Instance != null && GemaUIPauseMenu.Instance != null && GameSystem.Instance != null)
+                if (WorldManager.Instance?.MapInited == true && !EventManager.Instance.IsChangingMap() && GemaUIPauseMenu.Instance.GetAllowPause() && !GameSystem.Instance.isAnyPause())
+                {
+                    Bonus_Features.QuickdropPatch.QuickdropTimer += Time.deltaTime;
+                }
         }
 
 
@@ -675,7 +677,7 @@ namespace TeviRandomizer
             }
             if(data == Trap)
             {
-                spr = CommonResource.Instance.GetItem((int)TeviSettings.ProgressionsItemValues.GetValue(UnityEngine.Random.RandomRangeInt(0, TeviSettings.ProgressionsItemValues.Length)));
+                spr = CommonResource.Instance.GetItem(TeviSettings.ProgressionsItemValues[UnityEngine.Random.RandomRangeInt(0, TeviSettings.ProgressionsItemValues.Length)]);
             }
 
             if (data >= ItemList.Type.BADGE_START && data <= ItemList.Type.BADGE_MAX)

@@ -88,7 +88,7 @@ namespace TeviRandomizer
                 }
                 if (eS3File.KeyExists("HintList"))
                 {
-                    ChatSystemPatch.hintList = eS3File.Load<(string, string, byte)[]>("HintList");
+                    ChatSystemPatch.hintList = eS3File.Load<(string, string)[]>("HintList");
                 }
                 if (eS3File.KeyExists("EventReplace"))
                 {

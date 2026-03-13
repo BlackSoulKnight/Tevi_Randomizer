@@ -70,7 +70,45 @@ namespace TeviRandomizer
 
     public class Randomizer
     {
+        private int IncreaseItemQuantity(string item, int amount = 1) => ChangeItemQuantity(item, amount); 
+        private int DecreaseItemQuantity(string item, int amount = 1) => ChangeItemQuantity(item, -amount);
+        private void SetItemQuantity(string item, int amount) {
+            if (TeviSettings.ProgressionItems.Contains(item))
+                ProgressionPool[item] = amount;
+            else
+                ItemPool[item] = amount; 
+        }
+        private bool RemoveItemFromPool(string item) => ChangeItemQuantity(item,deleteItem:true) <0?false:true;
+        private int ChangeItemQuantity(string item, int amount = 1, bool deleteItem = false)
+        {
+            var pool = TeviSettings.ProgressionItems.Contains(item)?ProgressionPool:ItemPool;
 
+            if (pool.ContainsKey(item))
+            {
+                if (deleteItem)
+                {
+                    pool.Remove(item);
+                    return 0;
+                }
+
+                if (pool[item] + amount < 0)
+                {
+                    amount += pool[item];
+                    pool.Remove(item);
+                    return amount;
+                }
+                else if (pool[item] == -amount)
+                    pool.Remove(item);
+                else
+                    pool[item] += amount;
+                return 0;
+            }
+            else if (amount > 0)
+            {
+                pool[item] = amount;
+            }
+            return -1;
+        }
 
         private void CustomOptions(System.Random seed)
         {
@@ -89,25 +127,18 @@ namespace TeviRandomizer
                             case "Knife":
                                 if (isOn)
                                 {
-
-                                    Location loc = locations.Find(x => x.itemId == (int)ItemList.Type.ITEM_KNIFE && x.slotId == 1);
-                                    loc.setNewItem(ItemList.Type.ITEM_KNIFE, 4);
-                                    locations.Remove(loc);
-                                    itemPool[ItemList.Type.ITEM_KNIFE.ToString()]--;
+                                    string loc = "Thanatara Canyon - Dagger";
+                                    Locations[loc].setNewItem(ItemList.Type.ITEM_KNIFE.ToString());
+                                    DecreaseItemQuantity(ItemList.Type.ITEM_KNIFE.ToString());
                                 }
                                 break;
                             case "Orb":
                                 if (isOn)
                                 {
-                                    Location loc = locations.Find(x => x.itemId == (int)ItemList.Type.ITEM_ORB && x.slotId == 1);
-                                    loc.setNewItem(ItemList.Type.ITEM_ORB, 4);
-                                    locations.Remove(loc);
-                                    itemPool[ItemList.Type.ITEM_ORB.ToString()]--;
+                                    string loc = "Thanatara Canyon - Orbitars";
+                                    Locations[loc].setNewItem(ItemList.Type.ITEM_ORB.ToString());
+                                    DecreaseItemQuantity(ItemList.Type.ITEM_ORB.ToString());
                                 }
-
-                                break;
-                            case "Lv3Compass":
-                                TeviSettings.customFlags[CustomFlags.CompassStart] = isOn;
                                 break;
                             case "tmpOption":
                                 TeviSettings.customFlags[CustomFlags.TempOption] = isOn;
@@ -118,41 +149,39 @@ namespace TeviRandomizer
                                 {
                                     foreach (var item in Enum.GetValues(typeof(Upgradable)))
                                     {
+                                        string loc = $"Item Upgrade - {APItemNames[item.ToString()]} #1";
+                                        string loc2 = $"Item Upgrade - {APItemNames[item.ToString()]} #2";
                                         ItemList.Type t = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), item.ToString());
-                                        Location loc = locations.Find(x => x.itemId == (int)t && x.slotId == 2);
-                                        loc.setNewItem(t, 5);
-                                        locations.Remove(loc);
 
-                                        loc = locations.Find(x => x.itemId == (int)t && x.slotId == 3);
-                                        loc.setNewItem(t, 6);
-                                        locations.Remove(loc);
-                                        itemPool[t.ToString()] -= 2;
+                                        Locations[loc].setNewItem(t.ToString());
+                                        Locations[loc2].setNewItem(t.ToString());
+                                        DecreaseItemQuantity(t.ToString(),2);
                                     }
                                 }
                                 break;
                             case "Ceble":
                                 TeviSettings.customFlags[CustomFlags.CebleStart] = isOn;
+                                if (isOn)
+                                {
+                                    DecreaseItemQuantity(RandomizerPlugin.CeliaItem.ToString());
+                                    DecreaseItemQuantity(RandomizerPlugin.SableItem.ToString());
+                                    StartItems[RandomizerPlugin.SableItem.ToString()] = 1;
+                                    StartItems[RandomizerPlugin.CeliaItem.ToString()] = 1;
+                                }
                                 break;
                             case "SuperBosses":
                                 if (!isOn)
                                 {
-                                    Location loc = locations.Find(x => x.itemId == (int)ItemList.Type.STACKABLE_COG && x.slotId == 200);
-                                    loc.setNewItem(ItemList.Type.STACKABLE_COG, 200);
-                                    locations.Remove(loc);
-                                    ignoreLocationList.Add(loc);
+                                    string loc = "Ana Thema - GemaYue";
+                                    Locations[loc].setNewItem(ItemList.Type.STACKABLE_COG.ToString());
+                                    
+                                    loc = "Ana Thema - EinLee";
+                                    Locations[loc].setNewItem(ItemList.Type.STACKABLE_COG.ToString());
 
-                                    loc = locations.Find(x => x.itemId == (int)ItemList.Type.STACKABLE_COG && x.slotId == 201);
-                                    loc.setNewItem(ItemList.Type.STACKABLE_COG, 201);
-                                    locations.Remove(loc);
-                                    ignoreLocationList.Add(loc);
-
-                                    loc = locations.Find(x => x.itemId == (int)ItemList.Type.STACKABLE_COG && x.slotId == 202);
-                                    loc.setNewItem(ItemList.Type.STACKABLE_COG, 202);
-                                    locations.Remove(loc);
-                                    ignoreLocationList.Add(loc);
+                                    loc = "Ana Thema - Waero";
+                                    Locations[loc].setNewItem(ItemList.Type.STACKABLE_COG.ToString());
                                 }
                                 TeviSettings.customFlags[CustomFlags.SuperBosses] = isOn;
-
                                 break;
                             case "BackFlip":
                                 TeviSettings.customFlags[CustomFlags.BackFlip] = isOn;
@@ -172,18 +201,20 @@ namespace TeviRandomizer
                             case "RandomMoney":
                                 TeviSettings.customFlags[CustomFlags.RandomMoney] = isOn;
                                 if (isOn)
-                                    locations.AddRange(Money);
-                                else
-                                    itemPool.Remove(ItemList.Type.I14.ToString());
+                                {
+                                    foreach (var loc in MoneyLocations)
+                                        loc.newItem = loc.Itemname;
+                                    RemoveItemFromPool(TeviSettings.MoneyItem.ToString());
+                                }
                                 break;
                             case "RandomResource":
                                 TeviSettings.customFlags[CustomFlags.RandomResource] = isOn;
-                                if (isOn)
-                                    locations.AddRange(resources);
-                                else
+                                if (!isOn)
                                 {
-                                    itemPool.Remove(ItemList.Type.I15.ToString());
-                                    itemPool.Remove(ItemList.Type.I16.ToString());
+                                    foreach (var loc in ResourceLocations)
+                                        loc.newItem = loc.Itemname;
+                                    RemoveItemFromPool(TeviSettings.CoreUpgradeItem.ToString());
+                                    RemoveItemFromPool(TeviSettings.ItemUpgradeItem.ToString());
                                 }
                                 break;
                             default: break;
@@ -193,30 +224,22 @@ namespace TeviRandomizer
                         int value = (int)option.Value;
                         switch (option.Name)
                         {
-                            case "RangePot":
-                                TeviSettings.extraPotions[0] = value;
-                                break;
-                            case "MeleePot":
-                                TeviSettings.extraPotions[1] = value;
-                                break;
                             case "GearReq":
                                 TeviSettings.GoMode = Math.Max(Math.Min(value, 24), 1);
                                 break;
-                            case "GearMax":
-
-                                int max = Math.Max(value, TeviSettings.GoMode);
-
-
-                                itemPool[ItemList.Type.STACKABLE_COG.ToString()] = max;
-                                for (int i = max; i < 25; i++)
-                                {
-                                    ItemList.Type newItem = getFillerItem(seed.Next());
-                                    if (itemPool.ContainsKey(newItem.ToString()))
-                                        itemPool[newItem.ToString()]++;
-                                    else
-                                        itemPool[newItem.ToString()] = 1;
-                                }
+                            case "MananiteAmount":
+                                SetItemQuantity(TeviSettings.ItemUpgradeItem.ToString(),value);
                                 break;
+                            case "MagititeAmount":
+                                SetItemQuantity(TeviSettings.CoreUpgradeItem.ToString(),value);
+                                break;
+                            case "GearMax":
+                                int max = Math.Max(value, TeviSettings.GoMode);
+                                SetItemQuantity(ItemList.Type.STACKABLE_COG.ToString(), max);
+                                break;
+                            case "TrapAmount":
+                                TrapsInPercent = value;
+                                break;    
                             default:
                                 break;
 
@@ -240,6 +263,59 @@ namespace TeviRandomizer
                                 break;
                             case "Traverse":
                                 TeviSettings.traverseMode = selected;
+                                switch (selected)
+                                {
+                                    case "Teleporter":
+                                        StartArea.addConnection(Areas["TeleportHub"]);
+                                        foreach (Area area in Transitions)
+                                        {
+                                            area.Connections[0].to = null;
+                                        }
+                                        for (int i = 0; i < 37; i++)
+                                        {
+                                            ProgressionPool[$"Teleporter {i}"] = 1;
+                                        }
+                                        break;
+                                    case "Entrance":
+                                            foreach (Area area in Transitions)
+                                            {
+                                                area.Connections[0].to = null;
+                                            }
+                                            List<Area> toBePlaced = new(Transitions);
+                                            while (toBePlaced.Count > 0)
+                                            {
+                                                List<Area> availabeTransition = recursivAreaSearch(StartArea);
+                                                Console.WriteLine(availabeTransition.Count);
+                                                Area nextTarget = availabeTransition[seed.Next(availabeTransition.Count)];
+                                                Area newEntrance;
+                                                if (availabeTransition.Count > toBePlaced.Count)
+                                                {
+                                                    Console.WriteLine("Something went wrong");
+                                                    foreach (Area area in availabeTransition)
+                                                    {
+                                                        Console.WriteLine($"{area.Name} Available");
+                                                    }
+                                                    foreach (Area area in toBePlaced)
+                                                    {
+                                                        Console.WriteLine($"{area.Name} leftover");
+                                                    }
+                                                }
+                                                do
+                                                {
+                                                    newEntrance = toBePlaced[seed.Next(toBePlaced.Count)];
+
+                                                } while (availabeTransition.Contains(newEntrance) && !(availabeTransition.All(toBePlaced.Contains) && toBePlaced.All(availabeTransition.Contains)));
+
+                                                nextTarget.Connections[0].to = newEntrance;
+                                                newEntrance.Connections[0].to = nextTarget;
+                                                toBePlaced.Remove(newEntrance);
+                                                toBePlaced.Remove(nextTarget);
+                                            }
+                                        break;
+                                    default:
+                                        break;
+                                }
+
                                 TeviSettings.customFlags[CustomFlags.TeleporterRando] = selected == "Teleporter";
                                 TeviSettings.customFlags[CustomFlags.EntranceRando] = selected == "Entrance";
                                 break;
@@ -249,10 +325,10 @@ namespace TeviRandomizer
                         break;
                 }
             }
-            foreach (var item in itemPool.ToArray())
+            foreach (var item in ItemPool.ToArray())
             {
                 if (item.Value <= 0)
-                    itemPool.Remove(item.Key);
+                    ItemPool.Remove(item.Key);
             }
         }
 
@@ -297,6 +373,8 @@ namespace TeviRandomizer
                     break;
                 case "LibraryExtra":
                     flag = TeviSettings.customFlags[CustomFlags.SuperBosses];
+                    if(!flag)
+                        flag = LogicHelper(itemList, "Goal");
                     break;
                 case "Backflip":
                     flag = TeviSettings.customFlags[CustomFlags.BackFlip];
@@ -473,12 +551,6 @@ namespace TeviRandomizer
 
 
 
-
-
-
-
-
-
         public class Requirement
         {
             public string Method = "";
@@ -616,44 +688,22 @@ namespace TeviRandomizer
 
 
         }
-
-
-
-
-        public class Item
-        {
-            public int Id;
-            public string Name;
-            public string Type;
-
-            public Item(string _name, string _type)
-            {
-                this.Name = _name;
-                this.Type = _type;
-            }
-        }
         public class Location
         {
 
 
             public string Itemname;
-            public string Loaction;
+            public string ParentArea;
             public string Locationname;
-            public int itemId;
-            public int slotId;
             public string newItem;
-            public int newSlotId;
             public List<Requirement> Requirement;
             public Location(int itemId, string loaction, string locationName, int slotId, string itemname = "")
             {
                 Itemname = itemname;
-                Loaction = loaction;
+                ParentArea = loaction;
                 this.Locationname = locationName;
-                this.itemId = itemId;
-                this.slotId = slotId;
                 this.Requirement = new List<Requirement>();
-                this.newItem = itemname;
-                this.newSlotId = slotId;
+                this.newItem = "";
             }
             public bool isReachAble(Dictionary<string, int> itemList)
             {
@@ -663,43 +713,16 @@ namespace TeviRandomizer
                 }
                 return false;
             }
-            public void setNewItem(ItemList.Type item, int slot)
+            public void setNewItem(string item)
             {
-                newItem = item.ToString();
-                newSlotId = slot;
+                newItem = item;
             }
-            public void setNewItem(int item, int slot)
+            public void addRule(string rule)
             {
-                newItem = ((ItemList.Type)item).ToString();
-                newSlotId = slot;
+                Requirement.Add(new Requirement(rule));
             }
-            public void addMethod(string method)
-            {
-                Requirement.Add(new Requirement(method));
-            }
-            public bool debugIsReachAble(Dictionary<string, int> itemList)
-            {
+            public override string ToString() => Locationname;
 
-                foreach (Requirement req in Requirement)
-                {
-                    if (req.evaluate(itemList))
-                    {
-                        return true;
-                    }
-                }
-                Console.WriteLine($"Item {Locationname} {newSlotId} could not be reached.");
-                return false;
-            }
-            public bool checkSelfContain(ItemList.Type item)
-            {
-                foreach (Requirement req in Requirement)
-                {
-                    if (req.Method.Contains(item.ToString())) return true;
-                    if (item == ItemList.Type.I19 && req.Method.Contains("ITEM_OrbTypeC")) return true;
-                    if (item == ItemList.Type.I20 && req.Method.Contains("ITEM_OrbTypeS")) return true;
-                }
-                return false;
-            }
         }
         public class Area
         {
@@ -713,11 +736,11 @@ namespace TeviRandomizer
                 this.Connections = new List<Entrance>();
                 this.Locations = new List<Location>();
             }
-            public void addConnection(Area to, string method)
+            public void addConnection(Area to, string method = "")
             {
                 this.Connections.Add(new Entrance(this, to, method));
             }
-
+            public override string ToString() => Name;
 
         }
         public class Entrance
@@ -745,39 +768,35 @@ namespace TeviRandomizer
 
 
         //Item ID, Amount
-        private Dictionary<string, int> itemPool;
-
-        public bool finished = false;
-        private List<Location> locations;
-        private List<Area> areas;
-        private List<Area> transitions = new List<Area>();
-        private static Dictionary<int, string> transitionIdToName = null;
-        private List<Location> resources = new List<Location>();
-        private List<Location> Money = new List<Location>();
-
+        private Dictionary<string, int> ItemPool = new();
+        private Dictionary<string, int> ProgressionPool = new();
+        private Area StartArea;
+        public bool Finished = false;
+        private Dictionary<string,Location> Locations = new();
+        private Dictionary<string,Area> Areas = new();
+        private static Dictionary<int, string> TransitionIdToName = null;
+        private List<Area> Transitions = new List<Area>();
+        private List<Location> ResourceLocations = new List<Location>();
+        private List<Location> MoneyLocations = new List<Location>();
+        private string EventPrefix = "EVENT_";
         private HashSet<Location> ignoreLocationList = new HashSet<Location>();
+        private int TrapsInPercent = 0;
         public Randomizer()
         {
 
             string resourcePath = TeviSettings.pluginPath + "/resource/";
-            itemPool = new Dictionary<string, int>();
-            areas = new List<Area>();
+            ItemPool = new Dictionary<string, int>();
             JObject areaJson = JObject.Parse(File.ReadAllText(resourcePath + "Area.json"));
             foreach (var map in areaJson)
             {
                 foreach (var area in (JArray)map.Value)
                 {
                     Area newArea = new Area((string)area["Name"]);
-                    int _;
                     if (int.TryParse((string)area["Name"], out _))
                     {
-                        transitions.Add(newArea);
+                        Transitions.Add(newArea);
                     }
-                    foreach (var con in area["Connections"])
-                    {
-                    }
-
-                    areas.Add(newArea);
+                    Areas[newArea.ToString()] = newArea;
                 }
             }
             foreach (var map in areaJson)
@@ -786,21 +805,21 @@ namespace TeviRandomizer
                 {
                     foreach (var con in area["Connections"])
                     {
-                        areas.Find(x => x.Name == (string)area["Name"]).addConnection(areas.Find(x => x.Name == (string)con["Exit"]), (string)con["Method"]);
+                        if( Areas.ContainsKey((string)con["Exit"]))
+                            Areas[(string)area["Name"]].addConnection(Areas[(string)con["Exit"]], (string)con["Method"]);
                     }
                 }
             }
-            if (transitionIdToName == null)
+            if (TransitionIdToName == null)
             {
-                transitionIdToName = new Dictionary<int, string>();
+                TransitionIdToName = new Dictionary<int, string>();
                 foreach (string line in File.ReadLines(resourcePath + "TransitionId.txt"))
                 {
                     string[] para = line.Split(':');
                     if (para.Count() == 2)
-                        transitionIdToName.Add(int.Parse(para[0]), para[1]);
+                        TransitionIdToName.Add(int.Parse(para[0]), para[1]);
                 }
             }
-            locations = new List<Location>();
 
             JArray locationJson = JArray.Parse(File.ReadAllText(resourcePath + "Location.json"));
 
@@ -808,35 +827,32 @@ namespace TeviRandomizer
             foreach (var location in locationJson)
             {
                 Location newloc = new Location(0, location["Location"].ToString(), location["LocationName"].ToString(), (int)location["slotId"], location["Itemname"].ToString());
-                ItemList.Type item;
-                if (Enum.TryParse(location["Itemname"].ToString(), out item))
+                if (location["Itemname"].ToString().Contains(EventPrefix))
                 {
-                    if (itemPool.ContainsKey(item.ToString()))
-                        itemPool[item.ToString()] += 1;
-                    else
-                        itemPool[item.ToString()] = 1;
-                    newloc.itemId = (int)item;
-
+                    newloc.newItem = (string)location["Itemname"];
+                }
+                if (Enum.TryParse(location["Itemname"].ToString(), out ItemList.Type item))
+                {
+                    IncreaseItemQuantity(item.ToString());
                 }
                 foreach (var method in location["Requirement"])
                 {
-                    newloc.addMethod(method["Method"].ToString());
+                    newloc.addRule(method["Method"].ToString());
                 }
-                locations.Add(newloc);
-                Area se = areas.Find(x => x.Name == newloc.Loaction);
-                if (se != null)
+                if (Areas.ContainsKey(newloc.ParentArea))
                 {
-                    se.Locations.Add(newloc);
+                    Locations[newloc.ToString()] = newloc;
+                    Areas[newloc.ParentArea].Locations.Add(newloc);
                 }
                 else
                 {
-                    Console.WriteLine($"Could not find {newloc.Loaction} to place {newloc.Itemname}");
+                    Console.WriteLine($"Could not find {newloc.ParentArea} to place {newloc.Itemname}");
                 }
             }
 
-            itemPool[ItemList.Type.QUEST_Memory.ToString()] = 1;
-            itemPool[ItemList.Type.QUEST_Flute.ToString()] = 1;
-            itemPool[ItemList.Type.QUEST_Compass.ToString()] = 1;
+            IncreaseItemQuantity(ItemList.Type.QUEST_Memory.ToString());
+            IncreaseItemQuantity(ItemList.Type.QUEST_Flute.ToString());
+            IncreaseItemQuantity(ItemList.Type.QUEST_Compass.ToString());
 
             JArray moneyLocationJson = JArray.Parse(File.ReadAllText(resourcePath + "MoneyLocations.json"));
             JArray resourceLocationJson = JArray.Parse(File.ReadAllText(resourcePath + "UpgradeResourceLocation.json"));
@@ -844,81 +860,60 @@ namespace TeviRandomizer
             foreach (var location in moneyLocationJson)
             {
                 Location newloc = new Location(0, location["Location"].ToString(), location["LocationName"].ToString(), (int)location["area"] * 100_000_000 + (int)location["blockId"], location["Itemname"].ToString());
-                ItemList.Type item;
-                if (Enum.TryParse(location["Itemname"].ToString(), out item))
+                if (Enum.TryParse(location["Itemname"].ToString(), out ItemList.Type item))
                 {
-                    if (itemPool.ContainsKey(item.ToString()))
-                        itemPool[item.ToString()] += 1;
-                    else
-                        itemPool[item.ToString()] = 1;
-                    newloc.itemId = (int)item;
+                    IncreaseItemQuantity(item.ToString());
 
                 }
                 foreach (var method in location["Requirement"])
                 {
-                    newloc.addMethod(method["Method"].ToString());
+                    newloc.addRule(method["Method"].ToString());
                 }
 
-                Money.Add(newloc);
-                Area se = areas.Find(x => x.Name == newloc.Loaction);
-                if (se != null)
+                MoneyLocations.Add(newloc);
+                Locations.Add(newloc.Locationname,newloc);
+                if (Areas.ContainsKey(newloc.ParentArea))
                 {
-                    se.Locations.Add(newloc);
+                    Areas[newloc.ParentArea].Locations.Add(newloc);
                 }
                 else
                 {
-                    Console.WriteLine($"Could not find {newloc.Loaction} to place {newloc.Itemname}");
+                    Console.WriteLine($"Could not find {newloc.ParentArea} to place {newloc.Itemname}");
                 }
             }
             foreach (var location in resourceLocationJson)
             {
                 Location newloc = new Location(0, location["Location"].ToString(), location["LocationName"].ToString(), (int)location["area"] * 100_000_000 + (int)location["blockId"], location["Itemname"].ToString());
-                ItemList.Type item;
-                if (Enum.TryParse(location["Itemname"].ToString(), out item))
+                if (Enum.TryParse(location["Itemname"].ToString(), out ItemList.Type item))
                 {
-                    if (itemPool.ContainsKey(item.ToString()))
-                        itemPool[item.ToString()] += 1;
-                    else
-                        itemPool[item.ToString()] = 1;
-                    newloc.itemId = (int)item;
-
+                    IncreaseItemQuantity(item.ToString());
                 }
-
-
 
                 foreach (var method in location["Requirement"])
                 {
-                    newloc.addMethod(method["Method"].ToString());
+                    newloc.addRule(method["Method"].ToString());
                 }
 
-                resources.Add(newloc);
-                Area se = areas.Find(x => x.Name == newloc.Loaction);
-                if (se != null)
+                ResourceLocations.Add(newloc);
+                Locations.Add(newloc.Locationname, newloc);
+                if (Areas.ContainsKey(newloc.ParentArea))
                 {
-                    se.Locations.Add(newloc);
+                    Areas[newloc.ParentArea].Locations.Add(newloc);
                 }
                 else
                 {
-                    Console.WriteLine($"Could not find {newloc.Loaction} to place {newloc.Itemname}");
+                    Console.WriteLine($"Could not find {newloc.ParentArea} to place {newloc.Itemname}");
                 }
             }
-
-
+            StartArea = Areas["Thanatara Canyon"];
         }
 
-
-        private ItemList.Type getFillerItem(int randomNumber)
-        {
-            ItemList.Type item = ItemList.Type.STACKABLE_HP + randomNumber % 6;
-
-            return item;
-        }
 
 
         public static bool creating = false;
         public static bool failed = false;
 
-        private string createItem(Dictionary<string, int> itemPool, System.Random seed)
+        private string createItem(System.Random seed, Dictionary<string, int> itemPool)
         {
             string item = "";
             int[] weight = new int[itemPool.Count];
@@ -936,135 +931,147 @@ namespace TeviRandomizer
                     break;
                 }
             if (String.IsNullOrEmpty(item))
+            {
                 item = "PANIC";
+                foreach (var a in itemPool)
+                    Console.WriteLine($"{a.Key}:{a.Value}");
+                Console.WriteLine(itemIndex);
+
+            }
             return item;
         }
+
+        private List<string> createTrapItems(System.Random seed,ref Dictionary<string,int> currentItemPool, int amount = 1) { 
+            List<string> items = new List<string>();
+            if (amount == 0)
+                return items;
+            List<TeviItem> itemPool = new(TeviSettings.Traps);
+            List<int> cum_weights = new();
+            int curr_weight = 0;
+            foreach (var item in itemPool)
+            {
+                curr_weight += item.Weight;
+                cum_weights.Add(curr_weight);
+            }
+            while(amount > 0)
+            {
+                var val =seed.Next(curr_weight + 1);
+                for (int i = 0; i < cum_weights.Count(); i++)
+                    if (val < cum_weights[i])
+                    {
+                        var item = itemPool[i];
+                        if (!currentItemPool.ContainsKey(item.Name))
+                            currentItemPool[item.Name] = 0;
+                        if (item.Max_Quantity > currentItemPool[item.Name])
+                        {
+                            amount--;
+                            currentItemPool[item.Name]++;
+                            items.Add(item.Name);
+                        }
+                        break;
+                    }
+            }
+            
+            return items;
+        }
+
+        private List<string> createFillerItems(System.Random seed,ref Dictionary<string,int> currentItemPool, int amount = 1) { 
+            List<string> items = new List<string>();
+            if (amount == 0)
+                return items;
+            List<TeviItem> itemPool = new(TeviSettings.Filler);
+            itemPool.AddRange(TeviSettings.Useful);
+            List<int> cum_weights = new();
+            int curr_weight = 0;
+            foreach (var item in itemPool)
+            {
+                curr_weight += item.Weight;
+                cum_weights.Add(curr_weight);
+            }
+            while(amount > 0)
+            {
+                var val =seed.Next(curr_weight + 1);
+                for (int i = 0; i < cum_weights.Count(); i++)
+                    if (val < cum_weights[i])
+                    {
+                        var item = itemPool[i];
+                        if (!currentItemPool.ContainsKey(item.Name))
+                            currentItemPool[item.Name] = 0;
+                        if (item.Default_Quantity > currentItemPool[item.Name])
+                        {
+                            amount--;
+                            currentItemPool[item.Name]++;
+                            items.Add(item.Name);
+                        }
+                        break;
+                    }
+            }
+            
+            return items;
+        }
+
+        Dictionary<string, int> StartItems = new();
 
         public bool newSeed(Random seed)
         {
             if (seed == null) seed = new System.Random();
 
-            Area startarea = areas.Find(x => x.Name == "Thanatara Canyon");
-            Dictionary<string, int> startItems = new();
-            CustomOptions(seed);                 //Extra stuff
+            foreach (var loc in Locations)
+                if (!loc.Value.Itemname.Contains(EventPrefix))
+                    loc.Value.newItem = "";
+            StartItems.Clear();
+            CustomOptions(seed);                 //Evaluate Options and setup the correct ItemPool
 
-            string traverseMode = TeviSettings.traverseMode;
-            if (traverseMode == "Transition")
+            Dictionary<string, int> progressionItems = new(ProgressionPool);
+            Dictionary<string, int> ItemPoolTry = new();
+
+            Dictionary<string, int> combinedList = new(progressionItems);
+
+            foreach (var item in StartItems)
+                if (combinedList.ContainsKey(item.Key))
+                    combinedList[item.Key] += item.Value;
+                else
+                    combinedList.Add(item.Key, item.Value);
+
+            var test = AssumedFill.TestReachability(StartArea, [.. Locations.Values], combinedList);
+            if (test.Count > 0)
             {
-                foreach (Area area in transitions)
-                {
-                    area.Connections[0].to = null;
-                }
-                List<Area> toBePlaced = new(transitions);
-
-
-                while (toBePlaced.Count > 0)
-                {
-                    List<Area> availabeTransition = recursivAreaSearch(startarea);
-                    Console.WriteLine(availabeTransition.Count);
-                    Area nextTarget = availabeTransition[seed.Next(availabeTransition.Count)];
-                    Area newEntrance;
-                    if (availabeTransition.Count > toBePlaced.Count)
-                    {
-                        Console.WriteLine("Something went wrong");
-                        foreach (Area area in availabeTransition)
-                        {
-                            Console.WriteLine($"{area.Name} Available");
-                        }
-                        foreach (Area area in toBePlaced)
-                        {
-                            Console.WriteLine($"{area.Name} leftover");
-                        }
-                    }
-                    do
-                    {
-                        newEntrance = toBePlaced[seed.Next(toBePlaced.Count)];
-
-                    } while (availabeTransition.Contains(newEntrance) && !(availabeTransition.All(toBePlaced.Contains) && toBePlaced.All(availabeTransition.Contains)));
-
-                    nextTarget.Connections[0].to = newEntrance;
-                    newEntrance.Connections[0].to = nextTarget;
-                    toBePlaced.Remove(newEntrance);
-                    toBePlaced.Remove(nextTarget);
-                }
+                Console.WriteLine($"Not everything is reachable with all missing {test.Count}");
+                foreach (var loc in test)
+                    Console.Write(loc.Locationname);
+                return false;
             }
-            if (traverseMode == "Teleporter")
-            {
-                TeviSettings.customFlags[(CustomFlags.TeleporterRando)] = true;
-                startarea.addConnection(areas.Find(x => x.Name == "TeleportHub"), "");
-                foreach (Area area in transitions)
-                {
-                    area.Connections[0].to = null;
-                }
-            }
-
-
-
-            foreach (var loc in locations)
-                if (!loc.Itemname.Contains("EVENT"))
-                    loc.newItem = "";
-            Dictionary<string, int> ItemPoolTry = new(itemPool);
-
-
-            //Progression Items
-            Dictionary<string, int> progressionItems = new();
-            foreach (var key in Enum.GetNames(typeof(Progression_Items)))
-            {
-                if (ItemPoolTry.ContainsKey(key))
-                {
-                    progressionItems[(Enum.Parse(typeof(Progression_Items),key).ToString())] = ItemPoolTry[key];
-                }
-            }
-            if (traverseMode == "Teleporter")
-            {
-                for (int i = 0; i < 37; i++)
-                {
-                    progressionItems[$"Teleporter {i}"] = 1;
-                }
-            }
+                
             //Placing Progression Items
             while (progressionItems.Count > 0)
             {
-
-                string item = createItem(progressionItems, seed);
-
-                int slotId = 0;
-
-                if (item.Contains("Teleporter"))
-                {
-                    slotId = int.Parse(item.Split(' ')[1]);
-                }
-
-
+                string item = createItem(seed, progressionItems);
                 progressionItems[item]--;
-
+                combinedList[item]--;
                 if (progressionItems[item] <= 0)
                 {
                     progressionItems.Remove(item);
-                    if (ItemPoolTry.ContainsKey(item))
-                        ItemPoolTry.Remove(item);
+                }
+                
+                if (combinedList[item] <= 0)
+                {
+                    combinedList.Remove(item);
                 }
 
-                List<Location> locs = AssumedFill.AssumedSearch(startarea, progressionItems);
-
+                List<Location> locs = AssumedFill.AssumedSearch(StartArea, combinedList);
                 var loc = locs[seed.Next(locs.Count)];
                 loc.newItem = item;
-                loc.newSlotId = slotId;
-
-
             }
 
-            var tes = AssumedFill.AssumedSearch(startarea, startItems);
-            while (tes.Count > 0)
+            var tes = AssumedFill.AssumedSearch(StartArea, StartItems);
+            int trapAmount = (tes.Count * TrapsInPercent)/100;
+            var otherItems = createTrapItems(seed, ref ItemPoolTry, trapAmount);
+            otherItems.AddRange(createFillerItems(seed, ref ItemPoolTry, tes.Count - trapAmount));
+            for(int i = 0; i < otherItems.Count;i++)
             {
                 var loc = tes[seed.Next(tes.Count)];
                 tes.Remove(loc);
-                string item = createItem(ItemPoolTry, seed);
-                ItemPoolTry[item]--;
-                if (ItemPoolTry[item] <= 0)
-                    ItemPoolTry.Remove(item);
-
-                loc.newItem = item;
+                loc.newItem = otherItems[i];
             }
 
             return validate();
@@ -1084,7 +1091,7 @@ namespace TeviRandomizer
                     {
                         RandomizerPlugin.__itemData = GetData();
                         Dictionary<int, int> transitionData = new Dictionary<int, int>();
-                        foreach (Area area in transitions)
+                        foreach (Area area in Transitions)
                         {
                             if (area.Connections[0].to == null)
                                 transitionData.Add(int.Parse(area.Name), int.Parse(area.Name));
@@ -1112,7 +1119,7 @@ namespace TeviRandomizer
             {
                 RandomizerPlugin.__itemData = GetData();
                 Dictionary<int, int> transitionData = new Dictionary<int, int>();
-                foreach (Area area in transitions)
+                foreach (Area area in Transitions)
                 {
                     if (area.Connections[0].to == null)
                         transitionData.Add(int.Parse(area.Name), int.Parse(area.Name));
@@ -1153,21 +1160,21 @@ namespace TeviRandomizer
             }
 
             if (startArea == null)
-                areaList = [areas.Find(x => x.Name == "Thanatara Canyon")];
+                areaList = [StartArea];
             else
                 areaList = [startArea];
 
             //Check if its beatable
 
-            List<Location> preCheck = AssumedFill.AssumedSearch(areaList[0]);
+            HashSet<Location> preCheck = new(AssumedFill.AssumedSearch(areaList[0],StartItems));
             itemList = AssumedFill.debugItems;
-            if (AssumedFill.debugLocation.Count < locations.Count)
+            if (AssumedFill.debugLocation.Count < Locations.Count)
             {
                 Console.WriteLine("Not all Location are reachable");
-                foreach (Location loc in locations)
+                foreach (var loc in Locations)
                 {
-                    if (!preCheck.Contains(loc))
-                        Console.WriteLine($"Location {loc.Locationname} is not reachable");
+                    if (!preCheck.Contains(loc.Value))
+                        Console.WriteLine($"Location {loc.Value.Locationname} is not reachable");
                 }
                 //saveSpoilerLog(GetData());
 
@@ -1180,7 +1187,7 @@ namespace TeviRandomizer
                 default:
                     if (itemList.ContainsKey("STACKABLE_COG") && itemList["STACKABLE_COG"] >= TeviSettings.GoMode)
                     {
-                        finished = true;
+                        Finished = true;
                         return true;
                     }
                     else
@@ -1190,72 +1197,26 @@ namespace TeviRandomizer
                     }
                 case GoalType.BossDefeat:
                     if (itemList.ContainsKey("EVENT_BOSS") && itemList["EVENT_BOSS"] >= 21)
-                        finished = true;
+                        Finished = true;
                     return true;
             }
-
-            /*
-            if (!itemList.ContainsKey("STACKABLE_COG"))
-                return false;
-            if (itemList["STACKABLE_COG"] > Math.Floor((float)TeviRandomizerSettings.GoMode / 2f))
-            {
-                //Console.WriteLine("CheckIn");
-                if (areaList.Count != areas.Count)
-                {
-                    foreach (Area ar in areaList)
-                    {
-                        bool f = false;
-                        foreach (Area a in areas)
-                        {
-                            if (a.Name == ar.Name) { f = true; break; }
-                        }
-                        if (!f) { Console.WriteLine($"{ar.Name} Not IN LIST"); }
-                    }
-
-                }
-                bool flag = false;
-                foreach (Location loc in locations)
-                {
-                    if (ignoreLocationList.Contains($"{loc.Itemname}{loc.slotId}"))
-                        continue;
-                    flag |= !loc.debugIsReachAble(itemList);
-
-                }
-                if (flag)
-                {
-                    return false;
-                }
-
-                foreach (Entrance entrance in entrances)
-                {
-                    entrance.debugCheckEntrance(itemList);
-                }
-                return goalCheck(itemList, areaList);
-            }
-            return false;
-            */
-
         }
 
         public Dictionary<string, string> GetData()
         {
             Dictionary<string, string> data = new Dictionary<string, string>();
-            if (!TeviSettings.customFlags[CustomFlags.RandomMoney])
-                locations.AddRange(Money);
-            if (!TeviSettings.customFlags[CustomFlags.RandomResource])
-                locations.AddRange(resources);
-            foreach (Location loc in locations)
+            foreach (var loc in Locations)
             {
 
 
 
-                string item1 = loc.Locationname;
-                string item2 = loc.newItem;
+                string item1 = loc.Value.Locationname;
+                string item2 = loc.Value.newItem;
                 try
                 {
                     if (item2 == TeviSettings.PortalItem.ToString())
                     {
-                        data.Add(item1, $"Teleporter {loc.newSlotId}");
+                        Console.WriteLine("This item should not be in this form");
                     }
                     else
                     {
@@ -1290,8 +1251,7 @@ namespace TeviRandomizer
 
             spoilerLog.WriteLine("\n\n\n\nSpheres:\n");
 
-            Area startarea = areas.Find(x => x.Name == "Thanatara Canyon");
-            var spheres = AssumedFill.SphereSearch(startarea);
+            var spheres = AssumedFill.SphereSearch(StartArea);
 
             int currHint = 0;
             int currBackHint = 1;
@@ -1308,15 +1268,15 @@ namespace TeviRandomizer
                     }
                     if (Enum.IsDefined(typeof(MajorItemFlag), loc.newItem) && currHint < ChatSystemPatch.numberOfHints)
                     {
-                        if (TeviSettings.customFlags[CustomFlags.NormalItemCraft] && loc.Loaction.Contains("Upgrade") && currBackHint + currHint < ChatSystemPatch.numberOfHints)
+                        if (TeviSettings.customFlags[CustomFlags.NormalItemCraft] && loc.ParentArea.Contains("Upgrade") && currBackHint + currHint < ChatSystemPatch.numberOfHints)
                         {
 
-                            ChatSystemPatch.hintList[ChatSystemPatch.hintList.Length - currBackHint] = (loc.Locationname, loc.newItem, (byte)loc.newSlotId);
+                            ChatSystemPatch.hintList[ChatSystemPatch.hintList.Length - currBackHint] = (loc.Locationname, TeviSettings.TeviToDisplayName(loc.newItem));
                             currBackHint++;
                         }
                         else
                         {
-                            ChatSystemPatch.hintList[currHint] = (loc.Locationname, loc.newItem, (byte)loc.newSlotId);
+                            ChatSystemPatch.hintList[currHint] = (loc.Locationname, TeviSettings.TeviToDisplayName(loc.newItem));
                             currHint++;
                         }
                     }
@@ -1342,8 +1302,8 @@ namespace TeviRandomizer
             {
                 foreach (var entry in TeviSettings.transitionData)
                 {
-                    if (transitionIdToName != null)
-                        spoilerLog.WriteLine($"{transitionIdToName[entry.Key]} -> {transitionIdToName[entry.Value]}");
+                    if (TransitionIdToName != null)
+                        spoilerLog.WriteLine($"{TransitionIdToName[entry.Key]} -> {TransitionIdToName[entry.Value]}");
                 }
             }
             spoilerLog.Close();

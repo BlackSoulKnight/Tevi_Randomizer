@@ -31,7 +31,7 @@ namespace TeviRandomizer
 
         // Custom chat need to replace certain strings parts
         public const int numberOfHints = 24;
-        public static (string,string,byte)[] hintList = new (string,string,byte)[numberOfHints];
+        public static (string,string)[] hintList = new (string,string)[numberOfHints];
 
         static List<ChatSystem.ChatRow> extraList = new List<ChatSystem.ChatRow>();
         static Dictionary<string,List<ChatSystem.ChatRow>> customTexts = loadCustomTexts();
@@ -122,23 +122,17 @@ namespace TeviRandomizer
                 };
                 if (!LocationTracker.checkLocation(hintList[i].Item1))
                 {
-                    string localizeItem = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + hintList[i].Item2, false);
+                    string localizeItem = hintList[i].Item2;
                     extraList.Add(createChatRow(section, $"You may find {localizeItem} in {hintList[i].Item1}.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
                 }
             }
             int alreadyCollectedItems = 0;
             for(int i = (int)Math.Floor((double)collected / a); i< numberOfHints;i++)
             {
-                if (RandomizerPlugin.checkItemGot((ItemList.Type)Enum.Parse(typeof(ItemList.Type), hintList[i].Item2), hintList[i].Item3)) {
+                if (LocationTracker.checkLocation(hintList[i].Item1))
                     alreadyCollectedItems++;
-                    continue; 
-                }
                 else
-                {
                     break;
-                }
-
-
             }
             extraList.Add(createChatRow(section, $"The next Hint is after {nextHint + alreadyCollectedItems * a} Items available.", "Professor Zema", "", "left", "e_1happy", "a_1thinking"));
 
