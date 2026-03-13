@@ -63,7 +63,6 @@ namespace TeviRandomizer
         private bool deathLinkTriggered = false;
         private bool lostConnection = false;
         private JObject APNameToTevi;
-        public JObject TeviToAPName;
         private int StartIDTeleporter = -1;
         private int EndIDTeleporter = -1;
         private int StartIDTrap = -1;
@@ -431,14 +430,6 @@ namespace TeviRandomizer
 
         void Awake()
         {
-            string path = TeviSettings.pluginPath + "/resource/";
-
-            TeviToAPName = JObject.Parse(File.ReadAllText(path+ "ItemToReal.json"));
-            APNameToTevi = new JObject();
-            foreach (var item in TeviToAPName)
-            {
-                APNameToTevi.Add((string)item.Value, item.Key);
-            }
         }
         void Update()
         {
@@ -513,8 +504,8 @@ namespace TeviRandomizer
                     Hint hint = PlayerHintQueue.Dequeue();
                     string loc = session.Locations.GetLocationNameFromId(hint.LocationId);
                     string itemName = getLocItemName(loc);
-                    if (TeviToAPName.ContainsKey(itemName))
-                        itemName = TeviToAPName[itemName].ToString();
+                    if(TeviSettings.NametoItem.ContainsKey(itemName))
+                        itemName = TeviSettings.TeviToDisplayName(itemName);
                     if (hint.Status == HintStatus.Priority)
                         HintSystemPatch.CreateCustomTodo(loc, itemName);
                     else

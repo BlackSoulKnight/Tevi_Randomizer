@@ -6,6 +6,7 @@ using Spine;
 using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using TeviRandomizer.TeviRandomizerSettings;
 using UnityEngine;
 using static UnityEngine.UI.Image;
 
@@ -56,6 +57,11 @@ namespace TeviRandomizer
                     var item = ItemQueue.Dequeue();
                     if (item != null)
                     {
+                        if(item.Type == ItemList.Type.ITEM_Explorer && TeviSettings.customFlags[CustomFlags.CompassStart])
+                        {
+                            TrapQueue.Enqueue(new(0, (byte)TeviTraps.Traps.Debuff, true));
+                            return;
+                        }
                         //save original
                         string localizeName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + GemaItemManager.Instance.GetItemString(item.Type), false);
                         string localizeDesc = Localize.GetLocalizeTextWithKeyword("ITEMDESC." + GemaItemManager.Instance.GetItemString(item.Type), false);
@@ -211,7 +217,7 @@ namespace TeviRandomizer
                 if (item.Type == RandomizerPlugin.PortalItem && RandomizerPlugin.__itemData.TryGetValue(LocationTracker.APLocationName[$"{originalItem} #{item.Value}"], out string itemName))
                 {
                     item.Value = byte.Parse(itemName.Split(["Teleporter "], StringSplitOptions.RemoveEmptyEntries)[0]);
-                    item.Name = (string)ArchipelagoInterface.Instance.TeviToAPName[itemName];
+                    item.Name = TeviSettings.TeviToDisplayName(itemName);
                     item.Description = $"{item.Name} is now available.";
                 }
                 if(item.Type == RandomizerPlugin.Trap)

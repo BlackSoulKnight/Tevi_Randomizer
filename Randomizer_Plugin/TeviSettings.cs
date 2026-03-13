@@ -1,5 +1,9 @@
-﻿using System;
+﻿using Archipelago.MultiClient.Net.Models;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
+using System.IO;
+using UnityEngine;
 
 namespace TeviRandomizer
 {
@@ -124,6 +128,33 @@ namespace TeviRandomizer
             HP,
             EP
         }
+        public enum Classification
+        {
+            progression,
+            useful,
+            filler,
+            trap
+        }
+        struct TeviItem
+        {
+            public string Name;
+            public string DisplayName;
+            public int ID;
+            public int Default_Quantity;
+            public int Max_Quantity;
+            public Classification Classification;
+            public int Weight;
+            public TeviItem(string name,string displayname, int id, int default_Quantity, int max_Quantity, Classification classification, int weight)
+            {
+                Name = name;
+                DisplayName = displayname;
+                ID = id;
+                Default_Quantity = default_Quantity;
+                Max_Quantity = max_Quantity;
+                Classification = classification;
+                Weight = weight;
+            }
+        }
         class TeviSettings
         {
 
@@ -131,9 +162,19 @@ namespace TeviRandomizer
             public const ItemList.Type MoneyItem = ItemList.Type.I14;
             public const ItemList.Type CoreUpgradeItem = ItemList.Type.I15;
             public const ItemList.Type ItemUpgradeItem = ItemList.Type.I16;
-
-            public static readonly HashSet<string> ProgressionsItems = new (Enum.GetNames(typeof(Progression_Items)));
-            public static readonly Array ProgressionsItemValues = Enum.GetValues(typeof(Progression_Items));
+            public static readonly Dictionary<long,TeviItem> IDtoItem;
+            public static readonly Dictionary<string,TeviItem> NametoItem;
+            public static readonly Dictionary<string,TeviItem> DisplayNameToItem;
+            public static string TeviToDisplayName(long item) => IDtoItem.ContainsKey(item) ? IDtoItem[item].DisplayName : "Item not Found"; 
+            public static string TeviToDisplayName(string item) => NametoItem.ContainsKey(item) ? NametoItem[item].DisplayName : "Item not Found";
+            public static int DisplayNameToTevi(string item) => DisplayNameToItem.ContainsKey(item) ? DisplayNameToItem[item].ID : 0;
+            
+            public static readonly List<TeviItem> Items = new();
+            public static readonly List<TeviItem> Filler = new();
+            public static readonly List<TeviItem> Useful = new();
+            public static readonly List<TeviItem> Traps = new();
+            public static readonly HashSet<string> ProgressionItems = new();
+            public static int[] ProgressionsItemValues;
             static Dictionary<CustomFlags, bool> SetUpFlags()
             {
                 Dictionary<CustomFlags, bool> ret = new();
@@ -154,9 +195,47 @@ namespace TeviRandomizer
             public static int GoMode = -1;
             public static string traverseMode;
             public static Dictionary<int, int> transitionData;
-            public static string pluginPath = "";
-
+            public static readonly string pluginPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
             static public bool inGame = false;
+
+            static TeviSettings()
+            {
+                pluginPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+                string path = $"{pluginPath}/resource/Items.json";
+                IDtoItem = new();
+                NametoItem = new();
+                JArray items = JArray.Parse(File.ReadAllText(path));
+                List<int> progItemIndex = new();
+                foreach (var item in items)
+                {
+                    TeviItem newItem = new(item["Name"].ToString(), item["DisplayName"].ToString(), (int)item["ID"], (int)item["Default_Quantity"], (int)item["Maximum_Quantity"], (Classification)Enum.Parse(typeof(Classification), item["Classification"].ToString()), (int)item["Weight"]);
+                    IDtoItem.Add(newItem.ID, newItem);
+
+                    NametoItem.Add(newItem.Name, newItem);
+
+                    Items.Add(newItem);
+                    switch (newItem.Classification)
+                    {
+                        case Classification.progression:
+                            ProgressionItems.Add(newItem.Name);
+                            if (Enum.TryParse(newItem.Name, out ItemList.Type itemI))
+                                progItemIndex.Add((int)itemI);
+                            break;
+                        case Classification.filler:
+                            Filler.Add(newItem);
+                            break;
+                        case Classification.useful:
+                            Useful.Add(newItem);
+                            break;
+                        case Classification.trap:
+                            Traps.Add(newItem);
+                            break;
+                    }
+
+
+                }
+                ProgressionsItemValues = progItemIndex.ToArray();
+            }
         }
     }
 }

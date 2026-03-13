@@ -132,13 +132,13 @@ namespace TeviRandomizer
                 }
                 if(data == RandomizerPlugin.PortalItem)
                 {
-                    ___selectedName.text = (string)ArchipelagoInterface.Instance.TeviToAPName[RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{itemType} #{slot}"]]];
+                    ___selectedName.text = TeviSettings.TeviToDisplayName(RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{itemType} #{slot}"]]);
                     ___selectedDesc.text = $"Unlocks the {___selectedName.text}";
 
                 }
                 else if(data == RandomizerPlugin.Trap)
                 {
-                    ___selectedName.text = (string)ArchipelagoInterface.Instance.TeviToAPName[RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{itemType} #{slot}"]]];
+                    ___selectedName.text = TeviSettings.TeviToDisplayName(RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{itemType} #{slot}"]]);
                     ___selectedDesc.text = $"{___selectedName.text}";
 
                 }
@@ -457,7 +457,7 @@ namespace TeviRandomizer
                 }
                 if(data == RandomizerPlugin.PortalItem ||data == RandomizerPlugin.Trap)
                 {
-                    itemName = (string)ArchipelagoInterface.Instance.TeviToAPName[RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{itype} #{1}"]]];
+                    itemName = TeviSettings.TeviToDisplayName(RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{itype} #{1}"]]);
                 }
                 ___nameText.text = Localize.GetLocalizeTextWithKeyword("CRAFT_CraftBadge", contains: false) + " <color=#FFF>" + itemName;
 
@@ -495,7 +495,7 @@ namespace TeviRandomizer
                 {
                     if (item == RandomizerPlugin.PortalItem || item == RandomizerPlugin.Trap)
                     {
-                        itemName = (string)ArchipelagoInterface.Instance.TeviToAPName[RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{itype} #{1}"]]];
+                        itemName = TeviSettings.TeviToDisplayName(RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{itype} #{1}"]]);
                     }
                     else
                         itemName = Localize.GetLocalizeTextWithKeyword("ITEMNAME." + item.ToString(), true);

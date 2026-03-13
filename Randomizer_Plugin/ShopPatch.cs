@@ -3,6 +3,7 @@ using Game;
 using HarmonyLib;
 using Map;
 using System;
+using TeviRandomizer.TeviRandomizerSettings;
 using TMPro;
 using UnityEngine;
 
@@ -671,7 +672,7 @@ namespace TeviRandomizer
             }
             if (___itype == RandomizerPlugin.PortalItem || ___itype == RandomizerPlugin.Trap)
             {
-                string itemName = (string)ArchipelagoInterface.Instance.TeviToAPName[RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{item} #{slot}"]]];
+                string itemName = TeviSettings.TeviToDisplayName(RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{item} #{slot}"]]);
                 texts[0].text = itemName;
                 bgicon.enabled = false;
             }

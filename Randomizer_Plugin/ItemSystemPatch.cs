@@ -708,7 +708,7 @@ namespace TeviRandomizer
             if (item == RandomizerPlugin.PortalItem && RandomizerPlugin.__itemData.TryGetValue(location, out string itemName))
             {
                 value = byte.Parse(itemName.Split(["Teleporter "], StringSplitOptions.RemoveEmptyEntries)[0]);
-                name = (string)ArchipelagoInterface.Instance.TeviToAPName[itemName];
+                name = TeviSettings.TeviToDisplayName(itemName);
                 desc = $"{name} is now available.";
             }
             if(item == RandomizerPlugin.Trap && RandomizerPlugin.__itemData.TryGetValue(location, out itemName))
