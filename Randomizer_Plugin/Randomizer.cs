@@ -988,8 +988,11 @@ namespace TeviRandomizer
                 curr_weight += item.Weight;
                 cum_weights.Add(curr_weight);
             }
+            int tryCounter = 0;
+            int maxTry = 1000;
             while(amount > 0)
             {
+                tryCounter++;
                 var val =seed.Next(curr_weight + 1);
                 for (int i = 0; i < cum_weights.Count(); i++)
                     if (val < cum_weights[i])
@@ -1002,8 +1005,16 @@ namespace TeviRandomizer
                             amount--;
                             currentItemPool[item.Name]++;
                             items.Add(item.Name);
+                            tryCounter = 0;
                         }
-                        break;
+                        else if(tryCounter > maxTry && item.Default_Quantity == 0 && item.Max_Quantity > 1000)
+                        {
+                            amount--;
+                            currentItemPool[item.Name]++;
+                            items.Add(item.Name);
+                            tryCounter = 0;
+                        }
+                            break;
                     }
             }
             
