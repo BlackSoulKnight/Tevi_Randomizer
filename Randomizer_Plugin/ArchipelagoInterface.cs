@@ -296,16 +296,34 @@ namespace TeviRandomizer
                     continue;
                 }
                 LocationData locationData = new LocationData();
-                if (TeviSettings.DisplayNameToItem.ContainsKey(a[loc].ItemName))
+                if (a[loc] == null || String.IsNullOrEmpty(a[loc].ItemName))
                 {
-                    locationData.item = TeviSettings.DisplayNameToItem[a[loc].ItemName].Name;
+                    locationData.player = 0;
+                    locationData.progressive = false;
+                    if (String.IsNullOrEmpty(a[loc].ItemName))
+                    {
+                        Debug.LogError($"Player:{a[loc].Player.Name} Game:{a[loc].Player.Game}, ItemId:{a[loc].ItemId}");
+                        locationData.player = a[loc].Player;
+                        locationData.progressive = (a[loc].Flags & ItemFlags.Advancement) != 0;
+                    }
+                    else
+                        Debug.LogError($"There is no Data for this Location {loc}");
+                    locationData.id = loc;
+                    locationData.item = "No item name";
                 }
                 else
-                    locationData.item = a[loc].ItemName;
-                locationData.player = a[loc].Player;
-                locationData.progressive = (a[loc].Flags & ItemFlags.Advancement) != 0;
-                locationData.id = loc;
-                locations.Add(session.Locations.GetLocationNameFromId(loc,"Tevi"), locationData);
+                {
+                    if (TeviSettings.DisplayNameToItem.ContainsKey(a[loc].ItemName))
+                    {
+                        locationData.item = TeviSettings.DisplayNameToItem[a[loc].ItemName].Name;
+                    }
+                    else
+                        locationData.item = a[loc].ItemName;
+                    locationData.player = a[loc].Player;
+                    locationData.progressive = (a[loc].Flags & ItemFlags.Advancement) != 0;
+                    locationData.id = loc;
+                }
+                locations.Add(session.Locations.GetLocationNameFromId(loc, "Tevi"), locationData);
             }
             storeData();
         }
