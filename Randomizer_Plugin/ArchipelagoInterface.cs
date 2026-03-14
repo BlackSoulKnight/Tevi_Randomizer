@@ -39,7 +39,7 @@ namespace TeviRandomizer
         public const ItemList.Type remoteItem = ItemList.Type.I10;
         public const ItemList.Type remoteItemProgressive = ItemList.Type.I11;
         HintsHelper hintsHelper;
-        public const string AP_WORLD_VERSION = "0.6.10";
+        public const string AP_WORLD_VERSION = "0.6.11";
         public const string ConnectionLost = "APLost";
 
         private class LocationData
@@ -62,7 +62,6 @@ namespace TeviRandomizer
         private DeathLinkService deathLink = null;
         private bool deathLinkTriggered = false;
         private bool lostConnection = false;
-        private JObject APNameToTevi;
         private int StartIDTeleporter = -1;
         private int EndIDTeleporter = -1;
         private int StartIDTrap = -1;
@@ -298,9 +297,9 @@ namespace TeviRandomizer
                     continue;
                 }
                 LocationData locationData = new LocationData();
-                if (APNameToTevi.ContainsKey(a[loc].ItemName))
+                if (TeviSettings.DisplayNameToItem.ContainsKey(a[loc].ItemName))
                 {
-                    locationData.item = (string)APNameToTevi[a[loc].ItemName];
+                    locationData.item = TeviSettings.DisplayNameToItem[a[loc].ItemName].Name;
                 }
                 else
                     locationData.item = a[loc].ItemName;

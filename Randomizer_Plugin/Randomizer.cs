@@ -1014,7 +1014,7 @@ namespace TeviRandomizer
                             items.Add(item.Name);
                             tryCounter = 0;
                         }
-                            break;
+                        break;
                     }
             }
             

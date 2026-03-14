@@ -204,13 +204,14 @@ namespace TeviRandomizer
                 string path = $"{pluginPath}/resource/Items.json";
                 IDtoItem = new();
                 NametoItem = new();
+                DisplayNameToItem = new();
                 JArray items = JArray.Parse(File.ReadAllText(path));
                 List<int> progItemIndex = new();
                 foreach (var item in items)
                 {
                     TeviItem newItem = new(item["Name"].ToString(), item["DisplayName"].ToString(), (int)item["ID"], (int)item["Default_Quantity"], (int)item["Maximum_Quantity"], (Classification)Enum.Parse(typeof(Classification), item["Classification"].ToString()), (int)item["Weight"]);
                     IDtoItem.Add(newItem.ID, newItem);
-
+                    DisplayNameToItem.Add(newItem.DisplayName, newItem);
                     NametoItem.Add(newItem.Name, newItem);
 
                     Items.Add(newItem);
