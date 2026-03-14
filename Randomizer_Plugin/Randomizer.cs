@@ -149,8 +149,8 @@ namespace TeviRandomizer
                                 {
                                     foreach (var item in Enum.GetValues(typeof(Upgradable)))
                                     {
-                                        string loc = $"Item Upgrade - {APItemNames[item.ToString()]} #1";
-                                        string loc2 = $"Item Upgrade - {APItemNames[item.ToString()]} #2";
+                                        string loc = $"Item Upgrade - {TeviSettings.TeviToDisplayName(item.ToString())} #1";
+                                        string loc2 = $"Item Upgrade - {TeviSettings.TeviToDisplayName(item.ToString())} #2";
                                         ItemList.Type t = (ItemList.Type)Enum.Parse(typeof(ItemList.Type), item.ToString());
 
                                         Locations[loc].setNewItem(t.ToString());
@@ -331,19 +331,6 @@ namespace TeviRandomizer
                     ItemPool.Remove(item.Key);
             }
         }
-
-        static Dictionary<string, string> getAPItemNames()
-        {
-            Dictionary<string, string> retVal = new();
-            string path = TeviSettings.pluginPath + "/resource/";
-            JToken itemNames = JToken.Parse(File.ReadAllText(path + "ItemToReal.json"));
-            foreach (var item in Enum.GetNames(typeof(ItemList.Type)))
-            {
-                retVal[item] = (string)itemNames[item];
-            }
-            return retVal;
-        }
-        static Dictionary<string, string> APItemNames => getAPItemNames();
 
 
 
@@ -1274,7 +1261,7 @@ namespace TeviRandomizer
                 {
                     if (Enum.TryParse<Progression_Items>(loc.newItem, out _) || loc.newItem.Contains("Teleporter"))
                     {
-                        string item = APItemNames.ContainsKey(loc.newItem) ? APItemNames[loc.newItem] : loc.newItem;
+                        string item = TeviSettings.NametoItem.ContainsKey(loc.newItem) ? TeviSettings.TeviToDisplayName(loc.newItem) : loc.newItem;
                         spoilerLog.WriteLine($"    {loc.Locationname} => {item}");
                     }
                     if (Enum.IsDefined(typeof(MajorItemFlag), loc.newItem) && currHint < ChatSystemPatch.numberOfHints)
@@ -1301,7 +1288,7 @@ namespace TeviRandomizer
             {
 
 
-                string item2 = APItemNames.ContainsKey(item.Value) ? APItemNames[item.Value] : item.Value;
+                string item2 = TeviSettings.NametoItem.ContainsKey(item.Value) ? TeviSettings.TeviToDisplayName(item.Value) : item.Value;
 
 
 
