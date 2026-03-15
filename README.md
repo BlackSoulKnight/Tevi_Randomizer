@@ -53,7 +53,8 @@
 
 ### Optional
 [Tevi Poptracker](https://github.com/Swaga1icous/Tevi_Poptracker) made by Swagalicous (WIP) <br>
-[Tevi AP World](https://github.com/BlackSoulKnight/Tevi_Archipelago)
+~~[Tevi AP World](https://github.com/BlackSoulKnight/Tevi_Archipelago)~~
+AP World is in the same release as the current randomizer version
 
 ## Install
 Download the latest released Version from here [Tevi Randomizer releases](https://github.com/BlackSoulKnight/Tevi_Randomizer/releases)<br>
