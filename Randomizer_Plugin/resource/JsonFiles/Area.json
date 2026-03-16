@@ -1715,7 +1715,7 @@
             "Connections": [
                 {
                     "Exit": "Valhalla Breath West 1",
-                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && (RabbitWalljump || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash)"
                 },
                 {
                     "Exit": "2101",
