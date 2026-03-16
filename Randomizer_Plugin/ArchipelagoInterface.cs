@@ -14,6 +14,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
 using TeviRandomizer.TeviRandomizerSettings;
+using TMPro;
 using UnityEngine;
 
 /*
@@ -102,6 +103,9 @@ namespace TeviRandomizer
                 {
                     errorMessage += $"\n    {error}";
                 }
+                Debug.LogError(errorMessage);
+                UI.UI.finishedText.GetComponent<TextMeshProUGUI>().text = "Failed to connect to Server.";
+                UI.UI.finishedText.SetActive(true);
 
                 return false; // Did not connect, show the user the contents of `errorMessage`
             }
