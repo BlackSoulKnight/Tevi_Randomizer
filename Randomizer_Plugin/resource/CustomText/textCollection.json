@@ -30,7 +30,7 @@
     ],
     "chapterall_Sign_OASISHOME_1":[
         {
-            "textId":1,
+            "textId":4,
             "text":"One of the most important Feature for Free Roam is the Reverse Wall Jump.",
             "character":"Info",
             "flag":"hidden",
@@ -39,7 +39,7 @@
             "pose":""
         },
         {
-            "textId":2,
+            "textId":5,
             "text":"To perform this technique you must first face away from the Wall. Then first jump and then move towards the wall. Now you can perform a walljump normaly.",
             "character":"Info",
             "flag":"hidden",
@@ -48,7 +48,7 @@
             "pose":""
         },
         {
-            "textId":3,
+            "textId":6,
             "text":"Additionally it is possible to use Dropkick to perform one additionally Walljump against the oppposite of the first wall.",
             "character":"Info",
             "flag":"hidden",
@@ -59,7 +59,7 @@
     ],
     "chapterall_Sign_OASISHOME_2":[
         {
-            "textId":1,
+            "textId":7,
             "text":"Performing only Dropkicks without getting hit increases the damage with each successful hit.",
             "character":"Info",
             "flag":"hidden",
@@ -68,7 +68,7 @@
             "pose":""
         },
         {
-            "textId":1,
+            "textId":8,
             "text":"When you hit a Dropkick you gain one additionally Dropkick, this can repeated indefinitely.",
             "character":"Info",
             "flag":"hidden",
@@ -79,8 +79,39 @@
     ],
     "chapterall_Sign_OASISHOME_3":[
         {
-            "textId":1,
+            "textId":9,
             "text":"Tornado Spin or 4th Melee can destroy Moneyblocks and Tornado Spin is unlocked when Dagger is aquired.",
+            "character":"Info",
+            "flag":"hidden",
+            "position":"",
+            "emotion":"",
+            "pose":""
+        }
+    ],
+    "chapterall_Sign_OASISHOME_4":[
+        {
+            "textId":10,
+            "text":"Sometimes a jump is not enough and a walljump puts you to far away.\nIn this case it is possible to use any item to cancel the horizontal movement.",
+            "character":"Info",
+            "flag":"hidden",
+            "position":"",
+            "emotion":"",
+            "pose":""
+        },
+        {
+            "textId":11,
+            "text":"When an item with 200% item use speed is used it is possible to regain the control of Tevi before she lands on the ground. With this trick it is possible to do multiple walljump with Parkour Boots.",
+            "character":"Info",
+            "flag":"hidden",
+            "position":"",
+            "emotion":"",
+            "pose":""
+        }
+    ],
+    "chapterall_Sign_OASISHOME_5":[
+        {
+            "textId":12,
+            "text":"If the gap is a little bit to far out use a walljump while pressing the down button. When used correctly you gain the speed for the walljump instead of doing a Quickdrop!",
             "character":"Info",
             "flag":"hidden",
             "position":"",
