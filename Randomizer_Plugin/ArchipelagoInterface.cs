@@ -39,7 +39,7 @@ namespace TeviRandomizer
         }
         public const ItemList.Type remoteItem = ItemList.Type.I10;
         public const ItemList.Type remoteItemProgressive = ItemList.Type.I11;
-        public const string AP_WORLD_VERSION = "0.6.11";
+        public const string AP_WORLD_VERSION = "0.6.12";
         public const string ConnectionLost = "APLost";
 
         private class LocationData
@@ -115,8 +115,12 @@ namespace TeviRandomizer
 
             if (success.SlotData.ContainsKey("version"))
             {
-                if((string)success.SlotData["version"] != AP_WORLD_VERSION)
-                    Debug.LogWarning($"AP World version: {(string)success.SlotData["version"]} does not match with Client \n Expected: {AP_WORLD_VERSION}");
+                connectVersion = (string)success.SlotData["version"];
+                if(connectVersion =="0.0.0" && success.SlotData.ContainsKey("backup_version"))
+                    connectVersion = (string)success.SlotData["backup_version"];
+
+                if (connectVersion != AP_WORLD_VERSION)
+                    Debug.LogWarning($"AP World version: {connectVersion} does not match with Client \n Expected: {AP_WORLD_VERSION}");
             }
             else
             {
@@ -141,8 +145,7 @@ namespace TeviRandomizer
 
             if (success.SlotData.ContainsKey("options"))
                 setCustomFlags((JObject)success.SlotData["options"]);
-            if(success.SlotData.ContainsKey("version"))
-                connectVersion = (string)success.SlotData["version"];
+
             if (success.SlotData.ContainsKey("StartIDTeleporter"))
             {
                 StartIDTeleporter = (int)(long)success.SlotData["StartIDTeleporter"];
