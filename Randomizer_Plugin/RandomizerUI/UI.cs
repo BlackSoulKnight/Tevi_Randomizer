@@ -152,6 +152,11 @@ namespace TeviRandomizer.UI
 
                     text2.text = $"Ap Server Locations missmatch, AP World Version {ArchipelagoInterface.Instance.connectVersion}\n Expected:{ArchipelagoInterface.AP_WORLD_VERSION}";
                 }
+                else if (ArchipelagoInterface.Instance.connectVersion != ArchipelagoInterface.AP_WORLD_VERSION)
+                {
+                    text2.color = Color.yellow;
+                    text2.text = $"Ap Server Connected\nWorld missmatch Connected:{ArchipelagoInterface.Instance.connectVersion} Expected:{ArchipelagoInterface.AP_WORLD_VERSION}";
+                }
                 else
                 {
                     text2.color = Color.green;
