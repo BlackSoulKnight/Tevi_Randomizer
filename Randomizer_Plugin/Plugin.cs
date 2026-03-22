@@ -118,6 +118,8 @@ namespace TeviRandomizer
                 harmonyPatchInstance.UnpatchSelf();
                 harmonyPatchInstance.PatchAll(typeof(UI.UI));
                 randomizerEnabled = false;
+                Traverse.Create(SaveManager.Instance).Field("MAXTODO").SetValue(16);
+                Traverse.Create(SaveManager.Instance).Field("MAXOLDTODO").SetValue(16);
                 return false;
             }
             else
@@ -140,6 +142,8 @@ namespace TeviRandomizer
                 harmonyPatchInstance.PatchAll(typeof(BaseGameFixes));
                 harmonyPatchInstance.PatchAll(typeof(PlayerCharacterPatch));
                 harmonyPatchInstance.PatchAll(typeof(HintSystemPatch));
+                Traverse.Create(SaveManager.Instance).Field("MAXTODO").SetValue(2000);
+                Traverse.Create(SaveManager.Instance).Field("MAXOLDTODO").SetValue(2000);
                 randomizerEnabled = true;
                 return true;
             }

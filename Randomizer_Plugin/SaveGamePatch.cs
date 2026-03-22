@@ -298,8 +298,8 @@ namespace TeviRandomizer
             ___savedata.todoY = new byte[2000];
             ___savedata.todoID = new byte[2000];
             ___savedata.oldtodoID = new byte[2000];
-            Traverse.Create(__instance).Field("MAXTODO").SetValue(2000);
-            Traverse.Create(__instance).Field("MAXOLDTODO").SetValue(2000);
+            //Traverse.Create(__instance).Field("MAXTODO").SetValue(2000);
+            //Traverse.Create(__instance).Field("MAXOLDTODO").SetValue(2000);
         }
     }
 
