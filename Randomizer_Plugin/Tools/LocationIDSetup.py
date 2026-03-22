@@ -49,13 +49,13 @@ def addLocationId():
         maxID +=1
         v["LocationID"] = maxID
     s = open(Path+"/../resource/JsonFiles/Location.json",'w+')
-    s.write(json.dumps(locations))
+    s.write(json.dumps(locations,indent=4))
     s.close()
     s = open(Path+"/../resource/JsonFiles/MoneyLocations.json",'w+')
-    s.write(json.dumps(moneylocation))
+    s.write(json.dumps(moneylocation,indent=4))
     s.close()
     s = open(Path+"/../resource/JsonFiles/UpgradeResourceLocation.json",'w+')
-    s.write(json.dumps(resourcelocation))
+    s.write(json.dumps(resourcelocation,indent=4))
     s.close()
     
 
