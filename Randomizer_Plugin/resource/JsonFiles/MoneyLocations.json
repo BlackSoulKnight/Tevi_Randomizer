@@ -6034,7 +6034,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB  && ITEM_BombLengthExtend 3 ) || ITEM_KNIFE)",
+                "Method": "(ITEM_LINEBOMB  && ITEM_BombLengthExtend 3 ) || ITEM_KNIFE",
                 "Difficulty": 0
             }
         ],
