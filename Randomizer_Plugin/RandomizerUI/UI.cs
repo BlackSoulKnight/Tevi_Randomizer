@@ -160,7 +160,7 @@ namespace TeviRandomizer.UI
                 else
                 {
                     text2.color = Color.green;
-                    text2.text = "Ap Server Connected";
+                    text2.text = $"Ap Server Connected\nWorld v{ArchipelagoInterface.Instance.connectVersion}";
                 }
                 checkApWorldLocationCheck = false;
             }
