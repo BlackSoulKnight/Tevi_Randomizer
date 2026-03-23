@@ -822,6 +822,10 @@
                     "Method": "ITEM_LINEBOMB ||ITEM_AREABOMB"
                 },
                 {
+                    "Exit": "Pestilence",
+                    "Method": "ITEM_LINEBOMB ||ITEM_AREABOMB"
+                },
+                {
                     "Exit": "Plague Forest to Ulskan",
                     "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_SLIDE && ITEM_MASK"
                 }
@@ -864,6 +868,10 @@
                 },
                 {
                     "Exit": "Crawler_Pollution",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Pestilence_Range",
                     "Method": ""
                 }
             ]
@@ -1009,6 +1017,10 @@
                     "Method": ""
                 },
                 {
+                    "Exit": "Pestilence",
+                    "Method": ""
+                },
+                {
                     "Exit": "1307",
                     "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK || ADCKick"
                 }
@@ -1081,6 +1093,14 @@
                 },
                 {
                     "Exit": "Teleporter Snowdust Shores",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Pestilence_Range",
+                    "Method": ""
+                },
+                {
+                    "Exit": "Pestilence",
                     "Method": ""
                 },
                 {
@@ -4123,6 +4143,14 @@
         },
         {
             "Name": "Knights_A",
+            "Connections": []
+        },
+        {
+            "Name": "Pestilence_Range",
+            "Connections": []
+        },
+        {
+            "Name": "Pestilence",
             "Connections": []
         }
     ]
