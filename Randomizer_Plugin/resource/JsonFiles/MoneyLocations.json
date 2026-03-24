@@ -7156,11 +7156,11 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_KNIFE",
+                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_KNIFE && (ITEM_LINEBOMB && ITEM_BombLengthExtend)",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && ITEM_JETPACK && ITEM_KNIFE",
+                "Method": "ITEM_SLIDE && ITEM_JETPACK && ITEM_KNIFE && (ITEM_LINEBOMB && ITEM_BombLengthExtend)",
                 "Difficulty": 0
             }
         ],
@@ -7182,11 +7182,11 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_KNIFE",
+                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_KNIFE && (ITEM_LINEBOMB && ITEM_BombLengthExtend)",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && ITEM_JETPACK && ITEM_KNIFE",
+                "Method": "ITEM_SLIDE && ITEM_JETPACK && ITEM_KNIFE && (ITEM_LINEBOMB && ITEM_BombLengthExtend)",
                 "Difficulty": 0
             }
         ],
@@ -7208,11 +7208,11 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_KNIFE",
+                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_KNIFE && (ITEM_LINEBOMB && ITEM_BombLengthExtend)",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && ITEM_JETPACK && ITEM_KNIFE",
+                "Method": "ITEM_SLIDE && ITEM_JETPACK && ITEM_KNIFE && (ITEM_LINEBOMB && ITEM_BombLengthExtend)",
                 "Difficulty": 0
             }
         ],
@@ -7234,11 +7234,11 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_KNIFE",
+                "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && ITEM_KNIFE && (ITEM_LINEBOMB && ITEM_BombLengthExtend)",
                 "Difficulty": 0
             },
             {
-                "Method": "ITEM_SLIDE && ITEM_JETPACK && ITEM_KNIFE",
+                "Method": "ITEM_SLIDE && ITEM_JETPACK && ITEM_KNIFE && (ITEM_LINEBOMB && ITEM_BombLengthExtend)",
                 "Difficulty": 0
             }
         ],
