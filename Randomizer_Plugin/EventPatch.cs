@@ -199,6 +199,32 @@ namespace TeviRandomizer
             MainVar.instance.NewCustomGame[1] = true;
         }
 
+        [HarmonyPatch(typeof(WarpDevice), "OnTriggerStay2D")]
+        [HarmonyTranspiler]
+        static IEnumerable<CodeInstruction> EnableTeleportRace(IEnumerable<CodeInstruction> instructions)
+        {
+            var original = AccessTools.Method(
+                typeof(GemaMissionMode),
+                "isInMission"
+            );
+
+            var replacement = AccessTools.Method(
+                typeof(Hooks),
+                "EnableTeleporter"
+            );
+
+            foreach (var instruction in instructions)
+            {
+                if (instruction.Calls(original))
+                {
+                    yield return new CodeInstruction(OpCodes.Call, replacement);
+                    continue;
+                }
+
+                yield return instruction;
+            }
+        }
+
         [HarmonyPatch(typeof(AfterMemineChallenge), "EVENT")]
         [HarmonyTranspiler]
         static IEnumerable<CodeInstruction> replaceMemineGive(IEnumerable<CodeInstruction> instructions)
