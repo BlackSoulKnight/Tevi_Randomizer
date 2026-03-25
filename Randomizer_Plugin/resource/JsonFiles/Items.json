@@ -92,7 +92,7 @@
     {
         "Name": "I15",
         "DisplayName": "Magitite Shard",
-        "Default_Quantity": 35,
+        "Default_Quantity": 70,
         "Maximum_Quantity": 70,
         "Classification": "progression",
         "Weight": 100,
@@ -102,8 +102,8 @@
     {
         "Name": "I16",
         "DisplayName": "Mananite Shard",
-        "Default_Quantity": 90,
-        "Maximum_Quantity": 96,
+        "Default_Quantity": 98,
+        "Maximum_Quantity": 98,
         "Classification": "progression",
         "Weight": 100,
         "ID": 16,
