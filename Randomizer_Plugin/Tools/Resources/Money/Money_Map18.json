@@ -602,7 +602,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE && ITEM_AirSlide",
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_SLIDE && ITEM_AirSlide",
                 "Difficulty": 0
             }
         ],
@@ -624,7 +624,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE && ITEM_AirSlide",
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_SLIDE && ITEM_AirSlide",
                 "Difficulty": 0
             }
         ],
@@ -646,7 +646,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE && ITEM_AirSlide",
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_SLIDE && ITEM_AirSlide",
                 "Difficulty": 0
             }
         ],
@@ -668,7 +668,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE && ITEM_AirSlide",
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_SLIDE && ITEM_AirSlide",
                 "Difficulty": 0
             }
         ],
@@ -690,7 +690,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_SLIDE && ITEM_AirSlide",
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_SLIDE && ITEM_AirSlide",
                 "Difficulty": 0
             }
         ],
