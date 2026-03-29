@@ -39,7 +39,7 @@ namespace TeviRandomizer
         }
         public const ItemList.Type remoteItem = ItemList.Type.I10;
         public const ItemList.Type remoteItemProgressive = ItemList.Type.I11;
-        public const string AP_WORLD_VERSION = "0.6.15";
+        public const string AP_WORLD_VERSION = "0.6.16";
         public const string ConnectionLost = "APLost";
 
         private class LocationData
@@ -489,15 +489,17 @@ namespace TeviRandomizer
                     byte value = 1;
                     string name = "";
                     string desc = "";
+                    bool skiphud = true;
                     int itemID = (int)item.ItemId;
-                    if(StartIDTeleporter > 0 && itemID >= StartIDTeleporter && itemID <= EndIDTeleporter)
+                    if (StartIDTeleporter > 0 && itemID >= StartIDTeleporter && itemID <= EndIDTeleporter)
                     {
                         name = item.ItemName;
                         desc = $"{name} is now available.";
                         value = (byte)(itemID - StartIDTeleporter);
                         itemID = (byte)TeviSettings.PortalItem;
+                        skiphud = !ItemPopUpChoice.HasFlag(PopupChoice.Progression);
                     }
-                    if(StartIDTeleporter > 0 && itemID >= StartIDTrap && itemID < EndIDTrap)
+                    if(StartIDTrap > 0 && itemID >= StartIDTrap && itemID < EndIDTrap)
                     {
                         name = item.ItemName;
                         value = (byte)(itemID - StartIDTrap);
@@ -505,7 +507,6 @@ namespace TeviRandomizer
                     }
                     teviItem = (ItemList.Type)itemID;
                     var em = EventManager.Instance;
-                    bool skiphud = true;
 
                     int flags = (int)ItemPopUpChoice;
                     if (ItemPopUpChoice.HasFlag(PopupChoice.Progression) && TeviSettings.ProgressionItems.Contains(teviItem.ToString()))
