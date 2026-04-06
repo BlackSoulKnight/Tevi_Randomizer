@@ -18,3 +18,4 @@ Randomizer_Plugin/Tools/Resources/tricks.txt
 *.pdb
 todo.txt
 Randomizer_Plugin/resource/randomizerui
+*.manifest
