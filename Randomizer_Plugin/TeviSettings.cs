@@ -197,7 +197,7 @@ namespace TeviRandomizer
             public static Dictionary<int, int> transitionData;
             public static readonly string pluginPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
             static public bool inGame = false;
-
+            public static bool BnuuyMode = DateTime.Now.Day == 1 && DateTime.Now.Month == 4?true:false;
             static TeviSettings()
             {
                 pluginPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);

@@ -1,17 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using Bullet;
+using HarmonyLib;
+using Map;
+using Spine.Unity;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using TeviRandomizer.TeviRandomizerSettings;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
-using UnityEngine.SceneManagement;
 using UnityEngine.ResourceManagement.AsyncOperations;
-using UnityEngine.ResourceManagement.ResourceProviders;
-using HarmonyLib;
-using System.Threading.Tasks;
-using Spine.Unity;
 using UnityEngine.ResourceManagement.ResourceLocations;
-using Bullet;
-using Map;
-using System.Linq;
-using TeviRandomizer.TeviRandomizerSettings;
+using UnityEngine.ResourceManagement.ResourceProviders;
+using UnityEngine.SceneManagement;
 using static TeviRandomizer.Extras;
 
 
@@ -51,9 +52,106 @@ namespace TeviRandomizer
             foreach (var l in Addressables.ResourceLocators)
             {
                 if (l.Keys.Contains(key))
+                {
                     return true;
+                }
             }
             return false;
+        }
+        
+        public static RuntimeAnimatorController BUN => loadBunny();
+        static AssetBundle TeviSkins = AssetBundle.LoadFromFile(TeviSettings.pluginPath + "/resource/Tevi skins/tevi_skins");
+        public static readonly Dictionary<string, RuntimeAnimatorController> SkinLibrary = new() {
+            { "tevi_base_effects", TeviSkins.LoadAsset<RuntimeAnimatorController>("tevi_base_effects")}
+            //{ "tevi_bunny", TeviSkins.LoadAsset<RuntimeAnimatorController>("tevi_bunny")},
+            //{ "tevi_erina", TeviSkins.LoadAsset<RuntimeAnimatorController>("tevi_erina")},
+        };
+        
+        public static RuntimeAnimatorController InvisTevi => SkinLibrary["tevi_base_effects"];
+        //public static RuntimeAnimatorController BunTevi => SkinLibrary["tevi_bunny"];
+        //public static RuntimeAnimatorController InvisTevi => CurrentSkin;
+        public static RuntimeAnimatorController BunTevi => CurrentSkin;
+        public static RuntimeAnimatorController CurrentSkin => AreaResource.Instance.GetNPC("tevi");
+        //public static RuntimeAnimatorController CurrentSkin = SkinLibrary["tevi_erina"];
+        //public static RuntimeAnimatorController CurrentSkin = DateTime.Now.Month == 4 && DateTime.Now.Day == 1 ? BunTevi:null;
+
+
+        static public RuntimeAnimatorController loadBunny()
+        {
+            var resourceLocators = Addressables.ResourceLocators;
+            foreach (var locator in resourceLocators)
+            {
+                foreach (var key in locator.Keys)
+                {
+
+                    locator.Locate(key, typeof(RuntimeAnimatorController), out var gameObjectLocations);
+                    if (gameObjectLocations != null)
+                    {
+
+                        foreach (var location in gameObjectLocations)
+                        {
+                            if (location.PrimaryKey == "rabbit")
+                            {
+                                return Addressables.LoadAssetAsync<RuntimeAnimatorController>(location).WaitForCompletion();
+                            }
+                        }
+                    }
+
+                }
+            }
+            return null;
+        }
+        static public void prinAdresables()
+        {
+            {
+                HashSet<string> primaryKeys = new HashSet<string>();
+
+                var resourceLocators = Addressables.ResourceLocators;
+                foreach (var locator in resourceLocators)
+                {
+                    foreach (var key in locator.Keys)
+                    {
+                        locator.Locate(key, typeof(GameObject), out var gameObjectLocations);
+                        if (gameObjectLocations != null && false)
+                        {
+                            foreach (var location in gameObjectLocations)
+                            {
+                                var extension = Path.GetExtension(location.PrimaryKey);
+                                Debug.Log($"GameObject locator_id={locator.LocatorId} \next={extension} \nkey={key} \nkey_type={key.GetType()} \nPrimaryKey={location.PrimaryKey} \nResourceType={location.ResourceType} \n[{location.ToString()}]");
+                                if (extension == ".prefab")
+                                {
+                                    primaryKeys.Add(location.PrimaryKey);
+                                }
+                            }
+                        }
+
+                        locator.Locate(key, typeof(Texture), out var textureLocations);
+                        if (textureLocations != null && false)
+                        {
+                            foreach (var location in textureLocations)
+                            {
+                                Debug.Log($"Texture locator_id={locator.LocatorId} \nkey={key} \nkey_type={key.GetType()} \nPrimaryKey={location.PrimaryKey} \nResourceType={location.ResourceType} \n[{location.ToString()}]");
+                                primaryKeys.Add(location.PrimaryKey);
+                            }
+                        }
+
+                        locator.Locate(key, typeof(SpriteAnimation), out var animationSetLocations);
+                        if (animationSetLocations != null)
+                        {
+                            foreach (var location in textureLocations)
+                            {
+                                Debug.Log($"SpriteAnimation locator_id={locator.LocatorId} \nkey={key} \nkey_type={key.GetType()} \nPrimaryKey={location.PrimaryKey} \nResourceType={location.ResourceType} \n[{location.ToString()}]");
+                                primaryKeys.Add(location.PrimaryKey);
+                            }
+                        }
+
+                        if (!(key is string))
+                        {
+                            Debug.Log($"Locator key was not a string locator_id={locator.LocatorId} key={key} key_type={key.GetType()}");
+                        }
+                    }
+                }
+            }
         }
 
 

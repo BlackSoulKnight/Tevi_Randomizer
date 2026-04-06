@@ -99,9 +99,11 @@ namespace TeviRandomizer
                     switch ((TeviTraps.Traps)trap.Value)
                     {
                         case TeviTraps.Traps.ReverseCam:
+                            if (TeviTraps.ReverseCamDuration < 0) TeviTraps.ReverseCamDuration = 0;
                             TeviTraps.ReverseCamDuration += 15;
                             break;
                         case TeviTraps.Traps.DoubleTime:
+                            if (TeviTraps.DoubleTimeDuration < 0) TeviTraps.DoubleTimeDuration = 0;
                             TeviTraps.DoubleTimeDuration += 30;
                             break;
                         case TeviTraps.Traps.Debuff:
@@ -114,7 +116,12 @@ namespace TeviRandomizer
                             TeviTraps.TauntQueue.Enqueue(Taunt.MAX);
                             break;
                         case TeviTraps.Traps.ReduceJump:
+                            if (TeviTraps.ReducedJumpHeightDuration < 0) TeviTraps.ReducedJumpHeightDuration = 0;
                             TeviTraps.ReducedJumpHeightDuration += 30;
+                            break;
+                        case TeviTraps.Traps.Invisibility:
+                            if (TeviTraps.InvisibilityDuration < 0) TeviTraps.InvisibilityDuration = 0;
+                            TeviTraps.InvisibilityDuration += 30;
                             break;
                     }
                     TeviItemInfo info = new(RandomizerPlugin.Trap, 1, true, TeviTraps.TrapToName((TeviTraps.Traps)trap.Value));
@@ -171,37 +178,6 @@ namespace TeviRandomizer
 
 
             return false;
-        }
-
-        void test()
-        {
-
-            TeviItemInfo item = new TeviItemInfo(ItemList.Type.I16, 1, true);
-            ItemQueue.Enqueue(item);
-            ItemQueue.Enqueue(item);
-            ItemQueue.Enqueue(item);
-            ItemQueue.Enqueue(item);
-            ItemQueue.Enqueue(item);
-            ResourceQueue.Enqueue(ItemList.Resource.COIN);
-            ResourceQueue.Enqueue(ItemList.Resource.COIN);
-            ResourceQueue.Enqueue(ItemList.Resource.COIN);
-            ResourceQueue.Enqueue(ItemList.Resource.COIN);
-            ResourceQueue.Enqueue(ItemList.Resource.COIN);
-            ResourceQueue.Enqueue(ItemList.Resource.COIN);
-            ResourceQueue.Enqueue(ItemList.Resource.COIN);
-            ResourceQueue.Enqueue(ItemList.Resource.COIN);
-            ResourceQueue.Enqueue(ItemList.Resource.COIN);
-            ResourceQueue.Enqueue(ItemList.Resource.COIN);
-            ResourceQueue.Enqueue(ItemList.Resource.COIN);
-            ResourceQueue.Enqueue(ItemList.Resource.COIN);
-            ResourceQueue.Enqueue(ItemList.Resource.COIN);
-            ResourceQueue.Enqueue(ItemList.Resource.COIN);
-            ResourceQueue.Enqueue(ItemList.Resource.COIN);
-            ResourceQueue.Enqueue(ItemList.Resource.COIN);
-            ResourceQueue.Enqueue(ItemList.Resource.COIN);
-            ResourceQueue.Enqueue(ItemList.Resource.COIN);
-            ResourceQueue.Enqueue(ItemList.Resource.COIN);
-            ResourceQueue.Enqueue(ItemList.Resource.COIN);
         }
 
         public static void EnqueueItem(TeviItemInfo item)
