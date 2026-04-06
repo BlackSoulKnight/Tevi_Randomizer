@@ -6500,7 +6500,7 @@
     },
     {
         "Itemname": "STACKABLE_MATK",
-        "Location": "Lab",
+        "Location": "Lab Left",
         "LocationName": "Lab - Cherry Bunny Potion",
         "slotId": 18,
         "Requirement": [
@@ -6565,7 +6565,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "",
+                "Method": "ITEM_AirDash || ITEM_JETPACK || ITEM_DOUBLEJUMP",
                 "Difficulty": 0
             }
         ],
@@ -6625,7 +6625,7 @@
         "slotId": 19,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && (ITEM_AirDash || ITEM_JETPACK || ITEM_DOUBLEJUMP)",
                 "Difficulty": 0
             }
         ],
@@ -6710,7 +6710,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && (ITEM_AirDash || ITEM_JETPACK || ITEM_DOUBLEJUMP)",
                 "Difficulty": 0
             }
         ],

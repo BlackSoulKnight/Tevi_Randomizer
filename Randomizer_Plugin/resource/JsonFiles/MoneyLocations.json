@@ -8770,7 +8770,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_JETPACK || ITEM_AirDash || ITEM_DOUBLEJUMP)",
                 "Difficulty": 0
             }
         ],
@@ -8792,7 +8792,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_JETPACK || ITEM_AirDash || ITEM_DOUBLEJUMP)",
                 "Difficulty": 0
             }
         ],
@@ -8814,7 +8814,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_JETPACK || ITEM_AirDash || ITEM_DOUBLEJUMP)",
                 "Difficulty": 0
             }
         ],
@@ -8836,7 +8836,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_JETPACK || ITEM_AirDash || ITEM_DOUBLEJUMP)",
                 "Difficulty": 0
             }
         ],
@@ -8858,7 +8858,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_JETPACK || ITEM_AirDash || ITEM_DOUBLEJUMP)",
                 "Difficulty": 0
             }
         ],
@@ -8880,7 +8880,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && (ITEM_JETPACK || ITEM_AirDash || ITEM_DOUBLEJUMP)",
                 "Difficulty": 0
             }
         ],
