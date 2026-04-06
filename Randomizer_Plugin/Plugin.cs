@@ -774,6 +774,36 @@ namespace TeviRandomizer
             return false;
         }
 
+        [HarmonyPatch(typeof(SpriteAnimation),"LoadSprite")]
+        [HarmonyPostfix]
+        static void BUNNIES(ref SpriteAnimation __instance,ref CharacterBase ____player) {
+            var time = DateTime.Now;
+            if (time.Day == 1 && time.Month == 4)
+            {
+                if (____player.isPlayer())
+                    __instance.pixel.anim.runtimeAnimatorController = ResourcePatch.BunTevi;
+                else
+                    __instance.pixel.anim.runtimeAnimatorController = ResourcePatch.BUN;
+            }
+            else if(____player.isPlayer())
+                    __instance.pixel.anim.runtimeAnimatorController = ResourcePatch.CurrentSkin;
+
+        }
+        [HarmonyPatch(typeof(SpriteAnimation), "LoadSpriteForced")]
+        [HarmonyPostfix]
+        static void FORCEBUNNIES(ref SpriteAnimation __instance,ref CharacterBase ____player) {
+            var time = DateTime.Now;
+            if (time.Day == 1 && time.Month == 4)
+            {
+                if (____player.isPlayer())
+                    __instance.pixel.anim.runtimeAnimatorController = ResourcePatch.BunTevi;
+                else
+                    __instance.pixel.anim.runtimeAnimatorController = ResourcePatch.BUN;
+            }
+            else if (____player.isPlayer())
+                __instance.pixel.anim.runtimeAnimatorController = ResourcePatch.CurrentSkin;
+        }
+
         //
         [HarmonyPatch(typeof(SaveManager), "GetMemineCleared")]
         [HarmonyPrefix]

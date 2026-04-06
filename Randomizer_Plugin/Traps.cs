@@ -17,6 +17,7 @@ namespace TeviRandomizer
             Debuff,
             Taunt,
             ReduceJump,
+            Invisibility,
             None
         }
         private static void ChangeCam(float zoomLevel) => MainVar.instance.CamZoom = zoomLevel;
@@ -26,6 +27,7 @@ namespace TeviRandomizer
         public static float ReverseCamDuration = 0;
         public static float DoubleTimeDuration = 0;
         public static float ReducedJumpHeightDuration = 0;
+        public static float InvisibilityDuration = 0;
         public static bool YeetBunny = false;
         public static Queue<Taunt> TauntQueue = new Queue<Taunt>();
         public static void ApplyDebuff(int debuff)
@@ -173,6 +175,8 @@ namespace TeviRandomizer
                     return Traps.Taunt;
                 case "Reduce Jump Height":
                     return Traps.ReduceJump;
+                case "Translucent Bunny Potion":
+                    return Traps.Invisibility;
                 default:
                     return Traps.None;
             }
@@ -193,11 +197,44 @@ namespace TeviRandomizer
                     return "Taunt";
                 case Traps.ReduceJump:
                     return "Reduce Jump Height";
+                case Traps.Invisibility:
+                    return "Translucent Bunny Potion";
                 default:
                     return "None";
             }
         }
-        
+        static playerController PlayerController;
+        static RuntimeAnimatorController Tevi;
+        static void EnableInvisibility(bool flag = true)
+        {
+            if (PlayerController == null)
+            {
+                PlayerController = EventManager.Instance.mainCharacter.gameObject.GetComponent<playerController>();
+            }
+            if (Tevi == null )
+                if(ResourcePatch.CurrentSkin == null)
+                    Tevi = AreaResource.Instance.GetNPC("tevi");
+                else
+                    Tevi = ResourcePatch.CurrentSkin;
+            if (flag)
+            {
+                if (PlayerController.spranim_prefer.pixel.anim.runtimeAnimatorController != ResourcePatch.InvisTevi)
+                {
+                    var a = PlayerController.spranim_prefer.pixel.anim.GetCurrentAnimatorStateInfo(0);
+                    PlayerController.spranim_prefer.pixel.anim.runtimeAnimatorController = ResourcePatch.InvisTevi;
+                    PlayerController.spranim_prefer.pixel.anim.Play(a.m_Name, 0, a.m_NormalizedTime);
+                }
+            }
+            else
+            {
+                if (PlayerController.spranim_prefer.pixel.anim.runtimeAnimatorController != Tevi)
+                {
+                    var a = PlayerController.spranim_prefer.pixel.anim.GetCurrentAnimatorStateInfo(0);
+                    PlayerController.spranim_prefer.pixel.anim.runtimeAnimatorController = Tevi;
+                    PlayerController.spranim_prefer.pixel.anim.Play(a.m_Name, 0, a.m_NormalizedTime);
+                }
+            }
+        }
         void Update()
         {
             if (GameSystem.Instance == null || GameSystem.Instance.isAnyPause()) return;
@@ -222,6 +259,15 @@ namespace TeviRandomizer
                 ChangeCam(-1);
                 if (ReverseCamDuration <= 0)
                     ChangeCam(1);
+            }
+            if (InvisibilityDuration>0 && EventManager.Instance.Mode == EventMode.Mode.OFF)
+            {
+                InvisibilityDuration -= Time.unscaledDeltaTime;
+                if (InvisibilityDuration <= 0)
+                    EnableInvisibility(false);
+                else
+                    EnableInvisibility();
+
             }
             if (YeetBunny)
             {
