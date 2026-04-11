@@ -576,7 +576,7 @@
         "Maximum_Quantity": 1,
         "Classification": "progression",
         "Weight": 100,
-        "ID": 10,
+        "ID": 100,
         "Group": "Money"
     },
     {
@@ -586,7 +586,7 @@
         "Maximum_Quantity": 1,
         "Classification": "progression",
         "Weight": 100,
-        "ID": 12,
+        "ID": 102,
         "Group": "Money"
     },
     {
