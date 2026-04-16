@@ -1359,14 +1359,14 @@
     },
     {
         "Itemname": "I14",
-        "Location": "Plague Forest to Ulskan",
+        "Location": "Plague Forest",
         "LocationName": "Plague Forest - Money Room X: 23 Y: 15 #1",
         "blockId": 550216,
         "area": 10,
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB && (ITEM_MASK || ITEM_AntiDecay)",
                 "Difficulty": 0
             }
         ],
