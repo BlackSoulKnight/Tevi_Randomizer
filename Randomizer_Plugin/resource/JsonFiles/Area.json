@@ -1822,7 +1822,7 @@
             "Connections": [
                 {
                     "Exit": "V_Chariot",
-                    "Method": ""
+                    "Method": "ITEM_SLIDE && ITEM_DOUBLEJUMP && (ITEM_LINEBOMB && ITEM_BombLengthExtend)"
                 }
             ]
         },
@@ -2286,10 +2286,6 @@
                 {
                     "Exit": "EverGarden BossPath",
                     "Method": "ITEM_JETPACK 2"
-                },
-                {
-                    "Exit": "EverGarden To Valley",
-                    "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash"
                 },
                 {
                     "Exit": "EverGarden To Valhalla",
