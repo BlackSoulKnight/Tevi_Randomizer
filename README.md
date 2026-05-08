@@ -20,6 +20,20 @@
   + Fray and Memloch also unlock more shop options in Morose and Ana Thema respectively
 + If you're unfamiliar with the item locations, starting with level 3 compass might be a good idea. Professor Zema will also provide hints if you talk to him (non Archipelago Randomizer)
 
+## Changes to Vanilla Game
+
+| Change | Description|
+| ------ | ------ |
+| Infinite Dropkick | Hitting an Enemy adds an additional Dropkick charge |
+| Dropkick Scaling  | Hitting exclusively with Dropkick and not getting it increases the damage of Dropkick|
+| ------| ------ |
+| Free Shop Items | Set the cost of shops items to 0|
+| Morose | Memory Box|
+| Snow City | Frozen Fate |
+| Ana Thema | Crystal Flute |
+| Tartarus | Tartarus VIP Ticket|
+| Valhalla | Valhalla VIP Ticket |
+
 ## Options
 | Option | Description |
 | ------ | --------- |
