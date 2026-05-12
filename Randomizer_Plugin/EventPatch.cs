@@ -462,11 +462,7 @@ namespace TeviRandomizer
                         return false;
                     }
                     break;
-
             }
-        
-        
-
             return false;
         }
 
