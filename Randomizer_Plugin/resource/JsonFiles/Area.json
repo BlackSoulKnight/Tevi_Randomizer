@@ -2288,9 +2288,14 @@
                     "Method": "ITEM_JETPACK 2"
                 },
                 {
+                    "Exit": "EverGarden To Valley",
+                    "Method": "ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK"
+                },
+                {
                     "Exit": "EverGarden To Valhalla",
                     "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && (HiddenP || ITEM_JETPACK || ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_SPEEDUP 3)"
                 }
+                
             ]
         },
         {
@@ -2299,10 +2304,6 @@
                 {
                     "Exit": "EverGarden",
                     "Method": "ITEM_AirDash || ITEM_DOUBLEJUMP || ITEM_JETPACK"
-                },
-                {
-                    "Exit": "V_Unicorn",
-                    "Method": ""
                 },
                 {
                     "Exit": "2900",
@@ -2316,6 +2317,10 @@
                 {
                     "Exit": "EverGarden",
                     "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
+                },
+                {
+                    "Exit": "V_Unicorn",
+                    "Method": ""
                 },
                 {
                     "Exit": "2902",
