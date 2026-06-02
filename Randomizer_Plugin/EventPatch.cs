@@ -510,17 +510,32 @@ namespace TeviRandomizer
             }
         }
 
-        [HarmonyPatch(typeof(AllMemineWon),"EVENT")]
-        [HarmonyPrefix]
-        static bool MemineAllBadge()
+        [HarmonyPatch(typeof(AllMemineWon), "EVENT")]
+        [HarmonyTranspiler]
+        static IEnumerable<CodeInstruction> MemineAllWon(IEnumerable<CodeInstruction> instructions)
         {
-            if (EventManager.Instance.EventStage == 20 && EventManager.Instance.EventTime > 0.7f && EventManager.Instance.EventTime < 100f)
+            var original = AccessTools.Method(
+                typeof(HUDObtainedItem),
+                "GiveItem"
+            );
+
+            var replacement = AccessTools.Method(
+                typeof(Hooks),
+                "GiveItemReplaceEvents"
+            );
+
+            foreach (var instruction in instructions)
             {
-                ItemDistributionSystem.EnqueueItem(new(ItemList.Type.BADGE_DoubleAirDash, 1, false));
-                EventManager.Instance.EventTime = 100f;
+                if (instruction.Calls(original))
+                {
+                    yield return new CodeInstruction(OpCodes.Call, replacement);
+                    continue;
+                }
+
+                yield return instruction;
             }
-            return true;
         }
+
 
         [HarmonyPatch(typeof(AfterMission),"EVENT")]
         [HarmonyPrefix]

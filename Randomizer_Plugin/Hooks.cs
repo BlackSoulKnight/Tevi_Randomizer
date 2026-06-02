@@ -12,6 +12,11 @@ namespace TeviRandomizer
         {
             ItemDistributionSystem.EnqueueItem(new(type, slotid, isRandomBadge));
         }
+        public static void GiveItemReplaceEvents(HUDObtainedItem instance,ItemList.Type type, byte slotid,bool isRandomBadge)
+        {
+            ItemDistributionSystem.EnqueueItem(new(type, slotid, false));
+        }
+
         public static bool EnableTeleporter(GemaMissionMode instance)
         {
             return TeviSettings.customFlags[CustomFlags.TeleporterRando]? false:instance.isInMission();
