@@ -190,6 +190,7 @@ namespace TeviRandomizer
 
                 var originalItem = item.Type;
                 item.Type = RandomizerPlugin.getRandomizedItem(item.Type, item.Value);
+                item = ItemRenames.ChangeItemNameAndDescription(item);
                 if (item.Type == RandomizerPlugin.PortalItem && RandomizerPlugin.__itemData.TryGetValue(LocationTracker.APLocationName[$"{originalItem} #{item.Value}"], out string itemName))
                 {
                     item.Value = byte.Parse(itemName.Split(["Teleporter "], StringSplitOptions.RemoveEmptyEntries)[0]);
@@ -222,7 +223,7 @@ namespace TeviRandomizer
                     }
                 }
             }
-
+            item = ItemRenames.ChangeItemNameAndDescription(item);
             switch (item.Type)
             {
                 case RandomizerPlugin.MoneyItem:
