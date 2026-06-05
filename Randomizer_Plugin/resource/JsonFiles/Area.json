@@ -118,10 +118,6 @@
                     "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
-                    "Exit": "Teleporter Morose",
-                    "Method": "OpenMorose"
-                },
-                {
                     "Exit": "Crafting",
                     "Method": ""
                 },
@@ -148,7 +144,7 @@
                 },
                 {
                     "Exit": "Gurun Desert",
-                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) || OpenMorose"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
                     "Exit": "0100",
@@ -198,7 +194,7 @@
                 },
                 {
                     "Exit": "Thanatara Canyon",
-                    "Method": "OpenMorose"
+                    "Method": ""
                 }
             ]
         }
@@ -3520,7 +3516,7 @@
             "Connections": [
                 {
                     "Exit": "Morose City",
-                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || OpenMorose)"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 }
             ]
         },

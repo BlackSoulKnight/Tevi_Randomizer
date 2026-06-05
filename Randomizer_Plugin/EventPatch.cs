@@ -93,18 +93,14 @@ namespace TeviRandomizer
                 if (TeviSettings.customStartDiff >= 0)
                     SaveManager.Instance.SetDifficulty(TeviSettings.customStartDiff);
                 // Make a Path to Morose
-                if (TeviSettings.customFlags[CustomFlags.TempOption])
-                {
-                    // Blocks to the area between Canyon and morose
-                    SaveManager.Instance.AddBreakTile(1, 302, 189);
-                    SaveManager.Instance.AddBreakTile(1, 303, 189);
-                    SaveManager.Instance.AddBreakTile(1, 304, 189);
-                    // Teleporter area
-                    SaveManager.Instance.AddBreakTile(3, 456, 189);
-                    SaveManager.Instance.AddBreakTile(3, 455, 189);
-                    SaveManager.Instance.AddBreakTile(3, 455, 188);
-                    SaveManager.Instance.AddBreakTile(3, 456, 188);
-                }
+
+                SaveManager.Instance.AddBreakTile(1, 302, 189);
+                SaveManager.Instance.AddBreakTile(1, 303, 189);
+                SaveManager.Instance.AddBreakTile(1, 304, 189);
+                SaveManager.Instance.AddBreakTile(3, 456, 189);
+                SaveManager.Instance.AddBreakTile(3, 455, 189);
+                SaveManager.Instance.AddBreakTile(3, 455, 188);
+                SaveManager.Instance.AddBreakTile(3, 456, 188);
                 // Snow City
                 SaveManager.Instance.AddBreakTile(16, 355, 99);
                 SaveManager.Instance.AddBreakTile(16, 356, 99);
@@ -714,12 +710,9 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static void noPort()
         {
-            if (!TeviSettings.customFlags[CustomFlags.TempOption])
-            {
-                EventManager.Instance.SetStage(1);
-                FadeManager.Instance.SetTargetAlpha(0f);
-                EventManager.Instance.StopEvent();
-            }
+            EventManager.Instance.SetStage(1);
+            FadeManager.Instance.SetTargetAlpha(0f);
+            EventManager.Instance.StopEvent();
         }
         [HarmonyPatch(typeof(GemaRabiEasterEggScene),"Update")]
         [HarmonyPrefix]

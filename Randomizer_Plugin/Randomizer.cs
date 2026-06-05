@@ -140,9 +140,6 @@ namespace TeviRandomizer
                                     DecreaseItemQuantity(ItemList.Type.ITEM_ORB.ToString());
                                 }
                                 break;
-                            case "tmpOption":
-                                TeviSettings.customFlags[CustomFlags.TempOption] = isOn;
-                                break;
                             case "NormalItemCraft":
                                 TeviSettings.customFlags[CustomFlags.NormalItemCraft] = isOn;
                                 if (isOn)

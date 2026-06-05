@@ -181,7 +181,6 @@ namespace TeviRandomizer
             if (optionData.ContainsKey("popupBadge") && (bool)optionData.GetValue("popupBadge"))
                 ItemPopUpChoice |= PopupChoice.Sigils;
 
-            TeviSettings.customFlags[CustomFlags.TempOption] = (bool)optionData.GetValue("open_morose");
             TeviSettings.customFlags[CustomFlags.CebleStart] = (bool)optionData.GetValue("celia_sable");
             TeviSettings.customFlags[CustomFlags.SuperBosses] = (bool)optionData.GetValue("superBosses");
             TeviSettings.GoMode = (int)(long)optionData.GetValue("goal_count");
