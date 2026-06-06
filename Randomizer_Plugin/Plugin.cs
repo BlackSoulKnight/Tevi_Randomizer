@@ -43,6 +43,7 @@ namespace TeviRandomizer
         }
 
         static public Dictionary<string, string> __itemData = new();
+        static public Dictionary<int,int> FoundTraps = new();
 
         static public List<int> transitionVisited = new List<int>();
         static public string seed;
@@ -360,6 +361,18 @@ namespace TeviRandomizer
             return data;
         }
 
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(AreaResource), "GetNPC", new[] { typeof(string) })]
+        static void getNPC(ref RuntimeAnimatorController __result, ref string name, ref AreaResource __instance)
+        {
+            if (name == "rabbit")
+            {
+                if (ResourcePatch.BUN == null)
+                    ResourcePatch.BUN = ResourcePatch.loadBunny();
+                __result = ResourcePatch.BUN;
+                return;
+            }
+        }
 
         static public ItemList.Type getRandomizedResource(ItemList.Resource item, byte area, int blockID)
         {
@@ -417,6 +430,7 @@ namespace TeviRandomizer
         static public void deloadRando()
         {
             __itemData.Clear();
+            FoundTraps.Clear();
             transitionVisited.Clear();
             LocationTracker.clearItemList();
             UniqueEnemiesKilled.Clear();
@@ -671,19 +685,38 @@ namespace TeviRandomizer
             {
                 if (ArchipelagoInterface.Instance.isConnected)
                 {
-                    string itemName = ArchipelagoInterface.Instance.getLocItemName(LocationTracker.APLocationName[$"{__instance.itemid} #{___slotid}"]);
+                    string locationName = LocationTracker.APLocationName[$"{__instance.itemid} #{___slotid}"];
+                    string itemName = ArchipelagoInterface.Instance.getLocItemName(locationName);
                     ItemList.Type item;
                     if (Enum.TryParse(itemName, out item))
                     {
                         spr = CommonResource.Instance.GetItem((int)item);
                     }
+                    else if (ArchipelagoInterface.Instance.IsItemTrap(locationName))
+                    {
+                        if (FoundTraps.ContainsKey(locationName.GetHashCode()))
+                            spr = CommonResource.Instance.GetItem(FoundTraps[locationName.GetHashCode()]);
+                        else
+                        {
+                            var newIcon = TeviSettings.ProgressionsItemValues[UnityEngine.Random.RandomRangeInt(0, TeviSettings.ProgressionsItemValues.Length)];
+                            FoundTraps[locationName.GetHashCode()] = newIcon;
+                            spr = CommonResource.Instance.GetItem(newIcon);
+                        }
+                    }
                 }
             }
             if(data == Trap)
             {
-                spr = CommonResource.Instance.GetItem(TeviSettings.ProgressionsItemValues[UnityEngine.Random.RandomRangeInt(0, TeviSettings.ProgressionsItemValues.Length)]);
+                string locationName = LocationTracker.APLocationName[$"{__instance.itemid} #{___slotid}"];
+                if (FoundTraps.ContainsKey(locationName.GetHashCode()))
+                    spr = CommonResource.Instance.GetItem(FoundTraps[locationName.GetHashCode()]);
+                else
+                {
+                    var newIcon = TeviSettings.ProgressionsItemValues[UnityEngine.Random.RandomRangeInt(0, TeviSettings.ProgressionsItemValues.Length)];
+                    FoundTraps[locationName.GetHashCode()] = newIcon;
+                    spr = CommonResource.Instance.GetItem(newIcon);
+                }
             }
-
             if (data >= ItemList.Type.BADGE_START && data <= ItemList.Type.BADGE_MAX)
             {
                 if (____secondsprite != null)

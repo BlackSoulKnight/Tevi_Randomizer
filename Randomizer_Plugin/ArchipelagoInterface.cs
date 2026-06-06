@@ -47,6 +47,7 @@ namespace TeviRandomizer
             public string item { get; set; }
             public long player { get; set; }
             public bool progressive { get; set; }
+            public bool trap;
             public long id { get; set; }
         }
 
@@ -311,6 +312,7 @@ namespace TeviRandomizer
                         Debug.LogError($"Player:{a[loc].Player.Name} Game:{a[loc].Player.Game}, ItemId:{a[loc].ItemId}");
                         locationData.player = a[loc].Player;
                         locationData.progressive = (a[loc].Flags & ItemFlags.Advancement) != 0;
+                        locationData.trap = (a[loc].Flags & ItemFlags.Trap) != 0;
                     }
                     else
                         Debug.LogError($"There is no Data for this Location {loc}");
@@ -327,6 +329,7 @@ namespace TeviRandomizer
                         locationData.item = a[loc].ItemName;
                     locationData.player = a[loc].Player;
                     locationData.progressive = (a[loc].Flags & ItemFlags.Advancement) != 0;
+                    locationData.trap = (a[loc].Flags & ItemFlags.Trap) != 0;
                     locationData.id = loc;
                 }
                 locations.Add(session.Locations.GetLocationNameFromId(loc, "Tevi"), locationData);
@@ -410,6 +413,10 @@ namespace TeviRandomizer
             if (locations.ContainsKey(Location))
                 return locations[Location].progressive;
             return false;
+        }
+        public bool IsItemTrap(string Location) 
+        {
+            return locations.ContainsKey(Location) && locations[Location].trap;
         }
         public bool isItemProgessive(ItemList.Type item, byte slot) => isItemProgessive(LocationTracker.APLocationName[$"{item} #{slot}"]);
         public void announceScoutedLocation(ItemList.Type item, byte slot)

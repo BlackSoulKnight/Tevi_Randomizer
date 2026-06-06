@@ -59,7 +59,7 @@ namespace TeviRandomizer
             return false;
         }
         
-        public static RuntimeAnimatorController BUN => loadBunny();
+        public static RuntimeAnimatorController BUN = null;
         static AssetBundle TeviSkins = AssetBundle.LoadFromFile(TeviSettings.pluginPath + "/resource/Tevi skins/tevi_skins");
         public static readonly Dictionary<string, RuntimeAnimatorController> SkinLibrary = new() {
             { "tevi_base_effects", TeviSkins.LoadAsset<RuntimeAnimatorController>("tevi_base_effects")}

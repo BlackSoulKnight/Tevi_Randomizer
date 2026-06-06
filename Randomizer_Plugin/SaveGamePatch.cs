@@ -4,8 +4,9 @@ using Map;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 using TeviRandomizer.TeviRandomizerSettings;
+using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace TeviRandomizer
 {
@@ -132,7 +133,19 @@ namespace TeviRandomizer
                 {
                     LocationTracker.setCollectedLocationList([]);
                 }
-                if(eS3File.KeyExists("Archipelago_currItem"))
+                if (eS3File.KeyExists("TrapsKeys") && eS3File.KeyExists("TrapsValues"))
+                {
+
+                    int[] loc = eS3File.Load<int[]>("TrapsKeys");
+                    int[] item = eS3File.Load<int[]>("TrapsValues");
+                    Dictionary<int,int> trapsIcons = new Dictionary<int,int>();
+                    for (int i = 0; i < loc.Length; i++)
+                    {
+                        trapsIcons[loc[i]] = item[i];
+                    }
+                    RandomizerPlugin.FoundTraps = trapsIcons;
+                }
+                if (eS3File.KeyExists("Archipelago_currItem"))
                     ArchipelagoInterface.Instance.currentItemNR = eS3File.Load<int>("Archipelago_currItem");
 
                 ItemDistributionSystem.loadFromSlot(eS3File);
@@ -140,6 +153,7 @@ namespace TeviRandomizer
                 {
                     ArchipelagoInterface.Instance.storeData();
                 }
+
 
             }
         }
@@ -196,6 +210,19 @@ namespace TeviRandomizer
                 }
                 eS3File.Save("transitionDataFrom", transitionDataFrom);
                 eS3File.Save("transitionDataTo", transitionDataTo);
+            }
+            if (RandomizerPlugin.FoundTraps != null)
+            {
+                int[] trapLoc = new int[RandomizerPlugin.FoundTraps.Count];
+                int[] trapItem = new int[RandomizerPlugin.FoundTraps.Count];
+                for (int i = 0; i < RandomizerPlugin.FoundTraps.Count; i++)
+                {
+                    KeyValuePair<int, int> pair = RandomizerPlugin.FoundTraps.ElementAt(i);
+                    trapLoc[i] = pair.Key;
+                    trapItem[i] = pair.Value;
+                }
+                eS3File.Save("TrapsKeys", trapLoc);
+                eS3File.Save("TrapsValues", trapItem);
             }
             eS3File.Save("transitionVisited", RandomizerPlugin.transitionVisited);
             eS3File.Save("EventReplace", EnemyPatch.eventReplace);
