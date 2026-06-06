@@ -420,7 +420,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && (ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || ( ITEM_WALLJUMP && CKick )) && (((ITEM_HIJUMP || ITEM_AirDash) && (ITEM_DOUBLEJUMP || ITEM_JETPACK))||(ITEM_JETPACK && ITEM_DOUBLEJUMP)) && ChargeShot && (ITEM_AREABOMB || ITEM_KNIFE)",
+                "Method": "(ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || ( ITEM_WALLJUMP && CKick )) && (((ITEM_HIJUMP || ITEM_AirDash) && (ITEM_DOUBLEJUMP || ITEM_JETPACK))||(ITEM_JETPACK && ITEM_DOUBLEJUMP)) && ChargeShot && (ITEM_AREABOMB || (ITEM_KNIFE && ITEM_SLIDE))",
                 "Difficulty": 0
             }
         ],
@@ -442,7 +442,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && (ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || ( ITEM_WALLJUMP && CKick )) && (((ITEM_HIJUMP || ITEM_AirDash) && (ITEM_DOUBLEJUMP || ITEM_JETPACK))||(ITEM_JETPACK && ITEM_DOUBLEJUMP)) && ChargeShot && (ITEM_AREABOMB || ITEM_KNIFE)",
+                "Method": "(ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || ( ITEM_WALLJUMP && CKick )) && (((ITEM_HIJUMP || ITEM_AirDash) && (ITEM_DOUBLEJUMP || ITEM_JETPACK))||(ITEM_JETPACK && ITEM_DOUBLEJUMP)) && ChargeShot && (ITEM_AREABOMB || (ITEM_KNIFE && ITEM_SLIDE))",
                 "Difficulty": 0
             }
         ],
@@ -464,7 +464,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && (ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || ( ITEM_WALLJUMP && CKick )) && (((ITEM_HIJUMP || ITEM_AirDash) && (ITEM_DOUBLEJUMP || ITEM_JETPACK))||(ITEM_JETPACK && ITEM_DOUBLEJUMP)) && ChargeShot && (ITEM_AREABOMB || ITEM_KNIFE)",
+                "Method": "(ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || ( ITEM_WALLJUMP && CKick )) && (((ITEM_HIJUMP || ITEM_AirDash) && (ITEM_DOUBLEJUMP || ITEM_JETPACK))||(ITEM_JETPACK && ITEM_DOUBLEJUMP)) && ChargeShot && (ITEM_AREABOMB || (ITEM_KNIFE && ITEM_SLIDE))",
                 "Difficulty": 0
             }
         ],
@@ -486,7 +486,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && (ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || ( ITEM_WALLJUMP && CKick )) && (((ITEM_HIJUMP || ITEM_AirDash) && (ITEM_DOUBLEJUMP || ITEM_JETPACK))||(ITEM_JETPACK && ITEM_DOUBLEJUMP)) && ChargeShot && (ITEM_AREABOMB || ITEM_KNIFE)",
+                "Method": "(ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || ( ITEM_WALLJUMP && CKick )) && (((ITEM_HIJUMP || ITEM_AirDash) && (ITEM_DOUBLEJUMP || ITEM_JETPACK))||(ITEM_JETPACK && ITEM_DOUBLEJUMP)) && ChargeShot && (ITEM_AREABOMB || (ITEM_KNIFE && ITEM_SLIDE))",
                 "Difficulty": 0
             }
         ],
@@ -508,7 +508,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && (ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || ( ITEM_WALLJUMP && CKick )) && (((ITEM_HIJUMP || ITEM_AirDash) && (ITEM_DOUBLEJUMP || ITEM_JETPACK))||(ITEM_JETPACK && ITEM_DOUBLEJUMP)) && ChargeShot && (ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Method": "(ChargeShot || ITEM_DOUBLEJUMP || ITEM_JETPACK || ITEM_AirDash || ( ITEM_WALLJUMP && CKick )) && (((ITEM_HIJUMP || ITEM_AirDash) && (ITEM_DOUBLEJUMP || ITEM_JETPACK))||(ITEM_JETPACK && ITEM_DOUBLEJUMP)) && ChargeShot && (ITEM_AREABOMB || (ITEM_KNIFE && ITEM_SLIDE))",
                 "Difficulty": 0
             }
         ],
@@ -1498,7 +1498,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB)",
+                "Method": "ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ],
@@ -1520,7 +1520,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB)",
+                "Method": "ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ],
@@ -1542,7 +1542,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB)",
+                "Method": "ITEM_LINEBOMB && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ],
@@ -1564,7 +1564,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB)",
+                "Method": "(ITEM_LINEBOMB && ITEM_SLIDE)",
                 "Difficulty": 0
             }
         ],
@@ -1586,7 +1586,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB)",
+                "Method": "(ITEM_LINEBOMB && ITEM_SLIDE)",
                 "Difficulty": 0
             }
         ],
@@ -2832,6 +2832,10 @@
             {
                 "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
                 "Difficulty": 0
+            },
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_KNIFE && ChargeShot",
+                "Difficulty": 0
             }
         ],
         "LocationRegion": [
@@ -2865,6 +2869,10 @@
             },
             {
                 "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                "Difficulty": 0
+            },
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_KNIFE && ChargeShot",
                 "Difficulty": 0
             }
         ],
@@ -2900,6 +2908,10 @@
             {
                 "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
                 "Difficulty": 0
+            },
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_KNIFE && ChargeShot",
+                "Difficulty": 0
             }
         ],
         "LocationRegion": [
@@ -2933,6 +2945,10 @@
             },
             {
                 "Method": "ITEM_HIJUMP && ITEM_JETPACK 3 && ITEM_KNIFE && ITEM_LINEBOMB && ITEM_BombLengthExtend 3",
+                "Difficulty": 0
+            },
+            {
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_KNIFE && ChargeShot",
                 "Difficulty": 0
             }
         ],
@@ -5177,6 +5193,10 @@
         "Requirement": [
             {
                 "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && (ITEM_HIJUMP || ITEM_JETPACK || ITEM_DOUBLEJUMP || ITEM_WALLJUMP) && ITEM_SLIDE",
+                "Difficulty": 0
+            },
+            {
+                "Method": "ITEM_KNIFE && (ITEM_HIJUMP || ITEM_JETPACK || ITEM_DOUBLEJUMP || ITEM_WALLJUMP)",
                 "Difficulty": 0
             }
         ],
@@ -11608,7 +11628,15 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_LINEBOMB || ((ITEM_AREABOMB || ITEM_KNIFE) && ITEM_BOMBFUEL)",
+                "Method": " ((ITEM_AREABOMB || ITEM_LINEBOMB) && ITEM_BOMBFUEL)",
+                "Difficulty": 0
+            },
+            {
+                "Method": " ITEM_KNIFE && ITEM_AttackRange 2",
+                "Difficulty": 0
+            },
+            {
+                "Method": " ITEM_LINEBOMB && ITEM_BombLengthExtend",
                 "Difficulty": 0
             }
         ],
@@ -11630,7 +11658,15 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_LINEBOMB || ((ITEM_AREABOMB || ITEM_KNIFE) && ITEM_BOMBFUEL)",
+                "Method": " ((ITEM_AREABOMB || ITEM_LINEBOMB) && ITEM_BOMBFUEL)",
+                "Difficulty": 0
+            },
+            {
+                "Method": " ITEM_KNIFE && ITEM_AttackRange 2",
+                "Difficulty": 0
+            },
+            {
+                "Method": " ITEM_LINEBOMB && ITEM_BombLengthExtend",
                 "Difficulty": 0
             }
         ],
@@ -11997,14 +12033,14 @@
     },
     {
         "Itemname": "I14",
-        "Location": "Travoll Mines to Forest",
+        "Location": "Travoll Mines to Forest Money",
         "LocationName": "Travoll Mines - Money Room X: 18 Y: 8 #1",
         "blockId": 450118,
         "area": 5,
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_KNIFE",
+                "Method": "ITEM_KNIFE || ITEM_AREABOMB || ITEM_LINEBOMB || EVENT_FreeStrongAttack",
                 "Difficulty": 0
             }
         ],
@@ -12019,14 +12055,14 @@
     },
     {
         "Itemname": "I14",
-        "Location": "Travoll Mines to Forest",
+        "Location": "Travoll Mines to Forest Money",
         "LocationName": "Travoll Mines - Money Room X: 18 Y: 8 #2",
         "blockId": 450119,
         "area": 5,
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_KNIFE",
+                "Method": "ITEM_KNIFE || ITEM_AREABOMB || ITEM_LINEBOMB || EVENT_FreeStrongAttack",
                 "Difficulty": 0
             }
         ],
@@ -12041,14 +12077,14 @@
     },
     {
         "Itemname": "I14",
-        "Location": "Travoll Mines to Forest",
+        "Location": "Travoll Mines to Forest Money",
         "LocationName": "Travoll Mines - Money Room X: 18 Y: 8 #3",
         "blockId": 451119,
         "area": 5,
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_KNIFE",
+                "Method": "ITEM_KNIFE || ITEM_AREABOMB || ITEM_LINEBOMB || EVENT_FreeStrongAttack",
                 "Difficulty": 0
             }
         ],

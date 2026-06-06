@@ -407,7 +407,7 @@
                     "Method": ""
                 },
                 {
-                    "Exit": "Travoll Mines to Forest",
+                    "Exit": "Travoll Mines to Forest Money",
                     "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
                 },
                 {
@@ -429,11 +429,24 @@
             ]
         },
         {
-            "Name": "Travoll Mines to Forest",
+            "Name": "Travoll Mines to Forest Money",
             "Connections": [
                 {
                     "Exit": "Travoll Mines",
-                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && (ITEM_KNIFE || EVENT_FreeStrongAttack)"
+                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
+                },
+                {
+                    "Exit": "Travoll Mines to Forest",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Travoll Mines to Forest",
+            "Connections": [
+                {
+                    "Exit": "Travoll Mines to Forest Money",
+                    "Method": "(ITEM_KNIFE || EVENT_FreeStrongAttack)"
                 },
                 {
                     "Exit": "0509",
@@ -1984,7 +1997,11 @@
                 },
                 {
                     "Exit": "Catacombs Inner",
-                    "Method": "ITEM_JETPACK && ITEM_WALLJUMP && ITEM_AirDash && ITEM_LINEBOMB && ITEM_SLIDE"
+                    "Method": "ITEM_JETPACK && ITEM_WALLJUMP && ITEM_LINEBOMB && ITEM_SLIDE"
+                },
+                {
+                    "Exit": "Catacombs Inner",
+                    "Method": "ITEM_JETPACK && ITEM_AirDash && ITEM_LINEBOMB && ITEM_SLIDE"
                 },
                 {
                     "Exit": "Pre Lab",
