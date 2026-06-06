@@ -190,10 +190,6 @@
                 },
                 {
                     "Exit": "Thanatara Canyon",
-                    "Method": "ITEM_LINEBOMB"
-                },
-                {
-                    "Exit": "Thanatara Canyon",
                     "Method": ""
                 }
             ]
