@@ -101,6 +101,12 @@ namespace TeviRandomizer
                 SaveManager.Instance.AddBreakTile(3, 455, 189);
                 SaveManager.Instance.AddBreakTile(3, 455, 188);
                 SaveManager.Instance.AddBreakTile(3, 456, 188);
+
+                //Ocean Swamp
+                SaveManager.Instance.AddBreakTile(14, 639, 272);
+                SaveManager.Instance.AddBreakTile(14, 639, 273);
+
+
                 // Snow City
                 SaveManager.Instance.AddBreakTile(16, 355, 99);
                 SaveManager.Instance.AddBreakTile(16, 356, 99);
