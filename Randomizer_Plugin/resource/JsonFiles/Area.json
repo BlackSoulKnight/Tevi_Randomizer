@@ -144,7 +144,7 @@
                 },
                 {
                     "Exit": "Gurun Desert",
-                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
+                    "Method": ""
                 },
                 {
                     "Exit": "0100",
