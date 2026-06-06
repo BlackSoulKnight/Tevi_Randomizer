@@ -9127,7 +9127,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB) && ITEM_Rotater",
+                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
                 "Difficulty": 0
             }
         ],
