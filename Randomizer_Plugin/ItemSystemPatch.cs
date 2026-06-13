@@ -3,9 +3,11 @@ using EventMode;
 using HarmonyLib;
 using Map;
 using System;
+using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 using TeviRandomizer.TeviRandomizerSettings;
+using UnityEngine;
+using static UnityEngine.UIElements.UIR.BestFitAllocator;
 
 namespace TeviRandomizer
 {
@@ -872,47 +874,21 @@ namespace TeviRandomizer
 
         }
 
-
-
-
         // Tartarus Arcade
 
         [HarmonyPatch(typeof(SaveManager),"GiveUpgrade")]
         [HarmonyPrefix]
-        static void acradeBonus()
+        static bool acradeBonus()
         {
-            collectType = collectResourceType.ARCADE;
-            if (SaveManager.Instance.GetMiniFlag(Mini.PlayedMiniGame) == 0 && SaveManager.Instance.savedata.minigame_highest_score > 0)
-                    number = 0;
-            else
-            {
-                var i = SaveManager.Instance.savedata.minigame_highest_round+1;
-                while ( i <= MainVar.instance.MINIGAME_ROUND_CLEARED)
-                {
-                    if (i == 1)
-                    {
-                        number = 1;
-                        SaveManager.Instance.savedata.minigame_highest_round = (byte)i;
-                        return;
-                    }
-                    if (i == 3)
-                    {
-                        number = 2;
-                        SaveManager.Instance.savedata.minigame_highest_round = (byte)i;
-                        return;
-                    }
-                    if (i == 5)
-                    {
-                        number = 3;
-                        SaveManager.Instance.savedata.minigame_highest_round = (byte)i;
-                        return;
-                    }
-                    if (i > 5)
-                        return;
-                    i++;
-                }
-            } 
+            number = 0;
+            int area = WorldManager.Instance.Area;
+            while (LocationTracker.hasResource((byte)area, ArcadeOffset - number))
+                number++;
+            collectType=collectResourceType.ARCADE;
+            CollectManager.Instance.CreateCollect(EventManager.Instance.mainCharacter.t.position, ElementType.B_RESOURCE, ItemList.Resource.UPGRADE);
+            return false;
         }
+
         [HarmonyPatch(typeof(SaveManager), "GiveUpgrade")]
         [HarmonyPostfix]
         static void disableArcadeBonsu() => collectType = collectResourceType.NONE;

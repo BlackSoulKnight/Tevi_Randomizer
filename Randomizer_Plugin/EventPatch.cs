@@ -728,7 +728,31 @@ namespace TeviRandomizer
                 FadeManager.Instance.SetAll(0, 0, 0, 1, 0f, 5f);
             }
         }
+        [HarmonyPatch(typeof(Chap4RabiSmashPillowObtain), "EVENT")]
+        [HarmonyTranspiler]
+        static IEnumerable<CodeInstruction> PillowEvent(IEnumerable<CodeInstruction> instructions)
+        {
+            var original = AccessTools.Method(
+                typeof(HUDObtainedItem),
+                "GiveItem"
+            );
 
+            var replacement = AccessTools.Method(
+                typeof(Hooks),
+                "GiveItemReplace"
+            );
+
+            foreach (var instruction in instructions)
+            {
+                if (instruction.Calls(original))
+                {
+                    yield return new CodeInstruction(OpCodes.Call, replacement);
+                    continue;
+                }
+
+                yield return instruction;
+            }
+        }
     }
 
 }
