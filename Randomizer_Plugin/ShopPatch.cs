@@ -140,6 +140,7 @@ namespace TeviRandomizer
 
         static bool FreeShop()
         {
+            return true;
             switch (WorldManager.Instance.Area)
             {
                 case 3:
