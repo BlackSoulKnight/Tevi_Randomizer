@@ -583,7 +583,7 @@
                 },
                 {
                     "Exit": "Vena Shop",
-                    "Method": "EVENT_MoroseVisited"
+                    "Method": "EVENT_MoroseVisited && QUEST_Flute"
                 },
                 {
                     "Exit": "Ana Thema Shop",
@@ -1230,7 +1230,7 @@
             "Connections": [
                 {
                     "Exit": "Vena Shop",
-                    "Method": "EVENT_MoroseVisited"
+                    "Method": "EVENT_MoroseVisited && ITEM_RailPass"
                 },
                 {
                     "Exit": "Teleporter Tartarus",
@@ -1720,7 +1720,7 @@
                 },
                 {
                     "Exit": "Vena Shop",
-                    "Method": "EVENT_MoroseVisited"
+                    "Method": "EVENT_MoroseVisited && ITEM_AirshipPass"
                 }
             ]
         },
