@@ -11,6 +11,7 @@ namespace TeviRandomizer
 {
     class ShopPatch
     {
+        static int CostMultiplier = 3;
         static void AddItem(ItemList.Type item)
         {
             if (RandomizerPlugin.checkRandomizedItemGot(item, 1))
@@ -140,7 +141,6 @@ namespace TeviRandomizer
 
         static bool FreeShop()
         {
-            return true;
             switch (WorldManager.Instance.Area)
             {
                 case 3:
@@ -224,48 +224,46 @@ namespace TeviRandomizer
                 switch (___typeN)
                 {
                     case Character.Type.Ian:
-                        if (FreeShop())
-                        {
-                            ___itemslots[___CurrentMaxItem].SetItem(item, num, false);
-                            ___CurrentMaxItem++;
-                        }
+                        ___itemslots[___CurrentMaxItem].SetItem(item, num, false);
+                        ___CurrentMaxItem++;
                         break;
                     case Character.Type.CC:
-                        if (FreeShop())
+                        if (item == ItemList.Type.STACKABLE_SHARD)
                         {
-                            if (item == ItemList.Type.STACKABLE_SHARD)
-                            {
-                                num = 5000;
-                            }
-                            else if (item.ToString().Contains("STACKABLE"))
-                            {
-                                num = 2000 + ___ShopID * 1000;
-                                if (num >= 5000)
-                                {
-                                    num -= 1000;
-                                }
-                                if (num < 3000)
-                                {
-                                    num = 3000;
-                                }
-                                if (item == ItemList.Type.STACKABLE_BAG)
-                                {
-                                    num /= 2;
-                                    if (WorldManager.Instance.Area == 3)
-                                    {
-                                        num = 250;
-                                    }
-                                    if (WorldManager.Instance.Area == 8)
-                                    {
-                                        num = 1000;
-                                    }
-                                }
-                            }
-                            ___itemslots[___CurrentMaxItem].SetItem(item, num, false);
-                            ___CurrentMaxItem++;
+                            num = 5000;
                         }
+                        else if (item.ToString().Contains("STACKABLE"))
+                        {
+                            num = 2000 + ___ShopID * 1000;
+                            if (num >= 5000)
+                            {
+                                num -= 1000;
+                            }
+                            if (num < 3000)
+                            {
+                                num = 3000;
+                            }
+                            if (item == ItemList.Type.STACKABLE_BAG)
+                            {
+                                num /= 2;
+                                if (WorldManager.Instance.Area == 3)
+                                {
+                                    num = 250;
+                                }
+                                if (WorldManager.Instance.Area == 8)
+                                {
+                                    num = 1000;
+                                }
+                            }
+                        }
+                        ___itemslots[___CurrentMaxItem].SetItem(item, num, false);
+                        ___CurrentMaxItem++;
                         break;
                     case Character.Type.Vena:
+                        ___itemslots[___CurrentMaxItem].SetItem(item, num, false);
+                        ___CurrentMaxItem++;
+                        break;
+                    case Character.Type.Mia:
                         ___itemslots[___CurrentMaxItem].SetItem(item, num, false);
                         ___CurrentMaxItem++;
                         break;
@@ -555,10 +553,11 @@ namespace TeviRandomizer
                         flag2 = false;
                     }
                     bool freeShop = FreeShop();
-                    if ((SaveManager.Instance.GetResource(ItemList.Resource.COIN) >= price || freeShop) && flag2)
+                    if ((SaveManager.Instance.GetResource(ItemList.Resource.COIN) >= price*CostMultiplier || freeShop) && flag2)
                     {
                         if(!freeShop)
-                            SaveManager.Instance.SubResource(ItemList.Resource.COIN, price);
+                            SaveManager.Instance.SubResource(ItemList.Resource.COIN, price*CostMultiplier);
+
                         if (___typeN == Character.Type.Ian)
                         {
                             SaveManager.Instance.savedata.coinUsedIan += price;
@@ -686,7 +685,7 @@ namespace TeviRandomizer
                 ___itemicon.sprite = CommonResource.Instance.GetItem((int)ItemList.Type.Other_Unknown);
 
 
-            texts[2].text = FreeShop()? "0":_price.ToString();
+            texts[2].text = FreeShop()? "0":(_price*CostMultiplier).ToString();
 
             ___itype = t;
             return false;
@@ -754,6 +753,10 @@ namespace TeviRandomizer
                 if (FreeShop())
                 {
                     ___item_price.text = "0";
+                }
+                else
+                {
+                    ___item_price.text = (int.Parse(___item_price.text) * CostMultiplier).ToString();
                 }
             }
         }
