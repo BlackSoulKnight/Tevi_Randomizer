@@ -224,6 +224,90 @@ namespace TeviRandomizer
                 }
             }
             item = ItemRenames.ChangeItemNameAndDescription(item);
+
+            if (item.Type.ToString().Contains("QUEST") || item.Type.ToString().Contains("ITEM") || item.Type == RandomizerPlugin.SableItem || item.Type == RandomizerPlugin.CeliaItem || item.Type == RandomizerPlugin.PortalItem)
+            {
+                    item.SkipHUD = !TeviSettings.PopupSending.HasFlag(PopupFlagsSending.Items);
+            }
+            else if (item.Type.ToString().Contains("BADGE"))
+            {
+                item.SkipHUD = !TeviSettings.PopupSending.HasFlag(PopupFlagsSending.Badge);
+            }
+            else if(item.Type == ArchipelagoInterface.remoteItemProgressive)
+                item.SkipHUD = !TeviSettings.PopupSending.HasFlag(PopupFlagsSending.PorgressionOther);
+            else if(item.Type == ArchipelagoInterface.remoteItem)
+                item.SkipHUD = !TeviSettings.PopupSending.HasFlag(PopupFlagsSending.FillerOther);
+            else if(item.Type.ToString().Contains("STACKABLE"))
+                item.SkipHUD = !TeviSettings.PopupSending.HasFlag(PopupFlagsSending.Potion);
+
+            if (item.Type == RandomizerPlugin.Trap)
+                item.SkipHUD = true;
+
+
+            switch (item.Type)
+            {
+                case RandomizerPlugin.MoneyItem:
+                    ResourceQueue.Enqueue(ItemList.Resource.COIN);
+                    break;
+                case RandomizerPlugin.ItemUpgradeItem:
+                    ResourceQueue.Enqueue(ItemList.Resource.UPGRADE);
+                    break;
+                case RandomizerPlugin.CoreUpgradeItem:
+                    ResourceQueue.Enqueue(ItemList.Resource.CORE);
+                    break;
+                case RandomizerPlugin.Trap:
+                    TrapQueue.Enqueue(item);
+                    break;
+                default:
+                    ItemQueue.Enqueue(item);
+                    break;
+            }
+        }
+
+        public static void EnqueueItemAP(TeviItemInfo item)
+        {
+            if (!item.Randomized)
+            {
+                if (RandomizerPlugin.checkItemGot(item.Type, item.Value))
+                    return;
+                LocationTracker.addItemToList(item.Type, item.Value);
+
+                var originalItem = item.Type;
+                item.Type = RandomizerPlugin.getRandomizedItem(item.Type, item.Value);
+                item = ItemRenames.ChangeItemNameAndDescription(item);
+                if (item.Type == RandomizerPlugin.PortalItem && RandomizerPlugin.__itemData.TryGetValue(LocationTracker.APLocationName[$"{originalItem} #{item.Value}"], out string itemName))
+                {
+                    item.Value = byte.Parse(itemName.Split(["Teleporter "], StringSplitOptions.RemoveEmptyEntries)[0]);
+                    item.Name = TeviSettings.TeviToDisplayName(itemName);
+                    item.Description = $"{item.Name} is now available.";
+                }
+                if(item.Type == RandomizerPlugin.Trap)
+                {
+
+                    if (RandomizerPlugin.__itemData.ContainsKey(LocationTracker.APLocationName[$"{originalItem} #{item.Value}"]))
+                        item.Name = RandomizerPlugin.__itemData[LocationTracker.APLocationName[$"{originalItem} #{item.Value}"]];
+                    item.Value = (byte)TeviTraps.NameToTrap(item.Name);
+
+                }
+                if (ArchipelagoInterface.Instance.isConnected)
+                {
+                    if (item.Type == ArchipelagoInterface.remoteItem || item.Type == ArchipelagoInterface.remoteItemProgressive)
+                    {
+
+                        item.Name = ArchipelagoInterface.Instance.getLocItemName(originalItem, item.Value);
+                        string playerName = ArchipelagoInterface.Instance.getLocPlayerName(originalItem, item.Value);
+                        item.Description = $"You found {item.Name} for {playerName}";
+
+                        if (Enum.TryParse(item.Name, out ItemList.Type fake))
+                        {
+                            item.ItemIcon = CommonResource.Instance.GetItem((int)fake);
+                            item.Description = "<color=\"red\">" + $"                                                                          <size=200%> FOOL!</color><size=100%>\n\n\n<font-weight=100>{item.Name} was stolen by {playerName}";
+                            TeviTraps.SpawnBun();
+                        }
+                    }
+                }
+            }
+            item = ItemRenames.ChangeItemNameAndDescription(item);
             switch (item.Type)
             {
                 case RandomizerPlugin.MoneyItem:

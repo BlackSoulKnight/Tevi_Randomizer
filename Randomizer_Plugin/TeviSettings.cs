@@ -135,6 +135,24 @@ namespace TeviRandomizer
             filler,
             trap
         }
+        [Flags]
+        public enum PopupFlagsSending
+        {
+            Nothing,
+            Items = 1,
+            Badge = 2,
+            Potion = 4,
+            PorgressionOther = 8,
+            FillerOther = 16,
+        }
+        [Flags]
+        public enum PopupFlagsReceiving
+        {
+            Nothing,
+            Progression = 1,
+            Badge = 2,
+            Filler = 4
+        }
         struct TeviItem
         {
             public string Name;
@@ -162,6 +180,7 @@ namespace TeviRandomizer
             public const ItemList.Type MoneyItem = ItemList.Type.I14;
             public const ItemList.Type CoreUpgradeItem = ItemList.Type.I15;
             public const ItemList.Type ItemUpgradeItem = ItemList.Type.I16;
+
             public static readonly Dictionary<long,TeviItem> IDtoItem;
             public static readonly Dictionary<string,TeviItem> NametoItem;
             public static readonly Dictionary<string,TeviItem> DisplayNameToItem;
@@ -175,6 +194,9 @@ namespace TeviRandomizer
             public static readonly List<TeviItem> Traps = new();
             public static readonly HashSet<string> ProgressionItems = new();
             public static int[] ProgressionsItemValues;
+            public static PopupFlagsReceiving PopupReceiving = 0;
+            public static PopupFlagsSending PopupSending = 0;
+
             static Dictionary<CustomFlags, bool> SetUpFlags()
             {
                 Dictionary<CustomFlags, bool> ret = new();

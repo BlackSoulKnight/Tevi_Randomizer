@@ -294,10 +294,33 @@ namespace TeviRandomizer.UI
 
         }
 
+        void popups()
+        {
+            TeviSettings.PopupReceiving = 0;
+            if (((UnityEngine.UI.Toggle)UI.settings["Toggle PopReceiveProgression"]).isOn)
+                TeviSettings.PopupReceiving |= PopupFlagsReceiving.Progression;
+            if (((UnityEngine.UI.Toggle)UI.settings["Toggle PopReceiveBadge"]).isOn)
+                TeviSettings.PopupReceiving |= PopupFlagsReceiving.Badge;
+            if (((UnityEngine.UI.Toggle)UI.settings["Toggle PopReceiveFiller"]).isOn)
+                TeviSettings.PopupReceiving |= PopupFlagsReceiving.Filler;
+
+            TeviSettings.PopupSending = 0;
+            if(((UnityEngine.UI.Toggle)UI.settings["Toggle PopOwnItems"]).isOn)
+                TeviSettings.PopupSending |= PopupFlagsSending.Items;
+            if(((UnityEngine.UI.Toggle)UI.settings["Toggle PopOwnBadge"]).isOn)
+                TeviSettings.PopupSending |= PopupFlagsSending.Badge;
+            if(((UnityEngine.UI.Toggle)UI.settings["Toggle PopOwnPotion"]).isOn)
+                TeviSettings.PopupSending |= PopupFlagsSending.Potion;
+            if(((UnityEngine.UI.Toggle)UI.settings["Toggle PopOtherProgression"]).isOn)
+                TeviSettings.PopupSending |= PopupFlagsSending.PorgressionOther;
+            if(((UnityEngine.UI.Toggle)UI.settings["Toggle PopOtherFiller"]).isOn)
+                TeviSettings.PopupSending |= PopupFlagsSending.FillerOther;
+        }
 
         void patchExtraFeatures()
         {
             Extras.patchWhiteFlash(((UnityEngine.UI.Toggle)UI.settings["Toggle AntiFlash"]).isOn && RandomizerPlugin.randomizerEnabled );
+            popups();
             TeviSettings.customFlags[CustomFlags.AlwaysRandomizeEnemy] = ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn;
             TeviSettings.customFlags[CustomFlags.RandomizedBoss] = ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomBoss"]).isOn;
             TeviSettings.customFlags[CustomFlags.RandomizedEnemy] = ((UnityEngine.UI.Toggle)UI.settings["Toggle ChaosEnemy"]).isOn || ((UnityEngine.UI.Toggle)UI.settings["Toggle RandomEnemies"]).isOn;
