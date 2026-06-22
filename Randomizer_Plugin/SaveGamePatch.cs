@@ -237,7 +237,7 @@ namespace TeviRandomizer
             eS3File.Save("UniqueEnemies",RandomizerPlugin.UniqueEnemiesKilled);
             if (MainVar.instance._isAutoSave)
             {
-                if (ArchipelagoInterface.Instance != null && ArchipelagoInterface.Instance.isConnected)
+                if (ArchipelagoInterface.Instance != null)
                 {
                     eS3File.Save("Archipelago_currItem", autoSaveAPIndex);
                 }
@@ -247,7 +247,7 @@ namespace TeviRandomizer
             }
             else
             {
-                if (ArchipelagoInterface.Instance != null && ArchipelagoInterface.Instance.isConnected)
+                if (ArchipelagoInterface.Instance != null)
                 {
                     eS3File.Save("Archipelago_currItem", ArchipelagoInterface.Instance.currentItemNR);
                 }
