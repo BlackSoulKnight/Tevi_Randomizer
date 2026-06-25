@@ -32,7 +32,6 @@ namespace TeviRandomizer
         //{ "tevi_erina", TeviSkins.LoadAsset<RuntimeAnimatorController>("tevi_erina")},
 
         static List<TeviSkin> SkinList = new() {
-            new("Erina", TeviSkins.LoadAsset<RuntimeAnimatorController>("tevi_erina")),
             new("Bunny",TeviSkins.LoadAsset<RuntimeAnimatorController>("tevi_bunny")),
         };
         const short BaseSkinCount = 3;
@@ -46,7 +45,7 @@ namespace TeviRandomizer
                 string text = SaveManager.Instance.CheckSkin(EventManager.Instance.mainCharacter.type.ToString());
                 return AreaResource.Instance.GetNPC(text);
             }
-            if(skinNr - BaseSkinCount >= SkinList.Count)
+            if(skinNr - BaseSkinCount-1 >= SkinList.Count)
                 return AreaResource.Instance.GetNPC("Tevi");
             return SkinList[skinNr-BaseSkinCount-1].Skin;
         }
@@ -120,7 +119,7 @@ namespace TeviRandomizer
                 return false;
             }
 
-            if (skinNR - BaseSkinCount > SkinList.Count)
+            if (skinNR - BaseSkinCount-1 >= SkinList.Count)
                 __result = "tevi";
             else
                 __result = SkinList[skinNR - BaseSkinCount-1].SkinName;
