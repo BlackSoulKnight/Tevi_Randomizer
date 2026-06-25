@@ -96,7 +96,7 @@ namespace TeviRandomizer
             {
                 if ((short)originalBoss != eventReplace[(short)originalBoss])
                 {
-                    if (originalBoss == Mode.BOSS_DEMONFRAY || originalBoss == Mode.BOSS_FRANKIE || originalBoss == Mode.BOSS_CYRIL)
+                    if (originalBoss == Mode.BOSS_DEMONFRAY || originalBoss == Mode.BOSS_FRANKIE || originalBoss == Mode.BOSS_CYRIL1x13)
                         nr = 1;
 
                     BossPatch.lockCameraToArena(em, nr);

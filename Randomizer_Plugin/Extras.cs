@@ -272,7 +272,7 @@ namespace TeviRandomizer
                 {
                     (short) Mode.BOSS_BARADOS,
                     (short) Mode.BOSS_CAPRICE,
-                    (short) Mode.BOSS_CYRIL,
+                    (short) Mode.BOSS_CYRIL1x13,
                     (short) Mode.BOSS_DEMONFRAY,
                     (short) Mode.BOSS_EIDOLON,
                     (short) Mode.BOSS_FRANKIE,

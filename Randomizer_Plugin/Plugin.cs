@@ -1034,12 +1034,12 @@ namespace TeviRandomizer
         }
         [HarmonyPatch(typeof(EventManager), "ReloadOrbStatus")]
         [HarmonyPrefix]
-        static bool orbRealoadStuff(ref CharacterBase ___mainCharacter, ref EventManager __instance)
+        static bool orbRealoadStuff(ref CharacterBase ____mainCharacter, ref EventManager __instance)
         {
-            (___mainCharacter.phy_perfer as CharacterPhy).canShootFlag = false;
-            (___mainCharacter.phy_perfer as CharacterPhy).canChargeFlag = false;
-            (___mainCharacter.phy_perfer as CharacterPhy).canWhiteFlag = false;
-            (___mainCharacter.phy_perfer as CharacterPhy).canBlackFlag = false;
+            (____mainCharacter.phy_perfer as CharacterPhy).canShootFlag = false;
+            (____mainCharacter.phy_perfer as CharacterPhy).canChargeFlag = false;
+            (____mainCharacter.phy_perfer as CharacterPhy).canWhiteFlag = false;
+            (____mainCharacter.phy_perfer as CharacterPhy).canBlackFlag = false;
             WorldManager.Instance.CanShootWall = false;
             if (SaveManager.Instance.GetOrb() <= 0)
             {
@@ -1047,18 +1047,18 @@ namespace TeviRandomizer
             }
             else
             {
-                (___mainCharacter.phy_perfer as CharacterPhy).canShootFlag = true;
+                (____mainCharacter.phy_perfer as CharacterPhy).canShootFlag = true;
                 __instance.ShowAllOrbs(t: true);
                 if (SaveManager.Instance.GetOrb() >= 2)
                 {
                     WorldManager.Instance.CanShootWall = true;
 
-                    (___mainCharacter.phy_perfer as CharacterPhy).canChargeFlag = true;
+                    (____mainCharacter.phy_perfer as CharacterPhy).canChargeFlag = true;
                     ReloadBar.Instance.EnableMe();
                     if (SaveManager.Instance.GetOrb() >= 3)
                     {
-                        (___mainCharacter.phy_perfer as CharacterPhy).canWhiteFlag = SaveManager.Instance.GetItem(ItemList.Type.I19) > 0;
-                        (___mainCharacter.phy_perfer as CharacterPhy).canBlackFlag = SaveManager.Instance.GetItem(ItemList.Type.I20) > 0;
+                        (____mainCharacter.phy_perfer as CharacterPhy).canWhiteFlag = SaveManager.Instance.GetItem(ItemList.Type.I19) > 0;
+                        (____mainCharacter.phy_perfer as CharacterPhy).canBlackFlag = SaveManager.Instance.GetItem(ItemList.Type.I20) > 0;
                     }
                     __instance.HidePoweredOrbs(t: false);
                 }
@@ -1070,7 +1070,7 @@ namespace TeviRandomizer
             GemaSpineHUDTopLeft.Instance.UpdateSkin();
             if (Time.timeSinceLevelLoad > 2.5f)
             {
-                Debug.Log("[EventManager] Orb Status = " + SaveManager.Instance.GetOrb() + " | CanShoot = " + (___mainCharacter.phy_perfer as CharacterPhy).canShootFlag + " | CanCharge = " + (___mainCharacter.phy_perfer as CharacterPhy).canChargeFlag + " | CanShootWall = " + WorldManager.Instance.CanShootWall + " | canWhite = " + (___mainCharacter.phy_perfer as CharacterPhy).canWhiteFlag + " | canBlack = " + (___mainCharacter.phy_perfer as CharacterPhy).canBlackFlag);
+                Debug.Log("[EventManager] Orb Status = " + SaveManager.Instance.GetOrb() + " | CanShoot = " + (____mainCharacter.phy_perfer as CharacterPhy).canShootFlag + " | CanCharge = " + (____mainCharacter.phy_perfer as CharacterPhy).canChargeFlag + " | CanShootWall = " + WorldManager.Instance.CanShootWall + " | canWhite = " + (____mainCharacter.phy_perfer as CharacterPhy).canWhiteFlag + " | canBlack = " + (____mainCharacter.phy_perfer as CharacterPhy).canBlackFlag);
             }
 
 

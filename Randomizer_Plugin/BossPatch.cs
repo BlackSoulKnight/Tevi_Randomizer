@@ -502,7 +502,7 @@ namespace TeviRandomizer
 
         }
 
-        [HarmonyPatch(typeof(BOSS_CYRIL), "EVENT")]
+        [HarmonyPatch(typeof(BOSS_CYRIL1x13), "EVENT")]
         [HarmonyPrefix]
         static void fixCYRIL(ref enemyController ___b)
         {
