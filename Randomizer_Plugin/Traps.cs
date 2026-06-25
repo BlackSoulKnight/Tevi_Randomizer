@@ -211,11 +211,7 @@ namespace TeviRandomizer
             {
                 PlayerController = EventManager.Instance.mainCharacter.gameObject.GetComponent<playerController>();
             }
-            if (Tevi == null )
-                if(ResourcePatch.CurrentSkin == null)
-                    Tevi = AreaResource.Instance.GetNPC("tevi");
-                else
-                    Tevi = ResourcePatch.CurrentSkin;
+            Tevi = ResourcePatch.CurrentSkin;
             if (flag)
             {
                 if (PlayerController.spranim_prefer.pixel.anim.runtimeAnimatorController != ResourcePatch.InvisTevi)

@@ -60,21 +60,8 @@ namespace TeviRandomizer
         }
         
         public static RuntimeAnimatorController BUN = null;
-        static AssetBundle TeviSkins = AssetBundle.LoadFromFile(TeviSettings.pluginPath + "/resource/Tevi skins/tevi_skins");
-        public static readonly Dictionary<string, RuntimeAnimatorController> SkinLibrary = new() {
-            { "tevi_base_effects", TeviSkins.LoadAsset<RuntimeAnimatorController>("tevi_base_effects")}
-            //{ "tevi_bunny", TeviSkins.LoadAsset<RuntimeAnimatorController>("tevi_bunny")},
-            //{ "tevi_erina", TeviSkins.LoadAsset<RuntimeAnimatorController>("tevi_erina")},
-        };
-        
-        public static RuntimeAnimatorController InvisTevi => SkinLibrary["tevi_base_effects"];
-        //public static RuntimeAnimatorController BunTevi => SkinLibrary["tevi_bunny"];
-        //public static RuntimeAnimatorController InvisTevi => CurrentSkin;
-        public static RuntimeAnimatorController BunTevi => CurrentSkin;
-        public static RuntimeAnimatorController CurrentSkin => AreaResource.Instance.GetNPC("tevi");
-        //public static RuntimeAnimatorController CurrentSkin = SkinLibrary["tevi_erina"];
-        //public static RuntimeAnimatorController CurrentSkin = DateTime.Now.Month == 4 && DateTime.Now.Day == 1 ? BunTevi:null;
-
+        public static RuntimeAnimatorController CurrentSkin => TeviSkinManager.LoadMainCharacterSkin();
+        public static RuntimeAnimatorController InvisTevi => TeviSkinManager.Invisibile.Skin;
 
         static public RuntimeAnimatorController loadBunny()
         {

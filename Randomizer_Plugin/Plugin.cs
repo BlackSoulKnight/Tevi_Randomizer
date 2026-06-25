@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using TeviRandomizer.TeviRandomizerSettings;
+using System.Net;
 
 
 
@@ -143,6 +144,7 @@ namespace TeviRandomizer
                 harmonyPatchInstance.PatchAll(typeof(BaseGameFixes));
                 harmonyPatchInstance.PatchAll(typeof(PlayerCharacterPatch));
                 harmonyPatchInstance.PatchAll(typeof(HintSystemPatch));
+                harmonyPatchInstance.PatchAll(typeof(TeviSkinManager));
                 Traverse.Create(SaveManager.Instance).Field("MAXTODO").SetValue(2000);
                 Traverse.Create(SaveManager.Instance).Field("MAXOLDTODO").SetValue(2000);
                 randomizerEnabled = true;
@@ -814,7 +816,8 @@ namespace TeviRandomizer
             if (time.Day == 1 && time.Month == 4)
             {
                 if (____player.isPlayer())
-                    __instance.pixel.anim.runtimeAnimatorController = ResourcePatch.BunTevi;
+                    //__instance.pixel.anim.runtimeAnimatorController = ResourcePatch.BunTevi;
+                    return;
                 else
                     __instance.pixel.anim.runtimeAnimatorController = ResourcePatch.BUN;
             }
@@ -829,7 +832,8 @@ namespace TeviRandomizer
             if (time.Day == 1 && time.Month == 4)
             {
                 if (____player.isPlayer())
-                    __instance.pixel.anim.runtimeAnimatorController = ResourcePatch.BunTevi;
+                    //__instance.pixel.anim.runtimeAnimatorController = ResourcePatch.BunTevi;
+                    return;
                 else
                     __instance.pixel.anim.runtimeAnimatorController = ResourcePatch.BUN;
             }
