@@ -227,18 +227,18 @@ namespace TeviRandomizer
 
             if (item.Type.ToString().Contains("QUEST") || item.Type.ToString().Contains("ITEM") || item.Type == RandomizerPlugin.SableItem || item.Type == RandomizerPlugin.CeliaItem || item.Type == RandomizerPlugin.PortalItem)
             {
-                    item.SkipHUD = !TeviSettings.PopupSending.HasFlag(PopupFlagsSending.Items);
+                    item.SkipHUD |= !TeviSettings.PopupSending.HasFlag(PopupFlagsSending.Items);
             }
             else if (item.Type.ToString().Contains("BADGE"))
             {
-                item.SkipHUD = !TeviSettings.PopupSending.HasFlag(PopupFlagsSending.Badge);
+                item.SkipHUD |= !TeviSettings.PopupSending.HasFlag(PopupFlagsSending.Badge);
             }
             else if(item.Type == ArchipelagoInterface.remoteItemProgressive)
-                item.SkipHUD = !TeviSettings.PopupSending.HasFlag(PopupFlagsSending.PorgressionOther);
+                item.SkipHUD |= !TeviSettings.PopupSending.HasFlag(PopupFlagsSending.PorgressionOther);
             else if(item.Type == ArchipelagoInterface.remoteItem)
-                item.SkipHUD = !TeviSettings.PopupSending.HasFlag(PopupFlagsSending.FillerOther);
+                item.SkipHUD |= !TeviSettings.PopupSending.HasFlag(PopupFlagsSending.FillerOther);
             else if(item.Type.ToString().Contains("STACKABLE"))
-                item.SkipHUD = !TeviSettings.PopupSending.HasFlag(PopupFlagsSending.Potion);
+                item.SkipHUD |= !TeviSettings.PopupSending.HasFlag(PopupFlagsSending.Potion);
 
             if (item.Type == RandomizerPlugin.Trap)
                 item.SkipHUD = true;
