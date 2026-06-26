@@ -74,13 +74,20 @@ namespace TeviRandomizer.Bonus_Features
         static IEnumerable<CodeInstruction> replaceFinalDamage(IEnumerable<CodeInstruction> instructions)
         {
             var original = AccessTools.Method(typeof(CharacterBase), "ReduceHealth");
-            var prevCall = AccessTools.Method(typeof(CharacterBase), "AddHealth");
 
             var replacement = AccessTools.Method(typeof(QuickdropPatch), "CalculateAdditionalDamage");
             var line = new List<CodeInstruction>(instructions);
+
+            /*
+                original code in CharacterBase at line 6399
+                if (flag9)
+		        {
+			        ReduceHealth((int)finaldamage, lethal: true);
+		        }
+             */
             for (int i = 0; i < line.Count - 6; i++)
             {
-                if (line[i].opcode == OpCodes.Call && line[i].operand is MethodInfo m && m == prevCall &&
+                if (line[i].opcode == OpCodes.Brfalse &&
                     line[i + 1].opcode == OpCodes.Ldarg_0 &&
                     line[i + 2].opcode == OpCodes.Ldarg_S &&
                     line[i + 3].opcode == OpCodes.Ldind_R4 &&
