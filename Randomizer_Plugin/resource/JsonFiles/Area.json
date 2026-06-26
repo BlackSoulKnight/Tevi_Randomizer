@@ -555,6 +555,10 @@
                     "Method": ""
                 },
                 {
+                    "Exit": "CopperWood Industry to Travoll Industrie",
+                    "Method": "ITEM_SLIDE"
+                },
+                {
                     "Exit": "CopperWood EP Pot",
                     "Method": "ITEM_DOUBLEJUMP || ITEM_JETPACK"
                 },
