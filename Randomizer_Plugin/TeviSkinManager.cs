@@ -103,7 +103,7 @@ namespace TeviRandomizer
             if (!usetype.Equals(Character.Type.Tevi.ToString()) && !usetype.Equals("Tevi!"))
                 return true;
             int skinNR = SettingManager.Instance.GetSettingValue(SettingName.S_DISPLAY_SKIN_TEVI);
-            if (skinNR == 1)
+            if (skinNR == 1 || skinNR == 0)
             {
                 __result = "tevi";
                 return false;
