@@ -7,13 +7,15 @@ using HarmonyLib;
 using Map;
 using Newtonsoft.Json;
 using QFSW.QC;
+using Spine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using UnityEngine;
-using TeviRandomizer.TeviRandomizerSettings;
 using System.Net;
+using TeviRandomizer.TeviRandomizerSettings;
+using UnityEngine;
+using static SaveManager;
 
 
 
@@ -623,6 +625,45 @@ namespace TeviRandomizer
 
 
             return true;
+        }
+
+        [HarmonyPatch(typeof(SaveManager), "RemoveItemFromBag")]
+        [HarmonyPrefix]
+        static bool RemoveItemFromBag(ref bool __result, ref ItemList.Type type)
+        {
+            SaveData savedata = SaveManager.Instance.savedata;
+            for (int i = 0; i < savedata.bagsize; i++)
+            {
+                if (savedata.bag[i] == (byte)(type - 395))
+                {
+                    savedata.bag[i] = 0;
+                    HUDUseItemWindow.Instance.UpdateTypeRequired = true;
+                    Debug.Log("[SaveManager] Removed " + type.ToString() + " from bag slot #" + i);
+                    __result = true;
+                }
+            }
+            Debug.LogWarning("[SaveManager] Remove failed! Item " + type.ToString() + " not found from bag!");
+            __result = false;
+
+            return false;
+        }
+
+        [HarmonyPatch(typeof(SaveManager), "RemoveItemFromBagSlot")]
+        [HarmonyPrefix]
+        static bool RemoveItemFromBagSlot(ref bool __result, ref int slot)
+        {
+            SaveData savedata = SaveManager.Instance.savedata;
+            if (savedata.bag[slot] > 0)
+            {
+                HUDUseItemWindow.Instance.UpdateTypeRequired = true;
+                Debug.Log("[SaveManager] Removed " + ((ItemList.Type)(savedata.bag[slot] + 395)).ToString() + " from bag slot #" + slot);
+                savedata.bag[slot] = 0;
+                __result = true;
+            }
+            Debug.LogWarning("[SaveManager] Remove Fail! Bag slot #" + slot + " is empty!");
+            __result = false;
+
+            return false;
         }
 
         [HarmonyPatch(typeof(SettingManager), nameof(SettingManager.SetAchievement))]
