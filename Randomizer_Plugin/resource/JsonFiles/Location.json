@@ -10525,12 +10525,12 @@
     },
     {
         "Itemname": "BADGE_ConsumeableCharge",
-        "Location": "DreamKeeper",
+        "Location": "Teleporter DreamKeeper Inside",
         "LocationName": "DreamKeeper - MP Quicken: Sugar Rush",
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_KNIFE || VenaBomb || ChargeShot || ITEM_AREABOMB",
+                "Method": "((ITEM_KNIFE || VenaBomb || ChargeShot || ITEM_AREABOMB) && ITEM_SLIDE)",
                 "Difficulty": 0
             }
         ],
@@ -10550,7 +10550,7 @@
         "slotId": 61,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Method": "",
                 "Difficulty": 0
             }
         ],
@@ -10595,7 +10595,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Method": "",
                 "Difficulty": 0
             }
         ],
