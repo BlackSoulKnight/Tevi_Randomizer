@@ -8384,7 +8384,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_BombLengthExtend || ITEM_AREABOMB) && ITEM_LINEBOMB",
+                "Method": "(ITEM_BombLengthExtend || ITEM_AREABOMB) && ITEM_LINEBOMB && (ITEM_DOUBLEJUMP || ITEM_JETPACK 2)",
                 "Difficulty": 0
             }
         ],
