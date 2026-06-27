@@ -2409,7 +2409,7 @@
         ],
         "Requirement": [
             {
-                "Method": "Chapter 2 && EVENT_Memloch",
+                "Method": "Chapter 2 && (EVENT_Memloch || EVENT_Demonfray)",
                 "Difficulty": 0
             }
         ],
@@ -2446,7 +2446,7 @@
         ],
         "Requirement": [
             {
-                "Method": "Chapter 2 && EVENT_Memloch",
+                "Method": "Chapter 2 && (EVENT_Memloch || EVENT_Demonfray)",
                 "Difficulty": 0
             }
         ],
@@ -2483,7 +2483,7 @@
         ],
         "Requirement": [
             {
-                "Method": "Chapter 2 && EVENT_Demonfray",
+                "Method": "Chapter 2 && (EVENT_Memloch && EVENT_Demonfray)",
                 "Difficulty": 0
             }
         ],
@@ -2520,7 +2520,7 @@
         ],
         "Requirement": [
             {
-                "Method": "Chapter 2 && EVENT_Demonfray",
+                "Method": "Chapter 2 && (EVENT_Memloch && EVENT_Demonfray)",
                 "Difficulty": 0
             }
         ],
