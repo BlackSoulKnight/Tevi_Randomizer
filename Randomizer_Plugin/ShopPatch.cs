@@ -212,11 +212,11 @@ namespace TeviRandomizer
                     MainVar.instance.BagID = (byte)(___ShopID + 1);
                 }
 
-                if (RandomizerPlugin.checkRandomizedItemGot(item,slot) || ___CurrentMaxItem >= 15)
+                if (RandomizerPlugin.checkRandomizedItemGot(item, slot) || ___CurrentMaxItem >= 15)
                     return false;
 
 
-                if(ArchipelagoInterface.Instance?.isConnected == true && ArchipelagoInterface.Instance?.isItemProgessive(item,slot) == true)
+                if (ArchipelagoInterface.Instance?.isConnected == true && ArchipelagoInterface.Instance?.isItemProgessive(item, slot) == true)
                 {
                     //ArchipelagoInterface.Instance.announceScoutedLocation(item, slot);
                 }
@@ -280,13 +280,21 @@ namespace TeviRandomizer
 
 
 
+        static void AddItemToShop(int CurrentMaxItem, GemaShopItemSlot[] slot,ItemList.Type item, bool isBluePrint = false, bool is34increase = false)
+        {
+            object[] obj = [item, isBluePrint, is34increase];
+            Traverse.Create(HUDShopMenu.Instance).Method("AddItem", obj).GetValue();
+            if (CurrentMaxItem > 0)
+                slot[CurrentMaxItem - 1].gameObject.SetActive(true);
+        }
+
         [HarmonyPatch(typeof(HUDShopMenu), "EnableMe")]
         [HarmonyPostfix]
         static void addValAndTar(ref string ___fname, ref Character.Type ___typeN, ref int ___CurrentMaxItem, ref GemaShopItemSlot[] ___itemslots, ref HUDShopMenu __instance,
-            ref byte ___ShopType, ref TextMeshPro ___shopName, ref byte ___ShopID,ref SpriteRenderer[] ___bgfx,ref SpriteRenderer ___buyo,ref SpriteRenderer ___buyb,ref SpriteRenderer ___talkingcharacter,
-            ref SpriteRenderer ___framemain, ref Transform ___frameitemdetail,ref SpriteRenderer[] ___blackline,ref TextMeshPro ___item_costtitle,ref TextMeshPro ___leaveShopText,
-            ref bool ___exiting,ref float ___isDisplay,ref Transform ___item_detail,ref Transform ___transport_detail,ref Transform ___purchaselist,ref TextMeshPro ___purchaseText,
-            ref CoinCounter ___cc,ref Transform ___transport_target, ref byte ___TransportTo,ref TextMeshPro ___tmp_talk,ref bool __result)
+            ref byte ___ShopType, ref TextMeshPro ___shopName, ref byte ___ShopID, ref SpriteRenderer[] ___bgfx, ref SpriteRenderer ___buyo, ref SpriteRenderer ___buyb, ref SpriteRenderer ___talkingcharacter,
+            ref SpriteRenderer ___framemain, ref Transform ___frameitemdetail, ref SpriteRenderer[] ___blackline, ref TextMeshPro ___item_costtitle, ref TextMeshPro ___leaveShopText,
+            ref bool ___exiting, ref float ___isDisplay, ref Transform ___item_detail, ref Transform ___transport_detail, ref Transform ___purchaselist, ref TextMeshPro ___purchaseText,
+            ref CoinCounter ___cc, ref Transform ___transport_target, ref byte ___TransportTo, ref TextMeshPro ___tmp_talk, ref bool __result)
         {
             byte area = WorldManager.Instance.Area;
             ChatStand chatStand = AreaResource.Instance.GetChatStand(___fname);
@@ -299,103 +307,74 @@ namespace TeviRandomizer
                     case Character.Type.Reese:
                         if (area != 15 && SaveManager.Instance.GetItem(ItemList.Type.ITEM_RailPass) > 0)
                         {
-                            obj = [ItemList.Type.BADGE_ChangeOrbCharger, false];
-                            Traverse.Create(__instance).Method("AddItem", obj).GetValue();
-                            if(___CurrentMaxItem >0)
-                            ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
-
+                            AddItemToShop(___CurrentMaxItem,___itemslots, ItemList.Type.BADGE_ChangeOrbCharger);
                         }
                         break;
                     case Character.Type.Bones:
                         if (area != 20 && SaveManager.Instance.GetItem(ItemList.Type.ITEM_AirshipPass) > 0)
                         {
-                            obj = [ItemList.Type.BADGE_AutoAirCombo, false];
-                            Traverse.Create(__instance).Method("AddItem", obj).GetValue();
-                            if(___CurrentMaxItem >0)
-                            ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                            AddItemToShop(___CurrentMaxItem, ___itemslots, ItemList.Type.BADGE_AutoAirCombo);
                         }
                         break;
                     case Character.Type.Vena:
 
                         if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaSmall) != 0)
                         {
-                            obj = [ItemList.Type.Useable_VenaBombSmall, false];
-                            Traverse.Create(__instance).Method("AddItem", obj).GetValue();
-                            if(___CurrentMaxItem >0)
-                            ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                            AddItemToShop(___CurrentMaxItem, ___itemslots, ItemList.Type.Useable_VenaBombSmall);
                         }
                         if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaBB) != 0 && SaveManager.Instance.GetChapter() >= 2)
                         {
-                            obj = [ItemList.Type.Useable_VenaBombBunBun, false];
-                            Traverse.Create(__instance).Method("AddItem", obj).GetValue();
-                            if(___CurrentMaxItem >0)
-                            ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                            AddItemToShop(___CurrentMaxItem, ___itemslots, ItemList.Type.Useable_VenaBombBunBun);
                         }
                         if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaD) != 0 && SaveManager.Instance.GetChapter() >= 3)
                         {
-                            obj = [ItemList.Type.Useable_VenaBombDispel, false];
-                            Traverse.Create(__instance).Method("AddItem", obj).GetValue();
-                            if(___CurrentMaxItem >0)
-                            ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                            AddItemToShop(___CurrentMaxItem, ___itemslots, ItemList.Type.Useable_VenaBombDispel);
                         }
                         if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaBig) != 0 && SaveManager.Instance.GetChapter() >= 4)
                         {
-                            obj = [ItemList.Type.Useable_VenaBombBig, false];
-                            Traverse.Create(__instance).Method("AddItem", obj).GetValue();
-                            if(___CurrentMaxItem >0)
-                            ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                            AddItemToShop(___CurrentMaxItem, ___itemslots, ItemList.Type.Useable_VenaBombBig);
                         }
                         if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedVenaHB) != 0 && SaveManager.Instance.GetChapter() >= 5)
                         {
-                            obj = [ItemList.Type.Useable_VenaBombHealBlock, false];
-                            Traverse.Create(__instance).Method("AddItem", obj).GetValue();
-                            if(___CurrentMaxItem >0)
-                            ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                            AddItemToShop(___CurrentMaxItem, ___itemslots, ItemList.Type.Useable_VenaBombHealBlock);
                         }
 
 
                         break;
-
+                    case Character.Type.Ian:
+                        if (WorldManager.Instance.Area == 3)
+                        {
+                            if (SaveManager.Instance.GetEventFlag(Mode.END_DEMONFRAY) > 0)
+                            {
+                                AddItemToShop(___CurrentMaxItem, ___itemslots, ItemList.Type.BADGE_1HealthTypeA);
+                            }
+                        }
+                        break;
                     case Character.Type.Mia:
                         if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleA) != 0)
                         {
-                            obj = [ItemList.Type.Useable_WaffleAHoneycloud, false];
-                            Traverse.Create(__instance).Method("AddItem", obj).GetValue();
-                            if(___CurrentMaxItem >0)
-                            ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                            AddItemToShop(___CurrentMaxItem, ___itemslots, ItemList.Type.Useable_WaffleAHoneycloud);
                         }
                         if (!SaveManager.Instance.GetCustomGame(CustomGame.FreeRoam))
                         {
                             if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleB) != 0 && SaveManager.Instance.GetEventFlag(Mode.Chap4FirstTartarusCity) > 0)
                             {
-                                obj = [ItemList.Type.Useable_WaffleBMeringue, false];
-                                Traverse.Create(__instance).Method("AddItem", obj).GetValue();
-                                if (___CurrentMaxItem > 0)
-                                    ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                                AddItemToShop(___CurrentMaxItem, ___itemslots, ItemList.Type.Useable_WaffleBMeringue);
                             }
                             if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleC) != 0 && SaveManager.Instance.GetEventFlag(Mode.Chap4FirstValhallaCity) > 0)
                             {
-                                obj = [ItemList.Type.Useable_WaffleCMorning, false];
-                                Traverse.Create(__instance).Method("AddItem", obj).GetValue();
-                                if (___CurrentMaxItem > 0)
-                                    ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                                AddItemToShop(___CurrentMaxItem, ___itemslots, ItemList.Type.Useable_WaffleCMorning);
                             }
                             if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleD) != 0 && SaveManager.Instance.GetEventFlag(Mode.Chap5_Ulvosa_Intro) > 0)
                             {
-                                obj = [ItemList.Type.Useable_WaffleDJellydrop, false];
-                                Traverse.Create(__instance).Method("AddItem", obj).GetValue();
-                                if (___CurrentMaxItem > 0)
-                                    ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                                AddItemToShop(___CurrentMaxItem, ___itemslots, ItemList.Type.Useable_WaffleDJellydrop);
                             }
                             if (SaveManager.Instance.GetMiniFlag(Mini.UnlockedWaffleE) != 0 && SaveManager.Instance.GetChapter() >= 6)
                             {
-                                obj = [ItemList.Type.Useable_WaffleElueberry, false];
-                                Traverse.Create(__instance).Method("AddItem", obj).GetValue();
-                                if (___CurrentMaxItem > 0)
-                                    ___itemslots[___CurrentMaxItem - 1].gameObject.SetActive(true);
+                                AddItemToShop(___CurrentMaxItem, ___itemslots, ItemList.Type.Useable_WaffleElueberry);
                             }
                         }
-                            break;
+                        break;
                 }
                 if (flag)
                 {
@@ -432,7 +411,7 @@ namespace TeviRandomizer
                             ___shopName.text = Localize.GetLocalizeTextWithKeyword("ShopTitle.Circus", contains: false);
                         }
                     }
-                
+
                     t.Method("UpdateShopItemDetail").GetValue();
                     ___bgfx[0].color = new Color(1f, 1f, 1f, 0f);
                     ___bgfx[1].color = new Color(1f, 1f, 1f, 0f);
@@ -491,38 +470,38 @@ namespace TeviRandomizer
                         SaveManager.Instance.SetMiniFlag(Mini.OpenedMiaShop, 1);
                         string text = "SHOP." + ___typeN.ToString() + "_First";
                         ___tmp_talk.text = Localize.GetLocalizeTextWithKeyword(text, contains: false);
-                        t.Method("CheckEmotion",new object[] {text}).GetValue();
-                        t.Method("PlayShopVoice", new object[] {Character.Type.Mia,ShopVoiceType.First}).GetValue();
+                        t.Method("CheckEmotion", new object[] { text }).GetValue();
+                        t.Method("PlayShopVoice", new object[] { Character.Type.Mia, ShopVoiceType.First }).GetValue();
                     }
                     else if (___typeN == Character.Type.Ian && SaveManager.Instance.GetMiniFlag(Mini.OpenedIanShop) <= 0)
                     {
                         SaveManager.Instance.SetMiniFlag(Mini.OpenedIanShop, 1);
                         string text2 = "SHOP." + ___typeN.ToString() + "_First";
                         ___tmp_talk.text = Localize.GetLocalizeTextWithKeyword(text2, contains: false);
-                        t.Method("CheckEmotion",new object[] {text2}).GetValue();
-                        t.Method("PlayShopVoice", new object[] {Character.Type.Ian,ShopVoiceType.First}).GetValue();
+                        t.Method("CheckEmotion", new object[] { text2 }).GetValue();
+                        t.Method("PlayShopVoice", new object[] { Character.Type.Ian, ShopVoiceType.First }).GetValue();
                     }
                     else if (___typeN == Character.Type.CC && SaveManager.Instance.GetMiniFlag(Mini.OpenedCCShop) <= 0)
                     {
                         SaveManager.Instance.SetMiniFlag(Mini.OpenedCCShop, 1);
                         string text3 = "SHOP." + ___typeN.ToString() + "_First";
                         ___tmp_talk.text = Localize.GetLocalizeTextWithKeyword(text3, contains: false);
-                        t.Method("CheckEmotion",new object[] {text3}).GetValue();
-                        t.Method("PlayShopVoice", new object[] {Character.Type.CC,ShopVoiceType.First}).GetValue();
+                        t.Method("CheckEmotion", new object[] { text3 }).GetValue();
+                        t.Method("PlayShopVoice", new object[] { Character.Type.CC, ShopVoiceType.First }).GetValue();
                     }
                     else if (___typeN == Character.Type.Vena && SaveManager.Instance.GetMiniFlag(Mini.OpenedVenaShop) <= 0)
                     {
                         SaveManager.Instance.SetMiniFlag(Mini.OpenedVenaShop, 1);
                         string text4 = "SHOP." + ___typeN.ToString() + "_First";
                         ___tmp_talk.text = Localize.GetLocalizeTextWithKeyword(text4, contains: false);
-                        t.Method("CheckEmotion",new object[] {text4}).GetValue();
-                        t.Method("PlayShopVoice", new object[] {Character.Type.Vena,ShopVoiceType.First}).GetValue();
+                        t.Method("CheckEmotion", new object[] { text4 }).GetValue();
+                        t.Method("PlayShopVoice", new object[] { Character.Type.Vena, ShopVoiceType.First }).GetValue();
                     }
                     else
                     {
                         string text5 = "SHOP." + ___typeN.ToString() + "_Welcome";
                         ___tmp_talk.text = Localize.GetLocalizeTextWithKeyword(text5, contains: false);
-                        t.Method("CheckEmotion",new object[] {text5}).GetValue();
+                        t.Method("CheckEmotion", new object[] { text5 }).GetValue();
                         t.Method("PlayShopVoice", new object[] { ___typeN, ShopVoiceType.Welcome }).GetValue();
                     }
                     ___tmp_talk.text = Localize.AddColorToChat(___tmp_talk.text);
@@ -553,10 +532,10 @@ namespace TeviRandomizer
                         flag2 = false;
                     }
                     bool freeShop = FreeShop();
-                    if ((SaveManager.Instance.GetResource(ItemList.Resource.COIN) >= price*CostMultiplier || freeShop) && flag2)
+                    if ((SaveManager.Instance.GetResource(ItemList.Resource.COIN) >= price * CostMultiplier || freeShop) && flag2)
                     {
-                        if(!freeShop)
-                            SaveManager.Instance.SubResource(ItemList.Resource.COIN, price*CostMultiplier);
+                        if (!freeShop)
+                            SaveManager.Instance.SubResource(ItemList.Resource.COIN, price * CostMultiplier);
 
                         if (___typeN == Character.Type.Ian)
                         {
@@ -573,7 +552,7 @@ namespace TeviRandomizer
                         }
 
 
-                         ItemDistributionSystem.EnqueueItem(new(___itemslots[___Selected].GetItem(), slot, false, skipHUD:true));
+                        ItemDistributionSystem.EnqueueItem(new(___itemslots[___Selected].GetItem(), slot, false, skipHUD: true));
 
                         if (___itemslots[___Selected].GetItem().ToString().Contains("BADGE_"))
                         {
@@ -617,7 +596,7 @@ namespace TeviRandomizer
             {
                 slot = (byte)(shopID + 30);
                 ___itype = RandomizerPlugin.getRandomizedItem(t, slot);
-                
+
             }
             else
             {
@@ -685,7 +664,7 @@ namespace TeviRandomizer
                 ___itemicon.sprite = CommonResource.Instance.GetItem((int)ItemList.Type.Other_Unknown);
 
 
-            texts[2].text = FreeShop()? "0":(_price*CostMultiplier).ToString();
+            texts[2].text = FreeShop() ? "0" : (_price * CostMultiplier).ToString();
 
             ___itype = t;
             return false;
@@ -719,7 +698,7 @@ namespace TeviRandomizer
                     data = RandomizerPlugin.getRandomizedItem(item, 1);
                     ___item_desc.text = "<font-weight=200>" + Localize.AddColorToBadgeDesc(data);
                 }
-                if(data == RandomizerPlugin.Trap)
+                if (data == RandomizerPlugin.Trap)
                     ___item_desc.text = ___itemslots[___Selected].GetName();
                 if (ArchipelagoInterface.Instance.isConnected && (data == ArchipelagoInterface.remoteItem || data == ArchipelagoInterface.remoteItemProgressive))
                 {
