@@ -225,6 +225,82 @@ namespace TeviRandomizer
                 yield return instruction;
             }
         }
+        [HarmonyPatch(typeof(PauseFrame),"NoSnowArea")]
+        [HarmonyPrefix]
+        static bool YesSnowArea(ref bool __result)
+        {
+            __result = false;
+            return false;
+        }
+        [HarmonyPatch(typeof(PauseFrame), "Update")]
+        [HarmonyTranspiler]
+        static IEnumerable<CodeInstruction> RemoveTeleportBlockingDLC(IEnumerable<CodeInstruction> instructions)
+        {
+            var vlass = AccessTools.Field(typeof(WorldManager),"Area");
+
+            var line = new List<CodeInstruction>(instructions);
+            for (int i = 0; i < line.Count - 3; i++)
+            {
+                if (line[i + 2].operand is int b && b == 32)
+                {
+                    Debug.Log($"{line[i].opcode} | {line[i].operand}");
+                    Debug.Log($"{line[i+1].opcode} | {line[i+1].operand}");
+                    Debug.Log($"{line[i+2].opcode} | {line[i+2].operand}");
+                }
+
+
+                if (line[i].opcode == OpCodes.Ldsfld &&
+                    line[i + 1].opcode == OpCodes.Ldfld &&
+                    line[i + 2].opcode == OpCodes.Ldc_I4_S&&
+                    (SByte)line[i + 2].operand == 32
+                    )
+                {
+                    line[i + 2].operand = (SByte)127;
+                    ;
+                }
+            }
+            return line;
+        }
+
+        [HarmonyPatch(typeof(BOSS_DLCBOSS2), "EVENT")]
+        [HarmonyPrefix]
+        static void InstantTeleportVeena()
+        {
+            EventManager em = EventManager.Instance;
+            switch(em.EventStage)
+            {
+                case 0:
+                    if (SaveManager.Instance.GetEventFlag(Mode.END_DLCBOSS2) == 0 || SaveManager.Instance.GetMiniFlag(Mini.BookmarkUsed) > 0)
+                        return;
+                    em.EventStage = 1;
+                    FadeManager.Instance.SetAll(0f, 0f, 0f, 0f, 1f, 5f);
+                    break;
+                case 1:
+                    if (em.EventTime >= 1.5f)
+                    {
+                        EventManager.Instance.StartMapChange(33, 252);
+                        em.EventStage = 2;
+                    }
+                    break;
+                case 2:
+                    FadeManager.Instance.SetAll(0f, 0f, 0f, 1f, 1f, 5f);
+                    WorldManager.Instance.WarpPlayerByEvent(Mode.P_TrainPoint, 0f, 0.1f);
+                    if (em.EventTime >= 0.5f && WorldManager.Instance.MapInited && WorldManager.Instance.Area == 33)
+                    {
+                        WorldManager.Instance.WarpPlayerByEvent(Mode.P_TrainPoint, 0f, 0.1f);
+                        em.mainCharacter.ChangeDirection(Direction.RIGHT);
+                        em.EventStage = 3;
+                    }
+                    break;
+                case 3:
+                    if (em.EventTime >= 0.5f)
+                    {
+                        FadeManager.Instance.SetAll(0f, 0f, 0f, 1f, 0f, 5f);
+                        em.StopEvent();
+                    }
+                    break;
+            }
+        }
 
         [HarmonyPatch(typeof(AfterMemineChallenge), "EVENT")]
         [HarmonyTranspiler]
