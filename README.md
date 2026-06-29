@@ -66,9 +66,11 @@
 [BepInEx V 5.4 64 bit](https://docs.bepinex.dev/articles/user_guide/installation/index.html#tabpanel_bHGHmlrG6S_tabid-win)<br>
 
 ### Optional
-[Tevi Poptracker](https://github.com/Swaga1icous/Tevi_Poptracker) made by Swagalicous (WIP) <br>
+
+AP World and Poptracker are in the **same release** as the current randomizer version
+
+~~[Tevi Poptracker](https://github.com/Swaga1icous/Tevi_Poptracker) made by Swagalicous (WIP)~~ <br>
 ~~[Tevi AP World](https://github.com/BlackSoulKnight/Tevi_Archipelago)~~
-AP World is in the same release as the current randomizer version
 
 ## Install
 Download the latest released Version from here [Tevi Randomizer releases](https://github.com/BlackSoulKnight/Tevi_Randomizer/releases)<br>
