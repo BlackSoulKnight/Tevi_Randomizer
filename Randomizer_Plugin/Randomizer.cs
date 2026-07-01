@@ -197,7 +197,7 @@ namespace TeviRandomizer
                                 break;
                             case "RandomMoney":
                                 TeviSettings.customFlags[CustomFlags.RandomMoney] = isOn;
-                                if (isOn)
+                                if (!isOn)
                                 {
                                     foreach (var loc in MoneyLocations)
                                         loc.newItem = loc.Itemname;
