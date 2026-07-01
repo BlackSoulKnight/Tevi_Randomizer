@@ -39,7 +39,7 @@ namespace TeviRandomizer
         }
         public const ItemList.Type remoteItem = ItemList.Type.I10;
         public const ItemList.Type remoteItemProgressive = ItemList.Type.I11;
-        public const string AP_WORLD_VERSION = "0.7.2";
+        public const string AP_WORLD_VERSION = "0.7.3";
         public const string ConnectionLost = "APLost";
 
         private class LocationData
@@ -418,7 +418,13 @@ namespace TeviRandomizer
         {
             return locations.ContainsKey(Location) && locations[Location].trap;
         }
-        public bool isItemProgessive(ItemList.Type item, byte slot) => isItemProgessive(LocationTracker.APLocationName[$"{item} #{slot}"]);
+        public bool isItemProgessive(ItemList.Type item, byte slot)
+        {
+            string Location = $"{item} #{slot}";
+            if (LocationTracker.APLocationName.ContainsKey(Location))
+                return isItemProgessive(LocationTracker.APLocationName[Location]);
+            return false;
+        }
         public void announceScoutedLocation(ItemList.Type item, byte slot)
         {
             
