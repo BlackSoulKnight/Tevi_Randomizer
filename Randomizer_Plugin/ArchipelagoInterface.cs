@@ -404,14 +404,23 @@ namespace TeviRandomizer
         {
             if(locations.ContainsKey(Location))
                 return locations[Location].player == this.player;
+            Debug.LogWarning($"Location {Location} not found");
             return true;
         }
-        public bool isItemNative(ItemList.Type item,byte slot) => isItemNative(LocationTracker.APLocationName[$"{item} #{slot}"]);
+        public bool isItemNative(ItemList.Type item, byte slot)
+        {
+            string Location = $"{item} #{slot}";
+            if (LocationTracker.APLocationName.ContainsKey(Location))
+                return isItemNative(LocationTracker.APLocationName[Location]);
+            Debug.LogWarning($"Location {Location} not found");
+            return true;
+        }
 
         public bool isItemProgessive(string Location)
         {
             if (locations.ContainsKey(Location))
                 return locations[Location].progressive;
+            Debug.LogWarning($"Location {Location} not found");
             return false;
         }
         public bool IsItemTrap(string Location) 
@@ -423,6 +432,7 @@ namespace TeviRandomizer
             string Location = $"{item} #{slot}";
             if (LocationTracker.APLocationName.ContainsKey(Location))
                 return isItemProgessive(LocationTracker.APLocationName[Location]);
+            Debug.LogWarning($"Location {Location} not found");
             return false;
         }
         public void announceScoutedLocation(ItemList.Type item, byte slot)
