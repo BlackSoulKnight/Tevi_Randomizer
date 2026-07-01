@@ -89,6 +89,8 @@ namespace TeviRandomizer
                     SaveManager.Instance.AddBreakTile(0, 367, 247);
                     SaveManager.Instance.AddBreakTile(0, 367, 248);
                 }
+                if (MainVar.instance.isDLCInstalled(DLC.Story_DLC1) && SaveManager.Instance.GetCustomGame(CustomGame.VenaFollow))
+                    SaveManager.Instance.SetItem(ItemList.Type.BADGE_VenaBadge, 3);
 
                 if (TeviSettings.customStartDiff >= 0)
                     SaveManager.Instance.SetDifficulty(TeviSettings.customStartDiff);
