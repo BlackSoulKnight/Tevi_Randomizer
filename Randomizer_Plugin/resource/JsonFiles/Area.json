@@ -4167,5 +4167,29 @@
             "Name": "Pestilence",
             "Connections": []
         }
+    ],
+    "DLC1":[
+        {
+            "Name": "Train",
+            "Connections": [
+                {
+                    "Exit": "Rabi Island",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Rabi Island",
+            "Connections": [
+                {
+                    "Exit": "Sacntum",
+                    "Method": ""
+                }
+            ]
+        },
+        {
+            "Name": "Sacntum",
+            "Connections": []
+        }
     ]
 }

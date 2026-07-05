@@ -19,7 +19,8 @@
                 "Y": 14
             }
         ],
-        "LocationID": 1291
+        "LocationID": 1291,
+        "DLC": 0
     },
     {
         "Itemname": "I14",
@@ -41,7 +42,8 @@
                 "Y": 14
             }
         ],
-        "LocationID": 1292
+        "LocationID": 1292,
+        "DLC": 0
     },
     {
         "Itemname": "I14",
@@ -63,7 +65,8 @@
                 "Y": 19
             }
         ],
-        "LocationID": 1293
+        "LocationID": 1293,
+        "DLC": 0
     },
     {
         "Itemname": "I14",
@@ -85,6 +88,7 @@
                 "Y": 19
             }
         ],
-        "LocationID": 1294
+        "LocationID": 1294,
+        "DLC": 0
     }
 ]

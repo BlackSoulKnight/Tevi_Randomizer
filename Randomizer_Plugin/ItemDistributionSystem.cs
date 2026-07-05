@@ -77,6 +77,7 @@ namespace TeviRandomizer
                         if (item.SkipHUD)
                         {
                             SmallHudPopQueue.Enqueue(item);
+                            item.Value = 1;
                             SaveManager.Instance.SetItem(item.Type, item.Value);
                         }
                         else

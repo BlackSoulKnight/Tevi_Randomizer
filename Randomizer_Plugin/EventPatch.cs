@@ -227,6 +227,7 @@ namespace TeviRandomizer
                 yield return instruction;
             }
         }
+
         [HarmonyPatch(typeof(PauseFrame),"NoSnowArea")]
         [HarmonyPrefix]
         static bool YesSnowArea(ref bool __result)
@@ -316,6 +317,32 @@ namespace TeviRandomizer
             var replacement = AccessTools.Method(
                 typeof(Hooks),
                 "GiveItemReplace"
+            );
+
+            foreach (var instruction in instructions)
+            {
+                if (instruction.Calls(original))
+                {
+                    yield return new CodeInstruction(OpCodes.Call, replacement);
+                    continue;
+                }
+
+                yield return instruction;
+            }
+        }
+
+        [HarmonyPatch(typeof(END_DLCBOSS1), "EVENT")]
+        [HarmonyTranspiler]
+        static IEnumerable<CodeInstruction> replaceDLCVassago(IEnumerable<CodeInstruction> instructions)
+        {
+            var original = AccessTools.Method(
+                typeof(HUDObtainedItem),
+                "GiveItem"
+            );
+
+            var replacement = AccessTools.Method(
+                typeof(Hooks),
+                "GiveItemReplaceEvents"
             );
 
             foreach (var instruction in instructions)

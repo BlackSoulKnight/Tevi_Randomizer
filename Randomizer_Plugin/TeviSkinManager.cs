@@ -2,6 +2,7 @@
 using Game;
 using HarmonyLib;
 using Map;
+using Rewired.ComponentControls.Data;
 using System.Collections.Generic;
 using System.Reflection.Emit;
 using TeviRandomizer.TeviRandomizerSettings;
@@ -14,16 +15,19 @@ namespace TeviRandomizer
     {
         public string SkinName;
         public RuntimeAnimatorController Skin;
-        public TeviSkin(string skinname, RuntimeAnimatorController skin)
+        public Material Material = null;
+        public TeviSkin(string skinname, RuntimeAnimatorController skin, Material material = null)
         {
             SkinName = skinname;
             Skin = skin;
+            Material = material;
         }
     }
 
     internal class TeviSkinManager
     {
         static AssetBundle TeviSkins = AssetBundle.LoadFromFile(TeviSettings.pluginPath + "/resource/Tevi skins/tevi_skins");
+        static private CharacterBase Player => EventManager.Instance.mainCharacter;
 
         public static readonly TeviSkin Invisibile = new("Invisible", TeviSkins.LoadAsset<RuntimeAnimatorController>("tevi_base_effects"));
 
@@ -47,6 +51,12 @@ namespace TeviRandomizer
             }
             if(skinNr - BaseSkinCount-1 >= SkinList.Count)
                 return AreaResource.Instance.GetNPC("Tevi");
+
+            if (SkinList[skinNr - BaseSkinCount - 1].Material != null)
+                Player.spranim_prefer.SetMaterial(SkinList[skinNr - BaseSkinCount - 1].Material);
+            else
+                Player.spranim_prefer.SetMaterial(CommonResource.Instance.mat_SpriteLightingVertex);
+
             return SkinList[skinNr-BaseSkinCount-1].Skin;
         }
 

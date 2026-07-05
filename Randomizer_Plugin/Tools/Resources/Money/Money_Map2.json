@@ -19,7 +19,8 @@
                 "Y": 13
             }
         ],
-        "LocationID": 1029
+        "LocationID": 1029,
+        "DLC": 0
     },
     {
         "Itemname": "I14",
@@ -41,7 +42,8 @@
                 "Y": 13
             }
         ],
-        "LocationID": 1030
+        "LocationID": 1030,
+        "DLC": 0
     },
     {
         "Itemname": "I14",
@@ -63,7 +65,8 @@
                 "Y": 13
             }
         ],
-        "LocationID": 1031
+        "LocationID": 1031,
+        "DLC": 0
     },
     {
         "Itemname": "I14",
@@ -85,7 +88,8 @@
                 "Y": 13
             }
         ],
-        "LocationID": 1032
+        "LocationID": 1032,
+        "DLC": 0
     },
     {
         "Itemname": "I14",
@@ -107,7 +111,8 @@
                 "Y": 13
             }
         ],
-        "LocationID": 1033
+        "LocationID": 1033,
+        "DLC": 0
     },
     {
         "Itemname": "I14",
@@ -129,7 +134,8 @@
                 "Y": 13
             }
         ],
-        "LocationID": 1034
+        "LocationID": 1034,
+        "DLC": 0
     },
     {
         "Itemname": "I14",
@@ -151,7 +157,8 @@
                 "Y": 13
             }
         ],
-        "LocationID": 1035
+        "LocationID": 1035,
+        "DLC": 0
     },
     {
         "Itemname": "I14",
@@ -173,7 +180,8 @@
                 "Y": 13
             }
         ],
-        "LocationID": 1036
+        "LocationID": 1036,
+        "DLC": 0
     },
     {
         "Itemname": "I14",
@@ -195,7 +203,8 @@
                 "Y": 14
             }
         ],
-        "LocationID": 1037
+        "LocationID": 1037,
+        "DLC": 0
     },
     {
         "Itemname": "I14",
@@ -217,7 +226,8 @@
                 "Y": 14
             }
         ],
-        "LocationID": 1038
+        "LocationID": 1038,
+        "DLC": 0
     },
     {
         "Itemname": "I14",
@@ -239,7 +249,8 @@
                 "Y": 14
             }
         ],
-        "LocationID": 1039
+        "LocationID": 1039,
+        "DLC": 0
     },
     {
         "Itemname": "I14",
@@ -261,7 +272,8 @@
                 "Y": 14
             }
         ],
-        "LocationID": 1040
+        "LocationID": 1040,
+        "DLC": 0
     },
     {
         "Itemname": "I14",
@@ -283,7 +295,8 @@
                 "Y": 14
             }
         ],
-        "LocationID": 1041
+        "LocationID": 1041,
+        "DLC": 0
     },
     {
         "Itemname": "I14",
@@ -305,6 +318,7 @@
                 "Y": 14
             }
         ],
-        "LocationID": 1042
+        "LocationID": 1042,
+        "DLC": 0
     }
 ]

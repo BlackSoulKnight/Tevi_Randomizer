@@ -290,6 +290,7 @@ namespace TeviRandomizer
             __instance.GetRoomWithPosition(data2.transform.position.x, data2.transform.position.y, out atRoomX, out atRoomY);
             Debug.Log("Collecting : X = " + atRoomX + " , Y = " + atRoomY + " , Type : " + itemid);
             var slotId = data2.GetSlotID();
+            Console.WriteLine($"Slot iD == {slotId} {__instance.Area}");
             ItemDistributionSystem.EnqueueItem(new(itemid, slotId,false));
 
             itemid = RandomizerPlugin.getRandomizedItem(data2.itemid, slotId);

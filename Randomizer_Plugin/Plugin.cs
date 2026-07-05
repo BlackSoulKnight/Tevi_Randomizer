@@ -690,6 +690,10 @@ namespace TeviRandomizer
                         break;
                     }
                 }
+                if (WorldManager.Instance.Area >= 32)
+                {
+                    ___slotid += 40;
+                }
                 if (___slotid >= 64)
                 {
                     Debug.LogWarning("[ItemTile] This item " + __instance.itemid.ToString() + " is a mutli item but no Slot ID is set! ID Invalid : " + ___slotid, __instance.gameObject);

@@ -60,6 +60,13 @@ def addLocationId():
     
 
 
-        
-addLocationId()
 
+#addLocationId()
+
+s = open(Path+"/../resource/JsonFiles/UpgradeResourceLocation.json",'r')
+s = json.load(s)
+for k in s:
+    k["DLC"] = 0
+d = open(Path+"/../resource/JsonFiles/UpgradeResourceLocation.json",'w+')
+d.write(json.dumps(s,indent=4))
+d.close

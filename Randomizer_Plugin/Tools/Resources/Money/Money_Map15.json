@@ -19,7 +19,8 @@
                 "Y": 13
             }
         ],
-        "LocationID": 896
+        "LocationID": 896,
+        "DLC": 0
     },
     {
         "Itemname": "I14",
@@ -41,7 +42,8 @@
                 "Y": 13
             }
         ],
-        "LocationID": 897
+        "LocationID": 897,
+        "DLC": 0
     },
     {
         "Itemname": "I14",
@@ -63,7 +65,8 @@
                 "Y": 13
             }
         ],
-        "LocationID": 898
+        "LocationID": 898,
+        "DLC": 0
     },
     {
         "Itemname": "I14",
@@ -85,7 +88,8 @@
                 "Y": 13
             }
         ],
-        "LocationID": 899
+        "LocationID": 899,
+        "DLC": 0
     },
     {
         "Itemname": "I14",
@@ -107,7 +111,8 @@
                 "Y": 10
             }
         ],
-        "LocationID": 900
+        "LocationID": 900,
+        "DLC": 0
     },
     {
         "Itemname": "I14",
@@ -129,7 +134,8 @@
                 "Y": 10
             }
         ],
-        "LocationID": 901
+        "LocationID": 901,
+        "DLC": 0
     },
     {
         "Itemname": "I14",
@@ -151,6 +157,7 @@
                 "Y": 10
             }
         ],
-        "LocationID": 902
+        "LocationID": 902,
+        "DLC": 0
     }
 ]

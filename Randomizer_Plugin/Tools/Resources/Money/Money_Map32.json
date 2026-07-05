@@ -1,0 +1,324 @@
+[
+    {
+        "Itemname": "I14",
+        "Location": "Train",
+        "LocationName": "Train - Money Room X: 14 Y: 2 #1",
+        "blockId": 346037,
+        "area": 32,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "DLC1 && (ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 32,
+                "X": 14,
+                "Y": 12
+            }
+        ],
+        "LocationID": -1,
+        "DLC": 1
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Train",
+        "LocationName": "Train - Money Room X: 14 Y: 2 #2",
+        "blockId": 346036,
+        "area": 32,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "DLC1 && (ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 32,
+                "X": 14,
+                "Y": 12
+            }
+        ],
+        "LocationID": -1,
+        "DLC": 1
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Train",
+        "LocationName": "Train - Money Room X: 14 Y: 2 #3",
+        "blockId": 345037,
+        "area": 32,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "DLC1 && (ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 32,
+                "X": 14,
+                "Y": 12
+            }
+        ],
+        "LocationID": -1,
+        "DLC": 1
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Train",
+        "LocationName": "Train - Money Room X: 14 Y: 2 #4",
+        "blockId": 345036,
+        "area": 32,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "DLC1 && (ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 32,
+                "X": 14,
+                "Y": 12
+            }
+        ],
+        "LocationID": -1,
+        "DLC": 1
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Train",
+        "LocationName": "Train - Money Room X: 18 Y: 2 #1",
+        "blockId": 445037,
+        "area": 32,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "DLC1 && (ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 32,
+                "X": 18,
+                "Y": 12
+            }
+        ],
+        "LocationID": -1,
+        "DLC": 1
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Train",
+        "LocationName": "Train - Money Room X: 18 Y: 2 #1",
+        "blockId": 445038,
+        "area": 32,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "DLC1 && (ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 32,
+                "X": 18,
+                "Y": 12
+            }
+        ],
+        "LocationID": -1,
+        "DLC": 1
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Train",
+        "LocationName": "Train - Money Room X: 18 Y: 2 #1",
+        "blockId": 445039,
+        "area": 32,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "DLC1 && (ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 32,
+                "X": 18,
+                "Y": 12
+            }
+        ],
+        "LocationID": -1,
+        "DLC": 1
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Train",
+        "LocationName": "Train - Money Room X: 12 Y: 5 #1",
+        "blockId": 301080,
+        "area": 32,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "DLC1 && (ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 32,
+                "X": 12,
+                "Y": 5
+            }
+        ],
+        "LocationID": -1,
+        "DLC": 1
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Train",
+        "LocationName": "Train - Money Room X: 12 Y: 5 #1",
+        "blockId": 300079,
+        "area": 32,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "DLC1 && (ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 32,
+                "X": 12,
+                "Y": 5
+            }
+        ],
+        "LocationID": -1,
+        "DLC": 1
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Train",
+        "LocationName": "Train - Money Room X: 12 Y: 5 #1",
+        "blockId": 299079,
+        "area": 32,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "DLC1 && (ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 32,
+                "X": 12,
+                "Y": 5
+            }
+        ],
+        "LocationID": -1,
+        "DLC": 1
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Train",
+        "LocationName": "Train - Money Room X: 17 Y: 5 #1",
+        "blockId": 431077,
+        "area": 32,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "DLC1 && (ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 32,
+                "X": 17,
+                "Y": 5
+            }
+        ],
+        "LocationID": -1,
+        "DLC": 1
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Train",
+        "LocationName": "Train - Money Room X: 17 Y: 5 #1",
+        "blockId": 432077,
+        "area": 32,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "DLC1 && (ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 32,
+                "X": 17,
+                "Y": 5
+            }
+        ],
+        "LocationID": -1,
+        "DLC": 1
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Train",
+        "LocationName": "Train - Money Room X: 17 Y: 5 #1",
+        "blockId": 431078,
+        "area": 32,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "DLC1 && (ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 32,
+                "X": 17,
+                "Y": 5
+            }
+        ],
+        "LocationID": -1,
+        "DLC": 1
+    },
+    {
+        "Itemname": "I14",
+        "Location": "Train",
+        "LocationName": "Train - Money Room X: 17 Y: 5 #1",
+        "blockId": 432078,
+        "area": 32,
+        "slotId": 1,
+        "Requirement": [
+            {
+                "Method": "DLC1 && (ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE)",
+                "Difficulty": 0
+            }
+        ],
+        "LocationRegion": [
+            {
+                "Area": 32,
+                "X": 17,
+                "Y": 5
+            }
+        ],
+        "LocationID": -1,
+        "DLC": 1
+    }
+]
