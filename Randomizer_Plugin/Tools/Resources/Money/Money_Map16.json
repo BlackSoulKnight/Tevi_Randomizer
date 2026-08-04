@@ -77,7 +77,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ],
@@ -100,7 +100,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)",
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE)  && ITEM_SLIDE",
                 "Difficulty": 0
             }
         ],
