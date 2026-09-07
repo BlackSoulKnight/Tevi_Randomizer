@@ -17,7 +17,7 @@ namespace TeviRandomizer.Bonus_Features
         static CharacterBase lastHit;
         public static bool isQuickdrop = false;
 
-        static float QuickdropCooldown = 0.08f;
+        static float QuickdropCooldown = 0.19f;
         public static float QuickdropTimer = 0f;
         static float BonusDamage = 1f;
         static float multiplier = 0.33f;
@@ -27,7 +27,7 @@ namespace TeviRandomizer.Bonus_Features
         {
             RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(ItemList.Type.BADGE_QuickDropExtendA), "^Quickdrops^ combo increased by additionally $+1$. After ^quickdrop^ hits enemy, all melee attack power $+5 %$, max cumulation $33 %$\nThe cumulative effect begins to decrease after landing and disappears completely after about 5s");
             RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(ItemList.Type.BADGE_QuickDropExtendB), "^Quickdrops^ combo increased by additionally $+3$.");
-            RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(ItemList.Type.BADGE_QuickDropDouble), "Number of ^quickdrops^ combo gained increased by $33 %$");
+            RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(ItemList.Type.BADGE_QuickDropDouble), $"Number of ^quickdrops^ combo gained increased by ${multiplier*100}%$");
         }
 
         static void updateDropkickDamage(ref PlayerLogicState ___logicStatus, ref ObjectPhy ___phy_perfer, ref CharacterPhy ___cphy_perfer, ref CharacterBase __instance)
@@ -61,6 +61,18 @@ namespace TeviRandomizer.Bonus_Features
             }
             return 0;
         }
+        static double percentDamage = 0.005 /100;
+        public static float FinalDamageModifikation(CharacterBase instance, int damage, bool lethal)
+        {
+            if (isQuickdrop)
+            {
+                QuickdropTimer = 0f;
+                damage = (int)Math.Ceiling((double)(instance.maxhealth * QuickDropCombo)*percentDamage);
+                
+            }
+            instance.ReduceHealth(damage,lethal);
+            return (float)damage;
+        }
 
         [HarmonyPatch(typeof(SaveManager), "TryRenewLevel")]
         [HarmonyPostfix]
@@ -71,11 +83,11 @@ namespace TeviRandomizer.Bonus_Features
 
         [HarmonyPatch(typeof(CharacterBase), "BulletHurtPlayer")]
         [HarmonyTranspiler]
-        static IEnumerable<CodeInstruction> replaceFinalDamage(IEnumerable<CodeInstruction> instructions)
+        static IEnumerable<CodeInstruction> AddDamageToFinalDamage(IEnumerable<CodeInstruction> instructions)
         {
             var original = AccessTools.Method(typeof(CharacterBase), "ReduceHealth");
 
-            var replacement = AccessTools.Method(typeof(QuickdropPatch), "CalculateAdditionalDamage");
+            var replacement = AccessTools.Method(typeof(QuickdropPatch), "FinalDamageModifikation");
             var line = new List<CodeInstruction>(instructions);
 
             /*
@@ -98,13 +110,9 @@ namespace TeviRandomizer.Bonus_Features
                     f == original
                     )
                 {
-                    i++;
-                    line.Insert(i+1,new CodeInstruction(OpCodes.Ldarg_S,16));
-                    line.Insert(i+2,new CodeInstruction(OpCodes.Ldarg_S,16));
-                    line.Insert(i+3,new CodeInstruction(OpCodes.Ldind_R4,null));
-                    line.Insert(i+4,new CodeInstruction(OpCodes.Call,replacement));
-                    line.Insert(i+5,new CodeInstruction(OpCodes.Add,null));
-                    line.Insert(i+6,new CodeInstruction(OpCodes.Stind_R4,null));
+                    line.Insert(i+1, new CodeInstruction(OpCodes.Ldarg_S, 16));
+                    line[i+7] = new CodeInstruction(OpCodes.Call, replacement);
+                    line.Insert(i + 8, new CodeInstruction(OpCodes.Stind_R4));
                     break;
                 }
             }
