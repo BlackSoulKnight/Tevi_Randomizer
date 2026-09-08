@@ -20,14 +20,14 @@ namespace TeviRandomizer.Bonus_Features
         static float QuickdropCooldown = 0.19f;
         public static float QuickdropTimer = 0f;
         static float BonusDamage = 1f;
-        static float multiplier = 0.33f;
+        static float speedMultiplier = 0.33f;
 
 
         public static void ChangeQuickDropBadgeDescription()
         {
             RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(ItemList.Type.BADGE_QuickDropExtendA), "^Quickdrops^ combo increased by additionally $+1$. After ^quickdrop^ hits enemy, all melee attack power $+5 %$, max cumulation $33 %$\nThe cumulative effect begins to decrease after landing and disappears completely after about 5s");
             RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(ItemList.Type.BADGE_QuickDropExtendB), "^Quickdrops^ combo increased by additionally $+3$.");
-            RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(ItemList.Type.BADGE_QuickDropDouble), $"Number of ^quickdrops^ combo gained increased by ${multiplier*100}%$");
+            RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(ItemList.Type.BADGE_QuickDropDouble), $"^Quickdrops^ attack speed increased by ${speedMultiplier*100}%$");
         }
 
         static void updateDropkickDamage(ref PlayerLogicState ___logicStatus, ref ObjectPhy ___phy_perfer, ref CharacterPhy ___cphy_perfer, ref CharacterBase __instance)
@@ -62,12 +62,13 @@ namespace TeviRandomizer.Bonus_Features
             return 0;
         }
         static double percentDamage = 0.005 /100;
+        static double flatpercentDamage = 1 /100;
         public static float FinalDamageModifikation(CharacterBase instance, int damage, bool lethal)
         {
             if (isQuickdrop)
             {
                 QuickdropTimer = 0f;
-                damage = (int)Math.Ceiling((double)(instance.maxhealth * QuickDropCombo)*percentDamage);
+                damage = (int)Math.Ceiling((double)instance.maxhealth * (QuickDropCombo*percentDamage+flatpercentDamage));
                 
             }
             instance.ReduceHealth(damage,lethal);
@@ -175,7 +176,7 @@ namespace TeviRandomizer.Bonus_Features
                     if (SaveManager.Instance.GetBadgeEquipped(ItemList.Type.BADGE_QuickDropExtendB))
                         bonus += 3;
                     if (SaveManager.Instance.GetBadgeEquipped(ItemList.Type.BADGE_QuickDropDouble))
-                        bonus *= (1f+multiplier);
+                        bonus *= (1f+speedMultiplier);
                     QuickDropCombo += bonus;
                     Traverse.Create(owner.phy_perfer).Field<byte>("quickDropRemaining").Value += 1;
 
@@ -193,7 +194,10 @@ namespace TeviRandomizer.Bonus_Features
         static void timeCheck(ref bool __result,ref byte ___quickdrophit)
         {
             if (__result)
-                __result = QuickdropTimer > QuickdropCooldown;
+                if (SaveManager.Instance.GetBadgeEquipped(ItemList.Type.BADGE_QuickDropDouble))
+                    __result = QuickdropTimer > (QuickdropCooldown/(1+speedMultiplier));
+                else 
+                    __result = QuickdropTimer > QuickdropCooldown;
             if (___quickdrophit > 12)
                 ___quickdrophit = 12;
         }
