@@ -11,7 +11,7 @@ namespace TeviRandomizer.Bonus_Features
 {
     internal class QuickdropPatch
     {
-        static float QuickDropCombo;
+        static float QuickDropCombo = 1;
         static bulletScript currentDropKick;
         static bool DropKickDmgUpdated = false;
         static CharacterBase lastHit;
@@ -79,7 +79,7 @@ namespace TeviRandomizer.Bonus_Features
         [HarmonyPostfix]
         static void resetBonusDmg()
         {
-            QuickDropCombo = 0;
+            QuickDropCombo = 1;
         }
 
         [HarmonyPatch(typeof(CharacterBase), "BulletHurtPlayer")]
@@ -184,7 +184,7 @@ namespace TeviRandomizer.Bonus_Features
                 else if (damage > 0 && (owner != null && owner.isPlayer()) || __instance.isPlayer())
                 {
                     if (type == BulletType.SUMMONBUNNY_HIT) return;
-                    QuickDropCombo = 0;
+                    QuickDropCombo = 1;
                 }
             }
         }
