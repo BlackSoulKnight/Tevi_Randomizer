@@ -62,7 +62,7 @@ namespace TeviRandomizer.Bonus_Features
             return 0;
         }
         static double percentDamage = 0.005 /100;
-        static double flatpercentDamage = 1 /100;
+        static double flatpercentDamage = 0.01;
         public static float FinalDamageModifikation(CharacterBase instance, int damage, bool lethal)
         {
             if (isQuickdrop)
