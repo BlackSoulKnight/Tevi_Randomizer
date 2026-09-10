@@ -14778,8 +14778,8 @@
                 "Y": 10
             }
         ],
-        "LocationID": -1,
-        "DLC": 1
+        "DLC": 1,
+        "LocationID": 1342
     },
     {
         "Itemname": "BADGE_ElecBomb",
@@ -14799,8 +14799,8 @@
                 "Y": 2
             }
         ],
-        "LocationID": -1,
-        "DLC": 1
+        "DLC": 1,
+        "LocationID": 1343
     },
     {
         "Itemname": "STACKABLE_EP",
@@ -14820,8 +14820,8 @@
                 "Y": 2
             }
         ],
-        "LocationID": -1,
-        "DLC": 1
+        "DLC": 1,
+        "LocationID": 1344
     },
     {
         "Itemname": "STACKABLE_HP",
@@ -14841,8 +14841,8 @@
                 "Y": 2
             }
         ],
-        "LocationID": -1,
-        "DLC": 1
+        "DLC": 1,
+        "LocationID": 1345
     },
     {
         "Itemname": "STACKABLE_RATK",
@@ -14862,8 +14862,8 @@
                 "Y": 5
             }
         ],
-        "LocationID": -1,
-        "DLC": 1
+        "DLC": 1,
+        "LocationID": 1346
     },
     {
         "Itemname": "STACKABLE_MP",
@@ -14883,8 +14883,8 @@
                 "Y": 5
             }
         ],
-        "LocationID": -1,
-        "DLC": 1
+        "DLC": 1,
+        "LocationID": 1347
     },
     {
         "Itemname": "STACKABLE_MATK",
@@ -14904,28 +14904,7 @@
                 "Y": 5
             }
         ],
-        "LocationID": -1,
-        "DLC": 1
-    },
-    {
-        "Itemname": "",
-        "Location": "",
-        "LocationName": "",
-        "slotId": 1,
-        "Requirement": [
-            {
-                "Method": "Coins 250 && Upgrade 4",
-                "Difficulty": 0
-            }
-        ],
-        "LocationRegion": [
-            {
-                "Area": 99,
-                "X": 35,
-                "Y": 2
-            }
-        ],
-        "LocationID": -1,
-        "DLC": 1
+        "DLC": 1,
+        "LocationID": 1348
     }
 ]

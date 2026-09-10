@@ -4437,7 +4437,7 @@
         "slotId": 1,
         "LocationRegion": [
             {
-                "Area": 0,
+                "Area": 32,
                 "X": 0,
                 "Y": 0
             }
@@ -4448,7 +4448,7 @@
                 "Difficulty": 0
             }
         ],
-        "LocationID": -1,
-        "DLC": 0
+        "DLC": 1,
+        "LocationID": 1349
     }
 ]
