@@ -17,7 +17,7 @@ namespace TeviRandomizer.Bonus_Features
         static CharacterBase lastHit;
         public static bool isQuickdrop = false;
 
-        static float QuickdropCooldown = 0.19f;
+        static float QuickdropCooldown = 0.142f;
         public static float QuickdropTimer = 0f;
         static float BonusDamage = 1f;
         static float speedMultiplier = 0.33f;
@@ -61,14 +61,20 @@ namespace TeviRandomizer.Bonus_Features
             }
             return 0;
         }
-        static double percentDamage = 0.005 /100;
+        static double bossPercentDamage = 0.005 /100;
+        static double percentDamage = 0.02;
         static double flatpercentDamage = 0.01;
+        static bool isBoss = false;
         public static float FinalDamageModifikation(CharacterBase instance, int damage, bool lethal)
         {
             if (isQuickdrop)
             {
                 QuickdropTimer = 0f;
-                damage = (int)Math.Ceiling((double)instance.maxhealth * (QuickDropCombo*percentDamage+flatpercentDamage));
+                if(isBoss)
+                    damage = (int)Math.Ceiling((double)instance.maxhealth * (QuickDropCombo*bossPercentDamage+flatpercentDamage));
+                else
+                    damage = (int)Math.Ceiling((double)instance.maxhealth * (QuickDropCombo*percentDamage+flatpercentDamage));
+
                 
             }
             instance.ReduceHealth(damage,lethal);
@@ -156,9 +162,17 @@ namespace TeviRandomizer.Bonus_Features
         }
         [HarmonyPatch(typeof(CharacterBase), "BulletHurtPlayer")]
         [HarmonyPrefix]
-        static void CheckForQuickdrop(BulletType type, CharacterBase owner)
+        static void CheckForQuickdrop(ref CharacterBase __instance,ref BulletType type,ref CharacterBase owner,ref bulletScript b,ref float damage)
         {
-            isQuickdrop = type == BulletType.QUICK_DROP && owner.isPlayer();
+            if (type == BulletType.QUICK_DROP)
+            {
+                isBoss = __instance.isBoss == BossType.BOSS;
+                __instance.enemy_perfer.toArmor = 0;
+                b.SetStun(0);
+                damage = 0;
+                isQuickdrop = owner.isPlayer();
+            }
+
         }
 
         [HarmonyPatch(typeof(CharacterBase), "BulletHurtPlayer")]
