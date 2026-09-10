@@ -325,7 +325,7 @@
         "Itemname": "I14",
         "Location": "Ulvosa",
         "LocationName": "Ulvosa - Money Room X: 17 Y: 12 #3",
-        "blockId": 411177,
+        "blockId": 409177,
         "area": 11,
         "slotId": 1,
         "Requirement": [
@@ -341,6 +341,7 @@
                 "Y": 12
             }
         ],
+        "LocationID": 1350,
         "DLC": 0
     },
     {

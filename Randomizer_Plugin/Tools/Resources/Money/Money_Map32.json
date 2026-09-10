@@ -1,5 +1,4 @@
 [
-
     {
         "Itemname": "I14",
         "Location": "Train",
@@ -118,7 +117,7 @@
     {
         "Itemname": "I14",
         "Location": "Train",
-        "LocationName": "Train - Money Room X: 18 Y: 2 #1",
+        "LocationName": "Train - Money Room X: 18 Y: 2 #2",
         "blockId": 445038,
         "area": 32,
         "slotId": 1,
@@ -141,7 +140,7 @@
     {
         "Itemname": "I14",
         "Location": "Train",
-        "LocationName": "Train - Money Room X: 18 Y: 2 #1",
+        "LocationName": "Train - Money Room X: 18 Y: 2 #3",
         "blockId": 445039,
         "area": 32,
         "slotId": 1,
@@ -187,7 +186,7 @@
     {
         "Itemname": "I14",
         "Location": "Train",
-        "LocationName": "Train - Money Room X: 12 Y: 5 #1",
+        "LocationName": "Train - Money Room X: 12 Y: 5 #2",
         "blockId": 300079,
         "area": 32,
         "slotId": 1,
@@ -210,7 +209,7 @@
     {
         "Itemname": "I14",
         "Location": "Train",
-        "LocationName": "Train - Money Room X: 12 Y: 5 #1",
+        "LocationName": "Train - Money Room X: 12 Y: 5 #3",
         "blockId": 299079,
         "area": 32,
         "slotId": 1,
@@ -256,7 +255,7 @@
     {
         "Itemname": "I14",
         "Location": "Train",
-        "LocationName": "Train - Money Room X: 17 Y: 5 #1",
+        "LocationName": "Train - Money Room X: 17 Y: 5 #2",
         "blockId": 432077,
         "area": 32,
         "slotId": 1,
@@ -279,7 +278,7 @@
     {
         "Itemname": "I14",
         "Location": "Train",
-        "LocationName": "Train - Money Room X: 17 Y: 5 #1",
+        "LocationName": "Train - Money Room X: 17 Y: 5 #3",
         "blockId": 431078,
         "area": 32,
         "slotId": 1,
@@ -302,7 +301,7 @@
     {
         "Itemname": "I14",
         "Location": "Train",
-        "LocationName": "Train - Money Room X: 17 Y: 5 #1",
+        "LocationName": "Train - Money Room X: 17 Y: 5 #4",
         "blockId": 432078,
         "area": 32,
         "slotId": 1,

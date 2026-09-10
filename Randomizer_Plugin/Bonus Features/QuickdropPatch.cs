@@ -30,47 +30,15 @@ namespace TeviRandomizer.Bonus_Features
             RandomizerPlugin.changeSystemText("ITEMDESC." + GemaItemManager.Instance.GetItemString(ItemList.Type.BADGE_QuickDropDouble), $"^Quickdrops^ attack speed increased by ${speedMultiplier*100}%$");
         }
 
-        static void updateDropkickDamage(ref PlayerLogicState ___logicStatus, ref ObjectPhy ___phy_perfer, ref CharacterPhy ___cphy_perfer, ref CharacterBase __instance)
-        {
-            if (___logicStatus == PlayerLogicState.QUICKDROP && !DropKickDmgUpdated && currentDropKick != null && __instance.isPlayer())
-            {
-                QuickdropTimer = 0f;
-                DropKickDmgUpdated = true;
-
-                return;
-                float num3 = 0.343525f;
-                num3 += BonusDamage * QuickDropCombo;
-                if (___cphy_perfer != null)
-                {
-                    num3 += (float)(int)___cphy_perfer.quickdrophit * 0.02f;
-                }
-                if (SaveManager.Instance.GetBadgeEquipped(ItemList.Type.BADGE_DoubleJumpStrike) && ___phy_perfer.jumped >= 2)
-                {
-                    num3 *= 1.17f;
-                }
-                currentDropKick.SetDamage(num3);
-            }
-        }
-
-        public static float CalculateAdditionalDamage()
-        {
-            if (isQuickdrop)
-            {
-                QuickdropTimer = 0f;
-                return BonusDamage * QuickDropCombo;
-            }
-            return 0;
-        }
-        static double bossPercentDamage = 0.005 /100;
+        static double bossPercentDamage = 0.00005;
         static double percentDamage = 0.02;
-        static double flatpercentDamage = 0.01;
-        static bool isBoss = false;
-        public static float FinalDamageModifikation(CharacterBase instance, int damage, bool lethal)
+        static double flatpercentDamage = 0.005;
+        public static float FinalDamageModifikation(CharacterBase instance, int damage, bool lethal, CharacterBase owner, BulletType type)
         {
-            if (isQuickdrop)
+            if (type == BulletType.QUICK_DROP && owner.isPlayer())
             {
                 QuickdropTimer = 0f;
-                if(isBoss)
+                if(instance.isBoss == BossType.BOSS)
                     damage = (int)Math.Ceiling((double)instance.maxhealth * (QuickDropCombo*bossPercentDamage+flatpercentDamage));
                 else
                     damage = (int)Math.Ceiling((double)instance.maxhealth * (QuickDropCombo*percentDamage+flatpercentDamage));
@@ -118,8 +86,11 @@ namespace TeviRandomizer.Bonus_Features
                     )
                 {
                     line.Insert(i+1, new CodeInstruction(OpCodes.Ldarg_S, 16));
-                    line[i+7] = new CodeInstruction(OpCodes.Call, replacement);
-                    line.Insert(i + 8, new CodeInstruction(OpCodes.Stind_R4));
+                    line.Insert(i+7, new CodeInstruction(OpCodes.Ldarg_S, 2));
+                    line.Insert(i+8, new CodeInstruction(OpCodes.Ldarg_S, 6));
+
+                    line[i+9] = new CodeInstruction(OpCodes.Call, replacement);
+                    line.Insert(i + 10, new CodeInstruction(OpCodes.Stind_R4));
                     break;
                 }
             }
@@ -166,11 +137,9 @@ namespace TeviRandomizer.Bonus_Features
         {
             if (type == BulletType.QUICK_DROP)
             {
-                isBoss = __instance.isBoss == BossType.BOSS;
                 __instance.enemy_perfer.toArmor = 0;
                 b.SetStun(0);
                 damage = 0;
-                isQuickdrop = owner.isPlayer();
             }
 
         }
