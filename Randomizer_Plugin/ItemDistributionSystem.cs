@@ -77,7 +77,6 @@ namespace TeviRandomizer
                         if (item.SkipHUD)
                         {
                             SmallHudPopQueue.Enqueue(item);
-                            item.Value = 1;
                             SaveManager.Instance.SetItem(item.Type, item.Value);
                         }
                         else
@@ -233,6 +232,7 @@ namespace TeviRandomizer
             else if (item.Type.ToString().Contains("BADGE"))
             {
                 item.SkipHUD |= !TeviSettings.PopupSending.HasFlag(PopupFlagsSending.Badge);
+                item.Value = 1;
             }
             else if (item.Type == ArchipelagoInterface.remoteItemProgressive)
                 item.SkipHUD |= !TeviSettings.PopupSending.HasFlag(PopupFlagsSending.PorgressionOther);
