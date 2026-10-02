@@ -4479,7 +4479,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "ITEM_HIJUMP",
+                "Method": "ITEM_HIJUMP && CKick",
                 "Difficulty": 0
             },
             {
