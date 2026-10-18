@@ -691,7 +691,7 @@
     },
     {
         "Itemname": "I14",
-        "Location": "Swamp to Tartarus",
+        "Location": "Swamp",
         "LocationName": "Swamp - Money Room X: 21 Y: 9 #1",
         "blockId": 503134,
         "area": 17,
@@ -714,7 +714,7 @@
     },
     {
         "Itemname": "I14",
-        "Location": "Swamp to Tartarus",
+        "Location": "Swamp",
         "LocationName": "Swamp - Money Room X: 21 Y: 9 #2",
         "blockId": 504133,
         "area": 17,
@@ -737,7 +737,7 @@
     },
     {
         "Itemname": "I14",
-        "Location": "Swamp to Tartarus",
+        "Location": "Swamp",
         "LocationName": "Swamp - Money Room X: 21 Y: 9 #3",
         "blockId": 504134,
         "area": 17,
