@@ -273,7 +273,7 @@ namespace TeviRandomizer
                                             ProgressionPool[$"Teleporter {i}"] = 1;
                                         }
                                         break;
-                                    case "Entrance":
+                                    case "Transition":
                                             foreach (Area area in Transitions)
                                             {
                                                 area.Connections[0].to = null;
@@ -810,6 +810,8 @@ namespace TeviRandomizer
 
             foreach (var location in locationJson)
             {
+                if ((int)location["DLC"] != 0) continue;
+
                 Location newloc = new Location(0, location["Location"].ToString(), location["LocationName"].ToString(), (int)location["slotId"], location["Itemname"].ToString());
                 if (location["Itemname"].ToString().Contains(EventPrefix))
                 {
@@ -843,6 +845,8 @@ namespace TeviRandomizer
 
             foreach (var location in moneyLocationJson)
             {
+                if ((int)location["DLC"] != 0) continue;
+
                 Location newloc = new Location(0, location["Location"].ToString(), location["LocationName"].ToString(), (int)location["area"] * 100_000_000 + (int)location["blockId"], location["Itemname"].ToString());
                 if (Enum.TryParse(location["Itemname"].ToString(), out ItemList.Type item))
                 {
@@ -867,6 +871,8 @@ namespace TeviRandomizer
             }
             foreach (var location in resourceLocationJson)
             {
+                if ((int)location["DLC"] != 0) continue;
+
                 Location newloc = new Location(0, location["Location"].ToString(), location["LocationName"].ToString(), (int)location["area"] * 100_000_000 + (int)location["blockId"], location["Itemname"].ToString());
                 if (Enum.TryParse(location["Itemname"].ToString(), out ItemList.Type item))
                 {
