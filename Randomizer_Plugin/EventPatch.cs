@@ -198,8 +198,9 @@ namespace TeviRandomizer
         [HarmonyPrefix]
         static void forceFreeRoam()
         {
-            MainVar.instance.NewCustomGame[0] = true;
-            MainVar.instance.NewCustomGame[1] = true;
+            MainVar.instance.NewCustomGame[(int)CustomGame.FreeRoam] = true;
+            MainVar.instance.NewCustomGame[(int)CustomGame.SpeedRun] = true;
+            MainVar.instance.NewCustomGame[(int)CustomGame.RandomBadge] = false;
         }
 
         [HarmonyPatch(typeof(WarpDevice), "OnTriggerStay2D")]
