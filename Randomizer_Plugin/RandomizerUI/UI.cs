@@ -58,7 +58,10 @@ namespace TeviRandomizer.UI
                     text.text = "Connected to AP Server";
                 }
                 else
-                    text.text = "Seed created";
+                    if (Randomizer.failed)
+                        text.text = "Seed failed, try again";
+                    else
+                        text.text = "Seed created";
 
             });
             if (ArchipelagoInterface.Instance.isConnected)
@@ -66,7 +69,10 @@ namespace TeviRandomizer.UI
                 text.text = "Connected to AP Server";
             }
             else
-                text.text = "Seed created";
+                if (Randomizer.failed)
+                    text.text = "Seed failed, try again";
+                else
+                    text.text = "Seed created";
 
         }
 
