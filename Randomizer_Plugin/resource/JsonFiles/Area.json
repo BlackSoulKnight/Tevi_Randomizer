@@ -3533,7 +3533,7 @@
             "Connections": [
                 {
                     "Exit": "Morose City",
-                    "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB)"
+                    "Method": ""
                 }
             ]
         },
