@@ -215,7 +215,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_WATERMOVEMENT",
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_WATERMOVEMENT",
                 "Difficulty": 0
             }
         ],
@@ -238,7 +238,7 @@
         "slotId": 1,
         "Requirement": [
             {
-                "Method": "(ITEM_LINEBOMB || ITEM_AREABOMB || ITEM_KNIFE) && ITEM_WATERMOVEMENT",
+                "Method": "(ITEM_LINEBOMB || ITEM_KNIFE) && ITEM_WATERMOVEMENT",
                 "Difficulty": 0
             }
         ],
