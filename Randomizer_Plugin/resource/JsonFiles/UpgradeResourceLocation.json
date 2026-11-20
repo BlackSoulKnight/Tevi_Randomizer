@@ -291,7 +291,7 @@
         ],
         "Requirement": [
             {
-                "Method": "ITEM_SLIDE && (ITEM_LINEBOMB || ITEM_AREABOMB)",
+                "Method": "ITEM_SLIDE && ITEM_LINEBOMB",
                 "Difficulty": 0
             }
         ],
